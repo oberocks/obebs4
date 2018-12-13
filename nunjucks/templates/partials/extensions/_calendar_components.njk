@@ -1,0 +1,186 @@
+<!-- _calendar_components.njk -->
+		{% if obe_settings['enable-obeb4-datepicker-component'] === 'true' %}
+        <div class="container-fluid pt-5 text-center bg-white text-dark">
+        
+            <div class="container calendar-workspace pt-5">
+                
+                <div class="row justify-content-center">
+                    
+                    <div id="{{ global_strings['extensions']['sections']['18']['id'] }}" class="col-md-6">
+                        
+                        {% set headingHeadline = global_strings['extensions']['sections']['18']['head'] %}
+						{% set headingSubline = global_strings['extensions']['sections']['18']['subhead'] %}
+						{% set headingDescrip = global_strings['extensions']['sections']['18']['descrip'] %}
+                        {% include "partials/_columnHeading.njk" %}
+
+                    </div>
+
+                </div>
+
+                <div class="row justify-content-center">
+                    
+                    <div class="col-md-6 pb-5">
+
+                        <div class="js-prism-calendar prism-hidden text-left mb-2" style="cursor: help;">
+                            <div class="form-group">
+                                <label for="datepicker-1-input text-left">Date Picker (Compact Mode):</label>
+                                <div class="input-group">
+                                    <input type="text" class="form-control" placeholder="MM/DD/YYYY" id="datepicker-1-input" name="datepicker-1-input" aria-describedby="datepicker-2-input-help">
+                                    <div class="input-group-append" data-toggle="collapse" data-target="#datepicker-1-collapse" aria-expanded="false" aria-controls="datepicker-2-collapse">
+                                        <button class="btn btn-outline-secondary" type="button">PICKER</button>
+                                    </div>
+                                </div>
+                                <div id="datepicker-1-collapse" class="collapse pt-1">
+                                    <div class="obe-calendar-datepicker-1 text-center"></div>
+                                </div>
+                                <small id="datepicker-1-input-help" class="form-text text-muted">Click 'PICKER' to use a visual date picker.</small>
+                            </div>
+                        </div>
+                        <pre>
+                            <code class="language-html line-numbers">
+                                &lt;!-- Date Picker (Compact Mode) Markup --&gt;
+                                &lt;div class="form-group"&gt;
+                                    &lt;label for="datepicker-1-input text-left"&gt;Date Picker (Compact Mode):&lt;/label&gt;
+                                    &lt;div class="input-group"&gt;
+                                        &lt;input type="text" class="form-control" placeholder="MM/DD/YYYY" id="datepicker-1-input" name="datepicker-1-input" aria-describedby="datepicker-2-input-help"&gt;
+                                        &lt;div class="input-group-append" data-toggle="collapse" data-target="#datepicker-1-collapse" aria-expanded="false" aria-controls="datepicker-2-collapse"&gt;
+                                            &lt;button class="btn btn-outline-secondary" type="button"&gt;PICKER&lt;/button&gt;
+                                        &lt;/div&gt;
+                                    &lt;/div&gt;
+                                    &lt;div id="datepicker-1-collapse" class="collapse pt-1"&gt;
+                                        &lt;div class="obe-calendar-datepicker-1 text-center"&gt;&lt;/div&gt;
+                                    &lt;/div&gt;
+                                    &lt;small id="datepicker-1-input-help" class="form-text text-muted"&gt;Click 'PICKER' to use a visual date picker.&lt;/small&gt;
+                                &lt;/div&gt;
+                            </code>
+                        </pre>
+                        <pre>
+                            <code class="language-javascript line-numbers">
+                                // JavaScript initialization of the OBE Calendar Datepicker Plugin (with options)
+                                $('.obe-calendar-datepicker-1').obeDatepicker({
+                                    outputSelector : '#datepicker-1-input',
+                                    compactMode : true
+                                });
+                            </code>
+                        </pre>
+
+                    </div>
+
+                    <div class="col-md-6 pb-5">
+
+                        <div class="js-prism-calendar prism-hidden text-left mb-2" style="cursor: help;">
+                            <div class="form-group">
+                                <label for="datepicker-2-input text-left">Date Picker (Full Mode):</label>
+                                <div class="input-group">
+                                    <input type="text" class="form-control" placeholder="MM/DD/YYYY" id="datepicker-2-input" name="datepicker-2-input" aria-describedby="datepicker-2-input-help">
+                                    <div class="input-group-append" data-toggle="collapse" data-target="#datepicker-2-collapse" aria-expanded="false" aria-controls="datepicker-2-collapse">
+                                        <button class="btn btn-outline-secondary" type="button">PICKER</button>
+                                    </div>
+                                </div>
+                                <div id="datepicker-2-collapse" class="collapse pt-1">
+                                    <div class="obe-calendar-datepicker-2 text-center"></div>
+                                </div>
+                                <small id="datepicker-2-input-help" class="form-text text-muted">Click 'PICKER' to use a visual date picker.</small>
+                            </div>
+                        </div>
+                        <pre>
+                            <code class="language-html line-numbers">
+                                &lt;!-- Date Picker (Full Mode) Markup --&gt;
+                                &lt;div class="form-group"&gt;
+                                    &lt;label for="datepicker-2-input text-left"&gt;Date Picker (Full Mode):&lt;/label&gt;
+                                    &lt;div class="input-group"&gt;
+                                        &lt;input type="text" class="form-control" placeholder="MM/DD/YYYY" id="datepicker-2-input" name="datepicker-2-input" aria-describedby="datepicker-2-input-help"&gt;
+                                        &lt;div class="input-group-append" data-toggle="collapse" data-target="#datepicker-2-collapse" aria-expanded="false" aria-controls="datepicker-2-collapse"&gt;
+                                            &lt;button class="btn btn-outline-secondary" type="button"&gt;PICKER&lt;/button&gt;
+                                        &lt;/div&gt;
+                                    &lt;/div&gt;
+                                    &lt;div id="datepicker-2-collapse" class="collapse pt-1"&gt;
+                                        &lt;div class="obe-calendar-datepicker-2 text-center"&gt;&lt;/div&gt;
+                                    &lt;/div&gt;
+                                    &lt;small id="datepicker-2-input-help" class="form-text text-muted"&gt;Click 'PICKER' to use a visual date picker.&lt;/small&gt;
+                                &lt;/div&gt;
+                            </code>
+                        </pre>
+                        <pre>
+                            <code class="language-javascript line-numbers">
+                                // JavaScript initialization of the OBE Calendar Datepicker Plugin (with options)
+                                $('.obe-calendar-datepicker-2').obeDatepicker({
+                                    outputSelector : '#datepicker-2-input',
+                                    outputFormat : 'MM-DD-YYYY',
+                                    outputType : 'input',
+                                    compactMode : false,
+                                    baseColors : 'bg-gradient-azure-violet-vertical text-white',
+                                    selectedBg : 'bg-gradient-yellow-orange-vertical text-dark opacity-100',
+                                    standardBg : 'text-shadow',
+                                    borders : 'border-dark',
+                                    prevNextBg : 'bg-dark text-light opacity-50',
+                                    theadBg : 'opacity-85',
+                                    leftArrow : '❬',
+                                    rightArrow : '❭',
+                                    weekdayParentClasses : 'd-flex justify-content-center align-items-center text-center pt-4 text-shadow',
+                                    dayParentClasses : 'd-flex justify-content-center align-items-center text-center pb-2 text-shadow',
+                                    monthParentClasses : 'd-flex justify-content-center align-items-center text-center text-shadow',
+                                    yearParentClasses : 'd-flex justify-content-center align-items-center text-center pb-4 text-shadow'
+                                });
+                            </code>
+                        </pre>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="container pb-5">
+
+                <div class="row justify-content-center">
+                    
+                    <div class="col">
+                        <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#obe-cal-defaults" aria-expanded="false" aria-controls="obe-cal-defaults">VIEW ALL DEFAULTS</button>
+                        <div id="obe-cal-defaults" class="collapse mt-2">
+                            <pre>
+                                <code class="language-javascript line-numbers">
+                                    // Complete List of OBE Calendar Datepicker Options and Defaults
+                                    $('SELECTOR-FOR-DATEPICKER-TO-RENDER-WITHIN-HERE').obeDatepicker({
+                                        outputSelector : 'SELECTOR-FOR-DATEPICKER-USE-OUTPUT-HERE',
+                                        outputType : 'input', // choices are 'input' or 'text'
+                                        outputFormat : 'MM/DD/YYYY', // choices are 'MM/DD/YYYY', 'MM-DD-YYYY', 'DD/MM/YYYY', 'DD-MM-YYYY', 'YYYY/MM/DD', or 'YYYY-MM-DD'
+                                        compactMode : false,
+                                        baseColors : 'bg-light text-dark',
+                                        cellSpacing : 'p-2',
+                                        selectedBg : 'bg-primary text-white',
+                                        standardBg : 'text-dark',
+                                        borders : 'border-dark',
+                                        prevNextBg : 'bg-secondary text-light',
+                                        theadClass : 'thead-dark',
+                                        theadBg : 'text-light',
+                                        leftArrow : '‹', // Use any character including an HTML entity character
+                                        rightArrow : '›', // Use any character including an HTML entity character
+                                        weekdayParentClasses : 'd-flex justify-content-center align-items-center text-center pt-4',
+                                        weekdayMinusClasses : 'flex-fill text-right lead font-weight-bold pr-4 opacity-30',
+                                        weekdayTextClasses : 'lead font-weight-bold p-0 m-0',
+                                        weekdayPlusClasses : 'flex-fill text-left lead font-weight-bold pl-4 opacity-30',
+                                        dayParentClasses : 'd-flex justify-content-center align-items-center text-center pb-2',
+                                        dayMinusClasses : 'flex-fill display-1 pr-4 opacity-30',
+                                        dayTextClasses : 'p-0 m-0 display-1 font-secondary',
+                                        dayPlusClasses : 'flex-fill display-1 pl-4 opacity-30',
+                                        monthParentClasses : 'd-flex justify-content-center align-items-center text-center',
+                                        monthMinusClasses : 'flex-fill text-right lead font-weight-bold pr-4 opacity-30',
+                                        monthTextClasses : 'lead font-weight-bold p-0 m-0',
+                                        monthPlusClasses : 'flex-fill text-left lead font-weight-bold pl-4 opacity-30',
+                                        yearParentClasses : 'd-flex justify-content-center align-items-center text-center pb-4',
+                                        yearMinusClasses : 'flex-fill text-right lead font-weight-bold pr-4 opacity-30',
+                                        yearTextClasses : 'lead font-weight-bold p-0 m-0',
+                                        yearPlusClasses : 'flex-fill text-left lead font-weight-bold pl-4 opacity-30'
+                                    });
+                                </code>
+                            </pre>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+        {% endif %}

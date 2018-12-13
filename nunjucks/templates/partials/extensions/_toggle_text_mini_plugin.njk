@@ -1,0 +1,61 @@
+<!-- _toggle_text_mini_plugin.njk -->
+		{% if obe_settings['enable-obeb4-toggle-text-mini-plugin'] === 'true' %}
+        <div class="container-fluid pt-5 text-center bg-white text-dark">
+        
+            <div class="container calendar-workspace pt-5">
+                
+                <div class="row justify-content-center">
+                    
+                    <div id="{{ global_strings['extensions']['sections']['19']['id'] }}" class="col-md-6">
+                        
+                        {% set headingHeadline = global_strings['extensions']['sections']['19']['head'] %}
+						{% set headingSubline = global_strings['extensions']['sections']['19']['subhead'] %}
+						{% set headingDescrip = global_strings['extensions']['sections']['19']['descrip'] %}
+                        {% include "partials/_columnHeading.njk" %}
+
+                    </div>
+
+                </div>
+
+                <div class="row justify-content-center">
+                    
+                    <div class="col-md-6">
+                        
+                        <div class="js-prism mb-3">
+                            <button class="btn btn-primary" data-obe-text-toggle="TOGGLE">BUTTON</button>
+                        </div>
+
+                        <div class="js-prism mb-3">
+                            <div class="bg-light rounded" data-obe-text-toggle='(AND "QUOTES")'>DIV'S TOO!</div>
+                        </div>
+
+                        <div class="js-prism mb-3">
+                            <a href="#" class="text-primary" data-obe-text-toggle='Can Toggle!'>& Links, Too!</a>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="row justify-content-center">
+                    
+                    <div class="col pb-5">
+
+                        <div class="alert alert-danger alert-dismissible text-left fade show" role="alert">
+                            <p class="font-weight-bold">PLEASE NOTE:</p>
+                            <p class="mb-2 small">When using this mini-plugin on anchor tags ( <samp class="font-weight-bold">&lt;a&gt;</samp> ), the plugin calls the JavaScript method <samp class="font-weight-bold">Event.preventDefault()</samp>, so a user can see the anchor text swap. This also prevents any page scrolling, so you can use anchor elements as interactive UI elements along with the text toggle functionality.</p>
+                            <p class="mb-2 small">There are also <samp class="font-weight-bold">mouseover</samp> &amp; <samp class="font-weight-bold">mouseout</samp> listeners added to each initialized element to change the cursor to a pointer upon a user <samp class="font-weight-bold">:hover</samp> interaction.</p>
+                            <p class="mb-2 small">And finally, the script converts specific characters ( <samp class="font-weight-bold">&amp;</samp>, <samp class="font-weight-bold">&lt;</samp>, <samp class="font-weight-bold">&gt;</samp>, <samp class="font-weight-bold">&quot;</samp>, and <samp class="font-weight-bold">&#039;</samp> ) to HTML entity values during the swaps to prevent any issues when toggling text content using those characters.</p>
+                            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                <span aria-hidden="true">×</span>
+                            </button>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+        {% endif %}

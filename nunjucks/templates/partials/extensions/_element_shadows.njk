@@ -1,0 +1,98 @@
+<!-- _element_shadows.njk -->
+		{% if obe_settings['enable-obeb4-box-shadows'] === 'true' or obe_settings['enable-obeb4-text-shadows'] === 'true' %}
+        <div class="container-fluid pt-5 text-center bg-white text-dark">
+        
+            <div class="container">
+                
+                {% if obe_settings['enable-obeb4-box-shadows'] === 'true' %}
+                <div class="row justify-content-center">
+                    
+                    <div id="{{ global_strings['extensions']['sections']['3']['id'] }}" class="col-md-6 pb-5">
+                        
+                        {% set headingHeadline = global_strings['extensions']['sections']['3']['head'] %}
+						{% set headingSubline = global_strings['extensions']['sections']['3']['subhead'] %}
+						{% set headingDescrip = global_strings['extensions']['sections']['3']['descrip'] %}
+                        {% include "partials/_columnHeading.njk" %}
+
+                        {% macro box_shadow(classPartial, namePartial) %}
+                        <div class="js-prism mb-2">
+                            <div class="box-shadow-{{ classPartial }}">{{ namePartial }} Box Shadow</div>
+                        </div>
+                        <div style="height: 20px;"></div>
+                        {% endmacro %}
+                        
+                        {{ box_shadow('xs', 'XS') }}
+                        {{ box_shadow('sm', 'SM') }}
+                        {{ box_shadow('md', 'MD') }}
+                        {{ box_shadow('lg', 'LG') }}
+                        {{ box_shadow('xl', 'XL') }}
+
+                    </div>
+
+                    <div id="{{ global_strings['extensions']['sections']['4']['id'] }}" class="col-md-6 pb-5">
+                        
+                        {% set headingHeadline = global_strings['extensions']['sections']['4']['head'] %}
+						{% set headingSubline = global_strings['extensions']['sections']['4']['subhead'] %}
+						{% set headingDescrip = global_strings['extensions']['sections']['4']['descrip'] %}
+                        {% include "partials/_columnHeading.njk" %}
+
+                        {% macro box_shadow_hover(classPartial, namePartial) %}
+                        <div class="js-prism mb-2">
+                            <div class="box-shadow-{{ classPartial }} shadow-hover-down">{{ namePartial }} Shadow Down</div>
+                        </div>
+                        <div style="height: 20px;"></div>
+                        <div class="js-prism mb-2">
+                            <div class="box-shadow-{{ classPartial }} shadow-hover-up">{{ namePartial }} Shadow Up</div>
+                        </div>
+                        <div style="height: 20px;"></div>
+                        {% endmacro %}
+
+                        {{ box_shadow_hover('xs', 'XS' )}}
+                        {{ box_shadow_hover('sm', 'SM') }}
+                        {{ box_shadow_hover('md', 'MD') }}
+                        {{ box_shadow_hover('lg', 'LG') }}
+                        {{ box_shadow_hover('xl', 'XL') }}
+
+                    </div>
+
+                </div>
+                {% endif %}
+                    
+                {% if obe_settings['enable-obeb4-text-shadows'] === 'true' %}
+                <div class="row justify-content-center">
+
+                    <div id="{{ global_strings['extensions']['sections']['5']['id'] }}" class="col-md-6 pb-5">
+                        
+                        {% set headingHeadline = global_strings['extensions']['sections']['5']['head'] %}
+						{% set headingSubline = global_strings['extensions']['sections']['5']['subhead'] %}
+						{% set headingDescrip = global_strings['extensions']['sections']['5']['descrip'] %}
+                        {% include "partials/_columnHeading.njk" %}
+
+                        {% macro text_shadows(bgClass, textClass, shadowClassPart, headline) %}
+                        <div class="js-prism {{ bgClass }} p-2 mb-2">
+                            <div class="{{ textClass }} text-shadow{{ shadowClassPart }}">{{ headline }}</div>
+                        </div>
+                        <div style="height: 10px;"></div>
+                        {% endmacro %}
+
+                        {{ text_shadows('bg-light', 'text-white', '', 'Text Shadow') }}
+                        {{ text_shadows('bg-light', 'text-white', '-lg', 'Large Text Shadow') }}
+
+                        {{ text_shadows('bg-light', 'text-white', '-hard', 'Hard Text Shadow') }}
+                        {{ text_shadows('bg-light', 'text-white', '-lg-hard', 'Large Hard Shadow') }}
+
+                        {{ text_shadows('bg-black', 'text-dark-gray', '-white', 'White Text Shadow') }}
+                        {{ text_shadows('bg-black', 'text-dark-gray', '-white-lg', 'White Large Text') }}
+
+                        {{ text_shadows('bg-black', 'text-dark-gray', '-white-hard', 'White Hard Shadow') }}
+                        {{ text_shadows('bg-black', 'text-dark-gray', '-white-lg-hard', 'White Large Hard Shadow') }}
+
+                    </div>
+
+                </div>
+                {% endif %}
+
+            </div>
+
+        </div>
+        {% endif %}

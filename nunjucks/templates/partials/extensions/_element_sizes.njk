@@ -1,0 +1,102 @@
+<!-- _element_sizes.njk -->
+		{% if obe_settings['enable-obeb4-element-sizes'] === 'true' %}
+        <div class="container-fluid pt-5 text-center bg-white text-dark">
+        
+            <div class="container">
+                
+                <div class="row justify-content-center">
+                    
+                    <div id="{{ global_strings['extensions']['sections']['8']['id'] }}" class="col-12 pb-5">
+                        
+                        {% set headingHeadline = global_strings['extensions']['sections']['8']['head'] %}
+						{% set headingSubline = global_strings['extensions']['sections']['8']['subhead'] %}
+						{% set headingDescrip = global_strings['extensions']['sections']['8']['descrip'] %}
+                        {% include "partials/_columnHeading.njk" %}
+
+                        {% macro element_widths(number) %}
+                        <div class="js-prism mb-2">
+                            <div class="bg-light text-white w-100">
+                                <div class="bg-primary w-{{ number }}">{{ number }}%</div>
+                            </div>
+                        </div>
+                        {% endmacro %}
+                        
+                        {{ element_widths('0') }}
+                        {{ element_widths('5') }}
+                        {{ element_widths('10') }}
+                        {{ element_widths('15') }}
+                        {{ element_widths('20') }}
+                        {{ element_widths('25') }}
+                        {{ element_widths('30') }}
+                        {{ element_widths('33') }}
+                        {{ element_widths('35') }}
+                        {{ element_widths('40') }}
+                        {{ element_widths('45') }}
+                        {{ element_widths('50') }}
+                        {{ element_widths('55') }}
+                        {{ element_widths('60') }}
+                        {{ element_widths('65') }}
+                        {{ element_widths('66') }}
+                        {{ element_widths('70') }}
+                        {{ element_widths('75') }}
+                        {{ element_widths('80') }}
+                        {{ element_widths('85') }}
+                        {{ element_widths('90') }}
+                        {{ element_widths('95') }}
+                        {{ element_widths('99') }}
+                        {{ element_widths('100') }}
+
+                    </div>
+
+                </div>
+
+                <div class="row justify-content-center">
+
+                    <div id="{{ global_strings['extensions']['sections']['9']['id'] }}" class="col-12 pb-5">
+                        
+                        {% set headingHeadline = global_strings['extensions']['sections']['9']['head'] %}
+						{% set headingSubline = global_strings['extensions']['sections']['9']['subhead'] %}
+						{% set headingDescrip = global_strings['extensions']['sections']['9']['descrip'] %}
+                        {% include "partials/_columnHeading.njk" %}
+
+                        {% macro element_heights(number) %}
+                        <div class="js-prism mb-2">
+                            <div class="bg-light text-white" style="height: 50px;">
+                                <div class="bg-primary h-{{ number }}">{{ number }}%</div>
+                            </div>
+                        </div>
+                        {% endmacro %}
+                        
+                        {{ element_heights('0') }}
+                        {{ element_heights('5') }}
+                        {{ element_heights('10') }}
+                        {{ element_heights('15') }}
+                        {{ element_heights('20') }}
+                        {{ element_heights('25') }}
+                        {{ element_heights('30') }}
+                        {{ element_heights('33') }}
+                        {{ element_heights('35') }}
+                        {{ element_heights('40') }}
+                        {{ element_heights('45') }}
+                        {{ element_heights('50') }}
+                        {{ element_heights('55') }}
+                        {{ element_heights('60') }}
+                        {{ element_heights('65') }}
+                        {{ element_heights('66') }}
+                        {{ element_heights('70') }}
+                        {{ element_heights('75') }}
+                        {{ element_heights('80') }}
+                        {{ element_heights('85') }}
+                        {{ element_heights('90') }}
+                        {{ element_heights('95') }}
+                        {{ element_heights('99') }}
+                        {{ element_heights('100') }}
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+        {% endif %}

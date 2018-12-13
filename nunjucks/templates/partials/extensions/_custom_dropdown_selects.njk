@@ -1,0 +1,229 @@
+<!-- _custom_dropdowns.njk -->
+		{% if obe_settings['enable-obeb4-custom-dropdown-selects'] === 'true' %}
+        <div class="container-fluid pt-5 text-center bg-white text-dark">
+		
+			<div class="container">
+				
+				<div class="row justify-content-center">
+					
+					<div id="{{ global_strings['extensions']['sections']['17']['id'] }}" class="col">
+					
+						{% set headingHeadline = global_strings['extensions']['sections']['17']['head'] %}
+						{% set headingSubline = global_strings['extensions']['sections']['17']['subhead'] %}
+						{% set headingDescrip = global_strings['extensions']['sections']['17']['descrip'] %}
+						{% include "partials/_columnHeading.njk" %}
+
+                    </div>
+
+                </div>
+
+                <div class="row justify-content-center">
+
+                    <div class="col-md-6 pb-5 text-left">
+                        
+                        
+                        
+                        <div class="js-prism mb-2">
+                            <div class="form-group">
+                                <label>Basic Dropdown Select:</label>
+                                <div class="dropdown-select btn-group w-100">
+                                    <div class="d-flex justify-content-between align-items-center border rounded w-100 p-0" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" role="listbox">
+                                        <div class="dropdown-select-target">
+                                            <div class="py-2 px-3">Select An Option</div>
+                                        </div>
+                                        <div class="py-2 px-3">&#8675;</div>
+                                    </div>
+                                    <div class="dropdown-menu py-0 w-100">
+                                        <div class="dropdown-select-option py-2 px-3" data-option-value="one">Item One</div>
+                                        <div class="dropdown-select-option py-2 px-3" data-option-value="two">Item Two</div>
+                                        <div class="dropdown-select-option py-2 px-3" data-option-value="three">Item Three</div>
+                                        <div class="dropdown-select-option py-2 px-3" data-option-value="four">Item Four</div>
+                                        <div class="dropdown-select-option py-2 px-3" data-option-value="five">Item Five</div>
+                                    </div>
+                                </div>
+                                <input type="hidden" name="dropdown-select-input" value="">
+                                <small class="form-text text-muted">Dropdown Select help text.</small>
+                            </div>
+                        </div>
+
+
+
+                        <div class="js-prism mb-2">
+                            <div class="form-group">
+                                <label>2 Line Dropdown Select:</label>
+                                <div class="dropdown-select btn-group w-100">
+                                    <div class="d-flex justify-content-between align-items-center border rounded w-100 p-0" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" role="listbox">
+                                        <div class="dropdown-select-target">
+                                            <div class="py-2 px-3">
+                                                <div class="lead">Select An Option</div>
+                                                <small class="d-block text-muted">Lorem ipsum dolar si amet</small>
+                                            </div>
+                                        </div>
+                                        <div class="py-2 px-3">&#8675;</div>
+                                    </div>
+                                    <div class="dropdown-menu py-0 w-100">
+                                        <div class="dropdown-select-option py-2 px-3" data-option-value="one">
+                                            <div class="lead">Option One</div>
+                                            <small class="d-block text-muted">Lorem ipsum dolar si amet</small>
+                                        </div>
+                                        <div class="dropdown-select-option py-2 px-3" data-option-value="two">
+                                            <div class="lead">Option Two</div>
+                                            <small class="d-block text-muted">Lorem ipsum dolar si amet</small>
+                                        </div>
+                                        <div class="dropdown-select-option py-2 px-3" data-option-value="three">
+                                            <div class="lead">Option Three</div>
+                                            <small class="d-block text-muted">Lorem ipsum dolar si amet</small>
+                                        </div>
+                                        <div class="dropdown-select-option py-2 px-3" data-option-value="four">
+                                            <div class="lead">Option Four</div>
+                                            <small class="d-block text-muted">Lorem ipsum dolar si amet</small>
+                                        </div>
+                                    </div>
+                                </div>
+                                <input type="hidden" name="2-line-dropdown-select-input" value="">
+                                <small class="form-text text-muted">Dropdown Select help text.</small>
+                            </div>
+                        </div>
+
+
+
+                        <div class="js-prism mb-2">
+                            <div class="form-group">
+                                <label>Thumbnail Dropdown Select:</label>
+                                <div class="dropdown-select btn-group w-100">
+                                    <div class="d-flex justify-content-between align-items-center border rounded w-100 p-0" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" role="listbox">
+                                        <div class="dropdown-select-target">
+                                            <div class="d-flex align-items-center">
+                                                <div class="lead py-2 px-3">Select An Option</div>
+                                                <div style="height: 50px;"> </div>
+                                            </div>
+                                        </div>
+                                        <div class="py-2 px-3">&#8675;</div>
+                                    </div>
+                                    <div class="dropdown-menu py-0 w-100">
+                                        <div class="dropdown-select-option d-flex align-items-center" data-option-value="one">
+                                            <img class="mr-3" src="images/64x64.jpg" style="width: 50px; height: 50px;" alt="Thumbnail Alt Text">
+                                            <div class="lead">Option One</div>
+                                        </div>
+                                        <div class="dropdown-select-option d-flex align-items-center" data-option-value="two">
+                                            <img class="mr-3" src="images/64x64.jpg" style="width: 50px; height: 50px;" alt="Thumbnail Alt Text">
+                                            <div class="lead">Option Two</div>
+                                        </div>
+                                        <div class="dropdown-select-option d-flex align-items-center" data-option-value="three">
+                                            <img class="mr-3" src="images/64x64.jpg" style="width: 50px; height: 50px;" alt="Thumbnail Alt Text">
+                                            <div class="lead">Option Three</div>
+                                        </div>
+                                        <div class="dropdown-select-option d-flex align-items-center" data-option-value="four">
+                                            <img class="mr-3" src="images/64x64.jpg" style="width: 50px; height: 50px;" alt="Thumbnail Alt Text">
+                                            <div class="lead">Option Four</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <input type="hidden" name="thumbnail-dropdown-select-input" value="">
+                                <small class="form-text text-muted">Dropdown Select help text.</small>
+                            </div>
+                        </div>
+
+
+
+                        <div class="js-prism mb-2">
+                            <div class="form-group">
+                                <label>Pricing Dropdown Select:</label>
+                                <div class="dropdown-select btn-group w-100">
+                                    <div class="d-flex justify-content-between align-items-center border rounded w-100 p-0" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" role="listbox">
+                                        <div class="dropdown-select-target w-100">
+                                            <div class="d-flex justify-content-between align-items-center py-2 px-3">
+                                                <div>Select An Option</div>
+                                            </div>
+                                        </div>
+                                        <div class="py-2 px-3">&#8675;</div>
+                                    </div>
+                                    <div class="dropdown-menu py-0 w-100">
+                                        <div class="dropdown-select-option d-flex justify-content-between align-items-center" data-option-value="one">
+                                            <div class="py-2 px-3">Option One</div>
+                                            <div class="font-secondary text-primary py-2 px-3">$9.99</div>
+                                        </div>
+                                        <div class="dropdown-select-option d-flex justify-content-between align-items-center" data-option-value="two">
+                                            <div class="py-2 px-3">Option Two</div>
+                                            <div class="font-secondary text-primary py-2 px-3">$19.99</div>
+                                        </div>
+                                        <div class="dropdown-select-option d-flex justify-content-between align-items-center" data-option-value="three">
+                                            <div class="py-2 px-3">Option Three</div>
+                                            <div class="font-secondary text-primary py-2 px-3">$29.99</div>
+                                        </div>
+                                        <div class="dropdown-select-option d-flex justify-content-between align-items-center" data-option-value="four">
+                                            <div class="py-2 px-3">Option Four</div>
+                                            <div class="font-secondary text-primary py-2 px-3">$39.99</div>
+                                        </div>
+                                        <div class="dropdown-select-option d-flex justify-content-between align-items-center" data-option-value="five">
+                                            <div class="py-2 px-3">Option Five</div>
+                                            <div class="font-secondary text-primary py-2 px-3">$99.99</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <input type="hidden" name="pricing-dropdown-select-input" value="">
+                                <small class="form-text text-muted">Dropdown Select help text.</small>
+                            </div>
+                        </div>
+
+
+
+                        <div class="js-prism mb-2">
+                            <div class="form-group">
+                                <label>Pricing + Thumbnail Dropdown Select:</label>
+                                <div class="dropdown-select btn-group w-100">
+                                    <div class="d-flex justify-content-between align-items-center border rounded w-100 p-0" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" role="listbox">
+                                        <div class="dropdown-select-target w-100">
+                                            <div class="d-flex align-items-center">
+                                                <div class="py-2 px-3">Select An Option</div>
+                                                <div style="height: 45px;"> </div>
+                                            </div>
+                                        </div>
+                                        <div class="py-2 px-3">&#8675;</div>
+                                    </div>
+                                    <div class="dropdown-menu py-0 w-100">
+                                        <div class="dropdown-select-option d-flex justify-content-between align-items-center" data-option-value="one">
+                                            <img src="images/64x64.jpg" style="width: 45px; height: 45px;" alt="Thumbnail Alt Text">
+                                            <div class="py-2 px-3">Option One</div>
+                                            <div class="font-secondary text-primary ml-auto py-2 px-3">$9.99</div>
+                                        </div>
+                                        <div class="dropdown-select-option d-flex justify-content-between align-items-center" data-option-value="two">
+                                            <img src="images/64x64.jpg" style="width: 45px; height: 45px;" alt="Thumbnail Alt Text">
+                                            <div class="py-2 px-3">Option Two</div>
+                                            <div class="font-secondary text-primary ml-auto py-2 px-3">$9.99</div>
+                                        </div>
+                                        <div class="dropdown-select-option d-flex justify-content-between align-items-center" data-option-value="three">
+                                            <img src="images/64x64.jpg" style="width: 45px; height: 45px;" alt="Thumbnail Alt Text">
+                                            <div class="py-2 px-3">Option Three</div>
+                                            <div class="font-secondary text-primary ml-auto py-2 px-3">$9.99</div>
+                                        </div>
+                                        <div class="dropdown-select-option d-flex justify-content-between align-items-center" data-option-value="four">
+                                            <img src="images/64x64.jpg" style="width: 45px; height: 45px;" alt="Thumbnail Alt Text">
+                                            <div class="py-2 px-3">Option Four</div>
+                                            <div class="font-secondary text-primary ml-auto py-2 px-3">$9.99</div>
+                                        </div>
+                                        <div class="dropdown-select-option d-flex justify-content-between align-items-center" data-option-value="five">
+                                            <img src="images/64x64.jpg" style="width: 45px; height: 45px;" alt="Thumbnail Alt Text">
+                                            <div class="py-2 px-3">Option Five</div>
+                                            <div class="font-secondary text-primary ml-auto py-2 px-3">$9.99</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <input type="hidden" name="pricing-dropdown-select-input" value="">
+                                <small class="form-text text-muted">Dropdown Select help text.</small>
+                            </div>
+                        </div>
+
+                    
+                    
+                    
+                    
+                    
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+        {% endif %}

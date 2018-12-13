@@ -1,0 +1,74 @@
+<!-- _button_text_sizes.njk -->
+		{% if obe_settings['enable-obeb4-button-sizes'] === 'true' or obe_settings['enable-obeb4-text-sizes'] === 'true' %}
+		<div class="container-fluid pt-5 text-center bg-white text-dark">
+		
+			<div class="container">
+				
+				<div class="row justify-content-center">
+					
+					{% if obe_settings['enable-obeb4-button-sizes'] === 'true' %}
+					<div id="{{ global_strings['extensions']['sections']['6']['id'] }}" class="col-md-6 pb-5">
+					
+						{% set headingHeadline = global_strings['extensions']['sections']['6']['head'] %}
+						{% set headingSubline = global_strings['extensions']['sections']['6']['subhead'] %}
+						{% set headingDescrip = global_strings['extensions']['sections']['6']['descrip'] %}
+						{% include "partials/_columnHeading.njk" %}
+						
+						<div class="js-prism mb-2">
+							<button type="button" class="btn btn-primary btn-xxs">XXS Button</button>
+						</div>
+						<div class="js-prism mb-2">
+							<button type="button" class="btn btn-primary btn-xs">XS Button</button>
+						</div>
+						<div class="js-prism mb-2">
+							<button type="button" class="btn btn-primary btn-sm">SM Button</button>
+						</div>
+						<div class="js-prism mb-2">
+							<button type="button" class="btn btn-primary btn-md">MD Button</button>
+						</div>
+						<div class="js-prism mb-2">
+							<button type="button" class="btn btn-primary btn-lg">LG Button</button>
+						</div>
+						<div class="js-prism mb-2">
+							<button type="button" class="btn btn-primary btn-xl">XL Button</button>
+						</div>
+						<div class="js-prism mb-2">
+							<button type="button" class="btn btn-primary btn-xxl">XXL Button</button>
+						</div>
+						
+					</div>
+					{% endif %}
+
+					{% if obe_settings['enable-obeb4-text-sizes'] === 'true' %}
+					<div id="{{ global_strings['extensions']['sections']['7']['id'] }}" class="col-md-6 pb-5">
+
+						{% set headingHeadline = global_strings['extensions']['sections']['7']['head'] %}
+						{% set headingSubline = global_strings['extensions']['sections']['7']['subhead'] %}
+						{% set headingDescrip = global_strings['extensions']['sections']['7']['descrip'] %}
+						{% include "partials/_columnHeading.njk" %}
+
+						
+						{% macro text_sizes(classPartial, namePartial) %}
+						<div class="js-prism mb-2">
+							<div class="text-{{ classPartial }}">{{ namePartial }} Text</div>
+						</div>
+						{% endmacro %}
+
+
+						{{ text_sizes('xxs', 'XXS') }}
+						{{ text_sizes('xs', 'XS') }}
+						{{ text_sizes('sm', 'SM') }}
+						{{ text_sizes('md', 'MD') }}
+						{{ text_sizes('lg', 'LG') }}
+						{{ text_sizes('xl', 'XL') }}
+						{{ text_sizes('xxl', 'XXL') }}
+
+					</div>
+					{% endif %}
+					
+				</div>
+
+			</div>
+
+		</div>
+		{% endif %}

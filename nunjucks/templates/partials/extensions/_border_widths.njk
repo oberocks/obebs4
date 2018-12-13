@@ -1,0 +1,46 @@
+<!-- _border_widths.njk -->
+		{% if obe_settings['enable-obeb4-border-widths'] === 'true' %}
+		<div class="container-fluid pt-5 text-center bg-white text-dark">
+		
+			<div class="container">
+				
+				<div class="row justify-content-center">
+					
+					<div id="{{ global_strings['extensions']['sections']['2']['id'] }}" class="col-12 pb-5">
+						
+						{% set headingHeadline = global_strings['extensions']['sections']['2']['head'] %}
+						{% set headingSubline = global_strings['extensions']['sections']['2']['subhead'] %}
+						{% set headingDescrip = global_strings['extensions']['sections']['2']['descrip'] %}
+						{% include "partials/_columnHeading.njk" %}
+
+						{% macro border_width(number) %}
+						<div class="js-prism mb-2">
+							<div class="border border-width-{{ number }}">Border Width {{ number }}</div>
+						</div>
+						{% endmacro %}
+
+						{{ border_width('0') }}
+						{{ border_width('1') }}
+						{{ border_width('2') }}
+						{{ border_width('3') }}
+						{{ border_width('4') }}
+						{{ border_width('5') }}
+						{{ border_width('6') }}
+						{{ border_width('7') }}
+						{{ border_width('8') }}
+						{{ border_width('9') }}
+						{{ border_width('10') }}
+						{{ border_width('11') }}
+						{{ border_width('12') }}
+						{{ border_width('13') }}
+						{{ border_width('14') }}
+						{{ border_width('15') }}
+						
+					</div>
+
+				</div>
+
+			</div>
+
+		</div>
+		{% endif %}
