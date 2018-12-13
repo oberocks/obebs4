@@ -1,0 +1,52 @@
+<!-- _table_float_utils.njk -->
+		<div class="container-fluid pt-5 text-center bg-white text-dark">
+        
+            <div class="container modal-workspace">
+
+                <div class="row justify-content-center">
+                    
+                    <div id="{{ global_strings['reference']['sections']['15']['id'] }}" class="col-12">
+                        
+                        {% set headingHeadline = global_strings['reference']['sections']['15']['head'] %}
+						{% set headingSubline = global_strings['reference']['sections']['15']['subhead'] %}
+						{% set headingDescrip = global_strings['reference']['sections']['15']['descrip'] %}
+                        {% include "partials/_columnHeading.njk" %}
+
+                    </div>
+
+                </div>
+
+                <div class="row justify-content-center">
+
+                    <div class="col pb-5">
+
+                        <div class="alert alert-danger alert-dismissible text-left fade show" role="alert">
+                            <strong>IMPORTANT:</strong> Whenever you float an element(s) you want to be sure to consider using a <samp>.clearfix</samp> class on a parent element that contains any floated element(s).
+                            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                <span aria-hidden="true">×</span>
+                            </button>
+                        </div>
+                        
+                        <div class="table-responsive text-left">
+                            <table class="js-data-tables-element table table-striped table-hover table-bordered table-sm text-nowrap">
+                                
+                                {{ macros.responsive_classes_thead('thead-dark') }}
+                                
+                                <tbody>
+                                    
+                                    {{ macros.float_classes('left') }}
+                                    {{ macros.float_classes('right') }}
+                                    {{ macros.float_classes('none') }}
+
+                                </tbody>
+                            </table>
+                            
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>

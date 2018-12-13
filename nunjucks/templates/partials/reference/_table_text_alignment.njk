@@ -1,0 +1,45 @@
+<!-- _table_text_alignment.njk -->
+		<div class="container-fluid pt-5 text-center bg-white text-dark">
+        
+            <div class="container modal-workspace">
+
+                <div class="row justify-content-center">
+                    
+                    <div id="{{ global_strings['reference']['sections']['19']['id'] }}" class="col-12">
+                        
+                        {% set headingHeadline = global_strings['reference']['sections']['19']['head'] %}
+						{% set headingSubline = global_strings['reference']['sections']['19']['subhead'] %}
+						{% set headingDescrip = global_strings['reference']['sections']['19']['descrip'] %}
+                        {% include "partials/_columnHeading.njk" %}
+
+                    </div>
+
+                </div>
+
+                <div class="row justify-content-center">
+
+                    <div class="col pb-5">
+                        
+                        <div class="table-responsive text-left">
+                            <table class="js-data-tables-element table table-striped table-hover table-bordered table-sm text-nowrap">
+                                
+                                {{ macros.responsive_classes_thead('thead-dark') }}
+                                
+                                <tbody>
+                                    
+                                    {{ macros.text_alignment_classes('left') }}
+                                    {{ macros.text_alignment_classes('right') }}
+                                    {{ macros.text_alignment_classes('center') }}
+
+                                </tbody>
+                            </table>
+                            
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>

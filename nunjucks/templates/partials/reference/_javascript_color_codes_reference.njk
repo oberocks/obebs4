@@ -1,0 +1,157 @@
+<!-- _javascript_color_codes_reference.njk -->
+		<div class="container-fluid pt-5 text-center bg-white text-dark">
+
+            <div class="container">
+
+                <div class="row justify-content-center">
+                    
+                    <div id="{{ global_strings['reference']['sections']['14']['id'] }}" class="col-12 pb-5">
+                        
+                        {% set headingHeadline = global_strings['reference']['sections']['14']['head'] %}
+						{% set headingSubline = global_strings['reference']['sections']['14']['subhead'] %}
+						{% set headingDescrip = global_strings['reference']['sections']['14']['descrip'] %}
+                        {% include "partials/_columnHeading.njk" %}
+
+                        <div class="pt-4 pb-5">
+                            <button id="toggle-obe-js-colors" class="btn btn-lg btn-primary" type="button" data-toggle="collapse" data-target="#obe-js-colors" aria-expanded="false" aria-controls="obe-js-colors">TOGGLE CODE</button>
+                        </div>
+                        <div id="obe-js-colors" class="collapse">
+
+                            <div class="pb-4">
+                                <label class="d-block font-weight-bold mb-0">JSON: RGBa COLOR CODES</label>
+                                <small class="d-block text-muted">(RGBa Only)</small>
+                                <div id="rgba-color-types-json"></div>
+                                <div>
+                                    <pre>
+                                        <code class="language-javascript line-numbers">
+                                            // EXAMPLE: Parse the JSON string
+                                            const myColors = JSON.parse('PASTE_RGBa_JSON_INSIDE_THESE_QUOTES');
+                                            
+                                            // EXAMPLE: Utility function to customize the alpha value of an rgba string 
+                                            // NOTE: The Default alpha value for all RGBa strings is: '0.5'
+                                            const setRGBa = function (rgbaString, alphaValue) {
+                                                return alphaValue ? rgbaString.replace('0.5', alphaValue) : rgbaString;
+                                            }
+
+                                            // EXAMPLES IN ACTION:
+                                            let darkGray = setRGBa( myColors.darkGray.rgba, '0.75' );
+                                            let blue = myColors.blue.rgba; // Uses the default alpha value
+                                            let azure = setRGBa( myColors.azure.rgba ); // Calling without an alpha value returns default
+                                            let azure300 = setRGBa( myColors.azure300.rgba, 0.9  ); // Passed alpha value can be a number
+                                        </code>
+                                    </pre>
+                                </div>
+                            </div>
+
+                            <div class="pb-4">
+                                <label class="d-block font-weight-bold mb-0">JSON: HEX COLOR CODES</label>
+                                <small class="d-block text-muted">(Hex Only)</small>
+                                <div id="hex-color-types-json"></div>
+                                <div>
+                                    <pre>
+                                        <code class="language-javascript line-numbers">
+                                            // EXAMPLE: Parse the JSON string
+                                            const myColors = JSON.parse('PASTE_HEX_JSON_INSIDE_THESE_QUOTES');
+                                            
+                                            // EXAMPLES IN ACTION:
+                                            let darkGray = myColors.darkGray.hex;
+                                            let blue = myColors.blue.hex;
+                                            let azure300 = myColors.azure300.hex;
+                                        </code>
+                                    </pre>
+                                </div>
+                            </div>
+
+                            <div class="pb-4">
+                                <label class="d-block font-weight-bold mb-0">JSON: RGB COLOR CODES</label>
+                                <small class="d-block text-muted">(RGB Only)</small>
+                                <div id="rgb-color-types-json"></div>
+                                <div>
+                                    <pre>
+                                        <code class="language-javascript line-numbers">
+                                            // EXAMPLE: Parse the JSON string
+                                            const myColors = JSON.parse('PASTE_RGB_JSON_INSIDE_THESE_QUOTES');
+                                            
+                                            // EXAMPLES IN ACTION:
+                                            let darkGray = myColors.darkGray.rgb;
+                                            let blue = myColors.blue.rgb;
+                                            let azure300 = myColors.azure300.rgb;
+                                        </code>
+                                    </pre>
+                                </div>
+                            </div>
+
+                            <div class="pb-4">
+                                <label class="d-block font-weight-bold mb-0">JSON: HSL COLOR CODES</label>
+                                <small class="d-block text-muted">(HSL Only)</small>
+                                <div id="hsl-color-types-json"></div>
+                                <div>
+                                    <pre>
+                                        <code class="language-javascript line-numbers">
+                                            // EXAMPLE: Parse the JSON string
+                                            const myColors = JSON.parse('PASTE_HSL_JSON_INSIDE_THESE_QUOTES');
+                                            
+                                            // EXAMPLES IN ACTION:
+                                            let darkGray = myColors.darkGray.hsl;
+                                            let blue = myColors.blue.hsl;
+                                            let azure300 = myColors.azure300.hsl;
+                                        </code>
+                                    </pre>
+                                </div>
+                            </div>
+
+                            <div class="pb-4">
+                                <label class="d-block font-weight-bold mb-0">JSON: HSV COLOR CODES</label>
+                                <small class="d-block text-muted">(HSV Only)</small>
+                                <div id="hsv-color-types-json"></div>
+                                <div>
+                                    <pre>
+                                        <code class="language-javascript line-numbers">
+                                            // EXAMPLE: Parse the JSON string
+                                            const myColors = JSON.parse('PASTE_HSV_JSON_INSIDE_THESE_QUOTES');
+                                            
+                                            // EXAMPLES IN ACTION:
+                                            let darkGray = myColors.darkGray.hsv;
+                                            let blue = myColors.blue.hsv;
+                                            let azure300 = myColors.azure300.hsv;
+                                        </code>
+                                    </pre>
+                                </div>
+                            </div>
+                            
+                            <div class="pb-4">
+                                <label class="d-block font-weight-bold mb-0">JSON: ALL TYPES</label>
+                                <small class="d-block text-muted">(Hex, RGB, RGBa, HSL, HSV)</small>
+                                <div id="all-color-types-json"></div>
+                                <div>
+                                    <pre>
+                                        <code class="language-javascript line-numbers">
+                                            // EXAMPLE: Parse the JSON string
+                                            const myColors = JSON.parse('PASTE_JSON_INSIDE_THESE_QUOTES');
+                                            
+                                            // EXAMPLE: Utility function to customize the alpha value of an rgba string 
+                                            // NOTE: The Default alpha value for all RGBa strings is: '0.5'
+                                            const setRGBa = function (rgbaString, alphaValue) {
+                                                return alphaValue ? rgbaString.replace('0.5', alphaValue) : rgbaString;
+                                            }
+
+                                            // EXAMPLES IN ACTION:
+                                            let rgba_darkGray = setRGBa( myColors.darkGray.rgba, '0.75' );
+                                            let hex_blue = myColors.blue.hex;
+                                            let rgb_orange300 = myColors.orange300.rgb;
+                                            let hsl_red = myColors.red.hsl;
+                                            let hsv_chartreuse = myColors.chartreuse.hsv;
+                                        </code>
+                                    </pre>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>

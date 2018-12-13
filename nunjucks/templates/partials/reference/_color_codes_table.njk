@@ -1,0 +1,89 @@
+<!-- _color_codes_table.njk -->
+		<div class="container-fluid pt-5 text-center bg-white text-dark">
+
+            <div class="container">
+
+                <div class="row justify-content-center pt-5">
+
+                    <div id="{{ global_strings['reference']['sections']['0']['id'] }}" class="js-dataTables-workspace col-12 pb-5">
+
+                        {% set headingHeadline = global_strings['reference']['sections']['0']['head'] %}
+						{% set headingSubline = global_strings['reference']['sections']['0']['subhead'] %}
+						{% set headingDescrip = global_strings['reference']['sections']['0']['descrip'] %}
+                        {% include "partials/_columnHeading.njk" %}
+
+                        <div class="row justify-content-center">
+                            <div class="js-dataTables-search-block col-sm-10 col-md-6 col-lg-4 text-center pb-2"></div>
+                        </div>
+                        
+                        <div class="table-responsive">
+                            <table class="js-dataTables-init table table-striped table-bordered table-hover text-left text-nowrap">
+                                <thead class="thead-dark">
+                                    <tr>
+                                        <th scope="col">Name</th>
+                                        <th scope="col">JS Key/Prop</th>
+                                        <th scope="col">Hex</th>
+                                        <th scope="col">RGB</th>
+                                        <th scope="col">RGBa</th>
+                                        <th scope="col">HSL</th>
+                                        <th scope="col">HSV</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="js-table-target"></tbody>
+                            </table>
+                        </div>
+
+                        <div class="row pt-2">
+                            <div class="js-dataTables-length-block col-md-6 pb-2"></div>
+                            <div class="js-dataTables-paginate-block col-md-6 pb-2"></div>
+                        </div>
+
+                        <div class="row">
+                            <div class="js-dataTables-info-block col-12"></div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            {% macro hidden_color_elements(colorSlug, colorName) %}
+            <div class="js-color-source d-none text-{{ colorSlug }}"></div>
+            <div class="js-color-source d-none text-{{ colorSlug }}-50"></div>
+            <div class="js-color-source d-none text-{{ colorSlug }}-100"></div>
+            <div class="js-color-source d-none text-{{ colorSlug }}-200"></div>
+            <div class="js-color-source d-none text-{{ colorSlug }}-300"></div>
+            <div class="js-color-source d-none text-{{ colorSlug }}-400"></div>
+            <div class="js-color-source d-none text-{{ colorSlug }}-500"></div>
+            <div class="js-color-source d-none text-{{ colorSlug }}-600"></div>
+            <div class="js-color-source d-none text-{{ colorSlug }}-700"></div>
+            <div class="js-color-source d-none text-{{ colorSlug }}-800"></div>
+            <div class="js-color-source d-none text-{{ colorSlug }}-900"></div>
+            {% endmacro %}
+
+            {{ hidden_color_elements('white') }}
+            {{ hidden_color_elements('light-gray') }}
+            {{ hidden_color_elements('gray') }}
+            {{ hidden_color_elements('dark-gray') }}
+            {{ hidden_color_elements('black') }}
+            {{ hidden_color_elements('red') }}
+            {{ hidden_color_elements('rose') }}
+            {{ hidden_color_elements('magenta') }}
+            {{ hidden_color_elements('violet') }}
+            {{ hidden_color_elements('blue') }}
+            {{ hidden_color_elements('azure') }}
+            {{ hidden_color_elements('cyan') }}
+            {{ hidden_color_elements('spring-green') }}
+            {{ hidden_color_elements('green') }}
+            {{ hidden_color_elements('chartreuse') }}
+            {{ hidden_color_elements('yellow') }}
+            {{ hidden_color_elements('orange') }}
+            {{ hidden_color_elements('orange-gray') }}
+            {{ hidden_color_elements('dark-gray-orange') }}
+            {{ hidden_color_elements('blue-gray') }}
+            {{ hidden_color_elements('light-gray-azure') }}
+            
+            
+
+        </div>

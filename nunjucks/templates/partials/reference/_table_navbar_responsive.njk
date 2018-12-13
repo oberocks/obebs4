@@ -1,0 +1,52 @@
+<!-- _table_navbar_responsive.njk -->
+		<div class="container-fluid pt-5 text-center bg-white text-dark">
+        
+            <div class="container modal-workspace">
+
+                <div class="row justify-content-center">
+                    
+                    <div id="{{ global_strings['reference']['sections']['2']['id'] }}" class="col-12">
+                        
+                        {% set headingHeadline = global_strings['reference']['sections']['2']['head'] %}
+						{% set headingSubline = global_strings['reference']['sections']['2']['subhead'] %}
+						{% set headingDescrip = global_strings['reference']['sections']['2']['descrip'] %}
+                        {% include "partials/_columnHeading.njk" %}
+
+                    </div>
+
+                </div>
+
+                <div class="row justify-content-center">
+
+                    <div class="col pb-5">
+                        
+                        <div class="table-responsive text-left">
+                            <table class="table table-striped table-hover table-bordered table-sm text-nowrap">
+                                <thead class="thead-dark">
+                                    <tr>
+                                        <th scope="col">Never Collapse</th>
+                                        <th scope="col">Collapse: SM</th>
+                                        <th scope="col">Collapse: MD</th>
+                                        <th scope="col">Collapse: LG</th>
+                                        <th scope="col">Collapse: XL</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <th scope="row" class="bg-dark text-light border-light"><samp>.navbar-expand</samp></th>
+                                        <td><samp>.navbar-expand-sm</samp></td>
+                                        <td><samp>.navbar-expand-md</samp></td>
+                                        <td><samp>.navbar-expand-lg</samp></td>
+                                        <td><samp>.navbar-expand-xl</samp></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>

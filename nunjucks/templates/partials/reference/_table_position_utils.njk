@@ -1,0 +1,63 @@
+<!-- _table_position_utils.njk -->
+		<div class="container-fluid pt-5 text-center bg-white text-dark">
+        
+            <div class="container modal-workspace">
+
+                <div class="row justify-content-center">
+                    
+                    <div id="{{ global_strings['reference']['sections']['16']['id'] }}" class="col-12">
+                        
+                        {% set headingHeadline = global_strings['reference']['sections']['16']['head'] %}
+						{% set headingSubline = global_strings['reference']['sections']['16']['subhead'] %}
+						{% set headingDescrip = global_strings['reference']['sections']['16']['descrip'] %}
+                        {% include "partials/_columnHeading.njk" %}
+
+                    </div>
+
+                </div>
+
+                <div class="row justify-content-center">
+
+                    <div class="col pb-5">
+                        
+                        <div class="alert alert-danger alert-dismissible text-left fade show" role="alert">
+                            <strong>NOTE:</strong> IE11 and IE10 will render the <samp>.sticky-top</samp> class attribute of <samp>position:sticky</samp> as <samp>position: relative</samp>. As such, BS4 wraps the <samp>.sticky-top</samp> class in a @supports query, to limit the stickiness to only browsers that can render it properly.
+                            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                <span aria-hidden="true">×</span>
+                            </button>
+                        </div>
+                        
+                        <div class="table-responsive text-left">
+                            
+                            <table class="table table-striped table-hover table-bordered table-sm text-nowrap">
+                                
+                                <thead class="thead-dark">
+                                    <tr>
+                                        <th scope="col">Static</th>
+                                        <th scope="col">Relative</th>
+                                        <th scope="col">Absolute</th>
+                                        <th scope="col">Fixed</th>
+                                        <th scope="col">Sticky</th>
+                                    </tr>
+                                </thead>
+
+                                <tbody>
+                                    <tr>
+                                        <td><samp>.position-static</samp></td>
+                                        <td><samp>.position-relative</samp></td>
+                                        <td><samp>.position-absolute</samp></td>
+                                        <td><samp>.position-fixed</samp></td>
+                                        <td><samp>.position-sticky</samp></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>

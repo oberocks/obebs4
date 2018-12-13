@@ -1,0 +1,54 @@
+<!-- _table_flex_ordering.njk -->
+		<div class="container-fluid pt-5 text-center bg-white text-dark">
+        
+            <div class="container modal-workspace">
+
+                <div class="row justify-content-center">
+                    
+                    <div id="{{ global_strings['reference']['sections']['13']['id'] }}" class="col-12">
+                        
+                        {% set headingHeadline = global_strings['reference']['sections']['13']['head'] %}
+						{% set headingSubline = global_strings['reference']['sections']['13']['subhead'] %}
+						{% set headingDescrip = global_strings['reference']['sections']['13']['descrip'] %}
+                        {% include "partials/_columnHeading.njk" %}
+
+                    </div>
+
+                </div>
+
+                <div class="row justify-content-center">
+
+                    <div class="col pb-5">
+                        
+                        <div class="alert alert-danger alert-dismissible text-left fade show" role="alert">
+                            <strong>NOTE:</strong> The <samp>.align-content-*(-*)</samp> classes have no effect on single rows of flex items (so generally use these with wrapping)!
+                            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                <span aria-hidden="true">×</span>
+                            </button>
+                        </div>
+                        
+                        <div class="table-responsive text-left">
+                            <table class="js-data-tables-element table table-striped table-hover table-bordered table-sm text-nowrap">
+                                
+                                {{ macros.responsive_classes_thead('thead-dark') }}
+                                
+                                <tbody>
+                                    
+                                    {{ macros.flex_align_content('start') }}
+                                    {{ macros.flex_align_content('end') }}
+                                    {{ macros.flex_align_content('center') }}
+                                    {{ macros.flex_align_content('around') }}
+                                    {{ macros.flex_align_content('stretch') }}
+
+                                </tbody>
+                            </table>
+                            
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>

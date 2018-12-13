@@ -1,0 +1,56 @@
+<!-- _table_screenreaders.njk -->
+		<div class="container-fluid pt-5 text-center bg-white text-dark">
+        
+            <div class="container modal-workspace">
+
+                <div class="row justify-content-center">
+                    
+                    <div id="{{ global_strings['reference']['sections']['17']['id'] }}" class="col-12">
+                        
+                        {% set headingHeadline = global_strings['reference']['sections']['17']['head'] %}
+						{% set headingSubline = global_strings['reference']['sections']['17']['subhead'] %}
+						{% set headingDescrip = global_strings['reference']['sections']['17']['descrip'] %}
+                        {% include "partials/_columnHeading.njk" %}
+
+                    </div>
+
+                </div>
+
+                <div class="row justify-content-center">
+
+                    <div class="col pb-5">
+                        
+                        <div class="table-responsive text-left">
+                            
+                            <div class="table-responsive text-left">
+                            
+                            <table class="table table-striped table-hover table-bordered table-sm text-nowrap">
+                                <thead class="thead-dark">
+                                    <tr>
+                                        <th scope="col">Class</th>
+                                        <th scope="col">Description</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <th scope="row" class="bg-dark text-light border-light"><samp>.sr-only</samp></th>
+                                        <td>Use this class to hide an element from all devices except for screen readers.</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row" class="bg-dark text-light border-light"><samp>.sr-only-focusable</samp></th>
+                                        <td>Combine this class with <samp>.sr-only</samp> to show the element again when it’s focused (e.g. by a keyboard-only user).</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+
+                        </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>

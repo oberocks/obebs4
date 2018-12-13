@@ -1,0 +1,54 @@
+<!-- _table_flex_ordering.njk -->
+		<div class="container-fluid pt-5 text-center bg-white text-dark">
+        
+            <div class="container modal-workspace">
+
+                <div class="row justify-content-center">
+                    
+                    <div id="{{ global_strings['reference']['sections']['12']['id'] }}" class="col-12">
+                        
+                        {% set headingHeadline = global_strings['reference']['sections']['12']['head'] %}
+						{% set headingSubline = global_strings['reference']['sections']['12']['subhead'] %}
+						{% set headingDescrip = global_strings['reference']['sections']['12']['descrip'] %}
+                        {% include "partials/_columnHeading.njk" %}
+
+                    </div>
+
+                </div>
+
+                <div class="row justify-content-center">
+
+                    <div class="col pb-5">
+                        
+                        <div class="table-responsive text-left">
+                            <table class="js-data-tables-element table table-striped table-hover table-bordered table-sm text-nowrap">
+                                
+                                {{ macros.responsive_classes_thead('thead-dark') }}
+                                
+                                <tbody>
+                                    
+                                    {{ macros.flex_ordering('1') }}
+                                    {{ macros.flex_ordering('2') }}
+                                    {{ macros.flex_ordering('3') }}
+                                    {{ macros.flex_ordering('4') }}
+                                    {{ macros.flex_ordering('5') }}
+                                    {{ macros.flex_ordering('6') }}
+                                    {{ macros.flex_ordering('7') }}
+                                    {{ macros.flex_ordering('8') }}
+                                    {{ macros.flex_ordering('9') }}
+                                    {{ macros.flex_ordering('10') }}
+                                    {{ macros.flex_ordering('11') }}
+                                    {{ macros.flex_ordering('12') }}
+
+                                </tbody>
+                            </table>
+                            
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
