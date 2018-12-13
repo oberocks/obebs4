@@ -1,0 +1,15 @@
+<!-- _errorPAgesScripts.njk -->
+        <script>
+            
+            $(function() {
+                
+                $('footer').siblings('.bg-white').remove();
+
+                var path = window.location.pathname;
+                var page = path.split("/").pop();
+                $('#url-details').text(page).collapse();
+
+
+            });
+            
+        </script>
