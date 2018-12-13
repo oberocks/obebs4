@@ -1,0 +1,194 @@
+<!-- _bg_gradients_1.njk -->
+		{% if obe_settings['enable-obeb4-1-color-gradients'] === 'true' %}
+		<div class="container-fluid pt-5 text-center bg-white text-dark">
+		
+			<div class="container">
+
+				<div class="row justify-content-center">
+				
+					<div id="{{ global_strings['colors']['sections']['6']['id'] }}" class="col-md-6 pb-5">
+					
+						{% set headingHeadline = global_strings['colors']['sections']['6']['head'] %}
+						{% set headingSubline = global_strings['colors']['sections']['6']['subhead'] %}
+						{% set headingDescrip = global_strings['colors']['sections']['6']['descrip'] %}
+						{% include "partials/_columnHeading.njk" %}
+
+						{% macro bg_gradient(classPartial, namePartial) %}
+						<div class="js-prism mb-2">
+							<div class="bg-gradient-{{ classPartial }}">{{ namePartial }} Gradient</div>
+						</div>
+						{% endmacro %}
+						
+						{{ bg_gradient('primary', 'Primary') }}
+						{{ bg_gradient('secondary', 'Secondary') }}
+						{{ bg_gradient('success', 'Success') }}
+						{{ bg_gradient('danger', 'Danger') }}
+						{{ bg_gradient('warning', 'Warning') }}
+						{{ bg_gradient('info', 'Info') }}
+						{{ bg_gradient('light', 'Light') }}
+						{{ bg_gradient('dark', 'Dark') }}
+
+						{{ bg_gradient('white', 'White') }}
+						{{ bg_gradient('light-gray', 'Light Gray') }}
+						{{ bg_gradient('gray', 'Gray') }}
+						{{ bg_gradient('dark-gray', 'Dark Gray') }}
+						{{ bg_gradient('black', 'Black') }}
+
+						{{ bg_gradient('red', 'Red') }}
+						{{ bg_gradient('rose', 'Rose') }}
+						{{ bg_gradient('magenta', 'Magenta') }}
+						{{ bg_gradient('violet', 'Violet') }}
+						{{ bg_gradient('blue', 'Blue') }}
+						{{ bg_gradient('azure', 'Azure') }}
+						{{ bg_gradient('cyan', 'Cyan') }}
+						{{ bg_gradient('spring-green', 'Spring Green') }}
+						{{ bg_gradient('green', 'Green') }}
+						{{ bg_gradient('chartreuse', 'Chartreuse') }}
+						{{ bg_gradient('yellow', 'Yellow') }}
+						{{ bg_gradient('orange', 'Orange') }}
+
+						{{ bg_gradient('orange-gray', 'Orange Gray') }}
+						{{ bg_gradient('dark-gray-orange', 'Dark Gray Orange') }}
+						{{ bg_gradient('blue-gray', 'Blue Gray') }}
+						{{ bg_gradient('light-gray-azure', 'Light Gray Azure') }}
+
+
+						{% macro bg_gradient_rev(classPartial, namePartial) %}
+						<div class="js-prism mb-2">
+							<div class="bg-gradient-{{ classPartial }}-reversed">{{ namePartial }} Reversed Gradient</div>
+						</div>
+						{% endmacro %}
+
+
+						{{ bg_gradient_rev('primary', 'Primary') }}
+						{{ bg_gradient_rev('secondary', 'Secondary') }}
+						{{ bg_gradient_rev('success', 'Success') }}
+						{{ bg_gradient_rev('danger', 'Danger') }}
+						{{ bg_gradient_rev('warning', 'Warning') }}
+						{{ bg_gradient_rev('info', 'Info') }}
+						{{ bg_gradient_rev('light', 'Light') }}
+						{{ bg_gradient_rev('dark', 'Dark') }}
+
+						{{ bg_gradient_rev('white', 'White') }}
+						{{ bg_gradient_rev('light-gray', 'Light Gray') }}
+						{{ bg_gradient_rev('gray', 'Gray') }}
+						{{ bg_gradient_rev('dark-gray', 'Dark Gray') }}
+						{{ bg_gradient_rev('black', 'Black') }}
+
+						{{ bg_gradient_rev('red', 'Red') }}
+						{{ bg_gradient_rev('rose', 'Rose') }}
+						{{ bg_gradient_rev('magenta', 'Magenta') }}
+						{{ bg_gradient_rev('violet', 'Violet') }}
+						{{ bg_gradient_rev('blue', 'Blue') }}
+						{{ bg_gradient_rev('azure', 'Azure') }}
+						{{ bg_gradient_rev('cyan', 'Cyan') }}
+						{{ bg_gradient_rev('spring-green', 'Spring Green') }}
+						{{ bg_gradient_rev('green', 'Green') }}
+						{{ bg_gradient_rev('chartreuse', 'Chartreuse') }}
+						{{ bg_gradient_rev('yellow', 'Yellow') }}
+						{{ bg_gradient_rev('orange', 'Orange') }}
+
+						{{ bg_gradient_rev('orange-gray', 'Orange Gray') }}
+						{{ bg_gradient_rev('dark-gray-orange', 'Dark Gray Orange') }}
+						{{ bg_gradient_rev('blue-gray', 'Blue Gray') }}
+						{{ bg_gradient_rev('light-gray-azure', 'Light Gray Azure') }}
+					
+					</div>
+					
+					<div id="{{ global_strings['colors']['sections']['7']['id'] }}" class="col-md-6 pb-5">
+					
+						{% set headingHeadline = global_strings['colors']['sections']['7']['head'] %}
+						{% set headingSubline = global_strings['colors']['sections']['7']['subhead'] %}
+						{% set headingDescrip = global_strings['colors']['sections']['7']['descrip'] %}
+						{% include "partials/_columnHeading.njk" %}
+
+
+						{% macro bg_gradient_horiz(classPartial, namePartial) %}
+						<div class="js-prism mb-2">
+							<div class="bg-gradient-{{ classPartial }}-left">{{ namePartial }} Left Gradient</div>
+						</div>
+						{% endmacro %}
+
+
+						{{ bg_gradient_horiz('primary', 'Primary') }}
+						{{ bg_gradient_horiz('secondary', 'Secondary') }}
+						{{ bg_gradient_horiz('success', 'Success') }}
+						{{ bg_gradient_horiz('danger', 'Danger') }}
+						{{ bg_gradient_horiz('warning', 'Warning') }}
+						{{ bg_gradient_horiz('info', 'Info') }}
+						{{ bg_gradient_horiz('light', 'Light') }}
+						{{ bg_gradient_horiz('dark', 'Dark') }}
+
+						{{ bg_gradient_horiz('white', 'White') }}
+						{{ bg_gradient_horiz('light-gray', 'Light Gray') }}
+						{{ bg_gradient_horiz('gray', 'Gray') }}
+						{{ bg_gradient_horiz('dark-gray', 'Dark Gray') }}
+						{{ bg_gradient_horiz('black', 'Black') }}
+
+						{{ bg_gradient_horiz('red', 'Red') }}
+						{{ bg_gradient_horiz('rose', 'Rose') }}
+						{{ bg_gradient_horiz('magenta', 'Magenta') }}
+						{{ bg_gradient_horiz('violet', 'Violet') }}
+						{{ bg_gradient_horiz('blue', 'Blue') }}
+						{{ bg_gradient_horiz('azure', 'Azure') }}
+						{{ bg_gradient_horiz('cyan', 'Cyan') }}
+						{{ bg_gradient_horiz('spring-green', 'Spring Green') }}
+						{{ bg_gradient_horiz('green', 'Green') }}
+						{{ bg_gradient_horiz('chartreuse', 'Chartreuse') }}
+						{{ bg_gradient_horiz('yellow', 'Yellow') }}
+						{{ bg_gradient_horiz('orange', 'Orange') }}
+
+						{{ bg_gradient_horiz('orange-gray', 'Orange Gray') }}
+						{{ bg_gradient_horiz('dark-gray-orange', 'Dark Gray Orange') }}
+						{{ bg_gradient_horiz('blue-gray', 'Blue Gray') }}
+						{{ bg_gradient_horiz('light-gray-azure', 'Light Gray Azure') }}
+
+
+						{% macro bg_gradient_horiz_rev(classPartial, namePartial) %}
+						<div class="js-prism mb-2">
+							<div class="bg-gradient-{{ classPartial }}-right">{{ namePartial }} Right Gradient</div>
+						</div>
+						{% endmacro %}
+
+
+						{{ bg_gradient_horiz_rev('primary', 'Primary') }}
+						{{ bg_gradient_horiz_rev('secondary', 'Secondary') }}
+						{{ bg_gradient_horiz_rev('success', 'Success') }}
+						{{ bg_gradient_horiz_rev('danger', 'Danger') }}
+						{{ bg_gradient_horiz_rev('warning', 'Warning') }}
+						{{ bg_gradient_horiz_rev('info', 'Info') }}
+						{{ bg_gradient_horiz_rev('light', 'Light') }}
+						{{ bg_gradient_horiz_rev('dark', 'Dark') }}
+
+						{{ bg_gradient_horiz_rev('white', 'White') }}
+						{{ bg_gradient_horiz_rev('light-gray', 'Light Gray') }}
+						{{ bg_gradient_horiz_rev('gray', 'Gray') }}
+						{{ bg_gradient_horiz_rev('dark-gray', 'Dark Gray') }}
+						{{ bg_gradient_horiz_rev('black', 'Black') }}
+
+						{{ bg_gradient_horiz_rev('red', 'Red') }}
+						{{ bg_gradient_horiz_rev('rose', 'Rose') }}
+						{{ bg_gradient_horiz_rev('magenta', 'Magenta') }}
+						{{ bg_gradient_horiz_rev('violet', 'Violet') }}
+						{{ bg_gradient_horiz_rev('blue', 'Blue') }}
+						{{ bg_gradient_horiz_rev('azure', 'Azure') }}
+						{{ bg_gradient_horiz_rev('cyan', 'Cyan') }}
+						{{ bg_gradient_horiz_rev('spring-green', 'Spring Green') }}
+						{{ bg_gradient_horiz_rev('green', 'Green') }}
+						{{ bg_gradient_horiz_rev('chartreuse', 'Chartreuse') }}
+						{{ bg_gradient_horiz_rev('yellow', 'Yellow') }}
+						{{ bg_gradient_horiz_rev('orange', 'Orange') }}
+
+						{{ bg_gradient_horiz_rev('orange-gray', 'Orange Gray') }}
+						{{ bg_gradient_horiz_rev('dark-gray-orange', 'Dark Gray Orange') }}
+						{{ bg_gradient_horiz_rev('blue-gray', 'Blue Gray') }}
+						{{ bg_gradient_horiz_rev('light-gray-azure', 'Light Gray Azure') }}
+						
+					</div>
+					
+				</div>
+
+			</div>
+
+		</div>
+		{% endif %}

@@ -1,0 +1,76 @@
+<!-- _card_colors.njk -->
+		<div class="container-fluid pt-5 text-center bg-white text-dark">
+        
+            <div class="container modal-workspace">
+
+                <div id="{{ global_strings['colors']['sections']['19']['id'] }}" class="row justify-content-center pt-5">
+                    
+                    <div class="col-12">
+                        
+                        {% set headingHeadline = global_strings['colors']['sections']['19']['head'] %}
+						{% set headingSubline = global_strings['colors']['sections']['19']['subhead'] %}
+						{% set headingDescrip = global_strings['colors']['sections']['19']['descrip'] %}
+                        {% include "partials/_columnHeading.njk" %}
+
+                    </div>
+
+                </div>
+                
+                <div class="row justify-content-center text-left">
+
+                    {% macro card_colors(name, bgClass, txtClass) %}
+                    <div class="col-sm-6 pb-4">
+
+                        <div class="js-prism mb-2">
+                            <div class="card text-{{ txtClass }} bg-{{ bgClass }}">
+                                <div class="card-header">{{ name }} Card Heading</div>
+                                <div class="card-body">
+                                    <h5 class="card-title">{{ name }} Card Title</h5>
+                                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                </div>
+                                <div class="card-footer text-right">
+                                    <small>{{ name }} Footer</small>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    {% endmacro %}
+
+                    {{ card_colors('Primary', 'primary', 'white') }}
+                    {{ card_colors('Secondary', 'secondary', 'white') }}
+                    {{ card_colors('Success', 'success', 'white') }}
+                    {{ card_colors('Danger', 'danger', 'white') }}
+                    {{ card_colors('Warning', 'warning', 'white') }}
+                    {{ card_colors('Info', 'info', 'white') }}
+                    {{ card_colors('Light', 'light', 'dark') }}
+                    {{ card_colors('Dark', 'dark', 'white') }}
+
+                    {{ card_colors('White', 'white', 'dark') }}
+                    {{ card_colors('Light Gray', 'light-gray', 'dark') }}
+                    {{ card_colors('Gray', 'gray', 'white') }}
+                    {{ card_colors('Dark Gray', 'dark-gray', 'white') }}
+                    {{ card_colors('Black', 'black', 'white') }}
+                    
+                    {{ card_colors('Red', 'red', 'white') }}
+                    {{ card_colors('Rose', 'rose', 'white') }}
+                    {{ card_colors('Magenta', 'magenta', 'white') }}
+                    {{ card_colors('Violet', 'violet', 'white') }}
+                    {{ card_colors('Blue', 'blue', 'white') }}
+                    {{ card_colors('Azure', 'azure', 'white') }}
+                    {{ card_colors('Cyan', 'cyan', 'white') }}
+                    {{ card_colors('Spring Green', 'spring-green', 'white') }}
+                    {{ card_colors('Green', 'green', 'white') }}
+                    {{ card_colors('Chartreuse', 'chartreuse', 'dark') }}
+                    {{ card_colors('Yellow', 'yellow', 'dark') }}
+                    {{ card_colors('Orange', 'orange', 'white') }}
+                    {{ card_colors('Orange Gray', 'orange-gray', 'white') }}
+                    {{ card_colors('Dark Gray Orange', 'dark-gray-orange', 'white') }}
+                    {{ card_colors('Blue Gray', 'blue-gray', 'white') }}
+                    {{ card_colors('Light Gray Azure', 'light-gray-azure', 'white') }}
+
+                </div>
+
+            </div>
+
+        </div>

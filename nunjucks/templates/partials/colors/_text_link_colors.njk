@@ -1,0 +1,110 @@
+<!-- _text_link_colors.njk -->
+		{% if obe_settings['enable-obeb4-text-wheel-colors'] === 'true' %}
+		<div class="container-fluid pt-5 text-center bg-white text-dark">
+		
+			<div class="container">
+				
+				<div class="row justify-content-center pt-5">
+					
+					<div id="{{ global_strings['colors']['sections']['0']['id'] }}" class="col-md-6 pb-5">
+						
+						{% set headingHeadline = global_strings['colors']['sections']['0']['head'] %}
+						{% set headingSubline = global_strings['colors']['sections']['0']['subhead'] %}
+						{% set headingDescrip = global_strings['colors']['sections']['0']['descrip'] %}
+						{% include "partials/_columnHeading.njk" %}
+
+						{% macro text_element(classPartial, namePartial) %}
+						<div class="js-prism">
+							<div class="text-{{ classPartial }}">{{ namePartial }} Text</div>
+						</div>
+						{% endmacro %}
+
+						{{ text_element('primary', 'Primary') }}
+						{{ text_element('secondary', 'Secondary') }}
+						{{ text_element('success', 'Success') }}
+						{{ text_element('danger', 'Danger') }}
+						{{ text_element('warning', 'Warning') }}
+						{{ text_element('info', 'Info') }}
+						{{ text_element('light', 'Light') }}
+						{{ text_element('dark', 'Dark') }}
+
+						{{ text_element('white', 'White') }}
+						{{ text_element('light-gray', 'Light Gray') }}
+						{{ text_element('gray', 'Gray') }}
+						{{ text_element('dark-gray', 'Dark Gray') }}
+						{{ text_element('black', 'Black') }}
+
+						{{ text_element('red', 'Red') }}
+						{{ text_element('rose', 'Rose') }}
+						{{ text_element('magenta', 'Magenta') }}
+						{{ text_element('violet', 'Violet') }}
+						{{ text_element('blue', 'Blue') }}
+						{{ text_element('azure', 'Azure') }}
+						{{ text_element('cyan', 'Cyan') }}
+						{{ text_element('spring-green', 'Spring Green') }}
+						{{ text_element('green', 'Green') }}
+						{{ text_element('chartreuse', 'Chartreuse') }}
+						{{ text_element('yellow', 'Yellow') }}
+						{{ text_element('orange', 'Orange') }}
+
+						{{ text_element('orange-gray', 'Orange Gray') }}
+						{{ text_element('dark-gray-orange', 'Dark Gray Orange') }}
+						{{ text_element('blue-gray', 'Blue Gray') }}
+						{{ text_element('light-gray-azure', 'Light Gray Azure') }}
+						
+					</div>
+					
+					<div id="{{ global_strings['colors']['sections']['1']['id'] }}" class="col-md-6 pb-5">
+						
+						{% set headingHeadline = global_strings['colors']['sections']['1']['head'] %}
+						{% set headingSubline = global_strings['colors']['sections']['1']['subhead'] %}
+						{% set headingDescrip = global_strings['colors']['sections']['1']['descrip'] %}
+						{% include "partials/_columnHeading.njk" %}
+
+						{% macro link_element(classPartial, namePartial) %}
+						<div class="js-prism text-center">
+							<a href="#" class="text-{{ classPartial }}">{{ namePartial }} Link</a>
+						</div>
+						{% endmacro %}
+
+						{{ link_element('primary', 'Primary') }}
+						{{ link_element('secondary', 'Secondary') }}
+						{{ link_element('success', 'Success') }}
+						{{ link_element('danger', 'Danger') }}
+						{{ link_element('warning', 'Warning') }}
+						{{ link_element('info', 'Info') }}
+						{{ link_element('light', 'Light') }}
+						{{ link_element('dark', 'Dark') }}
+
+						{{ link_element('white', 'White') }}
+						{{ link_element('light-gray', 'Light Gray') }}
+						{{ link_element('gray', 'Gray') }}
+						{{ link_element('dark-gray', 'Dark Gray') }}
+						{{ link_element('black', 'Black') }}
+
+						{{ link_element('red', 'Red') }}
+						{{ link_element('rose', 'Rose') }}
+						{{ link_element('magenta', 'Magenta') }}
+						{{ link_element('violet', 'Violet') }}
+						{{ link_element('blue', 'Blue') }}
+						{{ link_element('azure', 'Azure') }}
+						{{ link_element('cyan', 'Cyan') }}
+						{{ link_element('spring-green', 'Spring Green') }}
+						{{ link_element('green', 'Green') }}
+						{{ link_element('chartreuse', 'Chartreuse') }}
+						{{ link_element('yellow', 'Yellow') }}
+						{{ link_element('orange', 'Orange') }}
+
+						{{ link_element('orange-gray', 'Orange Gray') }}
+						{{ link_element('dark-gray-orange', 'Dark Gray Orange') }}
+						{{ link_element('blue-gray', 'Blue Gray') }}
+						{{ link_element('light-gray-azure', 'Light Gray Azure') }}
+
+					</div>
+					
+				</div>
+
+			</div>
+
+		</div>
+		{% endif %}

@@ -1,0 +1,87 @@
+<!-- _border_variants.njk -->
+		{% if obe_settings['enable-obeb4-border-tints-shades'] === 'true' %}
+		<div class="container-fluid pt-5 text-center bg-white text-dark">
+		
+			<div class="container">
+				
+				<div class="row justify-content-center">
+				
+					<div id="{{ global_strings['colors']['sections']['5']['id'] }}" class="col-12">
+					
+						{% set headingHeadline = global_strings['colors']['sections']['5']['head'] %}
+						{% set headingSubline = global_strings['colors']['sections']['5']['subhead'] %}
+						{% set headingDescrip = global_strings['colors']['sections']['5']['descrip'] %}
+						{% include "partials/_columnHeading.njk" %}
+						
+					</div>
+
+				</div>
+
+				<div class="row justify-content-center pb-5">
+
+					{% macro border_variants(classPartial, namePartial) %}
+					<div class="col-md-6 mb-5">
+						<h4>{{ namePartial }} Variants</h4>
+						<div class="js-prism mb-2">
+							<div class="border border-{{ classPartial }}-50">{{ namePartial }} 50 Border</div>
+						</div>
+						<div class="js-prism mb-2">
+							<div class="border border-{{ classPartial }}-100">{{ namePartial }} 100 Border</div>
+						</div>
+						<div class="js-prism mb-2">
+							<div class="border border-{{ classPartial }}-200">{{ namePartial }} 200 Border</div>
+						</div>
+						<div class="js-prism mb-2">
+							<div class="border border-{{ classPartial }}-300">{{ namePartial }} 300 Border</div>
+						</div>
+						<div class="js-prism mb-2">
+							<div class="border border-{{ classPartial }}-400">{{ namePartial }} 400 Border</div>
+						</div>
+						<div class="js-prism mb-2">
+							<div class="border border-{{ classPartial }}-500">{{ namePartial }} 500 Border</div>
+						</div>
+						<div class="js-prism mb-2">
+							<div class="border border-{{ classPartial }}-600">{{ namePartial }} 600 Border</div>
+						</div>
+						<div class="js-prism mb-2">
+							<div class="border border-{{ classPartial }}-700">{{ namePartial }} 700 Border</div>
+						</div>
+						<div class="js-prism mb-2">
+							<div class="border border-{{ classPartial }}-800">{{ namePartial }} 800 Border</div>
+						</div>
+						<div class="js-prism mb-2">
+							<div class="border border-{{ classPartial }}-900">{{ namePartial }} 900 Border</div>
+						</div>
+					</div>
+					{% endmacro %}
+
+					{{ border_variants('white', 'White') }}
+					{{ border_variants('light-gray', 'Light Gray') }}
+					{{ border_variants('gray', 'Gray') }}
+					{{ border_variants('dark-gray', 'Dark Gray') }}
+					{{ border_variants('black', 'Black') }}
+
+					{{ border_variants('red', 'Red') }}
+					{{ border_variants('rose', 'Rose') }}
+					{{ border_variants('magenta', 'Magenta') }}
+					{{ border_variants('violet', 'Violet') }}
+					{{ border_variants('blue', 'Blue') }}
+					{{ border_variants('azure', 'Azure') }}
+					{{ border_variants('cyan', 'Cyan') }}
+					{{ border_variants('spring-green', 'Spring Green') }}
+					{{ border_variants('green', 'Green') }}
+					{{ border_variants('chartreuse', 'Chartreuse') }}
+					{{ border_variants('yellow', 'Yellow') }}
+					{{ border_variants('orange', 'Orange') }}
+
+					{{ border_variants('orange-gray', 'Orange Gray') }}
+					{{ border_variants('dark-gray-orange', 'Dark Gray Orange') }}
+					{{ border_variants('blue-gray', 'Blue Gray') }}
+					{{ border_variants('light-gray-azure', 'Light Gray Azure') }}
+					
+				</div>
+
+			</div>
+
+		</div>
+		{% endif %}

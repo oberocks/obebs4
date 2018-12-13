@@ -1,0 +1,138 @@
+<!-- _list_group_colors.njk -->
+		{% if obe_settings['enable-obeb4-list-groups'] === 'true' %}
+		<div class="container-fluid pt-5 text-center bg-white text-dark">
+		
+			<div class="container">
+				
+				<div class="row justify-content-center">
+					
+					<div id="{{ global_strings['colors']['sections']['37']['id'] }}" class="col-md-6 pb-5">
+					
+						{% set headingHeadline = global_strings['colors']['sections']['37']['head'] %}
+						{% set headingSubline = global_strings['colors']['sections']['37']['subhead'] %}
+						{% set headingDescrip = global_strings['colors']['sections']['37']['descrip'] %}
+						{% include "partials/_columnHeading.njk" %}
+						
+						<div class="js-prism text-left">		
+							<ul class="list-group">
+								<li class="list-group-item list-group-item">Standard List</li>
+								<li class="list-group-item list-group-item">Standard Group</li>
+								<li class="list-group-item list-group-item">Standard Items</li>
+							</ul>
+						</div>
+						<div style="height: 20px;"> </div>
+						
+						{% macro list_group_colors(classPartial, namePartial) %}
+						<div class="js-prism text-left">		
+							<ul class="list-group">
+								<li class="list-group-item list-group-item-{{ classPartial }}">{{ namePartial }} List</li>
+								<li class="list-group-item list-group-item-{{ classPartial }}">{{ namePartial }} Group</li>
+								<li class="list-group-item list-group-item-{{ classPartial }}">{{ namePartial }} Items</li>
+							</ul>
+						</div>
+						<div style="height: 20px;"> </div>
+						{% endmacro %}
+						
+						{{ list_group_colors('primary', 'Primary') }}
+						{{ list_group_colors('secondary', 'Secondary') }}
+						{{ list_group_colors('success', 'Success') }}
+						{{ list_group_colors('danger', 'Danger') }}
+						{{ list_group_colors('warning', 'Warning') }}
+						{{ list_group_colors('info', 'Info') }}
+						{{ list_group_colors('light', 'Light') }}
+						{{ list_group_colors('dark', 'Dark') }}
+
+						{{ list_group_colors('white', 'White') }}
+						{{ list_group_colors('light-gray', 'Light Gray') }}
+						{{ list_group_colors('gray', 'Gray') }}
+						{{ list_group_colors('dark-gray', 'Dark Gray') }}
+						{{ list_group_colors('black', 'Black') }}
+
+						{{ list_group_colors('red', 'Red') }}
+						{{ list_group_colors('rose', 'Rose') }}
+						{{ list_group_colors('magenta', 'Magenta') }}
+						{{ list_group_colors('violet', 'Violet') }}
+						{{ list_group_colors('blue', 'Blue') }}
+						{{ list_group_colors('azure', 'Azure') }}
+						{{ list_group_colors('cyan', 'Cyan') }}
+						{{ list_group_colors('spring-green', 'Spring Green') }}
+						{{ list_group_colors('green', 'Green') }}
+						{{ list_group_colors('chartreuse', 'Chartreuse') }}
+						{{ list_group_colors('yellow', 'Yellow') }}
+						{{ list_group_colors('orange', 'Orange') }}
+
+						{{ list_group_colors('orange-gray', 'Orange Gray') }}
+						{{ list_group_colors('dark-gray-orange', 'Dark Gray Orange') }}
+						{{ list_group_colors('blue-gray', 'Blue Gray') }}
+						{{ list_group_colors('light-gray-azure', 'Light Gray Azure') }}
+						
+					</div>
+					
+					<div id="{{ global_strings['colors']['sections']['38']['id'] }}" class="col-md-6 pb-5">
+					
+						{% set headingHeadline = global_strings['colors']['sections']['38']['head'] %}
+						{% set headingSubline = global_strings['colors']['sections']['38']['subhead'] %}
+						{% set headingDescrip = global_strings['colors']['sections']['38']['descrip'] %}
+						{% include "partials/_columnHeading.njk" %}
+						
+						<div class="js-prism text-left">
+							<div class="list-group">
+								<a href="#" class="list-group-item list-group-item-action">Standard Action List</a>
+								<a href="#" class="list-group-item list-group-item-action">Standard Action Group</a>
+								<a href="#" class="list-group-item list-group-item-action">Standard Action Items</a>
+							</div>
+						</div>
+						<div style="height: 20px;"> </div>
+						
+						{% macro list_group_colors_action(classPartial, namePartial) %}
+						<div class="js-prism text-left">		
+							<div class="list-group">
+								<a href="#" class="list-group-item list-group-item-action list-group-item-{{ classPartial }}">{{ namePartial }} Action List</a>
+								<a href="#" class="list-group-item list-group-item-action list-group-item-{{ classPartial }}">{{ namePartial }} Action Group</a>
+								<a href="#" class="list-group-item list-group-item-action list-group-item-{{ classPartial }}">{{ namePartial }} Action Items</a>
+							</div>
+						</div>
+						<div style="height: 20px;"> </div>
+						{% endmacro %}
+						
+						{{ list_group_colors_action('primary', 'Primary') }}
+						{{ list_group_colors_action('secondary', 'Secondary') }}
+						{{ list_group_colors_action('success', 'Success') }}
+						{{ list_group_colors_action('danger', 'Danger') }}
+						{{ list_group_colors_action('warning', 'Warning') }}
+						{{ list_group_colors_action('info', 'Info') }}
+						{{ list_group_colors_action('light', 'Light') }}
+						{{ list_group_colors_action('dark', 'Dark') }}
+
+						{{ list_group_colors_action('white', 'White') }}
+						{{ list_group_colors_action('light-gray', 'Light Gray') }}
+						{{ list_group_colors_action('gray', 'Gray') }}
+						{{ list_group_colors_action('dark-gray', 'Dark Gray') }}
+						{{ list_group_colors_action('black', 'Black') }}
+
+						{{ list_group_colors_action('red', 'Red') }}
+						{{ list_group_colors_action('rose', 'Rose') }}
+						{{ list_group_colors_action('magenta', 'Magenta') }}
+						{{ list_group_colors_action('violet', 'Violet') }}
+						{{ list_group_colors_action('blue', 'Blue') }}
+						{{ list_group_colors_action('azure', 'Azure') }}
+						{{ list_group_colors_action('cyan', 'Cyan') }}
+						{{ list_group_colors_action('spring-green', 'Spring Green') }}
+						{{ list_group_colors_action('green', 'Green') }}
+						{{ list_group_colors_action('chartreuse', 'Chartreuse') }}
+						{{ list_group_colors_action('yellow', 'Yellow') }}
+						{{ list_group_colors_action('orange', 'Orange') }}
+
+						{{ list_group_colors_action('orange-gray', 'Orange Gray') }}
+						{{ list_group_colors_action('dark-gray-orange', 'Dark Gray Orange') }}
+						{{ list_group_colors_action('blue-gray', 'Blue Gray') }}
+						{{ list_group_colors_action('light-gray-azure', 'Light Gray Azure') }}
+						
+					</div>
+					
+				</div>
+
+			</div>
+
+		</div>
+		{% endif %}

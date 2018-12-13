@@ -1,0 +1,67 @@
+<!-- _form_colors.njk -->
+		{% if obe_settings['enable-obeb4-form-element-wheel-colors'] === 'true' %}
+		<div class="container-fluid pt-5 text-center bg-white text-dark">
+		
+			<div class="container">
+				
+				<div class="row justify-content-center">
+					
+					<div id="{{ global_strings['colors']['sections']['24']['id'] }}" class="col-md-6 pb-5">
+					
+						{% set headingHeadline = global_strings['colors']['sections']['24']['head'] %}
+						{% set headingSubline = global_strings['colors']['sections']['24']['subhead'] %}
+						{% set headingDescrip = global_strings['colors']['sections']['24']['descrip'] %}
+						{% include "partials/_columnHeading.njk" %}
+
+						{% macro form_colors(classPartial, namePartial) %}
+						<div class="js-prism text-left mb-2">
+							<form>
+								<div class="form-group">
+									<label for="input-{{ classPartial }}" class="text-{{ classPartial }}">{{ namePartial }} Label</label>
+									<input type="text" class="form-control form-{{ classPartial }}" id="input-{{ classPartial }}" placeholder="{{ namePartial }} Input">
+								</div>
+							</form>
+						</div>
+						{% endmacro %}
+
+						{{ form_colors('primary', 'Primary') }}
+						{{ form_colors('secondary', 'Secondary') }}
+						{{ form_colors('success', 'Success') }}
+						{{ form_colors('danger', 'Danger') }}
+						{{ form_colors('warning', 'Warning') }}
+						{{ form_colors('info', 'Info') }}
+						{{ form_colors('light', 'Light') }}
+						{{ form_colors('dark', 'Dark') }}
+
+						{{ form_colors('white', 'White') }}
+						{{ form_colors('light-gray', 'Light Gray') }}
+						{{ form_colors('gray', 'Gray') }}
+						{{ form_colors('dark-gray', 'Dark Gray') }}
+						{{ form_colors('black', 'Black') }}
+
+						{{ form_colors('red', 'Red') }}
+						{{ form_colors('rose', 'Rose') }}
+						{{ form_colors('magenta', 'Magenta') }}
+						{{ form_colors('violet', 'Violet') }}
+						{{ form_colors('blue', 'Blue') }}
+						{{ form_colors('azure', 'Azure') }}
+						{{ form_colors('cyan', 'Cyan') }}
+						{{ form_colors('spring-green', 'Spring Green') }}
+						{{ form_colors('green', 'Green') }}
+						{{ form_colors('chartreuse', 'Chartreuse') }}
+						{{ form_colors('yellow', 'Yellow') }}
+						{{ form_colors('orange', 'Orange') }}
+
+						{{ form_colors('orange-gray', 'Orange Gray') }}
+						{{ form_colors('dark-gray-orange', 'Dark Gray Orange') }}
+						{{ form_colors('blue-gray', 'Blue Gray') }}
+						{{ form_colors('light-gray-azure', 'Light Gray Azure') }}
+						
+					</div>
+					
+				</div>
+
+			</div>
+
+		</div>
+		{% endif %}

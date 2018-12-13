@@ -1,0 +1,110 @@
+<!-- _bg_gradients_7.njk -->
+		{% if obe_settings['enable-obeb4-3-color-gradients'] === 'true' %}
+        <div class="container-fluid pt-5 text-center bg-white text-dark">
+        
+            <div class="container">
+                
+                <div class="row justify-content-center">
+                    
+                    <div id="{{ global_strings['colors']['sections']['31']['id'] }}" class="col-md-6 pb-5">
+                    
+                        {% set headingHeadline = global_strings['colors']['sections']['31']['head'] %}
+						{% set headingSubline = global_strings['colors']['sections']['31']['subhead'] %}
+						{% set headingDescrip = global_strings['colors']['sections']['31']['descrip'] %}
+                        {% include "partials/_columnHeading.njk" %}
+
+                        {% macro bg_3col_grad(classPartial, namePartial) %}
+                        <div class="js-prism mb-2">
+                            <div class="bg-gradient-{{ classPartial }}-vertical">{{ namePartial }} Vertical</div>
+                        </div>
+                        {% endmacro %}
+                        
+                        {{ bg_3col_grad('red-magenta', 'Red/Magenta') }}
+                        {{ bg_3col_grad('rose-violet', 'Rose/Violet') }}
+                        {{ bg_3col_grad('magenta-blue', 'Magenta/Blue') }}
+                        {{ bg_3col_grad('violet-azure', 'Violet/Azure') }}
+                        {{ bg_3col_grad('blue-cyan', 'Blue/Cyan') }}
+                        {{ bg_3col_grad('azure-spring-green', 'Azure/Spring Green') }}
+                        {{ bg_3col_grad('cyan-green', 'Cyan/Green') }}
+                        {{ bg_3col_grad('spring-green-chartreuse', 'Spring Green/Chartreuse') }}
+                        {{ bg_3col_grad('green-yellow', 'Green/Yellow') }}
+                        {{ bg_3col_grad('chartreuse-orange', 'Chartreuse/Orange') }}
+                        {{ bg_3col_grad('yellow-red', 'Yellow/Red') }}
+                        {{ bg_3col_grad('orange-rose', 'Orange/Rose') }}
+                        {{ bg_3col_grad('white-gray', 'White/Gray') }}
+                        {{ bg_3col_grad('light-gray-dark-gray', 'Light Gray/Dark Gray') }}
+                        {{ bg_3col_grad('gray-black', 'Gray/Black') }}
+
+
+                        {{ bg_3col_grad('magenta-red', 'Magenta/Red') }}
+                        {{ bg_3col_grad('violet-rose', 'Violet-Rose') }}
+                        {{ bg_3col_grad('blue-magenta', 'Blue/Magenta') }}
+                        {{ bg_3col_grad('azure-violet', 'Azure/Violet') }}
+                        {{ bg_3col_grad('cyan-blue', 'Cyan/Blue') }}
+                        {{ bg_3col_grad('spring-green-azure', 'Spring Green/Azure') }}
+                        {{ bg_3col_grad('green-cyan', 'Green/Cyan') }}
+                        {{ bg_3col_grad('chartreuse-spring-green', 'Chartreuse/Spring Green') }}
+                        {{ bg_3col_grad('green-yellow', 'Green/Yellow') }}
+                        {{ bg_3col_grad('orange-chartreuse', 'Orange/Chartreuse') }}
+                        {{ bg_3col_grad('red-yellow', 'Red/Yellow') }}
+                        {{ bg_3col_grad('rose-orange', 'Rose/Orange') }}
+                        {{ bg_3col_grad('white-gray', 'White/Gray') }}
+                        {{ bg_3col_grad('dark-gray-light-gray', 'Dark Gray/Light Gray') }}
+                        {{ bg_3col_grad('black-gray', 'Black/Gray') }}
+                        
+                    </div>
+                    
+                    <div id="{{ global_strings['colors']['sections']['32']['id'] }}" class="col-md-6 pb-5">
+                    
+                        {% set headingHeadline = global_strings['colors']['sections']['32']['head'] %}
+						{% set headingSubline = global_strings['colors']['sections']['32']['subhead'] %}
+						{% set headingDescrip = global_strings['colors']['sections']['32']['descrip'] %}
+                        {% include "partials/_columnHeading.njk" %}
+
+                        {% macro bg_3col_grad_horiz(classPartial, namePartial) %}
+                        <div class="js-prism mb-2">
+                            <div class="bg-gradient-{{ classPartial }}-horizontal">{{ namePartial }} Horizontal</div>
+                        </div>
+                        {% endmacro %}
+                        
+                        {{ bg_3col_grad_horiz('red-magenta', 'Red/Magenta') }}
+                        {{ bg_3col_grad_horiz('rose-violet', 'Rose/Violet') }}
+                        {{ bg_3col_grad_horiz('magenta-blue', 'Magenta/Blue') }}
+                        {{ bg_3col_grad_horiz('violet-azure', 'Violet/Azure') }}
+                        {{ bg_3col_grad_horiz('blue-cyan', 'Blue/Cyan') }}
+                        {{ bg_3col_grad_horiz('azure-spring-green', 'Azure/Spring Green') }}
+                        {{ bg_3col_grad_horiz('cyan-green', 'Cyan/Green') }}
+                        {{ bg_3col_grad_horiz('spring-green-chartreuse', 'Spring Green/Chartreuse') }}
+                        {{ bg_3col_grad_horiz('green-yellow', 'Green/Yellow') }}
+                        {{ bg_3col_grad_horiz('chartreuse-orange', 'Chartreuse/Orange') }}
+                        {{ bg_3col_grad_horiz('yellow-red', 'Yellow/Red') }}
+                        {{ bg_3col_grad_horiz('orange-rose', 'Orange/Rose') }}
+                        {{ bg_3col_grad_horiz('white-gray', 'White/Gray') }}
+                        {{ bg_3col_grad_horiz('light-gray-dark-gray', 'Light Gray/Dark Gray') }}
+                        {{ bg_3col_grad_horiz('gray-black', 'Gray/Black') }}
+
+
+                        {{ bg_3col_grad_horiz('magenta-red', 'Magenta/Red') }}
+                        {{ bg_3col_grad_horiz('violet-rose', 'Violet-Rose') }}
+                        {{ bg_3col_grad_horiz('blue-magenta', 'Blue/Magenta') }}
+                        {{ bg_3col_grad_horiz('azure-violet', 'Azure/Violet') }}
+                        {{ bg_3col_grad_horiz('cyan-blue', 'Cyan/Blue') }}
+                        {{ bg_3col_grad_horiz('spring-green-azure', 'Spring Green/Azure') }}
+                        {{ bg_3col_grad_horiz('green-cyan', 'Green/Cyan') }}
+                        {{ bg_3col_grad_horiz('chartreuse-spring-green', 'Chartreuse/Spring Green') }}
+                        {{ bg_3col_grad_horiz('green-yellow', 'Green/Yellow') }}
+                        {{ bg_3col_grad_horiz('orange-chartreuse', 'Orange/Chartreuse') }}
+                        {{ bg_3col_grad_horiz('red-yellow', 'Red/Yellow') }}
+                        {{ bg_3col_grad_horiz('rose-orange', 'Rose/Orange') }}
+                        {{ bg_3col_grad_horiz('white-gray', 'White/Gray') }}
+                        {{ bg_3col_grad_horiz('dark-gray-light-gray', 'Dark Gray/Light Gray') }}
+                        {{ bg_3col_grad_horiz('black-gray', 'Black/Gray') }}
+                        
+                    </div>
+                    
+                </div>
+
+            </div>
+
+        </div>
+        {% endif %}

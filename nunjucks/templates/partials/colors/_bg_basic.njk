@@ -1,0 +1,62 @@
+<!-- _backgrounds_basic.njk -->
+		{% if obe_settings['enable-obeb4-background-wheel-colors'] === 'true' %}
+        <div class="container-fluid pt-5 text-center bg-white text-dark">
+        
+            <div class="container">
+
+                <div class="row justify-content-center">
+                
+                    <div id="{{ global_strings['colors']['sections']['2']['id'] }}" class="col-12 pb-5">
+                    
+                        {% set headingHeadline = global_strings['colors']['sections']['2']['head'] %}
+						{% set headingSubline = global_strings['colors']['sections']['2']['subhead'] %}
+						{% set headingDescrip = global_strings['colors']['sections']['2']['descrip'] %}
+                        {% include "partials/_columnHeading.njk" %}
+
+                        {% macro bg_element(classPartial, namePartial, textColorClass) %}
+                        <div class="js-prism mb-2">
+                            <div class="bg-{{ classPartial }} {{textColorClass}}">{{ namePartial }} Background</div>
+                        </div>
+                        {% endmacro %}
+                        
+                        {{ bg_element('primary', 'Primary', 'text-white') }}
+                        {{ bg_element('secondary', 'Secondary', 'text-white') }}
+                        {{ bg_element('success', 'Success', 'text-white') }}
+                        {{ bg_element('danger', 'Danger', 'text-white') }}
+                        {{ bg_element('warning', 'Warning', 'text-white') }}
+                        {{ bg_element('info', 'Info', 'text-white') }}
+                        {{ bg_element('light', 'Light', 'text-black') }}
+                        {{ bg_element('dark', 'Dark', 'text-white') }}
+                        
+                        {{ bg_element('white', 'White', 'text-black') }}
+                        {{ bg_element('light-gray', 'Light Gray', 'text-white') }}
+                        {{ bg_element('gray', 'Gray', 'text-white') }}
+                        {{ bg_element('dark-gray', 'Dark Gray', 'text-white') }}
+                        {{ bg_element('black', 'Black', 'text-white') }}
+
+                        {{ bg_element('red', 'Red', 'text-white') }}
+                        {{ bg_element('rose', 'Rose', 'text-white') }}
+                        {{ bg_element('magenta', 'Magenta', 'text-white') }}
+                        {{ bg_element('violet', 'Violet', 'text-white') }}
+                        {{ bg_element('blue', 'Blue', 'text-white') }}
+                        {{ bg_element('azure', 'Azure', 'text-white') }}
+                        {{ bg_element('cyan', 'Cyan', 'text-white') }}
+                        {{ bg_element('spring-green', 'Spring Green', 'text-white') }}
+                        {{ bg_element('green', 'Green', 'text-white') }}
+                        {{ bg_element('chartreuse', 'Chartreuse', 'text-black') }}
+                        {{ bg_element('yellow', 'Yellow', 'text-black') }}
+                        {{ bg_element('orange', 'Orange', 'text-white') }}
+
+                        {{ bg_element('orange-gray', 'Orange Gray', 'text-white') }}
+                        {{ bg_element('dark-gray-orange', 'Dark Gray Orange', 'text-white') }}
+                        {{ bg_element('blue-gray', 'Blue Gray', 'text-white') }}
+                        {{ bg_element('light-gray-azure', 'Light Gray Azure', 'text-white') }}
+                    
+                    </div>
+                    
+                </div>
+
+            </div>
+
+        </div>
+        {% endif %}

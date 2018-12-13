@@ -1,0 +1,113 @@
+<!-- _bg_gradients_2.njk -->
+		{% if obe_settings['enable-obeb4-1-color-gradients'] === 'true' %}
+		<div class="container-fluid pt-5 text-center bg-white text-dark">
+		
+			<div class="container">
+				
+				<div id="{{ global_strings['colors']['sections']['8']['id'] }}" class="row justify-content-center">
+					
+					<div class="col-12">
+					
+						{% set headingHeadline = global_strings['colors']['sections']['8']['head'] %}
+						{% set headingSubline = global_strings['colors']['sections']['8']['subhead'] %}
+						{% set headingDescrip = global_strings['colors']['sections']['8']['descrip'] %}
+						{% include "partials/_columnHeading.njk" %}
+						
+					</div>
+
+				</div>
+
+				<div class="row justify-content-center">
+					
+					<div class="col-md-6 pb-5">
+
+						{% macro bg_gradient_radial(classPartial, namePartial) %}
+						<div class="js-prism mb-2">
+							<div class="bg-gradient-{{ classPartial }}-radial">{{ namePartial }} Radial Gradient</div>
+						</div>
+						{% endmacro %}
+						
+						{{ bg_gradient_radial('primary', 'Primary') }}
+						{{ bg_gradient_radial('secondary', 'Secondary') }}
+						{{ bg_gradient_radial('success', 'Success') }}
+						{{ bg_gradient_radial('danger', 'Danger') }}
+						{{ bg_gradient_radial('warning', 'Warning') }}
+						{{ bg_gradient_radial('info', 'Info') }}
+						{{ bg_gradient_radial('light', 'Light') }}
+						{{ bg_gradient_radial('dark', 'Dark') }}
+
+						{{ bg_gradient_radial('white', 'White') }}
+						{{ bg_gradient_radial('light-gray', 'Light Gray') }}
+						{{ bg_gradient_radial('gray', 'Gray') }}
+						{{ bg_gradient_radial('dark-gray', 'Dark Gray') }}
+						{{ bg_gradient_radial('black', 'Black') }}
+
+						{{ bg_gradient_radial('red', 'Red') }}
+						{{ bg_gradient_radial('rose', 'Rose') }}
+						{{ bg_gradient_radial('magenta', 'Magenta') }}
+						{{ bg_gradient_radial('violet', 'Violet') }}
+						{{ bg_gradient_radial('blue', 'Blue') }}
+						{{ bg_gradient_radial('azure', 'Azure') }}
+						{{ bg_gradient_radial('cyan', 'Cyan') }}
+						{{ bg_gradient_radial('spring-green', 'Spring Green') }}
+						{{ bg_gradient_radial('green', 'Green') }}
+						{{ bg_gradient_radial('chartreuse', 'Chartreuse') }}
+						{{ bg_gradient_radial('yellow', 'Yellow') }}
+						{{ bg_gradient_radial('orange', 'Orange') }}
+
+						{{ bg_gradient_radial('orange-gray', 'Orange Gray') }}
+						{{ bg_gradient_radial('dark-gray-orange', 'Dark Gray Orange') }}
+						{{ bg_gradient_radial('blue-gray', 'Blue Gray') }}
+						{{ bg_gradient_radial('light-gray-azure', 'Light Gray Azure') }}
+						
+					</div>
+					
+					<div class="col-md-6 pb-5">
+					
+						{% macro bg_gradient_radial_rev(classPartial, namePartial) %}
+						<div class="js-prism mb-2">
+							<div class="bg-gradient-{{ classPartial }}-radial-reversed">{{ namePartial }} Reversed Radial</div>
+						</div>
+						{% endmacro %}
+						
+						{{ bg_gradient_radial_rev('primary', 'Primary') }}
+						{{ bg_gradient_radial_rev('secondary', 'Secondary') }}
+						{{ bg_gradient_radial_rev('success', 'Success') }}
+						{{ bg_gradient_radial_rev('danger', 'Danger') }}
+						{{ bg_gradient_radial_rev('warning', 'Warning') }}
+						{{ bg_gradient_radial_rev('info', 'Info') }}
+						{{ bg_gradient_radial_rev('light', 'Light') }}
+						{{ bg_gradient_radial_rev('dark', 'Dark') }}
+
+						{{ bg_gradient_radial_rev('white', 'White') }}
+						{{ bg_gradient_radial_rev('light-gray', 'Light Gray') }}
+						{{ bg_gradient_radial_rev('gray', 'Gray') }}
+						{{ bg_gradient_radial_rev('dark-gray', 'Dark Gray') }}
+						{{ bg_gradient_radial_rev('black', 'Black') }}
+
+						{{ bg_gradient_radial_rev('red', 'Red') }}
+						{{ bg_gradient_radial_rev('rose', 'Rose') }}
+						{{ bg_gradient_radial_rev('magenta', 'Magenta') }}
+						{{ bg_gradient_radial_rev('violet', 'Violet') }}
+						{{ bg_gradient_radial_rev('blue', 'Blue') }}
+						{{ bg_gradient_radial_rev('azure', 'Azure') }}
+						{{ bg_gradient_radial_rev('cyan', 'Cyan') }}
+						{{ bg_gradient_radial_rev('spring-green', 'Spring Green') }}
+						{{ bg_gradient_radial_rev('green', 'Green') }}
+						{{ bg_gradient_radial_rev('chartreuse', 'Chartreuse') }}
+						{{ bg_gradient_radial_rev('yellow', 'Yellow') }}
+						{{ bg_gradient_radial_rev('orange', 'Orange') }}
+
+						{{ bg_gradient_radial_rev('orange-gray', 'Orange Gray') }}
+						{{ bg_gradient_radial_rev('dark-gray-orange', 'Dark Gray Orange') }}
+						{{ bg_gradient_radial_rev('blue-gray', 'Blue Gray') }}
+						{{ bg_gradient_radial_rev('light-gray-azure', 'Light Gray Azure') }}
+						
+					</div>
+					
+				</div>
+
+			</div>
+
+		</div>
+		{% endif %}

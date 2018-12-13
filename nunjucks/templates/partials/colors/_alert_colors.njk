@@ -1,0 +1,128 @@
+<!-- _alert_colors.njk -->
+		{% if obe_settings['enable-obeb4-alert-wheel-colors'] === 'true' or obe_settings['enable-obeb4-alert-variations'] === 'true' %}
+		<div class="container-fluid pt-5 text-center bg-white text-dark">
+		
+			<div class="container">
+				
+				<div class="row justify-content-center">
+					
+					{% if obe_settings['enable-obeb4-alert-wheel-colors'] === 'true' %}
+					<div id="{{ global_strings['colors']['sections']['11']['id'] }}" class="col-md-6 pb-5">
+					
+						{% set headingHeadline = global_strings['colors']['sections']['11']['head'] %}
+						{% set headingSubline = global_strings['colors']['sections']['11']['subhead'] %}
+						{% set headingDescrip = global_strings['colors']['sections']['11']['descrip'] %}
+						{% include "partials/_columnHeading.njk" %}
+
+						{% macro alert_colors(classPartial, namePartial) %}
+						<div class="js-prism">
+							<div class="alert alert-{{ classPartial }} alert-dismissible mb-2 fade show text-left" role="alert">
+								<h4 class="alert-heading">{{ namePartial }} Alert</h4>
+								<hr />
+								<p>This is an example alert component with <a href="#" class="alert-link">an example link</a>! You can use this to display important information to a user in a way that visually stands out.</p>
+								<hr />
+								<p class="mb-0">Note, you can use margin utilities to keep things tidy.</p>
+								<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+							</div>
+						</div>
+						{% endmacro %}
+						
+						{{ alert_colors('primary', 'Primary') }}
+						{{ alert_colors('secondary', 'Secondary') }}
+						{{ alert_colors('success', 'Success') }}
+						{{ alert_colors('danger', 'Danger') }}
+						{{ alert_colors('warning', 'Warning') }}
+						{{ alert_colors('info', 'Info') }}
+						{{ alert_colors('light', 'Light') }}
+						{{ alert_colors('dark', 'Dark') }}
+
+						{{ alert_colors('white', 'White') }}
+						{{ alert_colors('light-gray', 'Light Gray') }}
+						{{ alert_colors('gray', 'Gray') }}
+						{{ alert_colors('dark-gray', 'Dark Gray') }}
+						{{ alert_colors('black', 'Black') }}
+
+						{{ alert_colors('red', 'Red') }}
+						{{ alert_colors('rose', 'Rose') }}
+						{{ alert_colors('magenta', 'Magenta') }}
+						{{ alert_colors('violet', 'Violet') }}
+						{{ alert_colors('blue', 'Blue') }}
+						{{ alert_colors('azure', 'Azure') }}
+						{{ alert_colors('cyan', 'Cyan') }}
+						{{ alert_colors('spring-green', 'Spring Green') }}
+						{{ alert_colors('green', 'Green') }}
+						{{ alert_colors('chartreuse', 'Chartreuse') }}
+						{{ alert_colors('yellow', 'Yellow') }}
+						{{ alert_colors('orange', 'Orange') }}
+
+						{{ alert_colors('orange-gray', 'Orange Gray') }}
+						{{ alert_colors('dark-gray-orange', 'Dark Gray Orange') }}
+						{{ alert_colors('blue-gray', 'Blue Gray') }}
+						{{ alert_colors('light-gray-azure', 'Light Gray Azure') }}
+						
+					</div>
+					{% endif %}
+					
+					{% if obe_settings['enable-obeb4-alert-variations'] === 'true' %}
+					<div id="{{ global_strings['colors']['sections']['12']['id'] }}" class="col-md-6 pb-5">
+					
+						{% set headingHeadline = global_strings['colors']['sections']['12']['head'] %}
+						{% set headingSubline = global_strings['colors']['sections']['12']['subhead'] %}
+						{% set headingDescrip = global_strings['colors']['sections']['12']['descrip'] %}
+						{% include "partials/_columnHeading.njk" %}
+
+						{% macro alert_colors_inv(classPartial, namePartial) %}
+						<div class="js-prism">
+							<div class="alert alert-{{ classPartial }}-inversed alert-dismissible mb-2 fade show text-left" role="alert">
+								<h4 class="alert-heading">{{ namePartial }} Alert</h4>
+								<hr />
+								<p>This is an example alert component with <a href="#" class="alert-link">an example link</a>! You can use this to display important information to a user in a way that visually stands out.</p>
+								<hr />
+								<p class="mb-0">Note, you can use margin utilities to keep things tidy.</p>
+								<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+							</div>
+						</div>
+						{% endmacro %}
+						
+						{{ alert_colors_inv('primary', 'Primary') }}
+						{{ alert_colors_inv('secondary', 'Secondary') }}
+						{{ alert_colors_inv('success', 'Success') }}
+						{{ alert_colors_inv('danger', 'Danger') }}
+						{{ alert_colors_inv('warning', 'Warning') }}
+						{{ alert_colors_inv('info', 'Info') }}
+						{{ alert_colors_inv('light', 'Light') }}
+						{{ alert_colors_inv('dark', 'Dark') }}
+
+						{{ alert_colors_inv('white', 'White') }}
+						{{ alert_colors_inv('light-gray', 'Light Gray') }}
+						{{ alert_colors_inv('gray', 'Gray') }}
+						{{ alert_colors_inv('dark-gray', 'Dark Gray') }}
+						{{ alert_colors_inv('black', 'Black') }}
+
+						{{ alert_colors_inv('red', 'Red') }}
+						{{ alert_colors_inv('rose', 'Rose') }}
+						{{ alert_colors_inv('magenta', 'Magenta') }}
+						{{ alert_colors_inv('violet', 'Violet') }}
+						{{ alert_colors_inv('blue', 'Blue') }}
+						{{ alert_colors_inv('azure', 'Azure') }}
+						{{ alert_colors_inv('cyan', 'Cyan') }}
+						{{ alert_colors_inv('spring-green', 'Spring Green') }}
+						{{ alert_colors_inv('green', 'Green') }}
+						{{ alert_colors_inv('chartreuse', 'Chartreuse') }}
+						{{ alert_colors_inv('yellow', 'Yellow') }}
+						{{ alert_colors_inv('orange', 'Orange') }}
+
+						{{ alert_colors_inv('orange-gray', 'Orange Gray') }}
+						{{ alert_colors_inv('dark-gray-orange', 'Dark Gray Orange') }}
+						{{ alert_colors_inv('blue-gray', 'Blue Gray') }}
+						{{ alert_colors_inv('light-gray-azure', 'Light Gray Azure') }}
+						
+					</div>
+					{% endif %}
+					
+				</div>
+
+			</div>
+
+		</div>
+		{% endif %}

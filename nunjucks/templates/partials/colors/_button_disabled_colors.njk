@@ -1,0 +1,110 @@
+<!-- _button_disabled_colors.njk -->
+		{% if obe_settings['enable-obeb4-button-wheel-colors'] === 'true' %}
+		<div class="container-fluid pt-5 text-center bg-white text-dark">
+		
+			<div class="container">
+				
+				<div class="row justify-content-center">
+					
+					<div id="{{ global_strings['colors']['sections']['17']['id'] }}" class="col-md-6 pb-5">
+					
+						{% set headingHeadline = global_strings['colors']['sections']['17']['head'] %}
+						{% set headingSubline = global_strings['colors']['sections']['17']['subhead'] %}
+						{% set headingDescrip = global_strings['colors']['sections']['17']['descrip'] %}
+						{% include "partials/_columnHeading.njk" %}
+
+                        {% macro disabled_button_colors(classPartial, namePartial) %}
+                        <div class="js-prism d-flex justify-content-around mb-2">
+                            <button type="button" class="btn btn-{{ classPartial }}" disabled>{{ namePartial }}</button>
+                        </div>
+                        {% endmacro %}
+						
+						{{ disabled_button_colors('primary', 'Primary') }}
+						{{ disabled_button_colors('secondary', 'Secondary') }}
+						{{ disabled_button_colors('success', 'Success') }}
+						{{ disabled_button_colors('danger', 'Danger') }}
+						{{ disabled_button_colors('warning', 'Warning') }}
+						{{ disabled_button_colors('info', 'Info') }}
+						{{ disabled_button_colors('light', 'Light') }}
+						{{ disabled_button_colors('dark', 'Dark') }}
+
+						{{ disabled_button_colors('white', 'White') }}
+						{{ disabled_button_colors('light-gray', 'Light Gray') }}
+						{{ disabled_button_colors('gray', 'Gray') }}
+						{{ disabled_button_colors('dark-gray', 'Dark Gray') }}
+						{{ disabled_button_colors('black', 'Black') }}
+
+						{{ disabled_button_colors('red', 'Red') }}
+						{{ disabled_button_colors('rose', 'Rose') }}
+						{{ disabled_button_colors('magenta', 'Magenta') }}
+						{{ disabled_button_colors('violet', 'Violet') }}
+						{{ disabled_button_colors('blue', 'Blue') }}
+						{{ disabled_button_colors('azure', 'Azure') }}
+						{{ disabled_button_colors('cyan', 'Cyan') }}
+						{{ disabled_button_colors('spring-green', 'Spring Green') }}
+						{{ disabled_button_colors('green', 'Green') }}
+						{{ disabled_button_colors('chartreuse', 'Chartreuse') }}
+						{{ disabled_button_colors('yellow', 'Yellow') }}
+						{{ disabled_button_colors('orange', 'Orange') }}
+
+						{{ disabled_button_colors('orange-gray', 'Orange Gray') }}
+						{{ disabled_button_colors('dark-gray-orange', 'Dark Gray Orange') }}
+						{{ disabled_button_colors('blue-gray', 'Blue Gray') }}
+						{{ disabled_button_colors('light-gray-azure', 'Light Gray Azure') }}
+						
+					</div>
+					
+					<div id="{{ global_strings['colors']['sections']['18']['id'] }}" class="col-md-6 pb-5">
+					
+						{% set headingHeadline = global_strings['colors']['sections']['18']['head'] %}
+						{% set headingSubline = global_strings['colors']['sections']['18']['subhead'] %}
+						{% set headingDescrip = global_strings['colors']['sections']['18']['descrip'] %}
+						{% include "partials/_columnHeading.njk" %}
+
+                        {% macro disabled_button_outline_colors(classPartial, namePartial) %}
+                        <div class="js-prism d-flex justify-content-around mb-2">
+                            <button type="button" class="btn btn-outline-{{ classPartial }}" disabled>{{ namePartial }}</button>
+                        </div>
+                        {% endmacro %}
+						
+						{{ disabled_button_outline_colors('primary', 'Primary') }}
+						{{ disabled_button_outline_colors('secondary', 'Secondary') }}
+						{{ disabled_button_outline_colors('success', 'Success') }}
+						{{ disabled_button_outline_colors('danger', 'Danger') }}
+						{{ disabled_button_outline_colors('warning', 'Warning') }}
+						{{ disabled_button_outline_colors('info', 'Info') }}
+						{{ disabled_button_outline_colors('light', 'Light') }}
+						{{ disabled_button_outline_colors('dark', 'Dark') }}
+
+						{{ disabled_button_outline_colors('white', 'White') }}
+						{{ disabled_button_outline_colors('light-gray', 'Light Gray') }}
+						{{ disabled_button_outline_colors('gray', 'Gray') }}
+						{{ disabled_button_outline_colors('dark-gray', 'Dark Gray') }}
+						{{ disabled_button_outline_colors('black', 'Black') }}
+
+						{{ disabled_button_outline_colors('red', 'Red') }}
+						{{ disabled_button_outline_colors('rose', 'Rose') }}
+						{{ disabled_button_outline_colors('magenta', 'Magenta') }}
+						{{ disabled_button_outline_colors('violet', 'Violet') }}
+						{{ disabled_button_outline_colors('blue', 'Blue') }}
+						{{ disabled_button_outline_colors('azure', 'Azure') }}
+						{{ disabled_button_outline_colors('cyan', 'Cyan') }}
+						{{ disabled_button_outline_colors('spring-green', 'Spring Green') }}
+						{{ disabled_button_outline_colors('green', 'Green') }}
+						{{ disabled_button_outline_colors('chartreuse', 'Chartreuse') }}
+						{{ disabled_button_outline_colors('yellow', 'Yellow') }}
+						{{ disabled_button_outline_colors('orange', 'Orange') }}
+
+						{{ disabled_button_outline_colors('orange-gray', 'Orange Gray') }}
+						{{ disabled_button_outline_colors('dark-gray-orange', 'Dark Gray Orange') }}
+						{{ disabled_button_outline_colors('blue-gray', 'Blue Gray') }}
+						{{ disabled_button_outline_colors('light-gray-azure', 'Light Gray Azure') }}
+						
+					</div>
+					
+				</div>
+
+			</div>
+
+		</div>
+		{% endif %}

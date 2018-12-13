@@ -1,0 +1,110 @@
+<!-- _button_colors.njk -->
+		{% if obe_settings['enable-obeb4-button-wheel-colors'] === 'true' %}
+		<div class="container-fluid pt-5 text-center bg-white text-dark">
+		
+			<div class="container">
+				
+				<div class="row justify-content-center">
+					
+					<div id="{{ global_strings['colors']['sections']['15']['id'] }}" class="col-md-6 pb-5">
+					
+						{% set headingHeadline = global_strings['colors']['sections']['15']['head'] %}
+						{% set headingSubline = global_strings['colors']['sections']['15']['subhead'] %}
+						{% set headingDescrip = global_strings['colors']['sections']['15']['descrip'] %}
+						{% include "partials/_columnHeading.njk" %}
+
+						{% macro button_colors(classPartial, namePartial) %}
+						<div class="js-prism mb-2">
+							<button type="button" class="btn btn-{{ classPartial }}">{{ namePartial }}</button>
+						</div>
+						{% endmacro %}
+						
+						{{ button_colors('primary', 'Primary') }}
+						{{ button_colors('secondary', 'Secondary') }}
+						{{ button_colors('success', 'Success') }}
+						{{ button_colors('danger', 'Danger') }}
+						{{ button_colors('warning', 'Warning') }}
+						{{ button_colors('info', 'Info') }}
+						{{ button_colors('light', 'Light') }}
+						{{ button_colors('dark', 'Dark') }}
+
+						{{ button_colors('white', 'White') }}
+						{{ button_colors('light-gray', 'Light Gray') }}
+						{{ button_colors('gray', 'Gray') }}
+						{{ button_colors('dark-gray', 'Dark Gray') }}
+						{{ button_colors('black', 'Black') }}
+
+						{{ button_colors('red', 'Red') }}
+						{{ button_colors('rose', 'Rose') }}
+						{{ button_colors('magenta', 'Magenta') }}
+						{{ button_colors('violet', 'Violet') }}
+						{{ button_colors('blue', 'Blue') }}
+						{{ button_colors('azure', 'Azure') }}
+						{{ button_colors('cyan', 'Cyan') }}
+						{{ button_colors('spring-green', 'Spring Green') }}
+						{{ button_colors('green', 'Green') }}
+						{{ button_colors('chartreuse', 'Chartreuse') }}
+						{{ button_colors('yellow', 'Yellow') }}
+						{{ button_colors('orange', 'Orange') }}
+
+						{{ button_colors('orange-gray', 'Orange Gray') }}
+						{{ button_colors('dark-gray-orange', 'Dark Gray Orange') }}
+						{{ button_colors('blue-gray', 'Blue Gray') }}
+						{{ button_colors('light-gray-azure', 'Light Gray Azure') }}
+						
+					</div>
+					
+					<div id="{{ global_strings['colors']['sections']['16']['id'] }}" class="col-md-6 pb-5">
+					
+						{% set headingHeadline = global_strings['colors']['sections']['16']['head'] %}
+						{% set headingSubline = global_strings['colors']['sections']['16']['subhead'] %}
+						{% set headingDescrip = global_strings['colors']['sections']['16']['descrip'] %}
+						{% include "partials/_columnHeading.njk" %}
+
+						{% macro button_outline_colors(classPartial, namePartial) %}
+						<div class="js-prism mb-2">
+							<button type="button" class="btn btn-outline-{{ classPartial }}">{{ namePartial }}</button>
+						</div>
+						{% endmacro %}
+						
+						{{ button_outline_colors('primary', 'Primary') }}
+						{{ button_outline_colors('secondary', 'Secondary') }}
+						{{ button_outline_colors('success', 'Success') }}
+						{{ button_outline_colors('danger', 'Danger') }}
+						{{ button_outline_colors('warning', 'Warning') }}
+						{{ button_outline_colors('info', 'Info') }}
+						{{ button_outline_colors('light', 'Light') }}
+						{{ button_outline_colors('dark', 'Dark') }}
+
+						{{ button_outline_colors('white', 'White') }}
+						{{ button_outline_colors('light-gray', 'Light Gray') }}
+						{{ button_outline_colors('gray', 'Gray') }}
+						{{ button_outline_colors('dark-gray', 'Dark Gray') }}
+						{{ button_outline_colors('black', 'Black') }}
+
+						{{ button_outline_colors('red', 'Red') }}
+						{{ button_outline_colors('rose', 'Rose') }}
+						{{ button_outline_colors('magenta', 'Magenta') }}
+						{{ button_outline_colors('violet', 'Violet') }}
+						{{ button_outline_colors('blue', 'Blue') }}
+						{{ button_outline_colors('azure', 'Azure') }}
+						{{ button_outline_colors('cyan', 'Cyan') }}
+						{{ button_outline_colors('spring-green', 'Spring Green') }}
+						{{ button_outline_colors('green', 'Green') }}
+						{{ button_outline_colors('chartreuse', 'Chartreuse') }}
+						{{ button_outline_colors('yellow', 'Yellow') }}
+						{{ button_outline_colors('orange', 'Orange') }}
+
+						{{ button_outline_colors('orange-gray', 'Orange Gray') }}
+						{{ button_outline_colors('dark-gray-orange', 'Dark Gray Orange') }}
+						{{ button_outline_colors('blue-gray', 'Blue Gray') }}
+						{{ button_outline_colors('light-gray-azure', 'Light Gray Azure') }}
+						
+					</div>
+					
+				</div>
+
+			</div>
+
+		</div>
+		{% endif %}

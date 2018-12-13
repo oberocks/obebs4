@@ -1,0 +1,266 @@
+<!-- _table_colors.njk -->
+		{% if obe_settings['enable-obeb4-tables'] === 'true' %}
+        <div class="container-fluid pt-5 text-center bg-white text-dark">
+        
+            <div class="container">
+                
+                <div class="row justify-content-center">
+                    
+                    <div id="{{ global_strings['colors']['sections']['41']['id'] }}" class="col-md-6 pb-5">
+                    
+                        {% set headingHeadline = global_strings['colors']['sections']['41']['head'] %}
+						{% set headingSubline = global_strings['colors']['sections']['41']['subhead'] %}
+						{% set headingDescrip = global_strings['colors']['sections']['41']['descrip'] %}
+                        {% include "partials/_columnHeading.njk" %}
+
+                        <div class="js-prism text-left mb-2">					
+                            <div class="table-responsive">
+                                <table class="table table-striped table-hover table-bordered">
+                                    <thead class="thead-dark">
+                                        <tr>
+                                            <th scope="col">#</th>
+                                            <th scope="col">Type</th>
+                                            <th scope="col">Element</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <th scope="row">1</th>
+                                            <td>Standard (Striped)</td>
+                                            <td>Row</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">2</th>
+                                            <td>Standard</td>
+                                            <td>Row</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">3</th>
+                                            <td>Standard (Striped)</td>
+                                            <td>Row</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">4</th>
+                                            <td>Standard</td>
+                                            <td>Row</td>
+                                        </tr>
+                                        <tr class="active">
+                                            <th scope="row">5</th>
+                                            <td>Standard</td>
+                                            <td>Row</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        
+                        {% macro table_colors(classPartial, namePartial) %}
+                        <div class="js-prism text-left mb-2">					
+                            <div class="table-responsive">
+                                <table class="table table-striped table-hover table-bordered table-{{ classPartial }}">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">#</th>
+                                            <th scope="col">Type</th>
+                                            <th scope="col">Element</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <th scope="row">1</th>
+                                            <td>{{ namePartial }} Class (Striped)</td>
+                                            <td>Row</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">2</th>
+                                            <td>{{ namePartial }} Class</td>
+                                            <td>Row</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">3</th>
+                                            <td>{{ namePartial }} Class (Striped)</td>
+                                            <td>Row</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">4</th>
+                                            <td>{{ namePartial }} Class</td>
+                                            <td>Row</td>
+                                        </tr>
+                                        <tr class="active">
+                                            <th scope="row">5</th>
+                                            <td>{{ namePartial }} Active Row</td>
+                                            <td>Row</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        {% endmacro %}
+                        
+                        {{ table_colors('primary', 'Primary') }}
+                        {{ table_colors('secondary', 'Secondary') }}
+                        {{ table_colors('success', 'Success') }}
+                        {{ table_colors('danger', 'Danger') }}
+                        {{ table_colors('warning', 'Warning') }}
+                        {{ table_colors('info', 'Info') }}
+                        {{ table_colors('light', 'Light') }}
+                        {{ table_colors('dark', 'Dark') }}
+
+                        {{ table_colors('white', 'White') }}
+                        {{ table_colors('light-gray', 'Light Gray') }}
+                        {{ table_colors('gray', 'Gray') }}
+                        {{ table_colors('dark-gray', 'Dark Gray') }}
+                        {{ table_colors('black', 'Black') }}
+
+                        {{ table_colors('red', 'Red') }}
+                        {{ table_colors('rose', 'Rose') }}
+                        {{ table_colors('magenta', 'Magenta') }}
+                        {{ table_colors('violet', 'Violet') }}
+                        {{ table_colors('blue', 'Blue') }}
+                        {{ table_colors('azure', 'Azure') }}
+                        {{ table_colors('cyan', 'Cyan') }}
+                        {{ table_colors('spring-green', 'Spring Green') }}
+                        {{ table_colors('green', 'Green') }}
+                        {{ table_colors('chartreuse', 'Chartreuse') }}
+                        {{ table_colors('yellow', 'Yellow') }}
+                        {{ table_colors('orange', 'Orange') }}
+
+                        {{ table_colors('orange-gray', 'Orange Gray') }}
+                        {{ table_colors('dark-gray-orange', 'Dark Gray Orange') }}
+                        {{ table_colors('blue-gray', 'Blue Gray') }}
+                        {{ table_colors('light-gray-azure', 'Light Gray Azure') }}
+                        
+                    </div>
+                    
+                    <div id="{{ global_strings['colors']['sections']['42']['id'] }}" class="col-md-6 pb-5">
+                    
+                        {% set headingHeadline = global_strings['colors']['sections']['42']['head'] %}
+						{% set headingSubline = global_strings['colors']['sections']['42']['subhead'] %}
+						{% set headingDescrip = global_strings['colors']['sections']['42']['descrip'] %}
+                        {% include "partials/_columnHeading.njk" %}
+                        
+                        <div class="js-prism text-left mb-2">					
+                            <div class="table-responsive">
+                                <table class="table table-striped table-hover table-bordered table-dark">
+                                    <thead class="thead-dark">
+                                        <tr>
+                                            <th scope="col">#</th>
+                                            <th scope="col">Type</th>
+                                            <th scope="col">Element</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <th scope="row">1</th>
+                                            <td>Standard (Striped)</td>
+                                            <td>Row</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">2</th>
+                                            <td>Standard</td>
+                                            <td>Row</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">3</th>
+                                            <td>Standard (Striped)</td>
+                                            <td>Row</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">4</th>
+                                            <td>Standard</td>
+                                            <td>Row</td>
+                                        </tr>
+                                        <tr class="active">
+                                            <th scope="row">5</th>
+                                            <td>Standard</td>
+                                            <td>Row</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        
+                        {% macro table_colors_dark(classPartial, namePartial) %}
+                        <div class="js-prism text-left mb-2">					
+                            <div class="table-responsive">
+                                <table class="table table-striped table-hover table-bordered table-dark">
+                                    <thead class="thead-dark">
+                                        <tr>
+                                            <th scope="col">#</th>
+                                            <th scope="col">Type</th>
+                                            <th scope="col">Element</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr class="bg-{{ classPartial }}">
+                                            <th scope="row">1</th>
+                                            <td>{{ namePartial }} Class</td>
+                                            <td>Row</td>
+                                        </tr>
+                                        <tr class="bg-{{ classPartial }}">
+                                            <th scope="row">2</th>
+                                            <td>{{ namePartial }} Class</td>
+                                            <td>Row</td>
+                                        </tr>
+                                        <tr class="bg-{{ classPartial }}">
+                                            <th scope="row">3</th>
+                                            <td>{{ namePartial }} Class</td>
+                                            <td>Row</td>
+                                        </tr>
+                                        <tr class="bg-{{ classPartial }}">
+                                            <th scope="row">4</th>
+                                            <td>{{ namePartial }} Class</td>
+                                            <td>Row</td>
+                                        </tr>
+                                        <tr class="bg-{{ classPartial }} active">
+                                            <th scope="row">5</th>
+                                            <td>{{ namePartial }} Active Row</td>
+                                            <td>Row</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        {% endmacro %}
+
+                        {{ table_colors_dark('primary', 'Primary') }}
+                        {{ table_colors_dark('secondary', 'Secondary') }}
+                        {{ table_colors_dark('success', 'Success') }}
+                        {{ table_colors_dark('danger', 'Danger') }}
+                        {{ table_colors_dark('warning', 'Warning') }}
+                        {{ table_colors_dark('info', 'Info') }}
+                        {{ table_colors_dark('light', 'Light') }}
+                        {{ table_colors_dark('dark', 'Dark') }}
+
+                        {{ table_colors_dark('white', 'White') }}
+                        {{ table_colors_dark('light-gray', 'Light Gray') }}
+                        {{ table_colors_dark('gray', 'Gray') }}
+                        {{ table_colors_dark('dark-gray', 'Dark Gray') }}
+                        {{ table_colors_dark('black', 'Black') }}
+
+                        {{ table_colors_dark('red', 'Red') }}
+                        {{ table_colors_dark('rose', 'Rose') }}
+                        {{ table_colors_dark('magenta', 'Magenta') }}
+                        {{ table_colors_dark('violet', 'Violet') }}
+                        {{ table_colors_dark('blue', 'Blue') }}
+                        {{ table_colors_dark('azure', 'Azure') }}
+                        {{ table_colors_dark('cyan', 'Cyan') }}
+                        {{ table_colors_dark('spring-green', 'Spring Green') }}
+                        {{ table_colors_dark('green', 'Green') }}
+                        {{ table_colors_dark('chartreuse', 'Chartreuse') }}
+                        {{ table_colors_dark('yellow', 'Yellow') }}
+                        {{ table_colors_dark('orange', 'Orange') }}
+
+                        {{ table_colors_dark('orange-gray', 'Orange Gray') }}
+                        {{ table_colors_dark('dark-gray-orange', 'Dark Gray Orange') }}
+                        {{ table_colors_dark('blue-gray', 'Blue Gray') }}
+                        {{ table_colors_dark('light-gray-azure', 'Light Gray Azure') }}
+                        
+                    </div>
+                    
+                </div>
+
+            </div>
+
+        </div>
+        {% endif %}

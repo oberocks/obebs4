@@ -1,0 +1,120 @@
+<!-- _bg_gradients_6.njk -->
+		{% if obe_settings['enable-obeb4-2-color-gradients'] === 'true' or obe_settings['enable-obeb4-3-color-gradients'] === 'true' %}
+        <div class="container-fluid pt-5 text-center bg-white text-dark">
+        
+            <div class="container">
+                
+                <div class="row justify-content-center">
+                    
+                    {% if obe_settings['enable-obeb4-2-color-gradients'] === 'true' %}
+                    <div id="{{ global_strings['colors']['sections']['29']['id'] }}" class="col-md-6 pb-5">
+                    
+                        {% set headingHeadline = global_strings['colors']['sections']['29']['head'] %}
+						{% set headingSubline = global_strings['colors']['sections']['29']['subhead'] %}
+						{% set headingDescrip = global_strings['colors']['sections']['29']['descrip'] %}
+                        {% include "partials/_columnHeading.njk" %}
+
+                        {% macro bg_2col_grad_radial(classPartial, namePartial) %}
+                        <div class="js-prism mb-2">
+                            <div class="bg-gradient-{{ classPartial }}-radial">{{ namePartial }} Radial</div>
+                        </div>
+                        {% endmacro %}
+                        
+                        {{ bg_2col_grad_radial('red-rose', 'Red/Rose') }}
+                        {{ bg_2col_grad_radial('rose-magenta', 'Rose/Magenta') }}
+                        {{ bg_2col_grad_radial('magenta-violet', 'Magenta/Violet') }}
+                        {{ bg_2col_grad_radial('violet-blue', 'Violet/Blue') }}
+                        {{ bg_2col_grad_radial('blue-azure', 'Blue/Azure') }}
+                        {{ bg_2col_grad_radial('azure-cyan', 'Azure/Cyan') }}
+                        {{ bg_2col_grad_radial('cyan-spring-green', 'Cyan/Spring Green') }}
+                        {{ bg_2col_grad_radial('spring-green-green', 'Spring Green/Green') }}
+                        {{ bg_2col_grad_radial('green-chartreuse', 'Green/Chartreuse') }}
+                        {{ bg_2col_grad_radial('chartreuse-yellow', 'Chartreuse/Yellow') }}
+                        {{ bg_2col_grad_radial('yellow-orange', 'Yellow/Orange') }}
+                        {{ bg_2col_grad_radial('orange-red', 'Orange/Red') }}
+                        {{ bg_2col_grad_radial('orange-gray-dark-gray-orange', 'Orange Gray/Dark Gray Orange') }}
+                        {{ bg_2col_grad_radial('light-gray-azure-blue-gray', 'Light Gray Azure/Blue Gray') }}
+                        {{ bg_2col_grad_radial('white-light-gray', 'White/Light Gray') }}
+                        {{ bg_2col_grad_radial('light-gray-gray', 'Light Gray/Gray') }}
+                        {{ bg_2col_grad_radial('gray-dark-gray', 'Gray/Dark Gray') }}
+                        {{ bg_2col_grad_radial('dark-gray-black', 'Dark Gray/Black') }}
+
+
+                        {{ bg_2col_grad_radial('rose-red', 'Rose/Red') }}
+                        {{ bg_2col_grad_radial('magenta-rose', 'Magenta/Rose') }}
+                        {{ bg_2col_grad_radial('violet-magenta', 'Violet/Magenta') }}
+                        {{ bg_2col_grad_radial('blue-violet', 'Blue/Violet') }}
+                        {{ bg_2col_grad_radial('azure-blue', 'Azure/Blue') }}
+                        {{ bg_2col_grad_radial('cyan-azure', 'Cyan/Azure') }}
+                        {{ bg_2col_grad_radial('spring-green-cyan', 'Spring Green/Cyan') }}
+                        {{ bg_2col_grad_radial('green-spring-green', 'Green/Spring Green') }}
+                        {{ bg_2col_grad_radial('chartreuse-green', 'Chartreuse/Green') }}
+                        {{ bg_2col_grad_radial('yellow-chartreuse', 'Yellow/Chartreuse') }}
+                        {{ bg_2col_grad_radial('orange-yellow', 'Orange/Yellow') }}
+                        {{ bg_2col_grad_radial('red-orange', 'Red/Orange') }}
+                        {{ bg_2col_grad_radial('dark-gray-orange-orange-gray', 'Dark Gray Orange/Orange Gray') }}
+                        {{ bg_2col_grad_radial('blue-gray-light-gray-azure', 'Blue Gray/Light Gray Azure') }}
+                        {{ bg_2col_grad_radial('light-gray-white', 'Light Gray/White') }}
+                        {{ bg_2col_grad_radial('gray-light-gray', 'Gray/Light Gray') }}
+                        {{ bg_2col_grad_radial('dark-gray-gray', 'Dark Gray/Gray') }}
+                        {{ bg_2col_grad_radial('black-dark-gray', 'Black/Dark Gray') }}
+                        
+                    </div>
+                    {% endif %}
+                    
+                    {% if obe_settings['enable-obeb4-3-color-gradients'] === 'true' %}
+                    <div id="{{ global_strings['colors']['sections']['30']['id'] }}" class="col-md-6 pb-5">
+                    
+                        {% set headingHeadline = global_strings['colors']['sections']['30']['head'] %}
+						{% set headingSubline = global_strings['colors']['sections']['30']['subhead'] %}
+						{% set headingDescrip = global_strings['colors']['sections']['30']['descrip'] %}
+                        {% include "partials/_columnHeading.njk" %}
+
+                        {% macro bg_3col_grad_radial(classPartial, namePartial) %}
+                        <div class="js-prism mb-2">
+                            <div class="bg-gradient-{{ classPartial }}-radial">{{ namePartial }} Radial</div>
+                        </div>
+                        {% endmacro %}
+                        
+                        {{ bg_3col_grad_radial('red-magenta', 'Red/Magenta') }}
+                        {{ bg_3col_grad_radial('rose-violet', 'Rose/Violet') }}
+                        {{ bg_3col_grad_radial('magenta-blue', 'Magenta/Blue') }}
+                        {{ bg_3col_grad_radial('violet-azure', 'Violet/Azure') }}
+                        {{ bg_3col_grad_radial('blue-cyan', 'Blue/Cyan') }}
+                        {{ bg_3col_grad_radial('azure-spring-green', 'Azure/Spring Green') }}
+                        {{ bg_3col_grad_radial('cyan-green', 'Cyan/Green') }}
+                        {{ bg_3col_grad_radial('spring-green-chartreuse', 'Spring Green/Chartreuse') }}
+                        {{ bg_3col_grad_radial('green-yellow', 'Green/Yellow') }}
+                        {{ bg_3col_grad_radial('chartreuse-orange', 'Chartreuse/Orange') }}
+                        {{ bg_3col_grad_radial('yellow-red', 'Yellow/Red') }}
+                        {{ bg_3col_grad_radial('orange-rose', 'Orange/Rose') }}
+                        {{ bg_3col_grad_radial('white-gray', 'White/Gray') }}
+                        {{ bg_3col_grad_radial('light-gray-dark-gray', 'Light Gray/Dark Gray') }}
+                        {{ bg_3col_grad_radial('gray-black', 'Gray/Black') }}
+
+
+                        {{ bg_3col_grad_radial('magenta-red', 'Magenta/Red') }}
+                        {{ bg_3col_grad_radial('violet-rose', 'Violet-Rose') }}
+                        {{ bg_3col_grad_radial('blue-magenta', 'Blue/Magenta') }}
+                        {{ bg_3col_grad_radial('azure-violet', 'Azure/Violet') }}
+                        {{ bg_3col_grad_radial('cyan-blue', 'Cyan/Blue') }}
+                        {{ bg_3col_grad_radial('spring-green-azure', 'Spring Green/Azure') }}
+                        {{ bg_3col_grad_radial('green-cyan', 'Green/Cyan') }}
+                        {{ bg_3col_grad_radial('chartreuse-spring-green', 'Chartreuse/Spring Green') }}
+                        {{ bg_3col_grad_radial('green-yellow', 'Green/Yellow') }}
+                        {{ bg_3col_grad_radial('orange-chartreuse', 'Orange/Chartreuse') }}
+                        {{ bg_3col_grad_radial('red-yellow', 'Red/Yellow') }}
+                        {{ bg_3col_grad_radial('rose-orange', 'Rose/Orange') }}
+                        {{ bg_3col_grad_radial('white-gray', 'White/Gray') }}
+                        {{ bg_3col_grad_radial('dark-gray-light-gray', 'Dark Gray/Light Gray') }}
+                        {{ bg_3col_grad_radial('black-gray', 'Black/Gray') }}
+                        
+                    </div>
+                    {% endif %}
+                    
+                </div>
+
+            </div>
+
+        </div>
+        {% endif %}
