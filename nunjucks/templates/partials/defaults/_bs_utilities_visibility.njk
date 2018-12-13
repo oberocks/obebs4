@@ -1,0 +1,38 @@
+<!-- _bs_utilities_visibility.njk -->
+		<div class="container-fluid pt-5 text-center bg-white text-dark">
+        
+            <div class="container modal-workspace">
+
+                <div class="row justify-content-center pt-5">
+                    
+                    <div id="{{ global_strings['defaults']['sections']['80']['id'] }}" class="col-12">
+                        
+                        {% set headingHeadline = global_strings['defaults']['sections']['80']['head'] %}
+						{% set headingSubline = global_strings['defaults']['sections']['80']['subhead'] %}
+						{% set headingDescrip = global_strings['defaults']['sections']['80']['descrip'] %}
+                        {% include "partials/_columnHeading.njk" %}
+
+                    </div>
+
+                </div>
+
+                <div class="row justify-content-center">
+
+                    <div class="col-md-6 pb-5">
+                        
+                        <div class="js-prism mb-2">
+                            <div class="d-flex justify-content-center bg-light p-1">
+                                <div class="visible bg-primary text-light p-2">HI!</div>
+                                <div class="invisible bg-primary text-light p-2">SHH!</div>
+                                <div class="invisible bg-primary text-light p-2">SHH!</div>
+                                <div class="visible bg-primary text-light p-2">HI!</div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>

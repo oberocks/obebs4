@@ -1,0 +1,187 @@
+<!-- _bs_scrollspy.njk -->
+		<div class="container-fluid pt-5 text-center bg-white text-dark">
+        
+            <div class="container">
+                
+                <div class="row justify-content-center">
+                    
+                    <div id="{{ global_strings['defaults']['sections']['60']['id'] }}" class="col pb-5">
+                        
+                        {% set headingHeadline = global_strings['defaults']['sections']['60']['head'] %}
+						{% set headingSubline = global_strings['defaults']['sections']['60']['subhead'] %}
+						{% set headingDescrip = global_strings['defaults']['sections']['60']['descrip'] %}
+                        {% include "partials/_columnHeading.njk" %}
+
+                        
+                        
+                        {% set laurem_1 = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed congue consequat leo, in pulvinar ex vulputate et. Phasellus sit amet magna justo. Curabitur facilisis lobortis libero. Vivamus fringilla eros id nulla fermentum elementum. Proin vitae massa sed est congue bibendum et ac quam. Vestibulum tempor ut massa ut maximus.' %}
+
+                        {% set laurem_2 = 'Integer condimentum purus vel rutrum varius. Praesent sodales fermentum sodales. Pellentesque pharetra laoreet erat nec ullamcorper. Suspendisse a tincidunt lacus. Pellentesque cursus ante a ex ultrices bibendum. Fusce interdum quam vitae molestie vestibulum. Nam sit amet tincidunt ligula.' %}
+
+                        
+                        <h5 class="pt-4">Scrollspy Navbar</h5>
+                        
+                        <div class="js-prism mb-2 text-left">
+                            <nav id="scrollspy-navbar" class="navbar navbar-light bg-light">
+                                <a class="navbar-brand" href="#">Navbar</a>
+                                <ul class="nav nav-pills">
+                                    <li class="nav-item">
+                                        <a class="nav-link active" href="#topic-1">Topic 1</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#topic-2">Topic 2</a>
+                                    </li>
+                                    <li class="nav-item dropdown">
+                                        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Topic 3</a>
+                                        <div class="dropdown-menu">
+                                            <a class="dropdown-item" href="#topic-3a">Topic 3a</a>
+                                            <a class="dropdown-item" href="#topic-3b">Topic 3b</a>
+                                            <div role="separator" class="dropdown-divider"></div>
+                                            <a class="dropdown-item" href="#topic-3c">Topic 3c</a>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </nav>
+                            <div class="p-3" data-spy="scroll" data-target="#scrollspy-navbar" data-offset="0" style="position: relative; height: 200px; overflow: auto;">
+                                <div id="topic-1">
+                                    <h4 class="mb-3">Topic 1</h4>
+                                    <p>{{ laurem_1 }}</p>
+                                    <p>{{ laurem_2 }}</p>
+                                </div>
+                                <div id="topic-2" class="mt-4">
+                                    <h4 class="mb-4">Topic 2</h4>
+                                    <p>{{ laurem_1 }}</p>
+                                    <p>{{ laurem_2 }}</p>
+                                </div>
+                                <div id="topic-3a" class="mt-4">
+                                    <h4 class="mb-3">Topic 3a</h4>
+                                    <p>{{ laurem_1 }}</p>
+                                    <p>{{ laurem_2 }}</p>
+                                </div>
+                                <div id="topic-3b" class="mt-4">
+                                    <h4 class="mb-3">Topic 3b</h4>
+                                    <p>{{ laurem_1 }}</p>
+                                    <p>{{ laurem_2 }}</p>
+                                </div>
+                                <div id="topic-3c" class="mt-4">
+                                    <h4 class="mb-3">Topic 3c</h4>
+                                    <p>{{ laurem_1 }}</p>
+                                    <p>{{ laurem_2 }}</p>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+                        <h5 class="pt-4">Scrollspy + Nested Nav</h5>
+                        
+                        <div class="js-prism mb-2 text-left">
+                            <div class="row">
+                                <div class="col-4">
+                                    <nav id="scrollspy-nested" class="navbar navbar-light bg-light flex-column">
+                                        <a class="navbar-brand" href="#">Navbar</a>
+                                        <nav class="nav nav-pills flex-column">
+                                            <a class="nav-link active" href="#sn-topic-1">Topic 1</a>
+                                            <nav class="nav nav-pills flex-column">
+                                                <a class="nav-link ml-3 my-1" href="#sn-topic-1-1">Topic 1-1</a>
+                                                <a class="nav-link ml-3 my-1" href="#sn-topic-1-2">Topic 1-2</a>
+                                            </nav>
+                                            <a class="nav-link" href="#sn-topic-2">Topic 2</a>
+                                            <a class="nav-link" href="#sn-topic-3">Topic 3</a>
+                                            <nav class="nav nav-pills flex-column">
+                                                <a class="nav-link ml-3 my-1" href="#sn-topic-3-1">Topic 3-1</a>
+                                                <a class="nav-link ml-3 my-1" href="#sn-topic-3-2">Topic 3-2</a>
+                                            </nav>
+                                        </nav>
+                                    </nav>
+                                </div>
+                                <div class="col-8">
+                                    <div class="p-3" data-spy="scroll" data-target="#scrollspy-nested" data-offset="0" style="position: relative; height: 350px; overflow: auto;">
+                                        <div id="sn-topic-1">
+                                            <h4 class="mb-3">Topic 1</h4>
+                                            <p>{{ laurem_1 }}</p>
+                                            <p>{{ laurem_2 }}</p>
+                                        </div>
+                                        <div id="sn-topic-1-1" class="mt-4">
+                                            <h4 class="mb-4">Topic 1-1</h4>
+                                            <p>{{ laurem_1 }}</p>
+                                            <p>{{ laurem_2 }}</p>
+                                        </div>
+                                        <div id="sn-topic-1-2" class="mt-4">
+                                            <h4 class="mb-4">Topic 1-2</h4>
+                                            <p>{{ laurem_1 }}</p>
+                                            <p>{{ laurem_2 }}</p>
+                                        </div>
+                                        <div id="sn-topic-2" class="mt-4">
+                                            <h4 class="mb-4">Topic 2</h4>
+                                            <p>{{ laurem_1 }}</p>
+                                            <p>{{ laurem_2 }}</p>
+                                        </div>
+                                        <div id="sn-topic-3" class="mt-4">
+                                            <h4 class="mb-4">Topic 3</h4>
+                                            <p>{{ laurem_1 }}</p>
+                                            <p>{{ laurem_2 }}</p>
+                                        </div>
+                                        <div id="sn-topic-3-1" class="mt-4">
+                                            <h4 class="mb-4">Topic 3-1</h4>
+                                            <p>{{ laurem_1 }}</p>
+                                            <p>{{ laurem_2 }}</p>
+                                        </div>
+                                        <div id="sn-topic-3-2" class="mt-4">
+                                            <h4 class="mb-4">Topic 3-2</h4>
+                                            <p>{{ laurem_1 }}</p>
+                                            <p>{{ laurem_2 }}</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+                        <h5 class="pt-4">Scrollspy + List Group</h5>
+                        
+                        <div class="js-prism mb-2 text-left">
+                            <div class="row">
+                                <div class="col-4">
+                                    <div id="scrollspy-list-group" class="list-group">
+                                        <a class="list-group-item list-group-item-action active" href="#lg-topic-1">Topic 1</a>
+                                        <a class="list-group-item list-group-item-action" href="#lg-topic-2">Topic 2</a>
+                                        <a class="list-group-item list-group-item-action" href="#lg-topic-3">Topic 3</a>
+                                        <a class="list-group-item list-group-item-action" href="#lg-topic-4">Topic 4</a>
+                                    </div>
+                                </div>
+                                <div class="col-8">
+                                    <div class="p-3" data-spy="scroll" data-target="#scrollspy-list-group" data-offset="0" style="position: relative; height: 200px; overflow: auto;">
+                                        <div id="lg-topic-1">
+                                            <h4 class="mb-3">Topic 1</h4>
+                                            <p>{{ laurem_1 }}</p>
+                                            <p>{{ laurem_2 }}</p>
+                                        </div>
+                                        <div id="lg-topic-2" class="mt-4">
+                                            <h4 class="mb-4">Topic 2</h4>
+                                            <p>{{ laurem_1 }}</p>
+                                            <p>{{ laurem_2 }}</p>
+                                        </div>
+                                        <div id="lg-topic-3" class="mt-4">
+                                            <h4 class="mb-4">Topic 3</h4>
+                                            <p>{{ laurem_1 }}</p>
+                                            <p>{{ laurem_2 }}</p>
+                                        </div>
+                                        <div id="lg-topic-4" class="mt-4">
+                                            <h4 class="mb-4">Topic 4</h4>
+                                            <p>{{ laurem_1 }}</p>
+                                            <p>{{ laurem_2 }}</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>

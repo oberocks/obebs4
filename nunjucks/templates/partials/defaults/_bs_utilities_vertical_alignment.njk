@@ -1,0 +1,57 @@
+<!-- _bs_utilities_vertical_alignment.njk -->
+		<div class="container-fluid pt-5 text-center bg-white text-dark">
+        
+            <div class="container modal-workspace">
+
+                <div class="row justify-content-center pt-5">
+                    
+                    <div id="{{ global_strings['defaults']['sections']['79']['id'] }}" class="col-12">
+                        
+                        {% set headingHeadline = global_strings['defaults']['sections']['79']['head'] %}
+						{% set headingSubline = global_strings['defaults']['sections']['79']['subhead'] %}
+						{% set headingDescrip = global_strings['defaults']['sections']['79']['descrip'] %}
+                        {% include "partials/_columnHeading.njk" %}
+
+                    </div>
+
+                </div>
+
+                <div class="row justify-content-center">
+
+                    <div class="col-md-6 pb-5">
+
+                        <h5 class="mt-4">For In-Line Elements:</h5>
+                        
+                        <div class="js-prism mb-2 border border-light">
+                            <span class="align-baseline">BL</span>
+                            <span class="align-top">TOP</span>
+                            <span class="align-middle">MID</span>
+                            <span class="align-bottom">BOT</span>
+                            <span class="align-text-top">T-TOP</span>
+                            <span class="align-text-bottom">T-BOT</span>
+                        </div>
+
+                        <h5 class="mt-4">For Table Cells:</h5>
+                        
+                        <div class="js-prism mb-2">
+                            <table class="table-bordered w-100" style="height: 50px;">
+                                <tbody>
+                                    <tr>
+                                        <td class="align-baseline">BL</td>
+                                        <td class="align-top">TOP</td>
+                                        <td class="align-middle">MID</td>
+                                        <td class="align-bottom">BOT</td>
+                                        <td class="align-text-top">T-TOP</td>
+                                        <td class="align-text-bottom">T-BOT</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>

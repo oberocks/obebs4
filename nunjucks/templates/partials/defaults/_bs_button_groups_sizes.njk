@@ -1,0 +1,45 @@
+<!-- _bs_button_groups_sizes.njk -->
+		<div class="container-fluid pt-5 text-center bg-white text-dark">
+        
+            <div class="container">
+
+                <div class="row justify-content-center">
+                    
+                    <div id="{{ global_strings['defaults']['sections']['21']['id'] }}" class="col-md-6 pb-5">
+                        
+                        {% set headingHeadline = global_strings['defaults']['sections']['21']['head'] %}
+						{% set headingSubline = global_strings['defaults']['sections']['21']['subhead'] %}
+						{% set headingDescrip = global_strings['defaults']['sections']['21']['descrip'] %}
+                        {% include "partials/_columnHeading.njk" %}
+                        
+                        <div class="js-prism mb-2">
+                            <div class="btn-group btn-group-sm" role="group" aria-label="Basic example">
+                                <button type="button" class="btn btn-primary">Left</button>
+                                <button type="button" class="btn btn-primary">Mid</button>
+                                <button type="button" class="btn btn-primary">Right</button>
+                            </div>
+                        </div>
+                        
+                        <div class="js-prism mb-2">
+                            <div class="btn-group" role="group" aria-label="Basic example">
+                                <button type="button" class="btn btn-primary">Left</button>
+                                <button type="button" class="btn btn-primary">Mid</button>
+                                <button type="button" class="btn btn-primary">Right</button>
+                            </div>
+                        </div>
+
+                        <div class="js-prism mb-2">
+                            <div class="btn-group btn-group-lg" role="group" aria-label="Basic example">
+                                <button type="button" class="btn btn-primary">Left</button>
+                                <button type="button" class="btn btn-primary">Mid</button>
+                                <button type="button" class="btn btn-primary">Right</button>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>

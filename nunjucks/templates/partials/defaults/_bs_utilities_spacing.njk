@@ -1,0 +1,63 @@
+<!-- _bs_utilities_spacing.njk -->
+		<div class="container-fluid pt-5 text-center bg-white text-dark">
+        
+            <div class="container modal-workspace">
+
+                <div class="row justify-content-center pt-5">
+                    
+                    <div id="{{ global_strings['defaults']['sections']['62']['id'] }}" class="col-12">
+                        
+                        {% set headingHeadline = global_strings['defaults']['sections']['62']['head'] %}
+						{% set headingSubline = global_strings['defaults']['sections']['62']['subhead'] %}
+						{% set headingDescrip = global_strings['defaults']['sections']['62']['descrip'] %}
+                        {% include "partials/_columnHeading.njk" %}
+
+                    </div>
+
+                </div>
+
+                <div class="row justify-content-center">
+
+                    <div class="col-md-6 pb-5">
+                        
+                        {% macro margin_examps(number) %}
+                        <h5 class="mt-4">Margin: {{ number }}</h5>
+                        <div class="js-prism pb-2">
+                            <div class="d-inline-block bg-light">
+                                <div class="m-{{ number }} d-inline-block bg-primary text-light">.m-{{ number }}</div>
+                            </div>
+                        </div>
+                        {% endmacro %}
+
+                        {{ margin_examps('0') }}
+                        {{ margin_examps('1') }}
+                        {{ margin_examps('2') }}
+                        {{ margin_examps('3') }}
+                        {{ margin_examps('4') }}
+                        {{ margin_examps('5') }}
+
+                    </div>
+                    
+                    <div class="col-md-6 pb-5">
+                        
+                        {% macro padding_examps(number) %}
+                        <h5 class="mt-4">Padding: {{ number }}</h5>
+                        <div class="js-prism pb-2">
+                            <div class="p-{{ number }} d-inline-block bg-primary text-light">.p-{{ number }}</div>
+                        </div>
+                        {% endmacro %}
+
+                        {{ padding_examps('0') }}
+                        {{ padding_examps('1') }}
+                        {{ padding_examps('2') }}
+                        {{ padding_examps('3') }}
+                        {{ padding_examps('4') }}
+                        {{ padding_examps('5') }}
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>

@@ -1,0 +1,38 @@
+<!-- _bs_nested_media_objects.njk -->
+		<div class="container-fluid pt-5 text-center bg-white text-dark">
+        
+            <div class="container">
+                
+                <div class="row justify-content-center">
+                    
+                    <div id="{{ global_strings['defaults']['sections']['51']['id'] }}" class="col-md-9 pb-5">
+                        
+                        {% set headingHeadline = global_strings['defaults']['sections']['51']['head'] %}
+						{% set headingSubline = global_strings['defaults']['sections']['51']['subhead'] %}
+						{% set headingDescrip = global_strings['defaults']['sections']['51']['descrip'] %}
+                        {% include "partials/_columnHeading.njk" %}
+                        
+                        <div class="js-prism mb-2 text-left">
+                            <div class="media">
+                                <img class="mr-3" src="images/64x64.jpg" alt="64x64 PX Placeholder Image">
+                                <div class="media-body">
+                                    <h5 class="mt-0">Media heading</h5>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque egestas nulla at mauris malesuada viverra. Aenean consequat ante ipsum, quis imperdiet ipsum fermentum vitae.</p>
+                                    <div class="media mt-3">
+                                        <img class="mr-3" src="images/64x64.jpg" alt="64x64 PX Placeholder Image">
+                                        <div class="media-body">
+                                            <h5 class="mt-0">Media heading</h5>
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque egestas nulla at mauris malesuada viverra. Aenean consequat ante ipsum, quis imperdiet ipsum fermentum vitae.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>

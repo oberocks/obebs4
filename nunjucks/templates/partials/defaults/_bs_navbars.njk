@@ -1,0 +1,364 @@
+<!-- _bs_navbars.njk -->
+		<div class="container-fluid pt-5 text-center bg-white text-dark">
+        
+            <div class="container navbar-workspace">
+                
+                <div class="row justify-content-center">
+                    
+                    <div id="{{ global_strings['defaults']['sections']['54']['id'] }}" class="col pb-5">
+                        
+                        {% set headingHeadline = global_strings['defaults']['sections']['54']['head'] %}
+						{% set headingSubline = global_strings['defaults']['sections']['54']['subhead'] %}
+						{% set headingDescrip = global_strings['defaults']['sections']['54']['descrip'] %}
+                        {% include "partials/_columnHeading.njk" %}
+                        
+                        
+                        <label class="d-block font-weight-bold pt-4">Link Navbar</label>
+                        <div class="js-prism mb-2">
+                            <nav class="navbar navbar-light bg-light">
+                                <a class="navbar-brand" href="#">Brand</a>
+                            </nav>
+                        </div>
+
+
+                        <label class="d-block font-weight-bold pt-4">Heading Navbar</label>
+                        <div class="js-prism mb-2">
+                            <nav class="navbar navbar-light bg-light">
+                                <span class="navbar-brand mb-0 h1">Brand</span>
+                            </nav>
+                        </div>
+
+
+                        <label class="d-block font-weight-bold pt-4">Thumbnail Navbar</label>
+                        <div class="js-prism mb-2">
+                            <nav class="navbar navbar-light bg-light">
+                                <a class="navbar-brand" href="#">
+                                    <img src="images/64x64.jpg" alt="Thumbnail Alt Text" style="width: 30px; height: 30px;">
+                                </a>
+                            </nav>
+                        </div>
+
+
+                        <label class="d-block font-weight-bold pt-4">Thumbnail + Text Navbar</label>
+                        <div class="js-prism mb-2">
+                            <nav class="navbar navbar-light bg-light">
+                                <a class="navbar-brand" href="#">
+                                    <img src="images/64x64.jpg" alt="Thumbnail Alt Text" style="width: 30px; height: 30px;">
+                                    <span class="pl-2">Brand</span>
+                                </a>
+                            </nav>
+                        </div>
+
+
+                        <label class="d-block font-weight-bold pt-4">Navigation Navbar</label>
+                        <div class="js-prism mb-2">
+                            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                                <a class="navbar-brand" href="#">Brand</a>
+                                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#nav-navbar" aria-controls="nav-navbar" aria-expanded="false" aria-label="Toggle navigation">
+                                    <span class="navbar-toggler-icon"></span>
+                                </button>
+                                <div class="collapse navbar-collapse" id="nav-navbar">
+                                    <ul class="navbar-nav">
+                                        <li class="nav-item active">
+                                            <a class="nav-link" href="#">Home<span class="sr-only"> (current)</span></a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="#">Shop</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="#">Blog</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link disabled" href="#">Disabled</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </nav>
+                        </div>
+
+
+                        <label class="d-block font-weight-bold pt-4">No-List Navigation Navbar</label>
+                        <div class="js-prism mb-2">
+                            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                                <a class="navbar-brand" href="#">Brand</a>
+                                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#nl-navbar" aria-controls="nl-navbar" aria-expanded="false" aria-label="Toggle navigation">
+                                    <span class="navbar-toggler-icon"></span>
+                                </button>
+                                <div class="collapse navbar-collapse" id="nl-navbar">
+                                    <div class="navbar-nav">
+                                        <a class="nav-item nav-link active" href="#">Home<span class="sr-only"> (current)</span></a>
+                                        <a class="nav-item nav-link" href="#">Shop</a>
+                                        <a class="nav-item nav-link" href="#">Blog</a>
+                                        <a class="nav-item nav-link disabled" href="#">Disabled</a>
+                                    </div>
+                                </div>
+                            </nav>
+                        </div>
+
+
+                        <label class="d-block font-weight-bold pt-4">Dropdown Navbar</label>
+                        <div class="js-prism mb-2">
+                            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                                <a class="navbar-brand" href="#">Brand</a>
+                                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#dd-navbar" aria-controls="dd-navbar" aria-expanded="false" aria-label="Toggle navigation">
+                                    <span class="navbar-toggler-icon"></span>
+                                </button>
+                                <div class="collapse navbar-collapse" id="dd-navbar">
+                                    <ul class="navbar-nav">
+                                        <li class="nav-item active">
+                                            <a class="nav-link" href="#">Home<span class="sr-only"> (current)</span></a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="#">Shop</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link disabled" href="#">Disabled</a>
+                                        </li>
+                                        <li class="nav-item dropdown">
+                                            <a class="nav-link dropdown-toggle" href="#" id="dd-navbar-dd" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</a>
+                                            <div class="dropdown-menu" aria-labelledby="dd-navbar-dd">
+                                                <a class="dropdown-item" href="#">Action 1</a>
+                                                <a class="dropdown-item" href="#">Action 2</a>
+                                                <a class="dropdown-item" href="#">Action 3</a>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </nav>
+                        </div>
+
+
+                        <label class="d-block font-weight-bold pt-4">Navbar Form</label>
+                        <div class="js-prism mb-2">
+                            <nav class="navbar navbar-light bg-light">
+                                <form class="form-inline">
+                                    <input class="form-control mr-sm-2" type="search" id="navbar-form-input" name="navbar-form-input" placeholder="Search" aria-label="Search">
+                                    <button class="btn btn-outline-primary my-2 my-sm-0" type="submit">Search</button>
+                                </form>
+                            </nav>
+                        </div>
+
+
+                        <label class="d-block font-weight-bold pt-4">Navbar + Form</label>
+                        <div class="js-prism mb-2">
+                            <nav class="navbar navbar-light bg-light">
+                                <a class="navbar-brand">Brand</a>
+                                <form class="form-inline">
+                                    <input class="form-control mr-sm-2" id="navbar-and-form-input" name="navbar-and-form-input" type="search" placeholder="Search" aria-label="Search">
+                                    <button class="btn btn-outline-primary my-2 my-sm-0" type="submit">Search</button>
+                                </form>
+                            </nav>
+                        </div>
+
+
+                        <label class="d-block font-weight-bold pt-4">Input Group Navbar</label>
+                        <div class="js-prism mb-2">
+                            <nav class="navbar navbar-light bg-light">
+                                <form class="form-inline">
+                                    <div class="input-group">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text" id="ig-navbar-label">@</span>
+                                        </div>
+                                        <input type="text" class="form-control" id="ig-navbar-input" name="g-navbar-input" placeholder="Username" aria-label="Username" aria-describedby="ig-navbar-label">
+                                    </div>
+                                </form>
+                            </nav>
+                        </div>
+
+
+                        <label class="d-block font-weight-bold pt-4">Multi-Button Navbar</label>
+                        <div class="js-prism mb-2">
+                            <nav class="navbar navbar-light bg-light">
+                                <form class="form-inline">
+                                    <button class="btn btn-outline-success" type="button">Button</button>
+                                    <button class="btn btn-sm btn-outline-secondary ml-2" type="button">Small Btn</button>
+                                </form>
+                            </nav>
+                        </div>
+
+
+                        <label class="d-block font-weight-bold pt-4">Text Navbar</label>
+                        <div class="js-prism mb-2">
+                            <nav class="navbar navbar-light bg-light">
+                                <span class="navbar-text">Navbar text with an inline element</span>
+                            </nav>
+                        </div>
+
+
+                        <label class="d-block font-weight-bold pt-4">Container Navbar</label>
+                        <div class="js-prism mb-2">
+                            <div class="container">
+                                <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                                    <a class="navbar-brand" href="#">Brand</a>
+                                </nav>
+                            </div>
+                        </div>
+
+
+                        <label class="d-block font-weight-bold pt-4">Fluid + Container Navbar</label>
+                        <div class="js-prism mb-2">
+                            <div class="container-fluid bg-light">
+                                <div class="container">
+                                    <nav class="navbar navbar-expand-lg navbar-light">
+                                        <a class="navbar-brand" href="#">Brand</a>
+                                    </nav>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <label class="d-block font-weight-bold pt-4">Fixed-Top Navbar</label>
+                        <div class="js-prism-fa prism-hidden mb-2" style="cursor: help;">
+                            <nav class="navbar navbar-light bg-light pb-2">
+                                <a class="navbar-brand" href="#">Fixed-Top</a>
+                            </nav>
+                        </div>
+                        <pre>
+                            <code class="language-html line-numbers">
+                                &lt;nav class="navbar fixed-top navbar-light bg-light"&gt;
+                                    &lt;a class="navbar-brand" href="#"&gt;Fixed-Top&lt;/a&gt;
+                                &lt;/nav&gt;
+                            </code>
+                        </pre>
+
+
+                        <label class="d-block font-weight-bold pt-4">Fixed-Bottom Navbar</label>
+                        <div class="js-prism-fa prism-hidden mb-2" style="cursor: help;">
+                            <nav class="navbar navbar-light bg-light pb-2">
+                                <a class="navbar-brand" href="#">Fixed-Bottom</a>
+                            </nav>
+                        </div>
+                        <pre>
+                            <code class="language-html line-numbers">
+                                &lt;nav class="navbar fixed-bottom navbar-light bg-light"&gt;
+                                    &lt;a class="navbar-brand" href="#"&gt;Fixed-Bottom&lt;/a&gt;
+                                &lt;/nav&gt;
+                            </code>
+                        </pre>
+
+
+                        <label class="d-block font-weight-bold pt-4">Sticky-Top Navbar</label>
+                        <div class="js-prism-fa prism-hidden mb-2" style="cursor: help;">
+                            <nav class="navbar navbar-light bg-light pb-2">
+                                <a class="navbar-brand" href="#">Sticky-Top</a>
+                            </nav>
+                        </div>
+                        <pre>
+                            <code class="language-html line-numbers">
+                                &lt;nav class="navbar sticky-top navbar-light bg-light"&gt;
+                                    &lt;a class="navbar-brand" href="#"&gt;Sticky-Top&lt;/a&gt;
+                                &lt;/nav&gt;
+                            </code>
+                        </pre>
+
+
+                        <label class="d-block font-weight-bold pt-4">Brand Collapsing Navbar</label>
+                        <div class="js-prism mb-2">
+                            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#bc-navbar" aria-controls="bc-navbar" aria-expanded="false" aria-label="Toggle navigation">
+                                    <span class="navbar-toggler-icon"></span>
+                                </button>
+                                <div class="collapse navbar-collapse" id="bc-navbar">
+                                    <a class="navbar-brand" href="#">Brand</a>
+                                    <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                                        <li class="nav-item active">
+                                            <a class="nav-link" href="#">Home<span class="sr-only"> (current)</span></a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="#">Link</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link disabled" href="#">Disabled</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </nav>
+                        </div>
+
+
+                        <label class="d-block font-weight-bold pt-4">Toggle On Left Navbar</label>
+                        <div class="js-prism mb-2">
+                            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#tog-left-navbar" aria-controls="tog-left-navbar" aria-expanded="false" aria-label="Toggle navigation">
+                                    <span class="navbar-toggler-icon"></span>
+                                </button>
+                                <a class="navbar-brand" href="#">Brand</a>
+                                <div class="collapse navbar-collapse" id="tog-left-navbar">
+                                    <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                                        <li class="nav-item active">
+                                            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="#">Link</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link disabled" href="#">Disabled</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </nav>
+                        </div>
+
+
+                        <label class="d-block font-weight-bold pt-4">Kitchen Sink Navbar</label>
+                        <div class="js-prism mb-2">
+                            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                                <a class="navbar-brand" href="#">Brand</a>
+                                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#kitchen-navbar" aria-controls="kitchen-navbar" aria-expanded="false" aria-label="Toggle navigation">
+                                    <span class="navbar-toggler-icon"></span>
+                                </button>
+                                <div class="collapse navbar-collapse" id="kitchen-navbar">
+                                    <ul class="navbar-nav mr-auto">
+                                        <li class="nav-item active">
+                                            <a class="nav-link" href="#">Home<span class="sr-only"> (current)</span></a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="#">Link</a>
+                                        </li>
+                                        <li class="nav-item dropdown">
+                                            <a class="nav-link dropdown-toggle" href="#" id="kitchen-navbar-dd" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</a>
+                                            <div class="dropdown-menu" aria-labelledby="kitchen-navbar-dd">
+                                                <a class="dropdown-item" href="#">Action 1</a>
+                                                <a class="dropdown-item" href="#">Action 2</a>
+                                                <div class="dropdown-divider"></div>
+                                                <a class="dropdown-item" href="#">Action 3</a>
+                                            </div>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link disabled" href="#">Disabled</a>
+                                        </li>
+                                    </ul>
+                                    <form class="form-inline my-2 my-lg-0">
+                                        <input class="form-control mr-sm-2" id="kitchen-navbar-input" name="kitchen-navbar-input" type="search" placeholder="Search" aria-label="Search">
+                                        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                                    </form>
+                                </div>
+                            </nav>
+                        </div>
+
+
+                        <label class="d-block font-weight-bold pt-4">Reveal Content Navbar</label>
+                        <div class="js-prism mb-2">
+                            <div>
+                                <div class="collapse" id="reveal-navbar">
+                                    <div class="bg-dark text-white p-4">
+                                        <h5 class="h4">Collapsed Content</h5>
+                                        <p class="mb-0">(Toggleable via the navbar brand.)</p>
+                                    </div>
+                                </div>
+                                <nav class="navbar navbar-dark bg-dark">
+                                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#reveal-navbar" aria-controls="reveal-navbar" aria-expanded="false" aria-label="Toggle navigation">
+                                        <span class="navbar-toggler-icon"></span>
+                                    </button>
+                                </nav>
+                            </div>
+                        </div>
+
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>

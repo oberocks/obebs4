@@ -1,0 +1,43 @@
+<!-- _bs_utilities_embed.njk -->
+		<div class="container-fluid pt-5 text-center bg-white text-dark">
+        
+            <div class="container modal-workspace">
+
+                <div class="row justify-content-center pt-5">
+                    
+                    <div id="{{ global_strings['defaults']['sections']['34']['id'] }}" class="col-12">
+                        
+                        {% set headingHeadline = global_strings['defaults']['sections']['34']['head'] %}
+						{% set headingSubline = global_strings['defaults']['sections']['34']['subhead'] %}
+						{% set headingDescrip = global_strings['defaults']['sections']['34']['descrip'] %}
+                        {% include "partials/_columnHeading.njk" %}
+
+                    </div>
+
+                </div>
+
+                <div class="row justify-content-center">
+
+                    <div class="col-md-6 pb-5">
+
+                        {% macro iframe_embeds(headline, classPart) %}
+                        <div class="js-prism mb-2 pt-4">
+                            <h5>{{ headline }} Embed</h5>
+                            <div class="embed-responsive embed-responsive-{{ classPart }}">
+                                <iframe class="embed-responsive-item border-0" width="560" height="315" src="https://www.youtube.com/embed/a0mvTamiNeA" allowfullscreen></iframe>
+                            </div>
+                        </div>
+                        {% endmacro %}
+
+                        {{ iframe_embeds('16x9', '16by9') }}
+                        {{ iframe_embeds('21x9', '21by9') }}
+                        {{ iframe_embeds('4x3', '4by3') }}
+                        {{ iframe_embeds('1x1', '1by1') }}
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>

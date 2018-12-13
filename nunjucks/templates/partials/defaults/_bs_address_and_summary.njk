@@ -1,0 +1,62 @@
+<!-- _bs_address_and_summary.njk -->
+		<div class="container-fluid pt-5 text-center bg-white text-dark">
+        
+            <div class="container">
+                
+                <div class="row justify-content-center">
+                    
+                    <div id="{{ global_strings['defaults']['sections']['4']['id'] }}" class="col-md-6 pb-5">
+                        
+                        {% set headingHeadline = global_strings['defaults']['sections']['4']['head'] %}
+						{% set headingSubline = global_strings['defaults']['sections']['4']['subhead'] %}
+						{% set headingDescrip = global_strings['defaults']['sections']['4']['descrip'] %}
+                        {% include "partials/_columnHeading.njk" %}
+                        
+                        <div class="js-prism mb-2 text-left">
+                            <address>
+                                <strong>Business Name</strong><br />
+                                1234 Main St, Suite 9000<br />
+                                Anywhere, AZ 12345<br />
+                                <abbr title="Phone">P:</abbr> (123) 456-7890
+                            </address>
+                        </div>
+
+                        <div class="js-prism mb-2 text-left">
+                            <address>
+                                <strong>Full Name</strong><br>
+                                <a href="mailto:#">obe.rocks@example.com</a>
+                            </address>
+                        </div>
+
+                    </div>
+
+                    <div id="{{ global_strings['defaults']['sections']['5']['id'] }}" class="col-md-6 pb-5">
+                        
+                        {% set headingHeadline = global_strings['defaults']['sections']['5']['head'] %}
+						{% set headingSubline = global_strings['defaults']['sections']['5']['subhead'] %}
+						{% set headingDescrip = global_strings['defaults']['sections']['5']['descrip'] %}
+                        {% include "partials/_columnHeading.njk" %}
+
+                        <strong class="d-block text-left">Closed State:</strong>
+                        <div class="js-prism mb-2 text-left">
+                            <details>
+                                <summary>Click for Details</summary>
+                                <p class="mb-0">This is the detail!</p>
+                            </details>
+                        </div>
+
+                        <strong class="d-block text-left">Open State:</strong>
+                        <div class="js-prism mb-2 text-left">
+                            <details open>
+                                <summary>Open Details Example</summary>
+                                <p class="mb-0">Here is some more detail!</p>
+                            </details>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>

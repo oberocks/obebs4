@@ -1,0 +1,80 @@
+<!-- _bs_buttons_toggles.njk -->
+		<div class="container-fluid pt-5 text-center bg-white text-dark">
+        
+            <div class="container">
+
+                <div class="row justify-content-center">
+                    
+                    <div id="{{ global_strings['defaults']['sections']['26']['id'] }}" class="col-md-6 pb-5">
+                        
+                        {% set headingHeadline = global_strings['defaults']['sections']['26']['head'] %}
+						{% set headingSubline = global_strings['defaults']['sections']['26']['subhead'] %}
+						{% set headingDescrip = global_strings['defaults']['sections']['26']['descrip'] %}
+                        {% include "partials/_columnHeading.njk" %}
+
+                        <div class="js-prism mb-2">
+                            <button type="button" class="btn btn-primary" data-toggle="button" aria-pressed="false">Toggle Button</button>
+                        </div>
+
+                        <div class="js-prism mb-2">
+                            <button type="button" class="btn btn-primary active" data-toggle="button" aria-pressed="true">Active On-Load</button>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="row justify-content-center pt-5">
+                    
+                    <div id="{{ global_strings['defaults']['sections']['27']['id'] }}" class="col-md-6 pb-5">
+                        
+                        {% set headingHeadline = global_strings['defaults']['sections']['27']['head'] %}
+						{% set headingSubline = global_strings['defaults']['sections']['27']['subhead'] %}
+						{% set headingDescrip = global_strings['defaults']['sections']['27']['descrip'] %}
+                        {% include "partials/_columnHeading.njk" %}
+
+                        <div class="js-prism mb-2">
+                            <div class="btn-group-toggle" data-toggle="buttons">
+                                <label class="btn btn-primary active">
+                                    <input type="checkbox" id="checkbox-btn-on" name="checkbox-btn-on" checked> Checked
+                                </label>
+                                <label class="btn btn-primary">
+                                    <input type="checkbox" id="checkbox-btn-off" name="checkbox-btn-off"> Un-Checked
+                                </label>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="row justify-content-center pt-5">
+                    
+                    <div id="{{ global_strings['defaults']['sections']['28']['id'] }}" class="col-md-6 pb-5">
+                        
+                        {% set headingHeadline = global_strings['defaults']['sections']['28']['head'] %}
+						{% set headingSubline = global_strings['defaults']['sections']['28']['subhead'] %}
+						{% set headingDescrip = global_strings['defaults']['sections']['28']['descrip'] %}
+                        {% include "partials/_columnHeading.njk" %}
+
+                        <div class="js-prism mb-2">
+                            <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                                <label class="btn btn-primary active">
+                                    <input type="radio" name="radio-buttons" id="radio-buttons-1" checked> Active
+                                </label>
+                                <label class="btn btn-primary">
+                                    <input type="radio" name="radio-buttons" id="radio-buttons-2"> Radio
+                                </label>
+                                <label class="btn btn-primary">
+                                    <input type="radio" name="radio-buttons" id="radio-buttons-3"> Radio
+                                </label>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>

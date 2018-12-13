@@ -1,0 +1,134 @@
+<!-- _bs_cards.njk -->
+		<div class="container-fluid pt-5 text-center bg-white text-dark">
+        
+            <div class="container">
+
+                <div class="row justify-content-center pt-5">
+                    
+                    <div id="{{ global_strings['defaults']['sections']['2']['id'] }}" class="col-md-6 pb-5">
+                        
+                        {% set headingHeadline = global_strings['defaults']['sections']['2']['head'] %}
+						{% set headingSubline = global_strings['defaults']['sections']['2']['subhead'] %}
+						{% set headingDescrip = global_strings['defaults']['sections']['2']['descrip'] %}
+                        {% include "partials/_columnHeading.njk" %}
+                        
+                        <label class="d-block font-weight-bold">Minimalist Card:</label>
+                        <div class="js-prism mb-2 text-left">
+                            <div class="card">
+                                <div class="card-body">Some quick example text to demonstrate a minimalist card, with only card body text.</div>
+                            </div>
+                        </div>
+                        
+                        <label class="d-block font-weight-bold">Text Content Card:</label>
+                        <div class="js-prism mb-2 text-left">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h5 class="card-title">Card with Title, Subtitle, Text & Links</h5>
+                                    <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+                                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                    <a href="#" class="card-link">Card link</a>
+                                    <a href="#" class="card-link">Another link</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <label class="d-block font-weight-bold">Top Image Card:</label>
+                        <div class="js-prism mb-2 text-left">
+                            <div class="card">
+                                <img class="card-img-top" src="images/600x338.jpg" alt="Placeholder Image Alt Text">
+                                <div class="card-body">
+                                    <p class="card-text">Some quick example text to build on the card image and make up the bulk of the card's content.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <label class="d-block font-weight-bold">Bottom Image Card:</label>
+                        <div class="js-prism mb-2 text-left">
+                            <div class="card">
+                                <div class="card-body">
+                                    <p class="card-text">Some quick example text to build on the card image and make up the bulk of the card's content.</p>
+                                </div>
+                                <img class="card-img-bottom" src="images/600x338.jpg" alt="Placeholder Image Alt Text">
+                            </div>
+                        </div>
+
+                        <label class="d-block font-weight-bold">Card Flush List Items:</label>
+                        <div class="js-prism mb-2 text-left">
+                            <div class="card">
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item">Cras justo odio</li>
+                                    <li class="list-group-item">Dapibus ac facilisis in</li>
+                                    <li class="list-group-item">Vestibulum at eros</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <label class="d-block font-weight-bold">Card List with Heading:</label>
+                        <div class="js-prism mb-2 text-left">
+                            <div class="card">
+                                <div class="card-header">Featured</div>
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item">Cras justo odio</li>
+                                    <li class="list-group-item">Dapibus ac facilisis in</li>
+                                    <li class="list-group-item">Vestibulum at eros</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <label class="d-block font-weight-bold">Card List with Headline Heading:</label>
+                        <div class="js-prism mb-2 text-left">
+                            <div class="card">
+                                <h2 class="card-header">Featured</h2>
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item">Cras justo odio</li>
+                                    <li class="list-group-item">Dapibus ac facilisis in</li>
+                                    <li class="list-group-item">Vestibulum at eros</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <label class="d-block font-weight-bold">Card List with Header & Footer:</label>
+                        <div class="js-prism mb-2 text-left">
+                            <div class="card">
+                                <div class="card-header">Featured</div>
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item">Cras justo odio</li>
+                                    <li class="list-group-item">Dapibus ac facilisis in</li>
+                                    <li class="list-group-item">Vestibulum at eros</li>
+                                </ul>
+                                <div class="card-footer">Footer</div>
+                            </div>
+                        </div>
+
+                        <label class="d-block font-weight-bold">Card with Blockquote:</label>
+                        <div class="js-prism mb-2 text-left">
+                            <div class="card">
+                                <div class="card-header">Quote</div>
+                                <div class="card-body">
+                                    <blockquote class="blockquote mb-0">
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+                                        <footer class="blockquote-footer">Someone famous in <cite title="Source Title">Source Title</cite></footer>
+                                    </blockquote>
+                                </div>
+                            </div>
+                        </div>
+
+                        <label class="d-block font-weight-bold">Card with Background Image:</label>
+                        <div class="js-prism mb-2 text-left">
+                            <div class="card bg-dark text-white">
+                                <img class="card-img" src="images/1600x900.jpg" alt="Card Background Image">
+                                <div class="card-img-overlay">
+                                    <h5 class="card-title">Card title</h5>
+                                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque egestas nulla at mauris malesuada viverra. Aenean consequat ante ipsum, quis imperdiet ipsum fermentum vitae. Vivamus consectetur metus sit amet justo maximus, non volutpat nunc sollicitudin. Vivamus vel pharetra ex, eget rhoncus neque. Aenean at mollis lorem, et dapibus odio.</p>
+                                    <p class="card-text">Last updated 3 mins ago</p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>

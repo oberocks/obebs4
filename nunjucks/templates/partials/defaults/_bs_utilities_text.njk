@@ -1,0 +1,50 @@
+<!-- _bs_utilities_text.njk -->
+		<div class="container-fluid pt-5 text-center bg-white text-dark">
+        
+            <div class="container modal-workspace">
+
+                <div class="row justify-content-center pt-5">
+
+                    <div id="{{ global_strings['defaults']['sections']['72']['id'] }}" class="col">
+                        
+                        {% set headingHeadline = global_strings['defaults']['sections']['72']['head'] %}
+						{% set headingSubline = global_strings['defaults']['sections']['72']['subhead'] %}
+						{% set headingDescrip = global_strings['defaults']['sections']['72']['descrip'] %}
+                        {% include "partials/_columnHeading.njk" %}
+
+                    </div>
+
+                </div>
+
+                <div class="row justify-content-center">
+
+                    <div class="col-md-6 pb-5">
+                        
+                        <h5 class="mt-4">Prevent Wrapping</h5>
+                        
+                        <div class="js-prism pb-2">
+                            <div class="text-nowrap bg-light" style="width: 100px;">Text can overflow a parent</div>
+                        </div>
+                        
+                        <h5 class="mt-4">Text Truncation (Block)</h5>
+                        
+                        <div class="js-prism pb-2 text-left">
+                            <div class="row">
+                                <div class="col-2 text-truncate">Praeterea iter est quasdam res quas ex communi.</div>
+                                <div class="col-10 text-truncate">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed congue consequat leo, in pulvinar ex vulputate et. Phasellus sit amet magna justo. Curabitur facilisis lobortis libero. Vivamus fringilla eros id nulla fermentum elementum. Proin vitae massa sed est congue bibendum et ac quam. Vestibulum tempor ut massa ut maximus.</div>
+                            </div>
+                        </div>
+
+                        <h5 class="mt-4">Text Truncation (In-Line)</h5>
+                        
+                        <div class="js-prism pb-2">
+                            <span class="d-inline-block w-25 text-truncate">Praeterea iter est quasdam res quas ex communi.</span>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>

@@ -1,0 +1,69 @@
+<!-- _bs_utilities_sizing.njk -->
+		<div class="container-fluid pt-5 text-center bg-white text-dark">
+        
+            <div class="container modal-workspace">
+
+                <div class="row justify-content-center pt-5">
+                    
+                    <div id="{{ global_strings['defaults']['sections']['61']['id'] }}" class="col-12">
+                        
+                        {% set headingHeadline = global_strings['defaults']['sections']['61']['head'] %}
+						{% set headingSubline = global_strings['defaults']['sections']['61']['subhead'] %}
+						{% set headingDescrip = global_strings['defaults']['sections']['61']['descrip'] %}
+                        {% include "partials/_columnHeading.njk" %}
+
+                    </div>
+
+                </div>
+
+                <div class="row justify-content-center">
+
+                    <div class="col pb-5">
+                        
+                        {% macro element_width_utils(number, text) %}
+                        <div class="js-prism mb-2">
+                            <div class="bg-light text-white w-100">
+                                <div class="bg-primary w-{{ number }}">{{ text }}</div>
+                            </div>
+                        </div>
+                        {% endmacro %}
+
+                        <h5 class="mt-4">Width Utility Classes</h5>
+                        
+                        {{ element_width_utils('25', '25%') }}
+                        {{ element_width_utils('50', '50%') }}
+                        {{ element_width_utils('75', '75%') }}
+                        {{ element_width_utils('100', '100%') }}
+                        <div class="js-prism mb-2">
+                            <div class="bg-light text-white w-100">
+                                <span class="bg-primary w-auto">Auto</span>
+                            </div>
+                        </div>
+
+                        
+                        
+                        
+                        
+                        {% macro element_height_utils(number, text) %}
+                        <div class="js-prism mb-2">
+                            <div class="bg-light text-white w-100" style="height: 50px;">
+                                <div class="bg-primary h-{{ number }}">{{ text }}</div>
+                            </div>
+                        </div>
+                        {% endmacro %}
+
+                        <h5 class="mt-4">Height Utility Classes</h5>
+
+                        {{ element_height_utils('25', '25%') }}
+                        {{ element_height_utils('50', '50%') }}
+                        {{ element_height_utils('75', '75%') }}
+                        {{ element_height_utils('100', '100%') }}
+                        {{ element_height_utils('auto', 'Auto') }}
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>

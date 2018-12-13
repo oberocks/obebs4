@@ -1,0 +1,106 @@
+<!-- _bs_text_defaults.njk -->
+		<div class="container-fluid pt-5 text-center bg-white text-dark">
+        
+            <div class="container">
+                
+                <div class="row justify-content-center">
+                    
+                    <div id="{{ global_strings['defaults']['sections']['75']['id'] }}" class="col-md-6 pb-5">
+                    
+                        {% set headingHeadline = global_strings['defaults']['sections']['75']['head'] %}
+						{% set headingSubline = global_strings['defaults']['sections']['75']['subhead'] %}
+						{% set headingDescrip = global_strings['defaults']['sections']['75']['descrip'] %}
+                        {% include "partials/_columnHeading.njk" %}
+
+                        <div class="js-prism mb-2">
+                            You can <mark>highlight</mark> text.
+                        </div>
+
+                        <div class="js-prism mb-2">
+                            You can <s>strikeout</s> text.
+                        </div>
+
+                        <div class="js-prism mb-2">
+                            You can <u>underline</u> text.
+                        </div>
+
+                        <div class="js-prism mb-2">
+                            You can <small>fine print</small> text.
+                        </div>
+
+                        <div class="js-prism mb-2">
+                            You can <strong>bold</strong> text.
+                        </div>
+
+                        <div class="js-prism mb-2">
+                            You can <em>italicize</em> text.
+                        </div>
+
+                        <div class="js-prism mb-2">
+                            Use variables: <var>1 + 2 = 3</var>.
+                        </div>
+
+                        <div class="js-prism mb-2">
+                            Use key commands: <kbd>shift</kbd> + <kbd>a</kbd>.
+                        </div>
+
+                        <div class="js-prism mb-2">
+                            And mimic: <samp>CPU Output</samp>.
+                        </div>
+
+                    </div>
+
+                    <div id="{{ global_strings['defaults']['sections']['76']['id'] }}" class="col-md-6 pb-5">
+                    
+                        {% set headingHeadline = global_strings['defaults']['sections']['76']['head'] %}
+						{% set headingSubline = global_strings['defaults']['sections']['76']['subhead'] %}
+						{% set headingDescrip = global_strings['defaults']['sections']['76']['descrip'] %}
+                        {% include "partials/_columnHeading.njk" %}
+
+                        <div class="js-prism mb-2">
+                            You can <span class="mark">highlight</span> text.
+                        </div>
+
+                        <div class="js-prism mb-2">
+                            You can <span class="small">fine print</span> text.
+                        </div>
+
+                        <div class="js-prism mb-2">
+                            You can <span class="font-italic">italicize</span> text.
+                        </div>
+
+                        <div class="js-prism mb-2">
+                            You can <span class="font-weight-bold">bold</span> text.
+                        </div>
+
+                        <div class="js-prism mb-2">
+                            <strong>You can <span class="font-weight-normal">normalize</span> text.</strong>
+                        </div>
+
+                        <div class="js-prism mb-2">
+                            You can <span class="font-weight-light">lighten</span> text.
+                        </div>
+
+                        <div class="js-prism mb-2">
+                            FORCE <span class="text-lowercase">LOWERCASE</span> TEXT.
+                        </div>
+
+                        <div class="js-prism mb-2">
+                            force <span class="text-uppercase">uppercase</span> text.
+                        </div>
+
+                        <div class="js-prism mb-2">
+                            <span class="text-capitalize">force capitalized text</span>.
+                        </div>
+
+                        <div class="js-prism mb-2">
+                            You can make <span class="text-muted">text muted</span>.
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>

@@ -1,0 +1,606 @@
+<!-- _bs_forms.njk -->
+		<div class="container-fluid pt-5 text-center bg-white text-dark">
+        
+            <div class="container">
+
+                <div class="row justify-content-center pt-5">
+                    
+                    <div id="{{ global_strings['defaults']['sections']['37']['id'] }}" class="col-12">
+                        
+                        {% set headingHeadline = global_strings['defaults']['sections']['37']['head'] %}
+						{% set headingSubline = global_strings['defaults']['sections']['37']['subhead'] %}
+						{% set headingDescrip = global_strings['defaults']['sections']['37']['descrip'] %}
+                        {% include "partials/_columnHeading.njk" %}
+
+                    </div>
+
+                </div>
+
+                <div class="row justify-content-center">
+
+                    <div class="col-md-6 pb-5 text-left">
+                            
+                            {% macro form_input(type, label, placeholderStr, helpText, value, placeholder = 'true') %}
+                            <div class="form-group">
+                                <label for="{{ type }}-input">{{ label }}</label>
+                                <input type="{{ type }}" class="form-control" id="{{ type }}-input" name="{{ type }}-input" aria-describedby="{{ type }}-help"{% if placeholder === 'true' %} placeholder="{{ placeholderStr }}"{% endif %} value="{{ value }}">
+                                <small id="{{ type }}-help" class="form-text text-muted">{{ helpText }}</small>
+                            </div>
+                            {% endmacro %}
+
+                        <div class="js-prism mb-2">
+                            <div class="form-group">
+                                <label for="small-input">Small Input:</label>
+                                <input class="form-control form-control-sm" type="text" placeholder="Input Text" id="small-input" name="small-input" aria-describedby="small-input-help">
+                                <small id="small-input-help" class="form-text text-muted">Small input help text here.</small>
+                            </div>
+                        </div>
+                        
+                        <div class="js-prism mb-2">
+                            {{ form_input('text', 'Text Input:', 'Example Text', 'Text help text here.', '') }}
+                        </div>
+                        
+                        <div class="js-prism mb-2">
+                            <div class="form-group">
+                                <label for="large-input">Large Input:</label>
+                                <input class="form-control form-control-lg" type="text" placeholder="Input Text" id="large-input" name="large-input" aria-describedby="large-input-help">
+                                <small id="large-input-help" class="form-text text-muted">Large input help text here.</small>
+                            </div>
+                        </div>
+
+                        <div class="js-prism mb-2">
+                            {{ form_input('email', 'Email Input:', 'email@example.com', 'Email input help text here.', '') }}
+                        </div>
+
+                        <div class="js-prism mb-2">
+                            {{ form_input('password', 'Password Input:', 'Enter Password', 'Password input help text here.', '') }}
+                        </div>
+
+                        <div class="js-prism mb-2">
+                            {{ form_input('color', 'Color Input:', '', 'Color input help text here.', '#222222', placeholder = 'false') }}
+                        </div>
+
+                        <div class="js-prism mb-2">
+                            {{ form_input('date', 'Date Input:', '', 'Date input help text here.', '', placeholder = 'false') }}
+                        </div>
+
+                        <div class="js-prism mb-2">
+                            {{ form_input('datetime-local', 'Date/Time Local Input:', '', 'Date/Time Local input help text here.', '', placeholder = 'false') }}
+                        </div>
+
+                        <div class="js-prism mb-2">
+                            {{ form_input('month', 'Month Input:', '', 'Month input help text here.', '', placeholder = 'false') }}
+                        </div>
+
+                        <div class="js-prism mb-2">
+                            {{ form_input('number', 'Number Input:', '', 'Number input help text here.', '') }}
+                        </div>
+
+                        <div class="js-prism mb-2">
+                            {{ form_input('search', 'Search Input:', 'Search...', 'Search input help text here.', '') }}
+                        </div>
+
+                        <div class="js-prism mb-2">
+                            {{ form_input('tel', 'Telephone Input:', '', 'Tel input help text here.', '') }}
+                        </div>
+
+                        <div class="js-prism mb-2">
+                            {{ form_input('time', 'Time Input:', '', 'Time input help text here.', '', placeholder = 'false') }}
+                        </div>
+
+                        <div class="js-prism mb-2">
+                            {{ form_input('url', 'URL Input:', 'https://example.com', 'URL input help text here.', '') }}
+                        </div>
+
+                        <div class="js-prism mb-2">
+                            {{ form_input('week', 'Week Input:', '', 'Week input help text here.', '', placeholder = 'false') }}
+                        </div>
+
+                        <div class="js-prism mb-2">
+                            <div class="form-group">
+                                <label>Checkboxes:</label>
+                                <div class="form-check">
+                                    <input type="checkbox" class="form-check-input" id="checkbox-input" name="checkbox-input" aria-describedby="checkbox-help">
+                                    <label class="form-check-label" for="checkbox-input">Check me out</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="checkbox-input-disabled" name="checkbox-input-disabled" aria-describedby="checkbox-help" disabled>
+                                    <label class="form-check-label" for="checkbox-input-disabled">Disabled checkbox</label>
+                                </div>
+                                <small id="checkbox-help" class="form-text text-muted">Checkboxes help text here.</small>
+                            </div>
+                        </div>
+
+                        <div class="js-prism mb-2">
+                            <div class="form-group">
+                                <label>Custom Checkboxes:</label>
+                                <div class="custom-control custom-checkbox">
+                                    <input type="checkbox" class="custom-control-input" id="custom-check-1" aria-describedby="custom-check-help">
+                                    <label class="custom-control-label" for="custom-check-1">Custom Checkbox</label>
+                                </div>
+                                <div class="custom-control custom-checkbox">
+                                    <input type="checkbox" class="custom-control-input" id="custom-check-2" aria-describedby="custom-check-help" disabled>
+                                    <label class="custom-control-label" for="custom-check-2">Disabled Checkbox</label>
+                                </div>
+                                <small id="custom-check-help" class="form-text text-muted">Custom checkboxes help text.</small>
+                            </div>
+                        </div>
+
+                        <div class="js-prism mb-2">
+                            <div class="form-group">
+                                <label>Radios:</label>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="radio-inputs" id="radio-inputs-1" value="first" aria-describedby="radios-help" checked>
+                                    <label class="form-check-label" for="radio-inputs-1">First Radio</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="radio-inputs" id="radio-inputs-2" value="second" aria-describedby="radios-help">
+                                    <label class="form-check-label" for="radio-inputs-2">Second Radio</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="radio-inputs" id="radio-inputs-3" value="third" aria-describedby="radios-help" disabled>
+                                    <label class="form-check-label" for="radio-inputs-3">Disabled Thrid Radio</label>
+                                </div>
+                                <small id="radios-help" class="form-text text-muted">Radios help text here.</small>
+                            </div>
+                        </div>
+
+                        <div class="js-prism mb-2">
+                            <div class="form-group">
+                                <label>Custom Radios:</label>
+                                <div class="custom-control custom-radio">
+                                    <input type="radio" id="custom-radio-1" name="custom-radio-inputs" class="custom-control-input" aria-describedby="custom-radio-inputs-help" checked>
+                                    <label class="custom-control-label" for="custom-radio-1">Custom Radio</label>
+                                </div>
+                                <div class="custom-control custom-radio">
+                                    <input type="radio" id="custom-radio-2" name="custom-radio-inputs" class="custom-control-input" aria-describedby="custom-radio-inputs-help">
+                                    <label class="custom-control-label" for="custom-radio-2">Custom Radio</label>
+                                </div>
+                                <div class="custom-control custom-radio">
+                                    <input type="radio" id="custom-radio-3" name="custom-radio-inputs" class="custom-control-input" aria-describedby="custom-radio-inputs-help" disabled>
+                                    <label class="custom-control-label" for="custom-radio-3">Disabled Radio</label>
+                                </div>
+                                <small id="custom-radio-inputs-help" class="form-text text-muted">Radios help text here.</small>
+                            </div>
+                        </div>
+
+                        <div class="js-prism mb-2">
+                            <div class="form-group">
+                                <label for="small-select-input">Small Select:</label>
+                                <select class="form-control form-control-sm" id="small-select-input" name="small-select-input" aria-describedby="small-select-help">
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                </select>
+                                <small id="small-select-help" class="form-text text-muted">Small Select help text here.</small>
+                            </div>
+                        </div>
+                        
+                        <div class="js-prism mb-2">
+                            <div class="form-group">
+                                <label for="select-input">Select:</label>
+                                <select class="form-control" id="select-input" name="select-input" aria-describedby="select-help">
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                </select>
+                                <small id="select-help" class="form-text text-muted">Select help text here.</small>
+                            </div>
+                        </div>
+
+                        <div class="js-prism mb-2">
+                            <div class="form-group">
+                                <label for="large-select-input">Large Select:</label>
+                                <select class="form-control form-control-lg" id="large-select-input" name="large-select-input" aria-describedby="large-select-help">
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                </select>
+                                <small id="large-select-help" class="form-text text-muted">Large Select help text here.</small>
+                            </div>
+                        </div>
+
+                        <div class="js-prism mb-2">
+                            <div class="form-group">
+                                <label for="multi-select-input">Multi-Select:</label>
+                                <select multiple class="form-control" id="multi-select-input" name="multi-select-input" aria-describedby="multi-select-help">
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                    <option value="6">6</option>
+                                </select>
+                                <small id="multi-select-help" class="form-text text-muted">Multi-Select help text here.</small>
+                            </div>
+                        </div>
+                        
+                        <div class="js-prism mb-2">
+                            <div class="form-group">
+                                <label for="select-input">Small Custom Select:</label>
+                                <select class="custom-select custom-select-sm" id="sm-custom-select-input" name="sm-custom-select-input" aria-describedby="sm-custom-select-input-help">
+                                    <option selected>Select An Option</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                </select>
+                                <small id="sm-custom-select-input-help" class="form-text text-muted">Small Custom Select help text here.</small>
+                            </div>
+                        </div>
+                        
+                        <div class="js-prism mb-2">
+                            <div class="form-group">
+                                <label for="select-input">Custom Select:</label>
+                                <select class="custom-select" id="custom-select-input" name="custom-select-input" aria-describedby="custom-select-input-help">
+                                    <option selected>Select An Option</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                </select>
+                                <small id="custom-select-input-help" class="form-text text-muted">Custom Select help text here.</small>
+                            </div>
+                        </div>
+                        
+                        <div class="js-prism mb-2">
+                            <div class="form-group">
+                                <label for="select-input">Large Custom Select:</label>
+                                <select class="custom-select custom-select-lg" id="lg-custom-select-input" name="lg-custom-select-input" aria-describedby="lg-custom-select-input-help">
+                                    <option selected>Select An Option</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                </select>
+                                <small id="lg-custom-select-input-help" class="form-text text-muted">Large Custom Select help text here.</small>
+                            </div>
+                        </div>
+                        
+                        <div class="js-prism mb-2">
+                            <div class="form-group">
+                                <label for="select-input">Custom Multi-Select:</label>
+                                <select multiple class="custom-select" id="custom-multi-select-input" name="custom-multi-select-input" aria-describedby="custom-multi-select-input-help">
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                    <option value="6">6</option>
+                                </select>
+                                <small id="custom-multi-select-input-help" class="form-text text-muted">Custom Select help text here.</small>
+                            </div>
+                        </div>
+
+                        <div class="js-prism mb-2">
+                            <div class="form-group">
+                                <label for="textarea-input">Textarea Input:</label>
+                                <textarea class="form-control" id="textarea-input" name="textarea-input" rows="3" aria-describedby="textarea-help"></textarea>
+                                <small id="textarea-help" class="form-text text-muted">Textarea help text here.</small>
+                            </div>
+                        </div>
+
+                        <div class="js-prism mb-2">
+                            <div class="form-group">
+                                <label for="file-upload">File Input:</label>
+                                <input type="file" class="form-control-file" id="file-upload" name="file-upload" aria-describedby="file-upload-help">
+                                <small id="file-upload-help" class="form-text text-muted">File input help text here.</small>
+                            </div>
+                        </div>
+
+                        <div class="js-prism mb-2">
+                            <div class="form-group">
+                                <label>Custom File Input:</label>
+                                <div class="custom-file">
+                                    <input type="file" class="custom-file-input" id="custom-file-upload" name="custom-file-upload" aria-describedby="custom-file-upload-help">
+                                    <label class="custom-file-label" for="custom-file-upload">Choose file</label>
+                                </div>
+                                <small id="custom-file-upload-help" class="form-text text-muted">File input help text here.</small>
+                            </div>
+                        </div>
+
+                        <div class="js-prism mb-2">
+                            <div class="form-group">
+                                <label for="readonly-input">Read-Only Input:</label>
+                                <input class="form-control" type="text" placeholder="Read-Only Text" id="readonly-input" name="readonly-input" aria-describedby="readonly-input-help" readonly>
+                                <small id="readonly-input-help" class="form-text text-muted">Read-Only input help text here.</small>
+                            </div>
+                        </div>
+
+                        <div class="js-prism mb-2">
+                            <div class="form-group">
+                                <label for="readonly-plain-input">Read-Only Plain Text Input:</label>
+                                <input class="form-control-plaintext" type="text" placeholder="Read-Only Plain Text" id="readonly-plain-input" name="readonly-plain-input" aria-describedby="readonly-plain-input-help" readonly>
+                                <small id="readonly-plain-input-help" class="form-text text-muted">Read-Only Plain Text input help text here.</small>
+                            </div>
+                        </div>
+
+                        <div class="js-prism mb-2">
+                            <div class="form-group">
+                                <label for="range-input">Range Input:</label>
+                                <input type="range" class="form-control-range" id="range-input" name="range-input" aria-describedby="range-input-help" min="0" max="10" step="1">
+                                <small id="range-input-help" class="form-text text-muted">Range input help text here.</small>
+                            </div>
+                        </div>
+
+                        <div class="js-prism mb-2">
+                            <div class="form-group">
+                                <label for="range-input">Custom Range Input:</label>
+                                <input type="range" class="custom-range" id="custom-range-input" name="custom-range-input" aria-describedby="custom-range-input-help" min="0" max="10" step="1">
+                                <small id="custom-range-input-help" class="form-text text-muted">Custom Range input help text here.</small>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="container-fluid pt-5 text-center bg-white text-dark">
+        
+            <div class="container">
+
+                <div class="row justify-content-center pt-5">
+                    
+                    <div id="{{ global_strings['defaults']['sections']['38']['id'] }}" class="col-12">
+                        
+                        {% set headingHeadline = global_strings['defaults']['sections']['38']['head'] %}
+						{% set headingSubline = global_strings['defaults']['sections']['38']['subhead'] %}
+						{% set headingDescrip = global_strings['defaults']['sections']['38']['descrip'] %}
+                        {% include "partials/_columnHeading.njk" %}
+
+                    </div>
+
+                </div>
+
+                <div class="row justify-content-center">
+
+                    <div class="col-md-9 text-left">
+
+                        <div class="js-prism mb-2">
+                            <label>Inline Checkboxes:</label>
+                            <div class="form-group">
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="checkbox" id="inline-check-1" value="1" aria-describedby="inline-check-help">
+                                    <label class="form-check-label" for="inline-check-1">1</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="checkbox" id="inline-check-2" value="2" aria-describedby="inline-check-help">
+                                    <label class="form-check-label" for="inline-check-2">2</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="checkbox" id="inline-check-3" value="3" aria-describedby="inline-check-help" disabled>
+                                    <label class="form-check-label" for="inline-check-3">3 (disabled)</label>
+                                </div>
+                                <small id="inline-check-help" class="form-text text-muted">Inline checkboxes help text here.</small>
+                            </div>
+                        </div>
+
+                        <div class="js-prism mb-2">
+                            <label>Inline Custom Checkboxes:</label>
+                            <div class="form-group">
+                                <div class="custom-control custom-checkbox custom-control-inline">
+                                    <input type="checkbox" class="custom-control-input" id="inline-custom-check-1" aria-describedby="inline-custom-check-help">
+                                    <label class="custom-control-label" for="inline-custom-check-1">Custom Checkbox</label>
+                                </div>
+                                <div class="custom-control custom-checkbox custom-control-inline">
+                                    <input type="checkbox" class="custom-control-input" id="inline-custom-check-2" aria-describedby="inline-custom-check-help" disabled>
+                                    <label class="custom-control-label" for="inline-custom-check-2">Disabled Checkbox</label>
+                                </div>
+                                <small id="inline-custom-check-help" class="form-text text-muted">Custom checkboxes help text.</small>
+                            </div>
+                        </div>
+
+                        <div class="js-prism mb-2">
+                            <label>Inline Radios:</label>
+                            <div class="form-group">
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="inline-radios" id="inline-radio-1" value="1" aria-describedby="inline-radio-help">
+                                    <label class="form-check-label" for="inline-radio-1">1</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="inline-radios" id="inline-radio-2" value="2" aria-describedby="inline-radio-help">
+                                    <label class="form-check-label" for="inline-radio-2">2</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="inline-radios" id="inline-radio-3" value="3" aria-describedby="inline-radio-help" disabled>
+                                    <label class="form-check-label" for="inline-radio-3">3 (disabled)</label>
+                                </div>
+                                <small id="inline-radio-help" class="form-text text-muted">Inline radios help text here.</small>
+                            </div>
+                        </div>
+
+                        <div class="js-prism mb-2">
+                            <label>Inline Custom Radios:</label>
+                            <div class="form-group">
+                                <div class="custom-control custom-radio custom-control-inline">
+                                    <input type="radio" id="inline-custom-radio-1" name="inline-custom-radio-inputs" class="custom-control-input" aria-describedby="inline-custom-radio-inputs-help" checked>
+                                    <label class="custom-control-label" for="inline-custom-radio-1">Custom Radio</label>
+                                </div>
+                                <div class="custom-control custom-radio custom-control-inline">
+                                    <input type="radio" id="inline-custom-radio-2" name="inline-custom-radio-inputs" class="custom-control-input" aria-describedby="inline-custom-radio-inputs-help">
+                                    <label class="custom-control-label" for="inline-custom-radio-2">Custom Radio</label>
+                                </div>
+                                <div class="custom-control custom-radio custom-control-inline">
+                                    <input type="radio" id="inline-custom-radio-3" name="inline-custom-radio-inputs" class="custom-control-input" aria-describedby="inline-custom-radio-inputs-help" disabled>
+                                    <label class="custom-control-label" for="inline-custom-radio-3">Disabled Radio</label>
+                                </div>
+                                <small id="inline-custom-radio-inputs-help" class="form-text text-muted">Radios help text here.</small>
+                            </div>
+                        </div>
+                    
+                        <div class="js-prism mb-2">
+                            <h5>Inline Form:</h5>
+                            <form class="form-inline">
+                                <div class="form-group mb-2">
+                                    <label for="inline-username" class="sr-only">Username</label>
+                                    <input type="text" class="form-control" id="inline-username" name="inline-username" placeholder="Username">
+                                </div>
+                                <div class="form-group mx-sm-3 mb-2">
+                                    <label for="inline-password" class="sr-only">Password</label>
+                                    <input type="password" class="form-control" id="inline-password" name="inline-password" placeholder="Password">
+                                </div>
+                                <div class="form-group mb-2">
+                                    <button type="submit" class="btn btn-primary mb-2">Submit</button>
+                                </div>
+                            </form>
+                        </div>
+                    
+                        <div class="js-prism mb-2">
+                            <h5>Inline Help Text:</h5>
+                            <div class="form-inline">
+                                <div class="form-group">
+                                    <label for="inline-text-pass">Password</label>
+                                    <input type="password" id="inline-text-pass" name="inline-text-pass" class="form-control mx-sm-3" aria-describedby="inline-text-pass-help">
+                                    <small id="inline-text-pass-help" class="text-muted">Must be 8-20 characters long.</small>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="container-fluid pt-5 text-center bg-white text-dark">
+        
+            <div class="container">
+
+                <div class="row justify-content-center pt-5">
+                    
+                    <div id="{{ global_strings['defaults']['sections']['39']['id'] }}" class="col-12">
+                        
+                        {% set headingHeadline = global_strings['defaults']['sections']['39']['head'] %}
+						{% set headingSubline = global_strings['defaults']['sections']['39']['subhead'] %}
+						{% set headingDescrip = global_strings['defaults']['sections']['39']['descrip'] %}
+                        {% include "partials/_columnHeading.njk" %}
+
+                    </div>
+
+                </div>
+
+                <div class="row justify-content-center">
+
+                    <div class="col-md-9 pb-5 text-left">
+
+                            {% macro form_row(heading, rowClass, uniqueMod) %}
+                            <h5>{{ heading }}</h5>
+                            <form>
+                                <div class="{{ rowClass }}">
+                                    <div class="col">
+                                        <div class="form-group">
+                                            <label for="form-grid-fname{{ uniqueMod }}">First Name:</label>
+                                            <input class="form-control" type="text" placeholder="Enter Name" id="form-grid-fname{{ uniqueMod }}" name="form-grid-fname{{ uniqueMod }}" aria-describedby="form-grid-fname{{ uniqueMod }}-help">
+                                            <small id="form-grid-fname{{ uniqueMod }}-help" class="form-text text-muted">First name help text.</small>
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="form-group">
+                                            <label for="form-grid-lname{{ uniqueMod }}">Last Name:</label>
+                                            <input class="form-control" type="text" placeholder="Enter Name" id="form-grid-lname{{ uniqueMod }}" name="form-grid-lname{{ uniqueMod }}" aria-describedby="form-grid-lname{{ uniqueMod }}-help">
+                                            <small id="form-grid-lname{{ uniqueMod }}-help" class="form-text text-muted">Last name help text.</small>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                            {% endmacro %}
+
+                        <div class="js-prism mb-2">
+                            {{ form_row('Default Form Grid:', 'row', '-1') }}
+                        </div>
+
+                        <div class="js-prism mb-2">
+                            {{ form_row('Form-Row Form Grid:', 'form-row', '-2') }}
+                        </div>
+
+                        <div class="js-prism mb-2">
+                            <h5>Horizontal/Stacking Form:</h5>
+                            <form>
+                                <div class="form-group row">
+                                    <label for="horiz-form-name" class="col-sm-2 col-form-label">Username</label>
+                                    <div class="col-sm-10">
+                                        <input type="text" class="form-control" id="horiz-form-name" name="horiz-form-name" placeholder="Username" aria-describedby="horiz-form-name-help">
+                                        <small id="horiz-form-name-help" class="form-text text-muted">Username help text here.</small>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="horiz-form-pass" class="col-sm-2 col-form-label">Password</label>
+                                    <div class="col-sm-10">
+                                        <input type="password" class="form-control" id="horiz-form-pass" name="horiz-form-pass" placeholder="Password" aria-describedby="horiz-form-pass-help">
+                                        <small id="horiz-form-pass-help" class="form-text text-muted">Password help text here.</small>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <div class="col-sm-10 offset-sm-2">
+                                        <button type="submit" class="btn btn-primary">Sign in</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+
+                        <div class="js-prism mb-2">
+                            <h5>Small Horizontal/Stacking Form:</h5>
+                            <form>
+                                <div class="form-group row">
+                                    <label for="sm-horiz-form-name" class="col-sm-2 col-form-label col-form-label-sm">Username</label>
+                                    <div class="col-sm-10">
+                                        <input type="text" class="form-control form-control-sm" id="sm-horiz-form-name" name="sm-horiz-form-name" placeholder="Username" aria-describedby="sm-horiz-form-name-help">
+                                        <small id="sm-horiz-form-name-help" class="form-text text-muted">Username help text here.</small>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="sm-horiz-form-pass" class="col-sm-2 col-form-label col-form-label-sm">Password</label>
+                                    <div class="col-sm-10">
+                                        <input type="password" class="form-control form-control-sm" id="sm-horiz-form-pass" name="sm-horiz-form-pass" placeholder="Password" aria-describedby="sm-horiz-form-pass-help">
+                                        <small id="sm-horiz-form-pass-help" class="form-text text-muted">Password help text here.</small>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <div class="col-sm-10 offset-sm-2">
+                                        <button type="submit" class="btn btn-primary btn-sm">Sign in</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+
+                        <div class="js-prism mb-2">
+                            <h5>Large Horizontal/Stacking Form:</h5>
+                            <form>
+                                <div class="form-group row">
+                                    <label for="lg-horiz-form-name" class="col-sm-2 col-form-label col-form-label-lg">Username</label>
+                                    <div class="col-sm-10">
+                                        <input type="text" class="form-control form-control-lg" id="lg-horiz-form-name" name="lg-horiz-form-name" placeholder="Username" aria-describedby="lg-horiz-form-name-help">
+                                        <small id="lg-horiz-form-name-help" class="form-text text-muted">Username help text here.</small>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="lg-horiz-form-pass" class="col-sm-2 col-form-label col-form-label-lg">Password</label>
+                                    <div class="col-sm-10">
+                                        <input type="password" class="form-control form-control-lg" id="lg-horiz-form-pass" name="lg-horiz-form-pass" placeholder="Password" aria-describedby="lg-horiz-form-pass-help">
+                                        <small id="lg-horiz-form-pass-help" class="form-text text-muted">Password help text here.</small>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <div class="col-sm-10 offset-sm-2">
+                                        <button type="submit" class="btn btn-primary btn-lg">Sign in</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>

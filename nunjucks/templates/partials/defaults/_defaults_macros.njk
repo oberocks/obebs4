@@ -1,0 +1,42 @@
+<!-- _defaults_macros.njk -->
+
+{% macro bootstrap_table(label, tableClasses, caption = false, thead = false) %}
+
+                        <label class="d-block font-weight-bold text-center">{{ label }}</label>
+                        <div class="js-prism mb-2 text-left">
+                            <div class="table-responsive">
+                                <table class="table{{ tableClasses }}">{% if caption %}
+                                    <caption>List of users</caption>{% endif %}
+                                    <thead{% if thead === 'light' %} class="thead-light"{% elif thead === 'dark' %} class="thead-dark"{% endif %}>
+                                        <tr>
+                                            <th scope="col">#</th>
+                                            <th scope="col">First</th>
+                                            <th scope="col">Last</th>
+                                            <th scope="col">Handle</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <th scope="row">1</th>
+                                            <td>Mark</td>
+                                            <td>Otto</td>
+                                            <td>@mdo</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">2</th>
+                                            <td>Jacob</td>
+                                            <td>Thornton</td>
+                                            <td>@fat</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">3</th>
+                                            <td>Matt</td>
+                                            <td>McT</td>
+                                            <td>@smasharific</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+
+{% endmacro %}

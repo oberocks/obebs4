@@ -1,0 +1,71 @@
+<!-- _bs_popovers.njk -->
+		<div class="container-fluid pt-5 text-center bg-white text-dark">
+        
+            <div class="container modal-workspace">
+
+                <div class="row justify-content-center pt-5">
+                    
+                    <div id="{{ global_strings['defaults']['sections']['56']['id'] }}" class="col-12">
+                        
+                        {% set headingHeadline = global_strings['defaults']['sections']['56']['head'] %}
+						{% set headingSubline = global_strings['defaults']['sections']['56']['subhead'] %}
+						{% set headingDescrip = global_strings['defaults']['sections']['56']['descrip'] %}
+                        {% include "partials/_columnHeading.njk" %}
+
+                    </div>
+
+                </div>
+
+                <div class="row justify-content-center">
+
+                    <div class="col-md-6 pb-5">
+
+                        <h5>Basic Text Popovers</h5>
+                        
+                        <div class="js-prism mb-2">
+                            <button type="button" class="btn btn-primary" data-container="body" data-toggle="popover" data-placement="top" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">Top Basic Popover</button>
+                        </div>
+
+                        <div class="js-prism mb-2">
+                            <button type="button" class="btn btn-primary" data-container="body" data-toggle="popover" data-placement="right" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">Right Basic Popover</button>
+                        </div>
+
+                        <div class="js-prism mb-2">
+                            <button type="button" class="btn btn-primary" data-container="body" data-toggle="popover" data-placement="left" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">Left Basic Popover</button>
+                        </div>
+
+                        <div class="js-prism mb-2">
+                            <button type="button" class="btn btn-primary" data-container="body" data-toggle="popover" data-placement="bottom" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">Bottom Basic Popover</button>
+                        </div>
+
+                        <h5 class="mt-4">Heading & Text Popover</h5>
+
+                        <div class="js-prism mb-2">
+                            <button type="button" class="btn btn-primary" data-container="body" data-toggle="popover" data-placement="top" title="Popover Heading" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">Top Heading Popover</button>
+                        </div>
+
+                        <div class="js-prism mb-2">
+                            <button type="button" class="btn btn-primary" data-container="body" data-toggle="popover" data-placement="right" title="Popover Heading" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">Right Heading Popover</button>
+                        </div>
+
+                        <div class="js-prism mb-2">
+                            <button type="button" class="btn btn-primary" data-container="body" data-toggle="popover" data-placement="left" title="Popover Heading" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">Left Heading Popover</button>
+                        </div>
+
+                        <div class="js-prism mb-2">
+                            <button type="button" class="btn btn-primary" data-container="body" data-toggle="popover" data-placement="bottom" title="Popover Heading" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">Bottom Heading Popover</button>
+                        </div>
+
+                        <h5 class="mt-4">Body Dismiss Popover</h5>
+
+                        <div class="js-prism mb-2">
+                            <a href="#" tabindex="0" class="btn btn-primary" role="button" data-toggle="popover" data-trigger="focus" title="Dismissible Popover" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">Body Dismiss Popover</a>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>

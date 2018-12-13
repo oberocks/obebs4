@@ -1,0 +1,769 @@
+<!-- _bs_input_groups.njk -->
+		<div class="container-fluid pt-5 text-center bg-white text-dark">
+        
+            <div class="container">
+
+                <div class="row justify-content-center pt-5">
+                    
+                    <div id="{{ global_strings['defaults']['sections']['40']['id'] }}" class="col-12">
+                        
+                        {% set headingHeadline = global_strings['defaults']['sections']['40']['head'] %}
+						{% set headingSubline = global_strings['defaults']['sections']['40']['subhead'] %}
+						{% set headingDescrip = global_strings['defaults']['sections']['40']['descrip'] %}
+                        {% include "partials/_columnHeading.njk" %}
+
+                    </div>
+
+                </div>
+
+                <div class="row justify-content-center">
+
+                    <div class="col-md-6 pb-5">
+
+                        <h5>Labels & Help Variations</h5>
+                        
+                        <div class="js-prism mb-2 text-left">
+                            <label for="pre-addon">Prepended Add-On:</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text">@</span>
+                                </div>
+                                <input type="text" class="form-control" placeholder="Username" id="pre-addon" name="pre-addon" aria-describedby="pre-addon-help">
+                            </div>
+                            <small id="pre-addon-help" class="form-text text-muted">Prepended Add-On help text here.</small>
+                        </div>
+
+                        <div class="js-prism mb-2 text-left">
+                            <label for="post-addon">Appended Add-On:</label>
+                            <div class="input-group">
+                                <input type="text" class="form-control" placeholder="address" id="post-addon" name="post-addon" aria-describedby="post-addon-help">
+                                <div class="input-group-append">
+                                    <span class="input-group-text">@example.com</span>
+                                </div>
+                            </div>
+                            <small id="post-addon-help" class="form-text text-muted">Appended Add-On help text here.</small>
+                        </div>
+
+                        <div class="js-prism mb-2 text-left">
+                            <label for="ap-pre">App/Prepended Add-Ons:</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text">$</span>
+                                </div>
+                                <input type="text" class="form-control" id="ap-pre" name="ap-pre" placeholder="1,500" aria-describedby="ap-pre-help">
+                                <div class="input-group-append">
+                                    <span class="input-group-text">.00</span>
+                                </div>
+                            </div>
+                            <small id="ap-pre-help" class="form-text text-muted">Amount (to the nearest dollar)</small>
+                        </div>
+
+                        <div class="js-prism mb-2 text-left">
+                            <label for="textarea-addon">Textarea Add-On:</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text">Textarea Addon</span>
+                                </div>
+                                <textarea class="form-control" id="textarea-addon" name="textarea-addon" aria-describedby="textarea-addon-help"></textarea>
+                            </div>
+                            <small id="textarea-addon-help" class="form-text text-muted">Textarea Addon help text.</small>
+                        </div>
+
+                        <div class="js-prism mb-2 text-left">
+                            <label for="ig-pair-input">Checkbox Add-On:</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <div class="input-group-text">
+                                        <input type="checkbox" id="ig-pair-check" name="ig-pair-check" aria-label="Checkbox for input">
+                                    </div>
+                                </div>
+                                <input type="text" class="form-control" id="ig-pair-input" name="ig-pair-input" aria-label="Input for checkbox" aria-describedby="ig-pair-input-help" placeholder="Checkbox Input">
+                            </div>
+                            <small id="ig-pair-input-help" class="form-text text-muted">Checkbox Addon help text.</small>
+                        </div>
+
+                        <div class="js-prism mb-2 text-left">
+                            <label for="ig-radio-input-1">Radio Add-Ons:</label>
+                            <div class="input-group mb-1">
+                                <div class="input-group-prepend">
+                                    <div class="input-group-text">
+                                        <input type="radio" aria-label="Radio for Input" name="ig-radios" id="ig-radio-1" value="radio-1" checked>
+                                    </div>
+                                </div>
+                                <input type="text" class="form-control" id="ig-radio-input-1" name="ig-radio-input-1" placeholder="Radio Input 1" aria-describedby="ig-pair-radio-help">
+                            </div>
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <div class="input-group-text">
+                                        <input type="radio" aria-label="Radio for Input" name="ig-radios" id="ig-radio-2" value="radio-2">
+                                    </div>
+                                </div>
+                                <input type="text" class="form-control" id="ig-radio-input-2" name="ig-radio-input-2" placeholder="Radio Input 2" aria-describedby="ig-pair-radio-help">
+                            </div>
+                            <small id="ig-pair-radio-help" class="form-text text-muted">Radio Addons help text.</small>
+                        </div>
+
+                        <div class="js-prism mb-2 text-left">
+                            <label for="igm-first-name">Multiple Inputs Group:</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text">Name</span>
+                                </div>
+                                <input type="text" class="form-control" id="igm-first-name" name="igm-first-name" placeholder="First Name" aria-describedby="ig-pair-radio-help">
+                                <input type="text" class="form-control" id="igm-last-name" name="igm-last-name" placeholder="Last Name" aria-describedby="igm-names-help">
+                            </div>
+                            <small id="igm-names-help" class="form-text text-muted">Multiple Inputs Group help text.</small>
+                        </div>
+
+                        <div class="js-prism mb-2 text-left">
+                            <label for="pre-multi-addons">Prepended Multiple Addons:</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text">$</span>
+                                    <span class="input-group-text">0.00</span>
+                                </div>
+                                <input type="text" class="form-control" id="pre-multi-addons" name="pre-multi-addons" placeholder="9.99" aria-describedby="pre-multi-addons-help">
+                            </div>
+                            <small id="pre-multi-addons-help" class="form-text text-muted">Prepended Multiple Addons help text.</small>
+                        </div>
+
+                        <div class="js-prism mb-2 text-left">
+                            <label for="post-multi-addons">Appended Multiple Addons:</label>
+                            <div class="input-group">
+                                <input type="text" class="form-control" id="post-multi-addons" name="post-multi-addons" placeholder="9.99" aria-describedby="post-multi-addons-help">
+                                <div class="input-group-append">
+                                    <span class="input-group-text">$</span>
+                                    <span class="input-group-text">0.00</span>
+                                </div>
+                            </div>
+                            <small id="post-multi-addons-help" class="form-text text-muted">Appended Multiple Addons help text.</small>
+                        </div>
+
+                        <div class="js-prism mb-2 text-left">
+                            <label for="pre-btn-input">Prepended Button Addon:</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <button class="btn btn-outline-primary" type="button">Button</button>
+                                </div>
+                                <input type="text" class="form-control" placeholder="Enter Text" id="pre-btn-input" name="pre-btn-input" aria-describedby="pre-btn-input-help">
+                            </div>
+                            <small id="pre-btn-input-help" class="form-text text-muted">Prepended Button Addon help text.</small>
+                        </div>
+
+                        <div class="js-prism mb-2 text-left">
+                            <label for="post-btn-input">Appended Button Addon:</label>
+                            <div class="input-group">
+                                <input type="text" class="form-control" placeholder="Enter Text" id="post-btn-input" name="post-btn-input" aria-describedby="post-btn-input-help">
+                                <div class="input-group-append">
+                                    <button class="btn btn-outline-primary" type="button">Button</button>
+                                </div>
+                            </div>
+                            <small id="post-btn-input-help" class="form-text text-muted">Appended Button Addon help text.</small>
+                        </div>
+
+                        <div class="js-prism mb-2 text-left">
+                            <label for="mulit-btns-input">Prepended Multi-Btn Addon:</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <button class="btn btn-outline-primary" type="button">Button</button>
+                                    <button class="btn btn-outline-primary" type="button">Button</button>
+                                </div>
+                                <input type="text" class="form-control" placeholder="Input Text" aria-label="Example text with two buttons" id="mulit-btns-input" name="mulit-btns-input" aria-describedby="mulit-btns-input-help">
+                            </div>
+                            <small id="mulit-btns-input-help" class="form-text text-muted">Prepended Multi-Btn Addon help text.</small>
+                        </div>
+
+                        <div class="js-prism mb-2 text-left">
+                            <label for="pre-menu-btn-input">Prepended Menu Button Addon:</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <button class="btn btn-outline-primary dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</button>
+                                    <div class="dropdown-menu">
+                                        <a class="dropdown-item" href="#">Action</a>
+                                        <a class="dropdown-item" href="#">Another action</a>
+                                        <div role="separator" class="dropdown-divider"></div>
+                                        <a class="dropdown-item" href="#">Separated link</a>
+                                    </div>
+                                </div>
+                                <input type="text" class="form-control" id="pre-menu-btn-input" name="pre-menu-btn-input" aria-describedby="pre-menu-btn-input-help" placeholder="Input Text">
+                            </div>
+                            <small id="pre-menu-btn-input-help" class="form-text text-muted">Prepended Menu Button Addon help text.</small>
+                        </div>
+
+                        <div class="js-prism mb-2 text-left">
+                            <label for="post-menu-btn-input">Appended Menu Button Addon:</label>
+                            <div class="input-group">
+                                <input type="text" class="form-control" id="min-post-menu-btn-input" name="post-menu-btn-input" aria-describedby="post-menu-btn-input-help" placeholder="Input Text">
+                                <div class="input-group-append">
+                                    <button class="btn btn-outline-primary dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</button>
+                                    <div class="dropdown-menu">
+                                        <a class="dropdown-item" href="#">Action</a>
+                                        <a class="dropdown-item" href="#">Another action</a>
+                                        <div role="separator" class="dropdown-divider"></div>
+                                        <a class="dropdown-item" href="#">Separated link</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <small id="post-menu-btn-input-help" class="form-text text-muted">Appended Menu Button Addon help text.</small>
+                        </div>
+
+                        <div class="js-prism mb-2 text-left">
+                            <label for="pre-splitbtn-input">Prepended Split Button Addon:</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <button type="button" class="btn btn-outline-primary">Action</button>
+                                    <button type="button" class="btn btn-outline-primary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        <span class="sr-only">Toggle Dropdown</span>
+                                    </button>
+                                    <div class="dropdown-menu">
+                                        <a class="dropdown-item" href="#">Action</a>
+                                        <a class="dropdown-item" href="#">Another action</a>
+                                        <div role="separator" class="dropdown-divider"></div>
+                                        <a class="dropdown-item" href="#">Separated link</a>
+                                    </div>
+                                </div>
+                                <input type="text" class="form-control" id="pre-splitbtn-input" name="pre-splitbtn-input" aria-describedby="pre-splitbtn-input-help" placeholder="Input Text">
+                            </div>
+                            <small id="pre-splitbtn-input-help" class="form-text text-muted">Prepended Split Button Addon help text.</small>
+                        </div>
+
+                        <div class="js-prism mb-2 text-left">
+                            <label for="post-splitbtn-input">Appended Split Button Addon:</label>
+                            <div class="input-group">
+                                <input type="text" class="form-control" id="post-splitbtn-input" name="post-splitbtn-input" aria-describedby="post-splitbtn-input-help" placeholder="Input Text">
+                                <div class="input-group-append">
+                                    <button type="button" class="btn btn-outline-primary">Action</button>
+                                    <button type="button" class="btn btn-outline-primary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        <span class="sr-only">Toggle Dropdown</span>
+                                    </button>
+                                    <div class="dropdown-menu">
+                                        <a class="dropdown-item" href="#">Action</a>
+                                        <a class="dropdown-item" href="#">Another action</a>
+                                        <div role="separator" class="dropdown-divider"></div>
+                                        <a class="dropdown-item" href="#">Separated link</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <small id="post-splitbtn-input-help" class="form-text text-muted">Appended Split Button Addon help text.</small>
+                        </div>
+
+                        <div class="js-prism mb-2 text-left">
+                            <label for="pre-custom-select">Prepended Addon Custom Select:</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <label class="input-group-text" for="pre-custom-select">Options</label>
+                                </div>
+                                <select class="custom-select" id="pre-custom-select" name="pre-custom-select" aria-describedby="pre-custom-select-help">
+                                    <option selected>Select Option</option>
+                                    <option value="1">One</option>
+                                    <option value="2">Two</option>
+                                    <option value="3">Three</option>
+                                </select>
+                            </div>
+                            <small id="pre-custom-select-help" class="form-text text-muted">Prepended Addon Custom Select help text.</small>
+                        </div>
+
+                        <div class="js-prism mb-2 text-left">
+                            <label for="post-custom-select">Appended Addon Custom Select:</label>
+                            <div class="input-group">
+                                <select class="custom-select" id="post-custom-select" name="post-custom-select" aria-describedby="post-custom-select-help">
+                                    <option selected>Select Option</option>
+                                    <option value="1">One</option>
+                                    <option value="2">Two</option>
+                                    <option value="3">Three</option>
+                                </select>
+                                <div class="input-group-append">
+                                    <label class="input-group-text" for="post-custom-select">Options</label>
+                                </div>
+                            </div>
+                            <small id="post-custom-select-help" class="form-text text-muted">Appended Addon Custom Select help text.</small>
+                        </div>
+
+                        <div class="js-prism mb-2 text-left">
+                            <label for="pre-custom-select-btn">Prepended Button Custom Select:</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <button class="btn btn-outline-primary" type="button">Button</button>
+                                </div>
+                                <select class="custom-select" id="pre-custom-select-btn" name="pre-custom-select-btn" aria-describedby="pre-custom-select-btn-help">
+                                    <option selected>Select Option</option>
+                                    <option value="1">One</option>
+                                    <option value="2">Two</option>
+                                    <option value="3">Three</option>
+                                </select>
+                            </div>
+                            <small id="pre-custom-select-btn-help" class="form-text text-muted">Prepended Button Custom Select help text.</small>
+                        </div>
+
+                        <div class="js-prism mb-2 text-left">
+                            <label for="post-custom-select-btn">Appended Button Custom Select:</label>
+                            <div class="input-group">
+                                <select class="custom-select" id="post-custom-select-btn" name="post-custom-select-btn" aria-describedby="post-custom-select-btn-help">
+                                    <option selected>Select Option</option>
+                                    <option value="1">One</option>
+                                    <option value="2">Two</option>
+                                    <option value="3">Three</option>
+                                </select>
+                                <div class="input-group-append">
+                                    <button class="btn btn-outline-primary" type="button">Button</button>
+                                </div>
+                            </div>
+                            <small id="post-custom-select-btn-help" class="form-text text-muted">Appended Button Custom Select help text.</small>
+                        </div>
+
+                        <div class="js-prism mb-2 text-left">
+                            <label for="pre-ig-fileup-1">Prepended Addon Custom File:</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text">Upload</span>
+                                </div>
+                                <div class="custom-file">
+                                    <input type="file" class="custom-file-input" id="pre-ig-fileup-1" name="pre-ig-fileup-1" aria-describedby="pre-ig-fileup-1-help">
+                                    <label class="custom-file-label" for="pre-ig-fileup-1">Choose file</label>
+                                </div>
+                            </div>
+                            <small id="pre-ig-fileup-1-help" class="form-text text-muted">Prepended Addon Custom File help text.</small>
+                        </div>
+
+                        <div class="js-prism mb-2 text-left">
+                            <label for="post-ig-fileup-1">Appended Addon Custom File:</label>
+                            <div class="input-group">
+                                <div class="custom-file">
+                                    <input type="file" class="custom-file-input" id="post-ig-fileup-1" name="post-ig-fileup-1" aria-describedby="post-ig-fileup-1-help">
+                                    <label class="custom-file-label" for="post-ig-fileup-1">Choose file</label>
+                                </div>
+                                <div class="input-group-append">
+                                    <span class="input-group-text">Upload</span>
+                                </div>
+                            </div>
+                            <small id="post-ig-fileup-1-help" class="form-text text-muted">Appended Addon Custom File help text.</small>
+                        </div>
+
+                        <div class="js-prism mb-2 text-left">
+                            <label for="pre-btn-custom-file">Prepended Button Custom File:</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <button class="btn btn-outline-primary" type="button" id="pre-btn-custom-file-help">Button</button>
+                                </div>
+                                <div class="custom-file">
+                                    <input type="file" class="custom-file-input" id="pre-btn-custom-file" name="pre-btn-custom-file" aria-describedby="pre-btn-custom-file-help">
+                                    <label class="custom-file-label" for="pre-btn-custom-file">Choose file</label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="js-prism mb-2 text-left">
+                            <label for="post-btn-custom-file">Appended Button Custom File:</label>
+                            <div class="input-group">
+                                <div class="custom-file">
+                                    <input type="file" class="custom-file-input" id="post-btn-custom-file" name="post-btn-custom-file" aria-describedby="post-btn-custom-file-help">
+                                    <label class="custom-file-label" for="post-btn-custom-file">Choose file</label>
+                                </div>
+                                <div class="input-group-append">
+                                    <button class="btn btn-outline-primary" type="button" id="post-btn-custom-file-help">Button</button>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    <div class="col-md-6 pb-5">
+
+                        <h5>Compact Variations</h5>
+
+                        <label class="d-block text-center">Prepended Add-On:</label>
+                        <div class="js-prism mb-2 text-left">
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text" id="min-pre-addon-help">@</span>
+                                </div>
+                                <input type="text" class="form-control" placeholder="Username" aria-label="Username" id="min-pre-addon" name="min-pre-addon" aria-describedby="min-pre-addon-help">
+                            </div>
+                        </div>
+
+                        <label class="d-block text-center">Appended Add-On:</label>
+                        <div class="js-prism mb-2 text-left">
+                            <div class="input-group">
+                                <input type="text" class="form-control" placeholder="address" aria-label="Email address" id="min-post-addon" name="min-post-addon" aria-describedby="min-post-addon-help">
+                                <div class="input-group-append">
+                                    <span class="input-group-text" id="min-post-addon-help">@example.com</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <label class="d-block text-center">App/Prepended Add-Ons:</label>
+                        <div class="js-prism mb-2 text-left">
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text">$</span>
+                                </div>
+                                <input type="text" class="form-control" aria-label="Amount (to nearest dollar)" id="min-ap-pre" name="min-ap-pre" placeholder="1,500">
+                                <div class="input-group-append">
+                                    <span class="input-group-text">.00</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <label class="d-block text-center">Textarea Add-On:</label>
+                        <div class="js-prism mb-2 text-left">
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text" id="min-textarea-addon-help">Textarea Addon</span>
+                                </div>
+                                <textarea class="form-control" aria-label="With textarea" id="min-textarea-addon" name="min-textarea-addon"></textarea>
+                            </div>
+                        </div>
+
+                        <label class="d-block text-center">Checkbox Add-On:</label>
+                        <div class="js-prism mb-2 text-left">
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <div class="input-group-text">
+                                        <input type="checkbox" id="min-ig-pair-check" name="min-ig-pair-check" aria-label="Checkbox for input">
+                                    </div>
+                                </div>
+                                <input type="text" class="form-control" id="min-ig-pair-input" name="min-ig-pair-input" aria-label="Input for checkbox" placeholder="Checkbox Input">
+                            </div>
+                        </div>
+
+                        <label class="d-block text-center">Radio Add-Ons:</label>
+                        <div class="js-prism mb-2 text-left">
+                            <div class="input-group mb-1">
+                                <div class="input-group-prepend">
+                                    <div class="input-group-text">
+                                        <input type="radio" aria-label="Radio for Input" name="min-ig-radios" id="min-ig-radio-1" value="radio-1" checked>
+                                    </div>
+                                </div>
+                                <input type="text" class="form-control" aria-label="Input for radio" id="min-ig-radio-input-1" name="min-ig-radio-input-1" placeholder="Radio Input 1">
+                            </div>
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <div class="input-group-text">
+                                        <input type="radio" aria-label="Radio for Input" name="min-ig-radios" id="min-ig-radio-2" value="radio-2">
+                                    </div>
+                                </div>
+                                <input type="text" class="form-control" aria-label="Input for radio" id="min-ig-radio-input-2" name="min-ig-radio-input-2" placeholder="Radio Input 2">
+                            </div>
+                        </div>
+
+                        <label class="d-block text-center">Multiple Inputs Group:</label>
+                        <div class="js-prism mb-2 text-left">
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text">Name</span>
+                                </div>
+                                <input type="text" class="form-control" aria-label="First name" id="min-igm-first-name" name="min-igm-first-name" placeholder="First Name">
+                                <input type="text" class="form-control" aria-label="Last name" id="min-igm-last-name" name="min-igm-last-name" placeholder="Last Name">
+                            </div>
+                        </div>
+
+                        <label class="d-block text-center">Prepended Multiple Addons:</label>
+                        <div class="js-prism mb-2 text-left">
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text">$</span>
+                                    <span class="input-group-text">0.00</span>
+                                </div>
+                                <input type="text" class="form-control" aria-label="Dollar amount (with dot and two decimal places)" id="min-pre-multi-addons" name="min-pre-multi-addons" placeholder="9.99">
+                            </div>
+                        </div>
+
+                        <label class="d-block text-center">Appended Multiple Addons:</label>
+                        <div class="js-prism mb-2 text-left">
+                            <div class="input-group">
+                                <input type="text" class="form-control" aria-label="Dollar amount (with dot and two decimal places)" id="min-post-multi-addons" name="min-post-multi-addons" placeholder="9.99">
+                                <div class="input-group-append">
+                                    <span class="input-group-text">$</span>
+                                    <span class="input-group-text">0.00</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <label class="d-block text-center">Prepended Button Addon:</label>
+                        <div class="js-prism mb-2 text-left">
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <button class="btn btn-outline-primary" type="button" id="min-pre-btn-btn">Button</button>
+                                </div>
+                                <input type="text" class="form-control" placeholder="Enter Text" aria-label="Enter text, submit with button" id="min-pre-btn-input" name="min-pre-btn-input" aria-describedby="min-pre-btn-btn">
+                            </div>
+                        </div>
+
+                        <label class="d-block text-center">Appended Button Addon:</label>
+                        <div class="js-prism mb-2 text-left">
+                            <div class="input-group">
+                                <input type="text" class="form-control" placeholder="Enter Text" aria-label="Enter text, submit with button" id="min-post-btn-input" name="min-post-btn-input" aria-describedby="min-post-btn-btn">
+                                <div class="input-group-append">
+                                    <button class="btn btn-outline-primary" type="button" id="min-post-btn-btn">Button</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <label class="d-block text-center">Prepended Multi-Btn Addon:</label>
+                        <div class="js-prism mb-2 text-left">
+                            <div class="input-group">
+                                <div class="input-group-prepend" id="min-mulit-btns">
+                                    <button class="btn btn-outline-primary" type="button">Button</button>
+                                    <button class="btn btn-outline-primary" type="button">Button</button>
+                                </div>
+                                <input type="text" class="form-control" placeholder="Input Text" aria-label="Example text with two buttons" id="min-mulit-btns-input" name="min-mulit-btns-input" aria-describedby="min-mulit-btns">
+                            </div>
+                        </div>
+
+                        <label class="d-block text-center">Prepended Menu Button Addon:</label>
+                        <div class="js-prism mb-2 text-left">
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <button class="btn btn-outline-primary dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</button>
+                                    <div class="dropdown-menu">
+                                        <a class="dropdown-item" href="#">Action</a>
+                                        <a class="dropdown-item" href="#">Another action</a>
+                                        <div role="separator" class="dropdown-divider"></div>
+                                        <a class="dropdown-item" href="#">Separated link</a>
+                                    </div>
+                                </div>
+                                <input type="text" class="form-control" id="min-pre-menu-btn-input" name="pre-menu-btn-input" aria-label="Text input with dropdown button" placeholder="Input Text">
+                            </div>
+                        </div>
+
+                        <label class="d-block text-center">Appended Menu Button Addon:</label>
+                        <div class="js-prism mb-2 text-left">
+                            <div class="input-group">
+                                <input type="text" class="form-control" id="post-menu-btn-input" name="post-menu-btn-input" aria-label="Text input with dropdown button" placeholder="Input Text">
+                                <div class="input-group-append">
+                                    <button class="btn btn-outline-primary dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</button>
+                                    <div class="dropdown-menu">
+                                        <a class="dropdown-item" href="#">Action</a>
+                                        <a class="dropdown-item" href="#">Another action</a>
+                                        <div role="separator" class="dropdown-divider"></div>
+                                        <a class="dropdown-item" href="#">Separated link</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <label class="d-block text-center">Prepended Split Button Addon:</label>
+                        <div class="js-prism mb-2 text-left">
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <button type="button" class="btn btn-outline-primary">Action</button>
+                                    <button type="button" class="btn btn-outline-primary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        <span class="sr-only">Toggle Dropdown</span>
+                                    </button>
+                                    <div class="dropdown-menu">
+                                        <a class="dropdown-item" href="#">Action</a>
+                                        <a class="dropdown-item" href="#">Another action</a>
+                                        <div role="separator" class="dropdown-divider"></div>
+                                        <a class="dropdown-item" href="#">Separated link</a>
+                                    </div>
+                                </div>
+                                <input type="text" class="form-control" id="min-pre-splitbtn-input" name="min-pre-splitbtn-input" aria-label="Text input with segmented dropdown button" placeholder="Input Text">
+                            </div>
+                        </div>
+
+                        <label class="d-block text-center">Appended Split Button Addon:</label>
+                        <div class="js-prism mb-2 text-left">
+                            <div class="input-group">
+                                <input type="text" class="form-control" id="min-post-splitbtn-input" name="min-post-splitbtn-input" aria-label="Text input with segmented dropdown button" placeholder="Input Text">
+                                <div class="input-group-append">
+                                    <button type="button" class="btn btn-outline-primary">Action</button>
+                                    <button type="button" class="btn btn-outline-primary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        <span class="sr-only">Toggle Dropdown</span>
+                                    </button>
+                                    <div class="dropdown-menu">
+                                        <a class="dropdown-item" href="#">Action</a>
+                                        <a class="dropdown-item" href="#">Another action</a>
+                                        <div role="separator" class="dropdown-divider"></div>
+                                        <a class="dropdown-item" href="#">Separated link</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <label class="d-block text-center">Prepended Addon Custom Select:</label>
+                        <div class="js-prism mb-2 text-left">
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <label class="input-group-text" for="min-pre-custom-select">Options</label>
+                                </div>
+                                <select class="custom-select" id="min-pre-custom-select" name="min-pre-custom-select" aria-label="Example select with an addon">
+                                    <option selected>Select Option</option>
+                                    <option value="1">One</option>
+                                    <option value="2">Two</option>
+                                    <option value="3">Three</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <label class="d-block text-center">Appended Addon Custom Select:</label>
+                        <div class="js-prism mb-2 text-left">
+                            <div class="input-group">
+                                <select class="custom-select" id="min-post-custom-select" name="min-post-custom-select" aria-label="Example select with an addon">
+                                    <option selected>Select Option</option>
+                                    <option value="1">One</option>
+                                    <option value="2">Two</option>
+                                    <option value="3">Three</option>
+                                </select>
+                                <div class="input-group-append">
+                                    <label class="input-group-text" for="min-post-custom-select">Options</label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <label class="d-block text-center">Prepended Button Custom Select:</label>
+                        <div class="js-prism mb-2 text-left">
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <button class="btn btn-outline-primary" type="button">Button</button>
+                                </div>
+                                <select class="custom-select" id="min-pre-custom-select-btn" name="min-pre-custom-select-btn" aria-label="Example select with button addon">
+                                    <option selected>Select Option</option>
+                                    <option value="1">One</option>
+                                    <option value="2">Two</option>
+                                    <option value="3">Three</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <label class="d-block text-center">Appended Button Custom Select:</label>
+                        <div class="js-prism mb-2 text-left">
+                            <div class="input-group">
+                                <select class="custom-select" id="min-post-custom-select-btn" name="min-post-custom-select-btn" aria-label="Example select with button addon">
+                                    <option selected>Select Option</option>
+                                    <option value="1">One</option>
+                                    <option value="2">Two</option>
+                                    <option value="3">Three</option>
+                                </select>
+                                <div class="input-group-append">
+                                    <button class="btn btn-outline-primary" type="button">Button</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <label class="d-block text-center">Prepended Addon Custom File:</label>
+                        <div class="js-prism mb-2 text-left">
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text" id="min-pre-ig-fileup-1-help">Upload</span>
+                                </div>
+                                <div class="custom-file">
+                                    <input type="file" class="custom-file-input" id="min-pre-ig-fileup-1" name="min-pre-ig-fileup-1" aria-describedby="min-pre-ig-fileup-1-help">
+                                    <label class="custom-file-label" for="min-pre-ig-fileup-1">Choose file</label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <label class="d-block text-center">Appended Addon Custom File:</label>
+                        <div class="js-prism mb-2 text-left">
+                            <div class="input-group">
+                                <div class="custom-file">
+                                    <input type="file" class="custom-file-input" id="min-post-ig-fileup-1" name="min-post-ig-fileup-1" aria-describedby="min-post-ig-fileup-1-help">
+                                    <label class="custom-file-label" for="min-post-ig-fileup-1">Choose file</label>
+                                </div>
+                                <div class="input-group-append">
+                                    <span class="input-group-text" id="min-post-ig-fileup-1-help">Upload</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <label class="d-block text-center">Prepended Button Custom File:</label>
+                        <div class="js-prism mb-2 text-left">
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <button class="btn btn-outline-primary" type="button" id="min-pre-btn-custom-file-help">Button</button>
+                                </div>
+                                <div class="custom-file">
+                                    <input type="file" class="custom-file-input" id="min-pre-btn-custom-file" name="min-pre-btn-custom-file" aria-describedby="min-pre-btn-custom-file-help">
+                                    <label class="custom-file-label" for="min-pre-btn-custom-file">Choose file</label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <label class="d-block text-center">Appended Button Custom File:</label>
+                        <div class="js-prism mb-2 text-left">
+                            <div class="input-group">
+                                <div class="custom-file">
+                                    <input type="file" class="custom-file-input" id="min-post-btn-custom-file" name="min-post-btn-custom-file" aria-describedby="min-post-btn-custom-file-help">
+                                    <label class="custom-file-label" for="min-post-btn-custom-file">Choose file</label>
+                                </div>
+                                <div class="input-group-append">
+                                    <button class="btn btn-outline-primary" type="button" id="min-post-btn-custom-file-help">Button</button>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <div class="row justify-content-center">
+                
+                    <div class="col-md-6 pb-5">
+                    
+                        <h5 class="pt-5">Size Variations</h5>
+                        
+                        <div class="js-prism mb-2 text-left">
+                            <label for="small-pre-addon">Small Prepended Add-On:</label>
+                            <div class="input-group input-group-sm">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text">@</span>
+                                </div>
+                                <input type="text" class="form-control" placeholder="Username" id="small-pre-addon" name="small-pre-addon" aria-describedby="small-pre-addon-help">
+                            </div>
+                            <small id="small-pre-addon-help" class="form-text text-muted">Small Prepended Add-On help text.</small>
+                        </div>
+
+                        <div class="js-prism mb-2 text-left">
+                            <label for="default-pre-addon">Default Prepended Add-On:</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text">@</span>
+                                </div>
+                                <input type="text" class="form-control" placeholder="Username" id="default-pre-addon" name="default-pre-addon" aria-describedby="default-pre-addon-help">
+                            </div>
+                            <small id="default-pre-addon-help" class="form-text text-muted">Default Prepended Add-On help text.</small>
+                        </div>
+
+                        <div class="js-prism mb-2 text-left">
+                            <label for="large-pre-addon">Large Prepended Add-On:</label>
+                            <div class="input-group input-group-lg">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text">@</span>
+                                </div>
+                                <input type="text" class="form-control" placeholder="Username" id="large-pre-addon" name="large-pre-addon" aria-describedby="large-pre-addon-help">
+                            </div>
+                            <small id="large-pre-addon-help" class="form-text text-muted">Large Prepended Add-On help text.</small>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>

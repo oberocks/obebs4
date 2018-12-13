@@ -1,0 +1,73 @@
+<!-- _bs_collapse.njk -->
+		<div class="container-fluid pt-5 text-center bg-white text-dark">
+        
+            <div class="container">
+
+                <div class="row justify-content-center pt-5">
+                    
+                    <div id="{{ global_strings['defaults']['sections']['77']['id'] }}" class="col-12">
+                        
+                        {% set headingHeadline = global_strings['defaults']['sections']['77']['head'] %}
+						{% set headingSubline = global_strings['defaults']['sections']['77']['subhead'] %}
+						{% set headingDescrip = global_strings['defaults']['sections']['77']['descrip'] %}
+                        {% include "partials/_columnHeading.njk" %}
+
+                    </div>
+
+                </div>
+
+                <div class="row justify-content-center">
+
+                    <div class="col-md-6 pb-5">
+                        
+                        <label class="d-block font-weight-bold">Anchor Toggle:</label>
+                        <div class="js-prism mb-2">
+                            <a class="btn btn-primary" data-toggle="collapse" href="#link-collapse" role="button" aria-expanded="false" aria-controls="link-collapse">Link (Collapse)</a>
+                            <div id="link-collapse" class="collapse mt-2">
+                                <div class="card card-body">Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.</div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="col-md-6 pb-5">
+
+                        <label class="d-block font-weight-bold">Button Toggle:</label>
+                        <div class="js-prism mb-2">
+                            <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#button-collapse" aria-expanded="false" aria-controls="button-collapse">Button (Collapse)</button>
+                            <div id="button-collapse" class="collapse mt-2">
+                                <div class="card card-body">Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.</div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="row justify-content-center">
+
+                    <div class="col-md-6 pb-5">
+
+                        <label class="d-block font-weight-bold">Toggle Multiple Targets:</label>
+                        <div class="js-prism mb-2">
+                            <button class="btn btn-primary" type="button" data-toggle="collapse" data-target=".toggle-all.bg-primary" aria-expanded="false" aria-controls="multi-collapse-grp">P's</button>
+
+                            <button class="btn btn-danger" type="button" data-toggle="collapse" data-target=".toggle-all.bg-danger" aria-expanded="false" aria-controls="multi-collapse-grp">D's</button>
+
+                            <button class="btn btn-light" type="button" data-toggle="collapse" data-target=".toggle-all" aria-expanded="false" aria-controls="multi-collapse-grp">All</button>
+
+                            <div id="multi-collapse-grp" class="d-flex justify-content-around mt-2">
+                                <div class="p-2 collapse toggle-all bg-primary text-light">P</div>
+                                <div class="p-2 collapse toggle-all bg-danger text-light">D</div>
+                                <div class="p-2 collapse toggle-all bg-primary text-light">P</div>
+                                <div class="p-2 collapse toggle-all bg-danger text-light">D</div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>

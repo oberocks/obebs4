@@ -1,0 +1,294 @@
+<!-- _bs_modals.njk -->
+		<div class="container-fluid pt-5 text-center bg-white text-dark">
+        
+            <div class="container modal-workspace">
+
+                <div class="row justify-content-center pt-5">
+                    
+                    <div id="{{ global_strings['defaults']['sections']['52']['id'] }}" class="col-12">
+                        
+                        {% set headingHeadline = global_strings['defaults']['sections']['52']['head'] %}
+						{% set headingSubline = global_strings['defaults']['sections']['52']['subhead'] %}
+						{% set headingDescrip = global_strings['defaults']['sections']['52']['descrip'] %}
+                        {% include "partials/_columnHeading.njk" %}
+
+                    </div>
+
+                </div>
+
+                <div class="row justify-content-center">
+
+                    <div class="col-md-6 pb-5">
+                        
+                        <div class="js-prism-fa prism-hidden mb-2" style="cursor: help;">
+                            <!-- Modal Trigger -->
+                            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#basic-modal">Basic Modal</button>
+
+                            <!-- Modal Markup -->
+                            <div class="modal fade" id="basic-modal" tabindex="-1" role="dialog" aria-labelledby="basic-modal-title" aria-hidden="true">
+                                <div class="modal-dialog" role="document">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title" id="basic-modal-title">Modal title</h5>
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                            </button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque egestas nulla at mauris malesuada viverra. Aenean consequat ante ipsum, quis imperdiet ipsum fermentum vitae. Vivamus consectetur metus sit amet justo maximus, non volutpat nunc sollicitudin. Vivamus vel pharetra ex, eget rhoncus neque. Aenean at mollis lorem, et dapibus odio.</p>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                            <button type="button" class="btn btn-primary">Save changes</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <pre>
+                            <code class="language-html line-numbers">
+                                &lt;!-- Modal Trigger --&gt;
+                                &lt;button type="button" class="btn btn-primary" data-toggle="modal" data-target="#basic-modal"&gt;Basic Modal&lt;/button&gt;
+
+                                &lt;!-- Modal Markup --&gt;
+                                &lt;div class="modal fade" id="basic-modal" tabindex="-1" role="dialog" aria-labelledby="basic-modal-title" aria-hidden="true"&gt;
+                                    &lt;div class="modal-dialog" role="document"&gt;
+                                        &lt;div class="modal-content"&gt;
+                                            &lt;div class="modal-header"&gt;
+                                                &lt;h5 class="modal-title" id="basic-modal-title"&gt;Modal title&lt;/h5&gt;
+                                                &lt;button type="button" class="close" data-dismiss="modal" aria-label="Close"&gt;
+                                                    &lt;span aria-hidden="true"&gt;&times;&lt;/span&gt;
+                                                &lt;/button&gt;
+                                            &lt;/div&gt;
+                                            &lt;div class="modal-body"&gt;
+                                                &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque egestas nulla at mauris malesuada viverra. Aenean consequat ante ipsum, quis imperdiet ipsum fermentum vitae. Vivamus consectetur metus sit amet justo maximus, non volutpat nunc sollicitudin. Vivamus vel pharetra ex, eget rhoncus neque. Aenean at mollis lorem, et dapibus odio.&lt;/p&gt;
+                                            &lt;/div&gt;
+                                            &lt;div class="modal-footer"&gt;
+                                                &lt;button type="button" class="btn btn-secondary" data-dismiss="modal"&gt;Close&lt;/button&gt;
+                                                &lt;button type="button" class="btn btn-primary"&gt;Save changes&lt;/button&gt;
+                                            &lt;/div&gt;
+                                        &lt;/div&gt;
+                                    &lt;/div&gt;
+                                &lt;/div&gt;
+                            </code>
+                        </pre>
+                        
+                        <div class="js-prism-fa prism-hidden mb-2" style="cursor: help;">
+                            <!-- Modal Trigger -->
+                            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#basic-vcenter-modal">Vertically Centered Modal</button>
+
+                            <!-- Modal Markup -->
+                            <div class="modal fade" id="basic-vcenter-modal" tabindex="-1" role="dialog" aria-labelledby="basic-vcenter-modal-title" aria-hidden="true">
+                                <div class="modal-dialog modal-dialog-centered" role="document">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title" id="basic-vcenter-modal-title">Modal title</h5>
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                            </button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque egestas nulla at mauris malesuada viverra. Aenean consequat ante ipsum, quis imperdiet ipsum fermentum vitae. Vivamus consectetur metus sit amet justo maximus, non volutpat nunc sollicitudin. Vivamus vel pharetra ex, eget rhoncus neque. Aenean at mollis lorem, et dapibus odio.</p>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                            <button type="button" class="btn btn-primary">Save changes</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <pre>
+                            <code class="language-html line-numbers">
+                                &lt;!-- Modal Trigger --&gt;
+                                &lt;button type="button" class="btn btn-primary" data-toggle="modal" data-target="#basic-vcenter-modal"&gt;Vertically Centered Modal&lt;/button&gt;
+
+                                &lt;!-- Modal Markup --&gt;
+                                &lt;div class="modal fade" id="basic-vcenter-modal" tabindex="-1" role="dialog" aria-labelledby="basic-vcenter-modal-title" aria-hidden="true"&gt;
+                                    &lt;div class="modal-dialog modal-dialog-centered" role="document"&gt;
+                                        &lt;div class="modal-content"&gt;
+                                            &lt;div class="modal-header"&gt;
+                                                &lt;h5 class="modal-title" id="basic-vcenter-modal-title"&gt;Modal title&lt;/h5&gt;
+                                                &lt;button type="button" class="close" data-dismiss="modal" aria-label="Close"&gt;
+                                                    &lt;span aria-hidden="true"&gt;&times;&lt;/span&gt;
+                                                &lt;/button&gt;
+                                            &lt;/div&gt;
+                                            &lt;div class="modal-body"&gt;
+                                                &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque egestas nulla at mauris malesuada viverra. Aenean consequat ante ipsum, quis imperdiet ipsum fermentum vitae. Vivamus consectetur metus sit amet justo maximus, non volutpat nunc sollicitudin. Vivamus vel pharetra ex, eget rhoncus neque. Aenean at mollis lorem, et dapibus odio.&lt;/p&gt;
+                                            &lt;/div&gt;
+                                            &lt;div class="modal-footer"&gt;
+                                                &lt;button type="button" class="btn btn-secondary" data-dismiss="modal"&gt;Close&lt;/button&gt;
+                                                &lt;button type="button" class="btn btn-primary"&gt;Save changes&lt;/button&gt;
+                                            &lt;/div&gt;
+                                        &lt;/div&gt;
+                                    &lt;/div&gt;
+                                &lt;/div&gt;
+                            </code>
+                        </pre>
+                        
+                        <div class="js-prism-fa prism-hidden mb-2" style="cursor: help;">
+                            <!-- Modal Trigger -->
+                            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#basic-small-modal">Basic Small Modal</button>
+
+                            <!-- Modal Markup -->
+                            <div class="modal fade" id="basic-small-modal" tabindex="-1" role="dialog" aria-labelledby="basic-small-modal-title" aria-hidden="true">
+                                <div class="modal-dialog modal-sm" role="document">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title" id="basic-small-modal-title">Modal title</h5>
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                            </button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque egestas nulla at mauris malesuada viverra. Aenean consequat ante ipsum, quis imperdiet ipsum fermentum vitae. Vivamus consectetur metus sit amet justo maximus, non volutpat nunc sollicitudin. Vivamus vel pharetra ex, eget rhoncus neque. Aenean at mollis lorem, et dapibus odio.</p>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                            <button type="button" class="btn btn-primary">Save changes</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <pre>
+                            <code class="language-html line-numbers">
+                                &lt;!-- Modal Trigger --&gt;
+                                &lt;button type="button" class="btn btn-primary" data-toggle="modal" data-target="#basic-small-modal"&gt;Basic Small Modal&lt;/button&gt;
+
+                                &lt;!-- Modal Markup --&gt;
+                                &lt;div class="modal fade" id="basic-small-modal" tabindex="-1" role="dialog" aria-labelledby="basic-small-modal-title" aria-hidden="true"&gt;
+                                    &lt;div class="modal-dialog modal-sm" role="document"&gt;
+                                        &lt;div class="modal-content"&gt;
+                                            &lt;div class="modal-header"&gt;
+                                                &lt;h5 class="modal-title" id="basic-small-modal-title"&gt;Modal title&lt;/h5&gt;
+                                                &lt;button type="button" class="close" data-dismiss="modal" aria-label="Close"&gt;
+                                                    &lt;span aria-hidden="true"&gt;&times;&lt;/span&gt;
+                                                &lt;/button&gt;
+                                            &lt;/div&gt;
+                                            &lt;div class="modal-body"&gt;
+                                                &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque egestas nulla at mauris malesuada viverra. Aenean consequat ante ipsum, quis imperdiet ipsum fermentum vitae. Vivamus consectetur metus sit amet justo maximus, non volutpat nunc sollicitudin. Vivamus vel pharetra ex, eget rhoncus neque. Aenean at mollis lorem, et dapibus odio.&lt;/p&gt;
+                                            &lt;/div&gt;
+                                            &lt;div class="modal-footer"&gt;
+                                                &lt;button type="button" class="btn btn-secondary" data-dismiss="modal"&gt;Close&lt;/button&gt;
+                                                &lt;button type="button" class="btn btn-primary"&gt;Save changes&lt;/button&gt;
+                                            &lt;/div&gt;
+                                        &lt;/div&gt;
+                                    &lt;/div&gt;
+                                &lt;/div&gt;
+                            </code>
+                        </pre>
+                        
+                        <div class="js-prism-fa prism-hidden mb-2" style="cursor: help;">
+                            <!-- Modal Trigger -->
+                            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#basic-large-modal">Basic Large Modal</button>
+
+                            <!-- Modal Markup -->
+                            <div class="modal fade" id="basic-large-modal" tabindex="-1" role="dialog" aria-labelledby="basic-large-modal-title" aria-hidden="true">
+                                <div class="modal-dialog modal-lg" role="document">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title" id="basic-large-modal-title">Modal title</h5>
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                            </button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque egestas nulla at mauris malesuada viverra. Aenean consequat ante ipsum, quis imperdiet ipsum fermentum vitae. Vivamus consectetur metus sit amet justo maximus, non volutpat nunc sollicitudin. Vivamus vel pharetra ex, eget rhoncus neque. Aenean at mollis lorem, et dapibus odio.</p>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                            <button type="button" class="btn btn-primary">Save changes</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <pre>
+                            <code class="language-html line-numbers">
+                                &lt;!-- Modal Trigger --&gt;
+                                &lt;button type="button" class="btn btn-primary" data-toggle="modal" data-target="#basic-large-modal"&gt;Basic Large Modal&lt;/button&gt;
+
+                                &lt;!-- Modal Markup --&gt;
+                                &lt;div class="modal fade" id="basic-large-modal" tabindex="-1" role="dialog" aria-labelledby="basic-large-modal-title" aria-hidden="true"&gt;
+                                    &lt;div class="modal-dialog modal-lg" role="document"&gt;
+                                        &lt;div class="modal-content"&gt;
+                                            &lt;div class="modal-header"&gt;
+                                                &lt;h5 class="modal-title" id="basic-large-modal-title"&gt;Modal title&lt;/h5&gt;
+                                                &lt;button type="button" class="close" data-dismiss="modal" aria-label="Close"&gt;
+                                                    &lt;span aria-hidden="true"&gt;&times;&lt;/span&gt;
+                                                &lt;/button&gt;
+                                            &lt;/div&gt;
+                                            &lt;div class="modal-body"&gt;
+                                                &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque egestas nulla at mauris malesuada viverra. Aenean consequat ante ipsum, quis imperdiet ipsum fermentum vitae. Vivamus consectetur metus sit amet justo maximus, non volutpat nunc sollicitudin. Vivamus vel pharetra ex, eget rhoncus neque. Aenean at mollis lorem, et dapibus odio.&lt;/p&gt;
+                                            &lt;/div&gt;
+                                            &lt;div class="modal-footer"&gt;
+                                                &lt;button type="button" class="btn btn-secondary" data-dismiss="modal"&gt;Close&lt;/button&gt;
+                                                &lt;button type="button" class="btn btn-primary"&gt;Save changes&lt;/button&gt;
+                                            &lt;/div&gt;
+                                        &lt;/div&gt;
+                                    &lt;/div&gt;
+                                &lt;/div&gt;
+                            </code>
+                        </pre>
+
+                        <div class="js-prism-fa prism-hidden mb-2" style="cursor: help;">
+                            <!-- Modal Trigger -->
+                            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#basic-nofade-modal">No-Fade Modal</button>
+
+                            <!-- Modal Markup -->
+                            <div class="modal" id="basic-nofade-modal" tabindex="-1" role="dialog" aria-labelledby="basic-nofade-modal-title" aria-hidden="true">
+                                <div class="modal-dialog" role="document">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title" id="basic-nofade-modal-title">Modal title</h5>
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                            </button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque egestas nulla at mauris malesuada viverra. Aenean consequat ante ipsum, quis imperdiet ipsum fermentum vitae. Vivamus consectetur metus sit amet justo maximus, non volutpat nunc sollicitudin. Vivamus vel pharetra ex, eget rhoncus neque. Aenean at mollis lorem, et dapibus odio.</p>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                            <button type="button" class="btn btn-primary">Save changes</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <pre>
+                            <code class="language-html line-numbers">
+                                &lt;!-- Modal Trigger --&gt;
+                                &lt;button type="button" class="btn btn-primary" data-toggle="modal" data-target="#basic-nofade-modal"&gt;No-Fade Modal&lt;/button&gt;
+
+                                &lt;!-- Modal Markup --&gt;
+                                &lt;div class="modal" id="basic-nofade-modal" tabindex="-1" role="dialog" aria-labelledby="basic-nofade-modal-title" aria-hidden="true"&gt;
+                                    &lt;div class="modal-dialog" role="document"&gt;
+                                        &lt;div class="modal-content"&gt;
+                                            &lt;div class="modal-header"&gt;
+                                                &lt;h5 class="modal-title" id="basic-nofade-modal-title"&gt;Modal title&lt;/h5&gt;
+                                                &lt;button type="button" class="close" data-dismiss="modal" aria-label="Close"&gt;
+                                                    &lt;span aria-hidden="true"&gt;&times;&lt;/span&gt;
+                                                &lt;/button&gt;
+                                            &lt;/div&gt;
+                                            &lt;div class="modal-body"&gt;
+                                                &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque egestas nulla at mauris malesuada viverra. Aenean consequat ante ipsum, quis imperdiet ipsum fermentum vitae. Vivamus consectetur metus sit amet justo maximus, non volutpat nunc sollicitudin. Vivamus vel pharetra ex, eget rhoncus neque. Aenean at mollis lorem, et dapibus odio.&lt;/p&gt;
+                                            &lt;/div&gt;
+                                            &lt;div class="modal-footer"&gt;
+                                                &lt;button type="button" class="btn btn-secondary" data-dismiss="modal"&gt;Close&lt;/button&gt;
+                                                &lt;button type="button" class="btn btn-primary"&gt;Save changes&lt;/button&gt;
+                                            &lt;/div&gt;
+                                        &lt;/div&gt;
+                                    &lt;/div&gt;
+                                &lt;/div&gt;
+                            </code>
+                        </pre>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>

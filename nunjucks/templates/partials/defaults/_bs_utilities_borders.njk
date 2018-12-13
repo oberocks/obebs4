@@ -1,0 +1,110 @@
+<!-- _bs_tooltips.njk -->
+		<div class="container-fluid pt-5 text-center bg-white text-dark">
+        
+            <div class="container modal-workspace">
+
+                <div class="row justify-content-center pt-5">
+                    
+                    <div id="{{ global_strings['defaults']['sections']['14']['id'] }}" class="col-12">
+                        
+                        {% set headingHeadline = global_strings['defaults']['sections']['14']['head'] %}
+						{% set headingSubline = global_strings['defaults']['sections']['14']['subhead'] %}
+						{% set headingDescrip = global_strings['defaults']['sections']['14']['descrip'] %}
+                        {% include "partials/_columnHeading.njk" %}
+
+                    </div>
+
+                </div>
+
+                <div class="row justify-content-center">
+
+                    <div class="col-md-6 pb-5">
+
+                        <h5>Additive Border Classes</h5>
+                        
+                        <div class="js-prism mb-2">
+                            <div class="border p-2">All-Sides Border</div>
+                        </div>
+
+                        <div class="js-prism mb-2">
+                            <div class="border-top p-2">Top Border</div>
+                        </div>
+
+                        <div class="js-prism mb-2">
+                            <div class="border-right p-2">Right Border</div>
+                        </div>
+
+                        <div class="js-prism mb-2">
+                            <div class="border-left p-2">Left Border</div>
+                        </div>
+
+                        <div class="js-prism mb-2">
+                            <div class="border-bottom p-2">Bottom Border</div>
+                        </div>
+
+                        <h5 class="pt-5">Subtractive Border Classes</h5>
+                        
+                        <div class="js-prism mb-2">
+                            <div class="border border-0 p-2">No Border</div>
+                        </div>
+
+                        <div class="js-prism mb-2">
+                            <div class="border border-top-0 p-2">No Top Border</div>
+                        </div>
+
+                        <div class="js-prism mb-2">
+                            <div class="border border-right-0 p-2">No Right Border</div>
+                        </div>
+
+                        <div class="js-prism mb-2">
+                            <div class="border border-left-0 p-2">No Left Border</div>
+                        </div>
+
+                        <div class="js-prism mb-2">
+                            <div class="border border-bottom-0 p-2">No Bottom Border</div>
+                        </div>
+
+                        <h5 class="pt-5">Border Radius Classes</h5>
+                        
+                        <label class="d-block">Rounded Corners</label>
+                        <div class="js-prism mb-2">
+                            <img class="rounded" src="images/128x128.jpg" alt="Border Radius Image">
+                        </div>
+                        
+                        <label class="d-block">Rounded Top Corners</label>
+                        <div class="js-prism mb-2">
+                            <img class="rounded-top" src="images/128x128.jpg" alt="Border Radius Image">
+                        </div>
+                        
+                        <label class="d-block">Rounded Right Corners</label>
+                        <div class="js-prism mb-2">
+                            <img class="rounded-right" src="images/128x128.jpg" alt="Border Radius Image">
+                        </div>
+                        
+                        <label class="d-block">Rounded Left Corners</label>
+                        <div class="js-prism mb-2">
+                            <img class="rounded-left" src="images/128x128.jpg" alt="Border Radius Image">
+                        </div>
+                        
+                        <label class="d-block">Rounded Bottom Corners</label>
+                        <div class="js-prism mb-2">
+                            <img class="rounded-bottom" src="images/128x128.jpg" alt="Border Radius Image">
+                        </div>
+                        
+                        <label class="d-block">Circle Corners (W=H)</label>
+                        <div class="js-prism mb-2">
+                            <img class="rounded-circle" src="images/128x128.jpg" alt="Border Radius Image">
+                        </div>
+                        
+                        <label class="d-block">Square Corners</label>
+                        <div class="js-prism mb-2">
+                            <img class="rounded-0" src="images/128x128.jpg" alt="Border Radius Image">
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>

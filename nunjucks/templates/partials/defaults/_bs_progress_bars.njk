@@ -1,0 +1,79 @@
+<!-- _bs_progress_bars.njk -->
+		<div class="container-fluid pt-5 text-center bg-white text-dark">
+        
+            <div class="container modal-workspace">
+
+                <div class="row justify-content-center pt-5">
+                    
+                    <div id="{{ global_strings['defaults']['sections']['58']['id'] }}" class="col-12">
+                        
+                        {% set headingHeadline = global_strings['defaults']['sections']['58']['head'] %}
+						{% set headingSubline = global_strings['defaults']['sections']['58']['subhead'] %}
+						{% set headingDescrip = global_strings['defaults']['sections']['58']['descrip'] %}
+                        {% include "partials/_columnHeading.njk" %}
+
+                    </div>
+
+                </div>
+
+                <div class="row justify-content-center">
+
+                    <div class="col-md-6 pb-5">
+
+                        <h5>Basic Progress Bar</h5>
+                        
+                        <div class="js-prism mb-2">
+                            <div class="progress">
+                                <div class="progress-bar w-75" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                        </div>
+
+                        <h5 class="pt-4">Labeled Progress Bar</h5>
+                        
+                        <div class="js-prism mb-2">
+                            <div class="progress">
+                                <div class="progress-bar w-75" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">75%</div>
+                            </div>
+                        </div>
+
+                        <h5 class="pt-4">Variable Height Progress Bar</h5>
+                        
+                        <div class="js-prism mb-2">
+                            <div class="progress" style="height: 5px;">
+                                <div class="progress-bar w-75" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                        </div>
+
+                        <h5 class="pt-4">Multi-Bar Progress Bar</h5>
+                        
+                        <div class="js-prism mb-2">
+                            <div class="progress">
+                                <div class="progress-bar w-25" role="progressbar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                <div class="progress-bar bg-success w-25" role="progressbar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                <div class="progress-bar bg-info w-25" role="progressbar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                        </div>
+
+                        <h5 class="pt-4">Striped Progress Bar</h5>
+                        
+                        <div class="js-prism mb-2">
+                            <div class="progress">
+                                <div class="progress-bar progress-bar-striped w-75" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                        </div>
+
+                        <h5 class="pt-4">Animated Progress Bar</h5>
+                        
+                        <div class="js-prism mb-2">
+                            <div class="progress">
+                                <div class="progress-bar progress-bar-striped progress-bar-animated w-75" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>

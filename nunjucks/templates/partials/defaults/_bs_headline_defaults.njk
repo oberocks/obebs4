@@ -1,0 +1,56 @@
+<!-- _bs_headline_defaults.njk -->
+		<div class="container-fluid pt-5 text-center bg-white text-dark">
+        
+            <div class="container pt-5">
+                
+                <div class="row justify-content-center">
+                    
+                    <div id="{{ global_strings['defaults']['sections']['0']['id'] }}" class="col-md-6 pb-5">
+                        
+                        {% set headingHeadline = global_strings['defaults']['sections']['0']['head'] %}
+						{% set headingSubline = global_strings['defaults']['sections']['0']['subhead'] %}
+						{% set headingDescrip = global_strings['defaults']['sections']['0']['descrip'] %}
+                        {% include "partials/_columnHeading.njk" %}
+
+                        {% macro headline(number) %}
+                        <div class="js-prism mb-2">
+                            <h{{ number }}>H{{ number }} Headline</h{{ number }}>
+                        </div>
+                        {% endmacro %}
+
+                        {{ headline('1') }}
+                        {{ headline('2') }}
+                        {{ headline('3') }}
+                        {{ headline('4') }}
+                        {{ headline('5') }}
+                        {{ headline('6') }}
+
+                    </div>
+
+                    <div id="{{ global_strings['defaults']['sections']['1']['id'] }}" class="col-md-6 pb-5">
+                        
+                        {% set headingHeadline = global_strings['defaults']['sections']['1']['head'] %}
+						{% set headingSubline = global_strings['defaults']['sections']['1']['subhead'] %}
+						{% set headingDescrip = global_strings['defaults']['sections']['1']['descrip'] %}
+                        {% include "partials/_columnHeading.njk" %}
+
+                        {% macro headline_class(number) %}
+                        <div class="js-prism mb-2">
+                            <div class="h{{ number }}">H{{ number }} Headline</div>
+                        </div>
+                        {% endmacro %}
+
+                        {{ headline_class('1') }}
+                        {{ headline_class('2') }}
+                        {{ headline_class('3') }}
+                        {{ headline_class('4') }}
+                        {{ headline_class('5') }}
+                        {{ headline_class('6') }}
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>

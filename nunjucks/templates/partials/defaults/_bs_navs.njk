@@ -1,0 +1,272 @@
+<!-- _bs_navs.njk -->
+		<div class="container-fluid pt-5 text-center bg-white text-dark">
+        
+            <div class="container">
+                
+                <div class="row justify-content-center">
+                    
+                    <div id="{{ global_strings['defaults']['sections']['53']['id'] }}" class="col-md-8 pb-5">
+                        
+                        {% set headingHeadline = global_strings['defaults']['sections']['53']['head'] %}
+						{% set headingSubline = global_strings['defaults']['sections']['53']['subhead'] %}
+						{% set headingDescrip = global_strings['defaults']['sections']['53']['descrip'] %}
+                        {% include "partials/_columnHeading.njk" %}
+                                
+                                {%- macro ul_nav_items(active = 'false', long = 'false') -%}
+                                <li class="nav-item">
+                                    <a class="nav-link{% if active === 'true' %} active{% endif %}" href="#">{% if active === 'true' %}Active{% else %}Link 1{% endif %}</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">{% if active === 'true' %}Super-Long Link{% else %}Link 2{% endif %}</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link disabled" href="#">Disabled</a>
+                                </li>
+                                {%- endmacro %}
+
+                                
+                                {%- macro anchor_nav_items(active = 'false', long = 'false') -%}
+                                <a class="nav-item nav-link{% if active === 'true' %} active{% endif %}" href="#">{% if active === 'true' %}Active{% else %}Link 1{% endif %}</a>
+                                <a class="nav-item nav-link" href="#">{% if active === 'true' %}Super-Long Link{% else %}Link 2{% endif %}</a>
+                                <a class="nav-item nav-link disabled" href="#">Disabled</a>
+                                {%- endmacro %}
+
+
+
+                        
+                        <h5 class="pt-4">Inline List Nav</h5>
+                        
+                        <div class="js-prism mb-2 text-center">
+                            <ul class="nav" role="menu">
+                                {{ ul_nav_items() }}
+                            </ul>
+                        </div>
+
+                        
+                        
+                        <h5 class="pt-4">Inline Anchor's Nav</h5>
+                        
+                        <div class="js-prism mb-2 text-center">
+                            <nav class="nav">
+                                {{ anchor_nav_items() }}
+                            </nav>
+                        </div>
+
+                        
+                        
+                        <h5 class="pt-4">Centered Nav</h5>
+                        
+                        <div class="js-prism mb-2 text-center">
+                            <nav class="nav justify-content-center">
+                                {{ anchor_nav_items() }}
+                            </nav>
+                        </div>
+
+                        
+                        
+                        <h5 class="pt-4">Right-Aligned Nav</h5>
+                        
+                        <div class="js-prism mb-2 text-center">
+                            <nav class="nav justify-content-end">
+                                {{ anchor_nav_items() }}
+                            </nav>
+                        </div>
+
+
+
+                        <h5 class="pt-4">Column List Nav</h5>
+                        
+                        <div class="js-prism mb-2 text-center">
+                            <ul class="nav flex-column" role="menu">
+                                {{ ul_nav_items() }}
+                            </ul>
+                        </div>
+
+                        
+                        
+                        <h5 class="pt-4">Column Anchor's Nav</h5>
+                        
+                        <div class="js-prism mb-2 text-center">
+                            <nav class="nav flex-column">
+                                {{ anchor_nav_items() }}
+                            </nav>
+                        </div>
+
+                        
+                        
+                        <h5 class="pt-4">Tab Nav</h5>
+                        
+                        <div class="js-prism mb-2 text-center">
+                            <ul class="nav nav-tabs" role="menu">
+                                {{ ul_nav_items(active = 'true') }}
+                            </ul>
+                        </div>
+
+                        
+                        
+                        <h5 class="pt-4">Pill Nav</h5>
+                        
+                        <div class="js-prism mb-2 text-center">
+                            <ul class="nav nav-pills" role="menu">
+                                {{ ul_nav_items(active = 'true') }}
+                            </ul>
+                        </div>
+
+                        
+                        
+                        <h5 class="pt-4">Filled Pill Nav</h5>
+                        
+                        <div class="js-prism mb-2 text-center">
+                            <ul class="nav nav-pills nav-fill" role="menu">
+                                {{ ul_nav_items(active = 'true') }}
+                            </ul>
+                        </div>
+
+                        
+                        
+                        <h5 class="pt-4">Filled Pill Anchor Nav</h5>
+                        
+                        <div class="js-prism mb-2 text-center">
+                            <nav class="nav nav-pills nav-fill">
+                                {{ anchor_nav_items(active = "true", long = "true") }}
+                            </nav>
+                        </div>
+
+                        
+                        
+                        <h5 class="pt-4">Justified Pill List Nav</h5>
+                        
+                        <div class="js-prism mb-2 text-center">
+                            <ul class="nav nav-pills nav-justified" role="menu">
+                                {{ ul_nav_items(active = "true", long = 'true') }}
+                            </ul>
+                        </div>
+
+                        
+                        
+                        <h5 class="pt-4">Justified Pill Anchor Nav</h5>
+                        
+                        <div class="js-prism mb-2 text-center">
+                            <nav class="nav nav-pills nav-justified">
+                                {{ anchor_nav_items(active = "true", long = "true") }}
+                            </nav>
+                        </div>
+
+                        
+                        
+                        {% macro dropdown_navs(headline, classPart) %}
+                        <h5 class="pt-4">{{ headline }}</h5>
+                        
+                        <div class="js-prism mb-2 text-center">
+                            <ul class="nav nav-{{ classPart }}">
+                                <li class="nav-item">
+                                    <a class="nav-link active" href="#">Active</a>
+                                </li>
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Dropdown</a>
+                                    <div class="dropdown-menu">
+                                        <a class="dropdown-item" href="#">Action</a>
+                                        <a class="dropdown-item" href="#">Action 2</a>
+                                        <div class="dropdown-divider"></div>
+                                        <a class="dropdown-item" href="#">Action 3</a>
+                                    </div>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link disabled" href="#">Disabled</a>
+                                </li>
+                            </ul>
+                        </div>
+                        {% endmacro %}
+
+                        
+                        {{ dropdown_navs('Tabs + Dropdown Nav', 'tabs') }}
+                        {{ dropdown_navs('Pills + Dropdown Nav', 'pills') }}
+
+
+
+                        
+                        {% set laurem_1 = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed congue consequat leo, in pulvinar ex vulputate et. Phasellus sit amet magna justo. Curabitur facilisis lobortis libero. Vivamus fringilla eros id nulla fermentum elementum.' %}
+                        {% set laurem_2 = 'Proin vitae massa sed est congue bibendum et ac quam. Vestibulum tempor ut massa ut maximus. Integer condimentum purus vel rutrum varius. Praesent sodales fermentum sodales. Pellentesque pharetra laoreet erat nec ullamcorper. Suspendisse a tincidunt lacus.' %}
+                        {% set laurem_3 = 'Fusce semper dignissim lectus ut eleifend. Suspendisse non augue pulvinar, laoreet tellus ac, convallis ipsum. Nam venenatis facilisis vehicula. Nunc venenatis eget elit eget vestibulum. Aliquam iaculis eu elit vitae tempus. Etiam euismod ex a ante pulvinar mattis.' %}
+                        {% set laurem_4 = 'Suspendisse ut diam maximus, mattis lacus sed, porta arcu. Nullam cursus ex eu tellus interdum, et vehicula quam euismod. Etiam rutrum magna eu luctus efficitur. Etiam in risus in lectus rutrum gravida ac sed turpis. Morbi vel hendrerit libero, vel semper ante.' %}
+                        
+                        {% macro component_navs(headline, classPart, toggleVal) %}
+                        <h5 class="pt-4">Interactive {{ headline }} Component</h5>
+                        
+                        <div class="js-prism mb-2 text-left">
+                            <ul class="nav nav-{{ classPart }}" id="{{ classPart }}-component" role="tablist">
+                                <li class="nav-item">
+                                    <a class="nav-link active" id="{{ classPart }}-item-1" data-toggle="{{ toggleVal }}" href="#{{ classPart }}-item-1-content" role="tab" aria-controls="{{ classPart }}-item-1-content" aria-selected="true">Item 1</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" id="{{ classPart }}-item-2" data-toggle="{{ toggleVal }}" href="#{{ classPart }}-item-2-content" role="tab" aria-controls="{{ classPart }}-item-2-content" aria-selected="false">Item 2</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" id="{{ classPart }}-item-3" data-toggle="{{ toggleVal }}" href="#{{ classPart }}-item-3-content" role="tab" aria-controls="{{ classPart }}-item-3-content" aria-selected="false">Item 3</a>
+                                </li>
+                            </ul>
+                            <div class="tab-content" id="{{ classPart }}-component-content">
+                                <div class="tab-pane p-2 fade show active" id="{{ classPart }}-item-1-content" role="tabpanel" aria-labelledby="{{ classPart }}-item-1">{{ laurem_1 }}</div>
+                                <div class="tab-pane p-2 fade" id="{{ classPart }}-item-2-content" role="tabpanel" aria-labelledby="{{ classPart }}-item-2">{{ laurem_2 }}</div>
+                                <div class="tab-pane p-2 fade" id="{{ classPart }}-item-3-content" role="tabpanel" aria-labelledby="{{ classPart }}-item-3">{{ laurem_3 }}</div>
+                            </div>
+                        </div>
+                        {% endmacro %}
+
+                        {{ component_navs('Tabs', 'tabs', 'tab') }}
+                        {{ component_navs('Pills', 'pills', 'pill') }}
+
+
+
+                        <h5 class="pt-4">Nav Element Tab Component</h5>
+                        
+                        <div class="js-prism mb-2 text-left">
+                            <nav>
+                                <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                                    <a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true">Home</a>
+                                    <a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false">Profile</a>
+                                    <a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-contact" role="tab" aria-controls="nav-contact" aria-selected="false">Contact</a>
+                                </div>
+                            </nav>
+                            <div class="tab-content" id="nav-tabContent">
+                                <div class="tab-pane p-2 fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">{{ laurem_1 }}</div>
+                                <div class="tab-pane p-2 fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">{{ laurem_2 }}</div>
+                                <div class="tab-pane p-2 fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">{{ laurem_3 }}</div>
+                            </div>
+                        </div>
+
+
+
+                        <h5 class="pt-4">Vertical Pills Content Component</h5>
+                        
+                        <div class="js-prism mb-2 text-left">
+                            <div class="row">
+                                <div class="col-3">
+                                    <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                                        <a class="nav-link active" id="v-pills-home-tab" data-toggle="pill" href="#v-pills-home" role="tab" aria-controls="v-pills-home" aria-selected="true">Home</a>
+                                        <a class="nav-link" id="v-pills-profile-tab" data-toggle="pill" href="#v-pills-profile" role="tab" aria-controls="v-pills-profile" aria-selected="false">Profile</a>
+                                        <a class="nav-link" id="v-pills-messages-tab" data-toggle="pill" href="#v-pills-messages" role="tab" aria-controls="v-pills-messages" aria-selected="false">Messages</a>
+                                        <a class="nav-link" id="v-pills-settings-tab" data-toggle="pill" href="#v-pills-settings" role="tab" aria-controls="v-pills-settings" aria-selected="false">Settings</a>
+                                    </div>
+                                </div>
+                                <div class="col-9">
+                                    <div class="tab-content" id="v-pills-tabContent">
+                                        <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab">{{ laurem_1 }}</div>
+                                        <div class="tab-pane fade" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab">{{ laurem_2 }}</div>
+                                        <div class="tab-pane fade" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab">{{ laurem_3 }}</div>
+                                        <div class="tab-pane fade" id="v-pills-settings" role="tabpanel" aria-labelledby="v-pills-settings-tab">{{ laurem_4 }}</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>

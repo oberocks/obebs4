@@ -1,0 +1,50 @@
+<!-- _bs_alerts.njk -->
+		<div class="container-fluid pt-5 text-center bg-white text-dark">
+        
+            <div class="container">
+
+                <div class="row justify-content-center">
+                    
+                    <div id="{{ global_strings['defaults']['sections']['6']['id'] }}" class="col-12">
+                        
+                        {% set headingHeadline = global_strings['defaults']['sections']['6']['head'] %}
+						{% set headingSubline = global_strings['defaults']['sections']['6']['subhead'] %}
+						{% set headingDescrip = global_strings['defaults']['sections']['6']['descrip'] %}
+                        {% include "partials/_columnHeading.njk" %}
+
+                    </div>
+
+                </div>
+
+                <div class="row justify-content-center">
+                    
+                    <div class="col-md-6 pb-5">
+                        
+                        <label class="d-block font-weight-bold">Standard Alert</label>
+                        <div class="js-prism mb-2 text-left">
+                            <div class="alert alert-primary" role="alert">
+                                A simple primary alert with a <a href="#" class="alert-link">link</a>!
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="col-md-6 pb-5">
+                        
+                        <label class="d-block font-weight-bold">Dismissable Alert</label>
+                        <div class="js-prism mb-2 text-left">
+                            <div class="alert alert-primary alert-dismissible fade show" role="alert">
+                                A dismissable primary alert with a <a href="#" class="alert-link">link</a>!
+                                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>

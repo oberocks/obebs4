@@ -1,0 +1,184 @@
+<!-- _bs_list_groups.njk -->
+		<div class="container-fluid pt-5 text-center bg-white text-dark">
+        
+            <div class="container">
+
+                <div class="row justify-content-center pt-5">
+                    
+                    <div id="{{ global_strings['defaults']['sections']['48']['id'] }}" class="col-12">
+                        
+                        {% set headingHeadline = global_strings['defaults']['sections']['48']['head'] %}
+						{% set headingSubline = global_strings['defaults']['sections']['48']['subhead'] %}
+						{% set headingDescrip = global_strings['defaults']['sections']['48']['descrip'] %}
+                        {% include "partials/_columnHeading.njk" %}
+
+                    </div>
+
+                </div>
+
+                <div class="row justify-content-center">
+
+                    <div class="col-md-6 pb-5">
+
+                        <h5 class="pt-3">Unordered List Groups</h5>
+                        
+                        <div class="js-prism mb-2 text-left">
+                            <ul class="list-group">
+                                <li class="list-group-item">List Group Item</li>
+                                <li class="list-group-item">List Group Item</li>
+                                <li class="list-group-item d-flex justify-content-between align-items-center">
+                                    Badged List Group Item
+                                    <span class="badge badge-primary badge-pill">2</span>
+                                </li>
+                                <li class="list-group-item list-group-item-primary">Primary List Group Item</li>
+                                <li class="list-group-item active">Active List Group Item</li>
+                                <li class="list-group-item disabled">Disabled List Group Item</li>
+                            </ul>
+                        </div>
+
+                        <h5 class="pt-3">Actionable Anchor List Groups</h5>
+                        
+                        <div class="js-prism mb-2 text-left">
+                            <div class="list-group">
+                                <a href="#" class="list-group-item list-group-item-action">List Group Item</a>
+                                <a href="#" class="list-group-item list-group-item-action">List Group Item</a>
+                                <a href="#" class="list-group-item d-flex justify-content-between align-items-center">
+                                    Badged List Group Item
+                                    <span class="badge badge-primary badge-pill">2</span>
+                                </a>
+                                <a href="#" class="list-group-item list-group-item-action list-group-item-primary">Primary List Group Item</a>
+                                <a href="#" class="list-group-item list-group-item-action active">Active List Group Item</a>
+                                <a href="#" class="list-group-item list-group-item-action disabled">Disabled List Group Item</a>
+                            </div>
+                        </div>
+
+                        <h5 class="pt-3">Actionable Button List Groups</h5>
+                        
+                        <div class="js-prism mb-2 text-left">
+                            <div class="list-group">
+                                <button type="button" class="list-group-item list-group-item-action">List Group Item</button>
+                                <button type="button" class="list-group-item list-group-item-action">List Group Item</button>
+                                <button type="button" class="list-group-item list-group-item-action list-group-item-primary">Primary List Group Item</button>
+                                <button type="button" class="list-group-item list-group-item-action active">Active List Group Item</button>
+                                <button type="button" class="list-group-item list-group-item-action" disabled>Disabled List Group Item</button>
+                            </div>
+                        </div>
+
+                        <h5 class="pt-3">Flush List Groups</h5>
+                        
+                        <div class="js-prism mb-2 text-left">
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item">List Group Item</li>
+                                <li class="list-group-item">List Group Item</li>
+                                <li class="list-group-item d-flex justify-content-between align-items-center">
+                                    Badged List Group Item
+                                    <span class="badge badge-primary badge-pill">2</span>
+                                </li>
+                                <li class="list-group-item list-group-item-primary">Primary List Group Item</li>
+                                <li class="list-group-item active">Active List Group Item</li>
+                                <li class="list-group-item disabled">Disabled List Group Item</li>
+                            </ul>
+                        </div>
+
+                        <h5 class="pt-3">HTML List Group Links</h5>
+                        
+                        <div class="js-prism mb-2 text-left">
+                            <div class="list-group">
+                                <a href="#" class="list-group-item list-group-item-action flex-column align-items-start active">
+                                    <div class="d-flex w-100 justify-content-between">
+                                        <h5 class="mb-1">List Group Heading</h5>
+                                        <small>3 DAYS AGO</small>
+                                    </div>
+                                    <p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
+                                    <small>Donec id elit non mi porta.</small>
+                                </a>
+                                <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
+                                    <div class="d-flex w-100 justify-content-between">
+                                        <h5 class="mb-1">List Group Heading</h5>
+                                        <small>3 DAYS AGO</small>
+                                    </div>
+                                    <p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
+                                    <small>Donec id elit non mi porta.</small>
+                                </a>
+                            </div>
+                        </div>
+
+                        <h5 class="pt-3">List Group Nav Section</h5>
+
+                        <div class="js-prism mb-2 text-left">
+                            <div class="row">
+                                
+                                <div class="col-3">
+                                    
+                                    <div class="list-group text-center" role="tablist">
+                                        
+                                        <a class="list-group-item list-group-item-action active" id="lgnav-one-toggle" data-toggle="list" href="#lgnav-one" role="tab" aria-controls="lgnav-one">#1</a>
+
+                                        <a class="list-group-item list-group-item-action" id="lgnav-two-toggle" data-toggle="list" href="#lgnav-two" role="tab" aria-controls="lgnav-two">#2</a>
+
+                                        <a class="list-group-item list-group-item-action" id="lgnav-three-toggle" data-toggle="list" href="#lgnav-three" role="tab" aria-controls="lgnav-three">#3</a>
+
+                                    </div>
+
+                                </div>
+
+                                <div class="col-9">
+                                    
+                                    <div class="tab-content">
+                                        
+                                        <div class="tab-pane fade show active" id="lgnav-one" role="tabpanel" aria-labelledby="lgnav-one-toggle">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque egestas nulla at mauris malesuada viverra. Aenean consequat ante ipsum, quis imperdiet ipsum fermentum vitae. Vivamus consectetur metus sit amet justo maximus.</div>
+
+                                        <div class="tab-pane fade" id="lgnav-two" role="tabpanel" aria-labelledby="lgnav-two-toggle">Aenean at mollis lorem, et dapibus odio. Pellentesque hendrerit neque leo. Aenean quis luctus sem, in laoreet elit. Donec eget maximus mauris, non congue elit. Donec eu dui id ligula dictum lobortis.</div>
+
+                                        <div class="tab-pane fade" id="lgnav-three" role="tabpanel" aria-labelledby="lgnav-three-toggle">Vestibulum eu lacus porta mauris ultricies lobortis ut quis mi. Donec elementum viverra erat sed mattis. Nulla facilisi. Duis condimentum ultrices nisl, et sollicitudin purus efficitur tincidunt. Mauris venenatis elementum dolor, sit amet suscipit tortor hendrerit in.</div>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <h5 class="pt-3">LG Nav Section (Via Data Attr's)</h5>
+
+                        <div class="js-prism mb-2 text-left">
+                            <div class="row">
+                                
+                                <div class="col-3">
+                                   
+                                    <div class="list-group text-center" role="tablist">
+                                        
+                                        <a class="list-group-item list-group-item-action active" data-toggle="list" href="#lgnav2-one" role="tab">#1</a>
+                                       
+                                        <a class="list-group-item list-group-item-action" data-toggle="list" href="#lgnav2-two" role="tab">#2</a>
+                                        
+                                        <a class="list-group-item list-group-item-action" data-toggle="list" href="#lgnav2-three" role="tab">#3</a>
+
+                                    </div>
+
+                                </div>
+
+                                <div class="col-9">
+
+                                    <div class="tab-content">
+
+                                        <div class="tab-pane fade show active" id="lgnav2-one" role="tabpanel">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque egestas nulla at mauris malesuada viverra. Aenean consequat ante ipsum, quis imperdiet ipsum fermentum vitae. Vivamus consectetur metus sit amet justo maximus.</div>
+
+                                        <div class="tab-pane fade" id="lgnav2-two" role="tabpanel">Aenean at mollis lorem, et dapibus odio. Pellentesque hendrerit neque leo. Aenean quis luctus sem, in laoreet elit. Donec eget maximus mauris, non congue elit. Donec eu dui id ligula dictum lobortis.</div>
+
+                                        <div class="tab-pane fade" id="lgnav2-three" role="tabpanel">Vestibulum eu lacus porta mauris ultricies lobortis ut quis mi. Donec elementum viverra erat sed mattis. Nulla facilisi. Duis condimentum ultrices nisl, et sollicitudin purus efficitur tincidunt. Mauris venenatis elementum dolor, sit amet suscipit tortor hendrerit in.</div>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>

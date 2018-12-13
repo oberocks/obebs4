@@ -1,0 +1,57 @@
+<!-- _bs_tooltips.njk -->
+		<div class="container-fluid pt-5 text-center bg-white text-dark">
+        
+            <div class="container modal-workspace">
+
+                <div class="row justify-content-center pt-5">
+                    
+                    <div id="{{ global_strings['defaults']['sections']['78']['id'] }}" class="col-12">
+                        
+                        {% set headingHeadline = global_strings['defaults']['sections']['78']['head'] %}
+						{% set headingSubline = global_strings['defaults']['sections']['78']['subhead'] %}
+						{% set headingDescrip = global_strings['defaults']['sections']['78']['descrip'] %}
+                        {% include "partials/_columnHeading.njk" %}
+
+                    </div>
+
+                </div>
+
+                <div class="row justify-content-center">
+
+                    <div class="col-md-6 pb-5">
+
+                        <h5>Basic Tooltips</h5>
+                        
+                        <div class="js-prism mb-2">
+                            <button type="button" class="btn btn-primary" data-toggle="tooltip" data-placement="top" title="Tooltip Text">Top Tooltip</button>
+                        </div>
+
+                        <div class="js-prism mb-2">
+                            <button type="button" class="btn btn-primary" data-toggle="tooltip" data-placement="right" title="Tooltip Text">Right Tooltip</button>
+                        </div>
+
+                        <div class="js-prism mb-2">
+                            <button type="button" class="btn btn-primary" data-toggle="tooltip" data-placement="left" title="Tooltip Text">Left Tooltip</button>
+                        </div>
+
+                        <div class="js-prism mb-2">
+                            <button type="button" class="btn btn-primary" data-toggle="tooltip" data-placement="bottom" title="Tooltip Text">Bottom Tooltip</button>
+                        </div>
+
+                        <h5 class="pt-3">HTML Tooltips</h5>
+
+                        <div class="js-prism mb-2">
+                            <button type="button" class="btn btn-primary" data-toggle="tooltip" data-html="true" title="<em>Tooltip</em> <u>with</u> <b>HTML</b>">Inline HTML Tooltip</button>
+                        </div>
+
+                        <div class="js-prism mb-2">
+                            <button type="button" class="btn btn-primary" data-toggle="tooltip" data-html="true" title="<em class='text-warning'>Tooltip with <b>HTML</b></em>">Inline HTML Colored Text</button>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>

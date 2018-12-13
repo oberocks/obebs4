@@ -1,0 +1,78 @@
+<!-- _bs_accordians.njk -->
+		<div class="container-fluid pt-5 text-center bg-white text-dark">
+        
+            <div class="container">
+
+                <div class="row justify-content-center pt-5">
+                    
+                    <div id="{{ global_strings['defaults']['sections']['3']['id'] }}" class="col-12">
+                        
+                        {% set headingHeadline = global_strings['defaults']['sections']['3']['head'] %}
+						{% set headingSubline = global_strings['defaults']['sections']['3']['subhead'] %}
+						{% set headingDescrip = global_strings['defaults']['sections']['3']['descrip'] %}
+                        {% include "partials/_columnHeading.njk" %}
+
+                    </div>
+
+                </div>
+
+                <div class="row justify-content-center">
+
+                    <div class="col-md-6 pb-5">
+
+                        <label class="d-block font-weight-bold">Basic Accordian:</label>
+                        <div class="js-prism mb-2">
+                            <div id="basic-accordian" class="accordion">
+                                
+                                <div class="card">
+                                    
+                                    <div class="card-header" id="ba-heading-1">
+                                        <h5 class="mb-0">
+                                            <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#ba-content-1" aria-expanded="true" aria-controls="ba-content-1">Accordian Item 1</button>
+                                        </h5>
+                                    </div>
+
+                                    <div id="ba-content-1" class="collapse show" aria-labelledby="ba-heading-1" data-parent="#basic-accordian">
+                                        <div class="card-body">Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch.</div>
+                                    </div>
+
+                                </div>
+
+                                <div class="card">
+                                    
+                                    <div class="card-header" id="ba-heading-2">
+                                        <h5 class="mb-0">
+                                            <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#ba-content-2" aria-expanded="false" aria-controls="ba-content-2">Accordian Item 2</button>
+                                        </h5>
+                                    </div>
+
+                                    <div id="ba-content-2" class="collapse" aria-labelledby="ba-heading-2" data-parent="#basic-accordian">
+                                        <div class="card-body">Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch.</div>
+                                    </div>
+
+                                </div>
+
+                                <div class="card">
+                                    
+                                    <div class="card-header" id="ba-heading-3">
+                                        <h5 class="mb-0">
+                                            <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#ba-content-3" aria-expanded="false" aria-controls="ba-content-3">Accordian Item 3</button>
+                                        </h5>
+                                    </div>
+
+                                    <div id="ba-content-3" class="collapse" aria-labelledby="ba-heading-3" data-parent="#basic-accordian">
+                                        <div class="card-body">Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch.</div>
+                                    </div>
+
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>

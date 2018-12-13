@@ -1,0 +1,39 @@
+<!-- _bs_tables_bordered.njk -->
+		<div class="container-fluid pt-5 text-center bg-white text-dark">
+        
+            <div class="container">
+
+                <div class="row justify-content-center">
+                    
+                    <div id="{{ global_strings['defaults']['sections']['63']['id'] }}" class="col-12">
+                        
+                        {% set headingHeadline = global_strings['defaults']['sections']['63']['head'] %}
+						{% set headingSubline = global_strings['defaults']['sections']['63']['subhead'] %}
+						{% set headingDescrip = global_strings['defaults']['sections']['63']['descrip'] %}
+                        {% include "partials/_columnHeading.njk" %}
+
+                    </div>
+
+                </div>
+
+                <div class="row justify-content-center">
+                    
+                    <div class="col-md-6 pb-5">
+                        
+                        {% import "partials/defaults/_defaults_macros.njk" as macros %}
+
+                        {{ macros.bootstrap_table('Standard Table', ' table-bordered') }}
+
+                    </div>
+
+                    <div class="col-md-6 pb-5">
+                        
+                        {{ macros.bootstrap_table('Dark Table', ' table-dark table-bordered') }}
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>

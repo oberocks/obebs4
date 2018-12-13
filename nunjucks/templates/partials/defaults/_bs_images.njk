@@ -1,0 +1,109 @@
+<!-- _bs_images.njk -->
+		<div class="container-fluid pt-5 text-center bg-white text-dark">
+        
+            <div class="container">
+                
+                <div class="row justify-content-center">
+                    
+                    <div id="{{ global_strings['defaults']['sections']['43']['id'] }}" class="col-md-6 pb-5">
+                        
+                        {% set headingHeadline = global_strings['defaults']['sections']['43']['head'] %}
+						{% set headingSubline = global_strings['defaults']['sections']['43']['subhead'] %}
+						{% set headingDescrip = global_strings['defaults']['sections']['43']['descrip'] %}
+                        {% include "partials/_columnHeading.njk" %}
+                        
+                        <div class="js-prism mb-2 text-center">
+                            <img class="img-fluid" src="images/1024x1024.jpg" alt="Responsive 1024x1024 Image">
+                        </div>
+
+                    </div>
+
+                    <div id="{{ global_strings['defaults']['sections']['42']['id'] }}" class="col-md-6 pb-5">
+                        
+                        {% set headingHeadline = global_strings['defaults']['sections']['42']['head'] %}
+						{% set headingSubline = global_strings['defaults']['sections']['42']['subhead'] %}
+						{% set headingDescrip = global_strings['defaults']['sections']['42']['descrip'] %}
+                        {% include "partials/_columnHeading.njk" %}
+
+                        <div class="js-prism mb-2 text-center">
+                            <img class="img-thumbnail" src="images/256x256.jpg" alt="Responsive 256x256 Image Thumbnail">
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="row justify-content-center">
+                    
+                    <div id="{{ global_strings['defaults']['sections']['41']['id'] }}" class="col-12 pt-5">
+                        
+                        {% set headingHeadline = global_strings['defaults']['sections']['41']['head'] %}
+						{% set headingSubline = global_strings['defaults']['sections']['41']['subhead'] %}
+						{% set headingDescrip = global_strings['defaults']['sections']['41']['descrip'] %}
+                        {% include "partials/_columnHeading.njk" %}
+
+                    </div>
+
+                </div>
+
+                <div class="row justify-content-center">
+                    
+                    <div class="col-md-6 pb-5">
+                        
+                        <label class="d-block font-weight-bold">Default Caption</label>
+                        <div class="js-prism mb-2 text-left">
+                            <figure class="figure">
+                                <img  class="figure-img img-fluid" src="images/1024x1024.jpg" alt="Responsive 1024x1024 Image">
+                                <figcaption class="figure-caption">A caption for the above image.</figcaption>
+                            </figure>
+                        </div>
+
+                    </div>
+
+                    <div class="col-md-6 pb-5">
+                        
+                        <label class="d-block font-weight-bold">Right-Aligned Caption</label>
+                        <div class="js-prism mb-2 text-center">
+                            <figure class="figure">
+                                <img  class="figure-img img-fluid" src="images/1024x1024.jpg" alt="Responsive 1024x1024 Image">
+                                <figcaption class="figure-caption text-right">A caption for the above image.</figcaption>
+                            </figure>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="row justify-content-center">
+                    
+                    <div id="{{ global_strings['defaults']['sections']['44']['id'] }}" class="col-12 pt-5">
+                        
+                        {% set headingHeadline = global_strings['defaults']['sections']['44']['head'] %}
+						{% set headingSubline = global_strings['defaults']['sections']['44']['subhead'] %}
+						{% set headingDescrip = global_strings['defaults']['sections']['44']['descrip'] %}
+                        {% include "partials/_columnHeading.njk" %}
+
+                    </div>
+
+                </div>
+
+                <div class="row justify-content-center">
+                    
+                    <div class="col-12 pb-5">
+                        
+                        <div class="js-prism mb-2 text-center">
+                            ​<picture>
+                                <source srcset="images/1600x900.jpg" media="(min-width: 900px)" type="image/svg+xml">
+                                <source srcset="images/1400x875.jpg" media="(min-width: 875px)" type="image/svg+xml">
+                                <source srcset="images/512x512.jpg" media="(min-width: 512px)" type="image/svg+xml">
+                                <img src="images/1920x1080.jpg" class="img-fluid" alt="Placholder Text">
+                            </picture>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>

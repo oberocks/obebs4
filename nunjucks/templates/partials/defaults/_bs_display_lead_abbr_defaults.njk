@@ -1,0 +1,71 @@
+<!-- _bs_display_lead_abbr_defaults.njk -->
+		<div class="container-fluid pt-5 text-center bg-white text-dark">
+        
+            <div class="container">
+                
+                <div class="row justify-content-center">
+                    
+                    <div id="{{ global_strings['defaults']['sections']['7']['id'] }}" class="col-12 pb-5">
+                        
+                        {% set headingHeadline = global_strings['defaults']['sections']['7']['head'] %}
+						{% set headingSubline = global_strings['defaults']['sections']['7']['subhead'] %}
+						{% set headingDescrip = global_strings['defaults']['sections']['7']['descrip'] %}
+                        {% include "partials/_columnHeading.njk" %}
+
+                        {% macro display(number) %}
+                        <div class="js-prism mb-2">
+                            <h{{ number }} class="display-{{ number }}">Display {{ number }}</h{{ number }}>
+                        </div>
+                        {% endmacro %}
+
+                        {{ display('1') }}
+                        {{ display('2') }}
+                        {{ display('3') }}
+                        {{ display('4') }}
+
+                    </div>
+
+                </div>
+
+                <div class="row justify-content-center pt-5">
+                    
+                    <div id="{{ global_strings['defaults']['sections']['8']['id'] }}" class="col-md-6 pb-5">
+                        
+                        {% set headingHeadline = global_strings['defaults']['sections']['8']['head'] %}
+						{% set headingSubline = global_strings['defaults']['sections']['8']['subhead'] %}
+						{% set headingDescrip = global_strings['defaults']['sections']['8']['descrip'] %}
+                        {% include "partials/_columnHeading.njk" %}
+
+                        {% macro lead(className) %}
+                        <div class="js-prism mb-2">
+                            <p class="{{ className }}">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean vehicula, lacus id tincidunt congue, arcu nisi pharetra dui, nec convallis enim odio vitae diam. Curabitur ut ullamcorper nisi. Phasellus quam nisi, facilisis et neque quis, tempor consequat enim.</p>
+                        </div>
+                        {% endmacro %}
+
+                        {{ lead('lead') }}
+
+                    </div>
+
+                    <div id="{{ global_strings['defaults']['sections']['9']['id'] }}" class="col-md-6 pb-5">
+                        
+                        {% set headingHeadline = global_strings['defaults']['sections']['9']['head'] %}
+						{% set headingSubline = global_strings['defaults']['sections']['9']['subhead'] %}
+						{% set headingDescrip = global_strings['defaults']['sections']['9']['descrip'] %}
+                        {% include "partials/_columnHeading.njk" %}
+
+                        
+                        <div class="js-prism mb-2">
+                            <p>An example <abbr title="attribute">attribution</abbr>.</p>
+                        </div>
+
+                        <div class="js-prism mb-2">
+                            <p>An example <abbr title="HyperText Markup Language" class="initialism">attribution class</abbr>.</p>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>

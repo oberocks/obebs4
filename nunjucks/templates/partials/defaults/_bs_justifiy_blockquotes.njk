@@ -1,0 +1,73 @@
+<!-- _bs_justifiy_blockquotes.njk -->
+		<div class="container-fluid pt-5 text-center bg-white text-dark">
+        
+            <div class="container">
+                
+                <div class="row justify-content-center">
+                    
+                    <div id="{{ global_strings['defaults']['sections']['73']['id'] }}" class="col-md-6 pb-5">
+                        
+                        {% set headingHeadline = global_strings['defaults']['sections']['73']['head'] %}
+						{% set headingSubline = global_strings['defaults']['sections']['73']['subhead'] %}
+						{% set headingDescrip = global_strings['defaults']['sections']['73']['descrip'] %}
+                        {% include "partials/_columnHeading.njk" %}
+
+                        {% macro text_justification(classPartial, namePartial, labelJustification) %}
+                        <strong class="d-block text-{{ labelJustification }}">{{ namePartial }} Text:</strong>
+                        <div class="js-prism mb-2">
+                            <p class="text-{{ classPartial }}">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean vehicula, lacus id tincidunt congue, arcu nisi pharetra dui, nec convallis enim odio vitae diam. Curabitur ut ullamcorper nisi. Phasellus quam nisi, facilisis et neque quis, tempor consequat enim.</p>
+                        </div>
+                        {% endmacro %}
+
+                        {{ text_justification('justify', 'Justified', 'left') }}
+                        {{ text_justification('left', 'Left Aligned', 'left') }}
+                        {{ text_justification('center', 'Center Aligned', 'left') }}
+                        {{ text_justification('right', 'Right Aligned', 'left') }}
+
+                    </div>
+
+                    <div id="{{ global_strings['defaults']['sections']['74']['id'] }}" class="col-md-6 pb-5">
+                        
+                        {% set headingHeadline = global_strings['defaults']['sections']['74']['head'] %}
+						{% set headingSubline = global_strings['defaults']['sections']['74']['subhead'] %}
+						{% set headingDescrip = global_strings['defaults']['sections']['74']['descrip'] %}
+                        {% include "partials/_columnHeading.njk" %}
+                        
+                        <strong class="d-block text-left">Standard Blockquote:</strong>
+                        <div class="js-prism mb-2 text-left">
+                            <blockquote class="blockquote">
+                                <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+                            </blockquote>
+                        </div>
+
+                        <strong class="d-block text-left">Blockquote w/ Footer:</strong>
+                        <div class="js-prism mb-2 text-left">
+                            <blockquote class="blockquote">
+                                <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+                                <footer class="blockquote-footer">Someone famous in <cite title="Source Title">Source Title</cite></footer>
+                            </blockquote>
+                        </div>
+
+                        <strong class="d-block text-left">Center Aligned:</strong>
+                        <div class="js-prism mb-2">
+                            <blockquote class="blockquote text-center">
+                                <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+                                <footer class="blockquote-footer">Someone famous in <cite title="Source Title">Source Title</cite></footer>
+                            </blockquote>
+                        </div>
+
+                        <strong class="d-block text-left">Right Aligned:</strong>
+                        <div class="js-prism mb-2">
+                            <blockquote class="blockquote text-right">
+                                <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+                                <footer class="blockquote-footer">Someone famous in <cite title="Source Title">Source Title</cite></footer>
+                            </blockquote>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>

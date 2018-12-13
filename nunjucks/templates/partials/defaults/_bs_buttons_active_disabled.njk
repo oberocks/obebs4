@@ -1,0 +1,46 @@
+<!-- _bs_buttons_active_disabled.njk -->
+		<div class="container-fluid pt-5 text-center bg-white text-dark">
+        
+            <div class="container">
+
+                <div class="row justify-content-center">
+                    
+                    <div id="{{ global_strings['defaults']['sections']['16']['id'] }}" class="col-md-6 pb-5">
+                        
+                        {% set headingHeadline = global_strings['defaults']['sections']['16']['head'] %}
+						{% set headingSubline = global_strings['defaults']['sections']['16']['subhead'] %}
+						{% set headingDescrip = global_strings['defaults']['sections']['16']['descrip'] %}
+                        {% include "partials/_columnHeading.njk" %}
+                        
+                        <div class="js-prism mb-2">
+                            <a href="#" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Active Link</a>
+                        </div>
+
+                        <div class="js-prism mb-2">
+                            <button type="button" class="btn btn-primary btn-lg active">Active Button</button>
+                        </div>
+
+                    </div>
+
+                    <div id="{{ global_strings['defaults']['sections']['17']['id'] }}" class="col-md-6 pb-5">
+                        
+                        {% set headingHeadline = global_strings['defaults']['sections']['17']['head'] %}
+						{% set headingSubline = global_strings['defaults']['sections']['17']['subhead'] %}
+						{% set headingDescrip = global_strings['defaults']['sections']['17']['descrip'] %}
+                        {% include "partials/_columnHeading.njk" %}
+
+                        <div class="js-prism mb-2">
+                            <button type="button" class="btn btn-lg btn-primary" disabled>Disabled Button</button>
+                        </div>
+
+                        <div class="js-prism mb-2">
+                            <a href="#" class="btn btn-primary btn-lg disabled" tabindex="-1" role="button" aria-disabled="true">Disabled Link Btn</a>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>

@@ -1,0 +1,88 @@
+<!-- _bs_badges.njk -->
+		<div class="container-fluid pt-5 text-center bg-white text-dark">
+        
+            <div class="container">
+
+                <div class="row justify-content-center">
+                    
+                    <div id="{{ global_strings['defaults']['sections']['13']['id'] }}" class="col-md-6 pb-5">
+                        
+                        {% set headingHeadline = global_strings['defaults']['sections']['13']['head'] %}
+						{% set headingSubline = global_strings['defaults']['sections']['13']['subhead'] %}
+						{% set headingDescrip = global_strings['defaults']['sections']['13']['descrip'] %}
+                        {% include "partials/_columnHeading.njk" %}
+
+                        {% macro text_badge(element) %}
+                        <div class="js-prism mb-2">
+                            <{{ element }}>Example <span class="badge badge-primary">NEW</span></{{ element }}>
+                        </div>
+                        {% endmacro %}
+                        
+                        {{ text_badge('h1') }}
+                        {{ text_badge('h2') }}
+                        {{ text_badge('h3') }}
+                        {{ text_badge('h4') }}
+                        {{ text_badge('h5') }}
+                        {{ text_badge('h6') }}
+                        {{ text_badge('div') }}
+
+                    </div>
+                    
+                    <div id="{{ global_strings['defaults']['sections']['11']['id'] }}" class="col-md-6 pb-5">
+                        
+                        {% set headingHeadline = global_strings['defaults']['sections']['11']['head'] %}
+						{% set headingSubline = global_strings['defaults']['sections']['11']['subhead'] %}
+						{% set headingDescrip = global_strings['defaults']['sections']['11']['descrip'] %}
+                        {% include "partials/_columnHeading.njk" %}
+                        
+                        <label class="d-block font-weight-bold text-center mb-0">Default Badge</label>
+                        <div class="js-prism mb-2 text-center">
+                            <span class="badge badge-primary">PRIMARY</span>
+                        </div>
+
+                        <label class="d-block font-weight-bold text-center mb-0">Pill Badge</label>
+                        <div class="js-prism mb-2 text-center">
+                            <span class="badge badge-pill badge-primary">PRIMARY</span>
+                        </div>
+
+                        <label class="d-block font-weight-bold text-center mb-0">Link Badge</label>
+                        <div class="js-prism mb-2 text-center">
+                            <a href="#" class="badge badge-primary">Primary</a>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="row justify-content-center pt-5">
+                
+                    <div id="{{ global_strings['defaults']['sections']['12']['id'] }}" class="col-md-6 pb-5">
+                        
+                        {% set headingHeadline = global_strings['defaults']['sections']['12']['head'] %}
+						{% set headingSubline = global_strings['defaults']['sections']['12']['subhead'] %}
+						{% set headingDescrip = global_strings['defaults']['sections']['12']['descrip'] %}
+                        {% include "partials/_columnHeading.njk" %}
+                        
+                        <label class="d-block font-weight-bold text-center">Button Element</label>
+                        <div class="js-prism mb-2 text-center">
+                            <button type="button" class="btn btn-primary">
+                                Messages <span class="badge badge-light">9</span>
+                                <span class="sr-only">Unread Messages</span>
+                            </button>
+                        </div>
+
+                        <label class="d-block font-weight-bold text-center">Link Element</label>
+                        <div class="js-prism mb-2 text-center">
+                            <a href="#" class="btn btn-primary" role="button">
+                                Messages <span class="badge badge-light">9</span>
+                                <span class="sr-only">Unread Messages</span>
+                            </a>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>

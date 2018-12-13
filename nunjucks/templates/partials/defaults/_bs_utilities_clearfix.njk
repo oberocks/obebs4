@@ -1,0 +1,36 @@
+<!-- _bs_utilities_clearfix.njk -->
+		<div class="container-fluid pt-5 text-center bg-white text-dark">
+        
+            <div class="container modal-workspace">
+
+                <div class="row justify-content-center pt-5">
+                    
+                    <div id="{{ global_strings['defaults']['sections']['29']['id'] }}" class="col-12">
+                        
+                        {% set headingHeadline = global_strings['defaults']['sections']['29']['head'] %}
+						{% set headingSubline = global_strings['defaults']['sections']['29']['subhead'] %}
+						{% set headingDescrip = global_strings['defaults']['sections']['29']['descrip'] %}
+                        {% include "partials/_columnHeading.njk" %}
+
+                    </div>
+
+                </div>
+
+                <div class="row justify-content-center">
+
+                    <div class="col-md-6 pb-5">
+                        
+                        <div class="js-prism mb-2">
+                            <div class="bg-light clearfix">
+                                <button type="button" class="btn btn-primary float-left">Float Left</button>
+                                <button type="button" class="btn btn-primary float-right">Float Right</button>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>

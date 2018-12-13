@@ -1,0 +1,105 @@
+<!-- _bs_lists.njk -->
+		<div class="container-fluid pt-5 text-center bg-white text-dark">
+        
+            <div class="container">
+                
+                <div class="row justify-content-center">
+                    
+                    <div id="{{ global_strings['defaults']['sections']['46']['id'] }}" class="col-12">
+                        
+                        {% set headingHeadline = global_strings['defaults']['sections']['46']['head'] %}
+						{% set headingSubline = global_strings['defaults']['sections']['46']['subhead'] %}
+						{% set headingDescrip = global_strings['defaults']['sections']['46']['descrip'] %}
+                        {% include "partials/_columnHeading.njk" %}
+
+                    </div>
+
+                </div>
+
+                <div class="row justify-content-center">
+                    
+                    <div class="col-lg-4 pb-5">
+                        
+                        <label class="d-block font-weight-bold text-left">Unordered List:</label>
+                        <div class="js-prism mb-2 text-left">
+                            <ul>
+                                <li>Lorem ipsum dolor sit amet</li>
+                                <li>Consectetur adipiscing elit
+                                    <ul>
+                                        <li>Facilisis in pretium nisl aliquet</li>
+                                    </ul>
+                                </li>
+                                <li>Nulla volutpat aliquam velit</li>
+                            </ul>
+                        </div>
+
+                    </div>
+
+                    <div class="col-lg-4 pb-5">
+                        
+                        <label class="d-block font-weight-bold text-left">Ordered List:</label>
+                        <div class="js-prism mb-2 text-left">
+                            <ol>
+                                <li>Lorem ipsum dolor sit amet</li>
+                                <li>Consectetur adipiscing elit
+                                    <ol>
+                                        <li>Facilisis in pretium nisl aliquet</li>
+                                    </ol>
+                                </li>
+                                <li>Nulla volutpat aliquam velit</li>
+                            </ol>
+                        </div>
+
+                    </div>
+                    
+                    <div class="col-lg-4 pb-5">
+                        
+                        <label class="d-block font-weight-bold text-left">Unstyled List:</label>
+                        <div class="js-prism mb-2 text-left">
+                            <ul class="list-unstyled">
+                                <li>Lorem ipsum dolor sit amet</li>
+                                <li>Consectetur adipiscing elit
+                                    <ul>
+                                        <li>Facilisis in pretium nisl aliquet</li>
+                                    </ul>
+                                </li>
+                                <li>Nulla volutpat aliquam velit</li>
+                            </ul>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="row justify-content-center pt-5">
+                    
+                    <div id="{{ global_strings['defaults']['sections']['47']['id'] }}" class="col-12">
+                        
+                        {% set headingHeadline = global_strings['defaults']['sections']['47']['head'] %}
+						{% set headingSubline = global_strings['defaults']['sections']['47']['subhead'] %}
+						{% set headingDescrip = global_strings['defaults']['sections']['47']['descrip'] %}
+                        {% include "partials/_columnHeading.njk" %}
+
+                    </div>
+
+                </div>
+
+                <div class="row justify-content-center">
+                    
+                    <div class="col-sm-9 pb-5">
+                        
+                        <div class="js-prism mb-2 text-center">
+                            <ul class="list-inline">
+                                <li class="list-inline-item">[ ITEM 1 ]</li>
+                                <li class="list-inline-item">[ ITEM 2 ]</li>
+                                <li class="list-inline-item">[ ITEM 3 ]</li>
+                            </ul>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>

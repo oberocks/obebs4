@@ -1,0 +1,73 @@
+<!-- _bs_button_groups_toolbars.njk -->
+		<div class="container-fluid pt-5 text-center bg-white text-dark">
+        
+            <div class="container">
+
+                <div class="row justify-content-center">
+                    
+                    <div id="{{ global_strings['defaults']['sections']['22']['id'] }}" class="col-md-6 pb-5">
+                        
+                        {% set headingHeadline = global_strings['defaults']['sections']['22']['head'] %}
+						{% set headingSubline = global_strings['defaults']['sections']['22']['subhead'] %}
+						{% set headingDescrip = global_strings['defaults']['sections']['22']['descrip'] %}
+                        {% include "partials/_columnHeading.njk" %}
+                        
+                        {% macro button_groups(label, alignmentClass, spacer = true) %}
+                        <label class="d-block font-weight-bold">{{ label }}</label>
+                        <div class="js-prism mb-2">
+                            <div class="btn-toolbar{{ alignmentClass }}" role="toolbar" aria-label="Buttons Toolbar">
+                                <div class="btn-group{% if spacer %} mr-2{% endif %}" role="group" aria-label="Toolbar Group One">
+                                    <button type="button" class="btn btn-primary">1</button>
+                                    <button type="button" class="btn btn-primary">2</button>
+                                    <button type="button" class="btn btn-primary">3</button>
+                                </div>
+                                <div class="btn-group" role="group" aria-label="Toolbar Group One">
+                                    <button type="button" class="btn btn-primary">4</button>
+                                    <button type="button" class="btn btn-primary">5</button>
+                                    <button type="button" class="btn btn-primary">6</button>
+                                </div>
+                            </div>
+                        </div>
+                        {% endmacro %}
+
+                        {{ button_groups('Left-Aligned Toolbar', ' justify-content-start') }}
+                        {{ button_groups('Center-Aligned Toolbar', ' justify-content-center') }}
+                        {{ button_groups('Right-Aligned Toolbar', ' justify-content-end') }}
+                        {{ button_groups('Justified Toolbar', ' justify-content-between', spacer = false) }}
+                        {{ button_groups('Justified Gutter Toolbar', ' justify-content-around', spacer = false) }}
+
+                    </div>
+
+                </div>
+
+                <div class="row justify-content-center pt-5">
+                    
+                    <div id="{{ global_strings['defaults']['sections']['23']['id'] }}" class="col-md-6 pb-5">
+                        
+                        {% set headingHeadline = global_strings['defaults']['sections']['23']['head'] %}
+						{% set headingSubline = global_strings['defaults']['sections']['23']['subhead'] %}
+						{% set headingDescrip = global_strings['defaults']['sections']['23']['descrip'] %}
+                        {% include "partials/_columnHeading.njk" %}
+
+                        <div class="js-prism mb-2">
+                            <div class="btn-toolbar justify-content-between" role="toolbar" aria-label="Toolbar with button groups">
+                                <div class="btn-group" role="group" aria-label="First group">
+                                    <button type="button" class="btn btn-primary">&lsaquo;</button>
+                                    <button type="button" class="btn btn-primary">&rsaquo;</button>
+                                </div>
+                                <div class="input-group">
+                                    <input type="text" class="form-control" placeholder="Search" aria-label="Search Input" aria-describedby="btnGrp-input-label">
+                                    <div class="input-group-append">
+                                        <div class="input-group-text bg-primary text-light" id="btnGrp-input-label">?</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>

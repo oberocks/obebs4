@@ -1,0 +1,74 @@
+<!-- _bs_buttons_elements_sizes.njk -->
+		<div class="container-fluid pt-5 text-center bg-white text-dark">
+        
+            <div class="container">
+
+                <div class="row justify-content-center">
+                    
+                    <div id="{{ global_strings['defaults']['sections']['18']['id'] }}" class="col-md-6 pb-5">
+                        
+                        {% set headingHeadline = global_strings['defaults']['sections']['18']['head'] %}
+						{% set headingSubline = global_strings['defaults']['sections']['18']['subhead'] %}
+						{% set headingDescrip = global_strings['defaults']['sections']['18']['descrip'] %}
+                        {% include "partials/_columnHeading.njk" %}
+
+                        <div class="js-prism mb-2">
+                            <button class="btn btn-primary">Button</button>
+                        </div>
+
+                        <div class="js-prism mb-2">
+                            <a class="btn btn-primary" href="#" role="button">Link Button</a>
+                        </div>
+
+                        <div class="js-prism mb-2">
+                            <input class="btn btn-primary" type="button" value="Input Button">
+                        </div>
+
+                        <div class="js-prism mb-2">
+                            <input class="btn btn-primary" type="submit" value="Submit Button">
+                        </div>
+
+                        <div class="js-prism mb-2">
+                            <input class="btn btn-primary" type="reset" value="Reset Button">
+                        </div>
+
+                    </div>
+                    
+                    <div id="{{ global_strings['defaults']['sections']['19']['id'] }}" class="col-md-6 pb-5">
+                        
+                        {% set headingHeadline = global_strings['defaults']['sections']['19']['head'] %}
+						{% set headingSubline = global_strings['defaults']['sections']['19']['subhead'] %}
+						{% set headingDescrip = global_strings['defaults']['sections']['19']['descrip'] %}
+                        {% include "partials/_columnHeading.njk" %}
+
+                        <div class="js-prism mb-2">
+                            <button type="button" class="btn btn-primary btn-sm">Small</button>
+                        </div>
+
+                        <div class="js-prism mb-2">
+                            <button type="button" class="btn btn-primary">Default</button>
+                        </div>
+
+                        <div class="js-prism mb-2">
+                            <button type="button" class="btn btn-primary btn-lg">Large</button>
+                        </div>
+
+                        <div class="js-prism mb-2">
+                            <button type="button" class="btn btn-primary btn-sm btn-block">Small Block</button>
+                        </div>
+
+                        <div class="js-prism mb-2">
+                            <button type="button" class="btn btn-primary btn-block">Block Button</button>
+                        </div>
+
+                        <div class="js-prism mb-2">
+                            <button type="button" class="btn btn-primary btn-lg btn-block">Large Block</button>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>

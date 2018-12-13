@@ -1,0 +1,59 @@
+<!-- _bs_button_groups_vertical.njk -->
+		<div class="container-fluid pt-5 text-center bg-white text-dark">
+        
+            <div class="container">
+
+                <div class="row justify-content-center">
+                    
+                    <div id="{{ global_strings['defaults']['sections']['24']['id'] }}" class="col-md-6 pb-5">
+                        
+                        {% set headingHeadline = global_strings['defaults']['sections']['24']['head'] %}
+						{% set headingSubline = global_strings['defaults']['sections']['24']['subhead'] %}
+						{% set headingDescrip = global_strings['defaults']['sections']['24']['descrip'] %}
+                        {% include "partials/_columnHeading.njk" %}
+                        
+                        <label class="d-block font-weight-bold">Standard Vertical</label>
+                        <div class="js-prism mb-2">
+                            <div class="btn-group-vertical" role="group" aria-label="Vertical Button Group">
+                                <button type="button" class="btn btn-primary">Top</button>
+                                <button type="button" class="btn btn-primary">Middle</button>
+                                <button type="button" class="btn btn-primary">Bottom</button>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div id="{{ global_strings['defaults']['sections']['25']['id'] }}" class="col-md-6 pb-5">
+                        
+                        {% set headingHeadline = global_strings['defaults']['sections']['25']['head'] %}
+						{% set headingSubline = global_strings['defaults']['sections']['25']['subhead'] %}
+						{% set headingDescrip = global_strings['defaults']['sections']['25']['descrip'] %}
+                        {% include "partials/_columnHeading.njk" %}
+                        
+                        <label class="d-block font-weight-bold">Dropdown Vertical</label>
+                        <div class="js-prism mb-2">
+                            <div class="btn-group-vertical" role="group" aria-label="Button group with nested dropdown">
+                                
+                                <button type="button" class="btn btn-primary">Top</button>
+
+                                <div class="btn-group" role="group">
+                                    <button id="btnGroupDrop1" type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Dropdown</button>
+                                    <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+                                        <a class="dropdown-item" href="#">Dropdown link</a>
+                                        <a class="dropdown-item" href="#">Dropdown link</a>
+                                    </div>
+                                </div>
+
+                                <button type="button" class="btn btn-primary">Bottom</button>
+                                
+                            </div>
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+        </div>

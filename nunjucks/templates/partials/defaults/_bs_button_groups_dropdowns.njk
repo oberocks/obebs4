@@ -1,0 +1,39 @@
+<!-- _bs_button_groups_dropdowns.njk -->
+		<div class="container-fluid pt-5 text-center bg-white text-dark">
+        
+            <div class="container">
+
+                <div class="row justify-content-center">
+                    
+                    <div id="{{ global_strings['defaults']['sections']['20']['id'] }}" class="col-md-6 pb-5">
+                        
+                        {% set headingHeadline = global_strings['defaults']['sections']['20']['head'] %}
+						{% set headingSubline = global_strings['defaults']['sections']['20']['subhead'] %}
+						{% set headingDescrip = global_strings['defaults']['sections']['20']['descrip'] %}
+                        {% include "partials/_columnHeading.njk" %}
+                        
+                        <div class="js-prism mb-2">
+                            <div class="btn-group" role="group" aria-label="Button group with nested dropdown">
+                                
+                                <button type="button" class="btn btn-primary">1</button>
+                                
+                                <button type="button" class="btn btn-primary">2</button>
+
+                                <div class="btn-group" role="group">
+                                    <button id="button-group-dropdown" type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Dropdown</button>
+                                    <div class="dropdown-menu" aria-labelledby="button-group-dropdown">
+                                        <a class="dropdown-item" href="#">Dropdown link</a>
+                                        <a class="dropdown-item" href="#">Dropdown link</a>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
