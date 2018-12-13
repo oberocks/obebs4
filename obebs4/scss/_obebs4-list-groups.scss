@@ -6,7 +6,7 @@
 @if $enable-obebs4-list-groups {
 
 	@each $color, $value in $obebs4-color-wheel-colors {
-		@include list-group-item-variant($color, obe-color-wheel-color-level($color, -9), obe-color-wheel-color-level($color, 6));
+		@include list-group-item-variant($color, obebs4-color-wheel-color-level($color, -9), obebs4-color-wheel-color-level($color, 6));
 	}
 	
 }

@@ -102,16 +102,16 @@
   
   @each $color, $value in $all-colors {
     
-    @include obe-bg-gradient-variant(".bg-gradient-#{$color}", $value);
-    @include obe-inv-bg-gradient-variant(".bg-gradient-#{$color}-reversed", $value);
-    @include obe-right-bg-gradient-variant(".bg-gradient-#{$color}-right", $value);
-    @include obe-left-bg-gradient-variant(".bg-gradient-#{$color}-left", $value);
-    @include obe-radial-bg-gradient-variant(".bg-gradient-#{$color}-radial", $value);
-    @include obe-radial-inv-bg-gradient-variant(".bg-gradient-#{$color}-radial-reversed", $value);
-    @include obe-diag-top-right-bg-gradient-variant(".bg-gradient-#{$color}-top-right", $value);
-    @include obe-diag-bottom-left-bg-gradient-variant(".bg-gradient-#{$color}-bottom-left", $value);
-    @include obe-diag-top-left-bg-gradient-variant(".bg-gradient-#{$color}-top-left", $value);
-    @include obe-diag-bottom-right-bg-gradient-variant(".bg-gradient-#{$color}-bottom-right", $value);
+    @include obebs4-bg-gradient-variant(".bg-gradient-#{$color}", $value);
+    @include obebs4-inv-bg-gradient-variant(".bg-gradient-#{$color}-reversed", $value);
+    @include obebs4-right-bg-gradient-variant(".bg-gradient-#{$color}-right", $value);
+    @include obebs4-left-bg-gradient-variant(".bg-gradient-#{$color}-left", $value);
+    @include obebs4-radial-bg-gradient-variant(".bg-gradient-#{$color}-radial", $value);
+    @include obebs4-radial-inv-bg-gradient-variant(".bg-gradient-#{$color}-radial-reversed", $value);
+    @include obebs4-diag-top-right-bg-gradient-variant(".bg-gradient-#{$color}-top-right", $value);
+    @include obebs4-diag-bottom-left-bg-gradient-variant(".bg-gradient-#{$color}-bottom-left", $value);
+    @include obebs4-diag-top-left-bg-gradient-variant(".bg-gradient-#{$color}-top-left", $value);
+    @include obebs4-diag-bottom-right-bg-gradient-variant(".bg-gradient-#{$color}-bottom-right", $value);
     
   }
   
@@ -121,11 +121,11 @@
 	
 	@each $color, $values in $obebs4-2-color-pairs {
 		
-		@include obe-vert-2color-gradient(".bg-gradient-#{$color}-vertical", nth($values, 1), nth($values, 2));
-		@include obe-horiz-2color-gradient(".bg-gradient-#{$color}-horizontal", nth($values, 1), nth($values, 2));
-		@include obe-radial-2color-gradient(".bg-gradient-#{$color}-radial", nth($values, 1), nth($values, 2));
-		@include obe-diag-up-2color-gradient(".bg-gradient-#{$color}-diagonal-up", nth($values, 1), nth($values, 2));
-		@include obe-diag-down-2color-gradient(".bg-gradient-#{$color}-diagonal-down", nth($values, 1), nth($values, 2));
+		@include obebs4-vert-2color-gradient(".bg-gradient-#{$color}-vertical", nth($values, 1), nth($values, 2));
+		@include obebs4-horiz-2color-gradient(".bg-gradient-#{$color}-horizontal", nth($values, 1), nth($values, 2));
+		@include obebs4-radial-2color-gradient(".bg-gradient-#{$color}-radial", nth($values, 1), nth($values, 2));
+		@include obebs4-diag-up-2color-gradient(".bg-gradient-#{$color}-diagonal-up", nth($values, 1), nth($values, 2));
+		@include obebs4-diag-down-2color-gradient(".bg-gradient-#{$color}-diagonal-down", nth($values, 1), nth($values, 2));
 		
 	}
 	
@@ -135,11 +135,11 @@
 	
 	@each $color, $values in $obebs4-3-color-pairs {
 		
-		@include obe-vert-3color-gradient(".bg-gradient-#{$color}-vertical", nth($values, 1), nth($values, 2), nth($values, 3));
-		@include obe-horiz-3color-gradient(".bg-gradient-#{$color}-horizontal", nth($values, 1), nth($values, 2), nth($values, 3));
-		@include obe-radial-3color-gradient(".bg-gradient-#{$color}-radial", nth($values, 1), nth($values, 2), nth($values, 3));
-		@include obe-diag-up-3color-gradient(".bg-gradient-#{$color}-diagonal-up", nth($values, 1), nth($values, 2), nth($values, 3));
-		@include obe-diag-down-3color-gradient(".bg-gradient-#{$color}-diagonal-down", nth($values, 1), nth($values, 2), nth($values, 3));
+		@include obebs4-vert-3color-gradient(".bg-gradient-#{$color}-vertical", nth($values, 1), nth($values, 2), nth($values, 3));
+		@include obebs4-horiz-3color-gradient(".bg-gradient-#{$color}-horizontal", nth($values, 1), nth($values, 2), nth($values, 3));
+		@include obebs4-radial-3color-gradient(".bg-gradient-#{$color}-radial", nth($values, 1), nth($values, 2), nth($values, 3));
+		@include obebs4-diag-up-3color-gradient(".bg-gradient-#{$color}-diagonal-up", nth($values, 1), nth($values, 2), nth($values, 3));
+		@include obebs4-diag-down-3color-gradient(".bg-gradient-#{$color}-diagonal-down", nth($values, 1), nth($values, 2), nth($values, 3));
 		
 	}
 	

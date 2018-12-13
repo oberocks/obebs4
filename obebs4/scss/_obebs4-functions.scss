@@ -4,7 +4,7 @@
 
 
 // ( Based off of Bootstrap 4's original @function theme-color )
-@function obe-color-wheel-color($key: "primary") {
+@function obebs4-color-wheel-color($key: "primary") {
 	
 	@return map-get($obebs4-and-bootstrap-all-colors, $key);
 	
@@ -12,9 +12,9 @@
 
 // Request a theme color level
 // ( Based off of Bootstrap 4's original @function theme-color-level )
-@function obe-color-wheel-color-level($color-name: "white", $level: 0) {
+@function obebs4-color-wheel-color-level($color-name: "white", $level: 0) {
 	
-	$color: obe-color-wheel-color($color-name);
+	$color: obebs4-color-wheel-color($color-name);
 	$color-base: if($level > 0, $black, $white);
 	$level: abs($level);
 

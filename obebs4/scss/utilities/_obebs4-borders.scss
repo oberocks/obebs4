@@ -15,7 +15,7 @@
 
 @if $enable-obebs4-border-widths {
 	
-	@each $key, $value in $obe-border-widths {
+	@each $key, $value in $obebs4-border-widths {
 		.border-width-#{$key} { border-width: $value !important; }
 	}
 	

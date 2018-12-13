@@ -1,7 +1,7 @@
 // stylelint-disable declaration-no-important
 
 // mixin for vertical 2 color gradients
-@mixin obe-vert-2color-gradient($className, $color1, $color2) {
+@mixin obebs4-vert-2color-gradient($className, $color1, $color2) {
 	
 	#{$className} {
 		
@@ -16,7 +16,7 @@
 }
 
 // mixin for horizontal 2 color gradients
-@mixin obe-horiz-2color-gradient($className, $color1, $color2) {
+@mixin obebs4-horiz-2color-gradient($className, $color1, $color2) {
 	
 	#{$className} {
 		
@@ -31,7 +31,7 @@
 }
 
 // mixin for radial 2 color gradients
-@mixin obe-radial-2color-gradient($className, $color1, $color2) {
+@mixin obebs4-radial-2color-gradient($className, $color1, $color2) {
 	
 	#{$className} {
 		
@@ -46,7 +46,7 @@
 }
 
 // mixin for diagonal up 2 color gradients
-@mixin obe-diag-up-2color-gradient($className, $color1, $color2) {
+@mixin obebs4-diag-up-2color-gradient($className, $color1, $color2) {
 	
 	#{$className} {
 	
@@ -61,7 +61,7 @@
 }
 
 // mixin for diagonal down 2 color gradients
-@mixin obe-diag-down-2color-gradient($className, $color1, $color2) {
+@mixin obebs4-diag-down-2color-gradient($className, $color1, $color2) {
 	
 	#{$className} {
 		
@@ -87,7 +87,7 @@
 
 
 // mixin for standard 2 color gradients
-//@mixin obe-2color-bgg-variant($className, $color1, $color2) {
+//@mixin obebs4-2color-bgg-variant($className, $color1, $color2) {
 //	#{$className} {
 //		background: $color1;
 //		background: -moz-linear-gradient(top, $color1 0%, $color2 100%);
@@ -98,7 +98,7 @@
 //}
 
 // mixin for inverted 2 color gradients
-//@mixin obe-inv-2color-bgg-variant($className, $color1, $color2) {
+//@mixin obebs4-inv-2color-bgg-variant($className, $color1, $color2) {
 //	#{$className} {
 //		background: $color2;
 //		background: -moz-linear-gradient(top, $color2 0%, $color1 100%);
@@ -109,7 +109,7 @@
 //}
 
 // mixin for right 2 color gradients
-//@mixin obe-right-2color-bgg-variant($className, $color1, $color2) {
+//@mixin obebs4-right-2color-bgg-variant($className, $color1, $color2) {
 //  #{$className} {
 //    background: $color1;
 //	background: -moz-linear-gradient(left, $color1 0%, $color2 100%);
@@ -120,7 +120,7 @@
 //}
 
 // mixin for left 1 color gradients
-//@mixin obe-left-2color-bgg-variant($className, $color1, $color2) {
+//@mixin obebs4-left-2color-bgg-variant($className, $color1, $color2) {
 //  #{$className} {
 //    background: $color2;
 //	background: -moz-linear-gradient(left, $color2 0%, $color1 100%);

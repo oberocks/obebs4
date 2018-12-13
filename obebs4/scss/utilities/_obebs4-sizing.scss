@@ -6,7 +6,7 @@
 
 	@each $prop, $abbrev in (width: w, height: h) {
 	
-		@each $size, $length in $obe-sizes {
+		@each $size, $length in $obebs4-sizes {
 			.#{$abbrev}-#{$size} { #{$prop}: $length !important; }
 		}
 	

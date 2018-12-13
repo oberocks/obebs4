@@ -23,8 +23,8 @@
 			color: color-yiq(darken($value, 20%));
 		}
 		
-		@include table-row-variant($color, obe-color-wheel-color-level($color, -8));
-		@include obebs4-table-row-active-variant($color, obe-color-wheel-color-level($color, 1));
+		@include table-row-variant($color, obebs4-color-wheel-color-level($color, -8));
+		@include obebs4-table-row-active-variant($color, obebs4-color-wheel-color-level($color, 1));
 	
 		// for bordered tables
 		.table-bordered.table-#{$color} th, 
@@ -35,17 +35,17 @@
 		// for striped tables
 		.table-striped.table-#{$color} tbody tr {
 			@include hover {
-				background-color: obe-color-wheel-color-level($color, -3);
-				color: color-yiq(obe-color-wheel-color-level($color, -3));
+				background-color: obebs4-color-wheel-color-level($color, -3);
+				color: color-yiq(obebs4-color-wheel-color-level($color, -3));
 			}
 		}
 		
 		// for striped tables
 		.table-striped.table-#{$color} tbody tr:nth-of-type(#{$table-striped-order}) {
-			background-color: obe-color-wheel-color-level($color, -6);
+			background-color: obebs4-color-wheel-color-level($color, -6);
 			@include hover {
-				background-color: obe-color-wheel-color-level($color, -3);
-				color: color-yiq(obe-color-wheel-color-level($color, -3));
+				background-color: obebs4-color-wheel-color-level($color, -3);
+				color: color-yiq(obebs4-color-wheel-color-level($color, -3));
 			}
 		}
 
@@ -59,23 +59,23 @@
 		// for dark tables
 		.table-dark tr.bg-#{$color} {
 			@include hover {
-				background-color: obe-color-wheel-color-level($color, 3) !important;
+				background-color: obebs4-color-wheel-color-level($color, 3) !important;
 			}
 		}
 		
 		// for dark tables
 		.table-dark tr.bg-#{$color}:nth-of-type(#{$table-striped-order}) {
-			background-color: obe-color-wheel-color-level($color, 2) !important;
+			background-color: obebs4-color-wheel-color-level($color, 2) !important;
 			@include hover {
-				background-color: obe-color-wheel-color-level($color, 3) !important;
+				background-color: obebs4-color-wheel-color-level($color, 3) !important;
 			}
 		}
 
 		// for dark tables
 		.table-dark tr.bg-#{$color}.active,
 		.table-dark tr.bg-#{$color}.active:hover {
-			background-color: obe-color-wheel-color-level($color, 5) !important;
-			color: color-yiq(obe-color-wheel-color-level($color, 5)) !important;
+			background-color: obebs4-color-wheel-color-level($color, 5) !important;
+			color: color-yiq(obebs4-color-wheel-color-level($color, 5)) !important;
 		}
 	
 	}

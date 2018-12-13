@@ -1,7 +1,7 @@
 
 @if $enable-obebs4-opacity {
 
-@each $key, $value in $obe-opacity  {
+@each $key, $value in $obebs4-opacity  {
     .opacity-#{$key} {
         opacity: $value !important;
     }
