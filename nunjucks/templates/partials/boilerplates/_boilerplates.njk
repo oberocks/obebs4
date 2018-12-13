@@ -1,0 +1,184 @@
+<!-- _boilerplates.njk -->
+		<div class="container-fluid pt-5 text-center bg-white text-dark">
+
+            <div class="container">
+
+                <div class="row justify-content-center">
+                    
+                    <div id="{{ global_strings['boilerplates']['sections']['0']['id'] }}" class="col-12 pb-5">
+                        
+                        {% set headingHeadline = global_strings['boilerplates']['sections']['0']['head'] %}
+						{% set headingSubline = global_strings['boilerplates']['sections']['0']['subhead'] %}
+						{% set headingDescrip = global_strings['boilerplates']['sections']['0']['descrip'] %}
+                        {% include "partials/_columnHeading.njk" %}
+
+                        <label class="d-block font-weight-bold">Prototyping Boilerplate:</label>
+
+                        <div>
+                            <pre>
+                                <code class="language-markup line-numbers">
+                                    &lt;!doctype html&gt;
+                                    &lt;html lang="en"&gt;
+                                        
+                                        &lt;head&gt;
+
+                                            &lt;!-- Required meta tags --&gt;
+                                            &lt;meta charset="utf-8"&gt;
+                                            &lt;meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"&gt;
+
+                                            &lt;!-- Bootstrap CSS --&gt;
+                                            &lt;link rel="stylesheet" href="css/obebs4.library.bundle.css"&gt;
+                                            
+                                            &lt;!-- FontAwesome (v5.0.7) SVG JS --&gt;
+                                            &lt;script src="https://use.fontawesome.com/releases/v5.6.1/js/all.js" data-auto-replace-svg="nest"&gt;&lt;/script&gt;
+                                            {% if obe_settings['enable-google-fonts'] === 'true' %}
+                                            &lt;!-- Google Fonts --&gt;
+                                            &lt;link href="https://{{ obe_settings['google-fonts-url'] | replace("___", ".") | replace("---", ":") | replace("qqq", "?") }}" rel="stylesheet"&gt;
+                                            {% endif %}
+                                            &lt;title&gt;OBE Rocks!&lt;/title&gt;
+                                            &lt;meta name="description" content="An awesome page for my new app/website!"&gt;
+
+                                            &lt;!-- Custom/Development CSS for this page --&gt;
+                                            &lt;style&gt;
+
+                                                /* New/Experimental Page-level CSS Goes Here... */
+
+                                            &lt;/style&gt;
+                                        
+                                        &lt;/head&gt;
+
+                                        &lt;body&gt;
+
+                                            &lt;h1&gt;OBE Rocks!&lt;/h1&gt;
+
+                                            &lt;!-- JavaScript --&gt;
+                                            &lt;script src="js/obebs4.library.bundle.js"&gt;&lt;/script&gt;
+                                            
+                                            &lt;!-- Custom/Development JS for this page --&gt;
+                                            &lt;script type="text/javascript"&gt;
+
+                                                // New JavaScript Goes Here...
+
+                                            &lt;/script&gt;
+
+                                        &lt;/body&gt;
+
+                                    &lt;/html&gt;
+                                </code>
+                            </pre>
+                        </div>
+
+                        <label class="d-block font-weight-bold pt-4">SEO Optimized Boilerplate:</label>
+
+                        <div>
+                            <pre>
+                                <code class="language-markup line-numbers">
+                                    &lt;!doctype html&gt;
+                                    &lt;html lang="en"&gt;
+                                        
+                                        &lt;head&gt;
+
+                                            &lt;!-- Required meta tags --&gt;
+                                            &lt;meta charset="utf-8"&gt;
+                                            &lt;meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"&gt;
+
+                                            &lt;!-- Global Meta Types --&gt;
+                                            &lt;meta name="twitter:card" content="summary" /&gt;
+                                            &lt;meta property="og:type" content="article" /&gt;
+
+                                            &lt;!-- Global Meta Authors --&gt;
+                                            &lt;meta name="twitter:site" content="@obe_luv" /&gt;
+
+                                            &lt;!-- Global Meta URLs --&gt;
+                                            &lt;meta property="og:url" content="https://library.mattmct.com/" /&gt;
+
+                                            &lt;!-- Global Meta IDs --&gt;
+                                            &lt;meta property="og:site_name" content="OBE Library Site" /&gt;
+                                            &lt;meta property="fb:admins" content="Facebook numeric ID" /&gt;
+
+                                            &lt;!-- Global FAVICONS --&gt;
+                                            &lt;link rel="shortcut icon" href="images/favicon/favicon.ico"&gt;
+                                            &lt;link rel="apple-touch-icon" sizes="57x57" href="images/favicons/apple-icon-57x57.png"&gt;
+                                            &lt;link rel="apple-touch-icon" sizes="60x60" href="images/favicons/apple-icon-60x60.png"&gt;
+                                            &lt;link rel="apple-touch-icon" sizes="72x72" href="images/favicons/apple-icon-72x72.png"&gt;
+                                            &lt;link rel="apple-touch-icon" sizes="76x76" href="images/favicons/apple-icon-76x76.png"&gt;
+                                            &lt;link rel="apple-touch-icon" sizes="114x114" href="images/favicons/apple-icon-114x114.png"&gt;
+                                            &lt;link rel="apple-touch-icon" sizes="120x120" href="images/favicons/apple-icon-120x120.png"&gt;
+                                            &lt;link rel="apple-touch-icon" sizes="144x144" href="images/favicons/apple-icon-144x144.png"&gt;
+                                            &lt;link rel="apple-touch-icon" sizes="152x152" href="images/favicons/apple-icon-152x152.png"&gt;
+                                            &lt;link rel="apple-touch-icon" sizes="180x180" href="images/favicons/apple-icon-180x180.png"&gt;
+                                            &lt;link rel="icon" type="image/png" sizes="192x192"  href="images/favicons/android-icon-192x192.png"&gt;
+                                            &lt;link rel="icon" type="image/png" sizes="32x32" href="images/favicons/favicon-32x32.png"&gt;
+                                            &lt;link rel="icon" type="image/png" sizes="96x96" href="images/favicons/favicon-96x96.png"&gt;
+                                            &lt;link rel="icon" type="image/png" sizes="16x16" href="images/favicons/favicon-16x16.png"&gt;
+                                            &lt;link rel="manifest" href="images/favicons/manifest.json"&gt;
+                                            &lt;meta name="msapplication-TileColor" content="#ffffff" /&gt;
+                                            &lt;meta name="msapplication-TileImage" content="images/favicons/ms-icon-144x144.png" /&gt;
+                                            &lt;meta name="theme-color" content="#ffffff" /&gt;
+
+                                            &lt;!-- Bootstrap CSS --&gt;
+                                            &lt;link rel="stylesheet" href="css/obebs4.library.bundle.css"&gt;
+                                            
+                                            &lt;!-- FontAwesome (v5.0.7) SVG JS --&gt;
+                                            &lt;script src="https://use.fontawesome.com/releases/v5.6.1/js/all.js" data-auto-replace-svg="nest"&gt;&lt;/script&gt;
+                                            {% if obe_settings['enable-google-fonts'] === 'true' %}
+                                            &lt;!-- Google Fonts --&gt;
+                                            &lt;link href="https://{{ obe_settings['google-fonts-url'] | replace("___", ".") | replace("---", ":") | replace("qqq", "?") }}" rel="stylesheet"&gt;
+                                            {% endif %}
+                                            &lt;!-- Page Specific Title Tags --&gt;
+                                            &lt;title&gt;OBE Rocks!&lt;/title&gt;
+                                            &lt;meta name="twitter:title" content="OBE Rocks!" /&gt;
+                                            &lt;meta property="og:title" content="OBE Rocks!" /&gt;
+
+                                            &lt;!-- Page Specific Description Tags --&gt;
+                                            &lt;meta name="description" content="An awesome page for my new app/website!" /&gt;
+                                            &lt;meta name="twitter:description" content="An awesome page for my new app/website!" /&gt;
+                                            &lt;meta property="og:description" content="An awesome page for my new app/website!" /&gt;
+
+                                            &lt;!-- Page Specific Author Tags --&gt;
+                                            &lt;meta name="author" content="Author's Name Here" /&gt;
+                                            &lt;meta name="twitter:creator" content="@twitter_handle_here" /&gt;
+
+                                            &lt;!-- Page Specific Share Images data --&gt;
+                                            &lt;!-- Twitter images must be at least 120x120px --&gt;
+                                            &lt;meta name="twitter:image" content="images/OBE-twitter-share-image.jpg" /&gt;
+                                            &lt;!-- Facebook images should be 1200x630px --&gt;
+                                            &lt;meta property="og:image" content="images/OBE-facebook-share-image.jpg" /&gt;
+
+                                            &lt;!-- Custom/Development CSS for this page --&gt;
+                                            &lt;style&gt;
+
+                                                /* New/Experimental Page-level CSS Goes Here... */
+
+                                            &lt;/style&gt;
+                                        
+                                        &lt;/head&gt;
+
+                                        &lt;body&gt;
+
+                                            &lt;h1&gt;OBE Rocks!&lt;/h1&gt;
+
+                                            &lt;!-- JavaScript --&gt;
+                                            &lt;script src="js/obebs4.library.bundle.js"&gt;&lt;/script&gt;
+                                            
+                                            &lt;!-- Custom/Development JS for this page --&gt;
+                                            &lt;script type="text/javascript"&gt;
+
+                                                // New JavaScript Goes Here...
+
+                                            &lt;/script&gt;
+
+                                        &lt;/body&gt;
+
+                                    &lt;/html&gt;
+                                </code>
+                            </pre>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
