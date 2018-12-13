@@ -1,5 +1,6 @@
 <!-- _material_design_forms.njk -->
-		<div class="container-fluid pt-5 text-center bg-white text-dark">
+		{% if obe_settings['enable-obeb4-material-design-forms'] === 'true' %}
+        <div class="container-fluid pt-5 text-center bg-white text-dark">
         
             <div class="container pt-5">
                 
@@ -138,3 +139,4 @@
             </div>
 
         </div>
+        {% endif %}
