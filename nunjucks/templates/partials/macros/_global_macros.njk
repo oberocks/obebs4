@@ -1,0 +1,158 @@
+<!-- _global_macros.njk -->
+
+{%- macro responsive_classes_thead(theadClasses) %}
+                                <thead class="{{ theadClasses }}">
+                                    <tr>
+                                        <th scope="col">Base Class</th>
+                                        <th scope="col">Small</th>
+                                        <th scope="col">Medium</th>
+                                        <th scope="col">Large</th>
+                                        <th scope="col">X-Large</th>
+                                    </tr>
+                                </thead>
+{%- endmacro %}
+
+
+
+{%- macro display_responsive_classes(string) %}
+                                    <tr>
+                                        <th scope="row" class="bg-dark text-light border-light"><samp>.d-{{ string }}</samp></th>
+                                        <td><samp>.d-sm-{{ string }}</samp></td>
+                                        <td><samp>.d-md-{{ string }}</samp></td>
+                                        <td><samp>.d-lg-{{ string }}</samp></td>
+                                        <td><samp>.d-xl-{{ string }}</samp></td>
+                                    </tr>
+{%- endmacro %}
+
+
+
+{%- macro flex_responsive_classes(string) %}
+                                    <tr>
+                                        <th scope="row" class="bg-dark text-light border-light"><samp>.flex-{{ string }}</samp></th>
+                                        <td><samp>.flex-sm-{{ string }}</samp></td>
+                                        <td><samp>.flex-md-{{ string }}</samp></td>
+                                        <td><samp>.flex-lg-{{ string }}</samp></td>
+                                        <td><samp>.flex-xl-{{ string }}</samp></td>
+                                    </tr>
+{%- endmacro %}
+
+
+
+{%- macro justify_content_classes(string) %}
+                                    <tr>
+                                        <th scope="row" class="bg-dark text-light border-light"><samp>.justify-content-{{ string }}</samp></th>
+                                        <td><samp>.justify-content-sm-{{ string }}</samp></td>
+                                        <td><samp>.justify-content-md-{{ string }}</samp></td>
+                                        <td><samp>.justify-content-lg-{{ string }}</samp></td>
+                                        <td><samp>.justify-content-xl-{{ string }}</samp></td>
+                                    </tr>
+{%- endmacro %}
+
+
+
+{%- macro align_items_classes(string) %}
+                                    <tr>
+                                        <th scope="row" class="bg-dark text-light border-light"><samp>.align-items-{{ string }}</samp></th>
+                                        <td><samp>.align-items-sm-{{ string }}</samp></td>
+                                        <td><samp>.align-items-md-{{ string }}</samp></td>
+                                        <td><samp>.align-items-lg-{{ string }}</samp></td>
+                                        <td><samp>.align-items-xl-{{ string }}</samp></td>
+                                    </tr>
+{%- endmacro %}
+
+
+
+{%- macro align_self_classes(string) %}
+                                    <tr>
+                                        <th scope="row" class="bg-dark text-light border-light"><samp>.align-self-{{ string }}</samp></th>
+                                        <td><samp>.align-self-sm-{{ string }}</samp></td>
+                                        <td><samp>.align-self-md-{{ string }}</samp></td>
+                                        <td><samp>.align-self-lg-{{ string }}</samp></td>
+                                        <td><samp>.align-self-xl-{{ string }}</samp></td>
+                                    </tr>
+{%- endmacro %}
+
+
+
+{%- macro display_print_classes(string) %}
+                                    <tr>
+                                        <th scope="row" class="bg-dark text-light border-light"><samp>.d-print-{{ string }}</samp></th>
+                                        <td><samp>.d-print-sm-{{ string }}</samp></td>
+                                        <td><samp>.d-print-md-{{ string }}</samp></td>
+                                        <td><samp>.d-print-lg-{{ string }}</samp></td>
+                                        <td><samp>.d-print-xl-{{ string }}</samp></td>
+                                    </tr>
+{%- endmacro %}
+
+
+
+{%- macro flex_auto_margins(string) %}
+                                    <tr>
+                                        <th scope="row" class="bg-dark text-light border-light"><samp>.{{ string }}-auto</samp></th>
+                                        <td><samp>.{{ string }}-sm-auto</samp></td>
+                                        <td><samp>.{{ string }}-md-auto</samp></td>
+                                        <td><samp>.{{ string }}-lg-auto</samp></td>
+                                        <td><samp>.{{ string }}-xl-auto</samp></td>
+                                    </tr>
+{%- endmacro %}
+
+
+
+
+{%- macro flex_ordering(string) %}
+                                    <tr>
+                                        <th scope="row" class="bg-dark text-light border-light"><samp>.order-{{ string }}</samp></th>
+                                        <td><samp>.order-sm-{{ string }}</samp></td>
+                                        <td><samp>.order-md-{{ string }}</samp></td>
+                                        <td><samp>.order-lg-{{ string }}</samp></td>
+                                        <td><samp>.order-xl-{{ string }}</samp></td>
+                                    </tr>
+{%- endmacro %}
+
+
+
+{%- macro flex_align_content(string) %}
+                                    <tr>
+                                        <th scope="row" class="bg-dark text-light border-light"><samp>.align-content-{{ string }}</samp></th>
+                                        <td><samp>.align-content-sm-{{ string }}</samp></td>
+                                        <td><samp>.align-content-md-{{ string }}</samp></td>
+                                        <td><samp>.align-content-lg-{{ string }}</samp></td>
+                                        <td><samp>.align-content-xl-{{ string }}</samp></td>
+                                    </tr>
+{%- endmacro %}
+
+
+
+{%- macro float_classes(string) %}
+                                    <tr>
+                                        <th scope="row" class="bg-dark text-light border-light"><samp>.float-{{ string }}</samp></th>
+                                        <td><samp>.float-sm-{{ string }}</samp></td>
+                                        <td><samp>.float-md-{{ string }}</samp></td>
+                                        <td><samp>.float-lg-{{ string }}</samp></td>
+                                        <td><samp>.float-xl-{{ string }}</samp></td>
+                                    </tr>
+{%- endmacro %}
+
+
+
+{%- macro margin_padding_classes(prefix, number) %}
+                                    <tr>
+                                        <th scope="row" class="bg-dark text-light border-light"><samp>.{{ prefix }}-{{ number }}</samp></th>
+                                        <td><samp>.{{ prefix }}-sm-{{ number }}</samp></td>
+                                        <td><samp>.{{ prefix }}-md-{{ number }}</samp></td>
+                                        <td><samp>.{{ prefix }}-lg-{{ number }}</samp></td>
+                                        <td><samp>.{{ prefix }}-xl-{{ number }}</samp></td>
+                                    </tr>
+{%- endmacro %}
+
+
+
+{%- macro text_alignment_classes(string) %}
+                                    <tr>
+                                        <th scope="row" class="bg-dark text-light border-light"><samp>.text-{{ string }}</samp></th>
+                                        <td><samp>.text-sm-{{ string }}</samp></td>
+                                        <td><samp>.text-md-{{ string }}</samp></td>
+                                        <td><samp>.text-lg-{{ string }}</samp></td>
+                                        <td><samp>.text-xl-{{ string }}</samp></td>
+                                    </tr>
+{%- endmacro %}
