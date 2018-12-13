@@ -1,0 +1,1391 @@
+{
+    "colors": {
+        "title" : "OBE:BS4 COLORS",
+        "nav" : "Colors",
+        "slug" : "colors",
+        "description" : "A customized Bootstrap 4 SASS build focused on integrating a full illustration color wheel palette into Bootstrap 4 elements, components and conventions.",
+        "background" : "bg-gradient-orange-rose-diagonal-down",
+        "border" : "border-orange-200",
+        "sections" : {
+            "0" : {
+                "head" : "Text",
+                "subhead" : "C O L O R S",
+                "link" : "Text Colors",
+                "descrip" : "These are your standard text colors.",
+                "id" : "text-colors-section"
+            },
+            "1" : {
+                "head" : "Link",
+                "subhead" : "C O L O R S",
+                "link" : "Link Colors",
+                "descrip" : "These are your standard hyperlink colors.",
+                "id" : "link-colors-section"
+            },
+            "2" : {
+                "head" : "Background",
+                "subhead" : "C O L O R S",
+                "link" : "Background Colors",
+                "descrip" : "These are your standard background colors.",
+                "id" : "background-colors-section"
+            },
+            "3" : {
+                "head" : "Background",
+                "subhead" : "T I N T S / S H A D E S",
+                "link" : "Background Tints/Shades",
+                "descrip" : "These are sets of tints (via adding white) and shades (via adding black) for each background color in the OBE:BS4 Color System.",
+                "id" : "background-tints-shades-section"
+            },
+            "4" : {
+                "head" : "Border",
+                "subhead" : "C O L O R S",
+                "link" : "Border Colors",
+                "descrip" : "These are your standard border colors.",
+                "id" : "border-colors-section"
+            },
+            "5" : {
+                "head" : "Border",
+                "subhead" : "T I N T S / S H A D E S",
+                "link" : "Border Tints/Shades",
+                "descrip" : "These are your sets of tints (via adding white) and shades (via adding black) for each of your border colors.",
+                "id" : "border-tints-shades-section"
+            },
+            "6" : {
+                "head" : "1 Color Vertical",
+                "subhead" : "G R A D I E N T S",
+                "link" : "Gradients: Vert 1 Color",
+                "descrip" : "These are your single color background gradients with a vertical orientation.",
+                "id" : "gradients-vert-1-color-section"
+            },
+            "7" : {
+                "head" : "1 Color Horizontal",
+                "subhead" : "G R A D I E N T S",
+                "link" : "Gradients: Horiz 1 Color",
+                "descrip" : "These are your single color background gradients with a horizontal orientation.",
+                "id" : "gradients-horiz-1-color-section"
+            },
+            "8" : {
+                "head" : "1 Color Radial",
+                "subhead" : "G R A D I E N T S",
+                "link" : "Gradients: Radial 1 Color",
+                "descrip" : "These are your single color radial background gradients.",
+                "id" : "gradients-radial-1-color-section"
+            },
+            "9" : {
+                "head" : "1 Color Diagonal",
+                "subhead" : "U P - G R A D I E N T S",
+                "link" : "Gradients: Diag Up 1 Color",
+                "descrip" : "These are your single color diagonal up background gradients.",
+                "id" : "gradients-diag-up-1-color-section"
+            },
+            "10" : {
+                "head" : "1 Color Diagonal",
+                "subhead" : "D O W N - G R A D I E N T S",
+                "link" : "Gradients: Diag Down 1 Color",
+                "descrip" : "These are your single color diagonal down background gradients.",
+                "id" : "gradients-diag-down-1-color-section"
+            },
+            "11" : {
+                "head" : "Alert",
+                "subhead" : "C O L O R S",
+                "link" : "Alert Colors",
+                "descrip" : "These are your standard alert colors.",
+                "id" : "alert-colors-section"
+            },
+            "12" : {
+                "head" : "Opaque Alert",
+                "subhead" : "C O L O R S",
+                "link" : "Alert Opaque Colors",
+                "descrip" : "These are your solid ground alert colors.",
+                "id" : "alert-opaque-colors-section"
+            },
+            "13" : {
+                "head" : "Badge",
+                "subhead" : "C O L O R S",
+                "link" : "Badge Colors",
+                "descrip" : "These are your standard badge colors.",
+                "id" : "badge-colors-section"
+            },
+            "14" : {
+                "head" : "Inversed Badge",
+                "subhead" : "C O L O R S",
+                "link" : "Badge Inversed Colors",
+                "descrip" : "These are examples of inversed badge colors.",
+                "id" : "inversed-badge-colors-section"
+            },
+            "15" : {
+                "head" : "Button",
+                "subhead" : "C O L O R S",
+                "link" : "Button Colors",
+                "descrip" : "These are your standard button colors.",
+                "id" : "button-colors-section"
+            },
+            "16" : {
+                "head" : "Outline Button",
+                "subhead" : "C O L O R S",
+                "link" : "Button Outline Colors",
+                "descrip" : "These are your standard outline button colors.",
+                "id" : "button-outline-colors-section"
+            },
+            "17" : {
+                "head" : "Disabled Button",
+                "subhead" : "C O L O R S",
+                "link" : "Button Disabled Colors",
+                "descrip" : "These are your standard disabled button colors.",
+                "id" : "button-disabled-colors-section"
+            },
+            "18" : {
+                "head" : "Disabled Outline Button",
+                "subhead" : "C O L O R S",
+                "link" : "Button Outline Disabled Colors",
+                "descrip" : "These are your standard disabled outline button colors.",
+                "id" : "button-outline-disabled-colors-section"
+            },
+            "19" : {
+                "head" : "Card",
+                "subhead" : "C O L O R S",
+                "link" : "Card Colors",
+                "descrip" : "These are your card component color options.",
+                "id" : "card-colors-section"
+            },
+            "20" : {
+                "head" : "Card Outline",
+                "subhead" : "C O L O R S",
+                "link" : "Card Outline Colors",
+                "descrip" : "These are your card outline component color options.",
+                "id" : "card-outline-colors-section"
+            },
+            "21" : {
+                "head" : "Tooltip",
+                "subhead" : "C O L O R S",
+                "link" : "Tooltip Colors",
+                "descrip" : "These are your tooltip color options.",
+                "id" : "tooltip-colors-section"
+            },
+            "22" : {
+                "head" : "Dropdown",
+                "subhead" : "C O L O R S",
+                "link" : "Dropdown Colors",
+                "descrip" : "These are your dropdown menu color options.",
+                "id" : "dropdown-colors-section"
+            },
+            "23" : {
+                "head" : "Popover",
+                "subhead" : "C O L O R S",
+                "link" : "Popover Colors",
+                "descrip" : "These are your popover color options.",
+                "id" : "popover-colors-section"
+            },
+            "24" : {
+                "head" : "Form Input",
+                "subhead" : "C O L O R S",
+                "link" : "Form Input Colors",
+                "descrip" : "These are your standard form input element colors.",
+                "id" : "form-input-colors-section"
+            },
+            "25" : {
+                "head" : "2 Color Vertical",
+                "subhead" : "G R A D I E N T S",
+                "link" : "Gradients: Vert 2 Color",
+                "descrip" : "These are your two color vertical background gradients.",
+                "id" : "gradients-vert-2-color-section"
+            },
+            "26" : {
+                "head" : "2 Color Horizontal",
+                "subhead" : "G R A D I E N T S",
+                "link" : "Gradients: Horiz 2 Color",
+                "descrip" : "These are your two color horizontal background gradients.",
+                "id" : "gradients-horiz-2-color-section"
+            },
+            "27" : {
+                "head" : "2 Color Diagonal",
+                "subhead" : "U P - G R A D I E N T S",
+                "link" : "Gradients: Diag Up 2 Color",
+                "descrip" : "These are your two color diagonal upward gradients.",
+                "id" : "gradients-diag-up-2-color-section"
+            },
+            "28" : {
+                "head" : "2 Color Diagonal",
+                "subhead" : "D O W N - G R A D I E N T S",
+                "link" : "Gradients: Diag Down 2 Color",
+                "descrip" : "These are your two color diagonal downward gradients.",
+                "id" : "gradients-diag-down-2-color-section"
+            },
+            "29" : {
+                "head" : "2 Color Radial",
+                "subhead" : "G R A D I E N T S",
+                "link" : "Gradients: Radial 2 Color",
+                "descrip" : "These are your two color radial background gradients.",
+                "id" : "gradients-radial-2-color-section"
+            },
+            "30" : {
+                "head" : "3 Color Radial",
+                "subhead" : "G R A D I E N T S",
+                "link" : "Gradients: Radial 3 Color",
+                "descrip" : "These are your three color radial background gradients.",
+                "id" : "gradients-radial-3-color-section"
+            },
+            "31" : {
+                "head" : "3 Color Vertical",
+                "subhead" : "G R A D I E N T S",
+                "link" : "Gradients: Vert 3 Color",
+                "descrip" : "These are your three color vertical background gradients.",
+                "id" : "gradients-vert-3-color-section"
+            },
+            "32" : {
+                "head" : "3 Color Horizontal",
+                "subhead" : "G R A D I E N T S",
+                "link" : "Gradients: Horiz 3 Color",
+                "descrip" : "These are your three color horizontal background gradients.",
+                "id" : "gradients-horiz-3-color-section"
+            },
+            "33" : {
+                "head" : "3 Color Diagonal",
+                "subhead" : "U P - G R A D I E N T S",
+                "link" : "Gradients: Diag Up 3 Color",
+                "descrip" : "These are your three color diagonal upward gradients.",
+                "id" : "gradients-diag-up-3-color-section"
+            },
+            "34" : {
+                "head" : "3 Color Diagonal",
+                "subhead" : "D O W N - G R A D I E N T S",
+                "link" : "Gradients: Diag Down 3 Color",
+                "descrip" : "These are your three color diagonal downward gradients.",
+                "id" : "gradients-diag-down-3-color-section"
+            },
+            "35" : {
+                "head" : "Text",
+                "subhead" : "T I N T S / S H A D E S",
+                "link" : "Text Tints/Shades",
+                "descrip" : "These are your sets of tints (via adding white) and shades (via adding black) for each of your text colors.",
+                "id" : "text-tints-shades-section"
+            },
+            "36" : {
+                "head" : "Link",
+                "subhead" : "T I N T S / S H A D E S",
+                "link" : "Link Tints/Shades",
+                "descrip" : "These are sets of tints (via adding white) and shades (via adding black) for each of your link colors.",
+                "id" : "link-tints-shades-section"
+            },
+            "37" : {
+                "head" : "List Group",
+                "subhead" : "C O L O R S",
+                "link" : "List Groups: Colors",
+                "descrip" : "These are your list group color options.",
+                "id" : "list-group-colors-section"
+            },
+            "38" : {
+                "head" : "List Group Actionable",
+                "subhead" : "C O L O R S",
+                "link" : "List Groups: Actionable Colors",
+                "descrip" : "These are your actionable list group color options.",
+                "id" : "list-group-actionable-colors-section"
+            },
+            "39" : {
+                "head" : "Navbar",
+                "subhead" : "C O L O R S",
+                "link" : "Navbar Colors",
+                "descrip" : "These are your standard navbar component colors. Note: navbar elements are dependent upon dropdown menu color options.",
+                "id" : "navbar-colors-section"
+            },
+            "40" : {
+                "head" : "Progress Bar",
+                "subhead" : "C O L O R S",
+                "link" : "Progress Bar Colors",
+                "descrip" : "These are your progress bar color options.",
+                "id" : "progress-bar-colors-section"
+            },
+            "41" : {
+                "head" : "Table",
+                "subhead" : "C O L O R S",
+                "link" : "Table Colors",
+                "descrip" : "These are your standard table row/cell colors.",
+                "id" : "table-colors-section"
+            },
+            "42" : {
+                "head" : "Dark Table",
+                "subhead" : "C O L O R S",
+                "link" : "Table Dark Colors",
+                "descrip" : "These are your standard dark table row/cell colors.",
+                "id" : "table-dark-colors-section"
+            },
+            "43" : {
+                "head" : "Modal",
+                "subhead" : "C O L O R S",
+                "link" : "Modal Colors",
+                "descrip" : "These are examples of colored modal components that use Bootstrap 4 utility and color classes.",
+                "id" : "modal-colors-section"
+            }
+        }
+    },
+    "defaults": {
+        "title" : "OBE:BS4 DEFAULTS",
+        "nav" : "Defaults",
+        "slug" : "defaults",
+        "description" : "A set of default Bootstrap 4 elements and components, formatted exclusively with default Bootstrap 4 classes (and no OBE classes or extensions).",
+        "background" : "bg-gradient-violet-azure-diagonal-down",
+        "border" : "border-violet-200",
+        "sections" : {
+            "0" : {
+                "head" : "Headline",
+                "subhead" : "M A R K U P",
+                "link" : "Headlines: Markup",
+                "descrip" : "These are your Bootstrap 4 markup-based headline options.",
+                "id" : "headline-markup-section"
+            },
+            "1" : {
+                "head" : "Headline",
+                "subhead" : "C L A S S E S",
+                "link" : "Headlines: Classes",
+                "descrip" : "These are your Bootstrap 4 class-based headline options.",
+                "id" : "headline-classes-section"
+            },
+            "2" : {
+                "head" : "Card",
+                "subhead" : "C O M P O N E N T S",
+                "link" : "Card Components",
+                "descrip" : "These are examples of Bootstrap 4 cards components for specific content types.",
+                "id" : "card-components-section"
+            },
+            "3" : {
+                "head" : "Accordian",
+                "subhead" : "C O M P O N E N T S",
+                "link" : "Accordian Components",
+                "descrip" : "This is an example of a Bootstrap 4 accordian component (which uses the Bootstrap 4 collapse plugin.)",
+                "id" : "accordian-components-section"
+            },
+            "4" : {
+                "head" : "Address",
+                "subhead" : "E L E M E N T S",
+                "link" : "Address Elements",
+                "descrip" : "These are examples of Bootstrap 4 styled address elements.",
+                "id" : "address-elements-section"
+            },
+            "5" : {
+                "head" : "Summary",
+                "subhead" : "E L E M E N T S",
+                "link" : "Summary Elements",
+                "descrip" : "These are examples of Bootstrap 4 styled details (summary) elements.",
+                "id" : "summary-elements-section"
+            },
+            "6" : {
+                "head" : "Alert",
+                "subhead" : "C O M P O N E N T S",
+                "link" : "Alert Components",
+                "descrip" : "These are examples of Bootstrap 4 alert components.",
+                "id" : "alert-components-section"
+            },
+            "7" : {
+                "head" : "Display",
+                "subhead" : "H E A D L I N E S",
+                "link" : "Headlines: Display",
+                "descrip" : "These are your Bootstrap 4 display headline options.",
+                "id" : "headline-display-section"
+            },
+            "8" : {
+                "head" : "Lead Paragraph",
+                "subhead" : "C L A S S",
+                "link" : "Lead Paragraph Class",
+                "descrip" : "These is an example of Bootstrap 4 lead paragraph text.",
+                "id" : "lead-paragraph-class-section"
+            },
+            "9" : {
+                "head" : "Attribution",
+                "subhead" : "M A R K U P",
+                "link" : "Attribution Markup",
+                "descrip" : "These are your Bootstrap 4 attribution markup options.",
+                "id" : "attribution-markup-section"
+            },
+            "10" : {
+                "head" : "Carousel",
+                "subhead" : "C O M P O N E N T S",
+                "link" : "Carousel Components",
+                "descrip" : "These are examples of Bootstrap 4 carousel components.",
+                "id" : "carousel-components-section"
+            },
+            "11" : {
+                "head" : "Inline",
+                "subhead" : "B A D G E S",
+                "link" : "Badges: Inline",
+                "descrip" : "These are examples of Bootstrap 4 inline badges.",
+                "id" : "badges-inline-section"
+            },
+            "12" : {
+                "head" : "Counter",
+                "subhead" : "B A D G E S",
+                "link" : "Badges: Counters",
+                "descrip" : "These are examples of Bootstrap 4 button and link counter badges.",
+                "id" : "badges-counters-section"
+            },
+            "13" : {
+                "head" : "Text",
+                "subhead" : "B A D G E S",
+                "link" : "Badges: Text",
+                "descrip" : "These are examples of Bootstrap 4 badge elements.",
+                "id" : "badges-text-section"
+            },
+            "14" : {
+                "head" : "Border",
+                "subhead" : "U T I L I T I E S",
+                "link" : "Border: Utilities",
+                "descrip" : "These are examples of different border utility options in Bootstrap 4.",
+                "id" : "border-utilities-section"
+            },
+            "15" : {
+                "head" : "Breadcrumb",
+                "subhead" : "E L E M E N T S",
+                "link" : "Breadcrumb Elements",
+                "descrip" : "These are examples of Bootstrap 4 breadcrumb elements.",
+                "id" : "breadcrumb-elements-section"
+            },
+            "16" : {
+                "head" : "Active",
+                "subhead" : "B U T T O N S",
+                "link" : "Buttons: Active",
+                "descrip" : "These are examples of Bootstrap 4 active button elements.",
+                "id" : "buttons-active-section"
+            },
+            "17" : {
+                "head" : "Disabled",
+                "subhead" : "B U T T O N S",
+                "link" : "Buttons: Disabled",
+                "descrip" : "These are examples of Bootstrap 4 disabled button elements.",
+                "id" : "buttons-disabled-section"
+            },
+            "18" : {
+                "head" : "Button",
+                "subhead" : "E L E M E N T S",
+                "link" : "Buttons: Elements",
+                "descrip" : "These are examples of Bootstrap 4 button styling on different elements.",
+                "id" : "buttons-elements-section"
+            },
+            "19" : {
+                "head" : "Button",
+                "subhead" : "S I Z E S",
+                "link" : "Buttons: Sizes",
+                "descrip" : "These are examples of Bootstrap 4 button sizes.",
+                "id" : "buttons-sizes-section"
+            },
+            "20" : {
+                "head" : "Button Group",
+                "subhead" : "D R O P D O W N S",
+                "link" : "Buttons: Group Dropdowns",
+                "descrip" : "This is an example of a Bootstrap 4 button groups with a dropdown menu.",
+                "id" : "button-group-dropdowns-section"
+            },
+            "21" : {
+                "head" : "Button Group",
+                "subhead" : "S I Z E S",
+                "link" : "Buttons: Group Sizes",
+                "descrip" : "This is an example of a Bootstrap 4 button groups with a dropdown menu.",
+                "id" : "button-group-sizes-section"
+            },
+            "22" : {
+                "head" : "Button Group",
+                "subhead" : "T O O L B A R S",
+                "link" : "Buttons: Group Toolbars",
+                "descrip" : "These are examples of Bootstrap 4 button group toolbars.",
+                "id" : "button-group-toolbars-section"
+            },
+            "23" : {
+                "head" : "Button & Input Group",
+                "subhead" : "T O O L B A R",
+                "link" : "Buttons: Input Group Toolbar",
+                "descrip" : "This is an example of a Bootstrap 4 button group toolbar with an input group.",
+                "id" : "button-input-group-toolbar-section"
+            },
+            "24" : {
+                "head" : "Vertical",
+                "subhead" : "B U T T O N - G R O U P S",
+                "link" : "Buttons: Group Vertical",
+                "descrip" : "This is an example of a Bootstrap 4 vertical button group.",
+                "id" : "buttons-group-vertical-section"
+            },
+            "25" : {
+                "head" : "Vertical Dropdown",
+                "subhead" : "B U T T O N - G R O U P S",
+                "link" : "Buttons: Group Vertical Dropdown",
+                "descrip" : "This is an example of a Bootstrap 4 vertical button group with a dropdown.",
+                "id" : "buttons-group-vertical-dropdown-section"
+            },
+            "26" : {
+                "head" : "Toggle",
+                "subhead" : "B U T T O N S",
+                "link" : "Buttons: Toggles",
+                "descrip" : "These are examples of basic Bootstrap 4 toggle buttons.",
+                "id" : "buttons-toggles-section"
+            },
+            "27" : {
+                "head" : "Checkbox",
+                "subhead" : "B U T T O N S",
+                "link" : "Buttons: Checkboxes",
+                "descrip" : "These are examples of Bootstrap 4 checkbox buttons.",
+                "id" : "buttons-checkboxes-section"
+            },
+            "28" : {
+                "head" : "Radio",
+                "subhead" : "B U T T O N S",
+                "link" : "Buttons: Radios",
+                "descrip" : "These are examples of Bootstrap 4 radio buttons.",
+                "id" : "buttons-radios-section"
+            },
+            "29" : {
+                "head" : "Clearfix",
+                "subhead" : "U T I L I T Y",
+                "link" : "Clearfix Utility",
+                "descrip" : "This is an example of how to use the Bootstrap 4 clearfix utility. To clear floats, simply add the clearfix class to the floated element(s) parent element.",
+                "id" : "clearfix-utility-section"
+            },
+            "30" : {
+                "head" : "Description",
+                "subhead" : "L I S T S",
+                "link" : "Description Lists",
+                "descrip" : "These are examples of Bootstrap 4 styled description list elements.",
+                "id" : "description-lists-section"
+            },
+            "31" : {
+                "head" : "Aligning Description",
+                "subhead" : "L I S T S",
+                "link" : "Description Lists Alignment",
+                "descrip" : "These are examples of how to align Bootstrap 4 styled descrition list elements with grid classes.",
+                "id" : "description-lists-alignment-section"
+            },
+            "32" : {
+                "head" : "",
+                "subhead" : "",
+                "link" : "",
+                "descrip" : "",
+                "id" : ""
+            },
+            "33" : {
+                "head" : "Dropdown",
+                "subhead" : "M E N U S",
+                "link" : "Dropdown Menus",
+                "descrip" : "These are examples of different dropdown menu options in Bootstrap 4.",
+                "id" : "dropdown-menus-section"
+            },
+            "34" : {
+                "head" : "Embed",
+                "subhead" : "U T I L I T I E S",
+                "link" : "Embed Utilities",
+                "descrip" : "These are examples of different responsive embedded (iframe) utility options in Bootstrap 4.",
+                "id" : "embed-utilities-section"
+            },
+            "35" : {
+                "head" : "Flex",
+                "subhead" : "U T I L I T I E S",
+                "link" : "Flex Utilities",
+                "descrip" : "These are examples of the different flex utility classes available in Bootstrap 4.",
+                "id" : "flex-utilities-section"
+            },
+            "36" : {
+                "head" : "Float",
+                "subhead" : "U T I L I T I E S",
+                "link" : "Float Utilities",
+                "descrip" : "These are examples of different float utility options in Bootstrap 4.",
+                "id" : "float-utilities-section"
+            },
+            "37" : {
+                "head" : "Form",
+                "subhead" : "E L E M E N T S",
+                "link" : "Form: Elements",
+                "descrip" : "These are examples of different form element options in Bootstrap 4.",
+                "id" : "form-elements-section"
+            },
+            "38" : {
+                "head" : "Inline Form",
+                "subhead" : "E L E M E N T S",
+                "link" : "Form: Inline Elements",
+                "descrip" : "These are examples of inline form element options with Bootstrap 4.",
+                "id" : "form-inline-elements-section"
+            },
+            "39" : {
+                "head" : "Form Input",
+                "subhead" : "G R I D S",
+                "link" : "Form: Input Grids",
+                "descrip" : "These are examples of different ways to use form elements with Bootstrap 4 layout grids.",
+                "id" : "form-input-grids-section"
+            },
+            "40" : {
+                "head" : "Form Input",
+                "subhead" : "G R O U P S",
+                "link" : "Form: Input Groups",
+                "descrip" : "These are examples of different form input group options and variations in Bootstrap 4.",
+                "id" : "form-input-groups-section"
+            },
+            "41" : {
+                "head" : "Captioned Figure",
+                "subhead" : "I M A G E S",
+                "link" : "Images: Captioned Figure",
+                "descrip" : "This is an example of how to caption an image using an HTML5 figure element and Bootstrap 4 classes.",
+                "id" : "images-captioned-figure-section"
+            },
+            "42" : {
+                "head" : "Thumbnail",
+                "subhead" : "I M A G E",
+                "link" : "Images: Thumbnail",
+                "descrip" : "This is an example of a Bootstrap 4 thumbnail image.",
+                "id" : "images-thumbnail-section"
+            },
+            "43" : {
+                "head" : "Responsive",
+                "subhead" : "I M A G E S",
+                "link" : "Images: Responsive",
+                "descrip" : "This is an example of a Bootstrap 4 responsive (fluid) image.",
+                "id" : "images-responsive-section"
+            },
+            "44" : {
+                "head" : "Responsive Picture",
+                "subhead" : "I M A G E S",
+                "link" : "Images: Responsive Picture",
+                "descrip" : "This is an example of how to use a responsive picture element with Bootstrap 4.",
+                "id" : "images-responsive-picture-section"
+            },
+            "45" : {
+                "head" : "Jumbotron",
+                "subhead" : "S E C T I O N S",
+                "link" : "Jumbotron Sections",
+                "descrip" : "These are examples of different jumbotron options in Bootstrap 4.",
+                "id" : "jumbotron-sections-section"
+            },
+            "46" : {
+                "head" : "List",
+                "subhead" : "E L E M E N T S",
+                "link" : "List Elements",
+                "descrip" : "These are examples of Bootstrap 4 styled list elements.",
+                "id" : "list-elements-section"
+            },
+            "47" : {
+                "head" : "Inline List",
+                "subhead" : "E L E M E N T S",
+                "link" : "List Elements: Inline",
+                "descrip" : "These are examples of Bootstrap 4 styled inline list elements.",
+                "id" : "list-elements-inline-section"
+            },
+            "48" : {
+                "head" : "List",
+                "subhead" : "G R O U P S",
+                "link" : "List Groups",
+                "descrip" : "These are examples of different list group options in Bootstrap 4.",
+                "id" : "list-groups-section"
+            },
+            "49" : {
+                "head" : "Media",
+                "subhead" : "O B J E C T S",
+                "link" : "Media Objects",
+                "descrip" : "These are your Bootstrap 4 media object options.",
+                "id" : "media-objects-section"
+            },
+            "50" : {
+                "head" : "Media Object",
+                "subhead" : "L I S T S",
+                "link" : "Media Object: Lists",
+                "descrip" : "This is how you can use Bootstrap 4 media objects as list elements.",
+                "id" : "media-object-lists-section"
+            },
+            "51" : {
+                "head" : "Nested Media",
+                "subhead" : "O B J E C T S",
+                "link" : "Media Object: Nested",
+                "descrip" : "This is how you nest Bootstrap 4 media objects.",
+                "id" : "media-objects-nested-section"
+            },
+            "52" : {
+                "head" : "Modal",
+                "subhead" : "E L E M E N T S",
+                "link" : "Modal Elements",
+                "descrip" : "These are examples of different modal options in Bootstrap 4.",
+                "id" : "modal-elements-section"
+            },
+            "53" : {
+                "head" : "Nav",
+                "subhead" : "C O M P O N E N T S",
+                "link" : "Nav Components",
+                "descrip" : "These are your Bootstrap 4 nav component options.",
+                "id" : "nav-components-section"
+            },
+            "54" : {
+                "head" : "Navbar",
+                "subhead" : "C O M P O N E N T S",
+                "link" : "Navbar Components",
+                "descrip" : "These are your Bootstrap 4 navbar component options.",
+                "id" : "navbar-components-section"
+            },
+            "55" : {
+                "head" : "Pagination",
+                "subhead" : "C O M P O N E N T S",
+                "link" : "Pagination Components",
+                "descrip" : "These are examples of different pagination options in Bootstrap 4.",
+                "id" : "pagination-components-section"
+            },
+            "56" : {
+                "head" : "Popover",
+                "subhead" : "E L E M E N T S",
+                "link" : "Popover Elements",
+                "descrip" : "These are examples of different popover options in Bootstrap 4.",
+                "id" : "popover-elements-section"
+            },
+            "57" : {
+                "head" : "",
+                "subhead" : "",
+                "link" : "",
+                "descrip" : "",
+                "id" : ""
+            },
+            "58" : {
+                "head" : "Progress Bars",
+                "subhead" : "B A R S",
+                "link" : "Progress Bars",
+                "descrip" : "These are examples of different progress bar options in Bootstrap 4.",
+                "id" : "progress-bars-section"
+            },
+            "59" : {
+                "head" : "",
+                "subhead" : "",
+                "link" : "",
+                "descrip" : "",
+                "id" : ""
+            },
+            "60" : {
+                "head" : "Scrollspy",
+                "subhead" : "F U N C T I O N A L I T Y",
+                "link" : "Scrollspy Functionality",
+                "descrip" : "These are examples of how to use the dynamic functionality of Bootstrap 4's Scrollspy scripts.",
+                "id" : "scrollspy-functionality-section"
+            },
+            "61" : {
+                "head" : "Sizing",
+                "subhead" : "U T I L I T I E S",
+                "link" : "Sizing Utilities",
+                "descrip" : "These are your default element sizing classes in Bootstrap 4.",
+                "id" : "sizing-utilities-section"
+            },
+            "62" : {
+                "head" : "Spacing",
+                "subhead" : "U T I L I T I E S",
+                "link" : "Spacing Utilities",
+                "descrip" : "These are examples of different atomic margin and padding options in Bootstrap 4.",
+                "id" : "spacing-utilities-section"
+            },
+            "63" : {
+                "head" : "Bordered",
+                "subhead" : "T A B L E S",
+                "link" : "Tables: Borders",
+                "descrip" : "These are examples of Bootstrap 4 bordered tables.",
+                "id" : "bordered-tables-section"
+            },
+            "64" : {
+                "head" : "Borderless",
+                "subhead" : "T A B L E S",
+                "link" : "Tables: Borderless",
+                "descrip" : "These are examples of Bootstrap 4 borderless tables.",
+                "id" : "borderless-tables-section"
+            },
+            "65" : {
+                "head" : "Captioned",
+                "subhead" : "T A B L E S",
+                "link" : "Tables: Captioned",
+                "descrip" : "These are examples of Bootstrap 4 captioned tables.",
+                "id" : "captioned-tables-section"
+            },
+            "66" : {
+                "head" : "Default",
+                "subhead" : "T A B L E S",
+                "link" : "Tables: Default",
+                "descrip" : "These are examples of Bootstrap 4 default tables.",
+                "id" : "default-tables-section"
+            },
+            "67" : {
+                "head" : "Table",
+                "subhead" : "H E A D I N G S",
+                "link" : "Tables: Headings",
+                "descrip" : "These are examples of Bootstrap 4 table headings.",
+                "id" : "table-headings-section"
+            },
+            "68" : {
+                "head" : "Hoverable",
+                "subhead" : "T A B L E S",
+                "link" : "Tables: Hoverable",
+                "descrip" : "These are examples of Bootstrap 4 hoverable tables.",
+                "id" : "hoverable-tables-section"
+            },
+            "69" : {
+                "head" : "Small",
+                "subhead" : "T A B L E S",
+                "link" : "Tables: Small",
+                "descrip" : "These are examples of Bootstrap 4 small tables.",
+                "id" : "small-tables-section"
+            },
+            "70" : {
+                "head" : "Striped",
+                "subhead" : "T A B L E S",
+                "link" : "Tables: Striped",
+                "descrip" : "These are examples of Bootstrap 4 striped tables.",
+                "id" : "striped-tables-section"
+            },
+            "71" : {
+                "head" : "",
+                "subhead" : "",
+                "link" : "",
+                "descrip" : "",
+                "id" : ""
+            },
+            "72" : {
+                "head" : "Wrap & Truncation",
+                "subhead" : "U T I L I T I E S",
+                "link" : "Text: Wrapping & Truncation",
+                "descrip" : "These are the text wrapping and text overflow/truncation options in Bootstrap 4.",
+                "id" : "text-wrapping-truncation-section"
+            },
+            "73" : {
+                "head" : "Text",
+                "subhead" : "J U S T I F I C A T I O N",
+                "link" : "Text: Justification",
+                "descrip" : "These are your Bootstrap 4 basic text justification options for elements.",
+                "id" : "text-justification-section"
+            },
+            "74" : {
+                "head" : "Text",
+                "subhead" : "B L O C K Q U O T E S",
+                "link" : "Text: Blockquotes",
+                "descrip" : "These are your Bootstrap 4 blockquote options.",
+                "id" : "text-blockquotes-section"
+            },
+            "75" : {
+                "head" : "Inline Text",
+                "subhead" : "M A R K U P",
+                "link" : "Text: Inline Markup",
+                "descrip" : "These are your Bootstrap 4 basic inline text formatting options using markup.",
+                "id" : "text-inline-markup-section"
+            },
+            "76" : {
+                "head" : "Inline Text",
+                "subhead" : "C L A S S E S",
+                "link" : "Text: Inline Classes",
+                "descrip" : "These are your Bootstrap 4 basic inline text formatting options using classes.",
+                "id" : "text-inline-classes-section"
+            },
+            "77" : {
+                "head" : "Collapse",
+                "subhead" : "F U N C T I O N A L I T Y",
+                "link" : "Collapse Functionality",
+                "descrip" : "These are examples of Bootstrap 4 elements with collapsing functionality which allows you to toggle the visibility of elements.",
+                "id" : "collapse-functionality-section"
+            },
+            "78" : {
+                "head" : "Tooltip",
+                "subhead" : "E L E M E N T S",
+                "link" : "Tooltip Elements",
+                "descrip" : "These are examples of different tooltip options in Bootstrap 4.",
+                "id" : "tooltip-elements-section"
+            },
+            "79" : {
+                "head" : "Vertical Alignment",
+                "subhead" : "U T I L I T I E S",
+                "link" : "Vertical Alignment Utilities",
+                "descrip" : "These are examples of the vertical aligment utility options in Bootstrap 4 for table and in-line elements.",
+                "id" : "vertical-alignment-utilities-section"
+            },
+            "80" : {
+                "head" : "Visibility",
+                "subhead" : "U T I L I T I E S",
+                "link" : "Visibility Utilities",
+                "descrip" : "These are your two visibility Bootstrap 4 classes.",
+                "id" : "visibility-utilities-section"
+            }
+        }
+    },
+    "extensions": {
+        "title" : "OBE:BS4 EXTENSIONS",
+        "nav" : "Extensions",
+        "slug" : "extensions",
+        "description" : "Extended Bootstrap 4 classes, elements and components to add more definitive and design-orientated functionalities to any Bootstrap 4 project.",
+        "background" : "bg-gradient-rose-violet-diagonal-down",
+        "border" : "border-rose-200",
+        "sections" : {
+            "0" : {
+                "head" : "Project",
+                "subhead" : "F O N T S",
+                "link" : "Project Fonts",
+                "descrip" : "These are your standard text colors.",
+                "id" : "project-fonts-section"
+            },
+            "1" : {
+                "head" : "Font",
+                "subhead" : "W E I G H T S",
+                "link" : "Font Weights",
+                "descrip" : "These are your project font weight classes. Please note they are only available based on the Google Font weights you specified in your settings.",
+                "id" : "project-font-weights-section"
+            },
+            "2" : {
+                "head" : "Border",
+                "subhead" : "W I D T H S",
+                "link" : "Border Widths",
+                "descrip" : "These are your expanded border widths.",
+                "id" : "border-widths-section"
+            },
+            "3" : {
+                "head" : "Box",
+                "subhead" : "S H A D O W S",
+                "link" : "Box Shadows",
+                "descrip" : "These are your element box shadow options.",
+                "id" : "box-shadows-section"
+            },
+            "4" : {
+                "head" : "Hover Box",
+                "subhead" : "S H A D O W S",
+                "link" : "Hover Box Shadows",
+                "descrip" : "These are your element box shadow hover effect options.",
+                "id" : "hover-box-shadows-section"
+            },
+            "5" : {
+                "head" : "Text",
+                "subhead" : "S H A D O W S",
+                "link" : "Text Shadows",
+                "descrip" : "These are your text shadow options.",
+                "id" : "text-shadows-section"
+            },
+            "6" : {
+                "head" : "Button",
+                "subhead" : "S I Z E S",
+                "link" : "Button Sizes",
+                "descrip" : "These are your expanded button sizes.",
+                "id" : "button-sizes-section"
+            },
+            "7" : {
+                "head" : "Text",
+                "subhead" : "S I Z E S",
+                "link" : "Text Sizes",
+                "descrip" : "These are your expanded text sizes.",
+                "id" : "text-sizes-section"
+            },
+            "8" : {
+                "head" : "Element",
+                "subhead" : "W I D T H S",
+                "link" : "Element Widths",
+                "descrip" : "These are your element width options and classes.",
+                "id" : "element-widths-section"
+            },
+            "9" : {
+                "head" : "Element",
+                "subhead" : "H E I G H T S",
+                "link" : "Element Heights",
+                "descrip" : "These are your element height options and classes.",
+                "id" : "element-heights-section"
+            },
+            "10" : {
+                "head" : "Ordered",
+                "subhead" : "L I S T S",
+                "link" : "Ordered Lists",
+                "descrip" : "These are your ordered list element options.",
+                "id" : "ordered-lists-section"
+            },
+            "11" : {
+                "head" : "Unordered",
+                "subhead" : "L I S T S",
+                "link" : "Unordered Lists",
+                "descrip" : "These are your unordered list element options.",
+                "id" : "unordered-lists-section"
+            },
+            "12" : {
+                "head" : "Material Design",
+                "subhead" : "T E X T - I N P U T S",
+                "link" : "Material Design Text Inputs",
+                "descrip" : "These are form elements that leverage Google's Material Design guidelines using the Bootstrap 4 styled naming conventions and utilities.",
+                "id" : "material-design-text-inputs-section"
+            },
+            "13" : {
+                "head" : "Modal",
+                "subhead" : "U T I L I T I E S",
+                "link" : "Modals: Utilities",
+                "descrip" : "These are a set of modal utility classes and options that will allow you to use modals more creatively and impactfully.",
+                "id" : "modal-utilities-section"
+            },
+            "14" : {
+                "head" : "Opacity",
+                "subhead" : "U T I L I T I E S",
+                "link" : "Opacity Utilities",
+                "descrip" : "These are opacity classes to allow for an artistic range of color blending possibilities.",
+                "id" : "opacity-utilities-section"
+            },
+            "15" : {
+                "head" : "Fab",
+                "subhead" : "B U T T O N S",
+                "link" : "Fab Buttons",
+                "descrip" : "These are your fab button options. Fab buttons have equal heights and widths and generally have a single character or icon in them. Fab buttons come in three basic shapes: Round Corner, Square Corner, and Circle.",
+                "id" : "fab-buttons-section"
+            },
+            "16" : {
+                "head" : "Off-Canvas Nav",
+                "subhead" : "M O D A L S",
+                "link" : "Modals: Off-Canvas Navs",
+                "descrip" : "These are a pinned modals speficically setup for use as navigaiton components for a project.",
+                "id" : "off-canvas-navigation-modals-section"
+            },
+            "17" : {
+                "head" : "Dropdown Select",
+                "subhead" : "C O M P O N E N T S",
+                "link" : "Dropdown Select Components",
+                "descrip" : "These are examples of different custom dropdown select components. These use the Bootstrap 4 dropdown menu functionality, and have some added scripting that allows you to use these with rich HTML content in place of a traditional form select element.",
+                "id" : "dropdown-select-components-section"
+            },
+            "18" : {
+                "head" : "Calendar Date Picker",
+                "subhead" : "C O M P O N E N T S",
+                "link" : "Calendar Date Picker Components",
+                "descrip" : "These are examples of different uses of the OBE:BS4 Calendar Datepicker Plugin. You can use these components to enhance the user experience whenever you need a user to specify a date in your application.",
+                "id" : "calendar-datepicker-component-section"
+            },
+            "19" : {
+                "head" : "Toggle Text",
+                "subhead" : "M I N I - P L U G I N",
+                "link" : "Toggle Text Mini-Plugin",
+                "descrip" : "A simple plugin that adds the ability to dynamically toggle text by adding a single data atrribute and value on an element.",
+                "id" : "toggle-text-mini-plugin"
+            }
+        }
+    },
+    "icons": {
+        "title" : "OBE:BS4 ICONS",
+        "nav" : "Icons",
+        "slug" : "icons",
+        "description" : "A set of default FontAwesome 5 elements and components, formatted exclusively with  FontAwesome 5 and Bootstrap 4 classes.",
+        "background" : "bg-gradient-spring-green-chartreuse-diagonal-down",
+        "border" : "border-spring-green-200",
+        "sections" : {
+            "0" : {
+                "head" : "Icon",
+                "subhead" : "S I Z E S",
+                "link" : "Icon Sizes",
+                "descrip" : "These are the FontAwesome 5 relative icons sizes. These sizes are relative to the parent element, and go up to a maximum of 10x bigger, relatively.",
+                "id" : "icons-sizes-section"
+            },
+            "1" : {
+                "head" : "Icon",
+                "subhead" : "B O R D E R S",
+                "link" : "Icon Borders",
+                "descrip" : "These are your FontAwesome 5 border options.",
+                "id" : "icons-borders-section"
+            },
+            "2" : {
+                "head" : "Icon",
+                "subhead" : "F L O A T S",
+                "link" : "Icon Floats",
+                "descrip" : "These are your FontAwesome 5 float options.",
+                "id" : "icons-floats-section"
+            },
+            "3" : {
+                "head" : "Fixed Width",
+                "subhead" : "I C O N S",
+                "link" : "Fixed Width Icons",
+                "descrip" : "This is how you use fixed width FontAwesome 5 icons (mainly for lists and navigation elements.)",
+                "id" : "fixed-width-icons-section"
+            },
+            "4" : {
+                "head" : "Icon",
+                "subhead" : "O R I E N T A T I O N",
+                "link" : "Icon Orientation",
+                "descrip" : "This is how you can control the rotation of FontAwesome 5 icons.",
+                "id" : "icon-orientation-section"
+            },
+            "5" : {
+                "head" : "Shrink & Grow",
+                "subhead" : "T R A N S F O R M S",
+                "link" : "Shrink & Grow Transforms",
+                "descrip" : "These examples demonstrate how shrink or increase the size of your icons (in context of the parent element) when the FontAwesome 5 JavaScript kicks in. NOTE: You can use any number (including decimals) to change the size. Each interger represents a 1/16em unit.",
+                "id" : "shrink-and-grow-transformations-section"
+            },
+            "6" : {
+                "head" : "Positioning",
+                "subhead" : "T R A N S F O R M S",
+                "link" : "Positioning Transforms",
+                "descrip" : "These examples demonstrate how to position your icons (in context of the parent element) when the FontAwesome 5 JavaScript kicks in. NOTE: You can use any number (including decimals) to change the size. Each interger represents a 1/16em unit.",
+                "id" : "positioning-transforms-section"
+            },
+            "7" : {
+                "head" : "Rotate & Flip",
+                "subhead" : "T R A N S F O R M S",
+                "link" : "Rotate & Flip Transforms",
+                "descrip" : "These examples demonstrate how rotate or flip the orientation of your icons (in context of the parent element) when the FontAwesome 5 JavaScript kicks in. NOTE: You can use any number (including negative values) to change the orientation. Each interger represents a single degree unit.",
+                "id" : "rotate-and-flip-transforms-section"
+            },
+            "8" : {
+                "head" : "Masking",
+                "subhead" : "I C O N S",
+                "link" : "Masking Icons",
+                "descrip" : "These examples demonstrate how to combine two icons, where one icon knocks-out the other icon when the FontAwesome 5 JavaScript kicks in. NOTE: This allows you to show the background color underneath the resulting SVG where any fill was knocked-out.",
+                "id" : "masking-icons-section"
+            },
+            "9" : {
+                "head" : "Icon",
+                "subhead" : "L A Y E R I N G",
+                "link" : "Icon Layering",
+                "descrip" : "These examples demonstrate how to layer mulitple icons on top of each other, and with each icon having independent colors.",
+                "id" : "icon-layering-section"
+            },
+            "10" : {
+                "head" : "Stacked",
+                "subhead" : "I C O N S",
+                "link" : "Stacked Icons",
+                "descrip" : "These are examples of stacked FontAwesome 5 icons.",
+                "id" : "stacked-icons-section"
+            },
+            "11" : {
+                "head" : "Icon",
+                "subhead" : "A N I M A T I O N S",
+                "link" : "Icon Animations",
+                "descrip" : "These are your FontAwesome 5 animation options.",
+                "id" : "icon-animations-section"
+            },
+            "12" : {
+                "head" : "Dynamic Icon Swap",
+                "subhead" : "S C R I P T",
+                "link" : "Dynamic Icon Swap Script",
+                "descrip" : "This script technique is necessary to do any user interaction based changes to any FontAwesome 5 icons (due to the JS/SVG rendering process upon a page load).",
+                "id" : "dynamic-icon-swap-script-section"
+            },
+            "13" : {
+                "head" : "Bullets & Lists",
+                "subhead" : "I C O N S",
+                "link" : "Icon Bullets & Lists",
+                "descrip" : "This is how you use FontAwesome 5 utility classes to make icons act as bullets for list elements (which include the fixed width FontAwesome CSS, too!)",
+                "id" : "icon-bullets-and-lists-section"
+            },
+            "14" : {
+                "head" : "Animated Checkbox",
+                "subhead" : "I C O N S",
+                "link" : "Animated Icon Checkboxes",
+                "descrip" : "These are examples of animated icon checkbox elements that you can use in web forms or for general user interactions.",
+                "id" : "animated-checkbox-icons-section"
+            }
+        }
+    },
+    "layouts": {
+        "title" : "OBE:BS4 LAYOUTS",
+        "nav" : "Layouts",
+        "slug" : "layouts",
+        "description" : "A set of default Bootstrap 4 layouts, formatted exclusively with default Bootstrap 4 classes (and no OBE classes or extensions).",
+        "background" : "bg-gradient-azure-spring-green-diagonal-down",
+        "border" : "border-azure-200",
+        "sections" : {
+            "0" : {
+                "head" : "Container Grid",
+                "subhead" : "L A Y O U T S",
+                "link" : "Container Grid Layouts",
+                "descrip" : "These are your Bootstrap 4 standard container grid layouts.",
+                "id" : "container-grid-layouts-section"
+            },
+            "1" : {
+                "head" : "Container Fluid Grid",
+                "subhead" : "L A Y O U T S",
+                "link" : "Container Grid Fluid Layouts",
+                "descrip" : "These are your Bootstrap 4 fluid container grid layouts.",
+                "id" : "container-grid-fluid-layouts-section"
+            },
+            "2" : {
+                "head" : "Hero",
+                "subhead" : "S E C T I O N S",
+                "link" : "Hero Sections",
+                "descrip" : "These are some Bootstrap 4 hero section layouts.",
+                "id" : "hero-sections-layouts-section"
+            },
+            "3" : {
+                "head" : "Card Group",
+                "subhead" : "L A Y O U T S",
+                "link" : "Card Group Layouts",
+                "descrip" : "These are your Bootstrap 4 card group layouts.",
+                "id" : "card-group-layouts-section"
+            }
+        }
+    },
+    "reference": {
+        "title" : "OBE:BS4 REFERENCE",
+        "nav" : "Reference",
+        "slug" : "reference",
+        "description" : "Sortable and filterable tables of color space codes and Bootstrap 4 classes that are used throughout your library.",
+        "background" : "bg-gradient-yellow-red-diagonal-down",
+        "border" : "border-yellow-200",
+        "sections" : {
+            "0" : {
+                "head" : "Color Codes",
+                "subhead" : "T A B L E",
+                "link" : "Color Codes Table",
+                "descrip" : "Use the input to search and the column headers to sort!",
+                "id" : "color-codes-table"
+            },
+            "1" : {
+                "head" : "Print Display",
+                "subhead" : "C L A S S E S",
+                "link" : "Display Print Classes",
+                "descrip" : "Use these classes to ensure that specific content is displayed when a user opts to print something they are viewing in a browser.",
+                "id" : "print-display-classes-table"
+            },
+            "2" : {
+                "head" : "Navbar Responsive",
+                "subhead" : "C L A S S E S",
+                "link" : "Navbar Responsive Classes",
+                "descrip" : "Use these classes to specify the breakpoint that triggers a navbar to collapse into its hidden/mobile state.",
+                "id" : "navbar-responsive-classes-table"
+            },
+            "3" : {
+                "head" : "Display",
+                "subhead" : "C L A S S E S",
+                "link" : "Display Classes",
+                "descrip" : "Use these classes to set when and how content should be displayed depending on responsive breakpoints as needed.",
+                "id" : "display-classes-table"
+            },
+            "4" : {
+                "head" : "Flex Direction",
+                "subhead" : "C L A S S E S",
+                "link" : "Flex Direction Classes",
+                "descrip" : "Use these classes to set when and how flexbox content should flow depending on responsive breakpoints as needed.",
+                "id" : "flex-direction-classes-table"
+            },
+            "5" : {
+                "head" : "Flex Justification",
+                "subhead" : "C L A S S E S",
+                "link" : "Flex Justification Classes",
+                "descrip" : "Use these classes to set when and how flexbox content should be aligned depending on responsive breakpoints as needed.",
+                "id" : "flex-justification-classes-table"
+            },
+            "6" : {
+                "head" : "Flex Vertical Alignment",
+                "subhead" : "C L A S S E S",
+                "link" : "Flex Vertical Alignment Classes",
+                "descrip" : "Use these classes to set when and how flexbox content should be vertically aligned depending on responsive breakpoints as needed.",
+                "id" : "flex-vertical-alignment-classes-table"
+            },
+            "7" : {
+                "head" : "Flex Self Alignment",
+                "subhead" : "C L A S S E S",
+                "link" : "Flex Self Alignment Classes",
+                "descrip" : "Use these classes to set when and how flexbox content should vertically align itself depending on responsive breakpoints as needed.",
+                "id" : "flex-self-alignment-classes-table"
+            },
+            "8" : {
+                "head" : "Flex Fill",
+                "subhead" : "C L A S S E S",
+                "link" : "Flex Fill Classes",
+                "descrip" : "Use these classes to set when and how flexbox content should fill all the horizontal space that is available.",
+                "id" : "flex-fill-classes-table"
+            },
+            "9" : {
+                "head" : "Flex Grow & Shrink",
+                "subhead" : "C L A S S E S",
+                "link" : "Flex Grow & Shrink Classes",
+                "descrip" : "Use these classes to set when and how flexbox content should collapse or expand based on the surrounding flex content.",
+                "id" : "flex-grow-shrink-classes-table"
+            },
+            "10" : {
+                "head" : "Auto Margin",
+                "subhead" : "C L A S S E S",
+                "link" : "Auto Margin Classes",
+                "descrip" : "Use these classes to seperate content apart from the surrounding flex content.",
+                "id" : "auto-margin-classes-table"
+            },
+            "11" : {
+                "head" : "Flex Wrapping",
+                "subhead" : "C L A S S E S",
+                "link" : "Flex Wrapping Classes",
+                "descrip" : "Use these classes to set how flexbox content flows inside of a flex parent.",
+                "id" : "flex-wrapping-classes-table"
+            },
+            "12" : {
+                "head" : "Flex Ordering",
+                "subhead" : "C L A S S E S",
+                "link" : "Flex Ordering Classes",
+                "descrip" : "Use these classes to set the order of flexbox content depending on responsive breakpoints as needed.",
+                "id" : "flex-ordering-classes-table"
+            },
+            "13" : {
+                "head" : "Flex Align Content",
+                "subhead" : "C L A S S E S",
+                "link" : "Flex Align Content Classes",
+                "descrip" : "Use these classes to align the wrapping flexbox content depending on responsive breakpoints as needed.",
+                "id" : "flex-align-content-classes-table"
+            },
+            "14" : {
+                "head" : "Accessing OBE Colors",
+                "subhead" : "J A V A S C R I P T",
+                "link" : "Accessing OBE Colors (JavaScript)",
+                "descrip" : "If you need to access any OBE color values in JavaScript, you can use these handy JSON strings to bring those values into your application. You can either choose a single color space type or bring them all! NOTE: To use RGBa values in JavaScript, be sure to copy our utility function that will allow you to change the alpha value for any color value, to whatever alpha value you need. The defalut alpha value for each RGBa color value string defaluts to a string of '0.5', so you can replace that exact string with your custom alpha value.",
+                "id" : "accessing-obe-colors-javascript"
+            },
+            "15" : {
+                "head" : "Float Utility",
+                "subhead" : "C L A S S E S",
+                "link" : "Float Utility Classes",
+                "descrip" : "Use these classes to float content which allows for other content like text to flow around the floated element(s).",
+                "id" : "float-classes-table"
+            },
+            "16" : {
+                "head" : "Position Utility",
+                "subhead" : "C L A S S E S",
+                "link" : "Position Utility Classes",
+                "descrip" : "These are examples of different block-level positioning options in Bootstrap 4.",
+                "id" : "position-classes-table"
+            },
+            "17" : {
+                "head" : "Screen Reader",
+                "subhead" : "C L A S S E S",
+                "link" : "Screen Reader Utility Classes",
+                "descrip" : "These are a couple of screen reader specific classes for use in Bootstrap 4 sites and applications.",
+                "id" : "screen-reader-classes-table"
+            },
+            "18" : {
+                "head" : "Margin & Padding",
+                "subhead" : "C L A S S E S",
+                "link" : "Margin & Padding Classes",
+                "descrip" : "These are the Bootstrap 4 element margin and padding utility classes.",
+                "id" : "margin-and-padding-classes-table"
+            },
+            "19" : {
+                "head" : "Text Alignment",
+                "subhead" : "C L A S S E S",
+                "link" : "Text Alignment Classes",
+                "descrip" : "These are Bootstrap 4 text alignment utility classes.",
+                "id" : "text-alignment-classes-table"
+            }
+        }
+    },
+    "boilerplates": {
+        "title" : "OBE:BS4 BOILERS",
+        "nav" : "Boilers",
+        "slug" : "boilerplates",
+        "description" : "A set of boilerplates that are based on your settings and fonts choices, and can be used for various design and development circumstances.",
+        "background" : "bg-gradient-red-magenta-diagonal-down",
+        "border" : "border-red-200",
+        "sections" : {
+            "0" : {
+                "head" : "Boilerplates",
+                "subhead" : "M A R K U P",
+                "link" : "Boilerplates Markup",
+                "descrip" : "Use these handy boilerplates to start designing and/or building your project ASAP! So META!!!",
+                "id" : "boilerplates-markup-section"
+            },
+            "1" : {
+                "head" : "HTML5 Sections",
+                "subhead" : "M A R K U P",
+                "link" : "HTML5 Sections Markup",
+                "descrip" : "Use these handy code snippets to quickly get HTML5 sections with the appropriate tags and structure to ensure SEO and crawler best practices.",
+                "id" : "html5-sections-markup-section"
+            }
+        }
+    },
+    "settings": {
+        "title" : "OBE:BS4 SETTINGS",
+        "nav" : "Settings",
+        "slug" : "settings",
+        "description" : "A tool to generate the JSON code needed to customize your OBE:BS4 Suite build process for any of your projects.",
+        "background" : "bg-gradient-magenta-blue-diagonal-down",
+        "border" : "border-magenta-200",
+        "sections" : {
+            "0" : {
+                "head" : "Build System",
+                "subhead" : "O P T I O N S",
+                "link" : "Build System Options",
+                "descrip" : "Toggle on/off all of the options you want included in your OBE:BS4 tooling suite build process.",
+                "id" : "build-system-options-section"
+            }
+        }
+    }
+}
