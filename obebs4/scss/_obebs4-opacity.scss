@@ -1,5 +1,5 @@
 
-@if $enable-obeb4-opacity {
+@if $enable-obebs4-opacity {
 
 @each $key, $value in $obe-opacity  {
     .opacity-#{$key} {

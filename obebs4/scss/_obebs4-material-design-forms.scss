@@ -1,5 +1,5 @@
 
-@if $enable-obeb4-material-design-forms {
+@if $enable-obebs4-material-design-forms {
 
 .material-static-input-group, 
 .material-float-input-group { 
@@ -97,7 +97,7 @@
 }
 
 
-@each $colorname, $value in $obeb4-and-bootstrap-all-colors  {
+@each $colorname, $value in $obebs4-and-bootstrap-all-colors  {
     .material-static-input-group.material-group-#{$colorname} .material-bar:before, 
     .material-static-input-group.material-group-#{$colorname} .material-bar:after, 
     .material-float-input-group.material-group-#{$colorname} .material-bar:before, 

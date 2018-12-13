@@ -1,7 +1,7 @@
 
-@if $enable-obeb4-tooltips {
+@if $enable-obebs4-tooltips {
 
-	@each $color, $values in $obeb4-tooltip-colors {
+	@each $color, $values in $obebs4-tooltip-colors {
 		
 		.tooltip-#{$color} {
 			

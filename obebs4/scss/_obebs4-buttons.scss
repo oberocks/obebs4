@@ -1,15 +1,15 @@
 // stylelint-disable selector-no-qualifying-type
 
 
-@if $enable-obeb4-button-wheel-colors {
+@if $enable-obebs4-button-wheel-colors {
 	
-	@each $color, $value in $obeb4-color-wheel-colors {
+	@each $color, $value in $obebs4-color-wheel-colors {
 		.btn-#{$color} {
 			@include button-variant($value, $value);
 		}
 	}
 
-	@each $color, $value in $obeb4-color-wheel-colors {
+	@each $color, $value in $obebs4-color-wheel-colors {
 		.btn-outline-#{$color} {
 			@include button-outline-variant($value);
 		}
@@ -22,7 +22,7 @@
 // Button Sizes
 //
 
-@if $enable-obeb4-button-sizes {
+@if $enable-obebs4-button-sizes {
 
 	.btn-xxs {
 		@include button-size($btn-padding-y-xxs, $btn-padding-x-xxs, $font-size-xxs, $btn-line-height-xxs, $btn-border-radius-xxs);

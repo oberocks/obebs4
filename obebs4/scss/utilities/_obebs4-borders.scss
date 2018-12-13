@@ -4,16 +4,16 @@
 // Borders
 //
 
-@if $enable-obeb4-border-wheel-colors {
+@if $enable-obebs4-border-wheel-colors {
 	
-	@each $key, $value in $obeb4-color-wheel-colors {
+	@each $key, $value in $obebs4-color-wheel-colors {
 		.border-#{$key} { border-color: $value !important; }
 	}
 	
 }
 
 
-@if $enable-obeb4-border-widths {
+@if $enable-obebs4-border-widths {
 	
 	@each $key, $value in $obe-border-widths {
 		.border-width-#{$key} { border-width: $value !important; }
@@ -21,7 +21,7 @@
 	
 }
 
-@if $enable-obeb4-border-tints-shades {
+@if $enable-obebs4-border-tints-shades {
 	
 	@each $key, $value in $whites {
 		.border-white-#{$key} { border-color: $value !important; }

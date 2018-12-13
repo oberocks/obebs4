@@ -1,5 +1,5 @@
 
-@if $enable-obeb4-box-shadows {
+@if $enable-obebs4-box-shadows {
     
     .box-shadow-xs,
     .box-shadow-sm,
@@ -91,7 +91,7 @@
 
 }
 
-@if $enable-obeb4-text-shadows {
+@if $enable-obebs4-text-shadows {
     
     .text-shadow {
         text-shadow: 0px 1px 1px rgba($black, 0.5);

@@ -1,14 +1,14 @@
 // stylelint-disable declaration-no-important
 
-@if $enable-obeb4-background-wheel-colors {
+@if $enable-obebs4-background-wheel-colors {
 	
-	@each $key, $value in $obeb4-color-wheel-colors {
+	@each $key, $value in $obebs4-color-wheel-colors {
 		@include bg-variant(".bg-#{$key}", $value);
 	}
 	
 }
 
-@if $enable-obeb4-background-tints-shades {
+@if $enable-obebs4-background-tints-shades {
 	
 	@each $key, $value in $whites {
 		@include bg-variant(".bg-white-#{$key}", $value);
@@ -96,9 +96,9 @@
 	
 }
 
-@if $enable-obeb4-1-color-gradients {
+@if $enable-obebs4-1-color-gradients {
   
-  $all-colors: map_merge($theme-colors, $obeb4-color-wheel-colors);
+  $all-colors: map_merge($theme-colors, $obebs4-color-wheel-colors);
   
   @each $color, $value in $all-colors {
     
@@ -117,9 +117,9 @@
   
 }
 
-@if $enable-obeb4-2-color-gradients {
+@if $enable-obebs4-2-color-gradients {
 	
-	@each $color, $values in $obeb4-2-color-pairs {
+	@each $color, $values in $obebs4-2-color-pairs {
 		
 		@include obe-vert-2color-gradient(".bg-gradient-#{$color}-vertical", nth($values, 1), nth($values, 2));
 		@include obe-horiz-2color-gradient(".bg-gradient-#{$color}-horizontal", nth($values, 1), nth($values, 2));
@@ -131,9 +131,9 @@
 	
 }
 
-@if $enable-obeb4-3-color-gradients {
+@if $enable-obebs4-3-color-gradients {
 	
-	@each $color, $values in $obeb4-3-color-pairs {
+	@each $color, $values in $obebs4-3-color-pairs {
 		
 		@include obe-vert-3color-gradient(".bg-gradient-#{$color}-vertical", nth($values, 1), nth($values, 2), nth($values, 3));
 		@include obe-horiz-3color-gradient(".bg-gradient-#{$color}-horizontal", nth($values, 1), nth($values, 2), nth($values, 3));

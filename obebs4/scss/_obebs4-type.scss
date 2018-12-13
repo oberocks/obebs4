@@ -11,7 +11,7 @@
 }
 
 
-@if $enable-obeb4-secondary-font {
+@if $enable-obebs4-secondary-font {
     
     .font-secondary {
         font-family: $font-family-secondary !important;
@@ -20,7 +20,7 @@
 }
 
 
-@if $enable-obeb4-text-sizes {
+@if $enable-obebs4-text-sizes {
 
     .text-xxs {
         font-size: $font-size-xxs;

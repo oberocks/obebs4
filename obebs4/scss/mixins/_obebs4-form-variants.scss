@@ -10,7 +10,7 @@
 //
 // Example usage: change the default blue border and shadow to white for better
 // contrast against a dark gray background.
-@mixin obeb4-form-control-focus($textColor, $bgColor, $borderColor) {
+@mixin obebs4-form-control-focus($textColor, $bgColor, $borderColor) {
 	&:focus {
 		color: $textColor;
 		background-color: $bgColor;

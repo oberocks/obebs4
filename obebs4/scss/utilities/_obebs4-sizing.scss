@@ -2,7 +2,7 @@
 
 // Width and height
 
-@if $enable-obeb4-element-sizes {
+@if $enable-obebs4-element-sizes {
 
 	@each $prop, $abbrev in (width: w, height: h) {
 	

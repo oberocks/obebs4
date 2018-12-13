@@ -6,7 +6,7 @@
 // ( Based off of Bootstrap 4's original @function theme-color )
 @function obe-color-wheel-color($key: "primary") {
 	
-	@return map-get($obeb4-and-bootstrap-all-colors, $key);
+	@return map-get($obebs4-and-bootstrap-all-colors, $key);
 	
 }
 

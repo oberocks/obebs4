@@ -2,8 +2,8 @@
 
 // mixin for standard 1 color gradients
 @mixin obe-bg-gradient-variant($className, $baseColor) {
-	$tintColor: lighten($baseColor, $obeb4-1-color-tint-value);
-	$shadeColor: darken($baseColor, $obeb4-1-color-shade-value);
+	$tintColor: lighten($baseColor, $obebs4-1-color-tint-value);
+	$shadeColor: darken($baseColor, $obebs4-1-color-shade-value);
 	#{$className} {
 		background: $baseColor;
 		//background: -moz-linear-gradient(top, $tintColor 0%, $shadeColor 100%);
@@ -15,8 +15,8 @@
 
 // mixin for inverted 1 color gradients
 @mixin obe-inv-bg-gradient-variant($className, $baseColor) {
-	$tintColor: lighten($baseColor, $obeb4-1-color-tint-value);
-	$shadeColor: darken($baseColor, $obeb4-1-color-shade-value);
+	$tintColor: lighten($baseColor, $obebs4-1-color-tint-value);
+	$shadeColor: darken($baseColor, $obebs4-1-color-shade-value);
 	#{$className} {
 		background: $baseColor;
 		//background: -moz-linear-gradient(top, $shadeColor 0%, $tintColor 100%);
@@ -28,8 +28,8 @@
 
 // mixin for right 1 color gradients
 @mixin obe-right-bg-gradient-variant($className, $baseColor) {
-  $tintColor: lighten($baseColor, $obeb4-1-color-tint-value);
-  $shadeColor: darken($baseColor, $obeb4-1-color-shade-value);
+  $tintColor: lighten($baseColor, $obebs4-1-color-tint-value);
+  $shadeColor: darken($baseColor, $obebs4-1-color-shade-value);
   #{$className} {
     background: $baseColor;
 	//background: -moz-linear-gradient(left, $tintColor 0%, $shadeColor 100%);
@@ -41,8 +41,8 @@
 
 // mixin for left 1 color gradients
 @mixin obe-left-bg-gradient-variant($className, $baseColor) {
-  $tintColor: lighten($baseColor, $obeb4-1-color-tint-value);
-  $shadeColor: darken($baseColor, $obeb4-1-color-shade-value);
+  $tintColor: lighten($baseColor, $obebs4-1-color-tint-value);
+  $shadeColor: darken($baseColor, $obebs4-1-color-shade-value);
   #{$className} {
     background: $baseColor;
 	//background: -moz-linear-gradient(left, $shadeColor 0%, $tintColor 100%);
@@ -54,8 +54,8 @@
 
 // mixin for radial 1 color gradients
 @mixin obe-radial-bg-gradient-variant($className, $baseColor) {
-	$tintColor: lighten($baseColor, $obeb4-1-color-tint-value);
-	$shadeColor: darken($baseColor, $obeb4-1-color-shade-value);
+	$tintColor: lighten($baseColor, $obebs4-1-color-tint-value);
+	$shadeColor: darken($baseColor, $obebs4-1-color-shade-value);
 	#{$className} {
 		background: $baseColor;
 		//background: -moz-radial-gradient(center, ellipse cover, $tintColor 0%, $shadeColor 100%);
@@ -67,8 +67,8 @@
 
 // mixin for inversed radial 1 color gradients
 @mixin obe-radial-inv-bg-gradient-variant($className, $baseColor) {
-	$tintColor: lighten($baseColor, $obeb4-1-color-tint-value);
-	$shadeColor: darken($baseColor, $obeb4-1-color-shade-value);
+	$tintColor: lighten($baseColor, $obebs4-1-color-tint-value);
+	$shadeColor: darken($baseColor, $obebs4-1-color-shade-value);
 	#{$className} {
 		background: $baseColor;
 		//background: -moz-radial-gradient(center, ellipse cover, $shadeColor 0%, $tintColor 100%);
@@ -80,8 +80,8 @@
 
 // mixin for diagonal top right 1 color gradients
 @mixin obe-diag-top-right-bg-gradient-variant($className, $baseColor) {
-	$tintColor: lighten($baseColor, $obeb4-1-color-tint-value);
-	$shadeColor: darken($baseColor, $obeb4-1-color-shade-value);
+	$tintColor: lighten($baseColor, $obebs4-1-color-tint-value);
+	$shadeColor: darken($baseColor, $obebs4-1-color-shade-value);
 	#{$className} {
 		background: $baseColor;
 		//background: -moz-linear-gradient(45deg, $shadeColor 0%, $tintColor 100%);
@@ -93,8 +93,8 @@
 
 // mixin for diagonal bottom left 1 color gradients
 @mixin obe-diag-bottom-left-bg-gradient-variant($className, $baseColor) {
-	$tintColor: lighten($baseColor, $obeb4-1-color-tint-value);
-	$shadeColor: darken($baseColor, $obeb4-1-color-shade-value);
+	$tintColor: lighten($baseColor, $obebs4-1-color-tint-value);
+	$shadeColor: darken($baseColor, $obebs4-1-color-shade-value);
 	#{$className} {
 		background: $baseColor;
 		//background: -moz-linear-gradient(45deg, $tintColor 0%, $shadeColor 100%);
@@ -106,8 +106,8 @@
 
 // mixin for diagonal top left 1 color gradients
 @mixin obe-diag-top-left-bg-gradient-variant($className, $baseColor) {
-	$tintColor: lighten($baseColor, $obeb4-1-color-tint-value);
-	$shadeColor: darken($baseColor, $obeb4-1-color-shade-value);
+	$tintColor: lighten($baseColor, $obebs4-1-color-tint-value);
+	$shadeColor: darken($baseColor, $obebs4-1-color-shade-value);
 	#{$className} {
 		background: $baseColor;
 		//background: -moz-linear-gradient(-45deg, $tintColor 0%, $shadeColor 100%);
@@ -119,8 +119,8 @@
 
 // mixin for diagonal top left 1 color gradients
 @mixin obe-diag-bottom-right-bg-gradient-variant($className, $baseColor) {
-	$tintColor: lighten($baseColor, $obeb4-1-color-tint-value);
-	$shadeColor: darken($baseColor, $obeb4-1-color-shade-value);
+	$tintColor: lighten($baseColor, $obebs4-1-color-tint-value);
+	$shadeColor: darken($baseColor, $obebs4-1-color-shade-value);
 	#{$className} {
 		background: $baseColor;
 		//background: -moz-linear-gradient(-45deg, $shadeColor 0%, $tintColor 100%);

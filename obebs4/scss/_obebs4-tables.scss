@@ -2,7 +2,7 @@
 // Basic Bootstrap table
 //
 
-@if $enable-obeb4-tables {
+@if $enable-obebs4-tables {
 	
 	.table tbody tr.active, 
 	.table tbody tr.active:hover {
@@ -15,7 +15,7 @@
 	// Exact selectors below required to override `.table-striped` and prevent
 	// inheritance to nested tables.
 
-	@each $color, $value in $obeb4-and-bootstrap-all-colors {
+	@each $color, $value in $obebs4-and-bootstrap-all-colors {
 
 		// for all tables
 		.table-#{$color} thead {
@@ -24,7 +24,7 @@
 		}
 		
 		@include table-row-variant($color, obe-color-wheel-color-level($color, -8));
-		@include obeb4-table-row-active-variant($color, obe-color-wheel-color-level($color, 1));
+		@include obebs4-table-row-active-variant($color, obe-color-wheel-color-level($color, 1));
 	
 		// for bordered tables
 		.table-bordered.table-#{$color} th, 

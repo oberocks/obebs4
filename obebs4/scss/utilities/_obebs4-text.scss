@@ -2,16 +2,16 @@
 
 // Contextual colors
 
-@if $enable-obeb4-text-wheel-colors {
+@if $enable-obebs4-text-wheel-colors {
 	
-	@each $key, $value in $obeb4-color-wheel-colors {
+	@each $key, $value in $obebs4-color-wheel-colors {
 		@include text-emphasis-variant(".text-#{$key}", $value);
 	}
 	
 }
 
 
-@if $enable-obeb4-text-tints-shades {
+@if $enable-obebs4-text-tints-shades {
 	
 	@each $key, $value in $whites {
 	  @include text-emphasis-variant(".text-white-#{$key}", $value);

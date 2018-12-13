@@ -2,7 +2,7 @@
 
 // Margin and Padding
 
-@if $enable-obeb4-spacing-utilities {
+@if $enable-obebs4-spacing-utilities {
 
 @each $breakpoint in map-keys($grid-breakpoints) {
     @include media-breakpoint-up($breakpoint) {

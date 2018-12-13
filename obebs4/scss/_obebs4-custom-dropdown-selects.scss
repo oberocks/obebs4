@@ -1,5 +1,5 @@
 
-@if $enable-obeb4-custom-dropdown-selects {
+@if $enable-obebs4-custom-dropdown-selects {
 
     // default css for all dropdown selects
 
@@ -58,7 +58,7 @@
         }
     }
 
-	@each $color, $values in $obeb4-dropdown-colors {
+	@each $color, $values in $obebs4-dropdown-colors {
 	
 		/* #{$color} dropdown */
 		.dropdown-menu-#{$color} {

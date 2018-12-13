@@ -3,9 +3,9 @@
 // Add modifier classes to change text and background color on individual items.
 // Organizationally, this must come after the `:hover` states.
 
-@if $enable-obeb4-list-groups {
+@if $enable-obebs4-list-groups {
 
-	@each $color, $value in $obeb4-color-wheel-colors {
+	@each $color, $value in $obebs4-color-wheel-colors {
 		@include list-group-item-variant($color, obe-color-wheel-color-level($color, -9), obe-color-wheel-color-level($color, 6));
 	}
 	

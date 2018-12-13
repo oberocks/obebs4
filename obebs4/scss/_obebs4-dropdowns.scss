@@ -1,7 +1,7 @@
 
-@if $enable-obeb4-dropdowns {
+@if $enable-obebs4-dropdowns {
 
-	@each $color, $values in $obeb4-dropdown-colors {
+	@each $color, $values in $obebs4-dropdown-colors {
 	
 		/* #{$color} dropdown */
 		.dropdown-menu-#{$color} {

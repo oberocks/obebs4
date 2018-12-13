@@ -1,6 +1,6 @@
 // Tables
 
-@mixin obeb4-table-row-active-variant($state, $background) {
+@mixin obebs4-table-row-active-variant($state, $background) {
 	// Exact selectors below required to override `.table-striped` and prevent
 	// inheritance to nested tables.
 	.table-#{$state}.active {

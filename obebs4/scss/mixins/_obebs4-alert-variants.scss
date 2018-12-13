@@ -1,4 +1,4 @@
-@mixin obeb4-alert-variant($background, $border, $color) {
+@mixin obebs4-alert-variant($background, $border, $color) {
 	
 	color: $color;
 	@include gradient-bg($background);

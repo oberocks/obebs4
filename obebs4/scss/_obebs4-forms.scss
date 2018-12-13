@@ -4,9 +4,9 @@
 // Textual form controls
 //
 
-@if $enable-obeb4-form-element-wheel-colors {
+@if $enable-obebs4-form-element-wheel-colors {
 	
-	@each $colorname, $value in $obeb4-and-bootstrap-all-colors {
+	@each $colorname, $value in $obebs4-and-bootstrap-all-colors {
 		
 		.form-control.form-#{$colorname} {
 			color: darken($value, 10%);
@@ -15,7 +15,7 @@
 
 			// Customize the `:focus` state to imitate native WebKit styles.
 			// KEY: ($textColor, $bgColor, $borderColor)
-			@include obeb4-form-control-focus(lighten($value, 5%), $white, lighten($value, 5%));
+			@include obebs4-form-control-focus(lighten($value, 5%), $white, lighten($value, 5%));
 
 			// Placeholder
 			&::placeholder {

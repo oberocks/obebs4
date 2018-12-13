@@ -4,7 +4,7 @@
 // Button Sizes
 //
 
-@if $enable-obeb4-fab-buttons {
+@if $enable-obebs4-fab-buttons {
 
 	.fab-xxs,
 	.fab-xs,
@@ -21,43 +21,43 @@
 	.fab-xxs {
 		width: 22px;
 		height: 22px;
-		font-size: ($obeb4-font-size-base * 0.750);
+		font-size: ($obebs4-font-size-base * 0.750);
 	}
 	
 	.fab-xs {
 		width: 26px;
 		height: 26px;
-		font-size: ($obeb4-font-size-base * 0.875);
+		font-size: ($obebs4-font-size-base * 0.875);
 	}
 	
 	.fab-sm {
 		width: 31px;
 		height: 31px;
-		font-size: $obeb4-font-size-base;
+		font-size: $obebs4-font-size-base;
 	}
 	
 	.fab-md {
 		width: 36px;
 		height: 36px;
-		font-size: ($obeb4-font-size-base * 1.25);
+		font-size: ($obebs4-font-size-base * 1.25);
 	}
 	
 	.fab-lg {
 		width: 48px;
 		height: 48px;
-		font-size: ($obeb4-font-size-base * 1.5);
+		font-size: ($obebs4-font-size-base * 1.5);
 	}
 	
 	.fab-xl {
 		width: 60px;
 		height: 60px;
-		font-size: ($obeb4-font-size-base * 2);
+		font-size: ($obebs4-font-size-base * 2);
 	}
 	
 	.fab-xxl {
 		width: 79px;
 		height: 79px;
-		font-size: ($obeb4-font-size-base * 2.75);
+		font-size: ($obebs4-font-size-base * 2.75);
 	}
 	
 }
