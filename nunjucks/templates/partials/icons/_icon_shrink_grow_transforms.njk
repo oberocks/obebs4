@@ -1,0 +1,51 @@
+<!-- _icon_shrink_grow_transforms.njk -->
+        <div class="container-fluid pt-5 text-center bg-white text-dark">
+
+            <div class="container fa-workspace">
+
+                <div class="row justify-content-center">
+                    
+                    <div id="{{ global_strings['icons']['sections']['5']['id'] }}" class="col-12">
+
+                        {% set headingHeadline = global_strings['icons']['sections']['5']['head'] %}
+						{% set headingSubline = global_strings['icons']['sections']['5']['subhead'] %}
+						{% set headingDescrip = global_strings['icons']['sections']['5']['descrip'] %}
+                        {% include "partials/_columnHeading.njk" %}
+
+                    </div>
+
+                </div>
+                
+                <div class="row justify-content-center">
+                    
+                    {% macro icon_shrink_grow(label, shrinkGrow) %}
+                    <div class="col-sm-6 col-md-4 mb-5">
+                        <label class="d-block font-weight-bold pb-2">{{ label }}</label>
+                        <div class="js-prism-fa prism-hidden mb-2 text-center" style="cursor: help;">
+                            <span class="bg-light fa-2x">
+                                <i class="fas fa-magic" data-fa-transform="{{ shrinkGrow }}"></i>
+                            </span>
+                        </div>
+                        <pre>
+                            <code class="language-html line-numbers">
+                               &lt;i class="fas fa-magic" data-fa-transform="{{ shrinkGrow }}"&gt;&lt;/i&gt;
+                            </code>
+                        </pre>
+                    </div>
+                    {% endmacro %}
+
+                    {{ icon_shrink_grow('Shrink x11.5:', 'shrink-11.5') }}
+                    {{ icon_shrink_grow('Shrink x5:', 'shrink-5') }}
+                    {{ icon_shrink_grow('Shrink x2:', 'shrink-2') }}
+                    {{ icon_shrink_grow('Shrink x0.5:', 'shrink-0.5') }}
+                    {{ icon_shrink_grow('Default Sizing:', '') }}
+                    {{ icon_shrink_grow('Grow x0.5:', 'grow-0.5') }}
+                    {{ icon_shrink_grow('Grow x2:', 'grow-2') }}
+                    {{ icon_shrink_grow('Grow x5:', 'grow-5') }}
+                    {{ icon_shrink_grow('Grow x11:', 'grow-11') }}
+
+                </div>
+
+            </div>
+
+        </div>

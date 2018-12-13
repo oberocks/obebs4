@@ -1,0 +1,52 @@
+<!-- _icon_rotate_flip_transforms.njk -->
+        <div class="container-fluid pt-5 text-center bg-white text-dark">
+
+            <div class="container fa-workspace">
+
+                <div class="row justify-content-center">
+                    
+                    <div id="{{ global_strings['icons']['sections']['7']['id'] }}" class="col-12">
+
+                        {% set headingHeadline = global_strings['icons']['sections']['7']['head'] %}
+						{% set headingSubline = global_strings['icons']['sections']['7']['subhead'] %}
+						{% set headingDescrip = global_strings['icons']['sections']['7']['descrip'] %}
+                        {% include "partials/_columnHeading.njk" %}
+
+                    </div>
+
+                </div>
+                
+                <div class="row justify-content-center">
+                    
+                    {% macro icon_rotate_flip(label, rotateFlip) %}
+                    <div class="col-sm-6 col-md-4 mb-5">
+                        <label class="d-block font-weight-bold pb-2">{{ label }}</label>
+                        <div class="js-prism-fa prism-hidden mb-2 text-center" style="cursor: help;">
+                            <span class="bg-light fa-2x">
+                                <i class="fas fa-magic" data-fa-transform="{{ rotateFlip }}"></i>
+                            </span>
+                        </div>
+                        <pre>
+                            <code class="language-html line-numbers">
+                               &lt;i class="fas fa-magic" data-fa-transform="{{ rotateFlip }}"&gt;&lt;/i&gt;
+                            </code>
+                        </pre>
+                    </div>
+                    {% endmacro %}
+
+                    {{ icon_rotate_flip('Default Orientation', '') }}
+                    {{ icon_rotate_flip('90° Clockwise', 'rotate-90') }}
+                    {{ icon_rotate_flip('180° Clockwise', 'rotate-180') }}
+                    {{ icon_rotate_flip('270 Clockwise', 'rotate-270') }}
+                    {{ icon_rotate_flip('90° Counterclockwise', 'rotate--90') }}
+                    {{ icon_rotate_flip('180° Counterclockwise', 'rotate--180') }}
+                    {{ icon_rotate_flip('270° Counterclockwise', 'rotate--270') }}
+                    {{ icon_rotate_flip('Flipped Vertically', 'flip-v') }}
+                    {{ icon_rotate_flip('Flipped Horizontally', 'flip-h') }}
+                    {{ icon_rotate_flip('Both Flipped', 'flip-h flip-v') }}
+
+                </div>
+
+            </div>
+
+        </div>

@@ -1,0 +1,98 @@
+<!-- _icon_animations.njk -->
+        <div class="container-fluid pt-5 text-center bg-white text-dark">
+
+            <div class="container fa-workspace">
+
+                <div class="row justify-content-center">
+
+                    <div id="{{ global_strings['icons']['sections']['11']['id'] }}" class="col-12">
+
+                        {% set headingHeadline = global_strings['icons']['sections']['11']['head'] %}
+						{% set headingSubline = global_strings['icons']['sections']['11']['subhead'] %}
+						{% set headingDescrip = global_strings['icons']['sections']['11']['descrip'] %}
+                        {% include "partials/_columnHeading.njk" %}
+
+                    </div>
+
+                </div>
+
+                <div class="alert alert-primary alert-dismissible mb-4 fade show text-left" role="alert">
+                    <p class="mb-0"><strong>Please Note:</strong> To check for any new FontAwesome 5 "spinner" icons that are designed to handle animation maths, check out <a class="alert-link" href="https://fontawesome.com/icons?d=gallery&c=spinners" target="_blank" rel="noopener noreferrer">this page</a>!</p>
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span></button>
+                </div>
+
+                <label class="d-block text-center font-weight-bold mb-4">Spin Animations:</label>
+                
+                <div class="row justify-content-center">
+                    
+                    {% macro icon_animation_spin_block(faType, iconClass) %}
+                    <div class="col-sm-6 col-md-4 mb-5">
+                        <div class="js-prism-fa prism-hidden mb-2" style="cursor: help;">
+                            <i class="{{ faType }} fa-2x {{ iconClass }} fa-spin"></i>
+                        </div>
+                        <pre>
+                            <code class="language-html line-numbers">
+                                &lt;i class="{{ faType }} fa-2x {{ iconClass }} fa-spin"&gt;&lt;/i&gt;
+                            </code>
+                        </pre>
+                    </div>
+                    {% endmacro %}
+
+                    {{ icon_animation_spin_block('fas', ' fa-asterisk') }}
+                    {{ icon_animation_spin_block('fas', ' fa-certificate') }}
+                    {{ icon_animation_spin_block('fas', ' fa-circle-notch') }}
+                    {{ icon_animation_spin_block('fas', ' fa-cog') }}
+                    {{ icon_animation_spin_block('fas', ' fa-compass') }}
+                    {{ icon_animation_spin_block('far', ' fa-compass') }}
+                    {{ icon_animation_spin_block('fas', ' fa-crosshairs') }}
+                    {{ icon_animation_spin_block('fas', ' fa-life-ring') }}
+                    {{ icon_animation_spin_block('far', ' fa-life-ring') }}
+                    {{ icon_animation_spin_block('fas', ' fa-snowflake') }}
+                    {{ icon_animation_spin_block('far', ' fa-snowflake') }}
+                    {{ icon_animation_spin_block('fas', ' fa-spinner') }}
+                    {{ icon_animation_spin_block('fas', ' fa-stroopwafel') }}
+                    {{ icon_animation_spin_block('fas', ' fa-sun') }}
+                    {{ icon_animation_spin_block('far', ' fa-sun') }}
+                    {{ icon_animation_spin_block('fas', ' fa-sync') }}
+
+                </div>
+
+                <label class="d-block text-center font-weight-bold mb-4">Pulse Animations:</label>
+                
+                <div class="row justify-content-center">
+                    
+                    {% macro icon_animation_pulse_block(faType, iconClass) %}
+                    <div class="col-sm-6 col-md-4 mb-5">
+                        <div class="js-prism-fa prism-hidden mb-2" style="cursor: help;">
+                            <i class="{{ faType }} fa-2x {{ iconClass }} fa-pulse"></i>
+                        </div>
+                        <pre>
+                            <code class="language-html line-numbers">
+                                &lt;i class="{{ faType }} fa-2x {{ iconClass }} fa-pulse"&gt;&lt;/i&gt;
+                            </code>
+                        </pre>
+                    </div>
+                    {% endmacro %}
+
+                    {{ icon_animation_pulse_block('fas', ' fa-asterisk') }}
+                    {{ icon_animation_pulse_block('fas', ' fa-certificate') }}
+                    {{ icon_animation_pulse_block('fas', ' fa-circle-notch') }}
+                    {{ icon_animation_pulse_block('fas', ' fa-cog') }}
+                    {{ icon_animation_pulse_block('fas', ' fa-compass') }}
+                    {{ icon_animation_pulse_block('far', ' fa-compass') }}
+                    {{ icon_animation_pulse_block('fas', ' fa-crosshairs') }}
+                    {{ icon_animation_pulse_block('fas', ' fa-life-ring') }}
+                    {{ icon_animation_pulse_block('far', ' fa-life-ring') }}
+                    {{ icon_animation_pulse_block('fas', ' fa-snowflake') }}
+                    {{ icon_animation_pulse_block('far', ' fa-snowflake') }}
+                    {{ icon_animation_pulse_block('fas', ' fa-spinner') }}
+                    {{ icon_animation_pulse_block('fas', ' fa-stroopwafel') }}
+                    {{ icon_animation_pulse_block('fas', ' fa-sun') }}
+                    {{ icon_animation_pulse_block('far', ' fa-sun') }}
+                    {{ icon_animation_pulse_block('fas', ' fa-sync') }}
+
+                </div>
+
+            </div>
+
+        </div>

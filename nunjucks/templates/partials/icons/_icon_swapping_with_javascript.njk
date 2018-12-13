@@ -1,0 +1,51 @@
+<!-- _icon_swapping_with_javascript.njk -->
+        <div class="container-fluid pt-5 text-center bg-white text-dark">
+
+            <div class="container">
+
+                <div class="row justify-content-center">
+                    
+                    <div id="{{ global_strings['icons']['sections']['12']['id'] }}" class="col-12 pb-5">
+
+                        {% set headingHeadline = global_strings['icons']['sections']['12']['head'] %}
+						{% set headingSubline = global_strings['icons']['sections']['12']['subhead'] %}
+						{% set headingDescrip = global_strings['icons']['sections']['12']['descrip'] %}
+                        {% include "partials/_columnHeading.njk" %}
+                    
+                        <div class="text-center mb-3">
+                            <button id="icon-swap-example" class="btn btn-lg btn-primary">CLICK ME <i class="fas fa-angle-right"></i></button>
+                        </div>
+                        
+                        <label class="d-block font-weight-bold pb-1">Markup Example:</label>
+                        <pre>
+                            <code class="language-markup line-numbers">
+                                &lt;button id="icon-swap-example" class="btn btn-primary"&gt;CLICK ME &lt;i class="fas fa-angle-right"&gt;&lt;/i&gt;&lt;/button&gt;
+                            </code>
+                        </pre>
+                        
+                        <label class="d-block font-weight-bold pb-1 mt-3">JavaScript (jQuery) Example:</label>
+                        <pre>
+                            <code class="language-javascript line-numbers">
+                                &lt;script&gt;
+                                    // NOTE: This script should run before/outside any jQuery document.ready scripts
+                                    // NOTE: This script expects data-auto-replace-svg="nest" is set on your FontAwesome JS include
+                                    // NOTE: If you aren't using the nesting feature, then change the .find() string below from '[data-fa-i2svg] svg' to '[data-fa-i2svg]'
+                                    document.addEventListener('DOMContentLoaded', function () {
+                                        $('#icon-swap-example').on('click', function () {
+                                            $(this)
+                                            .find('[data-fa-i2svg] svg')
+                                            .toggleClass('fa-angle-right')
+                                            .toggleClass('fa-angle-down');
+                                        });
+                                    });
+                                &lt;/script&gt;
+                            </code>
+                        </pre>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>

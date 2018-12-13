@@ -1,0 +1,209 @@
+<!-- _icon_layers.njk -->
+        <div class="container-fluid pt-5 text-center bg-white text-dark">
+
+            <div class="container fa-workspace">
+
+                <div class="row justify-content-center">
+                    
+                    <div id="{{ global_strings['icons']['sections']['9']['id'] }}" class="col-12">
+
+                        {% set headingHeadline = global_strings['icons']['sections']['9']['head'] %}
+						{% set headingSubline = global_strings['icons']['sections']['9']['subhead'] %}
+						{% set headingDescrip = global_strings['icons']['sections']['9']['descrip'] %}
+                        {% include "partials/_columnHeading.njk" %}
+
+                    </div>
+
+                </div>
+                
+                <div class="row justify-content-center">
+                    
+                    <div class="col-sm-6 col-md-4 mb-5">
+                        <label class="d-block font-weight-bold">Simple Layering:</label>
+                        <div class="js-prism-fa prism-hidden mb-2 text-center fa-3x" style="cursor: help;">
+                            <span class="fa-layers fa-fw">
+                                <i class="fas fa-circle text-danger"></i>
+                                <i class="fa-inverse fas fa-times" data-fa-transform="shrink-6"></i>
+                            </span>
+                        </div>
+                        <pre>
+                            <code class="language-html line-numbers">
+                                &lt;span class="fa-layers fa-fw"&gt;
+                                    &lt;i class="fas fa-circle text-danger"&gt;&lt;/i&gt;
+                                    &lt;i class="fa-inverse fas fa-times" data-fa-transform="shrink-6"&gt;&lt;/i&gt;
+                                &lt;/span&gt;
+                            </code>
+                        </pre>
+                    </div>
+
+                    <div class="col-sm-6 col-md-4 mb-5">
+                        <label class="d-block font-weight-bold">With Positioning:</label>
+                        <div class="js-prism-fa prism-hidden mb-2 text-center fa-3x" style="cursor: help;">
+                            <span class="fa-layers fa-fw">
+                                <i class="fas fa-bookmark text-light"></i>
+                                <i class="fas fa-heart text-danger" data-fa-transform="shrink-10 up-2"></i>
+                            </span>
+                        </div>
+                        <pre>
+                            <code class="language-html line-numbers">
+								&lt;span class="fa-layers fa-fw"&gt;
+									&lt;i class="fas fa-bookmark text-light"&gt;&lt;/i&gt;
+									&lt;i class="fas fa-heart text-danger" data-fa-transform="shrink-10 up-2"&gt;&lt;/i&gt;
+								&lt;/span&gt;
+                            </code>
+                        </pre>
+                    </div>
+
+                    <div class="col-sm-6 col-md-4 mb-5">
+                        <label class="d-block font-weight-bold">Multiple Icons:</label>
+                        <div class="js-prism-fa prism-hidden mb-2 text-center fa-3x" style="cursor: help;">
+                            <span class="fa-layers fa-fw">
+                                <i class="fas fa-play text-primary" data-fa-transform="rotate--90 grow-2"></i>
+                                <i class="fas fa-sun fa-inverse" data-fa-transform="shrink-10 up-2"></i>
+                                <i class="fas fa-moon fa-inverse" data-fa-transform="shrink-11 down-4.2 left-4"></i>
+                                <i class="fas fa-star fa-inverse" data-fa-transform="shrink-11 down-4.2 right-4"></i>
+                            </span>
+                        </div>
+                        <pre>
+                            <code class="language-html line-numbers">
+								&lt;span class="fa-layers fa-fw"&gt;
+									&lt;i class="fas fa-play text-primary" data-fa-transform="rotate--90 grow-2"&gt;&lt;/i&gt;
+									&lt;i class="fas fa-sun fa-inverse" data-fa-transform="shrink-10 up-2"&gt;&lt;/i&gt;
+									&lt;i class="fas fa-moon fa-inverse" data-fa-transform="shrink-11 down-4.2 left-4"&gt;&lt;/i&gt;
+									&lt;i class="fas fa-star fa-inverse" data-fa-transform="shrink-11 down-4.2 right-4"&gt;&lt;/i&gt;
+								&lt;/span&gt;
+                            </code>
+                        </pre>
+                    </div>
+
+                    <div class="col-sm-6 col-md-4 mb-5">
+                        <label class="d-block font-weight-bold">With Numbers:</label>
+                        <div class="js-prism-fa prism-hidden mb-2 text-center fa-3x" style="cursor: help;">
+                            <span class="fa-layers fa-fw">
+                                <i class="fas fa-calendar"></i>
+                                <span class="fa-layers-text fa-inverse" style="font-size: 1.5rem; position: relative; left: 50%; top: 69%;">28</span>
+                            </span>
+                        </div>
+                        <pre>
+                            <code class="language-html line-numbers">
+								&lt;span class="fa-layers fa-fw"&gt;
+									&lt;i class="fas fa-calendar"&gt;&lt;/i&gt;
+									&lt;span class="fa-layers-text fa-inverse" style="font-size: 1.5rem; position: relative; left: 50%; top: 69%;"&gt;28&lt;/span&gt;
+								&lt;/span&gt;
+                            </code>
+                        </pre>
+                    </div>
+
+                    <div class="col-sm-6 col-md-4 mb-5">
+                        <label class="d-block font-weight-bold">With Letters:</label>
+                        <div class="js-prism-fa prism-hidden mb-2 text-center fa-3x" style="cursor: help;">
+                            <span class="fa-layers fa-fw">
+                                <i class="fas fa-certificate"></i>
+                                <span class="fa-layers-text fa-inverse" style="font-size: 0.75rem; position: relative; left: 50%; top: 50%;">NEW</span>
+                            </span>
+                        </div>
+                        <pre>
+                            <code class="language-html line-numbers">
+								&lt;span class="fa-layers fa-fw"&gt;
+									&lt;i class="fas fa-certificate"&gt;&lt;/i&gt;
+									&lt;span class="fa-layers-text fa-inverse" style="font-size: 0.75rem; position: relative; left: 50%; top: 50%;"&gt;NEW&lt;/span&gt;
+								&lt;/span&gt;
+                            </code>
+                        </pre>
+                    </div>
+
+                    <div class="col-sm-6 col-md-4 mb-5">
+                        <label class="d-block font-weight-bold">Default Counter:</label>
+                        <div class="js-prism-fa prism-hidden mb-2 text-center fa-3x" style="cursor: help;">
+                            <span class="fa-layers fa-fw">
+                                <i class="fas fa-envelope"></i>
+                                <span class="fa-layers-counter bg-danger">1,419</span>
+                            </span>
+                        </div>
+                        <pre>
+                            <code class="language-html line-numbers">
+								&lt;span class="fa-layers fa-fw"&gt;
+									&lt;i class="fas fa-envelope"&gt;&lt;/i&gt;
+									&lt;span class="fa-layers-counter bg-danger"&gt;1,419&lt;/span&gt;
+								&lt;/span&gt;
+                            </code>
+                        </pre>
+                    </div>
+
+                    <div class="col-sm-6 col-md-4 mb-5">
+                        <label class="d-block font-weight-bold">Top Left Counter:</label>
+                        <div class="js-prism-fa prism-hidden mb-2 text-center fa-3x" style="cursor: help;">
+                            <span class="fa-layers fa-fw">
+                                <i class="fas fa-envelope"></i>
+                                <span class="fa-layers-counter fa-layers-top-left bg-danger">1,419</span>
+                            </span>
+                        </div>
+                        <pre>
+                            <code class="language-html line-numbers">
+								&lt;span class="fa-layers fa-fw"&gt;
+									&lt;i class="fas fa-envelope"&gt;&lt;/i&gt;
+									&lt;span class="fa-layers-counter fa-layers-top-left bg-danger"&gt;1,419&lt;/span&gt;
+								&lt;/span&gt;
+                            </code>
+                        </pre>
+                    </div>
+
+                    <div class="col-sm-6 col-md-4 mb-5">
+                        <label class="d-block font-weight-bold">Bottom Left Counter:</label>
+                        <div class="js-prism-fa prism-hidden mb-2 text-center fa-3x" style="cursor: help;">
+                            <span class="fa-layers fa-fw">
+                                <i class="fas fa-envelope"></i>
+                                <span class="fa-layers-counter fa-layers-bottom-left bg-danger">1,419</span>
+                            </span>
+                        </div>
+                        <pre>
+                            <code class="language-html line-numbers">
+								&lt;span class="fa-layers fa-fw"&gt;
+									&lt;i class="fas fa-envelope"&gt;&lt;/i&gt;
+									&lt;span class="fa-layers-counter fa-layers-bottom-left bg-danger"&gt;1,419&lt;/span&gt;
+								&lt;/span&gt;
+                            </code>
+                        </pre>
+                    </div>
+
+                    <div class="col-sm-6 col-md-4 mb-5">
+                        <label class="d-block font-weight-bold">Bottom Right Counter:</label>
+                        <div class="js-prism-fa prism-hidden mb-2 text-center fa-3x" style="cursor: help;">
+                            <span class="fa-layers fa-fw">
+                                <i class="fas fa-envelope"></i>
+                                <span class="fa-layers-counter fa-layers-bottom-right bg-danger">1,419</span>
+                            </span>
+                        </div>
+                        <pre>
+                            <code class="language-html line-numbers">
+								&lt;span class="fa-layers fa-fw"&gt;
+									&lt;i class="fas fa-envelope"&gt;&lt;/i&gt;
+									&lt;span class="fa-layers-counter fa-layers-bottom-right bg-danger"&gt;1,419&lt;/span&gt;
+								&lt;/span&gt;
+                            </code>
+                        </pre>
+                    </div>
+
+                    <div class="col-sm-6 col-md-4 mb-5">
+                        <label class="d-block font-weight-bold">Top Right Counter:</label>
+                        <div class="js-prism-fa prism-hidden mb-2 text-center fa-3x" style="cursor: help;">
+                            <span class="fa-layers fa-fw">
+                                <i class="fas fa-envelope"></i>
+                                <span class="fa-layers-counter fa-layers-top-right bg-danger">1,419</span>
+                            </span>
+                        </div>
+                        <pre>
+                            <code class="language-html line-numbers">
+								&lt;span class="fa-layers fa-fw"&gt;
+									&lt;i class="fas fa-envelope"&gt;&lt;/i&gt;
+									&lt;span class="fa-layers-counter fa-layers-top-right bg-danger"&gt;1,419&lt;/span&gt;
+								&lt;/span&gt;
+                            </code>
+                        </pre>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>

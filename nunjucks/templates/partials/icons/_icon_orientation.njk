@@ -1,0 +1,39 @@
+<!-- _icon_orientation.njk -->
+		<div class="container-fluid pt-5 text-center bg-white text-dark">
+
+            <div class="container fa-workspace">
+
+                <div class="row justify-content-center">
+
+                    <div id="{{ global_strings['icons']['sections']['4']['id'] }}" class="col-md-6 pb-5">
+
+                        {% set headingHeadline = global_strings['icons']['sections']['4']['head'] %}
+						{% set headingSubline = global_strings['icons']['sections']['4']['subhead'] %}
+						{% set headingDescrip = global_strings['icons']['sections']['4']['descrip'] %}
+                        {% include "partials/_columnHeading.njk" %}
+
+                        {% macro icon_orientation(label, faRotationClass) %}
+                        <label class="d-block font-weight-bold">{{ label }}</label>
+                        <div class="js-prism-fa prism-hidden mb-2" style="cursor: help;">
+                            <i class="fas fa-home fa-2x {{ faRotationClass }}"></i>
+                        </div>
+                        <pre>
+                            <code class="language-html line-numbers">
+                                &lt;i class="fas fa-home fa-2x {{ faRotationClass }}"&gt;&lt;/i&gt;
+                            </code>
+                        </pre>
+                        {% endmacro %}
+
+                        {{ icon_orientation('Rotate 90° Clockwise', 'fa-rotate-90') }}
+                        {{ icon_orientation('Rotate 180° Clockwise', 'fa-rotate-180') }}
+                        {{ icon_orientation('Rotate 270° Clockwise', 'fa-rotate-270') }}
+                        {{ icon_orientation('Flip Horizontally', 'fa-flip-horizontal') }}
+                        {{ icon_orientation('Flip Vertically', 'fa-flip-vertical') }}
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>

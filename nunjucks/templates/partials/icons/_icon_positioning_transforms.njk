@@ -1,0 +1,47 @@
+<!-- _icon_positioning_transforms.njk -->
+        <div class="container-fluid pt-5 text-center bg-white text-dark">
+
+            <div class="container fa-workspace">
+
+                <div class="row justify-content-center">
+                    
+                    <div id="{{ global_strings['icons']['sections']['6']['id'] }}" class="col-12">
+
+                        {% set headingHeadline = global_strings['icons']['sections']['6']['head'] %}
+						{% set headingSubline = global_strings['icons']['sections']['6']['subhead'] %}
+						{% set headingDescrip = global_strings['icons']['sections']['6']['descrip'] %}
+                        {% include "partials/_columnHeading.njk" %}
+
+                    </div>
+
+                </div>
+                
+                <div class="row justify-content-center">
+                    
+                    {% macro icon_positioning(label, positionClasses) %}
+                    <div class="col-sm-6 col-md-4 mb-5">
+                        <label class="d-block font-weight-bold pb-2">{{ label }}</label>
+                        <div class="js-prism-fa prism-hidden mb-2 text-center" style="cursor: help;">
+                            <span class="bg-light fa-2x">
+                                <i class="fas fa-magic" data-fa-transform="{{ positionClasses }}"></i>
+                            </span>
+                        </div>
+                        <pre>
+                            <code class="language-html line-numbers">
+                               &lt;i class="fas fa-2x fa-magic" data-fa-transform="{{ positionClasses }}"&gt;&lt;/i&gt;
+                            </code>
+                        </pre>
+                    </div>
+                    {% endmacro %}
+
+                    {{ icon_positioning('Default Positioning:', '') }}
+                    {{ icon_positioning('Position Up x10:', 'up-10') }}
+                    {{ icon_positioning('Position Down x10:', 'down-10') }}
+                    {{ icon_positioning('Position Left x10:', 'left-10') }}
+                    {{ icon_positioning('Position Right x10:', 'right-10') }}
+
+                </div>
+
+            </div>
+
+        </div>

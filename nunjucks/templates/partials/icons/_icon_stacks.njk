@@ -1,0 +1,61 @@
+<!-- _icon_stacks.njk -->
+        <div class="container-fluid pt-5 text-center bg-white text-dark">
+
+            <div class="container fa-workspace">
+
+                <div class="row justify-content-center">
+
+                    <div id="{{ global_strings['icons']['sections']['10']['id'] }}" class="col-12">
+
+                        {% set headingHeadline = global_strings['icons']['sections']['10']['head'] %}
+						{% set headingSubline = global_strings['icons']['sections']['10']['subhead'] %}
+						{% set headingDescrip = global_strings['icons']['sections']['10']['descrip'] %}
+                        {% include "partials/_columnHeading.njk" %}
+
+                    </div>
+
+                </div>
+
+                <div class="alert alert-primary alert-dismissible mb-4 fade show text-left" role="alert">
+                    <p class="mb-0"><strong>Please Note:</strong> To check for any new FontAwesome 5 "shape" icons that are best to use with stacks, check out <a class="alert-link" href="https://fontawesome.com/icons?d=gallery&c=shapes" target="_blank" rel="noopener noreferrer">this page</a>!</p>
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span></button>
+                </div>
+                
+                <div class="row justify-content-center">
+                    
+                    {% macro icon_stack_block(label, sizeClass, baseScale, baseClasses, baseColor, topScale, topClasses, topColor) %}
+                    <div class="col-sm-6 col-md-4 mb-5">
+                        <label class="d-block text-center font-weight-bold pb-2">{{ label }}</label>
+                        <div class="js-prism-fa prism-hidden mb-2" style="cursor: help;">
+                            <span class="fa-stack{{ sizeClass }}">
+                                <i class="{{ baseClasses }} fa-stack-{{ baseScale }}{{ baseColor }}"></i>
+                                <i class="{{ topClasses }} fa-stack-{{ topScale }} {{ topColor }}"></i>
+                            </span>
+                        </div>
+                        <pre>
+                            <code class="language-html line-numbers">
+                                &lt;span class="fa-stack{{ sizeClass }}"&gt;
+                                    &lt;i class="{{ baseClasses }} fa-stack-{{ baseScale }}{{ baseColor }}"&gt;&lt;/i&gt;
+                                    &lt;i class="{{ topClasses }} fa-stack-{{ topScale }} {{ topColor }}"&gt;&lt;/i&gt;
+                                &lt;/span&gt;
+                            </code>
+                        </pre>
+                    </div>
+                    {% endmacro %}
+
+                    {{ icon_stack_block('Sized-Down Example:', ' fa-xs', '2x', 'fas fa-square', '', '1x', 'fas fa-home', 'fa-inverse') }}
+                    {{ icon_stack_block('Default Sized Example:', '', '2x', 'fas fa-square', '', '1x', 'fas fa-home', 'fa-inverse') }}
+                    {{ icon_stack_block('Enlarged Sized Example:', ' fa-2x', '2x', 'fas fa-square', '', '1x', 'fas fa-home', 'fa-inverse') }}
+
+                    {{ icon_stack_block('Colored Example:', ' fa-2x', '2x', 'fas fa-circle', ' text-primary', '1x', 'fas fa-home', 'text-light') }}
+                    {{ icon_stack_block('Non-Solid Example:', ' fa-2x', '2x', 'far fa-circle', ' text-info', '1x', 'fas fa-home', 'text-primary') }}
+                    {{ icon_stack_block('Ban Example:', ' fa-2x', '1x', 'fas fa-camera', ' text-dark', '2x', 'fas fa-ban', 'text-danger') }}
+
+                    {{ icon_stack_block('Certificate Example:', ' fa-2x', '2x', 'fas fa-certificate', ' text-warning', '1x', 'fas fa-home', 'text-light') }}
+                    {{ icon_stack_block('Double Heart Example:', ' fa-2x', '2x', 'far fa-heart', ' text-danger', '1x', 'fas fa-heart', 'text-danger') }}
+
+                </div>
+
+            </div>
+
+        </div>
