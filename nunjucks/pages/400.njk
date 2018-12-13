@@ -1,0 +1,31 @@
+<!-- 400.njk -->
+
+{% set fileName = '400.html' %}
+{% set pageTitle = '400 - Bad Request :(' %}
+{% set pageDescrip = 'You are not authorized to access this content.' %}
+
+{% extends "boilerplate.njk" %}
+
+
+{% block content %}
+        
+        {% include "partials/_navigation.njk" %}
+        
+		{% set errorPage_numb = '400' %}
+        {% set errorPage_p1 = 'The server cannot process your request due to an apparent client-side error.' %}
+        {% set errorPage_p2 = " (This can be due to a malformed request syntax, a size that's too large, an invalid request message framing, or a deceptive request route.)" %}
+        {% set errorPage_text = 'text-white' %}
+        {% set errorPage_bg = 'bg-danger' %}
+        {% set errorPage_border = 'border-light' %}
+        {% set errorPage_btn = 'btn-lg btn-outline-light' %}
+        {% include "partials/_errorPagesContent.njk" %}
+
+        {% include "partials/_footer.njk" %}
+
+{% endblock %}
+
+{% block javascript %}
+        
+        {% include "partials/_errorPagesScripts.njk" %}
+
+{% endblock %}

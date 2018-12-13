@@ -1,0 +1,31 @@
+<!-- 403.njk -->
+
+{% set fileName = '403.html' %}
+{% set pageTitle = '403 - Access Forbidden :(' %}
+{% set pageDescrip = 'You do not have permission to access the requested content.' %}
+
+{% extends "boilerplate.njk" %}
+
+
+{% block content %}
+        
+        {% include "partials/_navigation.njk" %}
+        
+		{% set errorPage_numb = '403' %}
+        {% set errorPage_p1 = pageDescrip %}
+        {% set errorPage_p2 = 'You might not have the necessary permissions, or may need an account to access this content.' %}
+        {% set errorPage_text = 'text-white' %}
+        {% set errorPage_bg = 'bg-danger' %}
+        {% set errorPage_border = 'border-light' %}
+        {% set errorPage_btn = 'btn-lg btn-outline-light' %}
+        {% include "partials/_errorPagesContent.njk" %}
+
+        {% include "partials/_footer.njk" %}
+
+{% endblock %}
+
+{% block javascript %}
+        
+        {% include "partials/_errorPagesScripts.njk" %}
+
+{% endblock %}

@@ -1,0 +1,435 @@
+<!-- {{ global_strings['reference']['slug'] }}.njk -->
+
+{% set fileName = global_strings['reference']['slug'] + '.html' %}
+{% set pageTitle = global_strings['reference']['title'] %}
+{% set pageDescrip = global_strings['reference']['description'] %}
+
+{% extends "boilerplate.njk" %}
+
+{% block css %}
+        <!-- DataTables CSS -->
+		<style>
+            ul.pagination li.paginate_button {
+                text-align: center;
+                flex: 1;
+            }
+        </style>
+{% endblock %}
+
+
+{% block content %}
+        
+        {% include "partials/_navigation.njk" %}
+        
+        {% set heroTitle = pageTitle %}
+        {% set heroDescrip = pageDescrip %}
+        {% set heroBgClass = global_strings['reference']['background'] %}
+        {% set heroBorderClass = global_strings['reference']['border'] %}
+        {% include "partials/_hero.njk" %}
+
+        {% import "partials/macros/_global_macros.njk" as macros %}
+
+        {% include "partials/reference/_color_codes_table.njk" %}
+        {% include "partials/reference/_javascript_color_codes_reference.njk" %}
+        {% include "partials/reference/_table_display.njk" %}
+        {% include "partials/reference/_table_flex_direction.njk" %}
+        {% include "partials/reference/_table_flex_justification.njk" %}
+        {% include "partials/reference/_table_flex_vertical_alignment.njk" %}
+        {% include "partials/reference/_table_flex_self_alignment.njk" %}
+        {% include "partials/reference/_table_flex_fill.njk" %}
+        {% include "partials/reference/_table_flex_grow_shrink.njk" %}
+        {% include "partials/reference/_table_flex_auto_margin.njk" %}
+        {% include "partials/reference/_table_flex_wrapping.njk" %}
+        {% include "partials/reference/_table_flex_ordering.njk" %}
+        {% include "partials/reference/_table_flex_align_wrapping_content.njk" %}
+        {% include "partials/reference/_table_navbar_responsive.njk" %}
+        {% include "partials/reference/_table_display_print.njk" %}
+        {% include "partials/reference/_table_float_utils.njk" %}
+        {% include "partials/reference/_table_position_utils.njk" %}
+        {% include "partials/reference/_table_screenreaders.njk" %}
+        {% include "partials/reference/_table_margin_and_padding.njk" %}
+        {% include "partials/reference/_table_text_alignment.njk" %}
+
+        {% include "partials/_footer.njk" %}
+
+{% endblock %}
+
+
+
+{% block javascript %}
+
+<script>
+
+    $(function() {
+
+        var obeColors = [];
+        
+        function toTitleCase(str) {
+            return str.replace(/\w\S*/g, function(txt){
+                return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();
+            });
+        }
+
+        function generateJsSlug(nameStr, tintShadeAmt) {
+            let output;
+            for (var i = 0; i < jsNames.length; i++) {
+                if (nameStr === jsNames[i]) {
+                    output = jsSlugs[i] + tintShadeAmt;
+                }
+            }
+            return output;
+        }
+
+        var jsSlugs = ['white', 'lightGray', 'gray', 'darkGray', 'black', 'red', 'rose', 'magenta', 'violet', 'blue', 'azure', 'cyan', 'springGreen', 'green', 'chartreuse', 'yellow', 'orange', 'orangeGray', 'darkGrayOrange', 'blueGray', 'lightGrayAzure'];
+
+        var jsNames = ['White', 'Light Gray', 'Gray', 'Dark Gray', 'Black', 'Red', 'Rose', 'Magenta', 'Violet', 'Blue', 'Azure', 'Cyan', 'Spring Green', 'Green', 'Chartreuse', 'Yellow', 'Orange', 'Orange Gray', 'Dark Gray Orange', 'Blue Gray', 'Light Gray Azure'];
+        
+        var jsTintShadeSlugs = ['50', '100', '200', '300', '400', '500', '600', '700', '800', '900'];
+
+        //console.log(generateJsSlug('White', '300'));
+        
+        var getColorValues = function (colorSlug) {
+            
+            var color = tinycolor($('.text-' + colorSlug).css('color'));
+            var color_50 = tinycolor($('.text-' + colorSlug + '-50').css('color'));
+            var color_100 = tinycolor($('.text-' + colorSlug + '-100').css('color'));
+            var color_200 = tinycolor($('.text-' + colorSlug + '-200').css('color'));
+            var color_300 = tinycolor($('.text-' + colorSlug + '-300').css('color'));
+            var color_400 = tinycolor($('.text-' + colorSlug + '-400').css('color'));
+            var color_500 = tinycolor($('.text-' + colorSlug + '-500').css('color'));
+            var color_600 = tinycolor($('.text-' + colorSlug + '-600').css('color'));
+            var color_700 = tinycolor($('.text-' + colorSlug + '-700').css('color'));
+            var color_800 = tinycolor($('.text-' + colorSlug + '-800').css('color'));
+            var color_900 = tinycolor($('.text-' + colorSlug + '-900').css('color'));
+
+            var temp = colorSlug;
+            var name = temp.replace(/-/g, " ");
+
+            var object = {};
+                
+            object.name = toTitleCase(name);
+            
+            object.hex = color.toHexString();
+            object.hex_50 = color_50.toHexString();
+            object.hex_100 = color_100.toHexString();
+            object.hex_200 = color_200.toHexString();
+            object.hex_300 = color_300.toHexString();
+            object.hex_400 = color_400.toHexString();
+            object.hex_500 = color_500.toHexString();
+            object.hex_600 = color_600.toHexString();
+            object.hex_700 = color_700.toHexString();
+            object.hex_800 = color_800.toHexString();
+            object.hex_900 = color_900.toHexString();
+            
+            object.hsl = color.toHslString();
+            object.hsl_50 = color_50.toHslString();
+            object.hsl_100 = color_100.toHslString();
+            object.hsl_200 = color_200.toHslString();
+            object.hsl_300 = color_300.toHslString();
+            object.hsl_400 = color_400.toHslString();
+            object.hsl_500 = color_500.toHslString();
+            object.hsl_600 = color_600.toHslString();
+            object.hsl_700 = color_700.toHslString();
+            object.hsl_800 = color_800.toHslString();
+            object.hsl_900 = color_900.toHslString();
+            
+            object.hsv = color.toHsvString();
+            object.hsv_50 = color_50.toHsvString();
+            object.hsv_100 = color_100.toHsvString();
+            object.hsv_200 = color_200.toHsvString();
+            object.hsv_300 = color_300.toHsvString();
+            object.hsv_400 = color_400.toHsvString();
+            object.hsv_500 = color_500.toHsvString();
+            object.hsv_600 = color_600.toHsvString();
+            object.hsv_700 = color_700.toHsvString();
+            object.hsv_800 = color_800.toHsvString();
+            object.hsv_900 = color_900.toHsvString();
+            
+            object.rgb = color.toRgbString();
+            object.rgb_50 = color_50.toRgbString();
+            object.rgb_100 = color_100.toRgbString();
+            object.rgb_200 = color_200.toRgbString();
+            object.rgb_300 = color_300.toRgbString();
+            object.rgb_400 = color_400.toRgbString();
+            object.rgb_500 = color_500.toRgbString();
+            object.rgb_600 = color_600.toRgbString();
+            object.rgb_700 = color_700.toRgbString();
+            object.rgb_800 = color_800.toRgbString();
+            object.rgb_900 = color_900.toRgbString();
+            
+            var alpha = 0.5;
+            
+            object.rgba = color.setAlpha(alpha).toRgbString();
+            object.rgba_50 = color_50.setAlpha(alpha).toRgbString();
+            object.rgba_100 = color_100.setAlpha(alpha).toRgbString();
+            object.rgba_200 = color_200.setAlpha(alpha).toRgbString();
+            object.rgba_300 = color_300.setAlpha(alpha).toRgbString();
+            object.rgba_400 = color_400.setAlpha(alpha).toRgbString();
+            object.rgba_500 = color_500.setAlpha(alpha).toRgbString();
+            object.rgba_600 = color_600.setAlpha(alpha).toRgbString();
+            object.rgba_700 = color_700.setAlpha(alpha).toRgbString();
+            object.rgba_800 = color_800.setAlpha(alpha).toRgbString();
+            object.rgba_900 = color_900.setAlpha(alpha).toRgbString();
+
+            obeColors.push(object);
+
+        };
+
+        getColorValues('white');
+        getColorValues('light-gray');
+        getColorValues('gray');
+        getColorValues('dark-gray');
+        getColorValues('black');
+        getColorValues('red');
+        getColorValues('rose');
+        getColorValues('magenta');
+        getColorValues('violet');
+        getColorValues('blue');
+        getColorValues('azure');
+        getColorValues('cyan');
+        getColorValues('spring-green');
+        getColorValues('green');
+        getColorValues('chartreuse');
+        getColorValues('yellow');
+        getColorValues('orange');
+        getColorValues('orange-gray');
+        getColorValues('dark-gray-orange');
+        getColorValues('blue-gray');
+        getColorValues('light-gray-azure');
+
+        //console.log(obeColors);
+
+        var target = document.getElementById('js-table-target');
+        
+        var generateRow = function (name, jsName, hex, rgb, rgba, hsl, hsv) {
+            
+            var tr = document.createElement('tr');
+            
+            var th = document.createElement('th');
+                th.setAttribute("scope", "row");
+            var td_2 = document.createElement('td');
+            var td_3 = document.createElement('td');
+            var td_4 = document.createElement('td');
+            var td_5 = document.createElement('td');
+            var td_6 = document.createElement('td');
+            var td_7 = document.createElement('td');
+
+            var text_1 = document.createTextNode(name);
+            var text_2 = document.createTextNode(jsName);
+            var text_3 = document.createTextNode(hex);
+            var text_4 = document.createTextNode(rgb);
+            var text_5 = document.createTextNode(rgba);
+            var text_6 = document.createTextNode(hsl);
+            var text_7 = document.createTextNode(hsv);
+
+            th.appendChild(text_1);
+            td_2.appendChild(text_2);
+            td_3.appendChild(text_3);
+            td_4.appendChild(text_4);
+            td_5.appendChild(text_5);
+            td_6.appendChild(text_6);
+            td_7.appendChild(text_7);
+
+            tr.appendChild(th);
+            tr.appendChild(td_2);
+            tr.appendChild(td_3);
+            tr.appendChild(td_4);
+            tr.appendChild(td_5);
+            tr.appendChild(td_6);
+            tr.appendChild(td_7);
+
+            target.appendChild(tr);
+
+        }
+
+
+
+        for (var i = 0; i < obeColors.length; i++) {
+            generateRow(obeColors[i].name, generateJsSlug(obeColors[i].name, ''), obeColors[i].hex, obeColors[i].rgb, obeColors[i].rgba, obeColors[i].hsl, obeColors[i].hsv);
+            generateRow(obeColors[i].name + ' 50', generateJsSlug(obeColors[i].name, '50'), obeColors[i].hex_50, obeColors[i].rgb_50, obeColors[i].rgba_50, obeColors[i].hsl_50, obeColors[i].hsv_50);
+            generateRow(obeColors[i].name + ' 100', generateJsSlug(obeColors[i].name, '100'), obeColors[i].hex_100, obeColors[i].rgb_100, obeColors[i].rgba_100, obeColors[i].hsl_100, obeColors[i].hsv_100);
+            generateRow(obeColors[i].name + ' 200', generateJsSlug(obeColors[i].name, '200'), obeColors[i].hex_200, obeColors[i].rgb_200, obeColors[i].rgba_200, obeColors[i].hsl_200, obeColors[i].hsv_200);
+            generateRow(obeColors[i].name + ' 300', generateJsSlug(obeColors[i].name, '300'), obeColors[i].hex_300, obeColors[i].rgb_300, obeColors[i].rgba_300, obeColors[i].hsl_300, obeColors[i].hsv_300);
+            generateRow(obeColors[i].name + ' 400', generateJsSlug(obeColors[i].name, '400'), obeColors[i].hex_400, obeColors[i].rgb_400, obeColors[i].rgba_400, obeColors[i].hsl_400, obeColors[i].hsv_400);
+            generateRow(obeColors[i].name + ' 500', generateJsSlug(obeColors[i].name, '500'), obeColors[i].hex_500, obeColors[i].rgb_500, obeColors[i].rgba_500, obeColors[i].hsl_500, obeColors[i].hsv_500);
+            generateRow(obeColors[i].name + ' 600', generateJsSlug(obeColors[i].name, '600'), obeColors[i].hex_600, obeColors[i].rgb_600, obeColors[i].rgba_600, obeColors[i].hsl_600, obeColors[i].hsv_600);
+            generateRow(obeColors[i].name + ' 700', generateJsSlug(obeColors[i].name, '700'), obeColors[i].hex_700, obeColors[i].rgb_700, obeColors[i].rgba_700, obeColors[i].hsl_700, obeColors[i].hsv_700);
+            generateRow(obeColors[i].name + ' 800', generateJsSlug(obeColors[i].name, '800'), obeColors[i].hex_800, obeColors[i].rgb_800, obeColors[i].rgba_800, obeColors[i].hsl_800, obeColors[i].hsv_800);
+            generateRow(obeColors[i].name + ' 900', generateJsSlug(obeColors[i].name, '900'), obeColors[i].hex_900, obeColors[i].rgb_900, obeColors[i].rgba_900, obeColors[i].hsl_900, obeColors[i].hsv_900);
+        }
+
+
+
+        //
+        // Scripts to create and display JSON strings of different color code values for JavaScript use
+        //
+
+        // Utility function to get a name and only 1 type of color code value for 
+        // each OBE color, plus tints + shades for that color
+        var getColorCodesByType = function (obj, str) {
+            
+            var newObj = {};
+
+            for (var j = 0; j < jsSlugs.length; j++) {
+                
+                newObj[jsSlugs[j]] = {};
+                
+                for (var k = 0; k < jsTintShadeSlugs.length; k++) {
+                    
+                    newObj[jsSlugs[j] + jsTintShadeSlugs[k]] = {};
+
+                    for (var l = 0; l < obj.length; l++) {
+                        
+                        if (obj[l]['name'] === jsNames[j]) {
+                            
+                            if (str === 'all' || str === 'undefined') {
+
+                                newObj[jsSlugs[j]]['hex'] = obj[l]['hex'];
+                                newObj[jsSlugs[j] + jsTintShadeSlugs[k]]['hex'] = obj[l]['hex_' + jsTintShadeSlugs[k]];
+                                // extra code to optionally include formatted color name strings
+                                // newObj[jsSlugs[j]]['name'] = obj[l]['name'];
+                                // newObj[jsSlugs[j] + jsTintShadeSlugs[k]]['name'] = obj[l]['name'] + ' ' + jsTintShadeSlugs[k];
+                                newObj[jsSlugs[j]]['rgb'] = obj[l]['rgb'];
+                                newObj[jsSlugs[j] + jsTintShadeSlugs[k]]['rgb'] = obj[l]['rgb_' + jsTintShadeSlugs[k]];
+                                newObj[jsSlugs[j]]['rgba'] = obj[l]['rgba'];
+                                newObj[jsSlugs[j] + jsTintShadeSlugs[k]]['rgba'] = obj[l]['rgba_' + jsTintShadeSlugs[k]];
+                                newObj[jsSlugs[j]]['hsv'] = obj[l]['hsv'];
+                                newObj[jsSlugs[j] + jsTintShadeSlugs[k]]['hsv'] = obj[l]['hsv_' + jsTintShadeSlugs[k]];
+                                newObj[jsSlugs[j]]['hsl'] = obj[l]['hsl'];
+                                newObj[jsSlugs[j] + jsTintShadeSlugs[k]]['hsl'] = obj[l]['hsl_' + jsTintShadeSlugs[k]];
+
+                            } else if (str === 'hex') {
+
+                                newObj[jsSlugs[j]]['hex'] = obj[l]['hex'];
+                                newObj[jsSlugs[j] + jsTintShadeSlugs[k]]['hex'] = obj[l]['hex_' + jsTintShadeSlugs[k]];
+
+                            } else if (str === 'rgb') {
+                                
+                                newObj[jsSlugs[j]]['rgb'] = obj[l]['rgb'];
+                                newObj[jsSlugs[j] + jsTintShadeSlugs[k]]['rgb'] = obj[l]['rgb_' + jsTintShadeSlugs[k]];
+
+                            } else if (str === 'rgba') {
+                                
+                                newObj[jsSlugs[j]]['rgba'] = obj[l]['rgba'];
+                                newObj[jsSlugs[j] + jsTintShadeSlugs[k]]['rgba'] = obj[l]['rgba_' + jsTintShadeSlugs[k]];
+
+                            } else if (str === 'hsv') {
+                                
+                                newObj[jsSlugs[j]]['hsv'] = obj[l]['hsv'];
+                                newObj[jsSlugs[j] + jsTintShadeSlugs[k]]['hsv'] = obj[l]['hsv_' + jsTintShadeSlugs[k]];
+
+                            } else if (str === 'hsl') {
+                                
+                                newObj[jsSlugs[j]]['hsl'] = obj[l]['hsl'];
+                                newObj[jsSlugs[j] + jsTintShadeSlugs[k]]['hsl'] = obj[l]['hsl_' + jsTintShadeSlugs[k]];
+
+                            }
+                            
+                        }
+
+                    }
+
+                }
+
+            }
+
+            return newObj;
+
+        };
+
+
+        //console.log(getColorCodesByType(obeColors, 'hex'));
+
+        // Utility function to add JSON data to page
+        var displayJSON = function (targetId, prismClasses, dataObj) {
+            var target = document.getElementById(targetId);
+            var pre = document.createElement('pre');
+            var code = document.createElement('code');
+                code.className = prismClasses;
+            var text = document.createTextNode(JSON.stringify(dataObj));
+            code.appendChild(text);
+            pre.appendChild(code);
+            target.appendChild(pre);
+        };
+
+        // get only Hex color codes json example and output
+        displayJSON('rgba-color-types-json', 'language-json line-numbers', getColorCodesByType(obeColors, 'rgba'));
+
+        // get only Hex color codes json example and output
+        displayJSON('hex-color-types-json', 'language-json line-numbers', getColorCodesByType(obeColors, 'hex'));
+
+        // get only Hex color codes json example and output
+        displayJSON('rgb-color-types-json', 'language-json line-numbers', getColorCodesByType(obeColors, 'rgb'));
+
+        // get only Hex color codes json example and output
+        displayJSON('hsl-color-types-json', 'language-json line-numbers', getColorCodesByType(obeColors, 'hsl'));
+
+        // get only Hex color codes json example and output
+        displayJSON('hsv-color-types-json', 'language-json line-numbers', getColorCodesByType(obeColors, 'hsv'));
+
+        // get all color codes json example and output
+        displayJSON('all-color-types-json', 'language-json line-numbers', getColorCodesByType(obeColors, 'all'));
+
+        Prism.highlightAll();
+
+
+
+
+        //
+        // Script for DataTables table
+        //
+        
+        // adjust the number of pagination buttons
+        $.fn.DataTable.ext.pager.numbers_length = 5;
+
+        // initialize all dataTables tables for elements with the .js-dataTables-init class
+        $('.js-dataTables-init').DataTable({
+            language: {
+                searchPlaceholder: "Search"
+            }
+        });
+
+        // adjust displayed elements with bootstrap classes
+        $('.js-dataTables-init').parent().find('.dataTables_filter label').addClass('d-block m-0 w-100');
+        $('.js-dataTables-init').parent().find('.dataTables_length label').addClass('d-block m-0 w-100');
+        $('.js-dataTables-init').parent().find('.dataTables_filter input').addClass('d-block m-0 w-100 text-center').removeClass('form-control-sm');
+        //$('.js-dataTables-init').parent().find('.dataTables_paginate li').css('flex', '1');
+
+        // move dataTables UI elements outside of table-responsive block
+        // so these UI elements are accessible on small screens
+        // while a user scrolls the table right/left
+        $('div.dataTables_filter').each(function() {
+            var targetBlock = $(this).parents('.js-dataTables-workspace').find('.js-dataTables-search-block');
+            $(this).appendTo(targetBlock);
+        });
+        $('div.dataTables_paginate').each(function() {
+            var targetBlock = $(this).parents('.js-dataTables-workspace').find('.js-dataTables-paginate-block');
+            $(this).appendTo(targetBlock);
+        });
+        $('div.dataTables_info').each(function() {
+            var targetBlock = $(this).parents('.js-dataTables-workspace').find('.js-dataTables-info-block');
+            $(this).appendTo(targetBlock);
+        });
+        $('div.dataTables_length').each(function() {
+            var targetBlock = $(this).parents('.js-dataTables-workspace').find('.js-dataTables-length-block');
+            $(this).appendTo(targetBlock);
+        });
+
+        // script to scroll to the top of a table 
+        // after changing the amount of visible rows 
+        // with a dataTables dynamically generated select element
+        $('.js-dataTables-length-block').on('change', 'select', function(){
+            
+            var target = $(this).parents('.js-dataTables-workspace').find('table');
+            $('html, body').animate({
+                scrollTop: $(target).offset().top - 140
+            }, 500);
+
+        });
+
+
+    });
+
+</script>
+
+{% endblock %}

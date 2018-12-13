@@ -1,0 +1,31 @@
+<!-- 500.njk -->
+
+{% set fileName = '500.html' %}
+{% set pageTitle = '500 - Internal Server Error :(' %}
+{% set pageDescrip = 'Your request returned an Internal Server Error from the server.' %}
+
+{% extends "boilerplate.njk" %}
+
+
+{% block content %}
+        
+        {% include "partials/_navigation.njk" %}
+        
+		{% set errorPage_numb = '500' %}
+        {% set errorPage_p1 = pageDescrip %}
+        {% set errorPage_p2 = 'Please double-check your URL, and try again. If the problem persists, please contact an administrator.' %}
+        {% set errorPage_text = 'text-white' %}
+        {% set errorPage_bg = 'bg-danger' %}
+        {% set errorPage_border = 'border-light' %}
+        {% set errorPage_btn = 'btn-lg btn-outline-light' %}
+        {% include "partials/_errorPagesContent.njk" %}
+
+        {% include "partials/_footer.njk" %}
+
+{% endblock %}
+
+{% block javascript %}
+        
+        {% include "partials/_errorPagesScripts.njk" %}
+
+{% endblock %}

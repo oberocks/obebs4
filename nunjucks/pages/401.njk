@@ -1,0 +1,31 @@
+<!-- 401.njk -->
+
+{% set fileName = '401.html' %}
+{% set pageTitle = '401 - Unauthorized :(' %}
+{% set pageDescrip = 'You are not authorized to access this content.' %}
+
+{% extends "boilerplate.njk" %}
+
+
+{% block content %}
+        
+        {% include "partials/_navigation.njk" %}
+        
+		{% set errorPage_numb = '401' %}
+        {% set errorPage_p1 = pageDescrip %}
+        {% set errorPage_p2 = 'You do not have the necessary permissions for access.' %}
+        {% set errorPage_text = 'text-white' %}
+        {% set errorPage_bg = 'bg-danger' %}
+        {% set errorPage_border = 'border-light' %}
+        {% set errorPage_btn = 'btn-lg btn-outline-light' %}
+        {% include "partials/_errorPagesContent.njk" %}
+
+        {% include "partials/_footer.njk" %}
+
+{% endblock %}
+
+{% block javascript %}
+        
+        {% include "partials/_errorPagesScripts.njk" %}
+
+{% endblock %}

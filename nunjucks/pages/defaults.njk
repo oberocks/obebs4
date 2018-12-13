@@ -1,0 +1,94 @@
+<!-- {{ global_strings['defaults']['slug'] }}.njk -->
+
+{% set fileName = global_strings['defaults']['slug'] + '.html' %}
+{% set pageTitle = global_strings['defaults']['title'] %}
+{% set pageDescrip = global_strings['defaults']['description'] %}
+
+{% extends "boilerplate.njk" %}
+
+{% block content %}
+        
+        {% include "partials/_navigation.njk" %}
+        
+        {% set heroTitle = pageTitle %}
+        {% set heroDescrip = pageDescrip %}
+        {% set heroBgClass = global_strings['defaults']['background'] %}
+        {% set heroBorderClass = global_strings['defaults']['border'] %}
+        {% include "partials/_hero.njk" %}
+
+        {% include "partials/defaults/_bs_headline_defaults.njk" %}
+        {% include "partials/defaults/_bs_display_lead_abbr_defaults.njk" %}
+        {% include "partials/defaults/_bs_justifiy_blockquotes.njk" %}
+        {% include "partials/defaults/_bs_text_defaults.njk" %}
+        {% include "partials/defaults/_bs_media_objects.njk" %}
+        {% include "partials/defaults/_bs_nested_media_objects.njk" %}
+        {% include "partials/defaults/_bs_address_and_summary.njk" %}
+        {% include "partials/defaults/_bs_lists.njk" %}
+        {% include "partials/defaults/_bs_description_lists.njk" %}
+        {% include "partials/defaults/_bs_images.njk" %}
+        {% include "partials/defaults/_bs_tables_default.njk" %}
+        {% include "partials/defaults/_bs_tables_thead.njk" %}
+        {% include "partials/defaults/_bs_tables_striped.njk" %}
+        {% include "partials/defaults/_bs_tables_bordered.njk" %}
+        {% include "partials/defaults/_bs_tables_borderless.njk" %}
+        {% include "partials/defaults/_bs_tables_hoverable.njk" %}
+        {% include "partials/defaults/_bs_tables_sizes.njk" %}
+        {% include "partials/defaults/_bs_tables_captions.njk" %}
+
+        {% include "partials/defaults/_bs_alerts.njk" %}
+        {% include "partials/defaults/_bs_badges.njk" %}
+        {% include "partials/defaults/_bs_breadcrumbs.njk" %}
+        {% include "partials/defaults/_bs_buttons_elements_sizes.njk" %}
+        {% include "partials/defaults/_bs_buttons_active_disabled.njk" %}
+        {% include "partials/defaults/_bs_button_groups_sizes.njk" %}
+        {% include "partials/defaults/_bs_button_groups_toolbars.njk" %}
+        {% include "partials/defaults/_bs_button_groups_dropdowns.njk" %}
+        {% include "partials/defaults/_bs_button_groups_vertical.njk" %}
+        {% include "partials/defaults/_bs_button_toggles.njk" %}
+        {% include "partials/defaults/_bs_cards.njk" %}
+        {% include "partials/defaults/_bs_carousels.njk" %}
+        {% include "partials/defaults/_bs_collapse.njk" %}
+        {% include "partials/defaults/_bs_accordians.njk" %}
+        {% include "partials/defaults/_bs_dropdowns.njk" %}
+        {% include "partials/defaults/_bs_forms.njk" %}
+        {% include "partials/defaults/_bs_input_groups.njk" %}
+        {% include "partials/defaults/_bs_jumbotrons.njk" %}
+        {% include "partials/defaults/_bs_list_groups.njk" %}
+        {% include "partials/defaults/_bs_modals.njk" %}
+        {% include "partials/defaults/_bs_navs.njk" %}
+        {% include "partials/defaults/_bs_navbars.njk" %}
+        {% include "partials/defaults/_bs_pagination.njk" %}
+        {% include "partials/defaults/_bs_popovers.njk" %}
+        {% include "partials/defaults/_bs_progress_bars.njk" %}
+        {% include "partials/defaults/_bs_scrollspy.njk" %}
+        {% include "partials/defaults/_bs_tooltips.njk" %}
+
+        {% include "partials/defaults/_bs_utilities_borders.njk" %}
+        {% include "partials/defaults/_bs_utilities_clearfix.njk" %}
+        {% include "partials/defaults/_bs_utilities_embed.njk" %}
+        {% include "partials/defaults/_bs_utilities_flex.njk" %}
+        {% include "partials/defaults/_bs_utilities_float.njk" %}
+        {% include "partials/defaults/_bs_utilities_sizing.njk" %}
+        {% include "partials/defaults/_bs_utilities_spacing.njk" %}
+        {% include "partials/defaults/_bs_utilities_text.njk" %}
+        {% include "partials/defaults/_bs_utilities_vertical_alignment.njk" %}
+        {% include "partials/defaults/_bs_utilities_visibility.njk" %}
+
+        {% include "partials/_footer.njk" %}
+
+{% endblock %}
+
+{% block javascript %}
+        
+        <script>
+            
+            $(function() {
+                
+                $('.modal-workspace .code-toolbar').addClass('collapse');
+                $('.navbar-workspace .code-toolbar').addClass('collapse');
+
+            });
+            
+        </script>
+
+{% endblock %}

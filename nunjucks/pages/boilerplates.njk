@@ -1,0 +1,24 @@
+<!-- {{ global_strings['boilerplates']['slug'] }}.njk -->
+
+{% set fileName = global_strings['boilerplates']['slug'] + '.html' %}
+{% set pageTitle = global_strings['boilerplates']['title'] %}
+{% set pageDescrip = global_strings['boilerplates']['description'] %}
+
+{% extends "boilerplate.njk" %}
+
+{% block content %}
+        
+        {% include "partials/_navigation.njk" %}
+        
+        {% set heroTitle = pageTitle %}
+        {% set heroDescrip = pageDescrip %}
+        {% set heroBgClass = global_strings['boilerplates']['background'] %}
+        {% set heroBorderClass = global_strings['boilerplates']['border'] %}
+        {% include "partials/_hero.njk" %}
+
+        {% include "partials/boilerplates/_boilerplates.njk" %}
+        {% include "partials/boilerplates/_section_boilerplates.njk" %}
+
+        {% include "partials/_footer.njk" %}
+
+{% endblock %}

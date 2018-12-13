@@ -1,0 +1,91 @@
+<!-- {{ global_strings['extensions']['slug'] }}.njk -->
+
+{% set fileName = global_strings['extensions']['slug'] + '.html' %}
+{% set pageTitle = global_strings['extensions']['title'] %}
+{% set pageDescrip = global_strings['extensions']['description'] %}
+
+{% extends "boilerplate.njk" %}
+
+{% block content %}
+        
+        {% include "partials/_navigation.njk" %}
+        
+        {% set heroTitle = pageTitle %}
+        {% set heroDescrip = pageDescrip %}
+        {% set heroBgClass = global_strings['extensions']['background'] %}
+        {% set heroBorderClass = global_strings['extensions']['border'] %}
+        {% include "partials/_hero.njk" %}
+
+        {% include "partials/extensions/_fonts.njk" %}
+        {% include "partials/extensions/_button_text_sizes.njk" %}
+        {% include "partials/extensions/_fab_buttons.njk" %}
+        {% include "partials/extensions/_border_widths.njk" %}
+        {% include "partials/extensions/_element_shadows.njk" %}
+        {% include "partials/extensions/_lists.njk" %}
+        {% include "partials/extensions/_custom_dropdown_selects.njk" %}
+        {% include "partials/extensions/_modal_utilities.njk" %}
+        {% include "partials/extensions/_off_canvas_navigaiton_modals.njk" %}
+        {% include "partials/extensions/_material_design_forms.njk" %}
+        {% include "partials/extensions/_opacity_utilities.njk" %}
+        {% include "partials/extensions/_element_sizes.njk" %}
+        {% include "partials/extensions/_calendar_components.njk" %}
+        {% include "partials/extensions/_toggle_text_mini_plugin.njk" %}
+
+
+        {% include "partials/_footer.njk" %}
+
+{% endblock %}
+
+{% block javascript %}
+        
+        <script>
+
+            $(function() {
+
+                $('.calendar-workspace .code-toolbar').addClass('collapse');
+
+                $('.obe-calendar-datepicker-1').obeDatepicker({
+                    outputSelector : '#datepicker-1-input',
+                    outputFormat : 'MM/DD/YYYY',
+                    outputType : 'input',
+                    compactMode : true
+                });
+                
+                $('.obe-calendar-datepicker-2').obeDatepicker({
+                    outputSelector : '#datepicker-2-input',
+                    outputFormat : 'MM-DD-YYYY',
+                    outputType : 'input',
+                    compactMode : false,
+                    baseColors : 'bg-gradient-azure-violet-vertical text-white',
+                    //cellSpacing : 'p-2',
+                    selectedBg : 'bg-gradient-yellow-orange-vertical text-dark opacity-100',
+                    standardBg : 'text-shadow',
+                    borders : 'border-dark',
+                    prevNextBg : 'bg-dark text-light opacity-50',
+                    //theadClass : 'thead-dark',
+                    theadBg : 'opacity-85',
+                    leftArrow :     '❬',
+                    rightArrow :    '❭',
+                    weekdayParentClasses :  'd-flex justify-content-center align-items-center text-center pt-4 text-shadow',
+                    //weekdayMinusClasses :   'flex-fill text-right lead font-weight-bold pr-4 opacity-30',
+                    //weekdayTextClasses :    'lead font-weight-bold p-0 m-0',
+                    //weekdayPlusClasses :    'flex-fill text-left lead font-weight-bold pl-4 opacity-30',
+                    dayParentClasses :      'd-flex justify-content-center align-items-center text-center pb-2 text-shadow',
+                    //dayMinusClasses :       'flex-fill display-1 pr-4 opacity-30',
+                    //dayTextClasses :        'p-0 m-0 display-1 font-secondary',
+                    //dayPlusClasses :        'flex-fill display-1 pl-4 opacity-30',
+                    monthParentClasses :    'd-flex justify-content-center align-items-center text-center text-shadow',
+                    //monthMinusClasses :     'flex-fill text-right lead font-weight-bold pr-4 opacity-30',
+                    //monthTextClasses :      'lead font-weight-bold p-0 m-0',
+                    //monthPlusClasses :      'flex-fill text-left lead font-weight-bold pl-4 opacity-30',
+                    yearParentClasses :     'd-flex justify-content-center align-items-center text-center pb-4 text-shadow',
+                    //yearMinusClasses :      'flex-fill text-right lead font-weight-bold pr-4 opacity-30',
+                    //yearTextClasses :       'lead font-weight-bold p-0 m-0',
+                    //yearPlusClasses :       'flex-fill text-left lead font-weight-bold pl-4 opacity-30'
+                });
+
+            });
+
+        </script>
+
+{% endblock %}

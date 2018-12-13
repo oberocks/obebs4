@@ -1,0 +1,208 @@
+<!-- index.njk -->
+
+{% set fileName = 'index.html' %}
+{% set pageTitle = 'OBE:BS4 Design System' %}
+{% set pageDescrip = 'The OBE:BS4 Design System is a self-reflexive reference library design system based on the most popular web framework in the world, Bootstrap! The OBE:BS4 system was built specifically to give all project stakeholders full visual, technical, and tactile access to every color, font, element, component and layout for any web project.' %}
+
+{% set xxxxx_backup = 'A suite of customizable web development build and reference tools to extend the power of Bootstrap 4. With a highly opinionated and design orientated premise, the OBE: Bootstrap 4 Suite is focused on providing a brand-flexible and visually comprehensive design and development toolset to supercharge Bootstrap 4 projects.' %}
+
+{% extends "boilerplate.njk" %}
+
+{% block content %}
+        
+        {% set navHeading = 'OBE:BS4' %}
+        {% include "partials/_navigation.njk" %}
+        
+        <article role="main" class="container-fluid mt-5 py-5 text-center bg-white">
+                
+                <div class="row justify-content-center pt-3">
+                
+                        <div class="col-sm-11 col-md-10 col-lg-9 col-xl-8">
+
+                                <h1>OBE:BS4 Design System</h1>
+                                <div class="lead">L I B R A R Y</div>
+                                <hr />
+                                <p class="description-text text-muted">{{ pageDescrip }}</p>
+                                <hr/>
+
+                        </div>
+
+                </div>
+
+                <section class="row justify-content-center">
+                        
+                        <div class="col-sm-11 col-md-10 col-lg-9 col-xl-8 mb-3 ">
+                        
+                                <div class="{{ global_strings['colors']['background'] }} text-white py-5 px-4 px-sm-5 box-shadow-xs">
+                                
+                                        <h3>{{ global_strings['colors']['title'] }}</h3>
+                                        <hr class="{{ global_strings['colors']['border'] }}" />
+                                        <div class="lead mb-5">{{ global_strings['colors']['description'] }}</div>
+                                        <a href="{{ global_strings['colors']['slug'] }}.html" class="btn btn-lg btn-outline-white">VIEW EXAMPLES</a>
+
+                                </div>
+                                
+                        </div>
+                        
+                </section>
+
+                <section class="row justify-content-center">
+                        
+                        <div class="col-sm-11 col-md-10 col-lg-9 col-xl-8 mb-3 ">
+                        
+                                <div class="{{ global_strings['extensions']['background'] }} text-white py-5 px-4 px-sm-5 box-shadow-xs">
+                                
+                                        <h3>{{ global_strings['extensions']['title'] }}</h3>
+                                        <hr class="{{ global_strings['extensions']['border'] }}" />
+                                        <div class="lead mb-5">{{ global_strings['extensions']['description'] }}</div>
+                                        <a href="{{ global_strings['extensions']['slug'] }}.html" class="btn btn-lg btn-outline-white">VIEW EXAMPLES</a>
+
+                                </div>
+                                
+                        </div>
+                        
+                </section>
+
+                <section class="row justify-content-center">
+                        
+                        <div class="col-sm-11 col-md-10 col-lg-9 col-xl-8 mb-3 ">
+                        
+                                <div class="{{ global_strings['defaults']['background'] }} text-white py-5 px-4 px-sm-5 box-shadow-xs">
+                                
+                                        <h3>{{ global_strings['defaults']['title'] }}</h3>
+                                        <hr class="{{ global_strings['defaults']['border'] }}" />
+                                        <div class="lead mb-5">{{ global_strings['defaults']['description'] }}</div>
+                                        <a href="{{ global_strings['defaults']['slug'] }}.html" class="btn btn-lg btn-outline-white">VIEW EXAMPLES</a>
+
+                                </div>
+                                
+                        </div>
+                        
+                </section>
+
+                <section class="row justify-content-center">
+                        
+                        <div class="col-sm-11 col-md-10 col-lg-9 col-xl-8 mb-3 ">
+                        
+                                <div class="{{ global_strings['layouts']['background'] }} text-white py-5 px-4 px-sm-5 box-shadow-xs">
+                                
+                                        <h3>{{ global_strings['layouts']['title'] }}</h3>
+                                        <hr class="{{ global_strings['layouts']['border'] }}" />
+                                        <div class="lead mb-5">{{ global_strings['layouts']['description'] }}</div>
+                                        <a href="{{ global_strings['layouts']['slug'] }}.html" class="btn btn-lg btn-outline-white">VIEW EXAMPLES</a>
+
+                                </div>
+                                
+                        </div>
+                        
+                </section>
+
+                <section class="row justify-content-center">
+                        
+                        <div class="col-sm-11 col-md-10 col-lg-9 col-xl-8 mb-3 ">
+                        
+                                <div class="{{ global_strings['icons']['background'] }} text-white py-5 px-4 px-sm-5 box-shadow-xs">
+                                
+                                        <h3>{{ global_strings['icons']['title'] }}</h3>
+                                        <hr class="{{ global_strings['icons']['border'] }}" />
+                                        <div class="lead mb-5">{{ global_strings['icons']['description'] }}</div>
+                                        <a href="{{ global_strings['icons']['slug'] }}.html" class="btn btn-lg btn-outline-white">VIEW EXAMPLES</a>
+
+                                </div>
+                                
+                        </div>
+                        
+                </section>
+
+                <section class="row justify-content-center">
+                        
+                        <div class="col-sm-11 col-md-10 col-lg-9 col-xl-8 mb-3 ">
+                        
+                                <div class="{{ global_strings['reference']['background'] }} text-white py-5 px-4 px-sm-5 box-shadow-xs">
+                                
+                                        <h3>{{ global_strings['reference']['title'] }}</h3>
+                                        <hr class="{{ global_strings['reference']['border'] }}" />
+                                        <div class="lead mb-5">{{ global_strings['reference']['description'] }}</div>
+                                        <a href="{{ global_strings['reference']['slug'] }}.html" class="btn btn-lg btn-outline-white">VIEW REFERENCES</a>
+
+                                </div>
+                                
+                        </div>
+                        
+                </section>
+
+                <section class="row justify-content-center">
+                        
+                        <div class="col-sm-11 col-md-10 col-lg-9 col-xl-8 mb-3 ">
+                        
+                                <div class="{{ global_strings['boilerplates']['background'] }} text-white py-5 px-4 px-sm-5 box-shadow-xs">
+                                
+                                        <h3>{{ global_strings['boilerplates']['title'] }}</h3>
+                                        <hr class="{{ global_strings['boilerplates']['border'] }}" />
+                                        <div class="lead mb-5">{{ global_strings['boilerplates']['description'] }}</div>
+                                        <a href="{{ global_strings['boilerplates']['slug'] }}.html" class="btn btn-lg btn-outline-white">VIEW EXAMPLES</a>
+
+                                </div>
+                                
+                        </div>
+                        
+                </section>
+
+                <section class="row justify-content-center">
+                        
+                        <div class="col-sm-11 col-md-10 col-lg-9 col-xl-8 mb-3 ">
+                        
+                                <div class="{{ global_strings['settings']['background'] }} text-white py-5 px-4 px-sm-5 box-shadow-xs">
+                                
+                                        <h3>{{ global_strings['settings']['title'] }}</h3>
+                                        <hr class="{{ global_strings['settings']['border'] }}" />
+                                        <div class="lead mb-5">{{ global_strings['settings']['description'] }}</div>
+                                        <a href="{{ global_strings['settings']['slug'] }}.html" class="btn btn-lg btn-outline-white">USE TOOL</a>
+
+                                </div>
+                                
+                        </div>
+                        
+                </section>
+
+                <!--section class="row justify-content-center">
+                        
+                        <div class="col-sm-11 col-md-10 col-lg-9 col-xl-8 mb-3 ">
+                        
+                                <div class="bg-gradient-blue-cyan-diagonal-down text-white py-5 px-4 px-sm-5 box-shadow-xs">
+                                
+                                        <h3>XXXXX XXX XX</h3>
+                                        <hr class="border-blue-200" />
+                                        <div class="lead mb-5">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec at massa sed sem tempor pulvinar sit amet sit amet tellus.</div>
+
+                                        <a href="#" class="btn btn-lg btn-outline-white">VIEW EXAMPLES</a>
+
+                                </div>
+                                
+                        </div>
+                        
+                </section-->
+
+                <!--section class="row justify-content-center">
+                        
+                        <div class="col-sm-11 col-md-10 col-lg-9 col-xl-8 mb-3 ">
+                        
+                                <div class="bg-gradient-cyan-green-diagonal-down text-white py-5 px-4 px-sm-5 box-shadow-xs">
+                                
+                                        <h3>XXXXX XXX XX</h3>
+                                        <hr class="border-cyan-200" />
+                                        <div class="lead mb-5">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec at massa sed sem tempor pulvinar sit amet sit amet tellus.</div>
+
+                                        <a href="#" class="btn btn-lg btn-outline-white">VIEW EXAMPLES</a>
+
+                                </div>
+                                
+                        </div>
+                        
+                </section-->
+                
+        </article>
+
+        {% include "partials/_footer.njk" %}
+
+{% endblock %}

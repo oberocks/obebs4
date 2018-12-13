@@ -1,0 +1,31 @@
+<!-- 404.njk -->
+
+{% set fileName = '404.html' %}
+{% set pageTitle = '404 - Page Not Found :(' %}
+{% set pageDescrip = 'Page not found. Please double-check your URL, and try again.' %}
+
+{% extends "boilerplate.njk" %}
+
+
+{% block content %}
+        
+        {% include "partials/_navigation.njk" %}
+        
+		{% set errorPage_numb = '404' %}
+        {% set errorPage_p1 = 'The page you are trying to reach was not found.' %}
+        {% set errorPage_p2 = 'Please double-check your URL, and try again.' %}
+        {% set errorPage_text = 'text-white' %}
+        {% set errorPage_bg = 'bg-danger' %}
+        {% set errorPage_border = 'border-light' %}
+        {% set errorPage_btn = 'btn-lg btn-outline-light' %}
+        {% include "partials/_errorPagesContent.njk" %}
+
+        {% include "partials/_footer.njk" %}
+
+{% endblock %}
+
+{% block javascript %}
+        
+        {% include "partials/_errorPagesScripts.njk" %}
+
+{% endblock %}

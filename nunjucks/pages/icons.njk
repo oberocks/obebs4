@@ -1,0 +1,67 @@
+<!-- {{ global_strings['icons']['slug'] }}.njk -->
+
+{% set fileName = global_strings['icons']['slug'] + '.html' %}
+{% set pageTitle = global_strings['icons']['title'] %}
+{% set pageDescrip = global_strings['icons']['description'] %}
+
+{% extends "boilerplate.njk" %}
+
+{% block css %}{% endblock %}
+
+{% block content %}
+        
+        {% include "partials/_navigation.njk" %}
+        
+        {% set heroTitle = pageTitle %}
+        {% set heroDescrip = pageDescrip %}
+        {% set heroBgClass = global_strings['icons']['background'] %}
+        {% set heroBorderClass = global_strings['icons']['border'] %}
+        {% include "partials/_hero.njk" %}
+
+        {% include "partials/icons/_icon_sizes_and_borders.njk" %}
+        {% include "partials/icons/_icon_floats_fixed_widths.njk" %}
+        {% include "partials/icons/_icon_lists.njk" %}
+        {% include "partials/icons/_icon_animated_checkboxes.njk" %}
+        {% include "partials/icons/_icon_orientation.njk" %}
+        {% include "partials/icons/_icon_shrink_grow_transforms.njk" %}
+        {% include "partials/icons/_icon_positioning_transforms.njk" %}
+        {% include "partials/icons/_icon_rotate_flip_transforms.njk" %}
+        {% include "partials/icons/_icon_masking.njk" %}
+        {% include "partials/icons/_icon_layers.njk" %}
+        {% include "partials/icons/_icon_stacks.njk" %}
+        {% include "partials/icons/_icon_animations.njk" %}
+
+        {% include "partials/icons/_icon_swapping_with_javascript.njk" %}
+        {% include "partials/icons/_icon_nesting_alert.njk" %}
+
+        {% include "partials/_footer.njk" %}
+
+{% endblock %}
+
+{% block javascript %}
+
+        <script>
+            // NOTE: This script should run before/outside any jQuery document.ready scripts
+            // NOTE: This script expects data-auto-replace-svg="nest" is set on your FontAwesome JS include
+            // NOTE: If you aren't using the nesting feature, then change the .find() string below from '[data-fa-i2svg] svg' to '[data-fa-i2svg]'
+            document.addEventListener('DOMContentLoaded', function () {
+                $('#icon-swap-example').on('click', function () {
+                    $(this)
+                    .find('[data-fa-i2svg] svg')
+                    .toggleClass('fa-angle-right')
+                    .toggleClass('fa-angle-down');
+                });
+            });
+        </script>
+        
+        <script>
+            
+            $(function() {
+                
+                $('.fa-workspace .code-toolbar').addClass('collapse');
+
+            });
+            
+        </script>
+
+{% endblock %}
