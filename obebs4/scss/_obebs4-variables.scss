@@ -510,9 +510,9 @@ $list-group-action-active-bg:				$dropdown-link-hover-bg;
 // OBE:BS4 - Borders
 //
 
-$obe-border-widths: ();
+$obebs4-border-widths: ();
 
-$obe-border-widths: map-merge((
+$obebs4-border-widths: map-merge((
 	"0":	0rem,
 	"1":	0.05rem,
 	"2":	0.1rem,
@@ -529,7 +529,7 @@ $obe-border-widths: map-merge((
 	"13":	0.65rem,
 	"14":	0.7rem,
 	"15":	0.75rem
-), $obe-border-widths);
+), $obebs4-border-widths);
 
 
 //
@@ -1163,9 +1163,9 @@ $obebs4-tooltip-colors: map-merge((
 //
 
 // This variable affects the `.h-*` and `.w-*` classes.
-$obe-sizes: ();
+$obebs4-sizes: ();
 
-$obe-sizes: map-merge((
+$obebs4-sizes: map-merge((
 	0:		0%,
 	5:		5%,
 	10:		10%,
@@ -1191,7 +1191,7 @@ $obe-sizes: map-merge((
 	99:		99.999%,
 	100:	100%,
 	auto:	auto
-), $obe-sizes);
+), $obebs4-sizes);
 
 
 
@@ -1202,9 +1202,9 @@ $obe-sizes: map-merge((
 //
 
 // This variable affects the `.opacity-*` classes.
-$obe-opacity: ();
+$obebs4-opacity: ();
 
-$obe-opacity: map-merge((
+$obebs4-opacity: map-merge((
 	0:		0,
 	5:		0.05,
 	10:		0.1,
@@ -1229,7 +1229,7 @@ $obe-opacity: map-merge((
 	95:		0.95,
 	99:		0.9999,
 	100:	1
-), $obe-opacity);
+), $obebs4-opacity);
 
 
 
@@ -1241,40 +1241,40 @@ $obe-opacity: map-merge((
 // variables. Mostly focused on spacing.
 // You can add more entries to the $spacers map, should you need more variation.
 
-$obe-spacer: 1rem;
-$obe-spacers: ();
+$obebs4-spacer: 1rem;
+$obebs4-spacers: ();
 // stylelint-disable-next-line scss/dollar-variable-default
-$obe-spacers: map-merge(
+$obebs4-spacers: map-merge(
   (
     //0: 0,
-    //1: ($obe-spacer * .25),
-    //2: ($obe-spacer * .5),
-    //3: $obe-spacer,
-    //4: ($obe-spacer * 1.5),
-	//5: ($obe-spacer * 3)
+    //1: ($obebs4-spacer * .25),
+    //2: ($obebs4-spacer * .5),
+    //3: $obebs4-spacer,
+    //4: ($obebs4-spacer * 1.5),
+	//5: ($obebs4-spacer * 3)
 	0: 0,
-	1: ($obe-spacer * .25),
-	2: ($obe-spacer * .5),
-	3: ($obe-spacer * .75),
-	4: ($obe-spacer * 1),
-	5: ($obe-spacer * 1.25),
-	6: ($obe-spacer * 1.5),
-	7: ($obe-spacer * 1.75),
-	8: ($obe-spacer * 2),
-	9: ($obe-spacer * 2.25),
-	10: ($obe-spacer * 2.5),
-	11: ($obe-spacer * 2.75),
-	12: ($obe-spacer * 3),
-	13: ($obe-spacer * 3.25),
-	14: ($obe-spacer * 3.5),
-	15: ($obe-spacer * 3.75),
-	16: ($obe-spacer * 4),
-	17: ($obe-spacer * 4.25),
-	18: ($obe-spacer * 4.5),
-	19: ($obe-spacer * 4.75),
-	20: ($obe-spacer * 5)
+	1: ($obebs4-spacer * .25),
+	2: ($obebs4-spacer * .5),
+	3: ($obebs4-spacer * .75),
+	4: ($obebs4-spacer * 1),
+	5: ($obebs4-spacer * 1.25),
+	6: ($obebs4-spacer * 1.5),
+	7: ($obebs4-spacer * 1.75),
+	8: ($obebs4-spacer * 2),
+	9: ($obebs4-spacer * 2.25),
+	10: ($obebs4-spacer * 2.5),
+	11: ($obebs4-spacer * 2.75),
+	12: ($obebs4-spacer * 3),
+	13: ($obebs4-spacer * 3.25),
+	14: ($obebs4-spacer * 3.5),
+	15: ($obebs4-spacer * 3.75),
+	16: ($obebs4-spacer * 4),
+	17: ($obebs4-spacer * 4.25),
+	18: ($obebs4-spacer * 4.5),
+	19: ($obebs4-spacer * 4.75),
+	20: ($obebs4-spacer * 5)
   ),
-  $obe-spacers
+  $obebs4-spacers
 );
 
 
