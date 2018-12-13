@@ -4,81 +4,81 @@
 // consistent naming. Ex: $nav-link-disabled-color and $modal-content-box-shadow-xs.
 
 
-// OBE:B4 - Color System Options
+// OBE:BS4 - Color System Options
 //
 // Quickly modify global styling by enabling or disabling optional features.
 
-// OBE:B4 - ALERT COLORS
+// OBE:BS4 - ALERT COLORS
 //$enable-obeb4-alert-wheel-colors:			true;
 //$enable-obeb4-alert-variations:				true;
 
-// OBE:B4 - BACKGROUND COLORS
+// OBE:BS4 - BACKGROUND COLORS
 //$enable-obeb4-background-wheel-colors:		true;
 //$enable-obeb4-background-tints-shades:		true;
 
-// OBE:B4 - BACKGROUND 1 COLOR GRADIENTS
+// OBE:BS4 - BACKGROUND 1 COLOR GRADIENTS
 //$enable-obeb4-1-color-gradients:			true;
 //$obeb4-1-color-tint-value:					5%;
 //$obeb4-1-color-shade-value:					10%;
 
-// OBE:B4 - BACKGROUND 2 COLOR GRADIENTS
+// OBE:BS4 - BACKGROUND 2 COLOR GRADIENTS
 //$enable-obeb4-2-color-gradients:			true;
 
-// OBE:B4 - BACKGROUND 3 COLOR GRADIENTS
+// OBE:BS4 - BACKGROUND 3 COLOR GRADIENTS
 //$enable-obeb4-3-color-gradients:			true;
 
-// OBE:B4 - BADGE COLORS
+// OBE:BS4 - BADGE COLORS
 //$enable-obeb4-badge-wheel-colors:			true;
 
-// OBE:B4 - BORDER COLORS
+// OBE:BS4 - BORDER COLORS
 //$enable-obeb4-border-wheel-colors:			true;
 //$enable-obeb4-border-tints-shades:			true;
 
-// OBE:B4 - BORDER WIDTHS
+// OBE:BS4 - BORDER WIDTHS
 //$enable-obeb4-border-widths:				true;
 
-// OBE:B4 - BUTTON COLORS
+// OBE:BS4 - BUTTON COLORS
 //$enable-obeb4-button-wheel-colors:			true;
 
-// OBE:B4 - BUTTON SIZES
+// OBE:BS4 - BUTTON SIZES
 //$enable-obeb4-button-sizes:					true;
 
-// OBE:B4 - DROPDOWN COLORS
+// OBE:BS4 - DROPDOWN COLORS
 //$enable-obeb4-dropdowns:					true;
 
-// OBE:B4 - ELEMENT SIZES
+// OBE:BS4 - ELEMENT SIZES
 //$enable-obeb4-element-sizes:				true;
 
-// OBE:B4 - LISTS
+// OBE:BS4 - LISTS
 //$enable-obeb4-lists:						true;
 
-// OBE:B4 - LIST GROUPS
+// OBE:BS4 - LIST GROUPS
 //$enable-obeb4-list-groups:					true;
 
-// OBE:B4 - SHADOWS
+// OBE:BS4 - SHADOWS
 //$enable-obeb4-box-shadows:					true;
 //$enable-obeb4-text-shadows:					true;
 
-// OBE:B4 - TABLES
+// OBE:BS4 - TABLES
 //$enable-obeb4-tables:						true;
 
-// OBE:B4 - TEXT COLORS
+// OBE:BS4 - TEXT COLORS
 //$enable-obeb4-text-wheel-colors:			true;
 //$enable-obeb4-text-tints-shades:			true;
 
-// OBE:B4 - TEXT SIZES
+// OBE:BS4 - TEXT SIZES
 //$enable-obeb4-text-sizes:					true;
 
-// OBE:B4 - CONDENSED FONT
+// OBE:BS4 - CONDENSED FONT
 //$enable-obeb4-condensed-font:				true;
 
-// OBE:B4 - TOOLTIPS
+// OBE:BS4 - TOOLTIPS
 //$enable-obeb4-tooltips:						true;
 
-// OBE:B4 - FORMS
+// OBE:BS4 - FORMS
 //$enable-obeb4-form-element-wheel-colors:	true;
 
-// OBE:B4 - POPOVERS
+// OBE:BS4 - POPOVERS
 // - note - This does not currently impact SCSS code, 
 //          and is a setting for a JavaScript need in
 //          the build system. This is here for sake
@@ -89,28 +89,28 @@
 
 
 
-// OBE:B4 - Responsive Headlines
+// OBE:BS4 - Responsive Headlines
 //$enable-obeb4-responsive-headlines:				true;
 
-// OBE:B4 - Modal Utilities
+// OBE:BS4 - Modal Utilities
 //$enable-obeb4-modal-utilities:					true;
 
-// OBE:B4 - Material Design Form Utilities
+// OBE:BS4 - Material Design Form Utilities
 //$enable-obeb4-material-design-forms:				true;
 
-// OBE:B4 - Opacity Utilities
+// OBE:BS4 - Opacity Utilities
 //$enable-obeb4-opacity:							true;
 
-// OBE:B4 - FontAwesome 5 Icon Checkboxes
+// OBE:BS4 - FontAwesome 5 Icon Checkboxes
 //$enable-obeb4-custom-dropdown-selects:				true;
 
-// OBE:B4 - Fab Buttons
+// OBE:BS4 - Fab Buttons
 //$enable-obeb4-fab-buttons:							true;
 
-// OBE:B4 - FontAwesome 5 Icon Checkboxes
+// OBE:BS4 - FontAwesome 5 Icon Checkboxes
 //$enable-obeb4-fa5-icon-checkboxes:					true;
 
-// OBE:B4 - Extended Spacing Utilities
+// OBE:BS4 - Extended Spacing Utilities
 //$enable-obeb4-spacing-utilities:					false;
 
 
@@ -126,7 +126,7 @@
 
 
 //
-// OBE:B4 - Color system
+// OBE:BS4 - Color system
 //
 
 // stylelint-disable
@@ -401,7 +401,7 @@
 
 
 //
-// OBE:B4 BODY
+// OBE:BS4 BODY
 //
 
 //$body-bg:									{ @ settings/_obe_settings.scss };
@@ -507,7 +507,7 @@ $list-group-action-active-bg:				$dropdown-link-hover-bg;
 
 
 //
-// OBE:B4 - Borders
+// OBE:BS4 - Borders
 //
 
 $obe-border-widths: ();
@@ -533,7 +533,7 @@ $obe-border-widths: map-merge((
 
 
 //
-// OBE:B4 - Buttons
+// OBE:BS4 - Buttons
 //
 
 $obeb4-font-size-base:		1rem; // Assumes the browser default, typically: 16px
@@ -1060,7 +1060,7 @@ $obeb4-and-bootstrap-all-colors: map-merge($theme-colors, $colors);
 
 
 //
-// OBE:B4 - Dropdowns
+// OBE:BS4 - Dropdowns
 //
 
 $obeb4-dropdown-colors: ();
@@ -1111,7 +1111,7 @@ $obeb4-dropdown-colors: map-merge((
 
 
 //
-// OBE:B4 - Tooltips
+// OBE:BS4 - Tooltips
 //
 
 $obeb4-tooltip-colors: ();
@@ -1159,7 +1159,7 @@ $obeb4-tooltip-colors: map-merge((
 
 
 //
-// OBE:B4 - Sizes
+// OBE:BS4 - Sizes
 //
 
 // This variable affects the `.h-*` and `.w-*` classes.
@@ -1198,7 +1198,7 @@ $obe-sizes: map-merge((
 
 
 //
-// OBE:B4 - Opacity
+// OBE:BS4 - Opacity
 //
 
 // This variable affects the `.opacity-*` classes.
@@ -1284,7 +1284,7 @@ $obe-spacers: map-merge(
 
 
 //
-// OBE:B4 TABLES
+// OBE:BS4 TABLES
 //
 
 $table-bg:                    transparent;
