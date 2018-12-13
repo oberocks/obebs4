@@ -1,5 +1,6 @@
 <!-- _progress_bars_colors.njk -->
-		<div class="container-fluid pt-5 text-center bg-white text-dark">
+		{% if obe_settings['enable-obebs4-background-wheel-colors'] === 'true' %}
+        <div class="container-fluid pt-5 text-center bg-white text-dark">
         
             <div class="container modal-workspace">
 
@@ -197,3 +198,4 @@
             </div>
 
         </div>
+        {% endif %}
