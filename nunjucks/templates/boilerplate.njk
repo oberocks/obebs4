@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en" class="bg-dark">
+	
+	<head>
+
+		<!-- Required meta tags -->
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <!-- Global Meta Types -->
+        <meta name="twitter:card" content="summary" />
+        <meta property="og:type" content="article" />
+
+        <!-- Global Meta Authors -->
+        <meta name="twitter:site" content="@obe_luv" />
+
+        <!-- Global Meta URLs -->
+        <meta property="og:url" content="https://library.mattmct.com/" />
+
+        <!-- Global Meta IDs -->
+        <meta property="og:site_name" content="OBE Library Site" />
+        <meta property="fb:admins" content="Facebook numeric ID" />
+
+        <!-- Global FAVICONS -->
+        <link rel="shortcut icon" href="images/favicon/favicon.ico">
+        <link rel="apple-touch-icon" sizes="57x57" href="images/favicons/apple-icon-57x57.png">
+        <link rel="apple-touch-icon" sizes="60x60" href="images/favicons/apple-icon-60x60.png">
+        <link rel="apple-touch-icon" sizes="72x72" href="images/favicons/apple-icon-72x72.png">
+        <link rel="apple-touch-icon" sizes="76x76" href="images/favicons/apple-icon-76x76.png">
+        <link rel="apple-touch-icon" sizes="114x114" href="images/favicons/apple-icon-114x114.png">
+        <link rel="apple-touch-icon" sizes="120x120" href="images/favicons/apple-icon-120x120.png">
+        <link rel="apple-touch-icon" sizes="144x144" href="images/favicons/apple-icon-144x144.png">
+        <link rel="apple-touch-icon" sizes="152x152" href="images/favicons/apple-icon-152x152.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="images/favicons/apple-icon-180x180.png">
+        <link rel="icon" type="image/png" sizes="192x192"  href="images/favicons/android-icon-192x192.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="images/favicons/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="96x96" href="images/favicons/favicon-96x96.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="images/favicons/favicon-16x16.png">
+        <link rel="manifest" href="images/favicons/manifest.json">
+        <meta name="msapplication-TileColor" content="#ffffff" />
+        <meta name="msapplication-TileImage" content="images/favicons/ms-icon-144x144.png" />
+        <meta name="theme-color" content="#ffffff" />
+
+		<!-- OBE:B4 Library Bundle CSS -->
+		<link rel="stylesheet" href="css/obebs4.library.bundle.css">
+
+		<!-- FontAwesome (v5.0.7) SVG JS -->
+		<script src="https://use.fontawesome.com/releases/v5.6.1/js/all.js" data-auto-replace-svg="nest"></script>
+
+		{% if obe_settings['enable-google-fonts'] === 'true' %}
+		<!-- Google Fonts -->
+		<link href="https://{{ obe_settings['google-fonts-url'] | replace("___", ".") | replace("---", ":") | replace("qqq", "?") }}" rel="stylesheet">
+		{% endif %}
+
+		<!-- Nunjucks CSS Content -->
+		{% block css %} {% endblock %}
+
+		<!-- Page Specific Title Tags -->
+        <title>{{ pageTitle }}</title>
+        <meta name="twitter:title" content="{{ pageTitle }}" />
+        <meta property="og:title" content="{{ pageTitle }}" />
+
+        <!-- Page Specific Description Tags -->
+        <meta name="description" content="{{ pageDescrip }}" />
+        <meta name="twitter:description" content="{{ pageDescrip }}" />
+        <meta property="og:description" content="{{ pageDescrip }}" />
+
+        <!-- Page Specific Author Tags -->
+        <meta name="author" content="Matt 'Smash' McT" />
+        <meta name="twitter:creator" content="@obe_luv" />
+
+        <!-- Page Specific Share Images data -->
+        <!-- Twitter images must be at least 120x120px -->
+        <meta name="twitter:image" content="images/OBE-twitter-share-image.jpg" />
+        <!-- Facebook images should be 1200x630px -->
+        <meta property="og:image" content="images/OBE-facebook-share-image.jpg" />
+
+	</head>
+
+	<body class="bg-dark">
+
+		<!-- Nunjucks Content -->
+		{% block content %} {% endblock %}
+
+		<!-- OBE:B4 Library Bundle JavaScript -->
+		<script src="js/obebs4.library.bundle.js"></script>
+
+		<!-- Nunjucks JS Content -->
+		{% block javascript %} {% endblock %}
+
+	</body>
+	
+</html>
