@@ -1,12 +1,12 @@
 <!-- _button_text_sizes.njk -->
-		{% if obe_settings['enable-obeb4-button-sizes'] === 'true' or obe_settings['enable-obeb4-text-sizes'] === 'true' %}
+		{% if obe_settings['enable-obebs4-button-sizes'] === 'true' or obe_settings['enable-obebs4-text-sizes'] === 'true' %}
 		<div class="container-fluid pt-5 text-center bg-white text-dark">
 		
 			<div class="container">
 				
 				<div class="row justify-content-center">
 					
-					{% if obe_settings['enable-obeb4-button-sizes'] === 'true' %}
+					{% if obe_settings['enable-obebs4-button-sizes'] === 'true' %}
 					<div id="{{ global_strings['extensions']['sections']['6']['id'] }}" class="col-md-6 pb-5">
 					
 						{% set headingHeadline = global_strings['extensions']['sections']['6']['head'] %}
@@ -39,7 +39,7 @@
 					</div>
 					{% endif %}
 
-					{% if obe_settings['enable-obeb4-text-sizes'] === 'true' %}
+					{% if obe_settings['enable-obebs4-text-sizes'] === 'true' %}
 					<div id="{{ global_strings['extensions']['sections']['7']['id'] }}" class="col-md-6 pb-5">
 
 						{% set headingHeadline = global_strings['extensions']['sections']['7']['head'] %}

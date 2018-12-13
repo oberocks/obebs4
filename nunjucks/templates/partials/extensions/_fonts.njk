@@ -22,7 +22,7 @@
                         {{ brand_fonts('font-primary', 'Primary') }}
                         {{ brand_fonts('font-monospace', 'Monospace') }}
                         
-                        {% if obe_settings['enable-obeb4-secondary-font'] === 'true' %}
+                        {% if obe_settings['enable-obebs4-secondary-font'] === 'true' %}
                             {{ brand_fonts('font-secondary', 'Secondary') }}
                         {% endif %}
 
@@ -180,7 +180,7 @@
 
 
 
-                        {% if obe_settings['enable-obeb4-secondary-font'] === 'true' %}
+                        {% if obe_settings['enable-obebs4-secondary-font'] === 'true' %}
                         
                             {% if obe_settings['secondary-font-weight-100'] === 'true' %}
                                 {{ font_weights('font-secondary', 'Secondary', 'font-secondary-100', '100') }}
