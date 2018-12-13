@@ -211,7 +211,7 @@ gulp.task('compile-nunjucks', function() {
         path: ['nunjucks/templates']
     }))
     // output files in app folder
-    .pipe(gulp.dest('src'))
+    .pipe(gulp.dest('library'))
 });
 
 
