@@ -1,0 +1,16 @@
+
+
+@if $enable-obeb4-lists {
+
+ul.disc-list, ol.disc-list { list-style-type: disc; }
+ul.cirle-list, ol.cirle-list { list-style-type: circle; }
+ul.square-list, ol.square-list { list-style-type: square; }
+ul.decimal-list, ol.decimal-list { list-style-type: decimal; }
+ul.decimal-leading-zero-list, ol.decimal-leading-zero-list { list-style-type: decimal-leading-zero; }
+ul.lower-roman-list, ol.lower-roman-list { list-style-type: lower-roman; }
+ul.upper-roman-list, ol.upper-roman-list { list-style-type: upper-roman; }
+ul.lower-greek-list, ol.lower-greek-list { list-style-type: lower-greek; }
+ul.lower-latin-list, ol.lower-latin-list { list-style-type: lower-latin; }
+ul.upper-latin-list, ol.upper-latin-list { list-style-type: upper-latin; }
+
+}

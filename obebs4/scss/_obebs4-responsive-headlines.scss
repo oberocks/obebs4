@@ -1,0 +1,92 @@
+
+
+@if $enable-obeb4-responsive-headlines {
+
+h1, .h1 { font-size: 2.5rem; }
+h2, .h2 { font-size: 2.25rem; }
+h3, .h3 { font-size: 2rem; }
+h4, .h4 { font-size: 1.75rem; }
+h5, .h5 { font-size: 1.5rem; }
+h6, .h6 { font-size: 1.25rem; }
+
+.display-1 { font-size: 4rem; }
+.display-2 { font-size: 3.5rem; }
+.display-3 { font-size: 3rem; }
+.display-4 { font-size: 2.5rem; }
+
+/*.lead { font-size: 1.25rem; }*/
+
+
+@include media-breakpoint-up(sm) {
+    
+    h1, .h1 { font-size: 2.75rem; }
+    h2, .h2 { font-size: 2.5rem; }
+    h3, .h3 { font-size: 2.25rem; }
+    h4, .h4 { font-size: 2rem; }
+    h5, .h5 { font-size: 1.75rem; }
+    h6, .h6 { font-size: 1.5rem; }
+
+    .display-1 { font-size: 4.5rem; }
+    .display-2 { font-size: 4rem; }
+    .display-3 { font-size: 3.5rem; }
+    .display-4 { font-size: 3rem; }
+
+    /*.lead { font-size: 1.375rem; }*/
+
+}
+
+@include media-breakpoint-up(md) {
+    
+    h1, .h1 { font-size: 3rem; }
+    h2, .h2 { font-size: 2.75rem; }
+    h3, .h3 { font-size: 2.5rem; }
+    h4, .h4 { font-size: 2.25rem; }
+    h5, .h5 { font-size: 2rem; }
+    h6, .h6 { font-size: 1.75rem; }
+
+    .display-1 { font-size: 5rem; }
+    .display-2 { font-size: 4.5rem; }
+    .display-3 { font-size: 4rem; }
+    .display-4 { font-size: 3.5rem; }
+
+    /*.lead { font-size: 1.5rem; }*/
+
+}
+
+@include media-breakpoint-up(lg) {
+    
+    h1, .h1 { font-size: 3.25rem; }
+    h2, .h2 { font-size: 3rem; }
+    h3, .h3 { font-size: 2.75rem; }
+    h4, .h4 { font-size: 2.5rem; }
+    h5, .h5 { font-size: 2.25rem; }
+    h6, .h6 { font-size: 2rem; }
+
+    .display-1 { font-size: 5.5rem; }
+    .display-2 { font-size: 5rem; }
+    .display-3 { font-size: 4.5rem; }
+    .display-4 { font-size: 4rem; }
+
+    /*.lead { font-size: 1.625rem; }*/
+
+}
+
+@include media-breakpoint-up(xl) {
+    
+    h1, .h1 { font-size: 3.5rem; }
+    h2, .h2 { font-size: 3.25rem; }
+    h3, .h3 { font-size: 3rem; }
+    h4, .h4 { font-size: 2.75rem; }
+    h5, .h5 { font-size: 2.5rem; }
+    h6, .h6 { font-size: 2.25rem; }
+
+    .display-1 { font-size: 6rem; }
+    .display-2 { font-size: 5.5rem; }
+    .display-3 { font-size: 5rem; }
+    .display-4 { font-size: 4.5rem; }
+
+    /*.lead { font-size: 1.75rem; }*/
+
+}
+
+}

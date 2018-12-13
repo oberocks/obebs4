@@ -1,0 +1,83 @@
+
+@if $enable-obeb4-tooltips {
+
+	@each $color, $values in $obeb4-tooltip-colors {
+		
+		.tooltip-#{$color} {
+			
+			&.bs-tooltip-top .arrow::before {
+				border-top-color: #{nth($values, 1)};
+			}
+			
+			&.bs-tooltip-right .arrow::before {
+				border-right-color: #{nth($values, 1)};
+			}
+			
+			&.bs-tooltip-bottom .arrow::before {
+				border-bottom-color: #{nth($values, 1)};
+			}
+			
+			&.bs-tooltip-left .arrow::before {
+				border-left-color: #{nth($values, 1)};
+			}
+			
+			/*
+			.bs-tooltip-top {
+				.arrow {
+					&::before {
+						border-top-color: #{nth($values, 1)};
+					}
+				}
+			}
+			
+			.bs-tooltip-right {
+				.arrow {
+					&::before {
+						border-right-color: #{nth($values, 1)};
+					}
+				}
+			}
+			
+			.bs-tooltip-bottom {
+				.arrow {
+					&::before {
+						border-bottom-color: #{nth($values, 1)};
+					}
+				}
+			}
+			
+			.bs-tooltip-left {
+				.arrow {
+					&::before {
+						border-left-color: #{nth($values, 1)};
+					}
+				}
+			}
+			*/
+		
+			.bs-tooltip-auto {
+				&[x-placement^="top"] {
+					@extend .bs-tooltip-top;
+				}
+				&[x-placement^="right"] {
+					@extend .bs-tooltip-right;
+				}
+				&[x-placement^="bottom"] {
+					@extend .bs-tooltip-bottom;
+				}
+				&[x-placement^="left"] {
+					@extend .bs-tooltip-left;
+				}
+			}
+		
+			// Wrapper for the tooltip content
+			.tooltip-inner {
+				color: #{nth($values, 2)};
+				background-color: #{nth($values, 1)};
+			}
+		
+		}
+		
+	}
+
+}

@@ -1,0 +1,146 @@
+// stylelint-disable declaration-no-important
+
+@if $enable-obeb4-background-wheel-colors {
+	
+	@each $key, $value in $obeb4-color-wheel-colors {
+		@include bg-variant(".bg-#{$key}", $value);
+	}
+	
+}
+
+@if $enable-obeb4-background-tints-shades {
+	
+	@each $key, $value in $whites {
+		@include bg-variant(".bg-white-#{$key}", $value);
+	}
+
+	@each $key, $value in $light-grays {
+		@include bg-variant(".bg-light-gray-#{$key}", $value);
+	}
+
+	@each $key, $value in $grays {
+		@include bg-variant(".bg-gray-#{$key}", $value);
+	}
+
+	@each $key, $value in $dark-grays {
+		@include bg-variant(".bg-dark-gray-#{$key}", $value);
+	}
+
+	@each $key, $value in $blacks {
+		@include bg-variant(".bg-black-#{$key}", $value);
+	}
+
+	@each $key, $value in $reds {
+		@include bg-variant(".bg-red-#{$key}", $value);
+	}
+
+	@each $key, $value in $roses {
+		@include bg-variant(".bg-rose-#{$key}", $value);
+	}
+
+	@each $key, $value in $magentas {
+		@include bg-variant(".bg-magenta-#{$key}", $value);
+	}
+
+	@each $key, $value in $violets {
+		@include bg-variant(".bg-violet-#{$key}", $value);
+	}
+
+	@each $key, $value in $blues {
+		@include bg-variant(".bg-blue-#{$key}", $value);
+	}
+
+	@each $key, $value in $azures {
+		@include bg-variant(".bg-azure-#{$key}", $value);
+	}
+
+	@each $key, $value in $cyans {
+		@include bg-variant(".bg-cyan-#{$key}", $value);
+	}
+
+	@each $key, $value in $spring-greens {
+		@include bg-variant(".bg-spring-green-#{$key}", $value);
+	}
+
+	@each $key, $value in $greens {
+		@include bg-variant(".bg-green-#{$key}", $value);
+	}
+
+	@each $key, $value in $chartreuses {
+		@include bg-variant(".bg-chartreuse-#{$key}", $value);
+	}
+
+	@each $key, $value in $yellows {
+		@include bg-variant(".bg-yellow-#{$key}", $value);
+	}
+
+	@each $key, $value in $oranges {
+		@include bg-variant(".bg-orange-#{$key}", $value);
+	}
+
+	@each $key, $value in $orange-grays {
+		@include bg-variant(".bg-orange-gray-#{$key}", $value);
+	}
+
+	@each $key, $value in $dark-gray-oranges {
+		@include bg-variant(".bg-dark-gray-orange-#{$key}", $value);
+	}
+
+	@each $key, $value in $blue-grays {
+		@include bg-variant(".bg-blue-gray-#{$key}", $value);
+	}
+
+	@each $key, $value in $light-gray-azures {
+		@include bg-variant(".bg-light-gray-azure-#{$key}", $value);
+	}
+	
+}
+
+@if $enable-obeb4-1-color-gradients {
+  
+  $all-colors: map_merge($theme-colors, $obeb4-color-wheel-colors);
+  
+  @each $color, $value in $all-colors {
+    
+    @include obe-bg-gradient-variant(".bg-gradient-#{$color}", $value);
+    @include obe-inv-bg-gradient-variant(".bg-gradient-#{$color}-reversed", $value);
+    @include obe-right-bg-gradient-variant(".bg-gradient-#{$color}-right", $value);
+    @include obe-left-bg-gradient-variant(".bg-gradient-#{$color}-left", $value);
+    @include obe-radial-bg-gradient-variant(".bg-gradient-#{$color}-radial", $value);
+    @include obe-radial-inv-bg-gradient-variant(".bg-gradient-#{$color}-radial-reversed", $value);
+    @include obe-diag-top-right-bg-gradient-variant(".bg-gradient-#{$color}-top-right", $value);
+    @include obe-diag-bottom-left-bg-gradient-variant(".bg-gradient-#{$color}-bottom-left", $value);
+    @include obe-diag-top-left-bg-gradient-variant(".bg-gradient-#{$color}-top-left", $value);
+    @include obe-diag-bottom-right-bg-gradient-variant(".bg-gradient-#{$color}-bottom-right", $value);
+    
+  }
+  
+}
+
+@if $enable-obeb4-2-color-gradients {
+	
+	@each $color, $values in $obeb4-2-color-pairs {
+		
+		@include obe-vert-2color-gradient(".bg-gradient-#{$color}-vertical", nth($values, 1), nth($values, 2));
+		@include obe-horiz-2color-gradient(".bg-gradient-#{$color}-horizontal", nth($values, 1), nth($values, 2));
+		@include obe-radial-2color-gradient(".bg-gradient-#{$color}-radial", nth($values, 1), nth($values, 2));
+		@include obe-diag-up-2color-gradient(".bg-gradient-#{$color}-diagonal-up", nth($values, 1), nth($values, 2));
+		@include obe-diag-down-2color-gradient(".bg-gradient-#{$color}-diagonal-down", nth($values, 1), nth($values, 2));
+		
+	}
+	
+}
+
+@if $enable-obeb4-3-color-gradients {
+	
+	@each $color, $values in $obeb4-3-color-pairs {
+		
+		@include obe-vert-3color-gradient(".bg-gradient-#{$color}-vertical", nth($values, 1), nth($values, 2), nth($values, 3));
+		@include obe-horiz-3color-gradient(".bg-gradient-#{$color}-horizontal", nth($values, 1), nth($values, 2), nth($values, 3));
+		@include obe-radial-3color-gradient(".bg-gradient-#{$color}-radial", nth($values, 1), nth($values, 2), nth($values, 3));
+		@include obe-diag-up-3color-gradient(".bg-gradient-#{$color}-diagonal-up", nth($values, 1), nth($values, 2), nth($values, 3));
+		@include obe-diag-down-3color-gradient(".bg-gradient-#{$color}-diagonal-down", nth($values, 1), nth($values, 2), nth($values, 3));
+		
+	}
+	
+}

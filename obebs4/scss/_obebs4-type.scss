@@ -1,0 +1,230 @@
+// stylelint-disable declaration-no-important, selector-list-comma-newline-after
+
+// OBE Type display classes
+
+.font-primary {
+    font-family: $font-family-sans-serif !important;
+}
+
+.font-monospace {
+    font-family: $font-family-monospace !important;
+}
+
+
+@if $enable-obeb4-secondary-font {
+    
+    .font-secondary {
+        font-family: $font-family-secondary !important;
+    }
+    
+}
+
+
+@if $enable-obeb4-text-sizes {
+
+    .text-xxs {
+        font-size: $font-size-xxs;
+    }
+
+    .text-xs {
+        font-size: $font-size-xs;
+    }
+
+    .text-sm {
+        font-size: $font-size-sm;
+    }
+
+    .text-md {
+        font-size: $font-size-md;
+    }
+
+    .text-lg {
+        font-size: $font-size-lg;
+    }
+
+    .text-xl {
+        font-size: $font-size-xl;
+    }
+
+    .text-xxl {
+        font-size: $font-size-xxl;
+    }
+
+}
+
+
+// all primary google font weight possibilities
+@if $primary-font-weight-100 {
+    .font-primary-100 { font-weight: 100 !important; }
+}
+@if $primary-font-weight-200 {
+    .font-primary-200 { font-weight: 200 !important; }
+}
+@if $primary-font-weight-300 {
+    .font-primary-300 { font-weight: 300 !important; }
+}
+@if $primary-font-weight-400 {
+    .font-primary-400 { font-weight: 400 !important; }
+}
+@if $primary-font-weight-500 {
+    .font-primary-500 { font-weight: 500 !important; }
+}
+@if $primary-font-weight-600 {
+    .font-primary-600 { font-weight: 600 !important; }
+}
+@if $primary-font-weight-700 {
+    .font-primary-700 { font-weight: 700 !important; }
+}
+@if $primary-font-weight-800 {
+    .font-primary-800 { font-weight: 800 !important; }
+}
+@if $primary-font-weight-900 {
+    .font-primary-900 { font-weight: 900 !important; }
+}
+@if $primary-font-weight-100i {
+    .font-primary-100i { font-weight: 100 !important; font-style: italic; }
+}
+@if $primary-font-weight-200i {
+    .font-primary-200i { font-weight: 200 !important; font-style: italic; }
+}
+@if $primary-font-weight-300i {
+    .font-primary-300i { font-weight: 300 !important; font-style: italic; }
+}
+@if $primary-font-weight-400i {
+    .font-primary-400i { font-weight: 400 !important; font-style: italic; }
+}
+@if $primary-font-weight-500i {
+    .font-primary-500i { font-weight: 500 !important; font-style: italic; }
+}
+@if $primary-font-weight-600i {
+    .font-primary-600i { font-weight: 600 !important; font-style: italic; }
+}
+@if $primary-font-weight-700i {
+    .font-primary-700i { font-weight: 700 !important; font-style: italic; }
+}
+@if $primary-font-weight-800i {
+    .font-primary-800i { font-weight: 800 !important; font-style: italic; }
+}
+@if $primary-font-weight-900i {
+    .font-primary-900i { font-weight: 900 !important; font-style: italic; }
+}
+
+
+// all monospace google font weight possibilities
+@if $monospace-font-weight-100 {
+    .font-monospace-100 { font-weight: 100 !important; }
+}
+@if $monospace-font-weight-200 {
+    .font-monospace-200 { font-weight: 200 !important; }
+}
+@if $monospace-font-weight-300 {
+    .font-monospace-300 { font-weight: 300 !important; }
+}
+@if $monospace-font-weight-400 {
+    .font-monospace-400 { font-weight: 400 !important; }
+}
+@if $monospace-font-weight-500 {
+    .font-monospace-500 { font-weight: 500 !important; }
+}
+@if $monospace-font-weight-600 {
+    .font-monospace-600 { font-weight: 600 !important; }
+}
+@if $monospace-font-weight-700 {
+    .font-monospace-700 { font-weight: 700 !important; }
+}
+@if $monospace-font-weight-800 {
+    .font-monospace-800 { font-weight: 800 !important; }
+}
+@if $monospace-font-weight-900 {
+    .font-monospace-900 { font-weight: 900 !important; }
+}
+@if $monospace-font-weight-100i {
+    .font-monospace-100i { font-weight: 100 !important; font-style: italic; }
+}
+@if $monospace-font-weight-200i {
+    .font-monospace-200i { font-weight: 200 !important; font-style: italic; }
+}
+@if $monospace-font-weight-300i {
+    .font-monospace-300i { font-weight: 300 !important; font-style: italic; }
+}
+@if $monospace-font-weight-400i {
+    .font-monospace-400i { font-weight: 400 !important; font-style: italic; }
+}
+@if $monospace-font-weight-500i {
+    .font-monospace-500i { font-weight: 500 !important; font-style: italic; }
+}
+@if $monospace-font-weight-600i {
+    .font-monospace-600i { font-weight: 600 !important; font-style: italic; }
+}
+@if $monospace-font-weight-700i {
+    .font-monospace-700i { font-weight: 700 !important; font-style: italic; }
+}
+@if $monospace-font-weight-800i {
+    .font-monospace-800i { font-weight: 800 !important; font-style: italic; }
+}
+@if $monospace-font-weight-900i {
+    .font-monospace-900i { font-weight: 900 !important; font-style: italic; }
+}
+
+// all secondary google font weight possibilities
+@if $secondary-font-weight-100 {
+    .font-secondary-100 { font-weight: 100 !important; }
+}
+@if $secondary-font-weight-200 {
+    .font-secondary-200 { font-weight: 200 !important; }
+}
+@if $secondary-font-weight-300 {
+    .font-secondary-300 { font-weight: 300 !important; }
+}
+@if $secondary-font-weight-400 {
+    .font-secondary-400 { font-weight: 400 !important; }
+}
+@if $secondary-font-weight-500 {
+    .font-secondary-500 { font-weight: 500 !important; }
+}
+@if $secondary-font-weight-600 {
+    .font-secondary-600 { font-weight: 600 !important; }
+}
+@if $secondary-font-weight-700 {
+    .font-secondary-700 { font-weight: 700 !important; }
+}
+@if $secondary-font-weight-800 {
+    .font-secondary-800 { font-weight: 800 !important; }
+}
+@if $secondary-font-weight-900 {
+    .font-secondary-900 { font-weight: 900 !important; }
+}
+@if $secondary-font-weight-100i {
+    .font-secondary-100i { font-weight: 100 !important; font-style: italic; }
+}
+@if $secondary-font-weight-200i {
+    .font-secondary-200i { font-weight: 200 !important; font-style: italic; }
+}
+@if $secondary-font-weight-300i {
+    .font-secondary-300i { font-weight: 300 !important; font-style: italic; }
+}
+@if $secondary-font-weight-400i {
+    .font-secondary-400i { font-weight: 400 !important; font-style: italic; }
+}
+@if $secondary-font-weight-500i {
+    .font-secondary-500i { font-weight: 500 !important; font-style: italic; }
+}
+@if $secondary-font-weight-600i {
+    .font-secondary-600i { font-weight: 600 !important; font-style: italic; }
+}
+@if $secondary-font-weight-700i {
+    .font-secondary-700i { font-weight: 700 !important; font-style: italic; }
+}
+@if $secondary-font-weight-800i {
+    .font-secondary-800i { font-weight: 800 !important; font-style: italic; }
+}
+@if $secondary-font-weight-900i {
+    .font-secondary-900i { font-weight: 900 !important; font-style: italic; }
+}
+
+
+// adjust any prism.js formatting to use system monospace font
+code[class*="language-"], 
+pre[class*="language-"] {
+    font-family: $font-family-monospace !important;
+}

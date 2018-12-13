@@ -1,0 +1,257 @@
+
+@if $enable-obeb4-modal-utilities {
+
+	/* ----- START alternative modal animations ----- */
+
+	.modal.fade-scale .modal-dialog {
+		transform: scale(0);
+		opacity: 0;
+		transition: all .25s cubic-bezier(0.25, 0.5, 0.5, 0.9);
+	}
+	.modal.fade-scale.show .modal-dialog {
+		opacity: 1;
+		transform: scale(1);
+	}
+
+
+	.modal.slide-from-right .modal-dialog {
+		transform: translateX(20%);
+		opacity: 0;
+		transition: all 0.3s cubic-bezier(0.25, 0.5, 0.5, 0.9);
+	}
+	.modal.slide-from-right.show .modal-dialog {
+		transform: translateX(0);
+		opacity: 1;
+	}
+
+
+	.modal.slide-from-left .modal-dialog {
+		transform: translateX(-20%);
+		opacity: 0;
+		transition: all 0.3s cubic-bezier(0.25, 0.5, 0.5, 0.9);
+	}
+	.modal.slide-from-left.show .modal-dialog {
+		transform: translateX(0);
+		opacity: 1;
+	}
+
+
+	.modal.slide-from-bottom .modal-dialog {
+		transform: translateY(20%);
+		opacity: 0;
+		transition: all 0.3s cubic-bezier(0.25, 0.5, 0.5, 0.9);
+	}
+	.modal.slide-from-bottom.show .modal-dialog {
+		transform: translateY(0);
+		opacity: 1;
+	}
+
+
+	.modal.top-pinned .modal-dialog {
+		transform: translateY(-100%);
+		opacity: 0;
+		transition: all .25s cubic-bezier(0.25, 0.5, 0.5, 0.9);
+	}
+	.modal.top-pinned.show .modal-dialog {
+		transform: translateY(0);
+		opacity: 1;
+	}
+	.modal.top-pinned .modal-content {
+		border-top-left-radius: 0;
+		border-top-right-radius: 0;
+	}
+
+
+	.modal.bottom-pinned .modal-dialog {
+		transform: translateY(100%);
+		opacity: 0;
+		transition: all .25s cubic-bezier(0.25, 0.5, 0.5, 0.9);
+	}
+	.modal.bottom-pinned.show .modal-dialog {
+		transform: translateY(0);
+		opacity: 1;
+	}
+	.modal.bottom-pinned .modal-content {
+		border-bottom-left-radius: 0;
+		border-bottom-right-radius: 0;
+	}
+
+	/*******************************
+	* MODAL AS LEFT/RIGHT SIDEBAR
+	* Add "left-pinned" or "right-pinned" in modal parent div, after class="modal".
+	* Get free snippets on bootpen.com
+	*******************************/
+	.modal.left-pinned .modal-dialog,
+	.modal.right-pinned .modal-dialog {
+		position: fixed;
+		margin: auto;
+		width: 320px;
+		height: 100%;
+		transform: translate3d(0%, 0, 0);
+	}
+
+	.modal.left-pinned .modal-content,
+	.modal.right-pinned .modal-content {
+		height: 100%;
+		overflow-y: auto;
+	}
+
+	.modal.left-pinned .modal-body,
+	.modal.right-pinned .modal-body {
+		padding: 0px;
+	}
+
+	.modal.left-pinned .modal-content, 
+	.modal.right-pinned .modal-content {
+		display: block;
+		border-radius: 0px 0px 0px 0px;
+	}
+
+	.modal.left-pinned .modal-body a.modal-nav,
+	.modal.right-pinned .modal-body a.modal-nav, 
+	.modal.left-pinned .modal-body a.modal-nav:hover,
+	.modal.right-pinned .modal-body a.modal-nav:hover, 
+	.modal.left-pinned .modal-body a.modal-nav-item, 
+	.modal.right-pinned .modal-body a.modal-nav-item, 
+	.modal.left-pinned .modal-body a.modal-nav-item:hover, 
+	.modal.right-pinned .modal-body a.modal-nav-item:hover {
+		text-decoration: none;
+	}
+
+	.modal.left-pinned .modal-body a.modal-nav,
+	.modal.right-pinned .modal-body a.modal-nav, 
+	.modal.left-pinned .modal-body a.modal-nav-item,
+	.modal.right-pinned .modal-body a.modal-nav-item {
+		opacity: 0.9;
+		transition: all 0.3s ease;
+	}
+
+	.modal.left-pinned .modal-body a.modal-nav:hover,
+	.modal.right-pinned .modal-body a.modal-nav:hover, 
+	.modal.left-pinned .modal-body a.modal-nav-item:hover,
+	.modal.right-pinned .modal-body a.modal-nav-item:hover {
+		opacity: 1;
+	}
+
+	/* Left */
+	.modal.left-pinned .modal-dialog {
+		left: -320px;
+		transition: opacity 0.3s linear, left 0.3s ease-out;
+	}
+
+	.modal.left-pinned.show .modal-dialog{
+		left: 0;
+	}
+			
+	/* Right */
+	.modal.right-pinned .modal-dialog {
+		right: -320px;
+		transition: opacity 0.3s linear, right 0.3s ease-out;
+	}
+
+	.modal.right-pinned.show .modal-dialog {
+		right: 0;
+	}
+
+	.modal.right-pinned .modal-footer {
+		-ms-flex-pack: start;
+		justify-content: flex-start;
+	}
+
+	.adjust-for-fixed-nav {
+		position: relative;
+		top: -90px;
+	}
+
+	/* START LEFT/RIGHT PINNED RESPONSIVE WIDTHS CSS */
+
+	.modal.left-pinned .modal-dialog, 
+	.modal.right-pinned .modal-dialog { max-width: 75%; }
+
+	@include media-breakpoint-up(sm) {
+		.modal.left-pinned .modal-dialog, 
+		.modal.right-pinned .modal-dialog { max-width: 65%; }
+	}
+
+	@include media-breakpoint-up(md) {
+		.modal.left-pinned .modal-dialog, 
+		.modal.right-pinned .modal-dialog { max-width: 55%; }
+	}
+
+	@include media-breakpoint-up(lg) {
+		.modal.left-pinned .modal-dialog, 
+		.modal.right-pinned .modal-dialog { max-width: 45%; }
+	}
+
+	@include media-breakpoint-up(xl) {
+		.modal.left-pinned .modal-dialog, 
+		.modal.right-pinned .modal-dialog { max-width: 35%; }
+	}
+
+	/* END LEFT/RIGHT PINNED RESPONSIVE WIDTHS CSS */
+
+
+	/* ----- END alternative modal animations ----- */
+
+
+	/* ----- START .clean-colored-modal ----- */
+
+	.modal.clean-colored-modal .modal-header, 
+	.modal.clean-colored-modal .modal-footer {
+		justify-content: center;
+	}
+
+	.modal.clean-colored-modal .fade-scale-headline {
+		opacity: 0.5;
+	}
+
+	/* ----- END .clean-colored-modal ----- */
+
+	/* ----- START .big-alert-modal ----- */
+
+	.modal.big-alert-modal .modal-header, 
+	.modal.big-alert-modal .modal-footer {
+		justify-content: center;
+	}
+
+	.modal.big-alert-modal .fade-scale-headline {
+		opacity: 0.5;
+	}
+
+	/* ----- END .big-alert-modal ----- */
+
+
+
+	/* ----- START .modal-fullscreen ----- */
+
+	.modal-fullscreen .modal-dialog {
+		margin: 0 0 0 0;
+		width: 100%;
+		max-width: 100%;
+		height: 100%;
+		min-height: 100%;
+		padding: 0;
+	}
+
+	.modal-fullscreen .modal-content {
+		border-radius: 0;
+	}
+
+	.modal-fullscreen button.close, 
+	.modal-fullscreen .modal-heading-spacer {
+		font-size: 600%;
+		font-weight: 100;
+		height: 50px;
+		position: relative;
+		top: -25px;
+	}
+
+	.modal-fullscreen .modal-heading-spacer {
+		opacity: 0;
+	}
+
+	/* ----- END .modal-fullscreen ----- */
+	
+
+	
+}

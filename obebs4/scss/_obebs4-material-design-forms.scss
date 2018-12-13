@@ -1,0 +1,118 @@
+
+@if $enable-obeb4-material-design-forms {
+
+.material-static-input-group, 
+.material-float-input-group { 
+    position: relative;
+}
+
+.material-static-input-group .material-input, 
+.material-float-input-group .material-input {
+    padding: 10px 10px 10px 5px;
+    display: block;
+    width: 100%;
+    background: transparent !important;
+    border: none;
+}
+
+.material-static-input-group .material-input:focus, 
+.material-float-input-group .material-input:focus {
+    outline: none;
+}
+
+/* Material Input Labels  */
+
+.material-static-input-group label.material-label {
+    font-size: 16px;
+    font-weight: normal;
+    position: absolute;
+    pointer-events: none;
+    left: 5px;
+    top: -15px;
+    transition: 0.3s ease all; 
+}
+
+.material-float-input-group label.material-label {
+    font-size: 16px;
+    font-weight: normal;
+    position: absolute;
+    pointer-events: none;
+    left: 5px;
+    top: 10px;
+    transition: 0.3s ease all; 
+}
+
+/* Material Input Active State */
+
+.material-static-input-group .material-input:focus ~ label.material-label, 
+.material-static-input-group .material-input:valid ~ label.material-label {
+    font-size: 14px;
+}
+
+.material-float-input-group .material-input:focus ~ label.material-label, 
+.material-float-input-group .material-input:valid ~ label.material-label {
+    top: -15px;
+    font-size: 14px;
+}
+
+/* Material Input Bottom Bar */
+
+.material-static-input-group .material-bar, 
+.material-float-input-group .material-bar  {
+    position: relative;
+    top: 2px;
+    display: block;
+    width: 100%;
+}
+
+.material-static-input-group .material-bar:before, 
+.material-static-input-group .material-bar:after, 
+.material-float-input-group .material-bar:before, 
+.material-float-input-group .material-bar:after {
+    content: '';
+    height: 3px; 
+    width: 0;
+    bottom: 1px; 
+    position: absolute;
+    transition: 0.2s ease-in all; 
+}
+
+.material-static-input-group .material-bar:before, 
+.material-float-input-group .material-bar:before {
+    left: 50%;
+}
+
+.material-static-input-group .material-bar:after, 
+.material-float-input-group .material-bar:after {
+    right: 50%; 
+}
+
+/* Material Input Bottom Bar Active State */
+
+.material-static-input-group .material-input:focus ~ .material-bar:before, 
+.material-static-input-group .material-input:focus ~ .material-bar:after, 
+.material-float-input-group .material-input:focus ~ .material-bar:before, 
+.material-float-input-group .material-input:focus ~ .material-bar:after {
+    width: 50%;
+}
+
+
+@each $colorname, $value in $obeb4-and-bootstrap-all-colors  {
+    .material-static-input-group.material-group-#{$colorname} .material-bar:before, 
+    .material-static-input-group.material-group-#{$colorname} .material-bar:after, 
+    .material-float-input-group.material-group-#{$colorname} .material-bar:before, 
+    .material-float-input-group.material-group-#{$colorname} .material-bar:after {
+        background-color: $value;
+    }
+
+    .material-static-input-group.material-group-#{$colorname} .material-input:focus ~ label.material-label, 
+    .material-static-input-group.material-group-#{$colorname} .material-input:valid ~ label.material-label, 
+    .material-float-input-group.material-group-#{$colorname} .material-input:focus ~ label.material-label, 
+    .material-float-input-group.material-group-#{$colorname} .material-input:valid ~ label.material-label {
+        color: $value;
+    }
+}
+
+
+
+}

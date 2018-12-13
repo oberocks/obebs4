@@ -1,0 +1,51 @@
+// stylelint-disable selector-no-qualifying-type
+
+//
+// Textual form controls
+//
+
+@if $enable-obeb4-form-element-wheel-colors {
+	
+	@each $colorname, $value in $obeb4-and-bootstrap-all-colors {
+		
+		.form-control.form-#{$colorname} {
+			color: darken($value, 10%);
+			background-color: $white;
+			border-color: lighten($value, 10%);
+
+			// Customize the `:focus` state to imitate native WebKit styles.
+			// KEY: ($textColor, $bgColor, $borderColor)
+			@include obeb4-form-control-focus(lighten($value, 5%), $white, lighten($value, 5%));
+
+			// Placeholder
+			&::placeholder {
+				color: lighten($value, 25%);
+			}
+
+			// Disabled and read-only inputs
+			//
+			// HTML5 says that controls under a fieldset > legend:first-child won't be
+			// disabled if the fieldset is disabled. Due to implementation difficulty, we
+			// don't honor that edge case; we style them as disabled anyway.
+			&:disabled,
+			&[readonly] {
+				background-color: rgba($value, 0.15);
+			}
+		}
+
+		select.form-control {
+			&:focus::-ms-value {
+				// Suppress the nested default white text on blue background highlight given to
+				// the selected option text when the (still closed) <select> receives focus
+				// in IE and (under certain conditions) Edge, as it looks bad and cannot be made to
+				// match the appearance of the native widget.
+				// See https://github.com/twbs/bootstrap/issues/19398.
+				color: $value;
+				background-color: $white;
+			}
+		}
+		
+	}
+	
+}
+

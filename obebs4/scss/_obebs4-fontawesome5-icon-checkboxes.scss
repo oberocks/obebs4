@@ -1,0 +1,85 @@
+// stylelint-disable selector-no-qualifying-type
+
+//
+// Textual form controls
+//
+
+@if $enable-obeb4-fa5-icon-checkboxes {
+
+	.obe-icon-checkbox:hover {
+		cursor: pointer;
+	}
+
+	.obe-checkbox-icon {
+		width: 25px;
+		height: 25px;
+		vertical-align: middle !important;
+		text-align: center !important;
+	}
+	
+	.obe-icon-checkbox.fade-and-scale-animation svg.unchecked {
+		animation: fade-and-scale-down 140ms ease-in-out forwards;
+	}
+
+	.obe-icon-checkbox.fade-and-scale-animation svg.checked {
+		animation: fade-and-scale-up 140ms ease-in-out forwards;
+	}
+
+	@keyframes fade-and-scale-down {
+		0% {
+			opacity: 1;
+			transform: scale(1);
+		}
+		100% {
+			opacity: 0;
+			transform: scale(0);
+		}
+	}
+
+	@keyframes fade-and-scale-up {
+		0% {
+			opacity: 0;
+			transform: scale(0);
+		}
+		100% {
+			opacity: 1;
+			transform: scale(1);
+		}
+	}
+
+	.obe-icon-checkbox.spin-animation svg.unchecked {
+		animation: spin-down 140ms ease-in-out forwards;
+	}
+
+	.obe-icon-checkbox.spin-animation svg.checked {
+		animation: spin-up 140ms ease-in-out forwards;
+	}
+	
+	@keyframes spin-down {
+		0% {
+			opacity: 1;
+			transform: scale(1);
+			transform: rotate(0deg);
+		}
+		100% {
+			opacity: 0;
+			transform: scale(0);
+			transform: rotate(-180deg);
+		}
+	}
+
+	@keyframes spin-up {
+		0% {
+			opacity: 0;
+			transform: scale(0);
+			transform: rotate(-180deg);
+		}
+		100% {
+			opacity: 1;
+			transform: scale(1);
+			transform: rotate(0deg);
+		}
+	}
+
+}
+

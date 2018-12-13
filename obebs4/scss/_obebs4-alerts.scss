@@ -1,0 +1,87 @@
+// Alternate styles
+//
+// Generate contextual modifier classes for colorizing the alert.
+
+@if $enable-obeb4-alert-wheel-colors {
+
+	@each $color, $value in $obeb4-and-bootstrap-all-colors {
+		
+		.alert-#{$color} {
+			
+			color: darken($value, 20%);
+			@include gradient-bg(lighten($value, 30%));
+			border-color: lighten($value, 25%);
+
+			hr {
+				border-top-color: lighten($value, 25%);
+			}
+
+			.alert-link {
+				font-weight: bold;
+				color: darken($value, 20%);
+				@include hover-focus {
+					color: darken($value, 35%) !important;
+				}
+			}
+			
+			&.alert-dismissible {
+				.close {
+					color: darken($value, 20%);
+					@include hover-focus {
+						color: darken($value, 30%) !important;
+					}
+				}
+				
+			}
+			
+		}
+		
+	}
+
+}
+
+
+@if $enable-obeb4-alert-variations {
+	
+	@each $color, $value in $obeb4-and-bootstrap-all-colors {
+		
+		.alert-#{$color}-inversed {
+			
+			color: lighten($value, 30%);
+			@include gradient-bg(darken($value, 10%));
+			border-color: darken($value, 5%);
+
+			hr {
+				border-top-color: lighten($value, 5%);
+			}
+
+			.alert-link {
+				font-weight: bold;
+				color: lighten($value, 20%);
+				@include hover-focus {
+					color: lighten($value, 35%) !important;
+				}
+			}
+			
+			&.alert-dismissible {
+				.close {
+					color: lighten($value, 20%);
+					@include hover-focus {
+						color: lighten($value, 30%) !important;
+					}
+				}
+				
+			}
+
+			
+		}
+		
+		
+	}
+	
+}
+
+
+
+
+

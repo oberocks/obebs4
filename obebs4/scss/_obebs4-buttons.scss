@@ -1,0 +1,55 @@
+// stylelint-disable selector-no-qualifying-type
+
+
+@if $enable-obeb4-button-wheel-colors {
+	
+	@each $color, $value in $obeb4-color-wheel-colors {
+		.btn-#{$color} {
+			@include button-variant($value, $value);
+		}
+	}
+
+	@each $color, $value in $obeb4-color-wheel-colors {
+		.btn-outline-#{$color} {
+			@include button-outline-variant($value);
+		}
+	}
+	
+}
+
+
+//
+// Button Sizes
+//
+
+@if $enable-obeb4-button-sizes {
+
+	.btn-xxs {
+		@include button-size($btn-padding-y-xxs, $btn-padding-x-xxs, $font-size-xxs, $btn-line-height-xxs, $btn-border-radius-xxs);
+	}
+	
+	.btn-xs {
+		@include button-size($btn-padding-y-xs, $btn-padding-x-xs, $font-size-xs, $btn-line-height-xs, $btn-border-radius-xs);
+	}
+	
+	.btn-sm {
+		@include button-size($btn-padding-y-sm, $btn-padding-x-sm, $font-size-sm, $btn-line-height-sm, $btn-border-radius-sm);
+	}
+	
+	.btn-md {
+		@include button-size($btn-padding-y-md, $btn-padding-x-md, $font-size-md, $btn-line-height-md, $btn-border-radius-md);
+	}
+	
+	.btn-lg {
+		@include button-size($btn-padding-y-lg, $btn-padding-x-lg, $font-size-lg, $btn-line-height-lg, $btn-border-radius-lg);
+	}
+	
+	.btn-xl {
+		@include button-size($btn-padding-y-xl, $btn-padding-x-xl, $font-size-xl, $btn-line-height-xl, $btn-border-radius-xl);
+	}
+	
+	.btn-xxl {
+		@include button-size($btn-padding-y-xxl, $btn-padding-x-xxl, $font-size-xxl, $btn-line-height-xxl, $btn-border-radius-xxl);
+	}
+	
+}

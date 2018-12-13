@@ -1,0 +1,10 @@
+
+@if $enable-obeb4-opacity {
+
+@each $key, $value in $obe-opacity  {
+    .opacity-#{$key} {
+        opacity: $value !important;
+    }
+}
+
+}

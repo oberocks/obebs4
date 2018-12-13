@@ -1,0 +1,59 @@
+
+@if $enable-obeb4-dropdowns {
+
+	@each $color, $values in $obeb4-dropdown-colors {
+	
+		/* #{$color} dropdown */
+		.dropdown-menu-#{$color} {
+		
+			//color: #{nth($values, 1)};
+			//background-color: #{nth($values, 2)};
+			//border: $dropdown-border-width solid #{nth($values, 3)};
+		
+			/* #{$color} dropdown divider */
+			.dropdown-divider {
+				border-color: #{rgba($black, .15)};
+			}
+
+			// #{$color} dropdown text
+			//.dropdown-item-text {
+				//color: #{nth($values, 1)};
+			//}
+		
+			/* #{$color} dropdown links, buttons, and more within the dropdown menu */
+			.dropdown-item, .dropdown-select-option {
+	
+				color: #{nth($values, 1)};
+
+				@include hover-focus {
+					color: #{nth($values, 2)};
+					@include gradient-bg(nth($values, 3));
+				}
+
+				&.active,
+				&:active {
+					color: #{nth($values, 2)};
+					@include gradient-bg(nth($values, 3));
+				}
+
+				&.disabled,
+				&:disabled {
+					color: #{nth($values, 4)};
+					background-color: transparent;
+					// Remove CSS gradients if they're enabled
+					@if $enable-gradients {
+						background-image: none;
+					}
+				}
+			}
+		
+			/* Dropdown section headers */
+			.dropdown-header {
+				color: #{nth($values, 5)};
+			}
+		
+		}
+		
+	}
+
+}

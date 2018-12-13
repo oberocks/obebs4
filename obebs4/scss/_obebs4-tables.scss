@@ -1,0 +1,85 @@
+//
+// Basic Bootstrap table
+//
+
+@if $enable-obeb4-tables {
+	
+	.table tbody tr.active, 
+	.table tbody tr.active:hover {
+		background-color: $primary;
+		color: color-yiq($primary);
+	}
+	
+	// Table backgrounds
+	//
+	// Exact selectors below required to override `.table-striped` and prevent
+	// inheritance to nested tables.
+
+	@each $color, $value in $obeb4-and-bootstrap-all-colors {
+
+		// for all tables
+		.table-#{$color} thead {
+			background-color: darken($value, 20%);
+			color: color-yiq(darken($value, 20%));
+		}
+		
+		@include table-row-variant($color, obe-color-wheel-color-level($color, -8));
+		@include obeb4-table-row-active-variant($color, obe-color-wheel-color-level($color, 1));
+	
+		// for bordered tables
+		.table-bordered.table-#{$color} th, 
+		.table-bordered.table-#{$color} td {
+			border-color: darken($value, 30%);
+		}
+
+		// for striped tables
+		.table-striped.table-#{$color} tbody tr {
+			@include hover {
+				background-color: obe-color-wheel-color-level($color, -3);
+				color: color-yiq(obe-color-wheel-color-level($color, -3));
+			}
+		}
+		
+		// for striped tables
+		.table-striped.table-#{$color} tbody tr:nth-of-type(#{$table-striped-order}) {
+			background-color: obe-color-wheel-color-level($color, -6);
+			@include hover {
+				background-color: obe-color-wheel-color-level($color, -3);
+				color: color-yiq(obe-color-wheel-color-level($color, -3));
+			}
+		}
+
+		// for striped tables
+		.table-striped.table-#{$color} tbody tr.active,
+		.table-striped.table-#{$color} tbody tr.active:hover {
+			background-color: $value;
+			color: color-yiq($value);
+		}
+
+		// for dark tables
+		.table-dark tr.bg-#{$color} {
+			@include hover {
+				background-color: obe-color-wheel-color-level($color, 3) !important;
+			}
+		}
+		
+		// for dark tables
+		.table-dark tr.bg-#{$color}:nth-of-type(#{$table-striped-order}) {
+			background-color: obe-color-wheel-color-level($color, 2) !important;
+			@include hover {
+				background-color: obe-color-wheel-color-level($color, 3) !important;
+			}
+		}
+
+		// for dark tables
+		.table-dark tr.bg-#{$color}.active,
+		.table-dark tr.bg-#{$color}.active:hover {
+			background-color: obe-color-wheel-color-level($color, 5) !important;
+			color: color-yiq(obe-color-wheel-color-level($color, 5)) !important;
+		}
+	
+	}
+
+	//@include table-row-variant(active, $table-active-bg);
+	
+}

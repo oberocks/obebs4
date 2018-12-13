@@ -1,0 +1,97 @@
+
+@if $enable-obeb4-custom-dropdown-selects {
+
+    // default css for all dropdown selects
+
+    .dropdown-select:hover,
+    .dropdown-select .dropdown-select-option:hover {
+        cursor: pointer;
+    }
+    /*.dropdown-select .dropdown-select-option:hover {
+        background-color: rgba(0, 0, 0, 0.05);
+    }*/
+    .dropdown-select .dropdown-menu {
+        max-height: 180px;
+        overflow-y: auto;
+    }
+    
+    // default interaction behavior needed to allow for colors behavior (further down below)
+    
+    // Links, buttons, and more within the dropdown menu
+    //
+    // `<button>`-specific styles are denoted with `// For <button>s`
+    .dropdown-menu .dropdown-select-option {
+        /*
+        display: block;
+        width: 100%; // For `<button>`s
+        padding: $dropdown-item-padding-y $dropdown-item-padding-x;
+        clear: both;
+        font-weight: $font-weight-normal;
+        color: $dropdown-link-color;
+        text-align: inherit; // For `<button>`s
+        white-space: nowrap; // prevent links from randomly breaking onto new lines
+        background-color: transparent; // For `<button>`s
+        border: 0; // For `<button>`s
+        */
+    
+        @include hover-focus {
+        color: $dropdown-link-hover-color;
+        text-decoration: none;
+        @include gradient-bg($dropdown-link-hover-bg);
+        }
+    
+        &.active,
+        &:active {
+        color: $dropdown-link-active-color;
+        text-decoration: none;
+        @include gradient-bg($dropdown-link-active-bg);
+        }
+    
+        &.disabled,
+        &:disabled {
+        color: $dropdown-link-disabled-color;
+        background-color: transparent;
+        // Remove CSS gradients if they're enabled
+        @if $enable-gradients {
+            background-image: none;
+        }
+        }
+    }
+
+	@each $color, $values in $obeb4-dropdown-colors {
+	
+		/* #{$color} dropdown */
+		.dropdown-menu-#{$color} {
+		
+			/* #{$color} dropdown links, buttons, and more within the dropdown menu */
+			.dropdown-select-option {
+	
+				color: #{nth($values, 1)};
+
+				@include hover-focus {
+					color: #{nth($values, 2)};
+					@include gradient-bg(nth($values, 3));
+				}
+
+				&.active,
+				&:active {
+					color: #{nth($values, 2)};
+					@include gradient-bg(nth($values, 3));
+				}
+
+				&.disabled,
+				&:disabled {
+					color: #{nth($values, 4)};
+					background-color: transparent;
+					// Remove CSS gradients if they're enabled
+					@if $enable-gradients {
+						background-image: none;
+					}
+				}
+			}
+		
+		}
+		
+	}
+
+}

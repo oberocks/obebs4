@@ -1,0 +1,31 @@
+// Tables
+
+@mixin obeb4-table-row-active-variant($state, $background) {
+	// Exact selectors below required to override `.table-striped` and prevent
+	// inheritance to nested tables.
+	.table-#{$state}.active {
+		&,
+		> th,
+		> td {
+			background-color: $background;
+		}
+	}
+
+	// Hover states for `.table-hover`
+	// Note: this is not available for cells or rows within `thead` or `tfoot`.
+	.table-hover {
+		$hover-background: darken($background, 5%);
+		//$hover-background: $background;
+
+		.table-#{$state}.active {
+			@include hover {
+				background-color: $hover-background;
+
+				> td,
+				> th {
+					background-color: $hover-background;
+				}
+			}
+		}
+	}
+}

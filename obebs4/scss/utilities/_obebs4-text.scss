@@ -1,0 +1,100 @@
+// stylelint-disable declaration-no-important
+
+// Contextual colors
+
+@if $enable-obeb4-text-wheel-colors {
+	
+	@each $key, $value in $obeb4-color-wheel-colors {
+		@include text-emphasis-variant(".text-#{$key}", $value);
+	}
+	
+}
+
+
+@if $enable-obeb4-text-tints-shades {
+	
+	@each $key, $value in $whites {
+	  @include text-emphasis-variant(".text-white-#{$key}", $value);
+	}
+
+	@each $key, $value in $light-grays {
+	  @include text-emphasis-variant(".text-light-gray-#{$key}", $value);
+	}
+
+	@each $key, $value in $grays {
+	  @include text-emphasis-variant(".text-gray-#{$key}", $value);
+	}
+
+	@each $key, $value in $dark-grays {
+	  @include text-emphasis-variant(".text-dark-gray-#{$key}", $value);
+	}
+
+	@each $key, $value in $blacks {
+	  @include text-emphasis-variant(".text-black-#{$key}", $value);
+	}
+
+	@each $key, $value in $reds {
+	  @include text-emphasis-variant(".text-red-#{$key}", $value);
+	}
+
+	@each $key, $value in $roses {
+	  @include text-emphasis-variant(".text-rose-#{$key}", $value);
+	}
+
+	@each $key, $value in $magentas {
+	  @include text-emphasis-variant(".text-magenta-#{$key}", $value);
+	}
+
+	@each $key, $value in $violets {
+	  @include text-emphasis-variant(".text-violet-#{$key}", $value);
+	}
+
+	@each $key, $value in $blues {
+	  @include text-emphasis-variant(".text-blue-#{$key}", $value);
+	}
+
+	@each $key, $value in $azures {
+	  @include text-emphasis-variant(".text-azure-#{$key}", $value);
+	}
+
+	@each $key, $value in $cyans {
+	  @include text-emphasis-variant(".text-cyan-#{$key}", $value);
+	}
+
+	@each $key, $value in $spring-greens {
+	  @include text-emphasis-variant(".text-spring-green-#{$key}", $value);
+	}
+
+	@each $key, $value in $greens {
+	  @include text-emphasis-variant(".text-green-#{$key}", $value);
+	}
+
+	@each $key, $value in $chartreuses {
+	  @include text-emphasis-variant(".text-chartreuse-#{$key}", $value);
+	}
+
+	@each $key, $value in $yellows {
+	  @include text-emphasis-variant(".text-yellow-#{$key}", $value);
+	}
+
+	@each $key, $value in $oranges {
+	  @include text-emphasis-variant(".text-orange-#{$key}", $value);
+	}
+
+	@each $key, $value in $orange-grays {
+	  @include text-emphasis-variant(".text-orange-gray-#{$key}", $value);
+	}
+
+	@each $key, $value in $dark-gray-oranges {
+	  @include text-emphasis-variant(".text-dark-gray-orange-#{$key}", $value);
+	}
+
+	@each $key, $value in $blue-grays {
+	  @include text-emphasis-variant(".text-blue-gray-#{$key}", $value);
+	}
+
+	@each $key, $value in $light-gray-azures {
+	  @include text-emphasis-variant(".text-light-gray-azure-#{$key}", $value);
+	}
+	
+}

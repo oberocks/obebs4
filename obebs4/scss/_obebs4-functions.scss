@@ -1,0 +1,50 @@
+// OBEB4 functions
+//
+// Utility mixins and functions for evalutating source code across bootstrap variables, maps, and mixins.
+
+
+// ( Based off of Bootstrap 4's original @function theme-color )
+@function obe-color-wheel-color($key: "primary") {
+	
+	@return map-get($obeb4-and-bootstrap-all-colors, $key);
+	
+}
+
+// Request a theme color level
+// ( Based off of Bootstrap 4's original @function theme-color-level )
+@function obe-color-wheel-color-level($color-name: "white", $level: 0) {
+	
+	$color: obe-color-wheel-color($color-name);
+	$color-base: if($level > 0, $black, $white);
+	$level: abs($level);
+
+	@return mix($color-base, $color, $level * $theme-color-interval);
+	 
+}
+
+
+// Retrieve color Sass maps
+
+//@function white($key: "100") {
+//  @return map-get($whites, $key);
+//}
+
+//@function light-gray($key: "100") {
+//  @return map-get($light-grays, $key);
+//}
+
+//@function dark-gray($key: "100") {
+//  @return map-get($dark-grays, $key);
+//}
+
+//@function black($key: "100") {
+//  @return map-get($blacks, $key);
+//}
+
+//@function red($key: "100") {
+//  @return map-get($reds, $key);
+//}
+
+//@function rose($key: "100") {
+//  @return map-get($roses, $key);
+//}

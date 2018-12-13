@@ -1,0 +1,110 @@
+// stylelint-disable declaration-no-important
+
+//
+// Borders
+//
+
+@if $enable-obeb4-border-wheel-colors {
+	
+	@each $key, $value in $obeb4-color-wheel-colors {
+		.border-#{$key} { border-color: $value !important; }
+	}
+	
+}
+
+
+@if $enable-obeb4-border-widths {
+	
+	@each $key, $value in $obe-border-widths {
+		.border-width-#{$key} { border-width: $value !important; }
+	}
+	
+}
+
+@if $enable-obeb4-border-tints-shades {
+	
+	@each $key, $value in $whites {
+		.border-white-#{$key} { border-color: $value !important; }
+	}
+	
+	@each $key, $value in $light-grays {
+		.border-light-gray-#{$key} { border-color: $value !important; }
+	}
+	
+	@each $key, $value in $grays {
+		.border-gray-#{$key} { border-color: $value !important; }
+	}
+	
+	@each $key, $value in $dark-grays {
+		.border-dark-gray-#{$key} { border-color: $value !important; }
+	}
+	
+	@each $key, $value in $blacks {
+		.border-black-#{$key} { border-color: $value !important; }
+	}
+	
+	@each $key, $value in $reds {
+		.border-red-#{$key} { border-color: $value !important; }
+	}
+	
+	@each $key, $value in $roses {
+		.border-rose-#{$key} { border-color: $value !important; }
+	}
+	
+	@each $key, $value in $magentas {
+		.border-magenta-#{$key} { border-color: $value !important; }
+	}
+	
+	@each $key, $value in $violets {
+		.border-violet-#{$key} { border-color: $value !important; }
+	}
+	
+	@each $key, $value in $blues {
+		.border-blue-#{$key} { border-color: $value !important; }
+	}
+	
+	@each $key, $value in $azures {
+		.border-azure-#{$key} { border-color: $value !important; }
+	}
+	
+	@each $key, $value in $cyans {
+		.border-cyan-#{$key} { border-color: $value !important; }
+	}
+	
+	@each $key, $value in $spring-greens {
+		.border-spring-green-#{$key} { border-color: $value !important; }
+	}
+	
+	@each $key, $value in $greens {
+		.border-green-#{$key} { border-color: $value !important; }
+	}
+	
+	@each $key, $value in $chartreuses {
+		.border-chartreuse-#{$key} { border-color: $value !important; }
+	}
+	
+	@each $key, $value in $yellows {
+		.border-yellow-#{$key} { border-color: $value !important; }
+	}
+	
+	@each $key, $value in $oranges {
+		.border-orange-#{$key} { border-color: $value !important; }
+	}
+	
+	@each $key, $value in $orange-grays {
+		.border-orange-gray-#{$key} { border-color: $value !important; }
+	}
+	
+	@each $key, $value in $dark-gray-oranges {
+		.border-dark-gray-orange-#{$key} { border-color: $value !important; }
+	}
+	
+	@each $key, $value in $blue-grays {
+		.border-blue-gray-#{$key} { border-color: $value !important; }
+	}
+	
+	@each $key, $value in $light-gray-azures {
+		.border-light-gray-azure-#{$key} { border-color: $value !important; }
+	}
+
+}

@@ -1,0 +1,1305 @@
+// Variables
+//
+// Variables should follow the `$component-state-property-size` formula for
+// consistent naming. Ex: $nav-link-disabled-color and $modal-content-box-shadow-xs.
+
+
+// OBE:B4 - Color System Options
+//
+// Quickly modify global styling by enabling or disabling optional features.
+
+// OBE:B4 - ALERT COLORS
+//$enable-obeb4-alert-wheel-colors:			true;
+//$enable-obeb4-alert-variations:				true;
+
+// OBE:B4 - BACKGROUND COLORS
+//$enable-obeb4-background-wheel-colors:		true;
+//$enable-obeb4-background-tints-shades:		true;
+
+// OBE:B4 - BACKGROUND 1 COLOR GRADIENTS
+//$enable-obeb4-1-color-gradients:			true;
+//$obeb4-1-color-tint-value:					5%;
+//$obeb4-1-color-shade-value:					10%;
+
+// OBE:B4 - BACKGROUND 2 COLOR GRADIENTS
+//$enable-obeb4-2-color-gradients:			true;
+
+// OBE:B4 - BACKGROUND 3 COLOR GRADIENTS
+//$enable-obeb4-3-color-gradients:			true;
+
+// OBE:B4 - BADGE COLORS
+//$enable-obeb4-badge-wheel-colors:			true;
+
+// OBE:B4 - BORDER COLORS
+//$enable-obeb4-border-wheel-colors:			true;
+//$enable-obeb4-border-tints-shades:			true;
+
+// OBE:B4 - BORDER WIDTHS
+//$enable-obeb4-border-widths:				true;
+
+// OBE:B4 - BUTTON COLORS
+//$enable-obeb4-button-wheel-colors:			true;
+
+// OBE:B4 - BUTTON SIZES
+//$enable-obeb4-button-sizes:					true;
+
+// OBE:B4 - DROPDOWN COLORS
+//$enable-obeb4-dropdowns:					true;
+
+// OBE:B4 - ELEMENT SIZES
+//$enable-obeb4-element-sizes:				true;
+
+// OBE:B4 - LISTS
+//$enable-obeb4-lists:						true;
+
+// OBE:B4 - LIST GROUPS
+//$enable-obeb4-list-groups:					true;
+
+// OBE:B4 - SHADOWS
+//$enable-obeb4-box-shadows:					true;
+//$enable-obeb4-text-shadows:					true;
+
+// OBE:B4 - TABLES
+//$enable-obeb4-tables:						true;
+
+// OBE:B4 - TEXT COLORS
+//$enable-obeb4-text-wheel-colors:			true;
+//$enable-obeb4-text-tints-shades:			true;
+
+// OBE:B4 - TEXT SIZES
+//$enable-obeb4-text-sizes:					true;
+
+// OBE:B4 - CONDENSED FONT
+//$enable-obeb4-condensed-font:				true;
+
+// OBE:B4 - TOOLTIPS
+//$enable-obeb4-tooltips:						true;
+
+// OBE:B4 - FORMS
+//$enable-obeb4-form-element-wheel-colors:	true;
+
+// OBE:B4 - POPOVERS
+// - note - This does not currently impact SCSS code, 
+//          and is a setting for a JavaScript need in
+//          the build system. This is here for sake
+//          of consistency.
+//$enable-obeb4-popovers:						true;
+
+
+
+
+
+// OBE:B4 - Responsive Headlines
+//$enable-obeb4-responsive-headlines:				true;
+
+// OBE:B4 - Modal Utilities
+//$enable-obeb4-modal-utilities:					true;
+
+// OBE:B4 - Material Design Form Utilities
+//$enable-obeb4-material-design-forms:				true;
+
+// OBE:B4 - Opacity Utilities
+//$enable-obeb4-opacity:							true;
+
+// OBE:B4 - FontAwesome 5 Icon Checkboxes
+//$enable-obeb4-custom-dropdown-selects:				true;
+
+// OBE:B4 - Fab Buttons
+//$enable-obeb4-fab-buttons:							true;
+
+// OBE:B4 - FontAwesome 5 Icon Checkboxes
+//$enable-obeb4-fa5-icon-checkboxes:					true;
+
+// OBE:B4 - Extended Spacing Utilities
+//$enable-obeb4-spacing-utilities:					false;
+
+
+/********************************************************/
+/********************************************************/
+
+
+
+
+
+
+
+
+
+//
+// OBE:B4 - Color system
+//
+
+// stylelint-disable
+
+//$white:				#f9f7f4;
+//$light-gray:		#b3aeab;
+//$gray:				#7c7674;
+//$dark-gray:			#4f4b4a;
+//$black:				#2a2928;
+//$red:				#eb5b54;
+//$rose:				#e8597a;
+//$magenta:			#e5559f;
+//$violet:			#a264a9;
+//$blue:				#546ab2;
+//$azure:				#5392ba;
+//$cyan:				#50bcbf;
+//$spring-green:		#79c188;
+//$green:				#98ca44;
+//$chartreuse:		#bdd74a;
+//$yellow:			#e2e553;
+//$orange:			#e7a359;
+//$orange-gray:		#ad8c6d;
+//$dark-gray-orange:	#917358;
+//$blue-gray:			#6f7292;
+//$light-gray-azure:	#899fb2;
+
+//$white-50:	lighten($white, 30%);
+//$white-100:	lighten($white, 20%);
+//$white-200: lighten($white, 15%);
+//$white-300: lighten($white, 10%);
+//$white-400: lighten($white, 5%);
+//$white-500: $white;
+//$white-600: darken($white, 5%);
+//$white-700: darken($white, 10%);
+//$white-800: darken($white, 15%);
+//$white-900: darken($white, 20%);
+
+//$light-gray-50:		lighten($light-gray, 30%);
+//$light-gray-100:	lighten($light-gray, 20%);
+//$light-gray-200:	lighten($light-gray, 15%);
+//$light-gray-300:	lighten($light-gray, 10%);
+//$light-gray-400:	lighten($light-gray, 5%);
+//$light-gray-500:	$light-gray;
+//$light-gray-600:	darken($light-gray, 5%);
+//$light-gray-700:	darken($light-gray, 10%);
+//$light-gray-800:	darken($light-gray, 15%);
+//$light-gray-900:	darken($light-gray, 20%);
+
+//$gray-50:	lighten($gray, 30%);
+//$gray-100:	lighten($gray, 20%);
+//$gray-200:	lighten($gray, 15%);
+//$gray-300:	lighten($gray, 10%);
+//$gray-400:	lighten($gray, 5%);
+//$gray-500:	$gray;
+//$gray-600:	darken($gray, 5%);
+//$gray-700:	darken($gray, 10%);
+//$gray-800:	darken($gray, 15%);
+//$gray-900:	darken($gray, 20%);
+
+//$dark-gray-50:	lighten($dark-gray, 30%);
+//$dark-gray-100:	lighten($dark-gray, 20%);
+//$dark-gray-200:	lighten($dark-gray, 15%);
+//$dark-gray-300:	lighten($dark-gray, 10%);
+//$dark-gray-400:	lighten($dark-gray, 5%);
+//$dark-gray-500:	$dark-gray;
+//$dark-gray-600:	darken($dark-gray, 5%);
+//$dark-gray-700:	darken($dark-gray, 10%);
+//$dark-gray-800:	darken($dark-gray, 15%);
+//$dark-gray-900:	darken($dark-gray, 20%);
+
+//$black-50:	lighten($black, 30%);
+//$black-100:	lighten($black, 20%);
+//$black-200:	lighten($black, 15%);
+//$black-300:	lighten($black, 10%);
+//$black-400:	lighten($black, 5%);
+//$black-500:	$black;
+//$black-600:	darken($black, 5%);
+//$black-700:	darken($black, 10%);
+//$black-800:	darken($black, 15%);
+//$black-900:	darken($black, 20%);
+
+//$red-50:	lighten($red, 30%);
+//$red-100:	lighten($red, 20%);
+//$red-200:	lighten($red, 15%);
+//$red-300:	lighten($red, 10%);
+//$red-400:	lighten($red, 5%);
+//$red-500:	$red;
+//$red-600:	darken($red, 5%);
+//$red-700:	darken($red, 10%);
+//$red-800:	darken($red, 15%);
+//$red-900:	darken($red, 20%);
+
+//$rose-50:	lighten($rose, 30%);
+//$rose-100:	lighten($rose, 20%);
+//$rose-200:	lighten($rose, 15%);
+//$rose-300:	lighten($rose, 10%);
+//$rose-400:	lighten($rose, 5%);
+//$rose-500:	$rose;
+//$rose-600:	darken($rose, 5%);
+//$rose-700:	darken($rose, 10%);
+//$rose-800:	darken($rose, 15%);
+//$rose-900:	darken($rose, 20%);
+
+//$magenta-50:	lighten($magenta, 30%);
+//$magenta-100:	lighten($magenta, 20%);
+//$magenta-200:	lighten($magenta, 15%);
+//$magenta-300:	lighten($magenta, 10%);
+//$magenta-400:	lighten($magenta, 5%);
+//$magenta-500:	$magenta;
+//$magenta-600:	darken($magenta, 5%);
+//$magenta-700:	darken($magenta, 10%);
+//$magenta-800:	darken($magenta, 15%);
+//$magenta-900:	darken($magenta, 20%);
+
+//$violet-50:		lighten($violet, 30%);
+//$violet-100:	lighten($violet, 20%);
+//$violet-200:	lighten($violet, 15%);
+//$violet-300:	lighten($violet, 10%);
+//$violet-400:	lighten($violet, 5%);
+//$violet-500:	$violet;
+//$violet-600:	darken($violet, 5%);
+//$violet-700:	darken($violet, 10%);
+//$violet-800:	darken($violet, 15%);
+//$violet-900:	darken($violet, 20%);
+
+//$blue-50:	lighten($blue, 30%);
+//$blue-100:	lighten($blue, 20%);
+//$blue-200:	lighten($blue, 15%);
+//$blue-300:	lighten($blue, 10%);
+//$blue-400:	lighten($blue, 5%);
+//$blue-500:	$blue;
+//$blue-600:	darken($blue, 5%);
+//$blue-700:	darken($blue, 10%);
+//$blue-800:	darken($blue, 15%);
+//$blue-900:	darken($blue, 20%);
+
+//$azure-50:	lighten($azure, 30%);
+//$azure-100:	lighten($azure, 20%);
+//$azure-200:	lighten($azure, 15%);
+//$azure-300:	lighten($azure, 10%);
+//$azure-400:	lighten($azure, 5%);
+//$azure-500:	$azure;
+//$azure-600:	darken($azure, 5%);
+//$azure-700:	darken($azure, 10%);
+//$azure-800:	darken($azure, 15%);
+//$azure-900:	darken($azure, 20%);
+
+//$cyan-50:	lighten($cyan, 30%);
+//$cyan-100:	lighten($cyan, 20%);
+//$cyan-200:	lighten($cyan, 15%);
+//$cyan-300:	lighten($cyan, 10%);
+//$cyan-400:	lighten($cyan, 5%);
+//$cyan-500:	$cyan;
+//$cyan-600:	darken($cyan, 5%);
+//$cyan-700:	darken($cyan, 10%);
+//$cyan-800:	darken($cyan, 15%);
+//$cyan-900:	darken($cyan, 20%);
+
+//$spring-green-50:	lighten($spring-green, 30%);
+//$spring-green-100:	lighten($spring-green, 20%);
+//$spring-green-200:	lighten($spring-green, 15%);
+//$spring-green-300:	lighten($spring-green, 10%);
+//$spring-green-400:	lighten($spring-green, 5%);
+//$spring-green-500:	$spring-green;
+//$spring-green-600:	darken($spring-green, 5%);
+//$spring-green-700:	darken($spring-green, 10%);
+//$spring-green-800:	darken($spring-green, 15%);
+//$spring-green-900:	darken($spring-green, 20%);
+
+//$green-50:	lighten($green, 30%);
+//$green-100:	lighten($green, 20%);
+//$green-200:	lighten($green, 15%);
+//$green-300:	lighten($green, 10%);
+//$green-400:	lighten($green, 5%);
+//$green-500:	$green;
+//$green-600:	darken($green, 5%);
+//$green-700:	darken($green, 10%);
+//$green-800:	darken($green, 15%);
+//$green-900:	darken($green, 20%);
+
+//$chartreuse-50:		lighten($chartreuse, 30%);
+//$chartreuse-100:	lighten($chartreuse, 20%);
+//$chartreuse-200:	lighten($chartreuse, 15%);
+//$chartreuse-300:	lighten($chartreuse, 10%);
+//$chartreuse-400:	lighten($chartreuse, 5%);
+//$chartreuse-500:	$chartreuse;
+//$chartreuse-600:	darken($chartreuse, 5%);
+//$chartreuse-700:	darken($chartreuse, 10%);
+//$chartreuse-800:	darken($chartreuse, 15%);
+//$chartreuse-900:	darken($chartreuse, 20%);
+
+//$yellow-50:		lighten($yellow, 30%);
+//$yellow-100:	lighten($yellow, 20%);
+//$yellow-200:	lighten($yellow, 15%);
+//$yellow-300:	lighten($yellow, 10%);
+//$yellow-400:	lighten($yellow, 5%);
+//$yellow-500:	$yellow;
+//$yellow-600:	darken($yellow, 5%);
+//$yellow-700:	darken($yellow, 10%);
+//$yellow-800:	darken($yellow, 15%);
+//$yellow-900:	darken($yellow, 20%);
+
+//$orange-50:		lighten($orange, 30%);
+//$orange-100:	lighten($orange, 20%);
+//$orange-200:	lighten($orange, 15%);
+//$orange-300:	lighten($orange, 10%);
+//$orange-400:	lighten($orange, 5%);
+//$orange-500:	$orange;
+//$orange-600:	darken($orange, 5%);
+//$orange-700:	darken($orange, 10%);
+//$orange-800:	darken($orange, 15%);
+//$orange-900:	darken($orange, 20%);
+
+//$orange-gray-50:	lighten($orange-gray, 30%);
+//$orange-gray-100:	lighten($orange-gray, 20%);
+//$orange-gray-200:	lighten($orange-gray, 15%);
+//$orange-gray-300:	lighten($orange-gray, 10%);
+//$orange-gray-400:	lighten($orange-gray, 5%);
+//$orange-gray-500:	$orange-gray;
+//$orange-gray-600:	darken($orange-gray, 5%);
+//$orange-gray-700:	darken($orange-gray, 10%);
+//$orange-gray-800:	darken($orange-gray, 15%);
+//$orange-gray-900:	darken($orange-gray, 20%);
+
+//$dark-gray-orange-50:	lighten($dark-gray-orange, 30%);
+//$dark-gray-orange-100:	lighten($dark-gray-orange, 20%);
+//$dark-gray-orange-200:	lighten($dark-gray-orange, 15%);
+//$dark-gray-orange-300:	lighten($dark-gray-orange, 10%);
+//$dark-gray-orange-400:	lighten($dark-gray-orange, 5%);
+//$dark-gray-orange-500:	$dark-gray-orange;
+//$dark-gray-orange-600:	darken($dark-gray-orange, 5%);
+//$dark-gray-orange-700:	darken($dark-gray-orange, 10%);
+//$dark-gray-orange-800:	darken($dark-gray-orange, 15%);
+//$dark-gray-orange-900:	darken($dark-gray-orange, 20%);
+
+//$blue-gray-50:	lighten($blue-gray, 30%);
+//$blue-gray-100:	lighten($blue-gray, 20%);
+//$blue-gray-200:	lighten($blue-gray, 15%);
+//$blue-gray-300:	lighten($blue-gray, 10%);
+//$blue-gray-400:	lighten($blue-gray, 5%);
+//$blue-gray-500:	$blue-gray;
+//$blue-gray-600:	darken($blue-gray, 5%);
+//$blue-gray-700:	darken($blue-gray, 10%);
+//$blue-gray-800:	darken($blue-gray, 15%);
+//$blue-gray-900:	darken($blue-gray, 20%);
+
+//$light-gray-azure-50:	lighten($light-gray-azure, 30%);
+//$light-gray-azure-100:	lighten($light-gray-azure, 20%);
+//$light-gray-azure-200:	lighten($light-gray-azure, 15%);
+//$light-gray-azure-300:	lighten($light-gray-azure, 10%);
+//$light-gray-azure-400:	lighten($light-gray-azure, 5%);
+//$light-gray-azure-500:	$light-gray-azure;
+//$light-gray-azure-600:	darken($light-gray-azure, 5%);
+//$light-gray-azure-700:	darken($light-gray-azure, 10%);
+//$light-gray-azure-800:	darken($light-gray-azure, 15%);
+//$light-gray-azure-900:	darken($light-gray-azure, 20%);
+
+//$primary:       $blue;
+//$secondary:     $gray-600;
+//$success:       $green;
+//$info:          $cyan;
+//$warning:       $orange;
+//$danger:        $red;
+//$light:         $light-gray-200;
+//$dark:          $gray-800;
+
+
+//$font-family-sans-serif:      -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+//$font-family-monospace:       SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+//$font-family-condensed:		Roboto, "Helvetica Neue", Arial, sans-serif;
+
+
+
+//
+// OBE:B4 BODY
+//
+
+//$body-bg:									{ @ settings/_obe_settings.scss };
+//$body-color:								{ @ settings/_obe_settings.scss };
+
+//$link-color:								{ @ settings/_obe_settings.scss };
+$link-hover-color:							darken($link-color, 15%) !default;
+//$link-decoration:							{ @ settings/_obe_settings.scss };
+//$link-hover-decoration:					{ @ settings/_obe_settings.scss };
+
+//$mark-bg:									{ @ settings/_obe_settings.scss };
+
+//$input-group-addon-bg:                	{ @ settings/_obe_settings.scss };
+//$input-group-addon-color:             	{ @ settings/_obe_settings.scss };
+
+//$component-active-bg:						{ @ settings/_obe_settings.scss };
+//$component-active-color:					{ @ settings/_obe_settings.scss };
+
+//$dropdown-header-color:					{ @ settings/_obe_settings.scss };
+//$dropdown-link-color:						{ @ settings/_obe_settings.scss };
+$dropdown-link-hover-color:					darken($dropdown-link-color, 5%);
+$dropdown-link-active-color:				$dropdown-link-hover-color;
+//$dropdown-link-hover-bg:					{ @ settings/_obe_settings.scss };
+$dropdown-link-active-bg:           		$dropdown-link-hover-bg;
+//$dropdown-link-disabled-color:			{ @ settings/_obe_settings.scss };
+
+$pagination-hover-bg:						$dropdown-link-hover-bg;
+
+$list-group-hover-bg:						$dropdown-link-hover-bg;
+$list-group-action-active-bg:				$dropdown-link-hover-bg;
+
+//$input-bg:								{ @ settings/_obe_settings.scss };
+//$input-color:								{ @ settings/_obe_settings.scss };
+//$input-placeholder-color:					{ @ settings/_obe_settings.scss };
+//$input-disabled-bg:						{ @ settings/_obe_settings.scss };
+
+
+
+
+
+
+
+
+
+
+
+
+//
+// START - NEXT TO ADD!!!!
+//
+
+//$pagination-color:                  $link-color !default;
+//$pagination-hover-color:            $link-hover-color !default;
+
+//$pagination-hover-color:            $link-hover-color !default;
+//$pagination-active-color:           $component-active-color !default;
+
+//$list-group-hover-color --> is not currently in BS4 as of Dec 3, 2018
+//$list-group-active-color:           $component-active-color !default;
+
+//$custom-control-indicator-checked-disabled-bg:	rgba(theme-color("primary"), .5) !default;
+//$form-feedback-valid-color:         				theme-color("success") !default;
+//$form-feedback-invalid-color:       				theme-color("danger") !default;
+
+//$progress-bg:                       				$gray-200 !default;
+
+//$kbd-color:                         				$white !default;
+//$kbd-bg:                            				$gray-900 !default;
+
+//$close-color:                       				$black !default;
+//$close-text-shadow:                 				0 1px 0 $white !default;
+
+//$breadcrumb-bg:                     				$gray-200 !default;
+//$breadcrumb-divider-color:          				$gray-600 !default;
+//$breadcrumb-active-color:           				$gray-600 !default;
+
+//$alert-bg-level:                    -10 !default;
+//$alert-border-level:                -9 !default;
+//$alert-color-level:                 6 !default;
+
+//$tooltip-color:                     $white !default;
+//$tooltip-bg:                        $black !default;
+//$tooltip-arrow-color:               $tooltip-bg !default;
+
+//
+// END - NEXT TO ADD!!!!
+//
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//
+// OBE:B4 - Borders
+//
+
+$obe-border-widths: ();
+
+$obe-border-widths: map-merge((
+	"0":	0rem,
+	"1":	0.05rem,
+	"2":	0.1rem,
+	"3":	0.15rem,
+	"4":	0.2rem,
+	"5":	0.25rem,
+	"6":	0.3rem,
+	"7":	0.35rem,
+	"8":	0.4rem,
+	"9":	0.45rem,
+	"10":	0.5rem,
+	"11":	0.55rem,
+	"12":	0.6rem,
+	"13":	0.65rem,
+	"14":	0.7rem,
+	"15":	0.75rem
+), $obe-border-widths);
+
+
+//
+// OBE:B4 - Buttons
+//
+
+$obeb4-font-size-base:		1rem; // Assumes the browser default, typically: 16px
+$obeb4-line-height-base:	1.5;
+
+$font-size-xxs:				($obeb4-font-size-base * 0.625);
+$btn-padding-y-xxs:			0.15rem;
+$btn-padding-x-xxs:			0.3rem;
+$btn-line-height-xxs:		$obeb4-line-height-base;
+$btn-border-radius-xxs:		0.10rem;
+
+$font-size-xs:				($obeb4-font-size-base * 0.750);
+$btn-padding-y-xs:			0.2rem;
+$btn-padding-x-xs:			0.4rem;
+$btn-line-height-xs:		$obeb4-line-height-base;
+$btn-border-radius-xs:		0.15rem;
+
+// This is Bootstrap's small button
+$font-size-sm:				($obeb4-font-size-base * 0.875);
+$btn-padding-y-sm:			0.25rem;
+$btn-padding-x-sm:			0.5rem;
+$btn-line-height-sm:		$obeb4-line-height-base;
+$btn-border-radius-sm:		0.2rem;
+
+// This is Bootstrap's standard button
+$font-size-md:				($obeb4-font-size-base);
+$btn-padding-y-md:			0.3rem;
+$btn-padding-x-md:			0.6rem;
+$btn-line-height-md:		$obeb4-line-height-base;
+$btn-border-radius-md:		0.25rem;
+
+// This is Bootstrap's large button
+$font-size-lg:				($obeb4-font-size-base * 1.25);
+$btn-padding-y-lg:			0.5rem;
+$btn-padding-x-lg:			1rem;
+$btn-line-height-lg:		$obeb4-line-height-base;
+$btn-border-radius-lg:		0.3rem;
+
+$font-size-xl:				($obeb4-font-size-base * 1.5);
+$btn-padding-y-xl:			0.7rem;
+$btn-padding-x-xl:			1.4rem;
+$btn-line-height-xl:		$obeb4-line-height-base;
+$btn-border-radius-xl:		0.35rem;
+
+$font-size-xxl:				($obeb4-font-size-base * 2);
+$btn-padding-y-xxl:			0.9rem;
+$btn-padding-x-xxl:			1.8rem;
+$btn-line-height-xxl:		$obeb4-line-height-base;
+$btn-border-radius-xxl:		0.4rem;
+
+
+
+
+$obeb4-color-wheel-colors: ();
+$obeb4-color-wheel-colors: map-merge((
+	"white":			$white,
+	"light-gray":		$light-gray,
+	"gray":				$gray,
+	"dark-gray":		$dark-gray,
+	"black":			$black,
+	"red":				$red,
+	"rose":				$rose,
+	"magenta":			$magenta,
+	"violet":			$violet,
+	"blue":				$blue,
+	"azure":			$azure,
+	"cyan":				$cyan,
+	"spring-green":		$spring-green,
+	"green":			$green,
+	"chartreuse":		$chartreuse,
+	"yellow":			$yellow,
+	"orange":			$orange,
+	"orange-gray":		$orange-gray,
+	"dark-gray-orange":	$dark-gray-orange,
+	"blue-gray":		$blue-gray,
+	"light-gray-azure":	$light-gray-azure
+), $obeb4-color-wheel-colors);
+
+
+$obeb4-2-color-pairs: ();
+$obeb4-2-color-pairs: map-merge((
+	"red-rose":						($red, $rose),
+	"rose-magenta":					($rose, $magenta),
+	"magenta-violet":				($magenta, $violet),
+	"violet-blue":					($violet, $blue),
+	"blue-azure":					($blue, $azure),
+	"azure-cyan":					($azure, $cyan),
+	"cyan-spring-green":			($cyan, $spring-green),
+	"spring-green-green":			($spring-green, $green),
+	"green-chartreuse":				($green, $chartreuse),
+	"chartreuse-yellow":			($chartreuse, $yellow),
+	"yellow-orange":				($yellow, $orange),
+	"orange-red":					($orange, $red),
+	"orange-gray-dark-gray-orange":	($orange-gray, $dark-gray-orange),
+	"light-gray-azure-blue-gray":	($light-gray-azure, $blue-gray),
+	"white-light-gray":				($white, $light-gray),
+	"light-gray-gray":				($light-gray, $gray),
+	"gray-dark-gray":				($gray, $dark-gray),
+	"dark-gray-black":				($dark-gray, $black),
+	// inversed pairs and name slugs
+	"rose-red":						($rose, $red),
+	"magenta-rose":					($magenta, $rose),
+	"violet-magenta":				($violet, $magenta),
+	"blue-violet":					($blue, $violet),
+	"azure-blue":					($azure, $blue),
+	"cyan-azure":					($cyan, $azure),
+	"spring-green-cyan":			($spring-green, $cyan),
+	"green-spring-green":			($green, $spring-green),
+	"chartreuse-green":				($chartreuse, $green),
+	"yellow-chartreuse":			($yellow, $chartreuse),
+	"orange-yellow":				($orange, $yellow),
+	"red-orange":					($red, $orange),
+	"dark-gray-orange-orange-gray":	($dark-gray-orange, $orange-gray),
+	"blue-gray-light-gray-azure":	($blue-gray, $light-gray-azure),
+	"light-gray-white":				($light-gray, $white),
+	"gray-light-gray":				($gray, $light-gray),
+	"dark-gray-gray":				($dark-gray, $gray),
+	"black-dark-gray":				($black, $dark-gray)
+), $obeb4-2-color-pairs);
+
+
+$obeb4-3-color-pairs: ();
+$obeb4-3-color-pairs: map-merge((
+	"red-magenta":				($red, $rose, $magenta),
+	"rose-violet":				($rose, $magenta, $violet),
+	"magenta-blue":				($magenta, $violet, $blue),
+	"violet-azure":				($violet, $blue, $azure),
+	"blue-cyan":				($blue, $azure, $cyan),
+	"azure-spring-green":		($azure, $cyan, $spring-green),
+	"cyan-green":				($cyan, $spring-green, $green),
+	"spring-green-chartreuse":	($spring-green, $green, $chartreuse),
+	"green-yellow":				($green, $chartreuse, $yellow),
+	"chartreuse-orange":		($chartreuse, $yellow, $orange),
+	"yellow-red":				($yellow, $orange, $red),
+	"orange-rose":				($orange, $red, $rose),
+	"white-gray":				($white, $light-gray, $gray),
+	"light-gray-dark-gray":		($light-gray, $gray, $dark-gray),
+	"gray-black":				($gray, $dark-gray, $black),
+	// inversed pairs and name slugs
+	"magenta-red":				($magenta, $rose, $red),
+	"violet-rose":				($violet, $magenta, $rose),
+	"blue-magenta":				($blue, $violet, $magenta),
+	"azure-violet":				($azure, $blue, $violet),
+	"cyan-blue":				($cyan, $azure, $blue),
+	"spring-green-azure":		($spring-green, $cyan, $azure),
+	"green-cyan":				($green, $spring-green, $cyan),
+	"chartreuse-spring-green":	($chartreuse, $green, $spring-green),
+	"yellow-green":				($yellow, $chartreuse, $green),
+	"orange-chartreuse":		($orange, $yellow, $chartreuse),
+	"red-yellow":				($red, $orange, $yellow),
+	"rose-orange":				($rose, $red, $orange),
+	"gray-white":				($gray, $light-gray, $white),
+	"dark-gray-light-gray":		($dark-gray, $gray, $light-gray),
+	"black-gray":				($black, $dark-gray, $gray)
+), $obeb4-3-color-pairs);
+
+
+
+
+$whites: ();
+$whites: map-merge((
+	"50":	$white-50,
+	"100":	$white-100,
+	"200":	$white-200,
+	"300":	$white-300,
+	"400":	$white-400,
+	"500":	$white-500,
+	"600":	$white-600,
+	"700":	$white-700,
+	"800":	$white-800,
+	"900":	$white-900
+), $whites);
+
+$light-grays: ();
+$light-grays: map-merge((
+	"50":	$light-gray-50,
+	"100":	$light-gray-100,
+	"200":	$light-gray-200,
+	"300":	$light-gray-300,
+	"400":	$light-gray-400,
+	"500":	$light-gray-500,
+	"600":	$light-gray-600,
+	"700":	$light-gray-700,
+	"800":	$light-gray-800,
+	"900":	$light-gray-900
+), $light-grays);
+
+$grays: ();
+$grays: map-merge((
+	"50":	$gray-50,
+	"100":	$gray-100,
+	"200":	$gray-200,
+	"300":	$gray-300,
+	"400":	$gray-400,
+	"500":	$gray-500,
+	"600":	$gray-600,
+	"700":	$gray-700,
+	"800":	$gray-800,
+	"900":	$gray-900
+), $grays);
+
+$dark-grays: ();
+$dark-grays: map-merge((
+	"50":	$dark-gray-50,
+	"100":	$dark-gray-100,
+	"200":	$dark-gray-200,
+	"300":	$dark-gray-300,
+	"400":	$dark-gray-400,
+	"500":	$dark-gray-500,
+	"600":	$dark-gray-600,
+	"700":	$dark-gray-700,
+	"800":	$dark-gray-800,
+	"900":	$dark-gray-900
+), $dark-grays);
+
+$blacks: ();
+$blacks: map-merge((
+	"50":	$black-50,
+	"100":	$black-100,
+	"200":	$black-200,
+	"300":	$black-300,
+	"400":	$black-400,
+	"500":	$black-500,
+	"600":	$black-600,
+	"700":	$black-700,
+	"800":	$black-800,
+	"900":	$black-900
+), $blacks);
+
+$reds: ();
+$reds: map-merge((
+	"50":	$red-50,
+	"100":	$red-100,
+	"200":	$red-200,
+	"300":	$red-300,
+	"400":	$red-400,
+	"500":	$red-500,
+	"600":	$red-600,
+	"700":	$red-700,
+	"800":	$red-800,
+	"900":	$red-900
+), $reds);
+
+$roses: ();
+$roses: map-merge((
+	"50":	$rose-50,
+	"100":	$rose-100,
+	"200":	$rose-200,
+	"300":	$rose-300,
+	"400":	$rose-400,
+	"500":	$rose-500,
+	"600":	$rose-600,
+	"700":	$rose-700,
+	"800":	$rose-800,
+	"900":	$rose-900
+), $roses);
+
+$magentas: ();
+$magentas: map-merge((
+	"50":	$magenta-50,
+	"100":	$magenta-100,
+	"200":	$magenta-200,
+	"300":	$magenta-300,
+	"400":	$magenta-400,
+	"500":	$magenta-500,
+	"600":	$magenta-600,
+	"700":	$magenta-700,
+	"800":	$magenta-800,
+	"900":	$magenta-900
+), $magentas);
+
+$violets: ();
+$violets: map-merge((
+	"50":	$violet-50,
+	"100":	$violet-100,
+	"200":	$violet-200,
+	"300":	$violet-300,
+	"400":	$violet-400,
+	"500":	$violet-500,
+	"600":	$violet-600,
+	"700":	$violet-700,
+	"800":	$violet-800,
+	"900":	$violet-900
+), $violets);
+
+$blues: ();
+$blues: map-merge((
+	"50":	$blue-50,
+	"100":	$blue-100,
+	"200":	$blue-200,
+	"300":	$blue-300,
+	"400":	$blue-400,
+	"500":	$blue-500,
+	"600":	$blue-600,
+	"700":	$blue-700,
+	"800":	$blue-800,
+	"900":	$blue-900
+), $blues);
+
+$azures: ();
+$azures: map-merge((
+	"50":	$azure-50,
+	"100":	$azure-100,
+	"200":	$azure-200,
+	"300":	$azure-300,
+	"400":	$azure-400,
+	"500":	$azure-500,
+	"600":	$azure-600,
+	"700":	$azure-700,
+	"800":	$azure-800,
+	"900":	$azure-900
+), $azures);
+
+$cyans: ();
+$cyans: map-merge((
+	"50":	$cyan-50,
+	"100":	$cyan-100,
+	"200":	$cyan-200,
+	"300":	$cyan-300,
+	"400":	$cyan-400,
+	"500":	$cyan-500,
+	"600":	$cyan-600,
+	"700":	$cyan-700,
+	"800":	$cyan-800,
+	"900":	$cyan-900
+), $cyans);
+
+$spring-greens: ();
+$spring-greens: map-merge((
+	"50":	$spring-green-50,
+	"100":	$spring-green-100,
+	"200":	$spring-green-200,
+	"300":	$spring-green-300,
+	"400":	$spring-green-400,
+	"500":	$spring-green-500,
+	"600":	$spring-green-600,
+	"700":	$spring-green-700,
+	"800":	$spring-green-800,
+	"900":	$spring-green-900
+), $spring-greens);
+
+$greens: ();
+$greens: map-merge((
+	"50":	$green-50,
+	"100":	$green-100,
+	"200":	$green-200,
+	"300":	$green-300,
+	"400":	$green-400,
+	"500":	$green-500,
+	"600":	$green-600,
+	"700":	$green-700,
+	"800":	$green-800,
+	"900":	$green-900
+), $greens);
+
+$chartreuses: ();
+$chartreuses: map-merge((
+	"50":	$chartreuse-50,
+	"100":	$chartreuse-100,
+	"200":	$chartreuse-200,
+	"300":	$chartreuse-300,
+	"400":	$chartreuse-400,
+	"500":	$chartreuse-500,
+	"600":	$chartreuse-600,
+	"700":	$chartreuse-700,
+	"800":	$chartreuse-800,
+	"900":	$chartreuse-900
+), $chartreuses);
+
+$yellows: ();
+$yellows: map-merge((
+	"50":	$yellow-50,
+	"100":	$yellow-100,
+	"200":	$yellow-200,
+	"300":	$yellow-300,
+	"400":	$yellow-400,
+	"500":	$yellow-500,
+	"600":	$yellow-600,
+	"700":	$yellow-700,
+	"800":	$yellow-800,
+	"900":	$yellow-900
+), $yellows);
+
+$oranges: ();
+$oranges: map-merge((
+	"50":	$orange-50,
+	"100":	$orange-100,
+	"200":	$orange-200,
+	"300":	$orange-300,
+	"400":	$orange-400,
+	"500":	$orange-500,
+	"600":	$orange-600,
+	"700":	$orange-700,
+	"800":	$orange-800,
+	"900":	$orange-900
+), $oranges);
+
+$orange-grays: ();
+$orange-grays: map-merge((
+	"50":	$orange-gray-50,
+	"100":	$orange-gray-100,
+	"200":	$orange-gray-200,
+	"300":	$orange-gray-300,
+	"400":	$orange-gray-400,
+	"500":	$orange-gray-500,
+	"600":	$orange-gray-600,
+	"700":	$orange-gray-700,
+	"800":	$orange-gray-800,
+	"900":	$orange-gray-900
+), $orange-grays);
+
+$dark-gray-oranges: ();
+$dark-gray-oranges: map-merge((
+	"50":	$dark-gray-orange-50,
+	"100":	$dark-gray-orange-100,
+	"200":	$dark-gray-orange-200,
+	"300":	$dark-gray-orange-300,
+	"400":	$dark-gray-orange-400,
+	"500":	$dark-gray-orange-500,
+	"600":	$dark-gray-orange-600,
+	"700":	$dark-gray-orange-700,
+	"800":	$dark-gray-orange-800,
+	"900":	$dark-gray-orange-900
+), $dark-gray-oranges);
+
+$blue-grays: ();
+$blue-grays: map-merge((
+	"50":	$blue-gray-50,
+	"100":	$blue-gray-100,
+	"200":	$blue-gray-200,
+	"300":	$blue-gray-300,
+	"400":	$blue-gray-400,
+	"500":	$blue-gray-500,
+	"600":	$blue-gray-600,
+	"700":	$blue-gray-700,
+	"800":	$blue-gray-800,
+	"900":	$blue-gray-900
+), $blue-grays);
+
+$light-gray-azures: ();
+$light-gray-azures: map-merge((
+	"50":	$light-gray-azure-50,
+	"100":	$light-gray-azure-100,
+	"200":	$light-gray-azure-200,
+	"300":	$light-gray-azure-300,
+	"400":	$light-gray-azure-400,
+	"500":	$light-gray-azure-500,
+	"600":	$light-gray-azure-600,
+	"700":	$light-gray-azure-700,
+	"800":	$light-gray-azure-800,
+	"900":	$light-gray-azure-900
+), $light-gray-azures);
+
+
+$colors: ();
+$colors: map-merge((
+	"white":			$white,
+	"light-gray":		$light-gray,
+	"gray":				$gray,
+	"dark-gray":		$dark-gray,
+	"black":			$black,
+	"red":				$red,
+	"rose":				$rose,
+	"magenta":			$magenta,
+	"violet":			$violet,
+	"blue":				$blue,
+	"azure":			$azure,
+	"cyan":				$cyan,
+	"spring-green":		$spring-green,
+	"green":			$green,
+	"chartreuse":		$chartreuse,
+	"yellow":			$yellow,
+	"orange":			$orange,
+	"orange-gray":		$orange-gray,
+	"dark-gray-orange":	$dark-gray-orange,
+	"blue-gray":      	$blue-gray,
+	"light-gray-azure":	$light-gray-azure,
+	"gray-dark":		$gray-800
+), $colors);
+
+
+
+
+
+
+$theme-colors: ();
+$theme-colors: map-merge((
+	"primary":    $primary,
+	"secondary":  $secondary,
+	"success":    $success,
+	"info":       $info,
+	"warning":    $warning,
+	"danger":     $danger,
+	"light":      $light,
+	"dark":       $dark/*,
+	"white":			$white,
+	"light-gray":		$light-gray,
+	"gray":				$gray,
+	"dark-gray":		$dark-gray,
+	"black":			$black,
+	"red":				$red,
+	"rose":				$rose,
+	"magenta":			$magenta,
+	"violet":			$violet,
+	"blue":				$blue,
+	"azure":			$azure,
+	"cyan":				$cyan,
+	"spring-green":		$spring-green,
+	"green":			$green,
+	"chartreuse":		$chartreuse,
+	"yellow":			$yellow,
+	"orange":			$orange,
+	"orange-gray":		$orange-gray,
+	"dark-gray-orange":	$dark-gray-orange,
+	"blue-gray":      	$blue-gray,
+	"light-gray-azure":	$light-gray-azure*/
+), $theme-colors);
+
+
+
+$obeb4-and-bootstrap-all-colors: map-merge($theme-colors, $colors);
+
+
+
+
+//
+// OBE:B4 - Dropdowns
+//
+
+$obeb4-dropdown-colors: ();
+//
+// KEY:
+// 1 - $dropdown-link-color
+// 2 - $dropdown-link-hover-color && $dropdown-link-active-color
+// 3 - $dropdown-link-hover-bg && $dropdown-link-active-bg
+// 4 - $dropdown-link-disabled-color
+// 5 - $dropdown-header-color
+//      
+$obeb4-dropdown-colors: map-merge((
+	// Bootstrap classes
+	"primary":			($primary, $white, $primary, lighten($primary, 30%), lighten($primary, 15%)),
+	"secondary":		($secondary, $white, $secondary, lighten($secondary, 30%), lighten($secondary, 15%)),
+	"success":			($success, $white, $success, lighten($success, 30%), lighten($success, 15%)),
+	"info":				($info, $white, $info, lighten($info, 30%), lighten($info, 15%)),
+	"warning":			($warning, $white, $warning, lighten($warning, 30%), lighten($warning, 15%)),
+	"danger":			($danger, $white, $danger, lighten($danger, 30%), lighten($danger, 15%)),
+	"light":			($dark-gray, $black, darken($light, 10%), lighten($dark-gray, 50%), $light-gray-600),
+	"dark":				($dark, $white, $dark, lighten($dark, 30%), lighten($dark, 15%)),
+	// OBEB4 classes
+	"white":			($dark-gray, $black, darken($white, 10%), lighten($dark-gray, 50%), $light-gray-600),
+	"light-gray":		($dark-gray, $white, darken($light-gray, 10%), $light-gray-200, $light-gray-600),
+	"gray":				($gray, $white, $gray, $gray-100, $gray-300),
+	"dark-gray":		($dark-gray, $white, $dark-gray, $dark-gray-100, $dark-gray-300),
+	"black":			($black, $white, $black, $black-100, $black-300),
+	"red":				($red, $white, $red, $red-100, $red-200),
+	"rose":				($rose, $white, $rose, $rose-100, $rose-200),
+	"magenta":			($magenta, $white, $magenta, $magenta-100, $magenta-200),
+	"violet":			($violet, $white, $violet, $violet-100, $violet-200),
+	"blue":				($blue, $white, $blue, $blue-100, $blue-200),
+	"azure":			($azure, $white, $azure, $azure-100, $azure-200),
+	"cyan":				($cyan, $white, $cyan, $cyan-100, $cyan-200),
+	"spring-green":		($spring-green, $white, $spring-green, $spring-green-100, $spring-green-200),
+	"green":			($green, $white, $green, $green-100, $green-200),
+	"chartreuse":		($chartreuse, $white, $chartreuse, $chartreuse-100, $chartreuse-200),
+	"yellow":			($yellow, $white, $yellow, $yellow-100, $yellow-200),
+	"orange":			($orange, $white, $orange, $orange-100, $orange-200),
+	"orange-gray":		($orange-gray, $white, $orange-gray, $orange-gray-100, $orange-gray-200),
+	"dark-gray-orange":	($dark-gray-orange, $white, $dark-gray-orange, $dark-gray-orange-100, $dark-gray-orange-200),
+	"blue-gray":		($blue-gray, $white, $blue-gray, $blue-gray-100, $blue-gray-200),
+	"light-gray-azure":	($light-gray-azure, $white, $light-gray-azure, $light-gray-azure-100, $light-gray-azure-200)
+), $obeb4-dropdown-colors);
+
+
+
+
+
+//
+// OBE:B4 - Tooltips
+//
+
+$obeb4-tooltip-colors: ();
+//
+// KEY:
+// 1 - tooltip background color
+// 2 - tooltip text color
+//      
+$obeb4-tooltip-colors: map-merge((
+	// Bootstrap classes
+	"primary":			($primary, $white),
+	"secondary":		($secondary, $white),
+	"success":			($success, $white),
+	"info":				($info, $white),
+	"warning":			($warning, $white),
+	"danger":			($danger, $white),
+	"light":			($light, $dark-gray),
+	"dark":				($dark, $white),
+	// OBEB4 classes
+	"white":			($white, $dark-gray),
+	"light-gray":		($light-gray, $dark-gray),
+	"gray":				($gray, $white),
+	"dark-gray":		($dark-gray, $white),
+	"black":			($black, $white),
+	"red":				($red, $white),
+	"rose":				($rose, $white),
+	"magenta":			($magenta, $white),
+	"violet":			($violet, $white),
+	"blue":				($blue, $white),
+	"azure":			($azure, $white),
+	"cyan":				($cyan, $white),
+	"spring-green":		($spring-green, $white),
+	"green":			($green, $white),
+	"chartreuse":		($chartreuse, $dark-gray),
+	"yellow":			($yellow, $dark-gray),
+	"orange":			($orange, $white),
+	"orange-gray":		($orange-gray, $white),
+	"dark-gray-orange":	($dark-gray-orange, $white),
+	"blue-gray":		($blue-gray, $white),
+	"light-gray-azure":	($light-gray-azure, $white)
+), $obeb4-tooltip-colors);
+
+
+
+
+
+//
+// OBE:B4 - Sizes
+//
+
+// This variable affects the `.h-*` and `.w-*` classes.
+$obe-sizes: ();
+
+$obe-sizes: map-merge((
+	0:		0%,
+	5:		5%,
+	10:		10%,
+	15:		15%,
+	20:		20%,
+	25:		25%,
+	30:		30%,
+	33:		33.333%,
+	35:		35%,
+	40:		40%,
+	45:		45%,
+	50:		50%,
+	55:		55%,
+	60:		60%,
+	65:		65%,
+	66:		66.666%,
+	70:		70%,
+	75:		75%,
+	80:		80%,
+	85:		85%,
+	90:		90%,
+	95:		95%,
+	99:		99.999%,
+	100:	100%,
+	auto:	auto
+), $obe-sizes);
+
+
+
+
+
+//
+// OBE:B4 - Opacity
+//
+
+// This variable affects the `.opacity-*` classes.
+$obe-opacity: ();
+
+$obe-opacity: map-merge((
+	0:		0,
+	5:		0.05,
+	10:		0.1,
+	15:		0.15,
+	20:		0.2,
+	25:		0.25,
+	30:		0.3,
+	33:		0.3333,
+	35:		0.35,
+	40:		0.4,
+	45:		0.45,
+	50:		0.5,
+	55:		0.55,
+	60:		0.6,
+	65:		0.65,
+	66:		0.6666,
+	70:		0.7,
+	75:		0.75,
+	80:		0.8,
+	85:		0.85,
+	90:		0.9,
+	95:		0.95,
+	99:		0.9999,
+	100:	1
+), $obe-opacity);
+
+
+
+
+
+// Spacing
+//
+// Control the default styling of most Bootstrap elements by modifying these
+// variables. Mostly focused on spacing.
+// You can add more entries to the $spacers map, should you need more variation.
+
+$obe-spacer: 1rem;
+$obe-spacers: ();
+// stylelint-disable-next-line scss/dollar-variable-default
+$obe-spacers: map-merge(
+  (
+    //0: 0,
+    //1: ($obe-spacer * .25),
+    //2: ($obe-spacer * .5),
+    //3: $obe-spacer,
+    //4: ($obe-spacer * 1.5),
+	//5: ($obe-spacer * 3)
+	0: 0,
+	1: ($obe-spacer * .25),
+	2: ($obe-spacer * .5),
+	3: ($obe-spacer * .75),
+	4: ($obe-spacer * 1),
+	5: ($obe-spacer * 1.25),
+	6: ($obe-spacer * 1.5),
+	7: ($obe-spacer * 1.75),
+	8: ($obe-spacer * 2),
+	9: ($obe-spacer * 2.25),
+	10: ($obe-spacer * 2.5),
+	11: ($obe-spacer * 2.75),
+	12: ($obe-spacer * 3),
+	13: ($obe-spacer * 3.25),
+	14: ($obe-spacer * 3.5),
+	15: ($obe-spacer * 3.75),
+	16: ($obe-spacer * 4),
+	17: ($obe-spacer * 4.25),
+	18: ($obe-spacer * 4.5),
+	19: ($obe-spacer * 4.75),
+	20: ($obe-spacer * 5)
+  ),
+  $obe-spacers
+);
+
+
+
+
+
+
+
+//
+// OBE:B4 TABLES
+//
+
+$table-bg:                    transparent;
+$table-accent-bg:             rgba($black, .05);
+$table-hover-bg:              rgba($black, .075);
+$table-active-bg:             $primary;
+
+$table-border-color:          $gray-300;
+
+$table-head-bg:               $gray-200;
+$table-head-color:            $gray-700;
+
+$table-dark-bg:               $gray-900;
+$table-dark-accent-bg:        rgba($white, .05);
+$table-dark-hover-bg:         rgba($white, .075);
+$table-dark-border-color:     lighten($gray-900, 7.5%);
+$table-dark-color:            $body-bg;
+
