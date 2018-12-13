@@ -18,8 +18,8 @@
 
 // OBE:BS4 - BACKGROUND 1 COLOR GRADIENTS
 //$enable-obebs4-1-color-gradients:			true;
-//$obeb4-1-color-tint-value:					5%;
-//$obeb4-1-color-shade-value:					10%;
+//$obebs4-1-color-tint-value:					5%;
+//$obebs4-1-color-shade-value:					10%;
 
 // OBE:BS4 - BACKGROUND 2 COLOR GRADIENTS
 //$enable-obebs4-2-color-gradients:			true;
@@ -536,59 +536,59 @@ $obe-border-widths: map-merge((
 // OBE:BS4 - Buttons
 //
 
-$obeb4-font-size-base:		1rem; // Assumes the browser default, typically: 16px
-$obeb4-line-height-base:	1.5;
+$obebs4-font-size-base:		1rem; // Assumes the browser default, typically: 16px
+$obebs4-line-height-base:	1.5;
 
-$font-size-xxs:				($obeb4-font-size-base * 0.625);
+$font-size-xxs:				($obebs4-font-size-base * 0.625);
 $btn-padding-y-xxs:			0.15rem;
 $btn-padding-x-xxs:			0.3rem;
-$btn-line-height-xxs:		$obeb4-line-height-base;
+$btn-line-height-xxs:		$obebs4-line-height-base;
 $btn-border-radius-xxs:		0.10rem;
 
-$font-size-xs:				($obeb4-font-size-base * 0.750);
+$font-size-xs:				($obebs4-font-size-base * 0.750);
 $btn-padding-y-xs:			0.2rem;
 $btn-padding-x-xs:			0.4rem;
-$btn-line-height-xs:		$obeb4-line-height-base;
+$btn-line-height-xs:		$obebs4-line-height-base;
 $btn-border-radius-xs:		0.15rem;
 
 // This is Bootstrap's small button
-$font-size-sm:				($obeb4-font-size-base * 0.875);
+$font-size-sm:				($obebs4-font-size-base * 0.875);
 $btn-padding-y-sm:			0.25rem;
 $btn-padding-x-sm:			0.5rem;
-$btn-line-height-sm:		$obeb4-line-height-base;
+$btn-line-height-sm:		$obebs4-line-height-base;
 $btn-border-radius-sm:		0.2rem;
 
 // This is Bootstrap's standard button
-$font-size-md:				($obeb4-font-size-base);
+$font-size-md:				($obebs4-font-size-base);
 $btn-padding-y-md:			0.3rem;
 $btn-padding-x-md:			0.6rem;
-$btn-line-height-md:		$obeb4-line-height-base;
+$btn-line-height-md:		$obebs4-line-height-base;
 $btn-border-radius-md:		0.25rem;
 
 // This is Bootstrap's large button
-$font-size-lg:				($obeb4-font-size-base * 1.25);
+$font-size-lg:				($obebs4-font-size-base * 1.25);
 $btn-padding-y-lg:			0.5rem;
 $btn-padding-x-lg:			1rem;
-$btn-line-height-lg:		$obeb4-line-height-base;
+$btn-line-height-lg:		$obebs4-line-height-base;
 $btn-border-radius-lg:		0.3rem;
 
-$font-size-xl:				($obeb4-font-size-base * 1.5);
+$font-size-xl:				($obebs4-font-size-base * 1.5);
 $btn-padding-y-xl:			0.7rem;
 $btn-padding-x-xl:			1.4rem;
-$btn-line-height-xl:		$obeb4-line-height-base;
+$btn-line-height-xl:		$obebs4-line-height-base;
 $btn-border-radius-xl:		0.35rem;
 
-$font-size-xxl:				($obeb4-font-size-base * 2);
+$font-size-xxl:				($obebs4-font-size-base * 2);
 $btn-padding-y-xxl:			0.9rem;
 $btn-padding-x-xxl:			1.8rem;
-$btn-line-height-xxl:		$obeb4-line-height-base;
+$btn-line-height-xxl:		$obebs4-line-height-base;
 $btn-border-radius-xxl:		0.4rem;
 
 
 
 
-$obeb4-color-wheel-colors: ();
-$obeb4-color-wheel-colors: map-merge((
+$obebs4-color-wheel-colors: ();
+$obebs4-color-wheel-colors: map-merge((
 	"white":			$white,
 	"light-gray":		$light-gray,
 	"gray":				$gray,
@@ -610,11 +610,11 @@ $obeb4-color-wheel-colors: map-merge((
 	"dark-gray-orange":	$dark-gray-orange,
 	"blue-gray":		$blue-gray,
 	"light-gray-azure":	$light-gray-azure
-), $obeb4-color-wheel-colors);
+), $obebs4-color-wheel-colors);
 
 
-$obeb4-2-color-pairs: ();
-$obeb4-2-color-pairs: map-merge((
+$obebs4-2-color-pairs: ();
+$obebs4-2-color-pairs: map-merge((
 	"red-rose":						($red, $rose),
 	"rose-magenta":					($rose, $magenta),
 	"magenta-violet":				($magenta, $violet),
@@ -652,11 +652,11 @@ $obeb4-2-color-pairs: map-merge((
 	"gray-light-gray":				($gray, $light-gray),
 	"dark-gray-gray":				($dark-gray, $gray),
 	"black-dark-gray":				($black, $dark-gray)
-), $obeb4-2-color-pairs);
+), $obebs4-2-color-pairs);
 
 
-$obeb4-3-color-pairs: ();
-$obeb4-3-color-pairs: map-merge((
+$obebs4-3-color-pairs: ();
+$obebs4-3-color-pairs: map-merge((
 	"red-magenta":				($red, $rose, $magenta),
 	"rose-violet":				($rose, $magenta, $violet),
 	"magenta-blue":				($magenta, $violet, $blue),
@@ -688,7 +688,7 @@ $obeb4-3-color-pairs: map-merge((
 	"gray-white":				($gray, $light-gray, $white),
 	"dark-gray-light-gray":		($dark-gray, $gray, $light-gray),
 	"black-gray":				($black, $dark-gray, $gray)
-), $obeb4-3-color-pairs);
+), $obebs4-3-color-pairs);
 
 
 
@@ -1054,7 +1054,7 @@ $theme-colors: map-merge((
 
 
 
-$obeb4-and-bootstrap-all-colors: map-merge($theme-colors, $colors);
+$obebs4-and-bootstrap-all-colors: map-merge($theme-colors, $colors);
 
 
 
@@ -1063,7 +1063,7 @@ $obeb4-and-bootstrap-all-colors: map-merge($theme-colors, $colors);
 // OBE:BS4 - Dropdowns
 //
 
-$obeb4-dropdown-colors: ();
+$obebs4-dropdown-colors: ();
 //
 // KEY:
 // 1 - $dropdown-link-color
@@ -1072,7 +1072,7 @@ $obeb4-dropdown-colors: ();
 // 4 - $dropdown-link-disabled-color
 // 5 - $dropdown-header-color
 //      
-$obeb4-dropdown-colors: map-merge((
+$obebs4-dropdown-colors: map-merge((
 	// Bootstrap classes
 	"primary":			($primary, $white, $primary, lighten($primary, 30%), lighten($primary, 15%)),
 	"secondary":		($secondary, $white, $secondary, lighten($secondary, 30%), lighten($secondary, 15%)),
@@ -1104,7 +1104,7 @@ $obeb4-dropdown-colors: map-merge((
 	"dark-gray-orange":	($dark-gray-orange, $white, $dark-gray-orange, $dark-gray-orange-100, $dark-gray-orange-200),
 	"blue-gray":		($blue-gray, $white, $blue-gray, $blue-gray-100, $blue-gray-200),
 	"light-gray-azure":	($light-gray-azure, $white, $light-gray-azure, $light-gray-azure-100, $light-gray-azure-200)
-), $obeb4-dropdown-colors);
+), $obebs4-dropdown-colors);
 
 
 
@@ -1114,13 +1114,13 @@ $obeb4-dropdown-colors: map-merge((
 // OBE:BS4 - Tooltips
 //
 
-$obeb4-tooltip-colors: ();
+$obebs4-tooltip-colors: ();
 //
 // KEY:
 // 1 - tooltip background color
 // 2 - tooltip text color
 //      
-$obeb4-tooltip-colors: map-merge((
+$obebs4-tooltip-colors: map-merge((
 	// Bootstrap classes
 	"primary":			($primary, $white),
 	"secondary":		($secondary, $white),
@@ -1152,7 +1152,7 @@ $obeb4-tooltip-colors: map-merge((
 	"dark-gray-orange":	($dark-gray-orange, $white),
 	"blue-gray":		($blue-gray, $white),
 	"light-gray-azure":	($light-gray-azure, $white)
-), $obeb4-tooltip-colors);
+), $obebs4-tooltip-colors);
 
 
 
