@@ -8,12 +8,12 @@ The OBE:BS4 Design System is a self-reflexive reference library design system ba
 
 ### Installing with NPM
 
-Step 1: Create a directory for your project, navigate to it in your console, nitialize NPM, and fill out your project info for your package.json file as prompted by NPM.
+**Step 1**: Create a directory for your project, navigate to it in your console, nitialize NPM, and fill out your project info for your package.json file as prompted by NPM.
 ```bash
 npm init
 ```
 
-Step 2: Install obebs4-design-system from GitHub (NPM will install all dependencies and this codebase inside the 'node_modules' directory)
+**Step 2**: Install obebs4-design-system from GitHub (NPM will install all dependencies and this codebase inside the 'node_modules' directory)
 ```bash
 npm install --save oberocks/obebs4-design-system#master
 ```
