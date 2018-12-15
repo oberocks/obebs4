@@ -32,6 +32,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "say-hello": "echo 'Hello World'",
-    "awesome-npm": "npm run say-hello && echo 'echo NPM is awesome!'"
+    "awesome-npm": "npm run say-hello && echo 'echo NPM is awesome!'",
+    "eval-test": "node --eval 'console.log(3+3)'"
   }
 }
