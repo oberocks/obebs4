@@ -2,8 +2,6 @@
 
 The OBE:BS4 Design System is a self-reflexive reference library design system based on the most popular web framework in the world, Bootstrap! The OBE:BS4 system was built specifically to give all project stakeholders full visual, technical, and tactile access to every color, font, element, component and layout for any web project.
 
----
-
 > **Please Note:** *This project is fully functional as far as the generated CSS, JS, and library HTML files are concerned. However it will receive some substantial changes before being ready for all to use. Keep an eye on this page, to learn more about how everything works as documentation is added!*
 
 ---
