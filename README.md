@@ -116,39 +116,39 @@ PRO TIP: When using the Design System's tints and shades, each color gets a set 
 
 This project consists of 3 project directories and a handful of process files, that are intended to be a part of your project's root directory.
 
-|- obebs4
-    |- core
-        |- css
-        |- images
-        |- js
-    |- data
-    |- prismjs
-        |- css
-        |- js
-    |- scss
-        |- mixins
-        |- settings
-        |- utilities
-|- library
-    |- css
-    |- images
-        |- favicons
-    |- js
-|- nunjucks
-    |- data
-    |- pages
-    |- templates
-        |- partials
-            |- boilerplates
-            |- colors
-            |- defaults
-            |- extensions
-            |- icons
-            |- layouts
-            |- macros
-            |- reference
-            |- settings
-|- gulpfile.js
+- obebs4
+    - core
+        - css
+        - images
+        - js
+    - data
+    - prismjs
+        - css
+        - js
+    - scss
+        - mixins
+        - settings
+        - utilities
+- library
+    - css
+    - images
+        - favicons
+    - js
+- nunjucks
+    - data
+    - pages
+    - templates
+        - partials
+            - boilerplates
+            - colors
+            - defaults
+            - extensions
+            - icons
+            - layouts
+            - macros
+            - reference
+            - settings
+- gulpfile.js
 
 ### Project Build Tooling
 
