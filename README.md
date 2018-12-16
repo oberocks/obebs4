@@ -29,13 +29,13 @@ THE OBE:BS4 Design System was designed to bridge the gaps between web project ow
 
 ## About
 
-The OBE:BS4 Design System is meant to nudge projects, teams, and even entire organizations towards making both strategic and design related decisions about their project *exclusively within* the contexts of the browsers. This approach has tremendous value, especially with common responsive design issues.
+The OBE:BS4 Design System is meant to nudge web projects, web teams, and even entire web organizations towards making both strategic and design related decisions about their projects *exclusively within* the contexts of the browsers. This approach has tremendous value, especially concerning responsive design issues.
 
-In a sense, this system was made to eventually replace design-centric tooling that insists on "never writing a line of code." Instead, OBE:BS4 doesn't assume designers are incapable of learning about *markup* or copy/pasting HTML snippets. So this design system arms designers with both visual and markup examples of anything/everything a designer might need to use in a design situation.
+In a sense, this system was made to eventually replace design-centric tooling that insists on "never writing a line of code." Instead, OBE:BS4 doesn't assume designers are incapable of learning about *markup* or copy/pasting HTML snippets. So this design system arms designers with both visual and markup examples of anything/everything a designer might need in a browser design situation.
 
 > *"OBE:BS4 assumes that everyone working on a web project needs transparent access to each option and each limitation for the project at all times."* - Matt McT
 
-Accomplishing this was done through a surprisingly simple operational tweak. The secret, was creating a system where the front-end specialists are required to provide the design specialists a complete reference of design element options that are already cross-browser optimized and are available to play with on any device. All of this needs to happen **_before_** any design work begins.
+Accomplishing this was done through a surprisingly simple operational tweak. The secret was creating a system where the front-end specialists are required to provide the designers a complete reference of all possible design options that are cross-browser optimized and are ready "to play with" on any device. All of this needs to happen **_before_** any design work begins.
 
 This operational change forces front-end specialists to strategically plan ahead for their eventual handoff(s). What's magical about this situation is how it gives front-end specialists an unheard of opportunity to refactor and templatize elements/components at a production level, before **_any_** design sprints get started.
 
