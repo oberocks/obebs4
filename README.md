@@ -17,3 +17,10 @@ npm init
 ```bash
 npm install --save oberocks/obebs4-design-system#master
 ```
+
+<!---
+**Step 3**: Use the following series of command line scripts to move the starting library files into your working directory
+```bash
+npm run create-obebs4-directories
+```
+-->
