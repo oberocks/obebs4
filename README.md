@@ -8,15 +8,23 @@ The OBE:BS4 Design System is a self-reflexive reference library design system ba
 
 ## Table of Contents
 
-* About This Project
-* Installation
+* [Installation](#installation)
     * [Installing with NPM](#installing-with-npm)
-    * Installing with .zip
-* Roadmap
+    * [Installing with Zip](#installing-with-zip)
+* [About](#about)
+    * [Project Structure](#project-structure)
+    * [Project Color Wheel](#project-color-wheel)
+* [Roadmap](#roadmap)
 
 ---
 
-### Installing with NPM
+### Installation
+
+There are two basic ways to install the OBE:BS4 Design System. One method is to use NPM and install the project as a node module. The other way to install the system is by 'old school' downloading the zip project, and copying the library into your project's root folder.
+
+*NOTE: This project uses gulp as a task runner, to manage, generate, and move files into a directory. So if you are already using Gulp, be sure to not override your gulpfile.js file with the OBE:BS4 gulpfile!*
+
+#### Installing with NPM
 
 **Step 1**: Create a directory for your project, navigate to it in your console, nitialize NPM, and fill out your project info for your package.json file as prompted by NPM.
 ```bash
@@ -34,3 +42,27 @@ npm install --save oberocks/obebs4-design-system#master
 npm run create-obebs4-directories
 ```
 -->
+
+#### Installing with Zip
+
+(Coming Soon!)
+
+---
+
+### About
+
+(Coming Soon!)
+
+#### Project Structure
+
+(Coming Soon!)
+
+#### Project Color Wheel
+
+(Coming Soon!)
+
+---
+
+### Roadmap
+
+(Coming Soon!)
