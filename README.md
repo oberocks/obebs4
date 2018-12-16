@@ -33,11 +33,11 @@ So in a sense, this system was made to eventually replace design-centeic tooling
 
 > *"OBE:BS4 assumes that everyone working on a web project needs transparent access to each option and limitation of the project at all times."* - Matt McT
 
-Accomplishing this was done through a surprisingly simple process tweak. The secret, was creating a system where the front-end specialists are required to provide the design specialists a complete reference of design element options, before any design work begins.
+Accomplishing this was done through a surprisingly simple operational tweak. The secret, was creating a system where the front-end specialists are required to provide the design specialists a complete reference of design element options, already cross-browser optimized, and and accessible from any device, all before **_any_** design work begins.
 
-This change forces front-end specialists to be strategic and plan ahead for their eventual handoff. What's magical about this process, is that this shift in approach gives front-end specialists the unheard of opportunity to refactor and templatize elements/components at a production level, before any design processes even begin!
+This change forces front-end specialists to strategically plan ahead for their eventual handoff. What's magical about this process is that it gives front-end specialists the unheard of opportunity to refactor and templatize elements/components at a production level, before **_any_** design sprints even kickoff!
 
-THAT is what OBE:BS4 was designed to do! It forces all project stakeholders to think more strategically about *responsive* content issues, by abstracting every single design aspect to solve thise issues into a giant digital box of designer-ready pieces. If each piece is in-turn fully optimized for production (IE valid, semantic, accessibile, and refactored), then the entire group now has the cognative room to focus on what the web is really all about... facilitating user content consumption, fostering eCommerce conversions, and/or offering high-quality and accessible services.
+The OBE:BS4 Design System forces **_all_** project stakeholders to think more strategically about *responsive* content issues, by abstracting every single design aspect to solve those issues into a giant digital box of designer-ready pieces. If each piece is in-turn fully optimized for production (IE valid, semantic, cross-browser, accessibile, and optimized for reuse), then the entire production line now has the cognative room to focus on what the web is really all about... facilitating user content consumption, fostering eCommerce conversions, and/or offering high-quality and accessible services... on any device.
 
 #### Project Structure
 
@@ -45,39 +45,41 @@ THAT is what OBE:BS4 was designed to do! It forces all project stakeholders to t
 
 #### Project Color Wheel
 
-To work with the OBE:BS4 Design System, it is imperative that you understand the system "color Wheel." Before we dive into that though, let's cover why a color wheel was necessary to begin with.
+To work with the OBE:BS4 Design System, it is imperative that you understand the system's "color Wheel." Before we dive into that though, let's cover why a color wheel was necessary to begin with.
 
-Long story short, the color "contextual" classes popularixed by Bootstrap (primary, secondary, danger, etc.) were combined with the Google Material Design color specification. Next branding was factored in, including seasonal "off-brand" collateral across both digital and analog mediums. To organize all of that complexity for any given poject, and to provide contingency color options outside of the core brand colors for both digital and analog edge cases, the color wheel system emerged.
+Long story short, the color "contextual" classes popularized by Bootstrap (primary, secondary, danger, etc.) were combined with the Google Material Design color guidelines. Next branding was factored in, including seasonal "off-brand" collateral across both digital and analog mediums. To organize all of that complexity for any given poject, and to provide contingency color options outside of the core brand colors for both digital and analog design edge cases, the color wheel system emerged.
 
-Teams will want to use the wheel to integrate their current branding into the ONE:BS4 system. Then by using the Design System's built-in settings tooling (Example: [OBE:BS4 Settings Page](https://library.mattmct.com/settings.html)), you can enter your specs, grab the generated JSON, replace your existing settings file JSON with your new data, and finally re-generate your library site to integrate your settings in seconds!
+You'll want to use the wheel to integrate any current branding into the OBE:BS4 system. Then by using the Design System's built-in settings tool (Example: [OBE:BS4 Settings Page](https://library.mattmct.com/settings.html)), you can specify your settings, grab the generated JSON, replace your existing settings file JSON with your new data, and finally re-generate your library site to integrate your settings in seconds!
 
 Your team now has a complete reference for web site/app design options, and each option is "on-brand" visually as well as ready for production use. This magic all starts with the color wheel!
 
 #### List of Color Wheel Colors
 
-PRO TIP: Memorize these! Also, The CSS class slugs are (in parenthesis) and JavaScript slugs are [in brackets]
+PRO TIP: If possible, try to memorize these! Knowing these by heart really helps the team to rapidly iterate!
 
-* Red               (red)               [red]
-* Rose              (rose)              [rose]
-* Magenta           (magenta)           [magenta]
-* Violet            (violet)            [violet]
-* Blue              (blue)              [blue]
-* Azure             (azure)             [azure]
-* Cyan              (cyan)              [cyan]
-* Spring Green      (spring-green)      [springGreen]
-* Green             (green)             [green]
-* Chartreuse        (chartreuse)        [chartreuse]
-* Yellow            (yellow)            [yellow]
-* Orange            (orange)            [orange]
-* Orange Gray       (orange-gray)       [orangeGray]
-* Dark Gray Orange  (dark-gray-orange)  [darkGrayOrange] 
-* Blue Gray         (blue-gray)         [blueGray]
-* Light Gray Azure  (liht-gray-azure)   [lightGrayAzure]
-* White             (white)             [white]
-* Light Gray        (light-gray)        [lightGray]
-* Gray              (gray)              [gray]
-* Dark Gray         (dark-gray)         [darkGray]
-* Black             (black)             [black]
+| NAME | CSS SLUG | JS SLUG |
+| --- | --- | --- |
+| red | red | red |
+| Rose | rose | rose |
+| Magenta | magenta | magenta |
+| Violet | violet | violet |
+| Blue | blue | blue |
+| Azure | azure | azure |
+| Cyan | cyan | cyan |
+| Spring Green | spring-green | springGreen |
+| Green | green | green |
+| Chartreuse | chartreuse | chartreuse |
+| Yellow | yellow | yellow |
+| Orange | orange | orange |
+| Orange Gray | orange-gray | orangeGray |
+| Dark Gray Orange | dark-gray-orange | darkGrayOrange |
+| Blue Gray | blue-gray | blueGray |
+| Light Gray Azure | light-gray-azure | lightGrayAzure |
+| White | white | white |
+| Light Gray | light-gray | lightGray |
+| Gray | gray | gray |
+| Dark Gray | dark-gray | darkGray |
+| Black | black | black |
 
 #### Example of Color Tints and Shades
 
