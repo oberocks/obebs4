@@ -31,7 +31,7 @@ THE OBE:BS4 Design System was designed to bridge the gaps between web project ow
 
 The OBE:BS4 Design System is meant to nudge web projects, web teams, and even entire web organizations towards making both strategic and design related decisions about their projects *exclusively within* the contexts of the browsers. This approach has tremendous value, especially concerning responsive design issues.
 
-In a sense, this system was made to eventually replace design-centric tooling that insists on "never writing a line of code." Instead, OBE:BS4 doesn't assume designers are incapable of learning how to hack a little markup or copy/paste HTML snippets. Thus the OBE:BS4 design system arms designers with both visual and markup examples of anything/everything a designer might need to solve a web-based design issue.
+In a sense, this system was made to eventually replace design-centric tooling that insists on a designer "never writing a line of code." Instead, OBE:BS4 doesn't assume designers are incapable of learning how to hack a little markup or copy/paste HTML snippets. Thus the OBE:BS4 design system arms designers with both visual and markup examples of anything/everything a designer might need to solve a web-based design issue.
 
 > *"OBE:BS4 assumes that everyone working on a web project needs transparent access to each option and each limitation for the client-facing side of the project at all times."* - Matt McT
 
@@ -43,12 +43,13 @@ This operational change forces front-end specialists to strategically plan ahead
 
 The OBE:BS4 Design System forces **_all_** project stakeholders to think more strategically about *responsive* content issues, by abstracting the design options to proactively to solve those issues into a giant digital "toolbox" of fully responsive and designer-ready pieces.
 
-If each piece is in-turn *proactively* optimized for production (IE valid, semantic, cross-browser, ARIA accessibile, and refactored for reuse), teams find themselves with an abundance of cognative room to focus on the most complex goals of any given web project:
-1. Device Agnostic Design Implementations
-1. Facilitating User Content Consumption
-1. Fostering eCommerce Conversions
-1. Offering Fully Accessible SaaS Services
-1. Ensuring Projects Are Maintainable/Reusable
+If each piece is in-turn *proactively* optimized for production (IE valid, semantic, cross-browser, ARIA accessibile, and refactored for reuse), teams can finally provide themselves an abundance of cognative room to focus on the most difficult goals of any given web project. Stuff like:
+1. Device Agnostic Designs
+1. Improving User Content Consumption
+1. Increasing eCommerce Conversions
+1. 508 Compliant Content
+1. Device Agnostic & Accessible SaaS Services
+1. Ensuring Projects Are Maintainable/Reusable (For Devs)
 
 ### Project Structure
 
