@@ -25,7 +25,7 @@ THE OBE:BS4 Design System was designed to bridge the gaps between web project ow
 ---
 
 
-### About
+## About
 
 The OBE:BS4 Design System is meant to nudge projects, teams, and even entire organizations towards making both strategic and design related decisions about their project *exclusively within* the contexts of the browsers. This approach has tremendous value, especially with common responsive design issues!
 
@@ -39,11 +39,11 @@ This change forces front-end specialists to strategically plan ahead for their e
 
 The OBE:BS4 Design System forces **_all_** project stakeholders to think more strategically about *responsive* content issues, by abstracting every single design aspect to solve those issues into a giant digital box of designer-ready pieces. If each piece is in-turn fully optimized for production (IE valid, semantic, cross-browser, accessibile, and optimized for reuse), then the entire production line now has the cognative room to focus on what the web is really all about... facilitating user content consumption, fostering eCommerce conversions, and/or offering high-quality and accessible services... on any device.
 
-#### Project Structure
+### Project Structure
 
 (Coming Soon!)
 
-#### Project Color Wheel
+### Project Color Wheel
 
 To work with the OBE:BS4 Design System, it is imperative that you understand the system's "color Wheel." Before we dive into that though, let's cover why a color wheel was necessary to begin with.
 
@@ -99,7 +99,7 @@ PRO TIP: When using the Design System's tints and shades, each color gets a set 
 | Blue 800 | blue-800 | blue800 |
 | Blue 900 | blue-900 | blue900 |
 
-#### Project Build Tooling
+### Project Build Tooling
 
 (Coming Soon!)
 
@@ -107,7 +107,7 @@ PRO TIP: When using the Design System's tints and shades, each color gets a set 
 ---
 
 
-### Installation
+## Installation
 
 There are two basic ways to install the OBE:BS4 Design System. One method is to use Node.js/NPM to install the project as a node module from your console. The other way is to 'old school' download the project zip from here on GitHub, and then copying any necessary extracted files/directories into your project's root folder.
 
@@ -117,7 +117,7 @@ Then you'll need to use Gulp to run the scripts needed to apply your settings an
 
 *NOTE: This project uses Gulp to manage and generate the Design System Library Site. So if you are already using Gulp, be sure to not override your gulpfile.js file with the OBE:BS4 gulpfile!*
 
-#### Installing with NPM
+### Installing with NPM
 
 **Step 1**: Create a directory for your project, navigate to it in your console, nitialize NPM, and fill out your project info for your package.json file as prompted by NPM.
 ```bash
@@ -136,7 +136,7 @@ npm run create-obebs4-directories
 ```
 -->
 
-#### Installing with Zip
+### Installing with Zip
 
 (Coming Soon!)
 
