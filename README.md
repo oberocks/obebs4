@@ -114,7 +114,7 @@ PRO TIP: When using the Design System's tints and shades, each color gets a set 
 
 ### Project Directory Structure
 
-This project consists of 3 project directories and a handful of process files, that are intended to be a part of your project's root directory.
+This project consists of 3 project directories and a handful of process files, that are intended to be a part of your project's root directory:
 
 - obebs4
     - core
@@ -195,6 +195,6 @@ npm run create-obebs4-directories
 ---
 
 
-### Roadmap
+## Roadmap
 
 (Coming Soon!)
