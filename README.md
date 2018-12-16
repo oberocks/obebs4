@@ -41,7 +41,7 @@ This operational change forces front-end specialists to strategically plan ahead
 
 > *"The aspect of this project that excites me the most, is how much further a team's strategic thinking and prototyping can reach upon embracing the OBE:BS4 process. It becomes clear after using the system for the first time, that somehow we've all been doing this web stuff in the wrong order! SMH!"* - Matt McT
 
-The OBE:BS4 Design System forces **_all_** project stakeholders to think more strategically about *responsive* content issues, by abstracting every single design aspect to solve those issues into a giant digital box of fully responsive and designer-ready pieces.
+The OBE:BS4 Design System forces **_all_** project stakeholders to think more strategically about *responsive* content issues, by abstracting the design options to proactively to solve those issues into a giant digital "toolbox" of fully responsive and designer-ready pieces.
 
 If each piece is in-turn fully optimized for production (IE valid, semantic, cross-browser, ARIA accessibile, and refactored for reuse), then your project's entire production line now has the cognative room to focus on what the challengs of the web really are:
 1. Facilitating User Content Consumption
