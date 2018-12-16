@@ -13,11 +13,11 @@ THE OBE:BS4 Design System was designed to bridge the gaps between web project ow
 ## Table of Contents
 
 * [About](#about)
-    * [Project Structure](#project-structure)
     * [Project Color Wheel](#project-color-wheel)
         * [List of Color Wheel Colors](#list-of-color-wheel-colors)
         * [Example of Color Tints and Shades](#example-of-color-tints-and-shades)
         * [Accessing Colors with JavaScript](#accessing-colors-with-javascript)
+    * [Project Directory Structure](#project-directory-structure)
     * [Project Build Tooling](#project-build-tooling)
 * [Installation](#installation)
     * [Installing with NPM](#installing-with-npm)
@@ -51,10 +51,6 @@ If each piece is in-turn *proactively* optimized for production (IE valid, seman
 1. 508 Compliant Content
 1. Device Agnostic & Accessible SaaS Services
 1. Ensuring Projects Are Maintainable/Reusable (For Devs)
-
-### Project Structure
-
-(Coming Soon!)
 
 ### Project Color Wheel
 
@@ -115,6 +111,44 @@ PRO TIP: When using the Design System's tints and shades, each color gets a set 
 #### Accessing Colors with JavaScript
 
 (Coming Soon!)
+
+### Project Directory Structure
+
+This project consists of 3 project directories and a handful of process files, that are intended to be a part of your project's root directory.
+
+|- obebs4
+    |- core
+        |- css
+        |- images
+        |- js
+    |- data
+    |- prismjs
+        |- css
+        |- js
+    |- scss
+        |- mixins
+        |- settings
+        |- utilities
+|- library
+    |- css
+    |- images
+        |- favicons
+    |- js
+|- nunjucks
+    |- data
+    |- pages
+    |- templates
+        |- partials
+            |- boilerplates
+            |- colors
+            |- defaults
+            |- extensions
+            |- icons
+            |- layouts
+            |- macros
+            |- reference
+            |- settings
+|- gulpfile.js
 
 ### Project Build Tooling
 
