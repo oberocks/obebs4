@@ -44,7 +44,7 @@ The OBE:BS4 Design System forces **_all_** project stakeholders to think more st
 1. Fostering eCommerce Conversions
 1. Offering High-Quality and Accessible SaaS Services
 
-Oh yeah... and everything should always work on any device! OUT-OF-THE-BOX!!! ;)
+Oh yeah... and everything should always work on any device! OUT OF THE BOX!!! ;)
 
 ### Project Structure
 
