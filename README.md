@@ -20,9 +20,9 @@ The OBE:BS4 Design System is a self-reflexive reference library design system ba
 
 ### Installation
 
-There are two basic ways to install the OBE:BS4 Design System. One method is to use Node.js/NPM to install the project as a node module. The other way is by 'old school' downloading the zip project, and copying the extracted files and directories into your project's root folder.
+There are two basic ways to install the OBE:BS4 Design System. One method is to use Node.js/NPM to install the project as a node module. The other way is by 'old school' downloading the zip project from here on GitHub, and then copying any necessary extracted files/directories into your project's root folder.
 
-To really start using your Design System however, you'll need to use the pre-generated HTML Settings Tool page in the system to get your JSON settings to customize your Design System. (Coversely you could also get your JSON settings from the project's offical example [OBE:BS4 Library](https://library.mattmct.com/settings.html)).
+To really start using your Design System however, you'll need to somehow use an OBE:BS4 Settings Tool page to get the JSON settings to customize your Design System. (Coversely you could also get your JSON settings from the project's offical example [OBE:BS4 Library](https://library.mattmct.com/settings.html)).
 
 *NOTE: This project uses Gulp to manage and generate the Design System Library Site. So if you are already using Gulp, be sure to not override your gulpfile.js file with the OBE:BS4 gulpfile!*
 
