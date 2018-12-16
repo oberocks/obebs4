@@ -29,17 +29,22 @@ THE OBE:BS4 Design System was designed to bridge the gaps between web project ow
 
 ## About
 
-The OBE:BS4 Design System is meant to nudge projects, teams, and even entire organizations towards making both strategic and design related decisions about their project *exclusively within* the contexts of the browsers. This approach has tremendous value, especially with common responsive design issues!
+The OBE:BS4 Design System is meant to nudge projects, teams, and even entire organizations towards making both strategic and design related decisions about their project *exclusively within* the contexts of the browsers. This approach has tremendous value, especially with common responsive design issues.
 
-So in a sense, this system was made to eventually replace design-centeic tooling that insists on "never writing a line of code." Instead, OBE:BS4 doesn't assume designers are incapable of learning about *markup* or copy/pasting HTML snippets. So this design system arms designers with both visual and markup examples of anything/everything a designer might need to use in a design situation.
+In a sense, this system was made to eventually replace design-centric tooling that insists on "never writing a line of code." Instead, OBE:BS4 doesn't assume designers are incapable of learning about *markup* or copy/pasting HTML snippets. So this design system arms designers with both visual and markup examples of anything/everything a designer might need to use in a design situation.
 
-> *"OBE:BS4 assumes that everyone working on a web project needs transparent access to each option and limitation of the project at all times."* - Matt McT
+> *"OBE:BS4 assumes that everyone working on a web project needs transparent access to each option and each limitation for the project at all times."* - Matt McT
 
-Accomplishing this was done through a surprisingly simple operational tweak. The secret, was creating a system where the front-end specialists are required to provide the design specialists a complete reference of design element options, already cross-browser optimized, and and accessible from any device, all before **_any_** design work begins.
+Accomplishing this was done through a surprisingly simple operational tweak. The secret, was creating a system where the front-end specialists are required to provide the design specialists a complete reference of design element options that is already cross-browser optimized and is already accessible from any device. All of this needs to happen **_before_** any design work begins.
 
-This change forces front-end specialists to strategically plan ahead for their eventual handoff. What's magical about this process is that it gives front-end specialists the unheard of opportunity to refactor and templatize elements/components at a production level, before **_any_** design sprints even kickoff!
+This change forces front-end specialists to strategically plan ahead for their eventual handoff(s). What's magical about this operational tweak is how it gives front-end specialists an unheard of opportunity to refactor and templatize elements/components at a production level, before **_any_** design sprints even get started!
 
-The OBE:BS4 Design System forces **_all_** project stakeholders to think more strategically about *responsive* content issues, by abstracting every single design aspect to solve those issues into a giant digital box of designer-ready pieces. If each piece is in-turn fully optimized for production (IE valid, semantic, cross-browser, accessibile, and optimized for reuse), then the entire production line now has the cognative room to focus on what the web is really all about... facilitating user content consumption, fostering eCommerce conversions, and/or offering high-quality and accessible services... on any device.
+The OBE:BS4 Design System forces **_all_** project stakeholders to think more strategically about *responsive* content issues, by abstracting every single design aspect to solve those issues into a giant digital box of designer-ready pieces. If each piece is in-turn fully optimized for production (IE valid, semantic, cross-browser, ARIA accessibile, and refactored for reuse), then your project's entire production line now has the cognative room to focus on what the web is really all about:
+1. Facilitating User Content Consumption
+1. Fostering eCommerce Conversions
+1. Offering High-Quality and Accessible SaaS Services
+
+Oh yeah... and everything should always work on any device! OUT-OF-THE-BOX!!! ;)
 
 ### Project Structure
 
