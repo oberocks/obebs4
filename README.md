@@ -4,7 +4,7 @@ The OBE:BS4 Design System is the world's first self-reflexive design system for 
 
 THE OBE:BS4 Design System was designed to bridge the gaps between web project owners, designers, and developers. OBE:BS4 achieves this goal by fostering a more healthy understanding of both code and design *constraints* in the context of the final output medium(s)... the web browsers!
 
-> **Please Note:** *This project is fully functional as far as the generated CSS, JS, and library HTML files are concerned. However it will receive some _substantial changes_ before being ready for all to use. Keep an eye on this page, to learn more about how everything works as documentation is added!*
+> **Please Note:** *This project is fully functional as far as the generated CSS, JS, and library HTML files are concerned. However it will receive some _substantial changes_ before being ready for all to use. Keep an eye on this page to learn more about how everything works as documentation is added. Once the project is ready, an offical release will follow!*
 
 
 ---
