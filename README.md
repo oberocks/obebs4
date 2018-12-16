@@ -39,7 +39,7 @@ Accomplishing this was done through a surprisingly simple operational tweak. The
 
 This operational change forces front-end specialists to strategically plan ahead for their eventual handoff(s). What's magical about this situation is how it gives front-end specialists an unheard of opportunity to refactor and templatize elements/components at a production level, before **_any_** design sprints get started.
 
-> *"The aspect of this project that excites me the most, is how much further a team's strategic thinking and prototyping reaches upon embracing the OBE:BS4 process. It makes it clear right away, that somehow and mysteriously, we've all been doing this web stuff in the wrong order! SMH!"* - Matt McT
+> *"The aspect of this project that excites me the most, is how much further a team's strategic thinking and prototyping can reach upon embracing the OBE:BS4 process. It becomes clear after using the system for the first time, that somehow we've all been doing this web stuff in the wrong order! SMH!"* - Matt McT
 
 The OBE:BS4 Design System forces **_all_** project stakeholders to think more strategically about *responsive* content issues, by abstracting every single design aspect to solve those issues into a giant digital box of fully responsive and designer-ready pieces.
 
@@ -47,6 +47,7 @@ If each piece is in-turn fully optimized for production (IE valid, semantic, cro
 1. Facilitating User Content Consumption
 1. Fostering eCommerce Conversions
 1. Offering High-Quality and Accessible SaaS Services
+1. Ensuring Projects Are Maintainable/Scalable
 
 ### Project Structure
 
