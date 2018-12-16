@@ -1,6 +1,6 @@
 # OBE:BS4 Library Design System
 
-The OBE:BS4 Design System is the world's first self-reflexive design system for web production teams. OBE:BS4 is based on the most popular/robust front-end web framework in the world, Bootstrap! The OBE:BS4 system was designed & built to give all project stakeholders total visual, technical, and tactile access to every color, font, element, component and layout in a web project... *before the project enters any design phases!*
+The OBE:BS4 Design System is the world's first self-reflexive design system for web production. OBE:BS4 is based on the most popular/robust front-end web framework in the world, Bootstrap! The OBE:BS4 system was designed & built to give all project stakeholders total visual, technical, and tactile access to every color, font, element, component and layout in a web project... *before the project enters any design phases!*
 
 THE OBE:BS4 Design System was designed to bridge the gaps between web project owners, designers, and developers. OBE:BS4 achieves this goal by fostering a more healthy understanding of both code and design *constraints* in the context of the final output medium(s)... the web browsers!
 
