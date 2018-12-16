@@ -57,9 +57,9 @@ Your team now has a complete reference for web site/app design options, and each
 
 PRO TIP: If possible, try to memorize these! Knowing these by heart really helps the team to rapidly iterate!
 
-| NAME | CSS SLUG | JS SLUG |
+| Name | CSS Slug | JS Slug |
 | --- | --- | --- |
-| red | red | red |
+| Red | red | red |
 | Rose | rose | rose |
 | Magenta | magenta | magenta |
 | Violet | violet | violet |
