@@ -55,7 +55,7 @@ Your team now has a complete reference for web site/app design options, and each
 
 #### List of Color Wheel Colors
 
-PRO TIP: If possible, try to memorize these! Knowing these by heart really helps the team to rapidly iterate!
+PRO TIP: If possible, try to memorize these! Knowing these by memory will let you iterate VERY rapidly!
 
 | Name | CSS Slug | JS Slug |
 | --- | --- | --- |
@@ -85,17 +85,19 @@ PRO TIP: If possible, try to memorize these! Knowing these by heart really helps
 
 PRO TIP: When using the Design System's tints and shades, each color gets a set of tint and shade values like the example for Blue below. Also and for all color options with tints and shades, using the color slug without any numbers is equal to the 500 variation of that color. So for example, "Blue" is equal to "Blue 500" and so fourth!
 
-* Blue 50   (blue-50)   [blue50]
-* Blue 100  (blue-100)  [blue100]
-* Blue 200  (blue-200)  [blue200]
-* Blue 300  (blue-300)  [blue300]
-* Blue 400  (blue-400)  [blue400]
-* Blue      (blue)      [blue]
-* Blue 500  (blue-500)  [blue500]
-* Blue 600  (blue-600)  [blue600]
-* Blue 700  (blue-700)  [blue700]
-* Blue 800  (blue-800)  [blue800]
-* Blue 900  (blue-900)  [blue900]
+| Name | CSS Slug | JS Slug |
+| --- | --- | --- |
+| Blue 50 | blue-50 | blue50 |
+| Blue 100 | blue-100 | blue100 |
+| Blue 200 | blue-200 | blue200 |
+| Blue 300 | blue-300 | blue300 |
+| Blue 400 | blue-400 | blue400 |
+| Blue | blue | blue |
+| Blue 500 | blue-500 | blue500 |
+| Blue 600 | blue-600 | blue600 |
+| Blue 700 | blue-700 | blue700 |
+| Blue 800 | blue-800 | blue800 |
+| Blue 900 | blue-900 | blue900 |
 
 #### Project Build Tooling
 
