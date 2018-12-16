@@ -17,6 +17,7 @@ THE OBE:BS4 Design System was designed to bridge the gaps between web project ow
     * [Project Color Wheel](#project-color-wheel)
         * [List of Color Wheel Colors](#list-of-color-wheel-colors)
         * [Example of Color Tints and Shades](#example-of-color-tints-and-shades)
+        * [Accessing Colors with JavaScript](#accessing-colors-with-javascript)
     * [Project Build Tooling](#project-build-tooling)
 * [Installation](#installation)
     * [Installing with NPM](#installing-with-npm)
@@ -43,7 +44,7 @@ This operational change forces front-end specialists to strategically plan ahead
 
 The OBE:BS4 Design System forces **_all_** project stakeholders to think more strategically about *responsive* content issues, by abstracting the design options to proactively to solve those issues into a giant digital "toolbox" of fully responsive and designer-ready pieces.
 
-If each piece is in-turn *proactively* optimized for production (IE valid, semantic, cross-browser, ARIA accessibile, and refactored for reuse), teams can finally provide themselves an abundance of cognative room to focus on the most difficult goals of any given web project. Stuff like:
+If each piece is in-turn *proactively* optimized for production (IE valid, semantic, cross-browser, ARIA accessibile, and refactored for reuse), teams can finally provide themselves with an abundance of cognative room to focus on the most difficult goals of any given web project. Stuff like:
 1. Device Agnostic Designs
 1. Improving User Content Consumption
 1. Increasing eCommerce Conversions
@@ -57,9 +58,9 @@ If each piece is in-turn *proactively* optimized for production (IE valid, seman
 
 ### Project Color Wheel
 
-To work with the OBE:BS4 Design System, it is imperative that you understand the system's "color wheel." Before we dive into that though, let's cover why a color wheel was necessary to begin with.
+To work with the OBE:BS4 Design System, it is imperative that you understand the system's "color wheel." Before we dive into that though, let's cover why a color wheel was necessary to begin with!
 
-Long story short, the color "contextual" classes popularized by Bootstrap (primary, secondary, danger, etc.) were combined with Google's Material Design color guidelines. Next, branding was factored in, including concerns for collateral for both digital and analog design needs. To organize all of that complexity into a universal brand solution, and to provide contingency color options outside of the core brand colors for both digital and analog design edge cases, the color wheel system emerged!
+Long story short, first the "contextual" color classes popularized by the Bootstrap framework (primary, secondary, danger, etc.) were combined with Google's Material Design color guidelines. Next, branding was factored in, including concerns for both digital and analog collateral design needs. To organize all of that complexity into a universal brand solution, and to provide contingency color options outside of core brand colors for both digital and analog design edge cases, the color wheel system emerged!
 
 You'll want to use the wheel to integrate any current branding into the OBE:BS4 system. Then by using the Design System's built-in settings tool (Example: [OBE:BS4 Settings Page](https://library.mattmct.com/settings.html)), you can specify your settings, grab the generated JSON, replace your existing settings file with your new JSON data, and finally re-generate your library site (HTML, CSS, & JS files) according to your settings... in literally seconds!
 
@@ -110,6 +111,10 @@ PRO TIP: When using the Design System's tints and shades, each color gets a set 
 | Blue 700 | blue-700 | blue700 |
 | Blue 800 | blue-800 | blue800 |
 | Blue 900 | blue-900 | blue900 |
+
+#### Accessing Colors with JavaScript
+
+(Coming Soon!)
 
 ### Project Build Tooling
 
