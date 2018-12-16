@@ -15,6 +15,8 @@ THE OBE:BS4 Design System was designed to bridge the gaps between web project ow
 * [About](#about)
     * [Project Structure](#project-structure)
     * [Project Color Wheel](#project-color-wheel)
+        * [List of Color Wheel Colors](#list-of-color-wheel-colors)
+        * [Example of Color Tints and Shades](#example-of-color-tints-and-shades)
     * [Project Build Tooling](#project-build-tooling)
 * [Installation](#installation)
     * [Installing with NPM](#installing-with-npm)
