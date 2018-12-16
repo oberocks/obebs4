@@ -6,6 +6,16 @@ The OBE:BS4 Design System is a self-reflexive reference library design system ba
 
 ---
 
+## Table of Contents
+
+* About This Project
+* Installation
+    * [Installing with NPM](#installing-with-npm)
+    * Installing with .zip
+* Roadmap
+
+---
+
 ### Installing with NPM
 
 **Step 1**: Create a directory for your project, navigate to it in your console, nitialize NPM, and fill out your project info for your package.json file as prompted by NPM.
