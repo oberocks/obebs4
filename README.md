@@ -31,9 +31,9 @@ THE OBE:BS4 Design System was designed to bridge the gaps between web project ow
 
 The OBE:BS4 Design System is meant to nudge web projects, web teams, and even entire web organizations towards making both strategic and design related decisions about their projects *exclusively within* the contexts of the browsers. This approach has tremendous value, especially concerning responsive design issues.
 
-In a sense, this system was made to eventually replace design-centric tooling that insists on "never writing a line of code." Instead, OBE:BS4 doesn't assume designers are incapable of learning about *markup* or copy/pasting HTML snippets. So this design system arms designers with both visual and markup examples of anything/everything a designer might need in a browser design situation.
+In a sense, this system was made to eventually replace design-centric tooling that insists on "never writing a line of code." Instead, OBE:BS4 doesn't assume designers are incapable of learning about *markup* or copy/pasting HTML snippets. So this design system arms designers with both visual and markup examples of anything/everything a designer might need to solve a web-based design issue.
 
-> *"OBE:BS4 assumes that everyone working on a web project needs transparent access to each option and each limitation for the project at all times."* - Matt McT
+> *"OBE:BS4 assumes that everyone working on a web project needs transparent access to each option and each limitation for the client-facing side of the project at all times."* - Matt McT
 
 Accomplishing this was done through a surprisingly simple operational tweak. The secret was creating a system where the front-end specialists are required to provide the designers a complete reference of all possible design options that are cross-browser optimized and are ready "to play with" on any device. All of this needs to happen **_before_** any design work begins.
 
