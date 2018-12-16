@@ -60,7 +60,7 @@ Long story short, the color "contextual" classes popularized by Bootstrap (prima
 
 You'll want to use the wheel to integrate any current branding into the OBE:BS4 system. Then by using the Design System's built-in settings tool (Example: [OBE:BS4 Settings Page](https://library.mattmct.com/settings.html)), you can specify your settings, grab the generated JSON, replace your existing settings file with your new JSON data, and finally re-generate your library site (HTML, CSS, & JS files) according to your settings... in literally seconds!
 
-Your team now has a complete reference for web site/app design options, and each option is "on-brand" visually as well as ready for production use. This magic all starts with the color wheel!
+Your team now has a complete reference for web site/app design options, and each option is "on-brand" visually as well as ready for production use! Very cool!
 
 #### List of Color Wheel Colors
 
