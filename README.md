@@ -29,9 +29,12 @@ THE OBE:BS4 Design System was designed to bridge the gaps between web project ow
 
 The OBE:BS4 Design System is meant to nudge projects, teams, and even entire organizations towards making both strategic and design related decisions about their project *exclusively within* the contexts of the browsers. This approach has tremendous value, especially with common responsive design issues!
 
-So in a sense, this system was made to eventually replace design-centeic tooling that insists on "never writing a line of code." Instead, OBE:BS4 doesn't assume designers are incapable of learning about *markup* or copy/pasting HTML snippets. So this Design System provides a visual and pre-formatted markup example of anything and everything a designer might want to use.
+So in a sense, this system was made to eventually replace design-centeic tooling that insists on "never writing a line of code." Instead, OBE:BS4 doesn't assume designers are incapable of learning about *markup* or copy/pasting HTML snippets. So this design system arms designers with both visual and markup examples of anything/everything a designer might need to use in a design situation.
 
-OBE:BS4 assumes that everyone working on a web project deserves transparent access to every option and limitation of the project at all times. Accomplishing this was done through a surprisingly simple process tweak. The secret, was creating a system where the front-end specialists are required to provide the design specialists a complete reference of design element options, before any design work begins.
+> OBE:BS4 assumes that everyone working on a web project needs transparent access to every option and limitation of the project at all times.
+> - Matt McT
+
+Accomplishing this was done through a surprisingly simple process tweak. The secret, was creating a system where the front-end specialists are required to provide the design specialists a complete reference of design element options, before any design work begins.
 
 This change forces front-end specialists to be strategic and plan ahead for their eventual handoff. What's magical about this process, is that this shift in approach gives front-end specialists the unheard of opportunity to refactor and templatize elements/components at a production level, before any design processes even begin!
 
