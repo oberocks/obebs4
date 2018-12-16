@@ -37,9 +37,9 @@ In a sense, this system was made to eventually replace design-centric tooling th
 
 Accomplishing this was done through a surprisingly simple operational tweak. The secret, was creating a system where the front-end specialists are required to provide the design specialists a complete reference of design element options that are already cross-browser optimized and are available to play with on any device. All of this needs to happen **_before_** any design work begins.
 
-This operational change forces front-end specialists to strategically plan ahead for their eventual handoff(s). What's magical about this situation is how it gives front-end specialists an unheard of opportunity to refactor and templatize elements/components at a production level, before **_any_** design sprints get started. This can literally shave off hundreds of labor/meeting hours from complex web projects, while making prototyping so rapid, that specialists almost can't help but to wire everything up and test it with real users.
+This operational change forces front-end specialists to strategically plan ahead for their eventual handoff(s). What's magical about this situation is how it gives front-end specialists an unheard of opportunity to refactor and templatize elements/components at a production level, before **_any_** design sprints get started.
 
-> *"The aspect of this project that excites me the most, is how much further the team's strategic thinking reaches upon embracing the OBE:BS4 process. It makes it clear right away, that somehow and mysteriously, we've all been doing this web stuff in the wrong order! SMH!"* - Matt McT
+> *"The aspect of this project that excites me the most, is how much further a team's strategic thinking and prototyping reaches upon embracing the OBE:BS4 process. It makes it clear right away, that somehow and mysteriously, we've all been doing this web stuff in the wrong order! SMH!"* - Matt McT
 
 The OBE:BS4 Design System forces **_all_** project stakeholders to think more strategically about *responsive* content issues, by abstracting every single design aspect to solve those issues into a giant digital box of fully responsive and designer-ready pieces.
 
