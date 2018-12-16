@@ -43,7 +43,7 @@ This operational change forces front-end specialists to strategically plan ahead
 
 The OBE:BS4 Design System forces **_all_** project stakeholders to think more strategically about *responsive* content issues, by abstracting the design options to proactively to solve those issues into a giant digital "toolbox" of fully responsive and designer-ready pieces.
 
-If each piece is in-turn *proactively* optimized for production (IE valid, semantic, cross-browser, ARIA accessibile, and refactored for reuse), then your project's entire production line now has the cognative room to focus on what the challengs of the web really are:
+If each piece is in-turn *proactively* optimized for production (IE valid, semantic, cross-browser, ARIA accessibile, and refactored for reuse), teams find themselves with an abundance of cognative room to focus on the most difficult complex goals of any given web project:
 1. Facilitating User Content Consumption
 1. Fostering eCommerce Conversions
 1. Offering High-Quality and Accessible SaaS Services
