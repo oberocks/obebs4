@@ -31,8 +31,17 @@
   "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "create-library-directory": "node --eval \"if (!fs.existsSync('./library')){fs.mkdirSync('./node_modules/obebs4-design-system/library')}\"",
+    "create-library-css-directory": "node --eval \"if (!fs.existsSync('./library/css')){fs.mkdirSync('./node_modules/obebs4-design-system/library/css')}\"",
+    "create-library-js-directory": "node --eval \"if (!fs.existsSync('./library/js')){fs.mkdirSync('./node_modules/obebs4-design-system/library/js')}\"",
+    "create-library-images-directory": "node --eval \"if (!fs.existsSync('./library/images')){fs.mkdirSync('./node_modules/obebs4-design-system/library/images')}\"",
+    "create-nunjucks-directory": "node --eval \"if (!fs.existsSync('./nunjucks')){fs.mkdirSync('./node_modules/obebs4-design-system/nunjucks')}\"",
+    "create-obebs4-directories": "npm run create-library-directory && npm run create-library-css-directory && npm run create-library-js-directory && npm run create-library-images-directory && npm run create-nunjucks-directory",
     "say-hello": "echo 'Hello World'",
     "awesome-npm": "npm run say-hello && echo 'echo NPM is awesome!'",
-    "eval-test": "node --eval 'console.log(3+3)'"
+    "eval-test": "node --eval 'console.log(3+3)'",
+    "create-test-directory": "node --eval \"if (!fs.existsSync('./test-directory')){fs.mkdirSync('.//test-directory')}\"",
+    "copy-index-html": "node --eval \"fs.createReadStream('./library/index.html').pipe(fs.createWriteStream('./test-directory/index.html'))\"",
+    "create-and-copy-test": "npm run create-test-directory && npm run copy-index-html"
   }
 }
