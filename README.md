@@ -162,17 +162,15 @@ let darkGray = setRGBa( myColors.darkGray.rgba, '0.75' );
 
 Because the system compiles a full HTML library site along with the extended Bootstrap 4 CSS/JS files the library site uses, there is a lot going on under the hood.
 
-The general suggested workflow assumes you are using a version control repository (like GitHub). From there, you generally either update settings (using the client-side tool in the rendered site files) or add new items to your system Nunjucks library files and/or Bootstrap integrated SASS files. Either way, you re-render the library site (and generally host it for the team to use from any device).
+Working with the system generally revolves around two types of uses. You either update settings (using the client-side tool in the rendered site files) or add new items to your system Nunjucks library files and/or Bootstrap integrated SASS files. Either way, you re-render the library site (and generally host it for the team to use from any device).
 
-Some folks like to host the site on a subdomain, and others as a subdirectory. Some folks like to password protect the library site files, while others let it out in the public. Either way, OBE:BS4 doesn't really tread that far, but it is strongly advised to be sure the library is hosted somewhere for the team to consume and tinker with.
+Some folks like to host the site on a subdomain, and others as a subdirectory. Devs can simply install it locally and work from their workstation.
 
 Here's a diagram to illustrate the intended workflow:
 
 <img src="https://library.mattmct.com/images/obebs4-build-big-picture.jpg" alt="OBE:BS4 Build Process - The Big Picture" width="100%">
 
-It's worth noting, that new projects and prototypes aren't necessarily a part of the library. To try out new ideas, it's best to use a boilerplate provided by the design system, with a fresh HTML file. The boilerplates in the OBE:BS4 system should be set-up to let teammembers copy and paste as few times as possible to creative mode as fast as possible.
-
-However, when creating new components or element variations, you often will want to add your awesome creation into the library for your team and projects to use freely.
+It's worth noting, that new projects and prototypes aren't necessarily a part of the library. To try out new ideas, it's best to use a boilerplate provided by the design system, with a fresh HTML file. However, when creating new components or element variations, you often will want to add your awesome creation into the library for your team and projects to use freely.
 
 *(More on extending the library with your own components/elements as the project matures a bit past this intial alpha stage! See the roadmap section for more!)*
 
