@@ -152,6 +152,12 @@ gulp.task('move-favicon-files', function(){
 
 
 gulp.task('compile-nunjucks', function() {
+    var htmlBeautifyOptions = {
+        "indent_with_tabs": false,
+        "max_preserve_newlines": 1,
+        "jslint_happy": false,
+        "break_chained_methods": false
+    };
     // Gets .html and .nunjucks files in pages
     return gulp.src('nunjucks/pages/**/*.+(html|nunjucks|njk)')
     // Get OBE settings json data
@@ -163,7 +169,7 @@ gulp.task('compile-nunjucks', function() {
         path: ['nunjucks/templates']
     }))
     // beautify the rendered file
-    .pipe(htmlbeautify())
+    .pipe(htmlbeautify(htmlBeautifyOptions))
     // output files in app folder
     .pipe(gulp.dest('library'))
 });
