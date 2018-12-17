@@ -39,7 +39,7 @@ OBE:BS4 doesn't assume designers are incapable of learning how to hack a little 
 
 Accomplishing this was done through a surprisingly simple operational tweak. The secret was creating a system where the front-end specialists are expected to provide the design specialists with a complete reference of all available design options provided by both the browsers and any libraries/frameworks.
 
-Here's the catch though, all of this needs to happen **_before_** any design work begins!!! Designers need to "see" what stage elements are available for use in designs... also across browsers. The only way to do that though... would be to make a customizable website that displays... everything!?
+Here's the catch though, all of this needs to happen **_before_** any design work begins!!! Designers need to "see" exactly what elements are available for use in designs... and also across browsers. The only way to do that though... would be to make a customizable website that displays... everything!?
 
 Enter OBE:BS4! ;)
 
