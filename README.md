@@ -38,9 +38,9 @@ OBE:BS4 doesn't assume designers are incapable of learning how to hack a little 
 
 > *"OBE:BS4 assumes that everyone working on a web project needs transparent access to each option and each limitation for the client-facing side of the project at all times."* - Matt McT
 
-Accomplishing this was done through a surprisingly simple operational tweak. The secret was creating a system where the front-end specialists are expected to provide the design specialists with a complete reference of all available design options provided by both the browsers and any libraries/frameworks.
+Accomplishing this is done through a surprisingly simple operational tweak. The secret is creating a work flow where the front-end specialists are expected to give the design specialists a complete reference of all available design options provided by both browsers and any applicable libraries/frameworks.
 
-Here's the catch though, all of this needs to happen **_before_** any design work begins!!! Designers need to see/touch whatever is available for use in designs, and also see/touch differences across browsers. The only way to do that though... would be to make a customizable website that displays... everything!? Who got time for dat???
+Here's the catch though, and why this isn't happening all over the world today... all of this needs to happen **_before_** any design work begins!!! Designers need to see/touch whatever is available for use in designs, and also see/touch differences across browsers **_before_** they start thinking about how to best solve problems! The only way to do that though... would be to make a customizable website that displays... everything!? Who got time (or money) for dat???
 
 Enter OBE:BS4! ;)
 
