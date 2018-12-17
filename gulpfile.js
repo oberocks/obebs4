@@ -104,7 +104,8 @@ gulp.task('move-images', function(){
             'obebs4/core/images/1920x1165.jpg',
             'obebs4/core/images/2650x1600.jpg',
             'obebs4/core/images/OBE-facebook-share-image.jpg',
-            'obebs4/core/images/OBE-twitter-share-image.jpg'
+            'obebs4/core/images/OBE-twitter-share-image.jpg',
+            'obebs4/core/images/obebs4-build-big-picture.jpg'
         ]
     )
     .pipe(gulp.dest('library/images'))

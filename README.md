@@ -18,7 +18,8 @@ THE OBE:BS4 Design System was designed to bridge the gaps between web project ow
     * [Example of Color Tints and Shades](#example-of-color-tints-and-shades)
     * [The Color Codes Table](#the-color-codes-table)
     * [Accessing Colors with JavaScript](#accessing-colors-with-javascript)
-* [Project Directory Structure](#project-directory-structure)
+* [Project Structure](#project-structure)
+    * [Project Directories](#project-directories)
     * [Project Build Tooling](#project-build-tooling)
 * [Installation](#installation)
     * [Installing with NPM](#installing-with-npm)
@@ -157,7 +158,13 @@ let darkGray = setRGBa( myColors.darkGray.rgba, '0.75' );
 ---
 
 
-## Project Directory Structure
+## Project Structure
+
+Because the system compiles a full HTML library site along with your customized Bootstrap 4 settings, there is a lot going on under the hood. Here's an image 
+
+<img src="https://library.mattmct.com/images/obebs4-build-big-picture.jpg" alt="OBE:BS4 Build Process - The Big Picture" width="100%">
+
+### Project Directories
 
 This project consists of 3 project directories and a handful of process files, that are intended to be a part of your project's root directory. 
 
