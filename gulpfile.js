@@ -12,6 +12,7 @@ const runSequence = require('run-sequence');
 const del = require('del');
 const cleanCSS = require('gulp-clean-css');
 const terser = require('gulp-terser');
+const htmlbeautify = require('gulp-html-beautify');
 
 
 
@@ -56,6 +57,19 @@ function get_global_strings_json(filepath) {
 
 
 
+gulp.task('ingest-obebs4-settings', function () {
+    return gulp.src('obebs4/data/obebs4_settings.json')
+    // pipe through jsonToSass
+    .pipe(jsonToSass({
+            jsonPath: 'obebs4/data/obebs4_settings.json',
+            scssPath: 'obebs4/scss/settings/_obebs4_settings.scss'
+        })
+    );
+});
+
+
+
+
 
 gulp.task('compile-sass', function(){
     return gulp.src(
@@ -70,6 +84,90 @@ gulp.task('compile-sass', function(){
     //.pipe(sourcemaps.write('.'))
     .pipe(gulp.dest('library/css'))
 });
+
+
+
+
+gulp.task('move-images', function(){
+    return gulp.src(
+        [
+            'obebs4/core/images/obe-devices.png',
+            'obebs4/core/images/64x64.jpg',
+            'obebs4/core/images/128x128.jpg',
+            'obebs4/core/images/256x256.jpg',
+            'obebs4/core/images/512x512.jpg',
+            'obebs4/core/images/600x338.jpg',
+            'obebs4/core/images/1024x1024.jpg',
+            'obebs4/core/images/1400x875.jpg',
+            'obebs4/core/images/1600x900.jpg',
+            'obebs4/core/images/1920x1080.jpg',
+            'obebs4/core/images/1920x1165.jpg',
+            'obebs4/core/images/2650x1600.jpg',
+            'obebs4/core/images/OBE-facebook-share-image.jpg',
+            'obebs4/core/images/OBE-twitter-share-image.jpg'
+        ]
+    )
+    .pipe(gulp.dest('library/images'))
+});
+
+
+
+
+gulp.task('move-favicon-files', function(){
+    return gulp.src(
+        [
+            'obebs4/core/images/favicons/android-icon-36x36.png',
+            'obebs4/core/images/favicons/android-icon-48x48.png',
+            'obebs4/core/images/favicons/android-icon-72x72.png',
+            'obebs4/core/images/favicons/android-icon-96x96.png',
+            'obebs4/core/images/favicons/android-icon-144x144.png',
+            'obebs4/core/images/favicons/android-icon-192x192.png',
+            'obebs4/core/images/favicons/apple-icon-57x57.png',
+            'obebs4/core/images/favicons/apple-icon-60x60.png',
+            'obebs4/core/images/favicons/apple-icon-72x72.png',
+            'obebs4/core/images/favicons/apple-icon-76x76.png',
+            'obebs4/core/images/favicons/apple-icon-114x114.png',
+            'obebs4/core/images/favicons/apple-icon-120x120.png',
+            'obebs4/core/images/favicons/apple-icon-144x144.png',
+            'obebs4/core/images/favicons/apple-icon-152x152.png',
+            'obebs4/core/images/favicons/apple-icon-180x180.png',
+            'obebs4/core/images/favicons/apple-icon-precomposed.png',
+            'obebs4/core/images/favicons/apple-icon.png',
+            'obebs4/core/images/favicons/favicon-16x16.png',
+            'obebs4/core/images/favicons/favicon-32x32.png',
+            'obebs4/core/images/favicons/favicon-96x96.png',
+            'obebs4/core/images/favicons/favicon.ico',
+            'obebs4/core/images/favicons/ms-icon-70x70.png',
+            'obebs4/core/images/favicons/ms-icon-144x144.png',
+            'obebs4/core/images/favicons/ms-icon-150x150.png',
+            'obebs4/core/images/favicons/ms-icon-310x310.png',
+            'obebs4/core/images/favicons/browserconfig.xml',
+            'obebs4/core/images/favicons/manifest.json'
+        ]
+    )
+    .pipe(gulp.dest('library/images/favicons'))
+});
+
+
+
+
+gulp.task('compile-nunjucks', function() {
+    // Gets .html and .nunjucks files in pages
+    return gulp.src('nunjucks/pages/**/*.+(html|nunjucks|njk)')
+    // Get OBE settings json data
+    .pipe(data(get_obebs4_settings('./obebs4/data/obebs4_settings.json')))
+    // Get global strings json data (for DRY nunjucks vars)
+    .pipe(data(get_global_strings_json('./nunjucks/data/global_strings.json')))
+    // Renders template with nunjucks
+    .pipe(nunjucksRender({
+        path: ['nunjucks/templates']
+    }))
+    // beautify the rendered file
+    .pipe(htmlbeautify())
+    // output files in app folder
+    .pipe(gulp.dest('library'))
+});
+
 
 
 
@@ -129,6 +227,7 @@ gulp.task('concat-css', function(){
 
 
 
+
 gulp.task('clean-up', function () {
     return del([
         'library/css/obebs4-bootstrap.css'
@@ -138,93 +237,6 @@ gulp.task('clean-up', function () {
 
 
 
-gulp.task('move-images', function(){
-    return gulp.src(
-        [
-            'obebs4/core/images/obe-devices.png',
-            'obebs4/core/images/64x64.jpg',
-            'obebs4/core/images/128x128.jpg',
-            'obebs4/core/images/256x256.jpg',
-            'obebs4/core/images/512x512.jpg',
-            'obebs4/core/images/600x338.jpg',
-            'obebs4/core/images/1024x1024.jpg',
-            'obebs4/core/images/1400x875.jpg',
-            'obebs4/core/images/1600x900.jpg',
-            'obebs4/core/images/1920x1080.jpg',
-            'obebs4/core/images/1920x1165.jpg',
-            'obebs4/core/images/2650x1600.jpg',
-            'obebs4/core/images/OBE-facebook-share-image.jpg',
-            'obebs4/core/images/OBE-twitter-share-image.jpg'
-        ]
-    )
-    .pipe(gulp.dest('library/images'))
-});
-
-
-
-gulp.task('move-favicon-files', function(){
-    return gulp.src(
-        [
-            'obebs4/core/images/favicons/android-icon-36x36.png',
-            'obebs4/core/images/favicons/android-icon-48x48.png',
-            'obebs4/core/images/favicons/android-icon-72x72.png',
-            'obebs4/core/images/favicons/android-icon-96x96.png',
-            'obebs4/core/images/favicons/android-icon-144x144.png',
-            'obebs4/core/images/favicons/android-icon-192x192.png',
-            'obebs4/core/images/favicons/apple-icon-57x57.png',
-            'obebs4/core/images/favicons/apple-icon-60x60.png',
-            'obebs4/core/images/favicons/apple-icon-72x72.png',
-            'obebs4/core/images/favicons/apple-icon-76x76.png',
-            'obebs4/core/images/favicons/apple-icon-114x114.png',
-            'obebs4/core/images/favicons/apple-icon-120x120.png',
-            'obebs4/core/images/favicons/apple-icon-144x144.png',
-            'obebs4/core/images/favicons/apple-icon-152x152.png',
-            'obebs4/core/images/favicons/apple-icon-180x180.png',
-            'obebs4/core/images/favicons/apple-icon-precomposed.png',
-            'obebs4/core/images/favicons/apple-icon.png',
-            'obebs4/core/images/favicons/favicon-16x16.png',
-            'obebs4/core/images/favicons/favicon-32x32.png',
-            'obebs4/core/images/favicons/favicon-96x96.png',
-            'obebs4/core/images/favicons/favicon.ico',
-            'obebs4/core/images/favicons/ms-icon-70x70.png',
-            'obebs4/core/images/favicons/ms-icon-144x144.png',
-            'obebs4/core/images/favicons/ms-icon-150x150.png',
-            'obebs4/core/images/favicons/ms-icon-310x310.png',
-            'obebs4/core/images/favicons/browserconfig.xml',
-            'obebs4/core/images/favicons/manifest.json'
-        ]
-    )
-    .pipe(gulp.dest('library/images/favicons'))
-});
-
-
-
-gulp.task('compile-nunjucks', function() {
-    // Gets .html and .nunjucks files in pages
-    return gulp.src('nunjucks/pages/**/*.+(html|nunjucks|njk)')
-    // Get OBE settings json data
-    .pipe(data(get_obebs4_settings('./obebs4/data/obebs4_settings.json')))
-    // Get global strings json data (for DRY nunjucks vars)
-    .pipe(data(get_global_strings_json('./nunjucks/data/global_strings.json')))
-    // Renders template with nunjucks
-    .pipe(nunjucksRender({
-        path: ['nunjucks/templates']
-    }))
-    // output files in app folder
-    .pipe(gulp.dest('library'))
-});
-
-
-
-gulp.task('ingest-obebs4-settings', function () {
-    return gulp.src('obebs4/data/obebs4_settings.json')
-    // pipe through jsonToSass
-    .pipe(jsonToSass({
-            jsonPath: 'obebs4/data/obebs4_settings.json',
-            scssPath: 'obebs4/scss/settings/_obebs4_settings.scss'
-        })
-    );
-});
 
 
 
