@@ -163,6 +163,7 @@ let darkGray = setRGBa( myColors.darkGray.rgba, '0.75' );
 Because the system compiles a full HTML library site along with your customized Bootstrap 4 settings, there is a lot going on under the hood. Here's an image 
 
 <img src="https://library.mattmct.com/images/obebs4-build-big-picture.jpg" alt="OBE:BS4 Build Process - The Big Picture" width="100%">
+![alt text](https://library.mattmct.com/images/obebs4-build-big-picture.jpg)
 
 ### Project Directories
 
