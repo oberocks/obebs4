@@ -30,37 +30,41 @@ THE OBE:BS4 Design System was designed to bridge the gaps between web project ow
 
 ## About
 
-The OBE:BS4 Design System is meant to nudge web projects, web teams, and even entire web organizations towards making both strategic and design related decisions about their projects *exclusively within* the contexts of the browsers. This approach has tremendous value, especially when seeking a device agnostic user experience.
+The OBE:BS4 Design System is meant to nudge web projects, web teams, and even entire web organizations towards making both strategic & design related decisions about their projects *exclusively within* the contexts of the browsers. This approach has tremendous value, especially when seeking a high-caliber device agnostic web user experience.
 
-In a sense, this system was made to theoretically replace design-centric tooling that insists on a designer "never writing a line of code." Instead, OBE:BS4 doesn't assume designers are incapable of learning how to hack a little markup or copy/paste HTML snippets. Thus the OBE:BS4 design system arms designers with both visual and markup examples of anything/everything a designer might need to solve a web-based design issue.
+OBE:BS4 doesn't assume designers are incapable of learning how to hack a little markup or copy/paste some HTML snippets. Thus the OBE:BS4 design system arms designers with both visual and markup examples of anything/everything a designer might need to solve a web-based design problem.
 
 > *"OBE:BS4 assumes that everyone working on a web project needs transparent access to each option and each limitation for the client-facing side of the project at all times."* - Matt McT
 
-Accomplishing this was done through a surprisingly simple operational tweak. The secret was creating a system where the front-end specialists are required to provide the designers a complete reference of all possible design options that are cross-browser optimized and are ready "to play with" on any device. All of this needs to happen **_before_** any design work begins.
+Accomplishing this was done through a surprisingly simple operational tweak. The secret was creating a system where the front-end specialists are expected to provide the design specialists with a complete reference of all available design options provided by both the browsers and any libraries/frameworks.
 
-This operational change forces front-end specialists to strategically plan ahead for their eventual handoff(s). What's magical about this situation is how it gives front-end specialists an unheard of opportunity to refactor and templatize elements/components at a production level, before **_any_** design sprints get started.
+Here's the catch though, all of this needs to happen **_before_** any design work begins!!! Much like a CSS reset technique sets the stage for a web page, designers deserve to "see" what stage elements are available... also across browsers. The only way to do that... is to make a site that does just that! Enter OBE:BS4 ;)
 
-> *"The aspect of this project that excites me the most, is how much further a team's strategic thinking and prototyping can reach upon embracing the OBE:BS4 process. It becomes clear after using the system for the first time, that somehow we've all been doing this web stuff in the wrong order! SMH!"* - Matt McT
+Additionally, what's magical about this situation from a developer's POV, is how it gives front-end specialists an unheard of opportunity to refactor and templatize elements/components at a production level, before **_any_** design sprints get started. This allows engineers to do what they do best, and engineer solutions the "right" way from the get-go, and to illuminate the design process through transparency of the tech stack.
+
+> *"The aspect of this project that excites me the most, is how much further a team's strategic thinking and prototyping can reach upon embracing the OBE:BS4 process. It becomes clear after using the system for the first time, that somehow we've all been doing this web stuff in the wrong order all these years! SMH!"* - Matt McT
 
 The OBE:BS4 Design System forces **_all_** project stakeholders to think more strategically about *responsive* content issues, by abstracting the design options to proactively to solve those issues into a giant digital "toolbox" of fully responsive and designer-ready pieces.
 
-If each piece is in-turn *proactively* optimized for production (IE valid, semantic, cross-browser, ARIA accessibile, and refactored for reuse), teams can finally provide themselves with an abundance of cognative room to focus on the most difficult goals of any given web project(s). Stuff like:
+If each piece is in-turn *proactively* optimized for production (IE valid, semantic, cross-browser, ARIA accessibile, and refactored for reuse), teams can finally provide themselves with an abundance of cognative room to focus on the more meta-level goals of any given web project.
+
+<!---
+You know, stuff like:
 1. Device Agnostic Designs
-1. Improving User Content Consumption
+1. Improving Content Consumption
 1. Increasing eCommerce Conversions
 1. 508 Compliance
 1. Device Agnostic & Accessible SaaS Services
 1. Ensuring Projects Are Maintainable/Reusable (For Devs)
+-->
 
 ### Project Color Wheel
 
-To work with the OBE:BS4 Design System, it is imperative that you understand the system's "color wheel." Before we dive into that though, let's cover why a color wheel was necessary to begin with!
+To work with the OBE:BS4 Design System, it is important to understand the system's "color wheel." Before we dive in, let's cover why a color wheel was necessary to begin with!
 
-Long story short, it started with the "contextual" color classes popularized by the Bootstrap framework (primary, secondary, danger, etc.) which were combined with Google's Material Design color guidelines. Next, branding was factored in, including concerns for both digital and analog collateral design needs. To organize all of that complexity into a universal brand solution, and to provide contingency color options for both digital and analog design edge cases, the color wheel system emerged!
+Long story short, it started with the Bootstrap "contextual" color classes (primary, danger, etc.) which were combined with Google's Material Design color guidelines. Next, branding was factored in, including concerns for both digital and analog collateral design needs. To organize all of that complexity into a universal solution, and to ensure contingency color options for both digital and analog design edge cases, the color wheel system emerged!
 
-You'll want to use the wheel to integrate any current branding into the OBE:BS4 system. Then by using the Design System's built-in settings tool (Example: [OBE:BS4 Settings Page](https://library.mattmct.com/settings.html)), you can specify your settings, grab the generated JSON, replace your existing settings file with your new JSON data, and finally re-generate your library site (HTML, CSS, & JS files) according to your settings... all in a few seconds!
-
-Your team now has a complete reference for web site/app design options, and each option is "on-brand" visually as well as ready for production use! Very cool!
+The color wheel is used to integrate any current branding into the OBE:BS4 system. Then by using the Design System's built-in settings tool (Example: [OBE:BS4 Settings Page](https://library.mattmct.com/settings.html)), you can specify your settings, grab the generated JSON, replace your existing settings file with your new JSON data, and finally re-generate your library site (HTML, CSS, & JS files) with your new settings!
 
 #### List of Color Wheel Colors
 
