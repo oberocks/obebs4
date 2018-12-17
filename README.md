@@ -199,7 +199,7 @@ npm init
 
 **Step 2**: Install obebs4-design-system from GitHub (NPM will install all dependencies and this codebase inside the 'node_modules' directory)
 ```bash
-npm install --save oberocks/obebs4-design-system#master
+npm install --save oberocks/obebs4#master
 ```
 
 <!---
