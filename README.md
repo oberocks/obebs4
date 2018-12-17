@@ -4,7 +4,7 @@ The OBE:BS4 Design System is the world's first self-reflexive design system for 
 
 THE OBE:BS4 Design System was designed to bridge the gaps between web project owners, designers, and developers. OBE:BS4 achieves this goal by fostering a more healthy understanding of both code and design *constraints* in the context of the final output medium(s)... the web browsers!
 
-> **Please Note:** *This project is fully functional as far as the generated CSS, JS, and library HTML files are concerned. However the code will receive _substantial changes_ before being ready for all to use. Please consider this an alpha version, and keep an eye on this page to learn more about how everything works as documentation is figured out. Once the project is ready, an offical release will follow!*
+> **Please Note:** *This project is fully functional as far as the generated CSS, JS, and library HTML files are concerned. However the code will receive _substantial changes_ before being ready for all to use. Please consider this an alpha version, and keep an eye on this page to learn more about how everything works as documentation is figured out. Once the project is rezady, an offical release will follow!*
 
 
 ---
@@ -13,12 +13,12 @@ THE OBE:BS4 Design System was designed to bridge the gaps between web project ow
 ## Table of Contents
 
 * [About](#about)
-    * [Project Color Wheel](#project-color-wheel)
-        * [List of Color Wheel Colors](#list-of-color-wheel-colors)
-        * [Example of Color Tints and Shades](#example-of-color-tints-and-shades)
-        * [The Color Codes Table](#the-color-codes-table)
-        * [Accessing Colors with JavaScript](#accessing-colors-with-javascript)
-    * [Project Directory Structure](#project-directory-structure)
+* [Project Color Wheel](#project-color-wheel)
+    * [List of Color Wheel Colors](#list-of-color-wheel-colors)
+    * [Example of Color Tints and Shades](#example-of-color-tints-and-shades)
+    * [The Color Codes Table](#the-color-codes-table)
+    * [Accessing Colors with JavaScript](#accessing-colors-with-javascript)
+* [Project Directory Structure](#project-directory-structure)
     * [Project Build Tooling](#project-build-tooling)
 * [Installation](#installation)
     * [Installing with NPM](#installing-with-npm)
@@ -44,7 +44,7 @@ Here's the catch though, all of this needs to happen **_before_** any design wor
 
 Enter OBE:BS4! ;)
 
-Additionally, what's magical about this situation from a developer's POV, is how it gives front-end specialists an opportunity to refactor and templatize elements/components at a production level, before **_any_** design sprints get started. This allows engineers to create amazingly DRY markup templates/scripts, and to engineer solutions the "right" way from the get-go.
+Additionally, what's magical about this situation from a developer's POV, is how it gives front-end specialists an opportunity to refactor and templatize elements/components at a production level, before **_any_** design sprints begin. This allows engineers to create amazingly DRY markup templates/scripts, and to engineer solutions the "right" way from the get-go according to the tech stack.
 
 > *"The aspect of this project that excites me the most, is how much further a team's strategic thinking and prototyping can reach upon embracing the OBE:BS4 process. It becomes clear after using the system fully, that somehow we've all accidentily been doing this web stuff in the wrong order all these years! D'OH!"* - Matt McT
 
@@ -62,7 +62,7 @@ You know, stuff like:
 1. Ensuring Projects Are Maintainable/Reusable (For Devs)
 -->
 
-### Project Color Wheel
+## Project Color Wheel
 
 To work with the OBE:BS4 Design System, it's important to understand the system's "color wheel." Before we dive in, let's cover why a color wheel was necessary to begin with!
 
@@ -70,7 +70,7 @@ Long story short, it started with the Bootstrap "contextual" color classes (prim
 
 The color wheel itself is used to integrate any current branding into the OBE:BS4 build system. Then by using the system's built-in settings tool (Example: [OBE:BS4 Settings Page](https://library.mattmct.com/settings.html)), you can specify your settings, grab the generated JSON, replace your existing settings file with your new JSON data, and finally re-generate your library site (HTML, CSS, & JS files) with your new settings!
 
-#### List of Color Wheel Colors
+### List of Color Wheel Colors
 
 PRO TIP: If possible, try to memorize these slugs and patterns! Knowing these will let you iterate VERY rapidly!
 
@@ -98,7 +98,7 @@ PRO TIP: If possible, try to memorize these slugs and patterns! Knowing these wi
 | Dark Gray | dark-gray | darkGray |
 | Black | black | black |
 
-#### Example of Color Tints and Shades
+### Example of Color Tints and Shades
 
 PRO TIP: When using the Design System's tints and shades, each color gets a set of tint and shade values like the example for Blue below. Also for all color options with tints and shade classes, using the color slug without any numbers is equal to the 500 variation of that color. So for example, "Blue" is equal to "Blue 500", "White" to "White 500", and so on!
 
@@ -116,7 +116,7 @@ PRO TIP: When using the Design System's tints and shades, each color gets a set 
 | Blue 800 | blue-800 | blue800 |
 | Blue 900 | blue-900 | blue900 |
 
-#### The Color Codes Table
+### The Color Codes Table
 
 The OBE:BS4 design system allows you to centralize your brand colors for web projects. It can also be used for non-web design disciplines, too. OBE:BS4 makes the challenge of keeping brand colors consistent across projects/mediums trivial.
 
@@ -124,7 +124,7 @@ If you host your library, Visual Designers can use the design system's client-si
 
 The Color Codes Table is basically the best tool your team never knew they needed.
 
-#### Accessing Colors with JavaScript
+### Accessing Colors with JavaScript
 
 The Color Codes Table is great for designers and marketers and all... but what about when those color codes are needed in JavaScript???
 
@@ -150,7 +150,7 @@ const setRGBa = function (rgbaString, alphaValue) {
 let darkGray = setRGBa( myColors.darkGray.rgba, '0.75' );
 ```
 
-### Project Directory Structure
+## Project Directory Structure
 
 This project consists of 3 project directories and a handful of process files, that are intended to be a part of your project's root directory. 
 
@@ -186,7 +186,7 @@ This project consists of 3 project directories and a handful of process files, t
             - macros
             - reference
             - settings
-- gulpfile.js
+- package.json, gulpfile.js, etc.
 
 ### Project Build Tooling
 
@@ -218,12 +218,13 @@ npm init
 npm install --save oberocks/obebs4#master
 ```
 
-<!---
-**Step 3**: Use the following series of command line scripts to move the starting library files into your working directory
-```bash
-npm run create-obebs4-directories
-```
--->
+**Step 3**: Copy the following directories and files into your root directory
+* Directories
+    * ./node_modules/obebs4/library
+    * ./node_modules/obebs4/obebs4
+    * ./node_modules/obebs4/nunjucks
+* Files
+    * ./node_modules/obebs4/gulpfile.js
 
 ### Installing with Zip
 
