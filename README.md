@@ -4,7 +4,7 @@ The OBE:BS4 Design System is the world's first self-reflexive design system for 
 
 THE OBE:BS4 Design System was designed to bridge the gaps between web project owners, designers, and developers. OBE:BS4 achieves this goal by fostering a more healthy understanding of both code and design *constraints* in the context of the final output medium(s)... the web browsers!
 
-> **Please Note:** *This project is fully functional as far as the generated CSS, JS, and library HTML files are concerned. However it will receive some _substantial changes_ before being ready for all to use. Keep an eye on this page to learn more about how everything works as documentation is added. Once the project is ready, an offical release will follow!*
+> **Please Note:** *This project is fully functional as far as the generated CSS, JS, and library HTML files are concerned. However it will receive some _substantial changes_ before being ready for all to use. Please consider this an alpha version, and keep an eye on this page to learn more about how everything works as documentation is figured out. Once the project is ready, an offical release will follow!*
 
 
 ---
@@ -30,17 +30,19 @@ THE OBE:BS4 Design System was designed to bridge the gaps between web project ow
 
 ## About
 
-The OBE:BS4 Design System is meant to nudge web projects, web teams, and even entire web organizations towards making both strategic & design related decisions about their projects *exclusively within* the contexts of the browsers. This approach has tremendous value, especially when seeking a high-caliber device agnostic web user experience.
+The OBE:BS4 Design System is meant to nudge web projects, web teams, and even entire web organizations towards making both strategic & design related decisions about their projects *exclusively within* the contexts of the browsers. This approach has tremendous value, especially when seeking a high-caliber device agnostic web user experiences.
 
-OBE:BS4 doesn't assume designers are incapable of learning how to hack a little markup or copy/paste some HTML snippets. Thus the OBE:BS4 design system arms designers with both visual and markup examples of anything/everything a designer might need to solve a web-based design problem.
+OBE:BS4 doesn't assume designers are incapable of learning how to hack a little markup or throw some HTML snippets. Instead, the OBE:BS4 design system arms designers with both visual and markup examples of anything/everything a designer might need to solve a web-based design problem.
 
 > *"OBE:BS4 assumes that everyone working on a web project needs transparent access to each option and each limitation for the client-facing side of the project at all times."* - Matt McT
 
 Accomplishing this was done through a surprisingly simple operational tweak. The secret was creating a system where the front-end specialists are expected to provide the design specialists with a complete reference of all available design options provided by both the browsers and any libraries/frameworks.
 
-Here's the catch though, all of this needs to happen **_before_** any design work begins!!! Much like a CSS reset technique sets the stage for a web page, designers deserve to "see" what stage elements are available... also across browsers. The only way to do that... is to make a site that does just that! Enter OBE:BS4 ;)
+Here's the catch though, all of this needs to happen **_before_** any design work begins!!! Designers need to "see" what stage elements are available for use in designs... also across browsers. The only way to do that though... would be to make a customizable website that displays... everything!?
 
-Additionally, what's magical about this situation from a developer's POV, is how it gives front-end specialists an unheard of opportunity to refactor and templatize elements/components at a production level, before **_any_** design sprints get started. This allows engineers to do what they do best, and engineer solutions the "right" way from the get-go, and to illuminate the design process through transparency of the tech stack.
+Enter OBE:BS4! ;)
+
+Additionally, what's magical about this situation from a developer's POV, is how it gives front-end specialists an unheard of opportunity to refactor and templatize elements/components at a production level, before **_any_** design sprints get started. This allows engineers to create amazingly DRY templates/scripts, and to engineer solutions the "right" way from the get-go.
 
 > *"The aspect of this project that excites me the most, is how much further a team's strategic thinking and prototyping can reach upon embracing the OBE:BS4 process. It becomes clear after using the system for the first time, that somehow we've all been doing this web stuff in the wrong order all these years! SMH!"* - Matt McT
 
@@ -64,7 +66,7 @@ To work with the OBE:BS4 Design System, it is important to understand the system
 
 Long story short, it started with the Bootstrap "contextual" color classes (primary, danger, etc.) which were combined with Google's Material Design color guidelines. Next, branding was factored in, including concerns for both digital and analog collateral design needs. To organize all of that complexity into a universal solution, and to ensure contingency color options for both digital and analog design edge cases, the color wheel system emerged!
 
-The color wheel is used to integrate any current branding into the OBE:BS4 system. Then by using the Design System's built-in settings tool (Example: [OBE:BS4 Settings Page](https://library.mattmct.com/settings.html)), you can specify your settings, grab the generated JSON, replace your existing settings file with your new JSON data, and finally re-generate your library site (HTML, CSS, & JS files) with your new settings!
+The color wheel itself is used to integrate any current branding into the OBE:BS4 build system. Then by using the system's built-in settings tool (Example: [OBE:BS4 Settings Page](https://library.mattmct.com/settings.html)), you can specify your settings, grab the generated JSON, replace your existing settings file with your new JSON data, and finally re-generate your library site (HTML, CSS, & JS files) with your new settings!
 
 #### List of Color Wheel Colors
 
