@@ -1,10 +1,10 @@
 # OBE:BS4 Design System
 
-The OBE:BS4 Design System is the world's first self-reflexive design system for web production. OBE:BS4 is based on the most popular/robust front-end web framework in the world, Bootstrap! The OBE:BS4 system was designed & built to give all project stakeholders total visual, technical, and tactile access to every color, font, element, component and layout in a web project... *before the project enters any design phases!*
+The OBE:BS4 Design System is the world's first self-reflexive design system for web production. OBE:BS4 is based on the most popular/robust front-end web framework in the world, Bootstrap! The OBE:BS4 system was designed & built to give all project stakeholders total visual, technical, and tactile access to every color, font, element, component, & layout in a web project... *before the project enters any design phases!*
 
 THE OBE:BS4 Design System was designed to bridge the gaps between web project owners, designers, and developers. OBE:BS4 achieves this goal by fostering a more healthy understanding of both code and design *constraints* in the context of the final output medium(s)... the web browsers!
 
-> **Please Note:** *This project is fully functional as far as the generated CSS, JS, and library HTML files are concerned. However it will receive some _substantial changes_ before being ready for all to use. Please consider this an alpha version, and keep an eye on this page to learn more about how everything works as documentation is figured out. Once the project is ready, an offical release will follow!*
+> **Please Note:** *This project is fully functional as far as the generated CSS, JS, and library HTML files are concerned. However the code will receive _substantial changes_ before being ready for all to use. Please consider this an alpha version, and keep an eye on this page to learn more about how everything works as documentation is figured out. Once the project is ready, an offical release will follow!*
 
 
 ---
@@ -16,6 +16,7 @@ THE OBE:BS4 Design System was designed to bridge the gaps between web project ow
     * [Project Color Wheel](#project-color-wheel)
         * [List of Color Wheel Colors](#list-of-color-wheel-colors)
         * [Example of Color Tints and Shades](#example-of-color-tints-and-shades)
+        * [The Color Codes Table](#the-color-codes-table)
         * [Accessing Colors with JavaScript](#accessing-colors-with-javascript)
     * [Project Directory Structure](#project-directory-structure)
     * [Project Build Tooling](#project-build-tooling)
@@ -32,7 +33,7 @@ THE OBE:BS4 Design System was designed to bridge the gaps between web project ow
 
 The OBE:BS4 Design System is meant to nudge web projects, web teams, and even entire web organizations towards making both strategic & design related decisions about their projects *exclusively within* the contexts of the browsers. This approach has tremendous value, especially when seeking a high-caliber device agnostic web user experiences.
 
-OBE:BS4 doesn't assume designers are incapable of learning how to hack a little markup or throw some HTML snippets. Instead, the OBE:BS4 design system arms designers with both visual and markup examples of anything/everything a designer might need to solve a web-based design problem.
+OBE:BS4 doesn't assume designers are incapable of learning how to hack a little markup or throw around some HTML snippets. Instead, the OBE:BS4 design system arms designers with both visual and markup examples of anything/everything a designer might need to solve a web-based design problem.
 
 > *"OBE:BS4 assumes that everyone working on a web project needs transparent access to each option and each limitation for the client-facing side of the project at all times."* - Matt McT
 
@@ -42,13 +43,13 @@ Here's the catch though, all of this needs to happen **_before_** any design wor
 
 Enter OBE:BS4! ;)
 
-Additionally, what's magical about this situation from a developer's POV, is how it gives front-end specialists an unheard of opportunity to refactor and templatize elements/components at a production level, before **_any_** design sprints get started. This allows engineers to create amazingly DRY templates/scripts, and to engineer solutions the "right" way from the get-go.
+Additionally, what's magical about this situation from a developer's POV, is how it gives front-end specialists an unheard of opportunity to refactor and templatize elements/components at a production level, before **_any_** design sprints get started. This allows engineers to create amazingly DRY markup templates/scripts, and to engineer solutions the "right" way from the get-go.
 
-> *"The aspect of this project that excites me the most, is how much further a team's strategic thinking and prototyping can reach upon embracing the OBE:BS4 process. It becomes clear after using the system for the first time, that somehow we've all been doing this web stuff in the wrong order all these years! SMH!"* - Matt McT
+> *"The aspect of this project that excites me the most, is how much further a team's strategic thinking and prototyping can reach upon embracing the OBE:BS4 process. It becomes clear after using the system fully, that somehow we've all accidentily been doing this web stuff in the wrong order all these years! D'OH!"* - Matt McT
 
-The OBE:BS4 Design System forces **_all_** project stakeholders to think more strategically about *responsive* content issues, by abstracting the design options to proactively to solve those issues into a giant digital "toolbox" of fully responsive and designer-ready pieces.
+The OBE:BS4 Design System positions **_all_** project stakeholders to think more strategically about *responsive* content issues, by abstracting the design options to proactively to solve those issues into a tangible digital "toolbox" of fully responsive and designer-ready pieces.
 
-If each piece is in-turn *proactively* optimized for production (IE valid, semantic, cross-browser, ARIA accessibile, and refactored for reuse), teams can finally provide themselves with an abundance of cognative room to focus on the more meta-level goals of any given web project.
+If each piece is in-turn *proactively* optimized for production (IE valid, semantic, cross-browser, ARIA accessibile, and refactored for reuse), teams find themselves with an abundance of cognative room to focus on the more meta-level goals of any given web project.
 
 <!---
 You know, stuff like:
@@ -64,13 +65,13 @@ You know, stuff like:
 
 To work with the OBE:BS4 Design System, it is important to understand the system's "color wheel." Before we dive in, let's cover why a color wheel was necessary to begin with!
 
-Long story short, it started with the Bootstrap "contextual" color classes (primary, danger, etc.) which were combined with Google's Material Design color guidelines. Next, branding was factored in, including concerns for both digital and analog collateral design needs. To organize all of that complexity into a universal solution, and to ensure contingency color options for both digital and analog design edge cases, the color wheel system emerged!
+Long story short, it started with the Bootstrap "contextual" color classes (primary, danger, etc.) which were combined with Google's Material Design color guidelines. Next, branding was factored in, including concerns for both digital and analog collateral design needs. To organize all of that complexity into a customizable solution, and to ensure contingency color options for both digital and analog design edge cases, the color wheel system emerged!
 
 The color wheel itself is used to integrate any current branding into the OBE:BS4 build system. Then by using the system's built-in settings tool (Example: [OBE:BS4 Settings Page](https://library.mattmct.com/settings.html)), you can specify your settings, grab the generated JSON, replace your existing settings file with your new JSON data, and finally re-generate your library site (HTML, CSS, & JS files) with your new settings!
 
 #### List of Color Wheel Colors
 
-PRO TIP: If possible, try to memorize these! Knowing these by memory will let you iterate VERY rapidly!
+PRO TIP: If possible, try to memorize these slugs and patterns! Knowing these will let you iterate VERY rapidly!
 
 | Name | CSS Slug | JS Slug |
 | --- | --- | --- |
@@ -98,7 +99,7 @@ PRO TIP: If possible, try to memorize these! Knowing these by memory will let yo
 
 #### Example of Color Tints and Shades
 
-PRO TIP: When using the Design System's tints and shades, each color gets a set of tint and shade values like the example for Blue below. Also and for all color options with tints and shades, using the color slug without any numbers is equal to the 500 variation of that color. So for example, "Blue" is equal to "Blue 500" and so fourth!
+PRO TIP: When using the Design System's tints and shades, each color gets a set of tint and shade values like the example for Blue below. Also for all color options with tints and shade classes, using the color slug without any numbers is equal to the 500 variation of that color. So for example, "Blue" is equal to "Blue 500", "White" to "White 500", and so on!
 
 | Name | CSS Slug | JS Slug |
 | --- | --- | --- |
@@ -114,15 +115,23 @@ PRO TIP: When using the Design System's tints and shades, each color gets a set 
 | Blue 800 | blue-800 | blue800 |
 | Blue 900 | blue-900 | blue900 |
 
+#### The Color Codes Table
+
+The OBE:BS4 design system allows you to centralize your brand colors for web projects. It can also be used for non-web design disciplines, too. OBE:BS4 makes the challenge of keeping brand colors consistent across projects/mediums trivial.
+
+If you host your library, Visual Designers can use the design system's client-side generated [Color Reference Table](https://library.mattmct.com/reference.html#color-codes-table) to quickly find color codes for each color in the system. This means that it takes only seconds to add exact colors (even recently updated colors ;) into Photoshop, Illustrator, PowerPoint, Social Network account settings, video work, and so much more.
+
+The Color Codes Table is basically the best tool your team never knew they needed.
+
 #### Accessing Colors with JavaScript
 
-The OBE:BS4 design system allows you to centralize your brand colors across design disciplines and for web projects, too. This makes keeping brand colors consistent acrosss both projects and mediums trivial. Since your color wheel colors pass through SASS (via gulp-sass) to generate the CSS classes that control element colors in the system, it's important to use a the fewest possible color conversion scripts to keep all generated color values consistent *with each other*.
+The Color Codes Table is great for designers and marketers and all... but what about when those color codes are needed in JavaScript???
 
-However, this makes passing consistent brand color values over to JavaScript a bit problematic. Sure, we could force every color wheel color and tint and shade onto a page as CSS3 variables. The base wheel colors already are! ;) But that's not yet consistent, and the necessary fallbacks are just as much code. Plus it's extra CSS weight on an already heavy file.
+That's exactly what the client-side generated [JavaScript/JSON Snippets](https://library.mattmct.com/reference.html#accessing-obebs4-colors-javascript) part of the system is for!
 
-To solve this problem, the site's generated [Color Reference Table](https://library.mattmct.com/reference.html#color-codes-table), and client-side generated [JavaScript/JSON Snippets](https://library.mattmct.com/reference.html#accessing-obebs4-colors-javascript), allow you to bring your brand colors into your project in minutes. Having your complete color system available in JavaScript makes things like charts, SVG manipulation, and more very easy to iterate upon, while never running out of colors for a vast majority of design challenges.
+A developer can simply parse the generated JSON strings, and access the color codes using the JS Slugs conventions in the table above.
 
-Generally, you'll want to make a seperate JavaScript file, and include/require it on pages as needed to bring your colors into the dynamic side of things. Here's a super simple way to demonstrate how to use OBE:BS4 color wheel colors in JavaScript:
+For example, you could to make a seperate JavaScript file, and parse your colors JSON string as you assign it to a variable. Then you can include/require it on pages/components as needed. Here's a super simplified way to demonstrate how to use OBE:BS4 color wheel colors in JavaScript:
 
 ```javascript
 // EXAMPLE: An external .js file named brandColors.js
@@ -142,7 +151,7 @@ let darkGray = setRGBa( myColors.darkGray.rgba, '0.75' );
 
 ### Project Directory Structure
 
-This project consists of 3 project directories and a handful of process files, that are intended to be a part of your project's root directory:
+This project consists of 3 project directories and a handful of process files, that are intended to be a part of your project's root directory. 
 
 - obebs4
     - core
