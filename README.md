@@ -18,7 +18,7 @@ THE OBE:BS4 Design System was designed to bridge the gaps between web project ow
     * [Example of Color Tints and Shades](#example-of-color-tints-and-shades)
     * [The Color Codes Table](#the-color-codes-table)
     * [Accessing Colors with JavaScript](#accessing-colors-with-javascript)
-* [Project Structure](#project-structure)
+* [Project Workflow](#project-workflow)
     * [Project Directories](#project-directories)
     * [Project Build Tooling](#project-build-tooling)
 * [Installation](#installation)
@@ -158,9 +158,15 @@ let darkGray = setRGBa( myColors.darkGray.rgba, '0.75' );
 ---
 
 
-## Project Structure
+## Project Workflow
 
-Because the system compiles a full HTML library site along with your customized Bootstrap 4 settings, there is a lot going on under the hood. Here's an image 
+Because the system compiles a full HTML library site along with the extended Bootstrap 4 CSS/JS files the library site uses, there is a lot going on under the hood.
+
+The general suggested workflow assumes you are using a version control repository (like GitHub). From there, you generally either update settings (using the client-side tool in the rendered site files) or add new items to your system Nunjucks library files and/or Bootstrap integrated SASS files. Either way, you re-render the library site (and generally host it for the team to use from any device).
+
+Some folks like to host the site on a subdomain, and others as a subdirectory. Some folks like to password protect the library site files, while others let it out in the public. Either way, OBE:BS4 doesn't really tread that far, but it is strongly advised to be sure the library is hosted somewhere for the team to consume and tinker with.
+
+Here's a diagram to illustrate the intended workflow:
 
 <img src="https://library.mattmct.com/images/obebs4-build-big-picture.jpg" alt="OBE:BS4 Build Process - The Big Picture" width="100%">
 
