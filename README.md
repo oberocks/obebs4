@@ -212,7 +212,7 @@ Then you'll need to use Gulp to run the scripts needed to apply your settings an
 npm init
 ```
 
-**Step 2**: Install obebs4-design-system from GitHub (NPM will install all dependencies and this codebase inside the 'node_modules' directory)
+**Step 2**: Install obebs4 from GitHub (NPM will install all dependencies along with this codebase inside your 'node_modules' directory)
 ```bash
 npm install --save oberocks/obebs4#master
 ```
