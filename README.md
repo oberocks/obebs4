@@ -114,7 +114,7 @@ The OBE:BS4 design system allows you to centralize your brand colors across desi
 
 However, this makes passing consistent brand color values over to JavaScript a bit problematic. Sure, we could force every color wheel color and tint and shade onto a page as CSS3 variables. The base wheel colors already are! ;) But that's not yet consistent, and the necessary fallbacks are just as much code. Plus it's extra CSS weight on an already heavy file.
 
-To solve this problem, the site's generated Color Reference Table, and client-side generated JavaScript/JSON Snippets, allow you to bring your brand colors into your project in minutes. Having your complete color system available in JavaScript makes things like charts, SVG manipulation, and more very easy to iterate upon, while never running out of colors for a vast majority of design challenges.
+To solve this problem, the site's generated [Color Reference Table](https://library.mattmct.com/reference.html#color-codes-table), and client-side generated [JavaScript/JSON Snippets](https://library.mattmct.com/reference.html#accessing-obebs4-colors-javascript), allow you to bring your brand colors into your project in minutes. Having your complete color system available in JavaScript makes things like charts, SVG manipulation, and more very easy to iterate upon, while never running out of colors for a vast majority of design challenges.
 
 Generally, you'll want to make a seperate JavaScript file, and include/require it on pages as needed to bring your colors into the dynamic side of things. Here's a super simple way to demonstrate how to use OBE:BS4 color wheel colors in JavaScript:
 
