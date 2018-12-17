@@ -170,6 +170,12 @@ Here's a diagram to illustrate the intended workflow:
 
 <img src="https://library.mattmct.com/images/obebs4-build-big-picture.jpg" alt="OBE:BS4 Build Process - The Big Picture" width="100%">
 
+It's worth noting, that new projects and prototypes aren't necessarily a part of the library. To try out new ideas, it's best to use a boilerplate provided by the design system, with a fresh HTML file. The boilerplates in the OBE:BS4 system should be set-up to let teammembers copy and paste as few times as possible to creative mode as fast as possible.
+
+However, when creating new components or element variations, you often will want to add your awesome creation into the library for your team and projects to use freely.
+
+*(More on extending the library with your own components/elements as the project matures a bit past this intial alpha stage! See the roadmap section for more!)*
+
 ### Project Directories
 
 This project consists of 3 project directories and a handful of process files, that are intended to be a part of your project's root directory. 
@@ -256,4 +262,4 @@ npm install --save oberocks/obebs4#master
 
 ## Roadmap
 
-(Coming Soon!)
+* Extending The Library Walk-Thru
