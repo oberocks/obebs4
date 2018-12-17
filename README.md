@@ -12,7 +12,7 @@ THE OBE:BS4 Design System was designed to bridge the gaps between web project ow
 
 ## Table of Contents
 
-* [About](#about-obe:bs4)
+* [About](#about-obe-bs4)
 * [Project Color Wheel](#project-color-wheel)
     * [List of Color Wheel Colors](#list-of-color-wheel-colors)
     * [Examples of Color Tints and Shades](#examples-of-color-tints-and-shades)
