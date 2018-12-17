@@ -12,7 +12,7 @@ THE OBE:BS4 Design System was designed to bridge the gaps between web project ow
 
 ## Table of Contents
 
-* [About](#about-obe-bs4)
+* [About The Project](#about-the-project)
 * [Project Color Wheel](#project-color-wheel)
     * [List of Color Wheel Colors](#list-of-color-wheel-colors)
     * [Examples of Color Tints and Shades](#examples-of-color-tints-and-shades)
@@ -24,14 +24,14 @@ THE OBE:BS4 Design System was designed to bridge the gaps between web project ow
 * [Installation](#installation)
     * [Installing with NPM](#installing-with-npm)
     * [Installing with Zip](#installing-with-zip)
-* Library Site
+* [Library Site Files](#library-site-files)
 * [Roadmap](#roadmap)
 
 
 ---
 
 
-## About OBE:BS4
+## About The Project
 
 The OBE:BS4 Design System is meant to nudge web projects, web teams, and even entire web organizations towards making both strategic & design related decisions about their projects *exclusively within* the contexts of the browsers. This approach has tremendous value, especially when seeking a high-caliber device agnostic web user experiences.
 
@@ -256,6 +256,15 @@ npm install --save oberocks/obebs4#master
 
 
 ---
+
+
+## Library Site Files
+
+(Coming Soon!)
+
+
+---
+
 
 
 ## Roadmap
