@@ -62,6 +62,9 @@ You know, stuff like:
 1. Ensuring Projects Are Maintainable/Reusable (For Devs)
 -->
 
+---
+
+
 ## Project Color Wheel
 
 To work with the OBE:BS4 Design System, it's important to understand the system's "color wheel." Before we dive in, let's cover why a color wheel was necessary to begin with!
@@ -149,6 +152,10 @@ const setRGBa = function (rgbaString, alphaValue) {
 // EXAMPLE IN ACTION:
 let darkGray = setRGBa( myColors.darkGray.rgba, '0.75' );
 ```
+
+
+---
+
 
 ## Project Directory Structure
 
