@@ -15,7 +15,7 @@ THE OBE:BS4 Design System was designed to bridge the gaps between web project ow
 * [About](#about)
 * [Project Color Wheel](#project-color-wheel)
     * [List of Color Wheel Colors](#list-of-color-wheel-colors)
-    * [Example of Color Tints and Shades](#example-of-color-tints-and-shades)
+    * [Examples of Color Tints and Shades](#examples-of-color-tints-and-shades)
     * [The Color Codes Table](#the-color-codes-table)
     * [Accessing Colors with JavaScript](#accessing-colors-with-javascript)
 * [Project Workflow](#project-workflow)
@@ -102,7 +102,7 @@ PRO TIP: If possible, try to memorize these slugs and patterns! Knowing these wi
 | Dark Gray | dark-gray | darkGray |
 | Black | black | black |
 
-### Example of Color Tints and Shades
+### Examples of Color Tints and Shades
 
 PRO TIP: When using the Design System's tints and shades, each color gets a set of tint and shade values like the example for Blue below. Also for all color options with tints and shade classes, using the color slug without any numbers is equal to the 500 variation of that color. So for example, "Blue" is equal to "Blue 500", "White" to "White 500", and so on!
 
