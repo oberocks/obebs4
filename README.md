@@ -244,7 +244,36 @@ npm init
 npm install --save oberocks/obebs4#master
 ```
 
-**Step 4**: Copy the following directories and files into your root directory
+**Step 4**: Open up the OBE:BS4 Settings Page
+```bash
+open node_modules/obebs4/library/settings.html
+```
+
+**Step 5**: Use the OBE:BS4 Settings Page to set your colors and choose the options you want included in your library and brand CSS/JS files. Click the 'GET JSON & LINK' button to get your OBE:BS4 JSON settings. (See [Project Color Wheel](#project-color-wheel) for more info!)
+
+**Step 6**: Create a new file (should be in your project's root directory) called: obebs4_settings.json
+```bash
+touch obebs4_settings.json
+```
+
+**Step 7**: Now paste in your OBE:BS4 JSON settings into your newly created obebs4_settings.json file, and save the file.
+
+**Step 8**: Now you'll need to navigate into your obebs4 node_module directory to run the gulp scripts to compile your library files with your settings.
+```bash
+cd node_modules/obebs4
+```
+
+**Step 9**: Now you can compile your new library site with:
+```bash
+gulp obebs4
+```
+
+**Step 10**: Return back to your root directory:
+```bash
+cd ../..
+```
+
+**Step 10**: Copy the following directories and files into your root directory
 * Directories
     * ./node_modules/obebs4/library
     * ./node_modules/obebs4/obebs4
