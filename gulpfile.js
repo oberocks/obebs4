@@ -36,12 +36,29 @@ function get_global_strings_json(filepath) {
 // Utility Function to prepend string to array of file paths
 function pathArrPrepend(array, string) {
     const arr = [];
-    const str = string != undefined ? str = string : '';
+    let str = '';
+    if (string != undefined) {
+        str = string;
+    }
     for (let i = 0; i < array.length; i++) {
         arr.push(str + array[i]);
     }
     return arr;
 }
+
+
+
+
+
+// Set the settings file path to the default settings file
+let settingsFilePath = './obebs4/data/obebs4_settings.json';
+
+// Check for a settings file in the root directory
+// If found, then use that settings file instead of the default
+if (fs.existsSync('./obebs4_settings.json')) {
+    settingsFilePath = './obebs4_settings.json';
+}
+
 
 
 
@@ -105,10 +122,10 @@ const libraryFavicons = [
 
 
 gulp.task('ingest-obebs4-settings', function () {
-    return gulp.src('./obebs4/data/obebs4_settings.json')
+    return gulp.src(settingsFilePath)
     // pipe through jsonToSass
     .pipe(jsonToSass({
-            jsonPath: './obebs4/data/obebs4_settings.json',
+            jsonPath: settingsFilePath,
             scssPath: './obebs4/scss/settings/_obebs4_settings.scss'
         })
     );
@@ -136,7 +153,7 @@ gulp.task('compile-sass', function(){
 
 
 gulp.task('move-images', function(){
-    return gulp.src(pathArrPrepend(libraryImages))
+    return gulp.src(pathArrPrepend(libraryImages, './'))
     .pipe(gulp.dest('./library/images'))
 });
 
@@ -144,7 +161,7 @@ gulp.task('move-images', function(){
 
 
 gulp.task('move-favicon-files', function(){
-    return gulp.src(pathArrPrepend(libraryFavicons))
+    return gulp.src(pathArrPrepend(libraryFavicons, './'))
     .pipe(gulp.dest('./library/images/favicons'))
 });
 
@@ -161,7 +178,7 @@ gulp.task('compile-nunjucks', function() {
     // Gets .html and .nunjucks files in pages
     return gulp.src('./nunjucks/pages/**/*.+(html|nunjucks|njk)')
     // Get OBE settings json data
-    .pipe(data(get_obebs4_settings('./obebs4/data/obebs4_settings.json')))
+    .pipe(data(get_obebs4_settings(settingsFilePath)))
     // Get global strings json data (for DRY nunjucks vars)
     .pipe(data(get_global_strings_json('./nunjucks/data/global_strings.json')))
     // Renders template with nunjucks
