@@ -20,29 +20,21 @@ const htmlbeautify = require('gulp-html-beautify');
 // Utility Data Function
 function get_obebs4_settings(filepath) {
     let theData = JSON.parse(fs.readFileSync(filepath));
-    return {
-      obe_settings: theData
-    };
+    return { obe_settings: theData };
 }
 
 // Utility Data Function
 function get_global_strings_json(filepath) {
     let theData = JSON.parse(fs.readFileSync(filepath));
-    return {
-      global_strings: theData
-    };
+    return { global_strings: theData };
 }
 
 // Utility Function to prepend string to array of file paths
 function pathArrPrepend(array, string) {
-    const arr = [];
+    let arr = [];
     let str = '';
-    if (string != undefined) {
-        str = string;
-    }
-    for (let i = 0; i < array.length; i++) {
-        arr.push(str + array[i]);
-    }
+    if (string != undefined) { str = string }
+    for (let i = 0; i < array.length; i++) { arr.push(str + array[i]) }
     return arr;
 }
 
