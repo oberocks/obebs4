@@ -232,17 +232,19 @@ Then you'll need to use Gulp to run the scripts needed to apply your settings an
 
 ### Installing with NPM
 
-**Step 1**: Create a directory for your project, navigate to it in your console, nitialize NPM, and fill out your project info for your package.json file as prompted by NPM.
+**Step 1**: Create a new directory for your project, and navigate to your new project directory in your console.
+
+**Step 2**: Initialize NPM, and fill out your project info for your package.json file as prompted by NPM.
 ```bash
 npm init
 ```
 
-**Step 2**: Install obebs4 from GitHub (NPM will install all dependencies along with this codebase inside your 'node_modules' directory)
+**Step 3**: Install obebs4 from GitHub (NPM will install all dependencies along with a directory called 'obebs4' inside your 'node_modules' directory)
 ```bash
 npm install --save oberocks/obebs4#master
 ```
 
-**Step 3**: Copy the following directories and files into your root directory
+**Step 4**: Copy the following directories and files into your root directory
 * Directories
     * ./node_modules/obebs4/library
     * ./node_modules/obebs4/obebs4
