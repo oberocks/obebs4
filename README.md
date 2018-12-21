@@ -258,6 +258,21 @@ touch obebs4_settings.json
 
 **Step 7**: Now paste in your OBE:BS4 JSON settings into your newly created obebs4_settings.json file, and save the file.
 
+**Step 8**: If you don't have a gulp file in your project yet, just run this command to add it from the OBE:BS4 module files:
+```bash
+cp node_modules/obebs4/example-gulpfile.js gulpfile.js
+```
+
+**Step 9**: Now it's time to compile your library site! To do that, run the following gulp command in your console:
+```bash
+gulp obebs4
+```
+
+
+
+
+
+<!---
 **Step 8**: Now you'll need to navigate into your obebs4 node_module directory to run the gulp scripts to compile your library files with your settings.
 ```bash
 cd node_modules/obebs4
@@ -280,6 +295,7 @@ cd ../..
     * ./node_modules/obebs4/nunjucks
 * Files
     * ./node_modules/obebs4/gulpfile.js
+-->
 
 ### Installing with Zip
 
