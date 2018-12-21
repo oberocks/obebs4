@@ -268,6 +268,14 @@ cp node_modules/obebs4/example-gulpfile.js gulpfile.js
 gulp obebs4
 ```
 
+**Step 10**: Open up your home page:
+```bash
+open library/index.html
+```
+Or your boilerplate page ;)
+```bash
+open library/boilerplates.html
+```
 
 
 
