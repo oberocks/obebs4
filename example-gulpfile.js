@@ -40,17 +40,14 @@ function pathArrPrepend(array, string) {
 
 
 
-
-
 // Set the settings file path to the default settings file
-let settingsFilePath = './node_modules/obebs4/data/obebs4_settings.json';
+let settingsFilePath = './node_modules/obebs4/obebs4/data/obebs4_settings.json';
 
 // Check for a settings file in the root directory
 // If found, then use that settings file instead of the default
 if (fs.existsSync('./obebs4_settings.json')) {
     settingsFilePath = './obebs4_settings.json';
 }
-
 
 
 
@@ -106,24 +103,15 @@ const libraryFavicons = [
 
 
 
-
-
-
-
-
-
-
 gulp.task('ingest-obebs4-settings', function () {
     return gulp.src(settingsFilePath)
     // pipe through jsonToSass
     .pipe(jsonToSass({
             jsonPath: settingsFilePath,
-            scssPath: './node_modules/obebs4/scss/settings/_obebs4_settings.scss'
+            scssPath: './node_modules/obebs4/obebs4/scss/settings/_obebs4_settings.scss'
         })
     );
 });
-
-
 
 
 
@@ -131,7 +119,7 @@ gulp.task('compile-sass', function(){
     return gulp.src(
         [
             //'node_modules/bootstrap/scss/bootstrap.scss',
-            './node_modules/obebs4/scss/obebs4-bootstrap.scss'
+            './node_modules/obebs4/obebs4/scss/obebs4-bootstrap.scss'
         ]
     )
     .pipe(sass({outputStyle: 'compressed'}))
@@ -143,20 +131,17 @@ gulp.task('compile-sass', function(){
 
 
 
-
 gulp.task('move-images', function(){
-    return gulp.src(pathArrPrepend(libraryImages, './node_modules/obebs4/core/images/'))
+    return gulp.src(pathArrPrepend(libraryImages, './node_modules/obebs4/obebs4/core/images/'))
     .pipe(gulp.dest('./library/images'))
 });
 
 
 
-
 gulp.task('move-favicon-files', function(){
-    return gulp.src(pathArrPrepend(libraryFavicons, './node_modules/obebs4/core/images/favicons/'))
+    return gulp.src(pathArrPrepend(libraryFavicons, './node_modules/obebs4/obebs4/core/images/favicons/'))
     .pipe(gulp.dest('./library/images/favicons'))
 });
-
 
 
 
@@ -168,14 +153,14 @@ gulp.task('compile-nunjucks', function() {
         "break_chained_methods": false
     };
     // Gets .html and .nunjucks files in pages
-    return gulp.src('./node_modules/nunjucks/pages/**/*.+(html|nunjucks|njk)')
+    return gulp.src('./node_modules/obebs4/nunjucks/pages/**/*.+(html|nunjucks|njk)')
     // Get OBE settings json data
     .pipe(data(get_obebs4_settings(settingsFilePath)))
     // Get global strings json data (for DRY nunjucks vars)
-    .pipe(data(get_global_strings_json('./node_modules/nunjucks/data/global_strings.json')))
+    .pipe(data(get_global_strings_json('./node_modules/obebs4/nunjucks/data/global_strings.json')))
     // Renders template with nunjucks
     .pipe(nunjucksRender({
-        path: ['./node_modules/nunjucks/templates']
+        path: ['./node_modules/obebs4/nunjucks/templates']
     }))
     // beautify the rendered file
     .pipe(htmlbeautify(htmlBeautifyOptions))
@@ -185,25 +170,23 @@ gulp.task('compile-nunjucks', function() {
 
 
 
-
-
 gulp.task('concat-js', function(){
     return gulp.src(
         [
             './node_modules/jquery/dist/jquery.min.js',
             './node_modules/bootstrap/dist/js/bootstrap.bundle.min.js',
-            './node_modules/obebs4/core/js/obebs4-popovers.js',
-            './node_modules/bebs4/core/js/obebs4-tooltips.js',
-            './node_modules/obebs4/core/js/obebs4-dropdown-selects.js',
-            './node_modules/obebs4/core/js/obebs4-fa5-animated-checkboxes.js',
-            './node_modules/obebs4/prismjs/js/prism.min.js',
+            './node_modules/obebs4/obebs4/core/js/obebs4-popovers.js',
+            './node_modules/obebs4/obebs4/core/js/obebs4-tooltips.js',
+            './node_modules/obebs4/obebs4/core/js/obebs4-dropdown-selects.js',
+            './node_modules/obebs4/obebs4/core/js/obebs4-fa5-animated-checkboxes.js',
+            './node_modules/obebs4/obebs4/prismjs/js/prism.min.js',
             './node_modules/tinycolor2/dist/tinycolor-min.js',
             './node_modules/datatables.net/js/jquery.dataTables.min.js',
             './node_modules/datatables.net-bs4/js/dataTables.bootstrap4.min.js',
-            './node_modules/obebs4/core/js/obebs4-library.js',
-            './node_modules/obebs4/core/js/obebs4-dataTables.js',
-            './node_modules/obebs4/core/js/obebs4-calendar-datepicker-plugin.js',
-            './node_modules/obebs4/core/js/obe-text-toggle-vanilla-mini-plugin.js'
+            './node_modules/obebs4/obebs4/core/js/obebs4-library.js',
+            './node_modules/obebs4/obebs4/core/js/obebs4-dataTables.js',
+            './node_modules/obebs4/obebs4/core/js/obebs4-calendar-datepicker-plugin.js',
+            './node_modules/obebs4/obebs4/core/js/obe-text-toggle-vanilla-mini-plugin.js'
         ]
     )
     .pipe(sourcemaps.init({loadMaps: true}))
@@ -222,14 +205,13 @@ gulp.task('concat-js', function(){
 
 
 
-
 gulp.task('concat-css', function(){
     return gulp.src(
         [
             './library/css/obebs4-bootstrap.css',
-            './node_modules/obebs4/prismjs/css/prism.css',
+            './node_modules/obebs4/obebs4/prismjs/css/prism.css',
             './node_modules/datatables.net-bs4/css/dataTables.bootstrap4.min.css',
-            './node_modules/obebs4/core/css/obebs4-library.css'
+            './node_modules/obebs4/obebs4/core/css/obebs4-library.css'
         ]
     )
     .pipe(sourcemaps.init({loadMaps: true}))
@@ -241,24 +223,11 @@ gulp.task('concat-css', function(){
 
 
 
-
-
 gulp.task('clean-up', function () {
     return del([
         './library/css/obebs4-bootstrap.css'
     ]);
 });
-
-
-
-
-
-
-
-
-
-
-
 
 
 
