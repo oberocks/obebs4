@@ -22,9 +22,12 @@ THE OBE:BS4 Design System was designed to bridge the gaps between web project ow
     * [Project Directories](#project-directories)
     * [Project Build Tooling](#project-build-tooling)
 * [Installation](#installation)
-    * [Installing with NPM](#installing-with-npm)
-    * [Installing with Zip](#installing-with-zip)
-* [Library Site Files](#library-site-files)
+    * [Installing via Zip](#installing-via-zip)
+    * [Installing via NPM](#installing-via-npm)
+* [Customizing Your Library](#cutromizing-your-library)
+    * [Bringing System Directories to Root](#bringing-system-directories-to-root)
+    * [Adjusting the Gulp File](#adjusting-the-gulp-file)
+    * [Library Site Files](#library-site-files)
 * [Roadmap](#roadmap)
 
 
@@ -230,7 +233,11 @@ Then you'll need to use Gulp to run the scripts needed to apply your settings an
 
 *NOTE: This project uses Gulp to manage and generate the Design System Library Site. So if you are already using Gulp, be sure to not override your gulpfile.js file with the OBE:BS4 gulpfile!*
 
-### Installing with NPM
+### Installing via Zip
+
+(Coming Soon!)
+
+### Installing via NPM
 
 **Step 1**: Create a new directory for your project, and navigate to your new project directory in your console.
 
@@ -278,42 +285,22 @@ open library/boilerplates.html
 ```
 
 
-
-
-<!---
-**Step 8**: Now you'll need to navigate into your obebs4 node_module directory to run the gulp scripts to compile your library files with your settings.
-```bash
-cd node_modules/obebs4
-```
-
-**Step 9**: Now you can compile your new library site with:
-```bash
-gulp obebs4
-```
-
-**Step 10**: Return back to your root directory:
-```bash
-cd ../..
-```
-
-**Step 10**: Copy the following directories and files into your root directory
-* Directories
-    * ./node_modules/obebs4/library
-    * ./node_modules/obebs4/obebs4
-    * ./node_modules/obebs4/nunjucks
-* Files
-    * ./node_modules/obebs4/gulpfile.js
--->
-
-### Installing with Zip
-
-(Coming Soon!)
-
-
 ---
 
 
-## Library Site Files
+## Customizing Your Design System
+
+(Coming Soon!)
+
+### Bringing System Directories to Root
+
+(Coming Soon!)
+
+### Adjusting the Gulp File
+
+(Coming Soon!)
+
+### Library Site Files
 
 (Coming Soon!)
 
