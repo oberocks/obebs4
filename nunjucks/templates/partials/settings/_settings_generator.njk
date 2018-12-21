@@ -16,6 +16,8 @@
 
                 </div>
 
+                <div class="text-primary">primary-C: {{ obe_settings['primary-C'] }}</div>
+
                 <div class="row justify-content-center">
 
                     <div class="col-md-6">
@@ -503,14 +505,14 @@
                         
                         <h3 class="pt-4 pb-2 text-center">Bootstrap Contextual Classes</h3>
 
-                        {{ contextual_selects('primary', 'Primary', 'blue', 'none') }}
-                        {{ contextual_selects('secondary', 'Secondary', 'gray', '600') }}
-                        {{ contextual_selects('success', 'Success', 'green', 'none') }}
-                        {{ contextual_selects('info', 'Info', 'cyan', 'none') }}
-                        {{ contextual_selects('warning', 'Warning', 'orange', 'none') }}
-                        {{ contextual_selects('danger', 'Danger', 'red', 'none') }}
-                        {{ contextual_selects('light', 'Light', 'light-gray', '200') }}
-                        {{ contextual_selects('dark', 'Dark', 'gray', '800') }}
+                        {{ contextual_selects('primary', 'Primary', obe_settings['primary-C'], obe_settings['primary-M']) }}
+                        {{ contextual_selects('secondary', 'Secondary', obe_settings['secondary-C'], obe_settings['secondary-M']) }}
+                        {{ contextual_selects('success', 'Success', obe_settings['success-C'], obe_settings['success-M']) }}
+                        {{ contextual_selects('info', 'Info', obe_settings['info-C'], obe_settings['info-M']) }}
+                        {{ contextual_selects('warning', 'Warning', obe_settings['warning-C'], obe_settings['warning-M']) }}
+                        {{ contextual_selects('danger', 'Danger', obe_settings['danger-C'], obe_settings['danger-M']) }}
+                        {{ contextual_selects('light', 'Light', obe_settings['light-C'], obe_settings['light-M']) }}
+                        {{ contextual_selects('dark', 'Dark', obe_settings['dark-C'], obe_settings['dark-M']) }}
 
                     </div>
 
@@ -535,9 +537,9 @@
                             
                             {{ context_head('BODY STYLES') }}
 
-                            {{ contextual_selects('body-bg', 'Background', 'white', 'none', note='Sets $body-bg') }}
+                            {{ contextual_selects('body-bg', 'Background', obe_settings['body-bg-C'], obe_settings['body-bg-M'], note='Sets $body-bg') }}
 
-                            {{ contextual_selects('body-color', 'Text', 'gray', '900', note='Sets $body-color') }}
+                            {{ contextual_selects('body-color', 'Text', obe_settings['body-color-C'], obe_settings['body-color-M'], note='Sets $body-color') }}
 
                         </div>
 
@@ -545,7 +547,7 @@
                             
                             {{ context_head('LINK STYLES') }}
 
-                            {{ contextual_selects('link-color', 'Link', 'blue', 'none', note='Sets $link-color and $link-hover-color (with darken(15%))') }}
+                            {{ contextual_selects('link-color', 'Link', obe_settings['link-color-C'], obe_settings['link-color-M'], note='Sets $link-color and $link-hover-color (with darken(15%))') }}
 
                             <div>
 
@@ -600,7 +602,7 @@
                             
                             {{ context_head('HIGHLIGHTS & MARKS') }}
 
-                            {{ contextual_selects('mark-bg', ' Background', 'yellow', 'none', note='Sets $mark-bg') }}
+                            {{ contextual_selects('mark-bg', ' Background', obe_settings['mark-bg-C'], obe_settings['mark-bg-M'], note='Sets $mark-bg') }}
 
                         </div>
 
@@ -608,9 +610,9 @@
                             
                             {{ context_head('ACTIVE COMPONENT ELEMENTS') }}
                             
-                            {{ contextual_selects('component-active-bg', 'Background', 'blue', 'none', note='Sets $component-active-bg') }}
+                            {{ contextual_selects('component-active-bg', 'Background', obe_settings['component-active-bg-C'], obe_settings['component-active-bg-M'], note='Sets $component-active-bg') }}
                             
-                            {{ contextual_selects('component-active-color', 'Text', 'white', 'none', note='Sets $component-active-color') }}
+                            {{ contextual_selects('component-active-color', 'Text', obe_settings['component-active-color-C'], obe_settings['component-active-color-M'], note='Sets $component-active-color') }}
 
                         </div>
 
@@ -622,13 +624,13 @@
                             
                             {{ context_head('INPUT ELEMENTS') }}
 
-                            {{ contextual_selects('input-bg', 'Background', 'white', 'none', note='Sets $input-bg') }}
+                            {{ contextual_selects('input-bg', 'Background', obe_settings['input-bg-C'], obe_settings['input-bg-M'], note='Sets $input-bg') }}
 
-                            {{ contextual_selects('input-color', 'Text', 'gray', '800', note='Sets $input-color') }}
+                            {{ contextual_selects('input-color', 'Text', obe_settings['input-color-C'], obe_settings['input-color-M'], note='Sets $input-color') }}
 
-                            {{ contextual_selects('input-placeholder-color', 'Placeholder Text', 'light-gray', '600', note='Sets $input-placeholder-color') }}
+                            {{ contextual_selects('input-placeholder-color', 'Placeholder Text', obe_settings['input-placeholder-color-C'], obe_settings['input-placeholder-color-M'], note='Sets $input-placeholder-color') }}
 
-                            {{ contextual_selects('input-disabled-bg', 'Disabled Background', 'light-gray', '100', note='Sets $input-disabled-bg') }}
+                            {{ contextual_selects('input-disabled-bg', 'Disabled Background', obe_settings['input-disabled-bg-C'], obe_settings['input-disabled-bg-M'], note='Sets $input-disabled-bg') }}
 
                         </div>
 
@@ -636,9 +638,9 @@
                             
                             {{ context_head('INPUT GROUP ADDONS') }}
 
-                            {{ contextual_selects('input-group-addon-bg', 'Background', 'light-gray', '200', note='Sets $input-group-addon-bg') }}
+                            {{ contextual_selects('input-group-addon-bg', 'Background', obe_settings['input-group-addon-bg-C'], obe_settings['input-group-addon-bg-M'], note='Sets $input-group-addon-bg') }}
 
-                            {{ contextual_selects('input-group-addon-color', 'Text', 'gray', '900', note='Sets $input-group-addon-color') }}
+                            {{ contextual_selects('input-group-addon-color', 'Text', obe_settings['input-group-addon-color-C'], obe_settings['input-group-addon-color-M'], note='Sets $input-group-addon-color') }}
 
                         </div>
 
@@ -646,13 +648,13 @@
                             
                             {{ context_head('DROPDOWN COMPONENTS') }}
                             
-                            {{ contextual_selects('dropdown-header-color', 'Heading', 'gray', '600', note='Sets $dropdown-header-color') }}
+                            {{ contextual_selects('dropdown-header-color', 'Heading', obe_settings['dropdown-header-color-C'], obe_settings['dropdown-header-color-M'], note='Sets $dropdown-header-color') }}
 
-                            {{ contextual_selects('dropdown-link-color', 'Link', 'gray', '900', note='Sets $dropdown-link-color, plus $dropdown-link-hover-color, $dropdown-link-active-color using darken(5%)') }}
+                            {{ contextual_selects('dropdown-link-color', 'Link', obe_settings['dropdown-link-color-C'], obe_settings['dropdown-link-color-M'], note='Sets $dropdown-link-color, plus $dropdown-link-hover-color, $dropdown-link-active-color using darken(5%)') }}
 
-                            {{ contextual_selects('dropdown-link-hover-bg', 'Hover/Active Background', 'light-gray', '100', note='Sets dropdown-link-hover-bg, $dropdown-link-active-bg, $pagination-hover-bg, $list-group-hover-bg and $list-group-action-active-bg') }}
+                            {{ contextual_selects('dropdown-link-hover-bg', 'Hover/Active Background', obe_settings['dropdown-link-hover-bg-C'], obe_settings['dropdown-link-hover-bg-M'], note='Sets dropdown-link-hover-bg, $dropdown-link-active-bg, $pagination-hover-bg, $list-group-hover-bg and $list-group-action-active-bg') }}
 
-                            {{ contextual_selects('dropdown-link-disabled-color', 'Disabled Link', 'gray', '600', note='Sets $dropdown-link-disabled-color and $dropdown-header-color') }}
+                            {{ contextual_selects('dropdown-link-disabled-color', 'Disabled Link', obe_settings['dropdown-link-disabled-color-C'], obe_settings['dropdown-link-disabled-color-M'], note='Sets $dropdown-link-disabled-color and $dropdown-header-color') }}
 
                         </div>
 

@@ -19,7 +19,50 @@ const htmlbeautify = require('gulp-html-beautify');
 
 // Utility Data Function
 function get_obebs4_settings(filepath) {
+    // parse the data
     let theData = JSON.parse(fs.readFileSync(filepath));
+    // array of all obebs4_settings.json keys that have color & modifier UI in _settings_generator.njk
+    let keys = ['primary', 'secondary', 'success', 'info', 'warning', 'danger', 'light', 'dark', 'body-bg', 'body-color', 'link-color', 'mark-bg', 'input-bg', 'input-color', 'input-placeholder-color', 'input-disabled-bg', 'input-group-addon-bg', 'input-group-addon-color', 'component-active-bg', 'component-active-color', 'dropdown-header-color', 'dropdown-link-color', 'dropdown-link-hover-bg', 'dropdown-link-disabled-color'];
+    // loop through the keys array
+    for ( var i = 0; i < keys.length; i++) {
+        // replace the sass var $
+        let val = theData[keys[i]].replace('$', '');
+        // check for strings 
+        if (val.indexOf('900') > -1) {
+            theData[keys[i] + '-C'] = val.replace('-900', '');
+            theData[keys[i] + '-M'] = '900';
+        } else if (val.indexOf('800') > -1) {
+            theData[keys[i] + '-C'] = val.replace('-800', '');
+            theData[keys[i] + '-M'] = '800';
+        } else if (val.indexOf('700') > -1) {
+            theData[keys[i] + '-C'] = val.replace('-700', '');
+            theData[keys[i] + '-M'] = '700';
+        } else if (val.indexOf('600') > -1) {
+            theData[keys[i] + '-C'] = val.replace('-600', '');
+            theData[keys[i] + '-M'] = '600';
+        } else if (val.indexOf('500') > -1) {
+            theData[keys[i] + '-C'] = val.replace('-500', '');
+            theData[keys[i] + '-M'] = '500';
+        } else if (val.indexOf('400') > -1) {
+            theData[keys[i] + '-C'] = val.replace('-400', '');
+            theData[keys[i] + '-M'] = '400';
+        } else if (val.indexOf('300') > -1) {
+            theData[keys[i] + '-C'] = val.replace('-300', '');
+            theData[keys[i] + '-M'] = '300';
+        } else if (val.indexOf('200') > -1) {
+            theData[keys[i] + '-C'] = val.replace('-200', '');
+            theData[keys[i] + '-M'] = '200';
+        } else if (val.indexOf('100') > -1) {
+            theData[keys[i] + '-C'] = val.replace('-100', '');
+            theData[keys[i] + '-M'] = '100';
+        } else if (val.indexOf('50') > -1) {
+            theData[keys[i] + '-C'] = val.replace('-50', '');
+            theData[keys[i] + '-M'] = '50';
+        } else {
+            theData[keys[i] + '-C'] = val;
+            theData[keys[i] + '-M'] = 'none';
+        }
+    }
     return { obe_settings: theData };
 }
 
