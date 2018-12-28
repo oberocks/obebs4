@@ -5,12 +5,9 @@
 
                 <div class="row justify-content-center pt-5">
 
-                    <div id="{{ global_strings['defaults']['sections']['72']['id'] }}" class="col">
+                    <div id="{{ global_strings['defaults']['sections'][68]['id'] }}" class="col">
                         
-                        {% set headingHeadline = global_strings['defaults']['sections']['72']['head'] %}
-						{% set headingSubline = global_strings['defaults']['sections']['72']['subhead'] %}
-						{% set headingDescrip = global_strings['defaults']['sections']['72']['descrip'] %}
-                        {% include "partials/_columnHeading.njk" %}
+                        {{ macros.page_section_heading(global_strings['defaults']['sections'][68]['head'], global_strings['defaults']['sections'][68]['subhead'], global_strings['defaults']['sections'][68]['descrip']) }}
 
                     </div>
 

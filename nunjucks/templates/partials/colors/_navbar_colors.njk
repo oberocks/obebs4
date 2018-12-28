@@ -7,12 +7,9 @@
 				
 				<div class="row justify-content-center">
 					
-					<div id="{{ global_strings['colors']['sections']['39']['id'] }}" class="col-12 pb-5">
+					<div id="{{ global_strings['colors']['sections'][39]['id'] }}" class="col-12 pb-5">
 					
-						{% set headingHeadline = global_strings['colors']['sections']['39']['head'] %}
-						{% set headingSubline = global_strings['colors']['sections']['39']['subhead'] %}
-						{% set headingDescrip = global_strings['colors']['sections']['39']['descrip'] %}
-						{% include "partials/_columnHeading.njk" %}
+						{{ macros.page_section_heading(global_strings['colors']['sections'][39]['head'], global_strings['colors']['sections'][39]['subhead'], global_strings['colors']['sections'][39]['descrip']) }}
 
 						{% macro navbar_colors(classPartial, namePartial, darkLightPartial, inputPartial, btnOutlinePartial) %}
 						<div class="js-prism text-left mb-2">

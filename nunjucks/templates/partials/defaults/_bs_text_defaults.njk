@@ -5,12 +5,9 @@
                 
                 <div class="row justify-content-center">
                     
-                    <div id="{{ global_strings['defaults']['sections']['75']['id'] }}" class="col-md-6 pb-5">
+                    <div id="{{ global_strings['defaults']['sections'][71]['id'] }}" class="col-md-6 pb-5">
                     
-                        {% set headingHeadline = global_strings['defaults']['sections']['75']['head'] %}
-						{% set headingSubline = global_strings['defaults']['sections']['75']['subhead'] %}
-						{% set headingDescrip = global_strings['defaults']['sections']['75']['descrip'] %}
-                        {% include "partials/_columnHeading.njk" %}
+                        {{ macros.page_section_heading(global_strings['defaults']['sections'][71]['head'], global_strings['defaults']['sections'][71]['subhead'], global_strings['defaults']['sections'][71]['descrip']) }}
 
                         <div class="js-prism mb-2">
                             You can <mark>highlight</mark> text.
@@ -50,12 +47,9 @@
 
                     </div>
 
-                    <div id="{{ global_strings['defaults']['sections']['76']['id'] }}" class="col-md-6 pb-5">
+                    <div id="{{ global_strings['defaults']['sections'][72]['id'] }}" class="col-md-6 pb-5">
                     
-                        {% set headingHeadline = global_strings['defaults']['sections']['76']['head'] %}
-						{% set headingSubline = global_strings['defaults']['sections']['76']['subhead'] %}
-						{% set headingDescrip = global_strings['defaults']['sections']['76']['descrip'] %}
-                        {% include "partials/_columnHeading.njk" %}
+                        {{ macros.page_section_heading(global_strings['defaults']['sections'][72]['head'], global_strings['defaults']['sections'][72]['subhead'], global_strings['defaults']['sections'][72]['descrip']) }}
 
                         <div class="js-prism mb-2">
                             You can <span class="mark">highlight</span> text.

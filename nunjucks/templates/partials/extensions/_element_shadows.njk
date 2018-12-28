@@ -7,12 +7,9 @@
                 {% if obe_settings['enable-obebs4-box-shadows'] === 'true' %}
                 <div class="row justify-content-center">
                     
-                    <div id="{{ global_strings['extensions']['sections']['3']['id'] }}" class="col-md-6 pb-5">
+                    <div id="{{ global_strings['extensions']['sections'][3]['id'] }}" class="col-md-6 pb-5">
                         
-                        {% set headingHeadline = global_strings['extensions']['sections']['3']['head'] %}
-						{% set headingSubline = global_strings['extensions']['sections']['3']['subhead'] %}
-						{% set headingDescrip = global_strings['extensions']['sections']['3']['descrip'] %}
-                        {% include "partials/_columnHeading.njk" %}
+                        {{ macros.page_section_heading(global_strings['extensions']['sections'][3]['head'], global_strings['extensions']['sections'][3]['subhead'], global_strings['extensions']['sections'][3]['descrip']) }}
 
                         {% macro box_shadow(classPartial, namePartial) %}
                         <div class="js-prism mb-2">
@@ -29,12 +26,9 @@
 
                     </div>
 
-                    <div id="{{ global_strings['extensions']['sections']['4']['id'] }}" class="col-md-6 pb-5">
+                    <div id="{{ global_strings['extensions']['sections'][4]['id'] }}" class="col-md-6 pb-5">
                         
-                        {% set headingHeadline = global_strings['extensions']['sections']['4']['head'] %}
-						{% set headingSubline = global_strings['extensions']['sections']['4']['subhead'] %}
-						{% set headingDescrip = global_strings['extensions']['sections']['4']['descrip'] %}
-                        {% include "partials/_columnHeading.njk" %}
+                        {{ macros.page_section_heading(global_strings['extensions']['sections'][4]['head'], global_strings['extensions']['sections'][4]['subhead'], global_strings['extensions']['sections'][4]['descrip']) }}
 
                         {% macro box_shadow_hover(classPartial, namePartial) %}
                         <div class="js-prism mb-2">
@@ -61,12 +55,9 @@
                 {% if obe_settings['enable-obebs4-text-shadows'] === 'true' %}
                 <div class="row justify-content-center">
 
-                    <div id="{{ global_strings['extensions']['sections']['5']['id'] }}" class="col-md-6 pb-5">
+                    <div id="{{ global_strings['extensions']['sections'][5]['id'] }}" class="col-md-6 pb-5">
                         
-                        {% set headingHeadline = global_strings['extensions']['sections']['5']['head'] %}
-						{% set headingSubline = global_strings['extensions']['sections']['5']['subhead'] %}
-						{% set headingDescrip = global_strings['extensions']['sections']['5']['descrip'] %}
-                        {% include "partials/_columnHeading.njk" %}
+                        {{ macros.page_section_heading(global_strings['extensions']['sections'][5]['head'], global_strings['extensions']['sections'][5]['subhead'], global_strings['extensions']['sections'][5]['descrip']) }}
 
                         {% macro text_shadows(bgClass, textClass, shadowClassPart, headline) %}
                         <div class="js-prism {{ bgClass }} p-2 mb-2">

@@ -5,12 +5,9 @@
                 
                 <div class="row justify-content-center">
                     
-                    <div id="{{ global_strings['defaults']['sections']['49']['id'] }}" class="col-md-6 pb-5">
+                    <div id="{{ global_strings['defaults']['sections'][48]['id'] }}" class="col-md-6 pb-5">
                         
-                        {% set headingHeadline = global_strings['defaults']['sections']['49']['head'] %}
-						{% set headingSubline = global_strings['defaults']['sections']['49']['subhead'] %}
-						{% set headingDescrip = global_strings['defaults']['sections']['49']['descrip'] %}
-                        {% include "partials/_columnHeading.njk" %}
+                        {{ macros.page_section_heading(global_strings['defaults']['sections'][48]['head'], global_strings['defaults']['sections'][48]['subhead'], global_strings['defaults']['sections'][48]['descrip']) }}
                         
                         <div class="js-prism mb-2 text-left">
                             <div class="media">
@@ -64,12 +61,9 @@
 
                     </div>
 
-                    <div id="{{ global_strings['defaults']['sections']['50']['id'] }}" class="col-md-6 pb-5">
+                    <div id="{{ global_strings['defaults']['sections'][49]['id'] }}" class="col-md-6 pb-5">
                         
-                        {% set headingHeadline = global_strings['defaults']['sections']['50']['head'] %}
-						{% set headingSubline = global_strings['defaults']['sections']['50']['subhead'] %}
-						{% set headingDescrip = global_strings['defaults']['sections']['50']['descrip'] %}
-                        {% include "partials/_columnHeading.njk" %}
+                        {{ macros.page_section_heading(global_strings['defaults']['sections'][49]['head'], global_strings['defaults']['sections'][49]['subhead'], global_strings['defaults']['sections'][49]['descrip']) }}
                         
                         <div class="js-prism mb-2 text-left">
                             <ul class="list-unstyled">

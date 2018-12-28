@@ -7,12 +7,9 @@
 				<div class="row justify-content-center">
 					
 					{% if obe_settings['enable-obebs4-button-sizes'] === 'true' %}
-					<div id="{{ global_strings['extensions']['sections']['6']['id'] }}" class="col-md-6 pb-5">
+					<div id="{{ global_strings['extensions']['sections'][6]['id'] }}" class="col-md-6 pb-5">
 					
-						{% set headingHeadline = global_strings['extensions']['sections']['6']['head'] %}
-						{% set headingSubline = global_strings['extensions']['sections']['6']['subhead'] %}
-						{% set headingDescrip = global_strings['extensions']['sections']['6']['descrip'] %}
-						{% include "partials/_columnHeading.njk" %}
+						{{ macros.page_section_heading(global_strings['extensions']['sections'][6]['head'], global_strings['extensions']['sections'][6]['subhead'], global_strings['extensions']['sections'][6]['descrip']) }}
 						
 						<div class="js-prism mb-2">
 							<button type="button" class="btn btn-primary btn-xxs">XXS Button</button>
@@ -40,12 +37,9 @@
 					{% endif %}
 
 					{% if obe_settings['enable-obebs4-text-sizes'] === 'true' %}
-					<div id="{{ global_strings['extensions']['sections']['7']['id'] }}" class="col-md-6 pb-5">
+					<div id="{{ global_strings['extensions']['sections'][7]['id'] }}" class="col-md-6 pb-5">
 
-						{% set headingHeadline = global_strings['extensions']['sections']['7']['head'] %}
-						{% set headingSubline = global_strings['extensions']['sections']['7']['subhead'] %}
-						{% set headingDescrip = global_strings['extensions']['sections']['7']['descrip'] %}
-						{% include "partials/_columnHeading.njk" %}
+						{{ macros.page_section_heading(global_strings['extensions']['sections'][7]['head'], global_strings['extensions']['sections'][7]['subhead'], global_strings['extensions']['sections'][7]['descrip']) }}
 
 						
 						{% macro text_sizes(classPartial, namePartial) %}

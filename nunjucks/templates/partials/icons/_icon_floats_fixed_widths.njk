@@ -5,12 +5,9 @@
 
                 <div class="row justify-content-center">
                     
-                    <div id="{{ global_strings['icons']['sections']['2']['id'] }}" class="col-md-6 pb-5">
+                    <div id="{{ global_strings['icons']['sections'][2]['id'] }}" class="col-md-6 pb-5">
 
-                        {% set headingHeadline = global_strings['icons']['sections']['2']['head'] %}
-						{% set headingSubline = global_strings['icons']['sections']['2']['subhead'] %}
-						{% set headingDescrip = global_strings['icons']['sections']['2']['descrip'] %}
-                        {% include "partials/_columnHeading.njk" %}
+                        {{ macros.page_section_heading(global_strings['icons']['sections'][2]['head'], global_strings['icons']['sections'][2]['subhead'], global_strings['icons']['sections'][2]['descrip']) }}
 
                         {% macro icon_floats(label, direction) %}
                         <label class="d-block text-left font-weight-bold">{{ label }}</label>
@@ -35,12 +32,9 @@
 
                     </div>
 
-                    <div id="{{ global_strings['icons']['sections']['3']['id'] }}" class="col-md-6 pb-5">
+                    <div id="{{ global_strings['icons']['sections'][3]['id'] }}" class="col-md-6 pb-5">
 
-                        {% set headingHeadline = global_strings['icons']['sections']['3']['head'] %}
-						{% set headingSubline = global_strings['icons']['sections']['3']['subhead'] %}
-						{% set headingDescrip = global_strings['icons']['sections']['3']['descrip'] %}
-                        {% include "partials/_columnHeading.njk" %}
+                        {{ macros.page_section_heading(global_strings['icons']['sections'][3]['head'], global_strings['icons']['sections'][3]['subhead'], global_strings['icons']['sections'][3]['descrip']) }}
 
                         {% macro fixed_width_icons() %}
                         <div class="js-prism-fa prism-hidden mb-2" style="cursor: help;">

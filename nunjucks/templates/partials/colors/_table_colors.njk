@@ -6,12 +6,9 @@
                 
                 <div class="row justify-content-center">
                     
-                    <div id="{{ global_strings['colors']['sections']['41']['id'] }}" class="col-md-6 pb-5">
+                    <div id="{{ global_strings['colors']['sections'][41]['id'] }}" class="col-md-6 pb-5">
                     
-                        {% set headingHeadline = global_strings['colors']['sections']['41']['head'] %}
-						{% set headingSubline = global_strings['colors']['sections']['41']['subhead'] %}
-						{% set headingDescrip = global_strings['colors']['sections']['41']['descrip'] %}
-                        {% include "partials/_columnHeading.njk" %}
+                        {{ macros.page_section_heading(global_strings['colors']['sections'][41]['head'], global_strings['colors']['sections'][41]['subhead'], global_strings['colors']['sections'][41]['descrip']) }}
 
                         <div class="js-prism text-left mb-2">					
                             <div class="table-responsive">
@@ -132,12 +129,9 @@
                         
                     </div>
                     
-                    <div id="{{ global_strings['colors']['sections']['42']['id'] }}" class="col-md-6 pb-5">
+                    <div id="{{ global_strings['colors']['sections'][42]['id'] }}" class="col-md-6 pb-5">
                     
-                        {% set headingHeadline = global_strings['colors']['sections']['42']['head'] %}
-						{% set headingSubline = global_strings['colors']['sections']['42']['subhead'] %}
-						{% set headingDescrip = global_strings['colors']['sections']['42']['descrip'] %}
-                        {% include "partials/_columnHeading.njk" %}
+                        {{ macros.page_section_heading(global_strings['colors']['sections'][42]['head'], global_strings['colors']['sections'][42]['subhead'], global_strings['colors']['sections'][42]['descrip']) }}
                         
                         <div class="js-prism text-left mb-2">					
                             <div class="table-responsive">

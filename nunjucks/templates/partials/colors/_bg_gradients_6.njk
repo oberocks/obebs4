@@ -7,12 +7,9 @@
                 <div class="row justify-content-center">
                     
                     {% if obe_settings['enable-obebs4-2-color-gradients'] === 'true' %}
-                    <div id="{{ global_strings['colors']['sections']['29']['id'] }}" class="col-md-6 pb-5">
+                    <div id="{{ global_strings['colors']['sections'][29]['id'] }}" class="col-md-6 pb-5">
                     
-                        {% set headingHeadline = global_strings['colors']['sections']['29']['head'] %}
-						{% set headingSubline = global_strings['colors']['sections']['29']['subhead'] %}
-						{% set headingDescrip = global_strings['colors']['sections']['29']['descrip'] %}
-                        {% include "partials/_columnHeading.njk" %}
+                        {{ macros.page_section_heading(global_strings['colors']['sections'][29]['head'], global_strings['colors']['sections'][29]['subhead'], global_strings['colors']['sections'][29]['descrip']) }}
 
                         {% macro bg_2col_grad_radial(classPartial, namePartial) %}
                         <div class="js-prism mb-2">
@@ -63,12 +60,9 @@
                     {% endif %}
                     
                     {% if obe_settings['enable-obebs4-3-color-gradients'] === 'true' %}
-                    <div id="{{ global_strings['colors']['sections']['30']['id'] }}" class="col-md-6 pb-5">
+                    <div id="{{ global_strings['colors']['sections'][30]['id'] }}" class="col-md-6 pb-5">
                     
-                        {% set headingHeadline = global_strings['colors']['sections']['30']['head'] %}
-						{% set headingSubline = global_strings['colors']['sections']['30']['subhead'] %}
-						{% set headingDescrip = global_strings['colors']['sections']['30']['descrip'] %}
-                        {% include "partials/_columnHeading.njk" %}
+                        {{ macros.page_section_heading(global_strings['colors']['sections'][30]['head'], global_strings['colors']['sections'][30]['subhead'], global_strings['colors']['sections'][30]['descrip']) }}
 
                         {% macro bg_3col_grad_radial(classPartial, namePartial) %}
                         <div class="js-prism mb-2">

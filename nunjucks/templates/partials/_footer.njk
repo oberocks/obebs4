@@ -6,26 +6,13 @@
 			
 				<div class="col-lg-3 mb-5">
 				
-					{% macro footer_heading(iconPartial, headline) %}
-					<div class="text-center pb-4">
-						<i class="fas fa-{{ iconPartial }} fa-4x text-light-gray"></i>
-					</div>
-					<h6 class="text-light text-center mb-4">{{ headline }}</h6>
-					{% endmacro %}
-				
-					{{ footer_heading('font', 'Fonts/Icons') }}
+					{{ macros.footer_heading('font', 'Fonts/Icons') }}
 					
 					<ul class="list-unstyled pl-2 mb-5 text-center">
 						
-						{% macro footer_link(url, name) %}
-						<li>
-							<a href="{{ url }}" class="text-light" target="_blank" rel="noopener noreferrer">{{ name }}</a>
-						</li>
-						{% endmacro %}
-						
-						{{ footer_link('https://www.fontsquirrel.com/', 'Font Squirrel') }}
-						{{ footer_link('https://fontawesome.com/icons?d=gallery&v=5.6.1', 'FontAwesome (5.6.1)') }}
-						{{ footer_link('https://fonts.google.com/', 'Google Fonts') }}
+						{{ macros.footer_link('https://www.fontsquirrel.com/', 'Font Squirrel') }}
+						{{ macros.footer_link('https://fontawesome.com/icons?d=gallery&v=5.6.1', 'FontAwesome (5.6.1)') }}
+						{{ macros.footer_link('https://fonts.google.com/', 'Google Fonts') }}
 
 					</ul>
 				
@@ -33,22 +20,22 @@
 			
 				<div class="col-lg-3 mb-5">
 					
-					{{ footer_heading('code', 'Dependencies') }}
+					{{ macros.footer_heading('code', 'Dependencies') }}
 					
 					<ul class="list-unstyled pl-2 text-center">
 
-						{{ footer_link('https://getbootstrap.com/', 'Bootstrap 4 (4.1.3)') }}
-						{{ footer_link('https://jquery.com/', 'jQuery (3.2.1)') }}
-						{{ footer_link('https://popper.js.org/', 'Popper.js') }}
-						{{ footer_link('https://nodejs.org/', 'Node.js') }}
-						{{ footer_link('https://sass-lang.com/', 'SASS') }}
-						{{ footer_link('https://gulpjs.com/', 'Gulp') }}
-						{{ footer_link('https://mozilla.github.io/nunjucks/', 'Nunjucks') }}
-						{{ footer_link('https://fontawesome.com/', 'FontAwesome 5') }}
-						{{ footer_link('https://fonts.google.com/', 'Google Fonts') }}
-						{{ footer_link('http://prismjs.com/', 'Prism.js') }}
-						{{ footer_link('https://github.com/bgrins/TinyColor', 'TinyColor 2') }}
-						{{ footer_link('https://datatables.net/', 'DataTables') }}
+						{{ macros.footer_link('https://getbootstrap.com/', 'Bootstrap 4 (4.1.3)') }}
+						{{ macros.footer_link('https://jquery.com/', 'jQuery (3.2.1)') }}
+						{{ macros.footer_link('https://popper.js.org/', 'Popper.js') }}
+						{{ macros.footer_link('https://nodejs.org/', 'Node.js') }}
+						{{ macros.footer_link('https://sass-lang.com/', 'SASS') }}
+						{{ macros.footer_link('https://gulpjs.com/', 'Gulp') }}
+						{{ macros.footer_link('https://mozilla.github.io/nunjucks/', 'Nunjucks') }}
+						{{ macros.footer_link('https://fontawesome.com/', 'FontAwesome 5') }}
+						{{ macros.footer_link('https://fonts.google.com/', 'Google Fonts') }}
+						{{ macros.footer_link('http://prismjs.com/', 'Prism.js') }}
+						{{ macros.footer_link('https://github.com/bgrins/TinyColor', 'TinyColor 2') }}
+						{{ macros.footer_link('https://datatables.net/', 'DataTables') }}
 
 					</ul>
 				
@@ -56,28 +43,28 @@
 			
 				<div class="col-lg-3 mb-5">
 				
-					{{ footer_heading('wrench', 'Tools') }}
+					{{ macros.footer_heading('wrench', 'Tools') }}
 					
 					<ul class="list-unstyled pl-2 text-center">
 						
-						{{ footer_link('https://andrew.hedges.name/experiments/aspect_ratio/', 'Aspect Ratio Converter') }}
-						{{ footer_link('https://baconipsum.com/?paras=5&type=all-meat&start-with-lorem=1', 'Bacon Ipsum') }}
-						{{ footer_link('https://leaverou.github.io/bubbly/', 'Bubbly Generator') }}
-						{{ footer_link('https://charcounter.com/en/', 'Character Counter') }}
-						{{ footer_link('http://www.colorzilla.com/gradient-editor/', 'ColorZilla Gradients') }}
-						{{ footer_link('http://css3generator.com/', 'CSS3 Generator') }}
-						{{ footer_link('https://www.cssmatic.com/border-radius', 'CSSmatic Border Radius') }}
-						{{ footer_link('https://www.cssmatic.com/box-shadow', 'CSSmatic Box Shadow') }}
-						{{ footer_link('https://www.favicon-generator.org/', 'Favicon Generator') }}
-						{{ footer_link('https://mothereff.in/html-entities', "HTML Entity Generator") }}
-						{{ footer_link('http://htmlshell.com', 'HTML Shell') }}
-						{{ footer_link('https://validator.w3.org/nu/', 'HTML5 Validator') }}
-						{{ footer_link('https://loading.io/', 'Loading.io') }}
-						{{ footer_link('https://www.minifier.org/', 'Minifier.org') }}
-						{{ footer_link('https://mxtoolbox.com/', 'MX Toolbox') }}
-						{{ footer_link('http://slipsum.com/lite/', 'Samuel L. Ipsum') }}
-						{{ footer_link('https://jakearchibald.github.io/svgomg/', 'SVG OMG') }}
-						{{ footer_link('http://unminify.com/', 'Unminify.com') }}
+						{{ macros.footer_link('https://andrew.hedges.name/experiments/aspect_ratio/', 'Aspect Ratio Converter') }}
+						{{ macros.footer_link('https://baconipsum.com/?paras=5&type=all-meat&start-with-lorem=1', 'Bacon Ipsum') }}
+						{{ macros.footer_link('https://leaverou.github.io/bubbly/', 'Bubbly Generator') }}
+						{{ macros.footer_link('https://charcounter.com/en/', 'Character Counter') }}
+						{{ macros.footer_link('http://www.colorzilla.com/gradient-editor/', 'ColorZilla Gradients') }}
+						{{ macros.footer_link('http://css3generator.com/', 'CSS3 Generator') }}
+						{{ macros.footer_link('https://www.cssmatic.com/border-radius', 'CSSmatic Border Radius') }}
+						{{ macros.footer_link('https://www.cssmatic.com/box-shadow', 'CSSmatic Box Shadow') }}
+						{{ macros.footer_link('https://www.favicon-generator.org/', 'Favicon Generator') }}
+						{{ macros.footer_link('https://mothereff.in/html-entities', "HTML Entity Generator") }}
+						{{ macros.footer_link('http://htmlshell.com', 'HTML Shell') }}
+						{{ macros.footer_link('https://validator.w3.org/nu/', 'HTML5 Validator') }}
+						{{ macros.footer_link('https://loading.io/', 'Loading.io') }}
+						{{ macros.footer_link('https://www.minifier.org/', 'Minifier.org') }}
+						{{ macros.footer_link('https://mxtoolbox.com/', 'MX Toolbox') }}
+						{{ macros.footer_link('http://slipsum.com/lite/', 'Samuel L. Ipsum') }}
+						{{ macros.footer_link('https://jakearchibald.github.io/svgomg/', 'SVG OMG') }}
+						{{ macros.footer_link('http://unminify.com/', 'Unminify.com') }}
 
 					</ul>
 				
@@ -85,17 +72,17 @@
 			
 				<div class="col-lg-3 mb-5">
 				
-					{{ footer_heading('book', 'Reference') }}
+					{{ macros.footer_heading('book', 'Reference') }}
 					
 					<ul class="list-unstyled pl-2 mb-5 text-center">
 						
-						{{ footer_link('https://www.w3.org/1999/xhtml/vocab#XHTMLRoleVocabulary', 'ARIA Role Values Reference') }}
-						{{ footer_link('https://www.w3.org/TR/wai-aria-practices-1.1/', 'ARIA Practices Reference') }}
-						{{ footer_link('http://bada55.io/', 'Bada55.io') }}
-						{{ footer_link('https://hackerthemes.com/bootstrap-cheatsheet/', 'B4 Classes Reference') }}
-						{{ footer_link('https://www.toptal.com/designers/htmlarrows/', 'HTML Entities Reference') }}
-						{{ footer_link('https://subinsb.com/jquery-to-javascript/', 'jQuery to JavaScript Reference') }}
-						{{ footer_link('http://welie.com/patterns/', 'Welie UI Patterns') }}
+						{{ macros.footer_link('https://www.w3.org/1999/xhtml/vocab#XHTMLRoleVocabulary', 'ARIA Role Values Reference') }}
+						{{ macros.footer_link('https://www.w3.org/TR/wai-aria-practices-1.1/', 'ARIA Practices Reference') }}
+						{{ macros.footer_link('http://bada55.io/', 'Bada55.io') }}
+						{{ macros.footer_link('https://hackerthemes.com/bootstrap-cheatsheet/', 'B4 Classes Reference') }}
+						{{ macros.footer_link('https://www.toptal.com/designers/htmlarrows/', 'HTML Entities Reference') }}
+						{{ macros.footer_link('https://subinsb.com/jquery-to-javascript/', 'jQuery to JavaScript Reference') }}
+						{{ macros.footer_link('http://welie.com/patterns/', 'Welie UI Patterns') }}
 						
 					</ul>
 				
@@ -105,12 +92,11 @@
 
 			<div class="row justify-content-center text-center pt-2">
 				<div class="col-12">
+					<small class="text-light">OBE:BS4 VERSION:</small>
+					<p class="lead">{{ global_strings['version'] }}</p>
 					<hr class="border-gray" />
 					<p>Made with <i class="fas fa-heart text-rose-400"></i> by <a class="text-light" href="http://mattmct.com/" target="_blank" rel="noopener noreferrer">Matt McT</a></p>
-					<p>
-						<button type="button" class="btn btn-sm btn-outline-light mb-2 mr-1" data-toggle="modal" data-target="#to-do-modal">Upcoming Features</button>
-						<!--button type="button" class="btn btn-sm btn-outline-light mb-2" data-toggle="modal" data-target="#off-canvas-nav-right-modal">Off-Canvas Nav</button-->
-					</p>
+					<button type="button" class="btn btn-sm btn-outline-light mb-4 mr-1" data-toggle="modal" data-target="#to-do-modal">Upcoming Features</button>
 					<small class="d-block text-gray pb-2">&copy; 2018 | All Rights Reserved</small>
 				</div>
 			</div>
@@ -125,833 +111,24 @@
 				<div class="modal-content border-0 rounded-0 text-left bg-dark-gray-600 text-white">
 					<div class="modal-header border-dark-gray-700">
 						<h6 id="ocnrm-title" class="modal-title">MENU</h6>
-						<!--button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button-->
 					</div>
 					<div id="nav-accord" class="modal-body" role="presentation">
 
-						{% macro nav_accordian_section(idNumb, titleName, titleSlug, linksArray, pageFileName, bgGradient) %}
-						<div id="ocnrm-h{{ idNumb }}" class="js-nav-handle d-flex justify-content-between align-content-center lead text-light rounded-0 border-top border-bottom border-dark-gray-700 text-shadow-lg text-white px-3 py-2 {{ bgGradient }}" data-toggle="collapse" data-target="#ocnrm-c{{ idNumb }}" aria-expanded="false" aria-controls="ocnrm-c{{ idNumb }}" role="heading">
-							<div>{{ titleName }}</div>
-							<div class="js-nav-symbol font-weight-bold">+</div>
-						</div>
-						<div id="ocnrm-c{{ idNumb }}" class="collapse" aria-labelledby="ocnrm-h{{ idNumb }}" data-parent="#nav-accord" role="navigation">
-							
-							<ul class="nav flex-column bg-dark-gray-700 small py-2 pl-2">
-								
-								<li class="nav-item">
-									<a class="nav-link text-light font-weight-bold py-1" href="{{ titleSlug }}.html">{{ titleName }} Page</a>
-								</li>
-
-								{% for item in linksArray %}
-								<li class="nav-item">
-									<a class="nav-link text-light py-1" href="{% if pageFileName == titleSlug + '.html' %}#{{ item.id }}{% else %}{{ titleSlug }}.html#{{ item.id }}{% endif %}" data-description="{{ item.descrip }}">{{ item.name }}</a>
-								</li>
-								{% endfor %}
-
-							</ul>
-						</div>
-						{% endmacro %}
-
-
-
-						{%- set boilerplates_page_links = [
-							{
-								name: global_strings['boilerplates']['sections']['0']['link'],
-								id: global_strings['boilerplates']['sections']['0']['id'],
-								descrip: global_strings['boilerplates']['sections']['0']['descrip']
-							},{
-								name: global_strings['boilerplates']['sections']['1']['link'],
-								id: global_strings['boilerplates']['sections']['1']['id'],
-								descrip: global_strings['boilerplates']['sections']['1']['descrip']
-							}
-						] -%}
-
-						{{ nav_accordian_section('7', 'Boilers', 'boilerplates', boilerplates_page_links, fileName, 'bg-dark-gray-600') }}
-
-
-
-
-						{%- set color_page_links = [
-							{
-								name: global_strings['colors']['sections']['11']['link'],
-								id: global_strings['colors']['sections']['11']['id'],
-								descrip: global_strings['colors']['sections']['11']['descrip']
-							},{
-								name: global_strings['colors']['sections']['12']['link'],
-								id: global_strings['colors']['sections']['12']['id'],
-								descrip: global_strings['colors']['sections']['12']['descrip']
-							},{
-								name: global_strings['colors']['sections']['2']['link'],
-								id: global_strings['colors']['sections']['2']['id'],
-								descrip: global_strings['colors']['sections']['2']['descrip']
-							},{
-								name: global_strings['colors']['sections']['3']['link'],
-								id: global_strings['colors']['sections']['3']['id'],
-								descrip: global_strings['colors']['sections']['3']['descrip']
-							},{
-								name: global_strings['colors']['sections']['13']['link'],
-								id: global_strings['colors']['sections']['13']['id'],
-								descrip: global_strings['colors']['sections']['13']['descrip']
-							},{
-								name: global_strings['colors']['sections']['14']['link'],
-								id: global_strings['colors']['sections']['14']['id'],
-								descrip: global_strings['colors']['sections']['14']['descrip']
-							},{
-								name: global_strings['colors']['sections']['15']['link'],
-								id: global_strings['colors']['sections']['15']['id'],
-								descrip: global_strings['colors']['sections']['15']['descrip']
-							},{
-								name: global_strings['colors']['sections']['17']['link'],
-								id: global_strings['colors']['sections']['17']['id'],
-								descrip: global_strings['colors']['sections']['17']['descrip']
-							},{
-								name: global_strings['colors']['sections']['16']['link'],
-								id: global_strings['colors']['sections']['16']['id'],
-								descrip: global_strings['colors']['sections']['16']['descrip']
-							},{
-								name: global_strings['colors']['sections']['18']['link'],
-								id: global_strings['colors']['sections']['18']['id'],
-								descrip: global_strings['colors']['sections']['18']['descrip']
-							},{
-								name: global_strings['colors']['sections']['4']['link'],
-								id: global_strings['colors']['sections']['4']['id'],
-								descrip: global_strings['colors']['sections']['4']['descrip']
-							},{
-								name: global_strings['colors']['sections']['5']['link'],
-								id: global_strings['colors']['sections']['5']['id'],
-								descrip: global_strings['colors']['sections']['5']['descrip']
-							},{
-								name: global_strings['colors']['sections']['19']['link'],
-								id: global_strings['colors']['sections']['19']['id'],
-								descrip: global_strings['colors']['sections']['19']['descrip']
-							},{
-								name: global_strings['colors']['sections']['20']['link'],
-								id: global_strings['colors']['sections']['20']['id'],
-								descrip: global_strings['colors']['sections']['20']['descrip']
-							},{
-								name: global_strings['colors']['sections']['22']['link'],
-								id: global_strings['colors']['sections']['22']['id'],
-								descrip: global_strings['colors']['sections']['22']['descrip']
-							},{
-								name: global_strings['colors']['sections']['24']['link'],
-								id: global_strings['colors']['sections']['24']['id'],
-								descrip: global_strings['colors']['sections']['24']['descrip']
-							},{
-								name: global_strings['colors']['sections']['10']['link'],
-								id: global_strings['colors']['sections']['10']['id'],
-								descrip: global_strings['colors']['sections']['10']['descrip']
-							},{
-								name: global_strings['colors']['sections']['28']['link'],
-								id: global_strings['colors']['sections']['28']['id'],
-								descrip: global_strings['colors']['sections']['28']['descrip']
-							},{
-								name: global_strings['colors']['sections']['34']['link'],
-								id: global_strings['colors']['sections']['34']['id'],
-								descrip: global_strings['colors']['sections']['34']['descrip']
-							},{
-								name: global_strings['colors']['sections']['9']['link'],
-								id: global_strings['colors']['sections']['9']['id'],
-								descrip: global_strings['colors']['sections']['9']['descrip']
-							},{
-								name: global_strings['colors']['sections']['27']['link'],
-								id: global_strings['colors']['sections']['27']['id'],
-								descrip: global_strings['colors']['sections']['27']['descrip']
-							},{
-								name: global_strings['colors']['sections']['33']['link'],
-								id: global_strings['colors']['sections']['33']['id'],
-								descrip: global_strings['colors']['sections']['33']['descrip']
-							},{
-								name: global_strings['colors']['sections']['7']['link'],
-								id: global_strings['colors']['sections']['7']['id'],
-								descrip: global_strings['colors']['sections']['7']['descrip']
-							},{
-								name: global_strings['colors']['sections']['26']['link'],
-								id: global_strings['colors']['sections']['26']['id'],
-								descrip: global_strings['colors']['sections']['26']['descrip']
-							},{
-								name: global_strings['colors']['sections']['32']['link'],
-								id: global_strings['colors']['sections']['32']['id'],
-								descrip: global_strings['colors']['sections']['32']['descrip']
-							},{
-								name: global_strings['colors']['sections']['8']['link'],
-								id: global_strings['colors']['sections']['8']['id'],
-								descrip: global_strings['colors']['sections']['8']['descrip']
-							},{
-								name: global_strings['colors']['sections']['29']['link'],
-								id: global_strings['colors']['sections']['29']['id'],
-								descrip: global_strings['colors']['sections']['29']['descrip']
-							},{
-								name: global_strings['colors']['sections']['30']['link'],
-								id: global_strings['colors']['sections']['30']['id'],
-								descrip: global_strings['colors']['sections']['30']['descrip']
-							},{
-								name: global_strings['colors']['sections']['6']['link'],
-								id: global_strings['colors']['sections']['6']['id'],
-								descrip: global_strings['colors']['sections']['6']['descrip']
-							},{
-								name: global_strings['colors']['sections']['25']['link'],
-								id: global_strings['colors']['sections']['25']['id'],
-								descrip: global_strings['colors']['sections']['25']['descrip']
-							},{
-								name: global_strings['colors']['sections']['31']['link'],
-								id: global_strings['colors']['sections']['31']['id'],
-								descrip: global_strings['colors']['sections']['31']['descrip']
-							},{
-								name: global_strings['colors']['sections']['1']['link'],
-								id: global_strings['colors']['sections']['1']['id'],
-								descrip: global_strings['colors']['sections']['1']['descrip']
-							},{
-								name: global_strings['colors']['sections']['36']['link'],
-								id: global_strings['colors']['sections']['36']['id'],
-								descrip: global_strings['colors']['sections']['36']['descrip']
-							},{
-								name: global_strings['colors']['sections']['38']['link'],
-								id: global_strings['colors']['sections']['38']['id'],
-								descrip: global_strings['colors']['sections']['38']['descrip']
-							},{
-								name: global_strings['colors']['sections']['37']['link'],
-								id: global_strings['colors']['sections']['37']['id'],
-								descrip: global_strings['colors']['sections']['37']['descrip']
-							},{
-								name: global_strings['colors']['sections']['43']['link'],
-								id: global_strings['colors']['sections']['43']['id'],
-								descrip: global_strings['colors']['sections']['43']['descrip']
-							},{
-								name: global_strings['colors']['sections']['39']['link'],
-								id: global_strings['colors']['sections']['39']['id'],
-								descrip: global_strings['colors']['sections']['39']['descrip']
-							},{
-								name: global_strings['colors']['sections']['23']['link'],
-								id: global_strings['colors']['sections']['23']['id'],
-								descrip: global_strings['colors']['sections']['23']['descrip']
-							},{
-								name: global_strings['colors']['sections']['40']['link'],
-								id: global_strings['colors']['sections']['40']['id'],
-								descrip: global_strings['colors']['sections']['40']['descrip']
-							},{
-								name: global_strings['colors']['sections']['41']['link'],
-								id: global_strings['colors']['sections']['41']['id'],
-								descrip: global_strings['colors']['sections']['41']['descrip']
-							},{
-								name: global_strings['colors']['sections']['42']['link'],
-								id: global_strings['colors']['sections']['42']['id'],
-								descrip: global_strings['colors']['sections']['42']['descrip']
-							},{
-								name: global_strings['colors']['sections']['21']['link'],
-								id: global_strings['colors']['sections']['21']['id'],
-								descrip: global_strings['colors']['sections']['21']['descrip']
-							},{
-								name: global_strings['colors']['sections']['0']['link'],
-								id: global_strings['colors']['sections']['0']['id'],
-								descrip: global_strings['colors']['sections']['0']['descrip']
-							},{
-								name: global_strings['colors']['sections']['35']['link'],
-								id: global_strings['colors']['sections']['35']['id'],
-								descrip: global_strings['colors']['sections']['35']['descrip']
-							}
-						] -%}
-
-						{{ nav_accordian_section('1', 'Colors', 'colors', color_page_links, fileName, 'bg-dark-gray-600') }}
-
-
-
-
-
-						{%- set defaults_page_links = [
-							{
-								name: global_strings['defaults']['sections']['3']['link'],
-								id: global_strings['defaults']['sections']['3']['id'],
-								descrip: global_strings['defaults']['sections']['3']['descrip']
-							},{
-								name: global_strings['defaults']['sections']['4']['link'],
-								id: global_strings['defaults']['sections']['4']['id'],
-								descrip: global_strings['defaults']['sections']['4']['descrip']
-							},{
-								name: global_strings['defaults']['sections']['6']['link'],
-								id: global_strings['defaults']['sections']['6']['id'],
-								descrip: global_strings['defaults']['sections']['6']['descrip']
-							},{
-								name: global_strings['defaults']['sections']['9']['link'],
-								id: global_strings['defaults']['sections']['9']['id'],
-								descrip: global_strings['defaults']['sections']['9']['descrip']
-							},{
-								name: global_strings['defaults']['sections']['12']['link'],
-								id: global_strings['defaults']['sections']['12']['id'],
-								descrip: global_strings['defaults']['sections']['12']['descrip']
-							},{
-								name: global_strings['defaults']['sections']['11']['link'],
-								id: global_strings['defaults']['sections']['11']['id'],
-								descrip: global_strings['defaults']['sections']['11']['descrip']
-							},{
-								name: global_strings['defaults']['sections']['13']['link'],
-								id: global_strings['defaults']['sections']['13']['id'],
-								descrip: global_strings['defaults']['sections']['13']['descrip']
-							},{
-								name: global_strings['defaults']['sections']['14']['link'],
-								id: global_strings['defaults']['sections']['14']['id'],
-								descrip: global_strings['defaults']['sections']['14']['descrip']
-							},{
-								name: global_strings['defaults']['sections']['15']['link'],
-								id: global_strings['defaults']['sections']['15']['id'],
-								descrip: global_strings['defaults']['sections']['15']['descrip']
-							},{
-								name: global_strings['defaults']['sections']['16']['link'],
-								id: global_strings['defaults']['sections']['16']['id'],
-								descrip: global_strings['defaults']['sections']['16']['descrip']
-							},{
-								name: global_strings['defaults']['sections']['17']['link'],
-								id: global_strings['defaults']['sections']['17']['id'],
-								descrip: global_strings['defaults']['sections']['17']['descrip']
-							},{
-								name: global_strings['defaults']['sections']['27']['link'],
-								id: global_strings['defaults']['sections']['27']['id'],
-								descrip: global_strings['defaults']['sections']['27']['descrip']
-							},{
-								name: global_strings['defaults']['sections']['18']['link'],
-								id: global_strings['defaults']['sections']['18']['id'],
-								descrip: global_strings['defaults']['sections']['18']['descrip']
-							},{
-								name: global_strings['defaults']['sections']['20']['link'],
-								id: global_strings['defaults']['sections']['20']['id'],
-								descrip: global_strings['defaults']['sections']['20']['descrip']
-							},{
-								name: global_strings['defaults']['sections']['21']['link'],
-								id: global_strings['defaults']['sections']['21']['id'],
-								descrip: global_strings['defaults']['sections']['21']['descrip']
-							},{
-								name: global_strings['defaults']['sections']['22']['link'],
-								id: global_strings['defaults']['sections']['22']['id'],
-								descrip: global_strings['defaults']['sections']['22']['descrip']
-							},{
-								name: global_strings['defaults']['sections']['24']['link'],
-								id: global_strings['defaults']['sections']['24']['id'],
-								descrip: global_strings['defaults']['sections']['24']['descrip']
-							},{
-								name: global_strings['defaults']['sections']['25']['link'],
-								id: global_strings['defaults']['sections']['25']['id'],
-								descrip: global_strings['defaults']['sections']['25']['descrip']
-							},{
-								name: global_strings['defaults']['sections']['23']['link'],
-								id: global_strings['defaults']['sections']['23']['id'],
-								descrip: global_strings['defaults']['sections']['23']['descrip']
-							},{
-								name: global_strings['defaults']['sections']['28']['link'],
-								id: global_strings['defaults']['sections']['28']['id'],
-								descrip: global_strings['defaults']['sections']['28']['descrip']
-							},{
-								name: global_strings['defaults']['sections']['19']['link'],
-								id: global_strings['defaults']['sections']['19']['id'],
-								descrip: global_strings['defaults']['sections']['19']['descrip']
-							},{
-								name: global_strings['defaults']['sections']['26']['link'],
-								id: global_strings['defaults']['sections']['26']['id'],
-								descrip: global_strings['defaults']['sections']['26']['descrip']
-							},{
-								name: global_strings['defaults']['sections']['29']['link'],
-								id: global_strings['defaults']['sections']['29']['id'],
-								descrip: global_strings['defaults']['sections']['29']['descrip']
-							},{
-								name: global_strings['defaults']['sections']['2']['link'],
-								id: global_strings['defaults']['sections']['2']['id'],
-								descrip: global_strings['defaults']['sections']['2']['descrip']
-							},{
-								name: global_strings['defaults']['sections']['10']['link'],
-								id: global_strings['defaults']['sections']['10']['id'],
-								descrip: global_strings['defaults']['sections']['10']['descrip']
-							},{
-								name: global_strings['defaults']['sections']['77']['link'],
-								id: global_strings['defaults']['sections']['77']['id'],
-								descrip: global_strings['defaults']['sections']['77']['descrip']
-							},{
-								name: global_strings['defaults']['sections']['30']['link'],
-								id: global_strings['defaults']['sections']['30']['id'],
-								descrip: global_strings['defaults']['sections']['30']['descrip']
-							},{
-								name: global_strings['defaults']['sections']['31']['link'],
-								id: global_strings['defaults']['sections']['31']['id'],
-								descrip: global_strings['defaults']['sections']['31']['descrip']
-							},{
-								name: global_strings['defaults']['sections']['33']['link'],
-								id: global_strings['defaults']['sections']['33']['id'],
-								descrip: global_strings['defaults']['sections']['33']['descrip']
-							},{
-								name: global_strings['defaults']['sections']['34']['link'],
-								id: global_strings['defaults']['sections']['34']['id'],
-								descrip: global_strings['defaults']['sections']['34']['descrip']
-							},{
-								name: global_strings['defaults']['sections']['35']['link'],
-								id: global_strings['defaults']['sections']['35']['id'],
-								descrip: global_strings['defaults']['sections']['35']['descrip']
-							},{
-								name: global_strings['defaults']['sections']['36']['link'],
-								id: global_strings['defaults']['sections']['36']['id'],
-								descrip: global_strings['defaults']['sections']['36']['descrip']
-							},{
-								name: global_strings['defaults']['sections']['37']['link'],
-								id: global_strings['defaults']['sections']['37']['id'],
-								descrip: global_strings['defaults']['sections']['37']['descrip']
-							},{
-								name: global_strings['defaults']['sections']['38']['link'],
-								id: global_strings['defaults']['sections']['38']['id'],
-								descrip: global_strings['defaults']['sections']['38']['descrip']
-							},{
-								name: global_strings['defaults']['sections']['39']['link'],
-								id: global_strings['defaults']['sections']['39']['id'],
-								descrip: global_strings['defaults']['sections']['39']['descrip']
-							},{
-								name: global_strings['defaults']['sections']['40']['link'],
-								id: global_strings['defaults']['sections']['40']['id'],
-								descrip: global_strings['defaults']['sections']['40']['descrip']
-							},{
-								name: global_strings['defaults']['sections']['0']['link'],
-								id: global_strings['defaults']['sections']['0']['id'],
-								descrip: global_strings['defaults']['sections']['0']['descrip']
-							},{
-								name: global_strings['defaults']['sections']['7']['link'],
-								id: global_strings['defaults']['sections']['7']['id'],
-								descrip: global_strings['defaults']['sections']['7']['descrip']
-							},{
-								name: global_strings['defaults']['sections']['1']['link'],
-								id: global_strings['defaults']['sections']['1']['id'],
-								descrip: global_strings['defaults']['sections']['1']['descrip']
-							},{
-								name: global_strings['defaults']['sections']['41']['link'],
-								id: global_strings['defaults']['sections']['41']['id'],
-								descrip: global_strings['defaults']['sections']['41']['descrip']
-							},{
-								name: global_strings['defaults']['sections']['42']['link'],
-								id: global_strings['defaults']['sections']['42']['id'],
-								descrip: global_strings['defaults']['sections']['42']['descrip']
-							},{
-								name: global_strings['defaults']['sections']['43']['link'],
-								id: global_strings['defaults']['sections']['43']['id'],
-								descrip: global_strings['defaults']['sections']['43']['descrip']
-							},{
-								name: global_strings['defaults']['sections']['44']['link'],
-								id: global_strings['defaults']['sections']['44']['id'],
-								descrip: global_strings['defaults']['sections']['44']['descrip']
-							},{
-								name: global_strings['defaults']['sections']['45']['link'],
-								id: global_strings['defaults']['sections']['45']['id'],
-								descrip: global_strings['defaults']['sections']['45']['descrip']
-							},{
-								name: global_strings['defaults']['sections']['8']['link'],
-								id: global_strings['defaults']['sections']['8']['id'],
-								descrip: global_strings['defaults']['sections']['8']['descrip']
-							},{
-								name: global_strings['defaults']['sections']['46']['link'],
-								id: global_strings['defaults']['sections']['46']['id'],
-								descrip: global_strings['defaults']['sections']['46']['descrip']
-							},{
-								name: global_strings['defaults']['sections']['47']['link'],
-								id: global_strings['defaults']['sections']['47']['id'],
-								descrip: global_strings['defaults']['sections']['47']['descrip']
-							},{
-								name: global_strings['defaults']['sections']['48']['link'],
-								id: global_strings['defaults']['sections']['48']['id'],
-								descrip: global_strings['defaults']['sections']['48']['descrip']
-							},{
-								name: global_strings['defaults']['sections']['49']['link'],
-								id: global_strings['defaults']['sections']['49']['id'],
-								descrip: global_strings['defaults']['sections']['49']['descrip']
-							},{
-								name: global_strings['defaults']['sections']['50']['link'],
-								id: global_strings['defaults']['sections']['50']['id'],
-								descrip: global_strings['defaults']['sections']['50']['descrip']
-							},{
-								name: global_strings['defaults']['sections']['51']['link'],
-								id: global_strings['defaults']['sections']['51']['id'],
-								descrip: global_strings['defaults']['sections']['51']['descrip']
-							},{
-								name: global_strings['defaults']['sections']['52']['link'],
-								id: global_strings['defaults']['sections']['52']['id'],
-								descrip: global_strings['defaults']['sections']['52']['descrip']
-							},{
-								name: global_strings['defaults']['sections']['53']['link'],
-								id: global_strings['defaults']['sections']['53']['id'],
-								descrip: global_strings['defaults']['sections']['53']['descrip']
-							},{
-								name: global_strings['defaults']['sections']['54']['link'],
-								id: global_strings['defaults']['sections']['54']['id'],
-								descrip: global_strings['defaults']['sections']['54']['descrip']
-							},{
-								name: global_strings['defaults']['sections']['55']['link'],
-								id: global_strings['defaults']['sections']['55']['id'],
-								descrip: global_strings['defaults']['sections']['55']['descrip']
-							},{
-								name: global_strings['defaults']['sections']['56']['link'],
-								id: global_strings['defaults']['sections']['56']['id'],
-								descrip: global_strings['defaults']['sections']['56']['descrip']
-							},{
-								name: global_strings['defaults']['sections']['58']['link'],
-								id: global_strings['defaults']['sections']['58']['id'],
-								descrip: global_strings['defaults']['sections']['58']['descrip']
-							},{
-								name: global_strings['defaults']['sections']['60']['link'],
-								id: global_strings['defaults']['sections']['60']['id'],
-								descrip: global_strings['defaults']['sections']['60']['descrip']
-							},{
-								name: global_strings['defaults']['sections']['5']['link'],
-								id: global_strings['defaults']['sections']['5']['id'],
-								descrip: global_strings['defaults']['sections']['5']['descrip']
-							},{
-								name: global_strings['defaults']['sections']['61']['link'],
-								id: global_strings['defaults']['sections']['61']['id'],
-								descrip: global_strings['defaults']['sections']['61']['descrip']
-							},{
-								name: global_strings['defaults']['sections']['62']['link'],
-								id: global_strings['defaults']['sections']['62']['id'],
-								descrip: global_strings['defaults']['sections']['62']['descrip']
-							},{
-								name: global_strings['defaults']['sections']['63']['link'],
-								id: global_strings['defaults']['sections']['63']['id'],
-								descrip: global_strings['defaults']['sections']['63']['descrip']
-							},{
-								name: global_strings['defaults']['sections']['64']['link'],
-								id: global_strings['defaults']['sections']['64']['id'],
-								descrip: global_strings['defaults']['sections']['64']['descrip']
-							},{
-								name: global_strings['defaults']['sections']['65']['link'],
-								id: global_strings['defaults']['sections']['65']['id'],
-								descrip: global_strings['defaults']['sections']['65']['descrip']
-							},{
-								name: global_strings['defaults']['sections']['66']['link'],
-								id: global_strings['defaults']['sections']['66']['id'],
-								descrip: global_strings['defaults']['sections']['66']['descrip']
-							},{
-								name: global_strings['defaults']['sections']['67']['link'],
-								id: global_strings['defaults']['sections']['67']['id'],
-								descrip: global_strings['defaults']['sections']['67']['descrip']
-							},{
-								name: global_strings['defaults']['sections']['68']['link'],
-								id: global_strings['defaults']['sections']['68']['id'],
-								descrip: global_strings['defaults']['sections']['68']['descrip']
-							},{
-								name: global_strings['defaults']['sections']['69']['link'],
-								id: global_strings['defaults']['sections']['69']['id'],
-								descrip: global_strings['defaults']['sections']['69']['descrip']
-							},{
-								name: global_strings['defaults']['sections']['70']['link'],
-								id: global_strings['defaults']['sections']['70']['id'],
-								descrip: global_strings['defaults']['sections']['70']['descrip']
-							},{
-								name: global_strings['defaults']['sections']['74']['link'],
-								id: global_strings['defaults']['sections']['74']['id'],
-								descrip: global_strings['defaults']['sections']['74']['descrip']
-							},{
-								name: global_strings['defaults']['sections']['75']['link'],
-								id: global_strings['defaults']['sections']['75']['id'],
-								descrip: global_strings['defaults']['sections']['75']['descrip']
-							},{
-								name: global_strings['defaults']['sections']['76']['link'],
-								id: global_strings['defaults']['sections']['76']['id'],
-								descrip: global_strings['defaults']['sections']['76']['descrip']
-							},{
-								name: global_strings['defaults']['sections']['73']['link'],
-								id: global_strings['defaults']['sections']['73']['id'],
-								descrip: global_strings['defaults']['sections']['73']['descrip']
-							},{
-								name: global_strings['defaults']['sections']['72']['link'],
-								id: global_strings['defaults']['sections']['72']['id'],
-								descrip: global_strings['defaults']['sections']['72']['descrip']
-							},{
-								name: global_strings['defaults']['sections']['78']['link'],
-								id: global_strings['defaults']['sections']['78']['id'],
-								descrip: global_strings['defaults']['sections']['78']['descrip']
-							},{
-								name: global_strings['defaults']['sections']['79']['link'],
-								id: global_strings['defaults']['sections']['79']['id'],
-								descrip: global_strings['defaults']['sections']['79']['descrip']
-							},{
-								name: global_strings['defaults']['sections']['80']['link'],
-								id: global_strings['defaults']['sections']['80']['id'],
-								descrip: global_strings['defaults']['sections']['80']['descrip']
-							}
-						] -%}
-
-						{{ nav_accordian_section('3', 'Defaults', 'defaults', defaults_page_links, fileName, 'bg-dark-gray-600') }}
-
+						{{ macros.nav_accordian_section('1', 'Boilers', 'boilerplates', global_strings['boilerplates']['sections'], fileName, 'bg-dark-gray-600') }}
 						
+						{{ macros.nav_accordian_section('2', 'Colors', 'colors', global_strings['colors']['sections'], fileName, 'bg-dark-gray-600') }}
+
+						{{ macros.nav_accordian_section('3', 'Defaults', 'defaults', global_strings['defaults']['sections'], fileName, 'bg-dark-gray-600') }}
+
+						{{ macros.nav_accordian_section('4', 'Extensions', 'extensions', global_strings['extensions']['sections'], fileName, 'bg-dark-gray-600') }}
 						
+						{{ macros.nav_accordian_section('5', 'Icons', 'icons', global_strings['icons']['sections'], fileName, 'bg-dark-gray-600') }}
 						
-						{%- set extensions_page_links = [
-							{
-								name: global_strings['extensions']['sections']['2']['link'],
-								id: global_strings['extensions']['sections']['2']['id'],
-								descrip: global_strings['extensions']['sections']['2']['descrip']
-							},{
-								name: global_strings['extensions']['sections']['3']['link'],
-								id: global_strings['extensions']['sections']['3']['id'],
-								descrip: global_strings['extensions']['sections']['3']['descrip']
-							},{
-								name: global_strings['extensions']['sections']['6']['link'],
-								id: global_strings['extensions']['sections']['6']['id'],
-								descrip: global_strings['extensions']['sections']['6']['descrip']
-							},{
-								name: global_strings['extensions']['sections']['18']['link'],
-								id: global_strings['extensions']['sections']['18']['id'],
-								descrip: global_strings['extensions']['sections']['18']['descrip']
-							},{
-								name: global_strings['extensions']['sections']['17']['link'],
-								id: global_strings['extensions']['sections']['17']['id'],
-								descrip: global_strings['extensions']['sections']['17']['descrip']
-							},{
-								name: global_strings['extensions']['sections']['9']['link'],
-								id: global_strings['extensions']['sections']['9']['id'],
-								descrip: global_strings['extensions']['sections']['9']['descrip']
-							},{
-								name: global_strings['extensions']['sections']['8']['link'],
-								id: global_strings['extensions']['sections']['8']['id'],
-								descrip: global_strings['extensions']['sections']['8']['descrip']
-							},{
-								name: global_strings['extensions']['sections']['15']['link'],
-								id: global_strings['extensions']['sections']['15']['id'],
-								descrip: global_strings['extensions']['sections']['15']['descrip']
-							},{
-								name: global_strings['extensions']['sections']['1']['link'],
-								id: global_strings['extensions']['sections']['1']['id'],
-								descrip: global_strings['extensions']['sections']['1']['descrip']
-							},{
-								name: global_strings['extensions']['sections']['4']['link'],
-								id: global_strings['extensions']['sections']['4']['id'],
-								descrip: global_strings['extensions']['sections']['4']['descrip']
-							},{
-								name: global_strings['extensions']['sections']['12']['link'],
-								id: global_strings['extensions']['sections']['12']['id'],
-								descrip: global_strings['extensions']['sections']['12']['descrip']
-							},{
-								name: global_strings['extensions']['sections']['16']['link'],
-								id: global_strings['extensions']['sections']['16']['id'],
-								descrip: global_strings['extensions']['sections']['16']['descrip']
-							},{
-								name: global_strings['extensions']['sections']['13']['link'],
-								id: global_strings['extensions']['sections']['13']['id'],
-								descrip: global_strings['extensions']['sections']['13']['descrip']
-							},{
-								name: global_strings['extensions']['sections']['14']['link'],
-								id: global_strings['extensions']['sections']['14']['id'],
-								descrip: global_strings['extensions']['sections']['14']['descrip']
-							},{
-								name: global_strings['extensions']['sections']['10']['link'],
-								id: global_strings['extensions']['sections']['10']['id'],
-								descrip: global_strings['extensions']['sections']['10']['descrip']
-							},{
-								name: global_strings['extensions']['sections']['0']['link'],
-								id: global_strings['extensions']['sections']['0']['id'],
-								descrip: global_strings['extensions']['sections']['0']['descrip']
-							},{
-								name: global_strings['extensions']['sections']['11']['link'],
-								id: global_strings['extensions']['sections']['11']['id'],
-								descrip: global_strings['extensions']['sections']['11']['descrip']
-							},{
-								name: global_strings['extensions']['sections']['5']['link'],
-								id: global_strings['extensions']['sections']['5']['id'],
-								descrip: global_strings['extensions']['sections']['5']['descrip']
-							},{
-								name: global_strings['extensions']['sections']['7']['link'],
-								id: global_strings['extensions']['sections']['7']['id'],
-								descrip: global_strings['extensions']['sections']['7']['descrip']
-							},{
-								name: global_strings['extensions']['sections']['19']['link'],
-								id: global_strings['extensions']['sections']['19']['id'],
-								descrip: global_strings['extensions']['sections']['19']['descrip']
-							}
-						] -%}
-
-						{{ nav_accordian_section('2', 'Extensions', 'extensions', extensions_page_links, fileName, 'bg-dark-gray-600') }}
+						{{ macros.nav_accordian_section('6', 'Layouts', 'layouts', global_strings['layouts']['sections'], fileName, 'bg-dark-gray-600') }}
 						
-
-
-						{%- set icons_page_links = [
-							{
-								name: global_strings['icons']['sections']['14']['link'],
-								id: global_strings['icons']['sections']['14']['id'],
-								descrip: global_strings['icons']['sections']['14']['descrip']
-							},{
-								name: global_strings['icons']['sections']['12']['link'],
-								id: global_strings['icons']['sections']['12']['id'],
-								descrip: global_strings['icons']['sections']['12']['descrip']
-							},{
-								name: global_strings['icons']['sections']['3']['link'],
-								id: global_strings['icons']['sections']['3']['id'],
-								descrip: global_strings['icons']['sections']['3']['descrip']
-							},{
-								name: global_strings['icons']['sections']['11']['link'],
-								id: global_strings['icons']['sections']['11']['id'],
-								descrip: global_strings['icons']['sections']['11']['descrip']
-							},{
-								name: global_strings['icons']['sections']['1']['link'],
-								id: global_strings['icons']['sections']['1']['id'],
-								descrip: global_strings['icons']['sections']['1']['descrip']
-							},{
-								name: global_strings['icons']['sections']['13']['link'],
-								id: global_strings['icons']['sections']['13']['id'],
-								descrip: global_strings['icons']['sections']['13']['descrip']
-							},{
-								name: global_strings['icons']['sections']['2']['link'],
-								id: global_strings['icons']['sections']['2']['id'],
-								descrip: global_strings['icons']['sections']['2']['descrip']
-							},{
-								name: global_strings['icons']['sections']['9']['link'],
-								id: global_strings['icons']['sections']['9']['id'],
-								descrip: global_strings['icons']['sections']['9']['descrip']
-							},{
-								name: global_strings['icons']['sections']['4']['link'],
-								id: global_strings['icons']['sections']['4']['id'],
-								descrip: global_strings['icons']['sections']['4']['descrip']
-							},{
-								name: global_strings['icons']['sections']['0']['link'],
-								id: global_strings['icons']['sections']['0']['id'],
-								descrip: global_strings['icons']['sections']['0']['descrip']
-							},{
-								name: global_strings['icons']['sections']['8']['link'],
-								id: global_strings['icons']['sections']['8']['id'],
-								descrip: global_strings['icons']['sections']['8']['descrip']
-							},{
-								name: global_strings['icons']['sections']['6']['link'],
-								id: global_strings['icons']['sections']['6']['id'],
-								descrip: global_strings['icons']['sections']['6']['descrip']
-							},{
-								name: global_strings['icons']['sections']['7']['link'],
-								id: global_strings['icons']['sections']['7']['id'],
-								descrip: global_strings['icons']['sections']['7']['descrip']
-							},{
-								name: global_strings['icons']['sections']['5']['link'],
-								id: global_strings['icons']['sections']['5']['id'],
-								descrip: global_strings['icons']['sections']['5']['descrip']
-							},{
-								name: global_strings['icons']['sections']['10']['link'],
-								id: global_strings['icons']['sections']['10']['id'],
-								descrip: global_strings['icons']['sections']['10']['descrip']
-							}
-						] -%}
-
-						{{ nav_accordian_section('5', 'Icons', 'icons', icons_page_links, fileName, 'bg-dark-gray-600') }}
-
-
-
-
-
-						{%- set layouts_page_links = [
-							{
-								name: global_strings['layouts']['sections']['3']['link'],
-								id: global_strings['layouts']['sections']['3']['id'],
-								descrip: global_strings['layouts']['sections']['3']['descrip']
-							},
-							{
-								name: global_strings['layouts']['sections']['1']['link'],
-								id: global_strings['layouts']['sections']['1']['id'],
-								descrip: global_strings['layouts']['sections']['1']['descrip']
-							},
-							{
-								name: global_strings['layouts']['sections']['0']['link'],
-								id: global_strings['layouts']['sections']['0']['id'],
-								descrip: global_strings['layouts']['sections']['0']['descrip']
-							},
-							{
-								name: global_strings['layouts']['sections']['2']['link'],
-								id: global_strings['layouts']['sections']['2']['id'],
-								descrip: global_strings['layouts']['sections']['2']['descrip']
-							}
-						] -%}
-
-						{{ nav_accordian_section('4', 'Layouts', 'layouts', layouts_page_links, fileName, 'bg-dark-gray-600') }}
+						{{ macros.nav_accordian_section('7', 'Reference', 'reference', global_strings['reference']['sections'], fileName, 'bg-dark-gray-600') }}
 						
-
-
-						{%- set reference_page_links = [
-							{
-								name: global_strings['reference']['sections']['14']['link'],
-								id: global_strings['reference']['sections']['14']['id'],
-								descrip: global_strings['reference']['sections']['14']['descrip']
-							},{
-								name: global_strings['reference']['sections']['10']['link'],
-								id: global_strings['reference']['sections']['10']['id'],
-								descrip: global_strings['reference']['sections']['10']['descrip']
-							},{
-								name: global_strings['reference']['sections']['0']['link'],
-								id: global_strings['reference']['sections']['0']['id'],
-								descrip: global_strings['reference']['sections']['0']['descrip']
-							},{
-								name: global_strings['reference']['sections']['3']['link'],
-								id: global_strings['reference']['sections']['3']['id'],
-								descrip: global_strings['reference']['sections']['3']['descrip']
-							},{
-								name: global_strings['reference']['sections']['1']['link'],
-								id: global_strings['reference']['sections']['1']['id'],
-								descrip: global_strings['reference']['sections']['1']['descrip']
-							},{
-								name: global_strings['reference']['sections']['4']['link'],
-								id: global_strings['reference']['sections']['4']['id'],
-								descrip: global_strings['reference']['sections']['4']['descrip']
-							},{
-								name: global_strings['reference']['sections']['8']['link'],
-								id: global_strings['reference']['sections']['8']['id'],
-								descrip: global_strings['reference']['sections']['8']['descrip']
-							},{
-								name: global_strings['reference']['sections']['9']['link'],
-								id: global_strings['reference']['sections']['9']['id'],
-								descrip: global_strings['reference']['sections']['9']['descrip']
-							},{
-								name: global_strings['reference']['sections']['5']['link'],
-								id: global_strings['reference']['sections']['5']['id'],
-								descrip: global_strings['reference']['sections']['5']['descrip']
-							},{
-								name: global_strings['reference']['sections']['12']['link'],
-								id: global_strings['reference']['sections']['12']['id'],
-								descrip: global_strings['reference']['sections']['12']['descrip']
-							},{
-								name: global_strings['reference']['sections']['7']['link'],
-								id: global_strings['reference']['sections']['7']['id'],
-								descrip: global_strings['reference']['sections']['7']['descrip']
-							},{
-								name: global_strings['reference']['sections']['6']['link'],
-								id: global_strings['reference']['sections']['6']['id'],
-								descrip: global_strings['reference']['sections']['6']['descrip']
-							},{
-								name: global_strings['reference']['sections']['11']['link'],
-								id: global_strings['reference']['sections']['11']['id'],
-								descrip: global_strings['reference']['sections']['11']['descrip']
-							},{
-								name: global_strings['reference']['sections']['15']['link'],
-								id: global_strings['reference']['sections']['15']['id'],
-								descrip: global_strings['reference']['sections']['15']['descrip']
-							},{
-								name: global_strings['reference']['sections']['18']['link'],
-								id: global_strings['reference']['sections']['18']['id'],
-								descrip: global_strings['reference']['sections']['18']['descrip']
-							},{
-								name: global_strings['reference']['sections']['2']['link'],
-								id: global_strings['reference']['sections']['2']['id'],
-								descrip: global_strings['reference']['sections']['2']['descrip']
-							},{
-								name: global_strings['reference']['sections']['16']['link'],
-								id: global_strings['reference']['sections']['16']['id'],
-								descrip: global_strings['reference']['sections']['16']['descrip']
-							},{
-								name: global_strings['reference']['sections']['17']['link'],
-								id: global_strings['reference']['sections']['17']['id'],
-								descrip: global_strings['reference']['sections']['17']['descrip']
-							},{
-								name: global_strings['reference']['sections']['19']['link'],
-								id: global_strings['reference']['sections']['19']['id'],
-								descrip: global_strings['reference']['sections']['19']['descrip']
-							}
-						] -%}
-
-						{{ nav_accordian_section('6', 'Reference', 'reference', reference_page_links, fileName, 'bg-dark-gray-600') }}
-
-
-						
-						{%- set settings_page_links = [
-							{
-								name: global_strings['settings']['sections']['0']['link'],
-								id: global_strings['settings']['sections']['0']['id'],
-								descrip: global_strings['settings']['sections']['0']['descrip']
-							}
-						] -%}
-
-						{{ nav_accordian_section('8', 'Settings', 'settings', settings_page_links, fileName, 'bg-dark-gray-600') }}
+						{{ macros.nav_accordian_section('8', 'Settings', 'settings', global_strings['settings']['sections'], fileName, 'bg-dark-gray-600') }}
 
 
 					</div>
@@ -1112,9 +289,6 @@
 		<div id="search-modal" class="modal fade modal-fullscreen" tabindex="-1" role="dialog" aria-labelledby="search-modal-input-label" aria-hidden="true">
 			<div class="modal-dialog">
 				<div class="modal-content bg-dark-gray-600 text-white">
-					<!--div class="modal-header justify-content-center border-dark-gray-700">
-						<h3 class="modal-title text-light">SEARCH</h3>
-					</div-->
 					<div class="modal-body">
 						<div class="row justify-content-center">
 							<div class="col-11 col-sm-8 col-md-6 col-lg-5 col-xl-4 py-5">
@@ -1122,7 +296,6 @@
 									<input type="text" id="search-modal-input" name="search-modal-input" class="material-input rounded-0 border-bottom text-light" aria-describedby="search-modal-input-label" required="" autocomplete="off">
 									<span class="material-bar"></span>
 									<label id="search-modal-input-label" class="material-label"><i class="fas fa-search mr-2"></i>Site Search</label>
-									<!--small class="form-text text-gray">Search the library...</small-->
 								</div>
 								<div id="search-modal-results" class="pt-4"></div>
 							</div>

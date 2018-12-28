@@ -5,12 +5,9 @@
 
                 <div class="row justify-content-center pt-5">
                     
-                    <div id="{{ global_strings['defaults']['sections']['2']['id'] }}" class="col-md-6 pb-5">
+                    <div id="{{ global_strings['defaults']['sections'][2]['id'] }}" class="col-md-6 pb-5">
                         
-                        {% set headingHeadline = global_strings['defaults']['sections']['2']['head'] %}
-						{% set headingSubline = global_strings['defaults']['sections']['2']['subhead'] %}
-						{% set headingDescrip = global_strings['defaults']['sections']['2']['descrip'] %}
-                        {% include "partials/_columnHeading.njk" %}
+                        {{ macros.page_section_heading(global_strings['defaults']['sections'][2]['head'], global_strings['defaults']['sections'][2]['subhead'], global_strings['defaults']['sections'][2]['descrip']) }}
                         
                         <label class="d-block font-weight-bold">Minimalist Card:</label>
                         <div class="js-prism mb-2 text-left">

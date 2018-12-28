@@ -6,14 +6,9 @@
 
                 <div class="row justify-content-center">
                     
-                    <div id="{{ global_strings['layouts']['sections']['3']['id'] }}" class="col pb-5">
+                    <div id="{{ global_strings['layouts']['sections'][3]['id'] }}" class="col pb-5">
                         
-                        {% set headingHeadline = global_strings['layouts']['sections']['3']['head'] %}
-                        {% set headingSubline = global_strings['layouts']['sections']['3']['subhead'] %}
-                        {% set headingDescrip = global_strings['layouts']['sections']['3']['descrip'] %}
-                        {% include "partials/_columnHeading.njk" %}
-
-                        
+                        {{ macros.page_section_heading(global_strings['layouts']['sections'][3]['head'], global_strings['layouts']['sections'][3]['subhead'], global_strings['layouts']['sections'][3]['descrip']) }}
                         
                         <h3 class="mb-2">Card Group</h3>
                         

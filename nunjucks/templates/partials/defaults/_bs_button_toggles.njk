@@ -5,12 +5,9 @@
 
                 <div class="row justify-content-center">
                     
-                    <div id="{{ global_strings['defaults']['sections']['26']['id'] }}" class="col-md-6 pb-5">
+                    <div id="{{ global_strings['defaults']['sections'][26]['id'] }}" class="col-md-6 pb-5">
                         
-                        {% set headingHeadline = global_strings['defaults']['sections']['26']['head'] %}
-						{% set headingSubline = global_strings['defaults']['sections']['26']['subhead'] %}
-						{% set headingDescrip = global_strings['defaults']['sections']['26']['descrip'] %}
-                        {% include "partials/_columnHeading.njk" %}
+                        {{ macros.page_section_heading(global_strings['defaults']['sections'][26]['head'], global_strings['defaults']['sections'][26]['subhead'], global_strings['defaults']['sections'][26]['descrip']) }}
 
                         <div class="js-prism mb-2">
                             <button type="button" class="btn btn-primary" data-toggle="button" aria-pressed="false">Toggle Button</button>
@@ -26,12 +23,9 @@
 
                 <div class="row justify-content-center pt-5">
                     
-                    <div id="{{ global_strings['defaults']['sections']['27']['id'] }}" class="col-md-6 pb-5">
+                    <div id="{{ global_strings['defaults']['sections'][27]['id'] }}" class="col-md-6 pb-5">
                         
-                        {% set headingHeadline = global_strings['defaults']['sections']['27']['head'] %}
-						{% set headingSubline = global_strings['defaults']['sections']['27']['subhead'] %}
-						{% set headingDescrip = global_strings['defaults']['sections']['27']['descrip'] %}
-                        {% include "partials/_columnHeading.njk" %}
+                        {{ macros.page_section_heading(global_strings['defaults']['sections'][27]['head'], global_strings['defaults']['sections'][27]['subhead'], global_strings['defaults']['sections'][27]['descrip']) }}
 
                         <div class="js-prism mb-2">
                             <div class="btn-group-toggle" data-toggle="buttons">
@@ -50,12 +44,9 @@
 
                 <div class="row justify-content-center pt-5">
                     
-                    <div id="{{ global_strings['defaults']['sections']['28']['id'] }}" class="col-md-6 pb-5">
+                    <div id="{{ global_strings['defaults']['sections'][28]['id'] }}" class="col-md-6 pb-5">
                         
-                        {% set headingHeadline = global_strings['defaults']['sections']['28']['head'] %}
-						{% set headingSubline = global_strings['defaults']['sections']['28']['subhead'] %}
-						{% set headingDescrip = global_strings['defaults']['sections']['28']['descrip'] %}
-                        {% include "partials/_columnHeading.njk" %}
+                        {{ macros.page_section_heading(global_strings['defaults']['sections'][28]['head'], global_strings['defaults']['sections'][28]['subhead'], global_strings['defaults']['sections'][28]['descrip']) }}
 
                         <div class="js-prism mb-2">
                             <div class="btn-group btn-group-toggle" data-toggle="buttons">

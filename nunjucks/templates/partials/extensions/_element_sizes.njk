@@ -6,12 +6,9 @@
                 
                 <div class="row justify-content-center">
                     
-                    <div id="{{ global_strings['extensions']['sections']['8']['id'] }}" class="col-12 pb-5">
+                    <div id="{{ global_strings['extensions']['sections'][8]['id'] }}" class="col-12 pb-5">
                         
-                        {% set headingHeadline = global_strings['extensions']['sections']['8']['head'] %}
-						{% set headingSubline = global_strings['extensions']['sections']['8']['subhead'] %}
-						{% set headingDescrip = global_strings['extensions']['sections']['8']['descrip'] %}
-                        {% include "partials/_columnHeading.njk" %}
+                        {{ macros.page_section_heading(global_strings['extensions']['sections'][8]['head'], global_strings['extensions']['sections'][8]['subhead'], global_strings['extensions']['sections'][8]['descrip']) }}
 
                         {% macro element_widths(number) %}
                         <div class="js-prism mb-2">
@@ -52,12 +49,9 @@
 
                 <div class="row justify-content-center">
 
-                    <div id="{{ global_strings['extensions']['sections']['9']['id'] }}" class="col-12 pb-5">
+                    <div id="{{ global_strings['extensions']['sections'][9]['id'] }}" class="col-12 pb-5">
                         
-                        {% set headingHeadline = global_strings['extensions']['sections']['9']['head'] %}
-						{% set headingSubline = global_strings['extensions']['sections']['9']['subhead'] %}
-						{% set headingDescrip = global_strings['extensions']['sections']['9']['descrip'] %}
-                        {% include "partials/_columnHeading.njk" %}
+                        {{ macros.page_section_heading(global_strings['extensions']['sections'][9]['head'], global_strings['extensions']['sections'][9]['subhead'], global_strings['extensions']['sections'][9]['descrip']) }}
 
                         {% macro element_heights(number) %}
                         <div class="js-prism mb-2">

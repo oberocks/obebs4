@@ -3,14 +3,11 @@
         
             <div class="container modal-workspace">
 
-                <div id="{{ global_strings['colors']['sections']['20']['id'] }}" class="row justify-content-center pt-5">
+                <div id="{{ global_strings['colors']['sections'][20]['id'] }}" class="row justify-content-center pt-5">
                     
                     <div class="col-12">
                         
-                        {% set headingHeadline = global_strings['colors']['sections']['20']['head'] %}
-						{% set headingSubline = global_strings['colors']['sections']['20']['subhead'] %}
-						{% set headingDescrip = global_strings['colors']['sections']['20']['descrip'] %}
-                        {% include "partials/_columnHeading.njk" %}
+                        {{ macros.page_section_heading(global_strings['colors']['sections'][20]['head'], global_strings['colors']['sections'][20]['subhead'], global_strings['colors']['sections'][20]['descrip']) }}
 
                     </div>
 

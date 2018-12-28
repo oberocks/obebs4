@@ -5,12 +5,9 @@
 
                 <div class="row justify-content-center pt-5">
 
-                    <div id="{{ global_strings['reference']['sections']['18']['id'] }}" class="js-dataTables-workspace col-12 pb-5">
+                    <div id="{{ global_strings['reference']['sections'][18]['id'] }}" class="js-dataTables-workspace col-12 pb-5">
 
-                        {% set headingHeadline = global_strings['reference']['sections']['18']['head'] %}
-						{% set headingSubline = global_strings['reference']['sections']['18']['subhead'] %}
-						{% set headingDescrip = global_strings['reference']['sections']['18']['descrip'] %}
-                        {% include "partials/_columnHeading.njk" %}
+                        {{ macros.page_section_heading(global_strings['reference']['sections'][18]['head'], global_strings['reference']['sections'][18]['subhead'], global_strings['reference']['sections'][18]['descrip']) }}
 
                         <div class="row justify-content-center">
                             <div class="js-dataTables-search-block col-sm-10 col-md-6 col-lg-4 text-center pb-2"></div>

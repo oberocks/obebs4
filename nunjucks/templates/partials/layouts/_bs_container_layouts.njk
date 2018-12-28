@@ -1,11 +1,8 @@
 <!-- _bs_container_layouts.njk -->
 		<div class="pt-5 bg-white"></div>
-        <div id="{{ global_strings['layouts']['sections']['0']['id'] }}" class="container-fluid pt-5 text-center bg-white text-dark">
+        <div id="{{ global_strings['layouts']['sections'][0]['id'] }}" class="container-fluid pt-5 text-center bg-white text-dark">
             
-            {% set headingHeadline = global_strings['layouts']['sections']['0']['head'] %}
-            {% set headingSubline = global_strings['layouts']['sections']['0']['subhead'] %}
-            {% set headingDescrip = global_strings['layouts']['sections']['0']['descrip'] %}
-            {% include "partials/_columnHeading.njk" %}
+            {{ macros.page_section_heading(global_strings['layouts']['sections'][0]['head'], global_strings['layouts']['sections'][0]['subhead'], global_strings['layouts']['sections'][0]['descrip']) }}
            
             <h3 class="mb-1">1x4 2x2 4x1</h3>
             <small class="d-block text-muted mb-2">xs/sm md lg/xl</small>

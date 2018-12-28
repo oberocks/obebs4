@@ -6,12 +6,9 @@
                 
                 <div class="row justify-content-center">
                     
-                    <div id="{{ global_strings['extensions']['sections']['10']['id'] }}" class="col-md-6 pb-5">
+                    <div id="{{ global_strings['extensions']['sections'][10]['id'] }}" class="col-md-6 pb-5">
                     
-                        {% set headingHeadline = global_strings['extensions']['sections']['10']['head'] %}
-						{% set headingSubline = global_strings['extensions']['sections']['10']['subhead'] %}
-						{% set headingDescrip = global_strings['extensions']['sections']['10']['descrip'] %}
-                        {% include "partials/_columnHeading.njk" %}
+                        {{ macros.page_section_heading(global_strings['extensions']['sections'][10]['head'], global_strings['extensions']['sections'][10]['subhead'], global_strings['extensions']['sections'][10]['descrip']) }}
 
                         {% macro list_elements(fullClassTrailingSpace, textDescrip) %}
                         <div class="js-prism">
@@ -44,12 +41,9 @@
 
                     </div>
 
-                    <div id="{{ global_strings['extensions']['sections']['11']['id'] }}" class="col-md-6 pb-5">
+                    <div id="{{ global_strings['extensions']['sections'][11]['id'] }}" class="col-md-6 pb-5">
                     
-                        {% set headingHeadline = global_strings['extensions']['sections']['11']['head'] %}
-						{% set headingSubline = global_strings['extensions']['sections']['11']['subhead'] %}
-						{% set headingDescrip = global_strings['extensions']['sections']['11']['descrip'] %}
-                        {% include "partials/_columnHeading.njk" %}
+                        {{ macros.page_section_heading(global_strings['extensions']['sections'][11]['head'], global_strings['extensions']['sections'][11]['subhead'], global_strings['extensions']['sections'][11]['descrip']) }}
 
                         {% macro unordered_list_elements(fullClassTrailingSpace, textDescrip) %}
                         <div class="js-prism">

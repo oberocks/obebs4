@@ -5,12 +5,9 @@
                 
                 <div class="row justify-content-center">
                     
-                    <div id="{{ global_strings['defaults']['sections']['73']['id'] }}" class="col-md-6 pb-5">
+                    <div id="{{ global_strings['defaults']['sections'][69]['id'] }}" class="col-md-6 pb-5">
                         
-                        {% set headingHeadline = global_strings['defaults']['sections']['73']['head'] %}
-						{% set headingSubline = global_strings['defaults']['sections']['73']['subhead'] %}
-						{% set headingDescrip = global_strings['defaults']['sections']['73']['descrip'] %}
-                        {% include "partials/_columnHeading.njk" %}
+                        {{ macros.page_section_heading(global_strings['defaults']['sections'][69]['head'], global_strings['defaults']['sections'][69]['subhead'], global_strings['defaults']['sections'][69]['descrip']) }}
 
                         {% macro text_justification(classPartial, namePartial, labelJustification) %}
                         <strong class="d-block text-{{ labelJustification }}">{{ namePartial }} Text:</strong>
@@ -26,12 +23,9 @@
 
                     </div>
 
-                    <div id="{{ global_strings['defaults']['sections']['74']['id'] }}" class="col-md-6 pb-5">
+                    <div id="{{ global_strings['defaults']['sections'][70]['id'] }}" class="col-md-6 pb-5">
                         
-                        {% set headingHeadline = global_strings['defaults']['sections']['74']['head'] %}
-						{% set headingSubline = global_strings['defaults']['sections']['74']['subhead'] %}
-						{% set headingDescrip = global_strings['defaults']['sections']['74']['descrip'] %}
-                        {% include "partials/_columnHeading.njk" %}
+                        {{ macros.page_section_heading(global_strings['defaults']['sections'][70]['head'], global_strings['defaults']['sections'][70]['subhead'], global_strings['defaults']['sections'][70]['descrip']) }}
                         
                         <strong class="d-block text-left">Standard Blockquote:</strong>
                         <div class="js-prism mb-2 text-left">

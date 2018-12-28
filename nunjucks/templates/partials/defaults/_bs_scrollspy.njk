@@ -5,19 +5,9 @@
                 
                 <div class="row justify-content-center">
                     
-                    <div id="{{ global_strings['defaults']['sections']['60']['id'] }}" class="col pb-5">
+                    <div id="{{ global_strings['defaults']['sections'][57]['id'] }}" class="col pb-5">
                         
-                        {% set headingHeadline = global_strings['defaults']['sections']['60']['head'] %}
-						{% set headingSubline = global_strings['defaults']['sections']['60']['subhead'] %}
-						{% set headingDescrip = global_strings['defaults']['sections']['60']['descrip'] %}
-                        {% include "partials/_columnHeading.njk" %}
-
-                        
-                        
-                        {% set laurem_1 = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed congue consequat leo, in pulvinar ex vulputate et. Phasellus sit amet magna justo. Curabitur facilisis lobortis libero. Vivamus fringilla eros id nulla fermentum elementum. Proin vitae massa sed est congue bibendum et ac quam. Vestibulum tempor ut massa ut maximus.' %}
-
-                        {% set laurem_2 = 'Integer condimentum purus vel rutrum varius. Praesent sodales fermentum sodales. Pellentesque pharetra laoreet erat nec ullamcorper. Suspendisse a tincidunt lacus. Pellentesque cursus ante a ex ultrices bibendum. Fusce interdum quam vitae molestie vestibulum. Nam sit amet tincidunt ligula.' %}
-
+                        {{ macros.page_section_heading(global_strings['defaults']['sections'][57]['head'], global_strings['defaults']['sections'][57]['subhead'], global_strings['defaults']['sections'][57]['descrip']) }}
                         
                         <h5 class="pt-4">Scrollspy Navbar</h5>
                         
@@ -45,28 +35,28 @@
                             <div class="p-3" data-spy="scroll" data-target="#scrollspy-navbar" data-offset="0" style="position: relative; height: 200px; overflow: auto;">
                                 <div id="topic-1">
                                     <h4 class="mb-3">Topic 1</h4>
-                                    <p>{{ laurem_1 }}</p>
-                                    <p>{{ laurem_2 }}</p>
+                                    <p>{{ variables.laurem_1 }}</p>
+                                    <p>{{ variables.laurem_2 }}</p>
                                 </div>
                                 <div id="topic-2" class="mt-4">
                                     <h4 class="mb-4">Topic 2</h4>
-                                    <p>{{ laurem_1 }}</p>
-                                    <p>{{ laurem_2 }}</p>
+                                    <p>{{ variables.laurem_1 }}</p>
+                                    <p>{{ variables.laurem_2 }}</p>
                                 </div>
                                 <div id="topic-3a" class="mt-4">
                                     <h4 class="mb-3">Topic 3a</h4>
-                                    <p>{{ laurem_1 }}</p>
-                                    <p>{{ laurem_2 }}</p>
+                                    <p>{{ variables.laurem_1 }}</p>
+                                    <p>{{ variables.laurem_2 }}</p>
                                 </div>
                                 <div id="topic-3b" class="mt-4">
                                     <h4 class="mb-3">Topic 3b</h4>
-                                    <p>{{ laurem_1 }}</p>
-                                    <p>{{ laurem_2 }}</p>
+                                    <p>{{ variables.laurem_1 }}</p>
+                                    <p>{{ variables.laurem_2 }}</p>
                                 </div>
                                 <div id="topic-3c" class="mt-4">
                                     <h4 class="mb-3">Topic 3c</h4>
-                                    <p>{{ laurem_1 }}</p>
-                                    <p>{{ laurem_2 }}</p>
+                                    <p>{{ variables.laurem_1 }}</p>
+                                    <p>{{ variables.laurem_2 }}</p>
                                 </div>
                             </div>
                         </div>
@@ -99,38 +89,38 @@
                                     <div class="p-3" data-spy="scroll" data-target="#scrollspy-nested" data-offset="0" style="position: relative; height: 350px; overflow: auto;">
                                         <div id="sn-topic-1">
                                             <h4 class="mb-3">Topic 1</h4>
-                                            <p>{{ laurem_1 }}</p>
-                                            <p>{{ laurem_2 }}</p>
+                                            <p>{{ variables.laurem_1 }}</p>
+                                            <p>{{ variables.laurem_2 }}</p>
                                         </div>
                                         <div id="sn-topic-1-1" class="mt-4">
                                             <h4 class="mb-4">Topic 1-1</h4>
-                                            <p>{{ laurem_1 }}</p>
-                                            <p>{{ laurem_2 }}</p>
+                                            <p>{{ variables.laurem_1 }}</p>
+                                            <p>{{ variables.laurem_2 }}</p>
                                         </div>
                                         <div id="sn-topic-1-2" class="mt-4">
                                             <h4 class="mb-4">Topic 1-2</h4>
-                                            <p>{{ laurem_1 }}</p>
-                                            <p>{{ laurem_2 }}</p>
+                                            <p>{{ variables.laurem_1 }}</p>
+                                            <p>{{ variables.laurem_2 }}</p>
                                         </div>
                                         <div id="sn-topic-2" class="mt-4">
                                             <h4 class="mb-4">Topic 2</h4>
-                                            <p>{{ laurem_1 }}</p>
-                                            <p>{{ laurem_2 }}</p>
+                                            <p>{{ variables.laurem_1 }}</p>
+                                            <p>{{ variables.laurem_2 }}</p>
                                         </div>
                                         <div id="sn-topic-3" class="mt-4">
                                             <h4 class="mb-4">Topic 3</h4>
-                                            <p>{{ laurem_1 }}</p>
-                                            <p>{{ laurem_2 }}</p>
+                                            <p>{{ variables.laurem_1 }}</p>
+                                            <p>{{ variables.laurem_2 }}</p>
                                         </div>
                                         <div id="sn-topic-3-1" class="mt-4">
                                             <h4 class="mb-4">Topic 3-1</h4>
-                                            <p>{{ laurem_1 }}</p>
-                                            <p>{{ laurem_2 }}</p>
+                                            <p>{{ variables.laurem_1 }}</p>
+                                            <p>{{ variables.laurem_2 }}</p>
                                         </div>
                                         <div id="sn-topic-3-2" class="mt-4">
                                             <h4 class="mb-4">Topic 3-2</h4>
-                                            <p>{{ laurem_1 }}</p>
-                                            <p>{{ laurem_2 }}</p>
+                                            <p>{{ variables.laurem_1 }}</p>
+                                            <p>{{ variables.laurem_2 }}</p>
                                         </div>
                                     </div>
                                 </div>
@@ -155,23 +145,23 @@
                                     <div class="p-3" data-spy="scroll" data-target="#scrollspy-list-group" data-offset="0" style="position: relative; height: 200px; overflow: auto;">
                                         <div id="lg-topic-1">
                                             <h4 class="mb-3">Topic 1</h4>
-                                            <p>{{ laurem_1 }}</p>
-                                            <p>{{ laurem_2 }}</p>
+                                            <p>{{ variables.laurem_1 }}</p>
+                                            <p>{{ variables.laurem_2 }}</p>
                                         </div>
                                         <div id="lg-topic-2" class="mt-4">
                                             <h4 class="mb-4">Topic 2</h4>
-                                            <p>{{ laurem_1 }}</p>
-                                            <p>{{ laurem_2 }}</p>
+                                            <p>{{ variables.laurem_1 }}</p>
+                                            <p>{{ variables.laurem_2 }}</p>
                                         </div>
                                         <div id="lg-topic-3" class="mt-4">
                                             <h4 class="mb-4">Topic 3</h4>
-                                            <p>{{ laurem_1 }}</p>
-                                            <p>{{ laurem_2 }}</p>
+                                            <p>{{ variables.laurem_1 }}</p>
+                                            <p>{{ variables.laurem_2 }}</p>
                                         </div>
                                         <div id="lg-topic-4" class="mt-4">
                                             <h4 class="mb-4">Topic 4</h4>
-                                            <p>{{ laurem_1 }}</p>
-                                            <p>{{ laurem_2 }}</p>
+                                            <p>{{ variables.laurem_1 }}</p>
+                                            <p>{{ variables.laurem_2 }}</p>
                                         </div>
                                     </div>
                                 </div>

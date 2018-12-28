@@ -6,14 +6,9 @@
                 
                 <div class="row justify-content-center">
                     
-                    <div id="{{ global_strings['extensions']['sections']['16']['id'] }}" class="col-12 pb-5">
+                    <div id="{{ global_strings['extensions']['sections'][16]['id'] }}" class="col-12 pb-5">
                         
-                        {% set headingHeadline = global_strings['extensions']['sections']['16']['head'] %}
-						{% set headingSubline = global_strings['extensions']['sections']['16']['subhead'] %}
-						{% set headingDescrip = global_strings['extensions']['sections']['16']['descrip'] %}
-                        {% include "partials/_columnHeading.njk" %}
-
-
+                        {{ macros.page_section_heading(global_strings['extensions']['sections'][16]['head'], global_strings['extensions']['sections'][16]['subhead'], global_strings['extensions']['sections'][16]['descrip']) }}
 
                         {% macro offcanvas_basic_modal_nav(directionName, pinClass, uniqueIdPart) %}
                         <label class="d-block font-weight-bold pt-4">{{ directionName }} Off-Canvas Nav Modal</label>

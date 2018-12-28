@@ -5,12 +5,9 @@
                 
                 <div class="row justify-content-center pt-5">
                     
-                    <div id="{{ global_strings['extensions']['sections']['0']['id'] }}" class="col-md-6 pb-5">
+                    <div id="{{ global_strings['extensions']['sections'][0]['id'] }}" class="col-md-6 pb-5">
                         
-                        {% set headingHeadline = global_strings['extensions']['sections']['0']['head'] %}
-						{% set headingSubline = global_strings['extensions']['sections']['0']['subhead'] %}
-						{% set headingDescrip = global_strings['extensions']['sections']['0']['descrip'] %}
-                        {% include "partials/_columnHeading.njk" %}
+                        {{ macros.page_section_heading(global_strings['extensions']['sections'][0]['head'], global_strings['extensions']['sections'][0]['subhead'], global_strings['extensions']['sections'][0]['descrip']) }}
 
                         {% macro brand_fonts(class, name) %}
                         <div class="js-prism mb-2">
@@ -33,12 +30,9 @@
                 {% if obe_settings['enable-google-fonts'] === 'true' %}
                 <div class="row justify-content-center pt-5">
 
-                    <div id="{{ global_strings['extensions']['sections']['1']['id'] }}" class="col-md-6 pb-5">
+                    <div id="{{ global_strings['extensions']['sections'][1]['id'] }}" class="col-md-6 pb-5">
 
-                        {% set headingHeadline = global_strings['extensions']['sections']['1']['head'] %}
-						{% set headingSubline = global_strings['extensions']['sections']['1']['subhead'] %}
-						{% set headingDescrip = global_strings['extensions']['sections']['1']['descrip'] %}
-                        {% include "partials/_columnHeading.njk" %}
+                        {{ macros.page_section_heading(global_strings['extensions']['sections'][1]['head'], global_strings['extensions']['sections'][1]['subhead'], global_strings['extensions']['sections'][1]['descrip']) }}
 
                         {% macro font_weights(fontClass, fontName, weightClass, weightName) %}
                         <div class="js-prism mb-2">

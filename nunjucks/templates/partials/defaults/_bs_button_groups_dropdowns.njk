@@ -5,12 +5,9 @@
 
                 <div class="row justify-content-center">
                     
-                    <div id="{{ global_strings['defaults']['sections']['20']['id'] }}" class="col-md-6 pb-5">
+                    <div id="{{ global_strings['defaults']['sections'][20]['id'] }}" class="col-md-6 pb-5">
                         
-                        {% set headingHeadline = global_strings['defaults']['sections']['20']['head'] %}
-						{% set headingSubline = global_strings['defaults']['sections']['20']['subhead'] %}
-						{% set headingDescrip = global_strings['defaults']['sections']['20']['descrip'] %}
-                        {% include "partials/_columnHeading.njk" %}
+                        {{ macros.page_section_heading(global_strings['defaults']['sections'][20]['head'], global_strings['defaults']['sections'][20]['subhead'], global_strings['defaults']['sections'][20]['descrip']) }}
                         
                         <div class="js-prism mb-2">
                             <div class="btn-group" role="group" aria-label="Button group with nested dropdown">

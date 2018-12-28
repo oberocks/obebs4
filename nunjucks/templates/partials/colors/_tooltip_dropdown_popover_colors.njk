@@ -7,12 +7,9 @@
 				<div class="row justify-content-center">
 					
 					{% if obe_settings['enable-obebs4-tooltips'] === 'true' %}
-					<div id="{{ global_strings['colors']['sections']['21']['id'] }}" class="col-md-4 pb-5">
+					<div id="{{ global_strings['colors']['sections'][21]['id'] }}" class="col-md-4 pb-5">
 					
-						{% set headingHeadline = global_strings['colors']['sections']['21']['head'] %}
-						{% set headingSubline = global_strings['colors']['sections']['21']['subhead'] %}
-						{% set headingDescrip = global_strings['colors']['sections']['21']['descrip'] %}
-						{% include "partials/_columnHeading.njk" %}
+						{{ macros.page_section_heading(global_strings['colors']['sections'][21]['head'], global_strings['colors']['sections'][21]['subhead'], global_strings['colors']['sections'][21]['descrip']) }}
 						
 						{% macro tooltip_colors(classPartial, namePartial) %}
 						<div class="js-prism mb-2">
@@ -57,12 +54,9 @@
 					{% endif %}
 					
 					{% if obe_settings['enable-obebs4-dropdowns'] === 'true' %}
-					<div id="{{ global_strings['colors']['sections']['22']['id'] }}" class="col-md-4 pb-5">
+					<div id="{{ global_strings['colors']['sections'][22]['id'] }}" class="col-md-4 pb-5">
 					
-						{% set headingHeadline = global_strings['colors']['sections']['22']['head'] %}
-						{% set headingSubline = global_strings['colors']['sections']['22']['subhead'] %}
-						{% set headingDescrip = global_strings['colors']['sections']['22']['descrip'] %}
-						{% include "partials/_columnHeading.njk" %}
+						{{ macros.page_section_heading(global_strings['colors']['sections'][22]['head'], global_strings['colors']['sections'][22]['subhead'], global_strings['colors']['sections'][22]['descrip']) }}
 						
 						{% macro dropdown_colors(classPartial, namePartial) %}
 						<div class="js-prism mb-2">
@@ -117,12 +111,9 @@
 					{% endif %}
 					
 					{% if obe_settings['enable-obebs4-popovers'] === 'true' %}
-					<div id="{{ global_strings['colors']['sections']['23']['id'] }}" class="col-md-4 pb-5">
+					<div id="{{ global_strings['colors']['sections'][23]['id'] }}" class="col-md-4 pb-5">
 					
-						{% set headingHeadline = global_strings['colors']['sections']['23']['head'] %}
-						{% set headingSubline = global_strings['colors']['sections']['23']['subhead'] %}
-						{% set headingDescrip = global_strings['colors']['sections']['23']['descrip'] %}
-						{% include "partials/_columnHeading.njk" %}
+						{{ macros.page_section_heading(global_strings['colors']['sections'][23]['head'], global_strings['colors']['sections'][23]['subhead'], global_strings['colors']['sections'][23]['descrip']) }}
 						
 						{% macro popover_colors(classPartial, namePartial, headerTextPartial, bodyTextPartial) %}
 						<div class="js-prism mb-2">

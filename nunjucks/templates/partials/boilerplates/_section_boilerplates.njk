@@ -5,15 +5,9 @@
 
                 <div class="row justify-content-center">
                     
-                    <div id="{{ global_strings['boilerplates']['sections']['1']['id'] }}" class="col-12 pb-5">
+                    <div id="{{ global_strings['boilerplates']['sections'][1]['id'] }}" class="col-12 pb-5">
                         
-                        {% set headingHeadline = global_strings['boilerplates']['sections']['1']['head'] %}
-						{% set headingSubline = global_strings['boilerplates']['sections']['1']['subhead'] %}
-						{% set headingDescrip = global_strings['boilerplates']['sections']['1']['descrip'] %}
-                        {% include "partials/_columnHeading.njk" %}
-
-                        
-                        {% set laurem_1 = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed congue consequat leo, in pulvinar ex vulputate et. Phasellus sit amet magna justo. Curabitur facilisis lobortis libero. Vivamus fringilla eros id nulla fermentum elementum. Proin vitae massa sed est congue bibendum et ac quam. Vestibulum tempor ut massa ut maximus.' %}
+                        {{ macros.page_section_heading(global_strings['boilerplates']['sections'][1]['head'], global_strings['boilerplates']['sections'][1]['subhead'], global_strings['boilerplates']['sections'][1]['descrip']) }}
 
                         <label class="d-block font-weight-bold">SEO Optimized Article + 2 Sections:</label>
 
@@ -23,23 +17,23 @@
                                     &lt;article class="container"&gt;
                                         
                                         &lt;h1&gt;Article Headline&lt;/h1&gt;
-                                        &lt;p class="lead"&gt;{{ laurem_1 }}&lt;/p&gt;
+                                        &lt;p class="lead"&gt;{{ variables.laurem_1 }}&lt;/p&gt;
 
                                         &lt;div class="row"&gt;
 
                                             &lt;section class="col-sm-6 mb-4"&gt;
                                                 
                                                 &lt;h2&gt;Section 1 Headline&lt;/h2&gt;
-                                                &lt;p&gt;{{ laurem_1 }}&lt;/p&gt;
-                                                &lt;p&gt;{{ laurem_1 }}&lt;/p&gt;
+                                                &lt;p&gt;{{ variables.laurem_1 }}&lt;/p&gt;
+                                                &lt;p&gt;{{ variables.laurem_1 }}&lt;/p&gt;
 
                                             &lt;/section&gt;
 
                                             &lt;section class="col-sm-6 mb-4"&gt;
                                                 
                                                 &lt;h2&gt;Section 2 Headline&lt;/h2&gt;
-                                                &lt;p&gt;{{ laurem_1 }}&lt;/p&gt;
-                                                &lt;p&gt;{{ laurem_1 }}&lt;/p&gt;
+                                                &lt;p&gt;{{ variables.laurem_1 }}&lt;/p&gt;
+                                                &lt;p&gt;{{ variables.laurem_1 }}&lt;/p&gt;
 
                                             &lt;/section&gt;
 

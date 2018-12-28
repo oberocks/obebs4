@@ -5,12 +5,9 @@
 
                 <div class="row justify-content-center">
                     
-                    <div id="{{ global_strings['defaults']['sections']['24']['id'] }}" class="col-md-6 pb-5">
+                    <div id="{{ global_strings['defaults']['sections'][24]['id'] }}" class="col-md-6 pb-5">
                         
-                        {% set headingHeadline = global_strings['defaults']['sections']['24']['head'] %}
-						{% set headingSubline = global_strings['defaults']['sections']['24']['subhead'] %}
-						{% set headingDescrip = global_strings['defaults']['sections']['24']['descrip'] %}
-                        {% include "partials/_columnHeading.njk" %}
+                        {{ macros.page_section_heading(global_strings['defaults']['sections'][24]['head'], global_strings['defaults']['sections'][24]['subhead'], global_strings['defaults']['sections'][24]['descrip']) }}
                         
                         <label class="d-block font-weight-bold">Standard Vertical</label>
                         <div class="js-prism mb-2">
@@ -23,12 +20,9 @@
 
                     </div>
 
-                    <div id="{{ global_strings['defaults']['sections']['25']['id'] }}" class="col-md-6 pb-5">
+                    <div id="{{ global_strings['defaults']['sections'][25]['id'] }}" class="col-md-6 pb-5">
                         
-                        {% set headingHeadline = global_strings['defaults']['sections']['25']['head'] %}
-						{% set headingSubline = global_strings['defaults']['sections']['25']['subhead'] %}
-						{% set headingDescrip = global_strings['defaults']['sections']['25']['descrip'] %}
-                        {% include "partials/_columnHeading.njk" %}
+                        {{ macros.page_section_heading(global_strings['defaults']['sections'][25]['head'], global_strings['defaults']['sections'][25]['subhead'], global_strings['defaults']['sections'][25]['descrip']) }}
                         
                         <label class="d-block font-weight-bold">Dropdown Vertical</label>
                         <div class="js-prism mb-2">

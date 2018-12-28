@@ -6,12 +6,9 @@
 				
 				<div class="row justify-content-center">
 					
-					<div id="{{ global_strings['colors']['sections']['17']['id'] }}" class="col-md-6 pb-5">
+					<div id="{{ global_strings['colors']['sections'][17]['id'] }}" class="col-md-6 pb-5">
 					
-						{% set headingHeadline = global_strings['colors']['sections']['17']['head'] %}
-						{% set headingSubline = global_strings['colors']['sections']['17']['subhead'] %}
-						{% set headingDescrip = global_strings['colors']['sections']['17']['descrip'] %}
-						{% include "partials/_columnHeading.njk" %}
+						{{ macros.page_section_heading(global_strings['colors']['sections'][17]['head'], global_strings['colors']['sections'][17]['subhead'], global_strings['colors']['sections'][17]['descrip']) }}
 
                         {% macro disabled_button_colors(classPartial, namePartial) %}
                         <div class="js-prism d-flex justify-content-around mb-2">
@@ -54,12 +51,9 @@
 						
 					</div>
 					
-					<div id="{{ global_strings['colors']['sections']['18']['id'] }}" class="col-md-6 pb-5">
+					<div id="{{ global_strings['colors']['sections'][18]['id'] }}" class="col-md-6 pb-5">
 					
-						{% set headingHeadline = global_strings['colors']['sections']['18']['head'] %}
-						{% set headingSubline = global_strings['colors']['sections']['18']['subhead'] %}
-						{% set headingDescrip = global_strings['colors']['sections']['18']['descrip'] %}
-						{% include "partials/_columnHeading.njk" %}
+						{{ macros.page_section_heading(global_strings['colors']['sections'][18]['head'], global_strings['colors']['sections'][18]['subhead'], global_strings['colors']['sections'][18]['descrip']) }}
 
                         {% macro disabled_button_outline_colors(classPartial, namePartial) %}
                         <div class="js-prism d-flex justify-content-around mb-2">

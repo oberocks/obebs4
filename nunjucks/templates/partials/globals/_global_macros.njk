@@ -1,0 +1,247 @@
+<!-- _global_macros.njk -->
+
+{%- macro page_section_heading(headline, subline, description) %}
+    <h1>{{ headline }}</h1>
+    <div class="lead">{{ subline }}</div>
+    <hr />
+    <p class="description-text text-muted"><em>{{ description }}</em></p>
+    <hr/>
+{%- endmacro %}
+
+
+
+{%- macro bootstrap_table(label, tableClasses, caption = false, thead = false) %}
+<label class="d-block font-weight-bold text-center">{{ label }}</label>
+<div class="js-prism mb-2 text-left">
+    <div class="table-responsive">
+        <table class="table{{ tableClasses }}">{% if caption %}
+            <caption>List of users</caption>{% endif %}
+            <thead{% if thead === 'light' %} class="thead-light"{% elif thead === 'dark' %} class="thead-dark"{% endif %}>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">First</th>
+                    <th scope="col">Last</th>
+                    <th scope="col">Handle</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="row">1</th>
+                    <td>Mark</td>
+                    <td>Otto</td>
+                    <td>@mdo</td>
+                </tr>
+                <tr>
+                    <th scope="row">2</th>
+                    <td>Jacob</td>
+                    <td>Thornton</td>
+                    <td>@fat</td>
+                </tr>
+                <tr>
+                    <th scope="row">3</th>
+                    <td>Matt</td>
+                    <td>McT</td>
+                    <td>@smasharific</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+{%- endmacro %}
+
+
+
+{%- macro nav_accordian_section(idNumb, titleName, titleSlug, linksArray, pageFileName, bgGradient) %}
+<div id="ocnrm-h{{ idNumb }}" class="js-nav-handle d-flex justify-content-between align-content-center lead text-light rounded-0 border-top border-bottom border-dark-gray-700 text-shadow-lg text-white px-3 py-2 {{ bgGradient }}" data-toggle="collapse" data-target="#ocnrm-c{{ idNumb }}" aria-expanded="false" aria-controls="ocnrm-c{{ idNumb }}" role="heading">
+    <div>{{ titleName }}</div>
+    <div class="js-nav-symbol font-weight-bold">+</div>
+</div>
+<div id="ocnrm-c{{ idNumb }}" class="collapse" aria-labelledby="ocnrm-h{{ idNumb }}" data-parent="#nav-accord" role="navigation">
+    <ul class="nav flex-column bg-dark-gray-700 small py-2 pl-2">
+        <li class="nav-item">
+            <a class="nav-link text-light font-weight-bold py-1" href="{{ titleSlug }}.html">{{ titleName }} Page</a>
+        </li>
+        {%- for item in linksArray | sort(false, true, 'link') -%}
+        <li class="nav-item">
+            <a class="nav-link text-light py-1" href="{% if pageFileName == titleSlug + '.html' %}#{{ item.id }}{% else %}{{ titleSlug }}.html#{{ item.id }}{% endif %}" data-description="{{ item.descrip }}">{{ item.link }}</a>
+        </li>
+        {%- endfor -%}
+    </ul>
+</div>
+{%- endmacro %}
+
+
+
+{%- macro responsive_classes_thead(theadClasses) %}
+<thead class="{{ theadClasses }}">
+    <tr>
+        <th scope="col">Base Class</th>
+        <th scope="col">Small</th>
+        <th scope="col">Medium</th>
+        <th scope="col">Large</th>
+        <th scope="col">X-Large</th>
+    </tr>
+</thead>
+{%- endmacro %}
+
+
+
+{%- macro display_responsive_classes(string) %}
+<tr>
+    <th scope="row" class="bg-dark text-light border-light"><samp>.d-{{ string }}</samp></th>
+    <td><samp>.d-sm-{{ string }}</samp></td>
+    <td><samp>.d-md-{{ string }}</samp></td>
+    <td><samp>.d-lg-{{ string }}</samp></td>
+    <td><samp>.d-xl-{{ string }}</samp></td>
+</tr>
+{%- endmacro %}
+
+
+
+{%- macro flex_responsive_classes(string) %}
+<tr>
+    <th scope="row" class="bg-dark text-light border-light"><samp>.flex-{{ string }}</samp></th>
+    <td><samp>.flex-sm-{{ string }}</samp></td>
+    <td><samp>.flex-md-{{ string }}</samp></td>
+    <td><samp>.flex-lg-{{ string }}</samp></td>
+    <td><samp>.flex-xl-{{ string }}</samp></td>
+</tr>
+{%- endmacro %}
+
+
+
+{%- macro justify_content_classes(string) %}
+<tr>
+    <th scope="row" class="bg-dark text-light border-light"><samp>.justify-content-{{ string }}</samp></th>
+    <td><samp>.justify-content-sm-{{ string }}</samp></td>
+    <td><samp>.justify-content-md-{{ string }}</samp></td>
+    <td><samp>.justify-content-lg-{{ string }}</samp></td>
+    <td><samp>.justify-content-xl-{{ string }}</samp></td>
+</tr>
+{%- endmacro %}
+
+
+
+{%- macro align_items_classes(string) %}
+<tr>
+    <th scope="row" class="bg-dark text-light border-light"><samp>.align-items-{{ string }}</samp></th>
+    <td><samp>.align-items-sm-{{ string }}</samp></td>
+    <td><samp>.align-items-md-{{ string }}</samp></td>
+    <td><samp>.align-items-lg-{{ string }}</samp></td>
+    <td><samp>.align-items-xl-{{ string }}</samp></td>
+</tr>
+{%- endmacro %}
+
+
+
+{%- macro align_self_classes(string) %}
+<tr>
+    <th scope="row" class="bg-dark text-light border-light"><samp>.align-self-{{ string }}</samp></th>
+    <td><samp>.align-self-sm-{{ string }}</samp></td>
+    <td><samp>.align-self-md-{{ string }}</samp></td>
+    <td><samp>.align-self-lg-{{ string }}</samp></td>
+    <td><samp>.align-self-xl-{{ string }}</samp></td>
+</tr>
+{%- endmacro %}
+
+
+
+{%- macro display_print_classes(string) %}
+<tr>
+    <th scope="row" class="bg-dark text-light border-light"><samp>.d-print-{{ string }}</samp></th>
+    <td><samp>.d-print-sm-{{ string }}</samp></td>
+    <td><samp>.d-print-md-{{ string }}</samp></td>
+    <td><samp>.d-print-lg-{{ string }}</samp></td>
+    <td><samp>.d-print-xl-{{ string }}</samp></td>
+</tr>
+{%- endmacro %}
+
+
+
+{%- macro flex_auto_margins(string) %}
+<tr>
+    <th scope="row" class="bg-dark text-light border-light"><samp>.{{ string }}-auto</samp></th>
+    <td><samp>.{{ string }}-sm-auto</samp></td>
+    <td><samp>.{{ string }}-md-auto</samp></td>
+    <td><samp>.{{ string }}-lg-auto</samp></td>
+    <td><samp>.{{ string }}-xl-auto</samp></td>
+</tr>
+{%- endmacro %}
+
+
+
+
+{%- macro flex_ordering(string) %}
+<tr>
+    <th scope="row" class="bg-dark text-light border-light"><samp>.order-{{ string }}</samp></th>
+    <td><samp>.order-sm-{{ string }}</samp></td>
+    <td><samp>.order-md-{{ string }}</samp></td>
+    <td><samp>.order-lg-{{ string }}</samp></td>
+    <td><samp>.order-xl-{{ string }}</samp></td>
+</tr>
+{%- endmacro %}
+
+
+
+{%- macro flex_align_content(string) %}
+<tr>
+    <th scope="row" class="bg-dark text-light border-light"><samp>.align-content-{{ string }}</samp></th>
+    <td><samp>.align-content-sm-{{ string }}</samp></td>
+    <td><samp>.align-content-md-{{ string }}</samp></td>
+    <td><samp>.align-content-lg-{{ string }}</samp></td>
+    <td><samp>.align-content-xl-{{ string }}</samp></td>
+</tr>
+{%- endmacro %}
+
+
+
+{%- macro float_classes(string) %}
+<tr>
+    <th scope="row" class="bg-dark text-light border-light"><samp>.float-{{ string }}</samp></th>
+    <td><samp>.float-sm-{{ string }}</samp></td>
+    <td><samp>.float-md-{{ string }}</samp></td>
+    <td><samp>.float-lg-{{ string }}</samp></td>
+    <td><samp>.float-xl-{{ string }}</samp></td>
+</tr>
+{%- endmacro %}
+
+
+
+{%- macro margin_padding_classes(prefix, number) %}
+<tr>
+    <th scope="row" class="bg-dark text-light border-light"><samp>.{{ prefix }}-{{ number }}</samp></th>
+    <td><samp>.{{ prefix }}-sm-{{ number }}</samp></td>
+    <td><samp>.{{ prefix }}-md-{{ number }}</samp></td>
+    <td><samp>.{{ prefix }}-lg-{{ number }}</samp></td>
+    <td><samp>.{{ prefix }}-xl-{{ number }}</samp></td>
+</tr>
+{%- endmacro %}
+
+
+
+{%- macro text_alignment_classes(string) %}
+<tr>
+    <th scope="row" class="bg-dark text-light border-light"><samp>.text-{{ string }}</samp></th>
+    <td><samp>.text-sm-{{ string }}</samp></td>
+    <td><samp>.text-md-{{ string }}</samp></td>
+    <td><samp>.text-lg-{{ string }}</samp></td>
+    <td><samp>.text-xl-{{ string }}</samp></td>
+</tr>
+{%- endmacro %}
+
+
+
+{%- macro footer_heading(iconPartial, headline) %}
+<div class="text-center pb-4">
+    <i class="fas fa-{{ iconPartial }} fa-4x text-light-gray"></i>
+</div>
+<h6 class="text-light text-center mb-4">{{ headline }}</h6>
+{%- endmacro %}
+
+
+
+{%- macro footer_link(url, name) %}
+<li>
+    <a href="{{ url }}" class="text-light" target="_blank" rel="noopener noreferrer">{{ name }}</a>
+</li>
+{%- endmacro %}

@@ -7,12 +7,9 @@
 				<div class="row justify-content-center">
 					
 					{% if obe_settings['enable-obebs4-alert-wheel-colors'] === 'true' %}
-					<div id="{{ global_strings['colors']['sections']['11']['id'] }}" class="col-md-6 pb-5">
+					<div id="{{ global_strings['colors']['sections'][11]['id'] }}" class="col-md-6 pb-5">
 					
-						{% set headingHeadline = global_strings['colors']['sections']['11']['head'] %}
-						{% set headingSubline = global_strings['colors']['sections']['11']['subhead'] %}
-						{% set headingDescrip = global_strings['colors']['sections']['11']['descrip'] %}
-						{% include "partials/_columnHeading.njk" %}
+						{{ macros.page_section_heading(global_strings['colors']['sections'][11]['head'], global_strings['colors']['sections'][11]['subhead'], global_strings['colors']['sections'][11]['descrip']) }}
 
 						{% macro alert_colors(classPartial, namePartial) %}
 						<div class="js-prism">
@@ -64,12 +61,9 @@
 					{% endif %}
 					
 					{% if obe_settings['enable-obebs4-alert-variations'] === 'true' %}
-					<div id="{{ global_strings['colors']['sections']['12']['id'] }}" class="col-md-6 pb-5">
+					<div id="{{ global_strings['colors']['sections'][12]['id'] }}" class="col-md-6 pb-5">
 					
-						{% set headingHeadline = global_strings['colors']['sections']['12']['head'] %}
-						{% set headingSubline = global_strings['colors']['sections']['12']['subhead'] %}
-						{% set headingDescrip = global_strings['colors']['sections']['12']['descrip'] %}
-						{% include "partials/_columnHeading.njk" %}
+						{{ macros.page_section_heading(global_strings['colors']['sections'][12]['head'], global_strings['colors']['sections'][12]['subhead'], global_strings['colors']['sections'][12]['descrip']) }}
 
 						{% macro alert_colors_inv(classPartial, namePartial) %}
 						<div class="js-prism">

@@ -5,12 +5,9 @@
 
                 <div class="row justify-content-center">
                     
-                    <div id="{{ global_strings['defaults']['sections']['22']['id'] }}" class="col-md-6 pb-5">
+                    <div id="{{ global_strings['defaults']['sections'][22]['id'] }}" class="col-md-6 pb-5">
                         
-                        {% set headingHeadline = global_strings['defaults']['sections']['22']['head'] %}
-						{% set headingSubline = global_strings['defaults']['sections']['22']['subhead'] %}
-						{% set headingDescrip = global_strings['defaults']['sections']['22']['descrip'] %}
-                        {% include "partials/_columnHeading.njk" %}
+                        {{ macros.page_section_heading(global_strings['defaults']['sections'][22]['head'], global_strings['defaults']['sections'][22]['subhead'], global_strings['defaults']['sections'][22]['descrip']) }}
                         
                         {% macro button_groups(label, alignmentClass, spacer = true) %}
                         <label class="d-block font-weight-bold">{{ label }}</label>
@@ -42,12 +39,9 @@
 
                 <div class="row justify-content-center pt-5">
                     
-                    <div id="{{ global_strings['defaults']['sections']['23']['id'] }}" class="col-md-6 pb-5">
+                    <div id="{{ global_strings['defaults']['sections'][23]['id'] }}" class="col-md-6 pb-5">
                         
-                        {% set headingHeadline = global_strings['defaults']['sections']['23']['head'] %}
-						{% set headingSubline = global_strings['defaults']['sections']['23']['subhead'] %}
-						{% set headingDescrip = global_strings['defaults']['sections']['23']['descrip'] %}
-                        {% include "partials/_columnHeading.njk" %}
+                        {{ macros.page_section_heading(global_strings['defaults']['sections'][23]['head'], global_strings['defaults']['sections'][23]['subhead'], global_strings['defaults']['sections'][23]['descrip']) }}
 
                         <div class="js-prism mb-2">
                             <div class="btn-toolbar justify-content-between" role="toolbar" aria-label="Toolbar with button groups">

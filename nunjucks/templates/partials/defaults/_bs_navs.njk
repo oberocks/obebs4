@@ -5,12 +5,9 @@
                 
                 <div class="row justify-content-center">
                     
-                    <div id="{{ global_strings['defaults']['sections']['53']['id'] }}" class="col-md-8 pb-5">
+                    <div id="{{ global_strings['defaults']['sections'][52]['id'] }}" class="col-md-8 pb-5">
                         
-                        {% set headingHeadline = global_strings['defaults']['sections']['53']['head'] %}
-						{% set headingSubline = global_strings['defaults']['sections']['53']['subhead'] %}
-						{% set headingDescrip = global_strings['defaults']['sections']['53']['descrip'] %}
-                        {% include "partials/_columnHeading.njk" %}
+                        {{ macros.page_section_heading(global_strings['defaults']['sections'][52]['head'], global_strings['defaults']['sections'][52]['subhead'], global_strings['defaults']['sections'][52]['descrip']) }}
                                 
                                 {%- macro ul_nav_items(active = 'false', long = 'false') -%}
                                 <li class="nav-item">
@@ -181,14 +178,6 @@
                         
                         {{ dropdown_navs('Tabs + Dropdown Nav', 'tabs') }}
                         {{ dropdown_navs('Pills + Dropdown Nav', 'pills') }}
-
-
-
-                        
-                        {% set laurem_1 = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed congue consequat leo, in pulvinar ex vulputate et. Phasellus sit amet magna justo. Curabitur facilisis lobortis libero. Vivamus fringilla eros id nulla fermentum elementum.' %}
-                        {% set laurem_2 = 'Proin vitae massa sed est congue bibendum et ac quam. Vestibulum tempor ut massa ut maximus. Integer condimentum purus vel rutrum varius. Praesent sodales fermentum sodales. Pellentesque pharetra laoreet erat nec ullamcorper. Suspendisse a tincidunt lacus.' %}
-                        {% set laurem_3 = 'Fusce semper dignissim lectus ut eleifend. Suspendisse non augue pulvinar, laoreet tellus ac, convallis ipsum. Nam venenatis facilisis vehicula. Nunc venenatis eget elit eget vestibulum. Aliquam iaculis eu elit vitae tempus. Etiam euismod ex a ante pulvinar mattis.' %}
-                        {% set laurem_4 = 'Suspendisse ut diam maximus, mattis lacus sed, porta arcu. Nullam cursus ex eu tellus interdum, et vehicula quam euismod. Etiam rutrum magna eu luctus efficitur. Etiam in risus in lectus rutrum gravida ac sed turpis. Morbi vel hendrerit libero, vel semper ante.' %}
                         
                         {% macro component_navs(headline, classPart, toggleVal) %}
                         <h5 class="pt-4">Interactive {{ headline }} Component</h5>
@@ -206,9 +195,9 @@
                                 </li>
                             </ul>
                             <div class="tab-content" id="{{ classPart }}-component-content">
-                                <div class="tab-pane p-2 fade show active" id="{{ classPart }}-item-1-content" role="tabpanel" aria-labelledby="{{ classPart }}-item-1">{{ laurem_1 }}</div>
-                                <div class="tab-pane p-2 fade" id="{{ classPart }}-item-2-content" role="tabpanel" aria-labelledby="{{ classPart }}-item-2">{{ laurem_2 }}</div>
-                                <div class="tab-pane p-2 fade" id="{{ classPart }}-item-3-content" role="tabpanel" aria-labelledby="{{ classPart }}-item-3">{{ laurem_3 }}</div>
+                                <div class="tab-pane p-2 fade show active" id="{{ classPart }}-item-1-content" role="tabpanel" aria-labelledby="{{ classPart }}-item-1">{{ variables.laurem_1 }}</div>
+                                <div class="tab-pane p-2 fade" id="{{ classPart }}-item-2-content" role="tabpanel" aria-labelledby="{{ classPart }}-item-2">{{ variables.laurem_2 }}</div>
+                                <div class="tab-pane p-2 fade" id="{{ classPart }}-item-3-content" role="tabpanel" aria-labelledby="{{ classPart }}-item-3">{{ variables.laurem_3 }}</div>
                             </div>
                         </div>
                         {% endmacro %}
@@ -229,9 +218,9 @@
                                 </div>
                             </nav>
                             <div class="tab-content" id="nav-tabContent">
-                                <div class="tab-pane p-2 fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">{{ laurem_1 }}</div>
-                                <div class="tab-pane p-2 fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">{{ laurem_2 }}</div>
-                                <div class="tab-pane p-2 fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">{{ laurem_3 }}</div>
+                                <div class="tab-pane p-2 fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">{{ variables.laurem_1 }}</div>
+                                <div class="tab-pane p-2 fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">{{ variables.laurem_2 }}</div>
+                                <div class="tab-pane p-2 fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">{{ variables.laurem_3 }}</div>
                             </div>
                         </div>
 
@@ -251,10 +240,10 @@
                                 </div>
                                 <div class="col-9">
                                     <div class="tab-content" id="v-pills-tabContent">
-                                        <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab">{{ laurem_1 }}</div>
-                                        <div class="tab-pane fade" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab">{{ laurem_2 }}</div>
-                                        <div class="tab-pane fade" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab">{{ laurem_3 }}</div>
-                                        <div class="tab-pane fade" id="v-pills-settings" role="tabpanel" aria-labelledby="v-pills-settings-tab">{{ laurem_4 }}</div>
+                                        <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab">{{ variables.laurem_1 }}</div>
+                                        <div class="tab-pane fade" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab">{{ variables.laurem_2 }}</div>
+                                        <div class="tab-pane fade" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab">{{ variables.laurem_3 }}</div>
+                                        <div class="tab-pane fade" id="v-pills-settings" role="tabpanel" aria-labelledby="v-pills-settings-tab">{{ variables.laurem_4 }}</div>
                                     </div>
                                 </div>
                             </div>

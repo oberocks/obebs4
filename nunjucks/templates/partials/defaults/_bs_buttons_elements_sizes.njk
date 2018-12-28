@@ -5,12 +5,9 @@
 
                 <div class="row justify-content-center">
                     
-                    <div id="{{ global_strings['defaults']['sections']['18']['id'] }}" class="col-md-6 pb-5">
+                    <div id="{{ global_strings['defaults']['sections'][18]['id'] }}" class="col-md-6 pb-5">
                         
-                        {% set headingHeadline = global_strings['defaults']['sections']['18']['head'] %}
-						{% set headingSubline = global_strings['defaults']['sections']['18']['subhead'] %}
-						{% set headingDescrip = global_strings['defaults']['sections']['18']['descrip'] %}
-                        {% include "partials/_columnHeading.njk" %}
+                        {{ macros.page_section_heading(global_strings['defaults']['sections'][18]['head'], global_strings['defaults']['sections'][18]['subhead'], global_strings['defaults']['sections'][18]['descrip']) }}
 
                         <div class="js-prism mb-2">
                             <button class="btn btn-primary">Button</button>
@@ -34,12 +31,9 @@
 
                     </div>
                     
-                    <div id="{{ global_strings['defaults']['sections']['19']['id'] }}" class="col-md-6 pb-5">
+                    <div id="{{ global_strings['defaults']['sections'][19]['id'] }}" class="col-md-6 pb-5">
                         
-                        {% set headingHeadline = global_strings['defaults']['sections']['19']['head'] %}
-						{% set headingSubline = global_strings['defaults']['sections']['19']['subhead'] %}
-						{% set headingDescrip = global_strings['defaults']['sections']['19']['descrip'] %}
-                        {% include "partials/_columnHeading.njk" %}
+                        {{ macros.page_section_heading(global_strings['defaults']['sections'][19]['head'], global_strings['defaults']['sections'][19]['subhead'], global_strings['defaults']['sections'][19]['descrip']) }}
 
                         <div class="js-prism mb-2">
                             <button type="button" class="btn btn-primary btn-sm">Small</button>

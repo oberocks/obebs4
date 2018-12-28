@@ -5,12 +5,9 @@
 
                 <div class="row justify-content-center">
                     
-                    <div id="{{ global_strings['reference']['sections']['14']['id'] }}" class="col-12 pb-5">
+                    <div id="{{ global_strings['reference']['sections'][14]['id'] }}" class="col-12 pb-5">
                         
-                        {% set headingHeadline = global_strings['reference']['sections']['14']['head'] %}
-						{% set headingSubline = global_strings['reference']['sections']['14']['subhead'] %}
-						{% set headingDescrip = global_strings['reference']['sections']['14']['descrip'] %}
-                        {% include "partials/_columnHeading.njk" %}
+                        {{ macros.page_section_heading(global_strings['reference']['sections'][14]['head'], global_strings['reference']['sections'][14]['subhead'], global_strings['reference']['sections'][14]['descrip']) }}
 
                         <div class="pt-4 pb-5">
                             <button id="toggle-obe-js-colors" class="btn btn-lg btn-primary" type="button" data-toggle="collapse" data-target="#obe-js-colors" aria-expanded="false" aria-controls="obe-js-colors">TOGGLE CODE</button>
