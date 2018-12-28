@@ -14,6 +14,8 @@ const del = require('del');
 const cleanCSS = require('gulp-clean-css');
 const terser = require('gulp-terser');
 const htmlbeautify = require('gulp-html-beautify');
+const packagejson = JSON.parse(fs.readFileSync('./node_modules/obebs4/package.json', 'utf8'));
+const obebs4version = packagejson.version;
 
 
 
@@ -68,7 +70,11 @@ function get_obebs4_settings(filepath) {
 
 // Utility Data Function
 function get_global_strings_json(filepath) {
+    // parse the data
     let theData = JSON.parse(fs.readFileSync(filepath));
+    // set the current OBE:BS4 Version number for use in nunjucks files
+    theData['version'] = obebs4version;
+    // return data
     return { global_strings: theData };
 }
 
