@@ -16,6 +16,7 @@ const terser = require('gulp-terser');
 const htmlbeautify = require('gulp-html-beautify');
 const packagejson = JSON.parse(fs.readFileSync('./node_modules/obebs4/package.json', 'utf8'));
 const obebs4version = packagejson.version;
+const fontawesomeversion = packagejson.faversion;
 
 
 
@@ -74,6 +75,8 @@ function get_global_strings_json(filepath) {
     let theData = JSON.parse(fs.readFileSync(filepath));
     // set the current OBE:BS4 Version number for use in nunjucks files
     theData['version'] = obebs4version;
+    // set the current FontAwesome 5 version number for use in nunjucks files
+    theData['faversion'] = fontawesomeversion;
     // return data
     return { global_strings: theData };
 }
@@ -254,6 +257,64 @@ gulp.task('concat-js', function(){
 
 
 
+
+gulp.task('concat-production-js', function(){
+    return gulp.src(
+        [
+            './node_modules/jquery/dist/jquery.min.js',
+            './node_modules/bootstrap/dist/js/bootstrap.bundle.min.js',
+            './node_modules/obebs4/obebs4/core/js/obebs4-popovers.js',
+            './node_modules/obebs4/obebs4/core/js/obebs4-tooltips.js',
+            './node_modules/obebs4/obebs4/core/js/obebs4-dropdown-selects.js',
+            './node_modules/obebs4/obebs4/core/js/obebs4-fa5-animated-checkboxes.js',
+            './node_modules/obebs4/obebs4/core/js/obebs4-calendar-datepicker-plugin.js',
+            './node_modules/obebs4/obebs4/core/js/obe-text-toggle-vanilla-mini-plugin.js'
+        ]
+    )
+    .pipe(sourcemaps.init({loadMaps: true}))
+    .pipe(concat('./obebs4.production.bundle.js'))
+    .pipe(terser({
+        output: {
+            comments: true // Options: some, all, true, or regex
+        },
+        keep_fnames: true,
+        keep_classnames: true,
+        mangle: false
+      }))
+    .pipe(sourcemaps.write('.'))
+    .pipe(gulp.dest('./library/js'))
+});
+
+
+
+
+gulp.task('concat-library-js', function(){
+    return gulp.src(
+        [
+            './node_modules/obebs4/obebs4/prismjs/js/prism.min.js',
+            './node_modules/tinycolor2/dist/tinycolor-min.js',
+            './node_modules/datatables.net/js/jquery.dataTables.min.js',
+            './node_modules/datatables.net-bs4/js/dataTables.bootstrap4.min.js',
+            './node_modules/obebs4/obebs4/core/js/obebs4-library.js',
+            './node_modules/obebs4/obebs4/core/js/obebs4-dataTables.js'
+        ]
+    )
+    .pipe(sourcemaps.init({loadMaps: true}))
+    .pipe(concat('obebs4.library.site.bundle.js'))
+    .pipe(terser({
+        output: {
+            comments: true // Options: some, all, true, or regex
+        },
+        keep_fnames: true,
+        keep_classnames: true,
+        mangle: false
+      }))
+    .pipe(sourcemaps.write('.'))
+    .pipe(gulp.dest('./library/js'))
+});
+
+
+
 gulp.task('concat-css', function(){
     return gulp.src(
         [
@@ -265,6 +326,39 @@ gulp.task('concat-css', function(){
     )
     .pipe(sourcemaps.init({loadMaps: true}))
     .pipe(concat('obebs4.library.bundle.css'))
+    .pipe(cleanCSS({compatibility: '*'}))
+    .pipe(sourcemaps.write('.'))
+    .pipe(gulp.dest('./library/css'))
+});
+
+
+
+
+gulp.task('concat-production-css', function(){
+    return gulp.src(
+        [
+            './library/css/obebs4-bootstrap.css'
+        ]
+    )
+    .pipe(sourcemaps.init({loadMaps: true}))
+    .pipe(concat('obebs4.production.bundle.css'))
+    .pipe(cleanCSS({compatibility: '*'}))
+    .pipe(sourcemaps.write('.'))
+    .pipe(gulp.dest('./library/css'))
+});
+
+
+
+gulp.task('concat-library-css', function(){
+    return gulp.src(
+        [
+            './node_modules/obebs4/obebs4/prismjs/css/prism.css',
+            './node_modules/datatables.net-bs4/css/dataTables.bootstrap4.min.css',
+            './node_modules/obebs4/obebs4/core/css/obebs4-library.css'
+        ]
+    )
+    .pipe(sourcemaps.init({loadMaps: true}))
+    .pipe(concat('obebs4.library.site.bundle.css'))
     .pipe(cleanCSS({compatibility: '*'}))
     .pipe(sourcemaps.write('.'))
     .pipe(gulp.dest('./library/css'))
@@ -288,7 +382,11 @@ gulp.task('obebs4', function() {
         'move-favicon-files',
         'compile-nunjucks',
         'concat-js',
+        'concat-library-js',
+        'concat-production-js',
         'concat-css',
+        'concat-production-css',
+        'concat-library-css',
         'clean-up'
     );
 });

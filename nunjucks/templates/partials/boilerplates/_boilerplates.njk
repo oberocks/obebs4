@@ -24,10 +24,10 @@
                                             &lt;meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"&gt;
 
                                             &lt;!-- Bootstrap CSS --&gt;
-                                            &lt;link rel="stylesheet" href="css/obebs4.library.bundle.css"&gt;
+                                            &lt;link rel="stylesheet" href="css/obebs4.production.bundle.css"&gt;
                                             
-                                            &lt;!-- FontAwesome (v5.0.7) SVG JS --&gt;
-                                            &lt;script src="https://use.fontawesome.com/releases/v5.6.1/js/all.js" data-auto-replace-svg="nest"&gt;&lt;/script&gt;
+                                            &lt;!-- FontAwesome (v{{ global_strings['faversion'] }}) SVG JS --&gt;
+                                            &lt;script src="https://use.fontawesome.com/releases/v{{ global_strings['faversion'] }}/js/all.js" data-auto-replace-svg="nest"&gt;&lt;/script&gt;
                                             {% if obe_settings['enable-google-fonts'] === 'true' %}
                                             &lt;!-- Google Fonts --&gt;
                                             &lt;link href="https://{{ obe_settings['google-fonts-url'] | replace("___", ".") | replace("---", ":") | replace("qqq", "?") }}" rel="stylesheet"&gt;
@@ -49,7 +49,7 @@
                                             &lt;h1&gt;OBE Rocks!&lt;/h1&gt;
 
                                             &lt;!-- JavaScript --&gt;
-                                            &lt;script src="js/obebs4.library.bundle.js"&gt;&lt;/script&gt;
+                                            &lt;script src="js/obebs4.production.bundle.js"&gt;&lt;/script&gt;
                                             
                                             &lt;!-- Custom/Development JS for this page --&gt;
                                             &lt;script type="text/javascript"&gt;
@@ -114,10 +114,10 @@
                                             &lt;meta name="theme-color" content="#ffffff" /&gt;
 
                                             &lt;!-- Bootstrap CSS --&gt;
-                                            &lt;link rel="stylesheet" href="css/obebs4.library.bundle.css"&gt;
+                                            &lt;link rel="stylesheet" href="css/obebs4.production.bundle.css"&gt;
                                             
-                                            &lt;!-- FontAwesome (v5.0.7) SVG JS --&gt;
-                                            &lt;script src="https://use.fontawesome.com/releases/v5.6.1/js/all.js" data-auto-replace-svg="nest"&gt;&lt;/script&gt;
+                                            &lt;!-- FontAwesome (v{{ global_strings['faversion'] }}) SVG JS --&gt;
+                                            &lt;script src="https://use.fontawesome.com/releases/v{{ global_strings['faversion'] }}/js/all.js" data-auto-replace-svg="nest"&gt;&lt;/script&gt;
                                             {% if obe_settings['enable-google-fonts'] === 'true' %}
                                             &lt;!-- Google Fonts --&gt;
                                             &lt;link href="https://{{ obe_settings['google-fonts-url'] | replace("___", ".") | replace("---", ":") | replace("qqq", "?") }}" rel="stylesheet"&gt;
@@ -156,7 +156,7 @@
                                             &lt;h1&gt;OBE Rocks!&lt;/h1&gt;
 
                                             &lt;!-- JavaScript --&gt;
-                                            &lt;script src="js/obebs4.library.bundle.js"&gt;&lt;/script&gt;
+                                            &lt;script src="js/obebs4.production.bundle.js"&gt;&lt;/script&gt;
                                             
                                             &lt;!-- Custom/Development JS for this page --&gt;
                                             &lt;script type="text/javascript"&gt;
