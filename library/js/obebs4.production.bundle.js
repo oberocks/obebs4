@@ -39,7 +39,7 @@ $('[data-toggle="tooltip"]').on("inserted.bs.tooltip",function(){var classname="
  */
 $(function(){
 // dropdown selects javascript
-$(".dropdown-select").on("click",".dropdown-select-option",function(){let value=$(this).data("option-value"),parent=$(this).parents(".dropdown-select"),content=$(this).clone();parent.siblings("input[type=hidden]").val(value).trigger("change"),parent.find(".dropdown-select-target").html(content)})}),// end document ready
+$(".dropdown-select").on("click",".dropdown-select-option",function(){let value=$(this).data("option-value"),parent=$(this).parents(".dropdown-select"),content=$(this).clone(!0,!0);parent.siblings("input[type=hidden]").val(value).trigger("change"),parent.find(".dropdown-select-target").html(content)})}),// end document ready
 /*!
  * 
  * OBE:BS4 Library Design System v1.0.0 (https://library.mattmct.com)
