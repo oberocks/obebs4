@@ -84,6 +84,36 @@
                     //yearPlusClasses :       'flex-fill text-left lead font-weight-bold pl-4 opacity-30'
                 });
 
+                
+                
+                $('.ddSelect').obeDropdownSelect({
+                    formMode :            true,
+                    parentSelector :      '.ddSelect',
+                    optionSelector :      '.ddSelect-option',
+                    cloneTargetSelector : '.ddSelect-target',
+                    dataAttributeString : 'value',
+                });
+                
+                $('.ddSel').obeDropdownSelect({
+                    formMode :            false,
+                    parentSelector :      '.ddSel',
+                    optionSelector :      '.ddSel-opt',
+                    cloneTargetSelector : '.cloned-ddSel',
+                    dataAttributeString : 'value',
+                    //hiddenInputSelector : '#ddSel-input',
+                    customEventString :   'ddSel.clicked'
+                });
+
+                $('.ddSel').on( 'ddSel.clicked', '.ddSel-opt', function(event) {
+                    let option = $(event.target);
+                    let value = option.data('value');
+                    let number = option.data('number');
+                    console.log('Selected Option Value: ' + value);
+                    console.log('Selected Option Number: ' + number);
+                });
+
+
+
             });
 
         </script>

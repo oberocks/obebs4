@@ -14,41 +14,11 @@ $(function(){
 $('[data-toggle="popover"]').popover(),
 // Inject OBEB4 color class into popover injected elements
 $('[data-toggle="popover"]').on("inserted.bs.popover",function(){var headBg="";void 0!==$(this).data("popover-header-bg")&&(headBg=$(this).data("popover-header-bg").trim());var headTextCol="";void 0!==$(this).data("popover-header-text")&&(headTextCol=$(this).data("popover-header-text").trim());var bodyTextCol="";void 0!==$(this).data("popover-body-text")&&(bodyTextCol=$(this).data("popover-body-text").trim()),$(".popover .popover-header").last().addClass(headBg),$(".popover .popover-header").last().addClass(headTextCol),$(".popover .popover-body").last().addClass(bodyTextCol)})}),// end document ready
-/*!
- * 
- * OBE:BS4 Library Design System v1.0.0 (https://library.mattmct.com)
- * The OBE:BS4 Design System is a self-reflexive reference library design system based on the most popular web framework in the world, Bootstrap! The OBE:BS4 system was built specifically to give all project stakeholders full visual, technical, and tactile access to every color, font, element, component and layout for any web project.
- * Copyright 2018 by Matt McT Designs
- * Licensed under: Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)
- * (https://creativecommons.org/licenses/by-nc-sa/4.0/)
- *
- */
 $(function(){
 // Initialize Bootstrap Tooltips
 $('[data-toggle="tooltip"]').tooltip(),
 // Inject OBEB4 color class into tooltip injected elements
 $('[data-toggle="tooltip"]').on("inserted.bs.tooltip",function(){var classname="";void 0!==$(this).data("obe-color-class")&&(classname=$(this).data("obe-color-class").trim()),$(".tooltip").addClass(classname)}).on("hidden.bs.tooltip",function(){var classname="";void 0!==$(this).data("obe-color-class")&&(classname=$(this).data("obe-color-class").trim()),$(".tooltip").removeClass(classname)})}),// end document ready
-/*!
- * 
- * OBE:BS4 Library Design System v1.0.0 (https://library.mattmct.com)
- * The OBE:BS4 Design System is a self-reflexive reference library design system based on the most popular web framework in the world, Bootstrap! The OBE:BS4 system was built specifically to give all project stakeholders full visual, technical, and tactile access to every color, font, element, component and layout for any web project.
- * Copyright 2018 by Matt McT Designs
- * Licensed under: Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)
- * (https://creativecommons.org/licenses/by-nc-sa/4.0/)
- *
- */
-$(function(){
-// dropdown selects javascript
-$(".dropdown-select").on("click",".dropdown-select-option",function(){let value=$(this).data("option-value"),parent=$(this).parents(".dropdown-select"),content=$(this).clone(!0,!0);parent.siblings("input[type=hidden]").val(value).trigger("change"),parent.find(".dropdown-select-target").html(content)})}),// end document ready
-/*!
- * 
- * OBE:BS4 Library Design System v1.0.0 (https://library.mattmct.com)
- * The OBE:BS4 Design System is a self-reflexive reference library design system based on the most popular web framework in the world, Bootstrap! The OBE:BS4 system was built specifically to give all project stakeholders full visual, technical, and tactile access to every color, font, element, component and layout for any web project.
- * Copyright 2018 by Matt McT Designs
- * Licensed under: Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)
- * (https://creativecommons.org/licenses/by-nc-sa/4.0/)
- *
- */
 $(function(){
 // obe fontawesome 5 animated checkboxes javascript
 $(".obe-icon-checkbox").on("click",function(){var parent=$(this),target=parent.find("svg"),input=parent.siblings("input[type=hidden]");target.hasClass("unchecked")?(target.removeClass("unchecked").addClass("checked"),input.val("checked")):(target.removeClass("checked").addClass("unchecked"),input.val("unchecked"))})});// end document ready
@@ -64,17 +34,7 @@ function(h){"function"==typeof define&&define.amd?define(["jquery"],function(E){
  DataTables Bootstrap 4 integration
  ©2011-2017 SpryMedia Ltd - datatables.net/license
 */
-function(b){"function"==typeof define&&define.amd?define(["jquery","datatables.net"],function(a){return b(a,window,document)}):"object"==typeof exports?module.exports=function(a,d){return a||(a=window),d&&d.fn.dataTable||(d=require("datatables.net")(a,d).$),b(d,a,a.document)}:b(jQuery,window,document)}(function(b,a,d,m){var f=b.fn.dataTable;return b.extend(!0,f.defaults,{dom:"<'row'<'col-sm-12 col-md-6'l><'col-sm-12 col-md-6'f>><'row'<'col-sm-12'tr>><'row'<'col-sm-12 col-md-5'i><'col-sm-12 col-md-7'p>>",renderer:"bootstrap"}),b.extend(f.ext.classes,{sWrapper:"dataTables_wrapper dt-bootstrap4",sFilterInput:"form-control form-control-sm",sLengthSelect:"custom-select custom-select-sm form-control form-control-sm",sProcessing:"dataTables_processing card",sPageButton:"paginate_button page-item"}),f.ext.renderer.pageButton.bootstrap=function(a,h,r,s,j,n){var e,g,i,o=new f.Api(a),t=a.oClasses,k=a.oLanguage.oPaginate,u=a.oLanguage.oAria.paginate||{},p=0,q=function(d,f){var l,h,i,c,m=function(a){a.preventDefault(),!b(a.currentTarget).hasClass("disabled")&&o.page()!=a.data.action&&o.page(a.data.action).draw("page")};for(l=0,h=f.length;l<h;l++)if(c=f[l],b.isArray(c))q(d,c);else{switch(g=e="",c){case"ellipsis":e="&#x2026;",g="disabled";break;case"first":e=k.sFirst,g=c+(0<j?"":" disabled");break;case"previous":e=k.sPrevious,g=c+(0<j?"":" disabled");break;case"next":e=k.sNext,g=c+(j<n-1?"":" disabled");break;case"last":e=k.sLast,g=c+(j<n-1?"":" disabled");break;default:e=c+1,g=j===c?"active":""}e&&(i=b("<li>",{class:t.sPageButton+" "+g,id:0===r&&"string"==typeof c?a.sTableId+"_"+c:null}).append(b("<a>",{href:"#","aria-controls":a.sTableId,"aria-label":u[c],"data-dt-idx":p,tabindex:a.iTabIndex,class:"page-link"}).html(e)).appendTo(d),a.oApi._fnBindAction(i,{action:c},m),p++)}};try{i=b(h).find(d.activeElement).data("dt-idx")}catch(v){}q(b(h).empty().html('<ul class="pagination"/>').children("ul"),s),i!==m&&b(h).find("[data-dt-idx="+i+"]").focus()},f}),
-/*!
- * 
- * OBE:BS4 Library Design System v1.0.0 (https://library.mattmct.com)
- * The OBE:BS4 Design System is a self-reflexive reference library design system based on the most popular web framework in the world, Bootstrap! The OBE:BS4 system was built specifically to give all project stakeholders full visual, technical, and tactile access to every color, font, element, component and layout for any web project.
- * Copyright 2018 by Matt McT Designs
- * Licensed under: Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)
- * (https://creativecommons.org/licenses/by-nc-sa/4.0/)
- *
- */
-$(function(){
+function(b){"function"==typeof define&&define.amd?define(["jquery","datatables.net"],function(a){return b(a,window,document)}):"object"==typeof exports?module.exports=function(a,d){return a||(a=window),d&&d.fn.dataTable||(d=require("datatables.net")(a,d).$),b(d,a,a.document)}:b(jQuery,window,document)}(function(b,a,d,m){var f=b.fn.dataTable;return b.extend(!0,f.defaults,{dom:"<'row'<'col-sm-12 col-md-6'l><'col-sm-12 col-md-6'f>><'row'<'col-sm-12'tr>><'row'<'col-sm-12 col-md-5'i><'col-sm-12 col-md-7'p>>",renderer:"bootstrap"}),b.extend(f.ext.classes,{sWrapper:"dataTables_wrapper dt-bootstrap4",sFilterInput:"form-control form-control-sm",sLengthSelect:"custom-select custom-select-sm form-control form-control-sm",sProcessing:"dataTables_processing card",sPageButton:"paginate_button page-item"}),f.ext.renderer.pageButton.bootstrap=function(a,h,r,s,j,n){var e,g,i,o=new f.Api(a),t=a.oClasses,k=a.oLanguage.oPaginate,u=a.oLanguage.oAria.paginate||{},p=0,q=function(d,f){var l,h,i,c,m=function(a){a.preventDefault(),!b(a.currentTarget).hasClass("disabled")&&o.page()!=a.data.action&&o.page(a.data.action).draw("page")};for(l=0,h=f.length;l<h;l++)if(c=f[l],b.isArray(c))q(d,c);else{switch(g=e="",c){case"ellipsis":e="&#x2026;",g="disabled";break;case"first":e=k.sFirst,g=c+(0<j?"":" disabled");break;case"previous":e=k.sPrevious,g=c+(0<j?"":" disabled");break;case"next":e=k.sNext,g=c+(j<n-1?"":" disabled");break;case"last":e=k.sLast,g=c+(j<n-1?"":" disabled");break;default:e=c+1,g=j===c?"active":""}e&&(i=b("<li>",{class:t.sPageButton+" "+g,id:0===r&&"string"==typeof c?a.sTableId+"_"+c:null}).append(b("<a>",{href:"#","aria-controls":a.sTableId,"aria-label":u[c],"data-dt-idx":p,tabindex:a.iTabIndex,class:"page-link"}).html(e)).appendTo(d),a.oApi._fnBindAction(i,{action:c},m),p++)}};try{i=b(h).find(d.activeElement).data("dt-idx")}catch(v){}q(b(h).empty().html('<ul class="pagination"/>').children("ul"),s),i!==m&&b(h).find("[data-dt-idx="+i+"]").focus()},f}),$(function(){
 // HIJACK browser so it doesn't jump via url hash to the element id
 // setTimeout is used to allow time for the browser to collapse any dynamicly collapsed prism.js content to be collapsed. With this delay, the navigaiton using hashes to scroll to sections aligns correctly. Without this delay, the browser shows the position before the collapsing.
 setTimeout(function(){if(window.location.hash){var hash=window.location.hash;$("html, body").animate({scrollTop:$(hash).offset().top-80},500,"swing")}},500),
@@ -308,4 +268,29 @@ var obeEscapeHtml=function(text){var map={"&":"&amp;","<":"&lt;",">":"&gt;",'"':
 // Utility function
 // Source: https://stackoverflow.com/questions/1787322/htmlspecialchars-equivalent-in-javascript
 ;i<obeTextToggles.length;i++){var el=obeTextToggles[i];el.addEventListener("click",function(e){e.preventDefault();var visibleText=obeEscapeHtml(this.textContent),hiddenText=obeEscapeHtml(this.dataset.obeTextToggle);this.innerText=obeUnescapeHtml(hiddenText),this.dataset.obeTextToggle=obeUnescapeHtml(visibleText)}),el.addEventListener("mouseover",function(){this.style.cursor="pointer"}),el.addEventListener("mouseout",function(){this.style.cursor="default"})}
+/*!
+ * OBE:BS4 Dropdown Select jQuery Plugin v1.0.0 (https://library.mattmct.com)
+ * Copyright 2018 by Matt McT Designs
+ * Licensed under: Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)
+ * (https://creativecommons.org/licenses/by-nc-sa/4.0/)
+ */
+/*!
+ * OBE:BS4 Dropdown Select jQuery Plugin v1.0.0 (https://library.mattmct.com)
+ * Copyright 2018 by Matt McT Designs
+ * Licensed under: Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)
+ * (https://creativecommons.org/licenses/by-nc-sa/4.0/)
+ */
+!function($){$.fn.obeDropdownSelect=function(options){
+// Default Options
+let settings=$.extend({formMode:!0,parentSelector:".dropdown-select",optionSelector:".dropdown-select-option",cloneTargetSelector:".dropdown-select-target",dataAttributeString:"option-value",hiddenInputSelector:"input[type=hidden]",customEventString:"dropdown.select.selected"},options);return this.each(function(i,element){let el=element;el.init=function(){$(this).on("click",settings.optionSelector,function(){
+// clone the selection and replace the original dropdown select content with the selected markup
+let parent,err=!1;$(this).parents(settings.parentSelector)?parent=$(this).parents(settings.parentSelector):(console.log("ERROR: The matching parent selector: "+settings.parentSelector+" was not found."),err=!0);let value,input,content=$(this).clone(!0,!0);parent.find(settings.cloneTargetSelector)?(parent.find(settings.cloneTargetSelector).html(content),
+// trigger a custom event to hook onto the clone of a selected option
+$(content).trigger(settings.customEventString)):(console.log("ERROR: The matching clone target selector: "+settings.cloneTargetSelector+" was not found."),err=!0),$(this).data(settings.dataAttributeString)?value=$(this).data(settings.dataAttributeString):(console.log("ERROR: The data value attribute selector: "+settings.dataAttributeString+" was not found."),err=!0),!0===settings.formMode&&(parent.parent().find(settings.hiddenInputSelector)?(
+// set the value of the input for the dropdown select to be used in forms
+(input=parent.parent().find(settings.hiddenInputSelector)).val(value),
+// trigger a change event for the input
+input.trigger("change")):(console.log("ERROR: The input selector: "+settings.hiddenInputSelector+" was not found."),err=!0)),err&&console.log("FINAL ERROR: A dropdown select element interaction failed. Please check that your markup selectors match your javascript options or use the .dropdown-select defaults.");
+// get the faux select option value and apply value to hidden input + trigger a change event
+})},el.init()})},$(".dropdown-select").obeDropdownSelect()}(jQuery);
 //# sourceMappingURL=obebs4.library.bundle.js.map

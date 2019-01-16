@@ -2,7 +2,7 @@
 		{% if obe_settings['enable-obebs4-custom-dropdown-selects'] === 'true' %}
         <div class="container-fluid pt-5 text-center bg-white text-dark">
 		
-			<div class="container">
+			<div class="container calendar-workspace">
 				
 				<div class="row justify-content-center">
 					
@@ -18,7 +18,7 @@
 
                     <div class="col-md-6 pb-5 text-left">
                         
-                        
+                        <label class="d-block font-weight-bold mb-2 text-center">Automaticlly Instantiated Examples</label>
                         
                         <div class="js-prism mb-2">
                             <div class="form-group">
@@ -211,11 +211,176 @@
                             </div>
                         </div>
 
+
+                        
+                        <label class="d-block font-weight-bold mt-2 mb-2 text-center">Manually Instantiated Examples</label>
+                        
+
+                        
+                        <div>
+                            <div class="js-prism-calendar prism-hidden mb-2">
+                                <div class="form-group">
+                                    <label>Custom Classes &amp; Submittable:</label>
+                                    <div class="ddSelect btn-group w-100">
+                                        <div class="d-flex justify-content-between align-items-center border rounded w-100 p-0" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" role="listbox">
+                                            <div class="ddSelect-target">
+                                                <div class="py-2 px-3">Select An Option</div>
+                                            </div>
+                                            <div class="py-2 px-3">&#8675;</div>
+                                        </div>
+                                        <div class="dropdown-menu py-0 w-100">
+                                            <div class="ddSelect-option py-2 px-3" data-value="One">Abstract One</div>
+                                            <div class="ddSelect-option py-2 px-3" data-value="Two">Abstract Two</div>
+                                            <div class="ddSelect-option py-2 px-3" data-value="Three">Abstract Three</div>
+                                            <div class="ddSelect-option py-2 px-3" data-value="Four">Abstract Four</div>
+                                            <div class="ddSelect-option py-2 px-3" data-value="Five">Abstract Five</div>
+                                        </div>
+                                    </div>
+                                    <input type="hidden" name="ddSelect-input" value="">
+                                    <small class="form-text text-muted">This implementation uses a custom instantiation of the plugin to allow for programatic customization.</small>
+                                </div>
+                            </div>
+                            <pre>
+                                <code class="language-html line-numbers">
+                                    &lt;div class="form-group"&gt;
+                                        &lt;label&gt;Custom Classes &amp; Submittable:&lt;/label&gt;
+                                        &lt;div class="ddSelect btn-group w-100"&gt;
+                                            &lt;div class="d-flex justify-content-between align-items-center border rounded w-100 p-0" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" role="listbox"&gt;
+                                                &lt;div class="ddSelect-target"&gt;
+                                                    &lt;div class="py-2 px-3"&gt;Select An Option&lt;/div&gt;
+                                                &lt;/div&gt;
+                                                &lt;div class="py-2 px-3"&gt;&#8675;&lt;/div&gt;
+                                            &lt;/div&gt;
+                                            &lt;div class="dropdown-menu py-0 w-100"&gt;
+                                                &lt;div class="ddSelect-option py-2 px-3" data-value="One"&gt;Abstract One&lt;/div&gt;
+                                                &lt;div class="ddSelect-option py-2 px-3" data-value="Two"&gt;Abstract Two&lt;/div&gt;
+                                                &lt;div class="ddSelect-option py-2 px-3" data-value="Three"&gt;Abstract Three&lt;/div&gt;
+                                                &lt;div class="ddSelect-option py-2 px-3" data-value="Four"&gt;Abstract Four&lt;/div&gt;
+                                                &lt;div class="ddSelect-option py-2 px-3" data-value="Five"&gt;Abstract Five&lt;/div&gt;
+                                            &lt;/div&gt;
+                                        &lt;/div&gt;
+                                        &lt;input type="hidden" name="ddSelect-input" value=""&gt;
+                                        &lt;small class="form-text text-muted"&gt;This implementation uses a custom instantiation of the plugin to allow for programatic customization.&lt;/small&gt;
+                                    &lt;/div&gt;
+                                </code>
+                            </pre>
+                            <pre>
+                                <code class="language-javascript line-numbers">
+                                    // jQuery initialization of the OBE:BS4 Dropdown Select Plugin
+                                    // (With options for matching any custom class/id requirements you may have)
+                                    $('.ddSelect').obeDropdownSelect({
+                                        formMode :            true,
+                                        parentSelector :      '.ddSelect',
+                                        optionSelector :      '.ddSelect-option',
+                                        cloneTargetSelector : '.ddSelect-target',
+                                        dataAttributeString : 'value',
+                                    });
+                                </code>
+                            </pre>
+                        </div>
+                        
+                        
+                        
+                        <div>
+                            <div class="js-prism-calendar prism-hidden mb-2">
+                                <div class="form-group">
+                                    <label>Custom Classes, 2x Data, &amp; No Submit:</label>
+                                    <div class="ddSel btn-group w-100">
+                                        <div class="d-flex justify-content-between align-items-center border rounded w-100 p-0" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" role="listbox">
+                                            <div class="cloned-ddSel">
+                                                <div class="py-2 px-3">Select Option (2x Data)</div>
+                                            </div>
+                                            <div class="py-2 px-3">&#8675;</div>
+                                        </div>
+                                        <div class="dropdown-menu py-0 w-100">
+                                            <div class="ddSel-opt py-2 px-3" data-value="One" data-number="1">Abstract One</div>
+                                            <div class="ddSel-opt py-2 px-3" data-value="Two" data-number="2">Abstract Two</div>
+                                            <div class="ddSel-opt py-2 px-3" data-value="Three" data-number="3">Abstract Three</div>
+                                            <div class="ddSel-opt py-2 px-3" data-value="Four" data-number="4">Abstract Four</div>
+                                            <div class="ddSel-opt py-2 px-3" data-value="Five" data-number="5">Abstract Five</div>
+                                        </div>
+                                    </div>
+                                    <small class="form-text text-muted">This implementation uses a custom instantiation of the plugin to allow for programatic customization.</small>
+                                </div>
+                            </div>
+                            <pre>
+                                <code class="language-html line-numbers">
+                                    &lt;!-- Plugin/Customized Dropdown Select Markup Example --&gt;
+                                    &lt;div class="form-group"&gt;
+                                        &lt;label&gt;Plugin Dropdown Select:&lt;/label&gt;
+                                        &lt;div class="ddSel btn-group w-100"&gt;
+                                            &lt;div class="d-flex justify-content-between align-items-center border rounded w-100 p-0" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" role="listbox"&gt;
+                                                &lt;div class="cloned-ddSel"&gt;
+                                                    &lt;div class="py-2 px-3"&gt;Select An Option&lt;/div&gt;
+                                                &lt;/div&gt;
+                                                &lt;div class="py-2 px-3"&gt;&#8675;&lt;/div&gt;
+                                            &lt;/div&gt;
+                                            &lt;div class="dropdown-menu py-0 w-100"&gt;
+                                                &lt;div class="ddSel-opt py-2 px-3" data-value="One" data-number="1"&gt;Abstract One&lt;/div&gt;
+                                                &lt;div class="ddSel-opt py-2 px-3" data-value="Two" data-number="2"&gt;Abstract Two&lt;/div&gt;
+                                                &lt;div class="ddSel-opt py-2 px-3" data-value="Three" data-number="3"&gt;Abstract Three&lt;/div&gt;
+                                                &lt;div class="ddSel-opt py-2 px-3" data-value="Four" data-number="4"&gt;Abstract Four&lt;/div&gt;
+                                                &lt;div class="ddSel-opt py-2 px-3" data-value="Five" data-number="5"&gt;Abstract Five&lt;/div&gt;
+                                            &lt;/div&gt;
+                                        &lt;/div&gt;
+                                        &lt;small class="form-text text-muted"&gt;Plugin dropdown Select help text.&lt;/small&gt;
+                                    &lt;/div&gt;
+                                </code>
+                            </pre>
+                            <pre>
+                                <code class="language-javascript line-numbers">
+                                    // jQuery initialization of the OBE:BS4 Dropdown Select Plugin
+                                    // (With options for matching any custom class/id requirements you may have)
+                                    $('.ddSel').obeDropdownSelect({
+                                        formMode :            false,
+                                        parentSelector :      '.ddSel',
+                                        optionSelector :      '.ddSel-opt',
+                                        cloneTargetSelector : '.cloned-ddSel',
+                                        dataAttributeString : 'value',
+                                        customEventString :   'ddSel.clicked'
+                                    });
+
+                                    // Custom event example (named in settings above)
+                                    // Access 2 (or more) data attributes from a single option selection
+                                    $('.ddSel').on( 'ddSel.clicked', '.ddSel-opt', function(event) {
+                                        let option = $(event.target);
+                                        let value = option.data('value');
+                                        let number = option.data('number');
+                                        console.log('Selected Option Value: ' + value);
+                                        console.log('Selected Option Number: ' + number);
+                                    });
+                                </code>
+                            </pre>
+                        </div>
                     
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="container pb-5">
+
+                <div class="row justify-content-center">
                     
-                    
-                    
-                    
+                    <div class="col">
+                        <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#obe-dropdown-select-defaults" aria-expanded="false" aria-controls="obe-dropdown-select-defaults">VIEW ALL DEFAULTS</button>
+                        <div id="obe-dropdown-select-defaults" class="collapse mt-2">
+                            <pre>
+                                <code class="language-javascript line-numbers">
+                                    // Complete List of OBE:BS4 Dropdown Select Options and Defaults
+                                    $('SELECTOR-FOR-DROPDOWN-SELECT-HERE').obeDropdownSelect({
+                                        formMode :            true, // choices are true or false, where true will allow you to write the selected option value to a hidden input in the markup to submit via GET/POST, and where false avoids writing anything to an input entirely for UI interactions that don't need to be submitted to a server
+                                        parentSelector :      '.dropdown-select', // the parent selector class for the dropdown component (NOTE: this should ideally be a child of a .form-group element)
+                                        optionSelector :      '.dropdown-select-option', // the class selector for each dropdown select option
+                                        cloneTargetSelector : '.dropdown-select-target', // the class selector for the element that will receive a markup clone of the selected dropdown option
+                                        dataAttributeString : 'option-value', // the data attribute string value used on each .dropdown-select-option element (Sans the 'data-' prefix of course!)
+                                        hiddenInputSelector : 'input[type=hidden]', // selector to target the (usually hidden) input with the value of the selected option (for GET/POST submissions)
+                                        customEventString :   'dropdown.select.selected' // the string name of the custom event you'd want to listen for to extend the functionality based on a user's interaction
+                                    });
+                                </code>
+                            </pre>
+                        </div>
                     </div>
 
                 </div>

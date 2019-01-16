@@ -170,7 +170,7 @@ gulp.task('ingest-obebs4-settings', function () {
 gulp.task('compile-sass', function(){
     return gulp.src(
         [
-            //'node_modules/bootstrap/scss/bootstrap.scss',
+            //'./node_modules/bootstrap/scss/bootstrap.scss',
             './node_modules/obebs4/obebs4/scss/obebs4-bootstrap.scss'
         ]
     )
@@ -229,7 +229,7 @@ gulp.task('concat-js', function(){
             './node_modules/bootstrap/dist/js/bootstrap.bundle.min.js',
             './node_modules/obebs4/obebs4/core/js/obebs4-popovers.js',
             './node_modules/obebs4/obebs4/core/js/obebs4-tooltips.js',
-            './node_modules/obebs4/obebs4/core/js/obebs4-dropdown-selects.js',
+            //'./node_modules/obebs4/obebs4/core/js/obebs4-dropdown-selects.js',
             './node_modules/obebs4/obebs4/core/js/obebs4-fa5-animated-checkboxes.js',
             './node_modules/obebs4/obebs4/prismjs/js/prism.min.js',
             './node_modules/tinycolor2/dist/tinycolor-min.js',
@@ -238,7 +238,8 @@ gulp.task('concat-js', function(){
             './node_modules/obebs4/obebs4/core/js/obebs4-library.js',
             './node_modules/obebs4/obebs4/core/js/obebs4-dataTables.js',
             './node_modules/obebs4/obebs4/core/js/obebs4-calendar-datepicker-plugin.js',
-            './node_modules/obebs4/obebs4/core/js/obe-text-toggle-vanilla-mini-plugin.js'
+            './node_modules/obebs4/obebs4/core/js/obe-text-toggle-vanilla-mini-plugin.js',
+            './node_modules/obebs4/obebs4/core/js/obebs4-dropdown-select-plugin.js'
         ]
     )
     .pipe(sourcemaps.init({loadMaps: true}))
@@ -265,10 +266,11 @@ gulp.task('concat-production-js', function(){
             './node_modules/bootstrap/dist/js/bootstrap.bundle.min.js',
             './node_modules/obebs4/obebs4/core/js/obebs4-popovers.js',
             './node_modules/obebs4/obebs4/core/js/obebs4-tooltips.js',
-            './node_modules/obebs4/obebs4/core/js/obebs4-dropdown-selects.js',
+            //'./node_modules/obebs4/obebs4/core/js/obebs4-dropdown-selects.js',
             './node_modules/obebs4/obebs4/core/js/obebs4-fa5-animated-checkboxes.js',
             './node_modules/obebs4/obebs4/core/js/obebs4-calendar-datepicker-plugin.js',
-            './node_modules/obebs4/obebs4/core/js/obe-text-toggle-vanilla-mini-plugin.js'
+            './node_modules/obebs4/obebs4/core/js/obe-text-toggle-vanilla-mini-plugin.js',
+            './node_modules/obebs4/obebs4/core/js/obebs4-dropdown-select-plugin.js'
         ]
     )
     .pipe(sourcemaps.init({loadMaps: true}))

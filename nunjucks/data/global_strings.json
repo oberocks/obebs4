@@ -998,17 +998,17 @@
             },{
                 "index" : 17,
                 "head" : "Dropdown Select",
-                "subhead" : "C O M P O N E N T S",
-                "link" : "Dropdown Select Components",
-                "descrip" : "These are examples of different custom dropdown select components. These use the Bootstrap 4 dropdown menu functionality, and have some added scripting that allows you to use these with rich HTML content in place of a traditional form select element.",
-                "id" : "dropdown-select-components-section"
+                "subhead" : "C O M P O N E N T - P L U G I N",
+                "link" : "Dropdown Select Component Plugin",
+                "descrip" : "These are examples of different custom dropdown select components. These use the Bootstrap 4 dropdown menu functionality, and some custom scripting allowing the component to visually simulate a select element by using a hidden form input element in place of a traditional select element. You can either use the default markup which instantiates the plugin automatically when using a '.dropdown-select' set of classes (perfect for using a dropdown select instead of a standard select.) Conversely, you can instantiate the plugin on your own component with your own classes, event names, selectors, and more. Using this method, you can also add/use multiple data attributes on each dropdown select option! ;)",
+                "id" : "dropdown-select-component-plugin-section"
             },{
                 "index" : 18,
                 "head" : "Calendar Date Picker",
-                "subhead" : "C O M P O N E N T S",
-                "link" : "Calendar Date Picker Components",
+                "subhead" : "C O M P O N E N T - P L U G I N",
+                "link" : "Calendar Date Picker Component Plugin",
                 "descrip" : "These are examples of different uses of the OBE:BS4 Calendar Datepicker Plugin. You can use these components to enhance the user experience whenever you need a user to specify a date in your application.",
-                "id" : "calendar-datepicker-component-section"
+                "id" : "calendar-datepicker-component-plugin-section"
             },{
                 "index" : 19,
                 "head" : "Toggle Text",

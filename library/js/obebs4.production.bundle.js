@@ -14,41 +14,11 @@ $(function(){
 $('[data-toggle="popover"]').popover(),
 // Inject OBEB4 color class into popover injected elements
 $('[data-toggle="popover"]').on("inserted.bs.popover",function(){var headBg="";void 0!==$(this).data("popover-header-bg")&&(headBg=$(this).data("popover-header-bg").trim());var headTextCol="";void 0!==$(this).data("popover-header-text")&&(headTextCol=$(this).data("popover-header-text").trim());var bodyTextCol="";void 0!==$(this).data("popover-body-text")&&(bodyTextCol=$(this).data("popover-body-text").trim()),$(".popover .popover-header").last().addClass(headBg),$(".popover .popover-header").last().addClass(headTextCol),$(".popover .popover-body").last().addClass(bodyTextCol)})}),// end document ready
-/*!
- * 
- * OBE:BS4 Library Design System v1.0.0 (https://library.mattmct.com)
- * The OBE:BS4 Design System is a self-reflexive reference library design system based on the most popular web framework in the world, Bootstrap! The OBE:BS4 system was built specifically to give all project stakeholders full visual, technical, and tactile access to every color, font, element, component and layout for any web project.
- * Copyright 2018 by Matt McT Designs
- * Licensed under: Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)
- * (https://creativecommons.org/licenses/by-nc-sa/4.0/)
- *
- */
 $(function(){
 // Initialize Bootstrap Tooltips
 $('[data-toggle="tooltip"]').tooltip(),
 // Inject OBEB4 color class into tooltip injected elements
 $('[data-toggle="tooltip"]').on("inserted.bs.tooltip",function(){var classname="";void 0!==$(this).data("obe-color-class")&&(classname=$(this).data("obe-color-class").trim()),$(".tooltip").addClass(classname)}).on("hidden.bs.tooltip",function(){var classname="";void 0!==$(this).data("obe-color-class")&&(classname=$(this).data("obe-color-class").trim()),$(".tooltip").removeClass(classname)})}),// end document ready
-/*!
- * 
- * OBE:BS4 Library Design System v1.0.0 (https://library.mattmct.com)
- * The OBE:BS4 Design System is a self-reflexive reference library design system based on the most popular web framework in the world, Bootstrap! The OBE:BS4 system was built specifically to give all project stakeholders full visual, technical, and tactile access to every color, font, element, component and layout for any web project.
- * Copyright 2018 by Matt McT Designs
- * Licensed under: Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)
- * (https://creativecommons.org/licenses/by-nc-sa/4.0/)
- *
- */
-$(function(){
-// dropdown selects javascript
-$(".dropdown-select").on("click",".dropdown-select-option",function(){let value=$(this).data("option-value"),parent=$(this).parents(".dropdown-select"),content=$(this).clone(!0,!0);parent.siblings("input[type=hidden]").val(value).trigger("change"),parent.find(".dropdown-select-target").html(content)})}),// end document ready
-/*!
- * 
- * OBE:BS4 Library Design System v1.0.0 (https://library.mattmct.com)
- * The OBE:BS4 Design System is a self-reflexive reference library design system based on the most popular web framework in the world, Bootstrap! The OBE:BS4 system was built specifically to give all project stakeholders full visual, technical, and tactile access to every color, font, element, component and layout for any web project.
- * Copyright 2018 by Matt McT Designs
- * Licensed under: Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)
- * (https://creativecommons.org/licenses/by-nc-sa/4.0/)
- *
- */
 $(function(){
 // obe fontawesome 5 animated checkboxes javascript
 $(".obe-icon-checkbox").on("click",function(){var parent=$(this),target=parent.find("svg"),input=parent.siblings("input[type=hidden]");target.hasClass("unchecked")?(target.removeClass("unchecked").addClass("checked"),input.val("checked")):(target.removeClass("checked").addClass("unchecked"),input.val("unchecked"))})}),// end document ready
@@ -166,4 +136,29 @@ var obeEscapeHtml=function(text){var map={"&":"&amp;","<":"&lt;",">":"&gt;",'"':
 // Utility function
 // Source: https://stackoverflow.com/questions/1787322/htmlspecialchars-equivalent-in-javascript
 ;i<obeTextToggles.length;i++){var el=obeTextToggles[i];el.addEventListener("click",function(e){e.preventDefault();var visibleText=obeEscapeHtml(this.textContent),hiddenText=obeEscapeHtml(this.dataset.obeTextToggle);this.innerText=obeUnescapeHtml(hiddenText),this.dataset.obeTextToggle=obeUnescapeHtml(visibleText)}),el.addEventListener("mouseover",function(){this.style.cursor="pointer"}),el.addEventListener("mouseout",function(){this.style.cursor="default"})}
+/*!
+ * OBE:BS4 Dropdown Select jQuery Plugin v1.0.0 (https://library.mattmct.com)
+ * Copyright 2018 by Matt McT Designs
+ * Licensed under: Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)
+ * (https://creativecommons.org/licenses/by-nc-sa/4.0/)
+ */
+/*!
+ * OBE:BS4 Dropdown Select jQuery Plugin v1.0.0 (https://library.mattmct.com)
+ * Copyright 2018 by Matt McT Designs
+ * Licensed under: Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)
+ * (https://creativecommons.org/licenses/by-nc-sa/4.0/)
+ */
+!function($){$.fn.obeDropdownSelect=function(options){
+// Default Options
+let settings=$.extend({formMode:!0,parentSelector:".dropdown-select",optionSelector:".dropdown-select-option",cloneTargetSelector:".dropdown-select-target",dataAttributeString:"option-value",hiddenInputSelector:"input[type=hidden]",customEventString:"dropdown.select.selected"},options);return this.each(function(i,element){let el=element;el.init=function(){$(this).on("click",settings.optionSelector,function(){
+// clone the selection and replace the original dropdown select content with the selected markup
+let parent,err=!1;$(this).parents(settings.parentSelector)?parent=$(this).parents(settings.parentSelector):(console.log("ERROR: The matching parent selector: "+settings.parentSelector+" was not found."),err=!0);let value,input,content=$(this).clone(!0,!0);parent.find(settings.cloneTargetSelector)?(parent.find(settings.cloneTargetSelector).html(content),
+// trigger a custom event to hook onto the clone of a selected option
+$(content).trigger(settings.customEventString)):(console.log("ERROR: The matching clone target selector: "+settings.cloneTargetSelector+" was not found."),err=!0),$(this).data(settings.dataAttributeString)?value=$(this).data(settings.dataAttributeString):(console.log("ERROR: The data value attribute selector: "+settings.dataAttributeString+" was not found."),err=!0),!0===settings.formMode&&(parent.parent().find(settings.hiddenInputSelector)?(
+// set the value of the input for the dropdown select to be used in forms
+(input=parent.parent().find(settings.hiddenInputSelector)).val(value),
+// trigger a change event for the input
+input.trigger("change")):(console.log("ERROR: The input selector: "+settings.hiddenInputSelector+" was not found."),err=!0)),err&&console.log("FINAL ERROR: A dropdown select element interaction failed. Please check that your markup selectors match your javascript options or use the .dropdown-select defaults.");
+// get the faux select option value and apply value to hidden input + trigger a change event
+})},el.init()})},$(".dropdown-select").obeDropdownSelect()}(jQuery);
 //# sourceMappingURL=obebs4.production.bundle.js.map
