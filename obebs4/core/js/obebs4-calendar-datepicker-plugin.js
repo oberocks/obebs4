@@ -1,5 +1,5 @@
 /*!
- * OBE:BS4 Calendar Datepicker jQuery Plugin v1.0.0 (https://library.mattmct.com)
+ * OBE:BS4 Calendar Datepicker jQuery Plugin v1.0.1 (https://library.mattmct.com)
  * Copyright 2018 by Matt McT Designs
  * Licensed under: Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)
  * (https://creativecommons.org/licenses/by-nc-sa/4.0/)
@@ -84,6 +84,41 @@
             //console.log(output);
             return output;
         }
+        const getDateParts = function (dateString) {
+            let output = {};
+            if (settings.outputFormat === 'MM/DD/YYYY') {
+                let dateArr = dateString.split('/');
+                output['month'] = dateArr[0];
+                output['day'] = dateArr[1];
+                output['year'] = dateArr[2];
+            } else if (settings.outputFormat === 'MM-DD-YYYY') {
+                let dateArr = dateString.split('-');
+                output['month'] = dateArr[0];
+                output['day'] = dateArr[1];
+                output['year'] = dateArr[2];
+            } else if (settings.outputFormat === 'DD/MM/YYYY') {
+                let dateArr = dateString.split('/');
+                output['month'] = dateArr[1];
+                output['day'] = dateArr[0];
+                output['year'] = dateArr[2];
+            } else if (settings.outputFormat === 'DD-MM-YYYY') {
+                let dateArr = dateString.split('-');
+                output['month'] = dateArr[1];
+                output['day'] = dateArr[0];
+                output['year'] = dateArr[2];
+            } else if (settings.outputFormat === 'YYYY/MM/DD') {
+                let dateArr = dateString.split('/');
+                output['month'] = dateArr[1];
+                output['day'] = dateArr[2];
+                output['year'] = dateArr[0];
+            } else if (settings.outputFormat === 'YYYY-MM-DD') {
+                let dateArr = dateString.split('-');
+                output['month'] = dateArr[1];
+                output['day'] = dateArr[2];
+                output['year'] = dateArr[0];
+            }
+            return output;
+        }
 
 
         return this.each(function(i, element) {
@@ -98,11 +133,37 @@
                 
                 // Set Vars for Default Calendar Content
                 var today;
-                if (year === undefined || monthIndex === undefined || day === undefined) {
-                    today = new Date();
-                } else {
+
+                // if no values are defined
+                if (year === undefined || monthIndex === undefined || day === undefined)
+                {
+                    // get (if any) current value from the outputSelector
+                    var currentOutputSelectorVal = $(settings.outputSelector).val();
+
+                    // if the outputSelector has a value already
+                    if (currentOutputSelectorVal.length > 0)
+                    {
+                        // get the date parts based off the settings format
+                        var myDateObj = getDateParts(currentOutputSelectorVal);
+                        // extract vars from the returned object above
+                        var ze_month = Number(myDateObj['month']) - 1;
+                        var ze_year = myDateObj['year'];
+                        var ze_day = myDateObj['day'];
+                        // use the extracted values to create today's date
+                        today = new Date(ze_year, ze_month, ze_day);
+                    }
+                    // else create a new raw date for today
+                    else
+                    {
+                        today = new Date();
+                    }
+                }
+                // Else use the defined values
+                else
+                {
                     today = new Date(year, monthIndex, day);
                 }
+
                 var dayIndex = today.getDay();
                 var dd = today.getDate();
                 var monthIndex = today.getMonth();
@@ -112,11 +173,16 @@
                 var firstDayIndex = firstDay.getDay();
                 var lastDayIndex = lastDay.getDay();
 
+                
+                    
+                
                 if (settings.outputSelector != null && settings.outputType === 'input') {
                     $(settings.outputSelector).val( displayCalData(dd, monthIndex, yyyy) );
                 } else if (settings.outputSelector != null && settings.outputType === 'text') {
                     $(settings.outputSelector).text( displayCalData(dd, monthIndex, yyyy) );
                 }
+                
+                    
 
                 // adjust the total days for February if yyyy is currently a leap year
                 if (isLeapYear(yyyy)) {
@@ -504,7 +570,6 @@
                 };
                 yearPlus.appendChild(yearPlus_text);
                 calYear_UI.appendChild(yearPlus);
-
 
 
                 

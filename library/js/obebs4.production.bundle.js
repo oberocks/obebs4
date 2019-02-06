@@ -23,7 +23,7 @@ $(function(){
 // obe fontawesome 5 animated checkboxes javascript
 $(".obe-icon-checkbox").on("click",function(){var parent=$(this),target=parent.find("svg"),input=parent.siblings("input[type=hidden]");target.hasClass("unchecked")?(target.removeClass("unchecked").addClass("checked"),input.val("checked")):(target.removeClass("checked").addClass("unchecked"),input.val("unchecked"))})}),// end document ready
 /*!
- * OBE:BS4 Calendar Datepicker jQuery Plugin v1.0.0 (https://library.mattmct.com)
+ * OBE:BS4 Calendar Datepicker jQuery Plugin v1.0.1 (https://library.mattmct.com)
  * Copyright 2018 by Matt McT Designs
  * Licensed under: Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)
  * (https://creativecommons.org/licenses/by-nc-sa/4.0/)
@@ -41,7 +41,22 @@ return"MM/DD/YYYY"===settings.outputFormat?output=outputMonth+"/"+outputDay+"/"+
 // add functionality that re-renders the calendar to match any manual changes to the input value by a user
 if(finalWrapper.className=settings.baseColors,finalWrapper.id="obe-calendar-datepicker-"+Math.floor(1e5*Math.random())+1,el.renderCalendar=function(year,monthIndex,day){
 // Set Vars for Default Calendar Content
-var today,yearDigits,prevTotalDays,dayIndex=(today=void 0===year||void 0===monthIndex||void 0===day?new Date:new Date(year,monthIndex,day)).getDay(),dd=today.getDate(),yyyy=(monthIndex=today.getMonth(),today.getFullYear()),firstDay=new Date(today.getFullYear(),today.getMonth(),1),lastDay=new Date(today.getFullYear(),today.getMonth()+1,0),firstDayIndex=firstDay.getDay(),lastDayIndex=lastDay.getDay();null!=settings.outputSelector&&"input"===settings.outputType?$(settings.outputSelector).val(displayCalData(dd,monthIndex,yyyy)):null!=settings.outputSelector&&"text"===settings.outputType&&$(settings.outputSelector).text(displayCalData(dd,monthIndex,yyyy)),yearDigits=yyyy,
+var today;
+// if no values are defined
+if(void 0===year||void 0===monthIndex||void 0===day){
+// get (if any) current value from the outputSelector
+var currentOutputSelectorVal=$(settings.outputSelector).val();
+// if the outputSelector has a value already
+if(currentOutputSelectorVal.length>0){
+// get the date parts based off the settings format
+var myDateObj=function(dateString){let output={};if("MM/DD/YYYY"===settings.outputFormat){let dateArr=dateString.split("/");output.month=dateArr[0],output.day=dateArr[1],output.year=dateArr[2]}else if("MM-DD-YYYY"===settings.outputFormat){let dateArr=dateString.split("-");output.month=dateArr[0],output.day=dateArr[1],output.year=dateArr[2]}else if("DD/MM/YYYY"===settings.outputFormat){let dateArr=dateString.split("/");output.month=dateArr[1],output.day=dateArr[0],output.year=dateArr[2]}else if("DD-MM-YYYY"===settings.outputFormat){let dateArr=dateString.split("-");output.month=dateArr[1],output.day=dateArr[0],output.year=dateArr[2]}else if("YYYY/MM/DD"===settings.outputFormat){let dateArr=dateString.split("/");output.month=dateArr[1],output.day=dateArr[2],output.year=dateArr[0]}else if("YYYY-MM-DD"===settings.outputFormat){let dateArr=dateString.split("-");output.month=dateArr[1],output.day=dateArr[2],output.year=dateArr[0]}return output}(currentOutputSelectorVal),ze_month=Number(myDateObj.month)-1,ze_year=myDateObj.year,ze_day=myDateObj.day;
+// extract vars from the returned object above
+// use the extracted values to create today's date
+today=new Date(ze_year,ze_month,ze_day)}
+// else create a new raw date for today
+else today=new Date}
+// Else use the defined values
+else today=new Date(year,monthIndex,day);var yearDigits,prevTotalDays,dayIndex=today.getDay(),dd=today.getDate(),yyyy=(monthIndex=today.getMonth(),today.getFullYear()),firstDay=new Date(today.getFullYear(),today.getMonth(),1),lastDay=new Date(today.getFullYear(),today.getMonth()+1,0),firstDayIndex=firstDay.getDay(),lastDayIndex=lastDay.getDay();null!=settings.outputSelector&&"input"===settings.outputType?$(settings.outputSelector).val(displayCalData(dd,monthIndex,yyyy)):null!=settings.outputSelector&&"text"===settings.outputType&&$(settings.outputSelector).text(displayCalData(dd,monthIndex,yyyy)),yearDigits=yyyy,
 // adjust the total days for February if yyyy is currently a leap year
 settings.months.totalDays[1]=(yearDigits%100==0?yearDigits%400==0:yearDigits%4==0)?29:28,prevTotalDays=0===monthIndex?31:settings.months.totalDays[monthIndex-1];
 // get the last days of the previous month and add them to the array
