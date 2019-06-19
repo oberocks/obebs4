@@ -1,6 +1,6 @@
 {
   "name": "obebs4",
-  "version": "0.4.11",
+  "version": "0.4.12",
   "faversion": "5.9.0",
   "description": "The OBE:BS4 Design System is a self-reflexive reference library design system based on the most popular web framework in the world, Bootstrap! The OBE:BS4 system was built specifically to give all project stakeholders full visual, technical, and tactile access to every color, font, element, component and layout for any web project.",
   "main": "index.js",
@@ -32,7 +32,8 @@
   },
   "devDependencies": {
     "fstream": "^1.0.12",
-    "js-yaml": "^3.13.1"
+    "js-yaml": "^3.13.1",
+    "tar": "^4.4.10"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
