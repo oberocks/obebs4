@@ -215,30 +215,48 @@
                         <div id="js-font-options">
                             
                             <div class="nav nav-pills nav-justified" role="tablist">
-                               
-                                <button class="nav-item nav-link active" id="google-fonts-tab" data-toggle="tab" data-target="#google-fonts" role="tab" aria-controls="google-fonts" aria-selected="true">Google<br/>Fonts</button>
-                                
-                                <button class="nav-item nav-link" id="bootstrap-tab" data-toggle="tab" data-target="#bootstrap" role="tab" aria-controls="bootstrap" aria-selected="false">Bootstrap<br/>Fonts</button>
-
-                            </div>
-
-                            <div class="tab-content" id="myTabContent">
 
                                 {% if obe_settings['google-fonts-url'] === 'false' %}
+                                    
+                                    {% set googleTriggerActiveClass = '' %}
+                                    {% set bootstrapTriggerActiveClass = ' active' %}
+
+                                    {% set googleTriggerAriaSelected = 'false' %}
+                                    {% set bootstrapTriggerAriaSelected = 'true' %}
+                                    
                                     {% set googleFontsTabClasses = '' %}
                                     {% set bootstrapFontsTabClasses = ' show active' %}
+                                    
                                     {% set googleFontsString = '' %}
                                     {% set googleSansSerifString = '' %}
                                     {% set googleMonospaceString = '' %}
                                     {% set googleSecondaryString = '' %}
+                                    
                                 {% else %}
+                                    
+                                    {% set googleTriggerActiveClass = ' active' %}
+                                    {% set bootstrapTriggerActiveClass = '' %}
+
+                                    {% set googleTriggerAriaSelected = 'true' %}
+                                    {% set bootstrapTriggerAriaSelected = 'false' %}
+
                                     {% set googleFontsTabClasses = ' show active' %}
                                     {% set bootstrapFontsTabClasses = '' %}
+
                                     {% set googleFontsString = '<link href="https://' + obe_settings['google-fonts-url'] | replace("___", ".") | replace("---", ":") | replace("qqq", "?") + ' rel="stylesheet">' %}
                                     {% set googleSansSerifString = 'font-family: ' + obe_settings['font-family-sans-serif'] + ';' %}
                                     {% set googleMonospaceString = 'font-family: ' + obe_settings['font-family-monospace'] + ';' %}
                                     {% set googleSecondaryString = 'font-family: ' + obe_settings['font-family-secondary'] + ';' %}
+
                                 {% endif %}
+                               
+                                <button class="nav-item nav-link mr-2{{ googleTriggerActiveClass }}" id="google-fonts-tab" data-toggle="tab" data-target="#google-fonts" role="tab" aria-controls="google-fonts" aria-selected="{{ googleTriggerAriaSelected }}">Google<br/>Fonts</button>
+                                
+                                <button class="nav-item nav-link{{ bootstrapTriggerActiveClass }}" id="bootstrap-tab" data-toggle="tab" data-target="#bootstrap" role="tab" aria-controls="bootstrap" aria-selected="{{ bootstrapTriggerAriaSelected }}">Bootstrap<br/>Fonts</button>
+
+                            </div>
+
+                            <div class="tab-content" id="myTabContent">
                                 
                                 <div class="tab-pane pt-3 fade{{ googleFontsTabClasses }}" id="google-fonts" role="tabpanel" aria-labelledby="google-fonts-tab">
                                     
