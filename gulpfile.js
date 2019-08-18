@@ -171,7 +171,8 @@ gulp.task('compile-sass', function(){
     return gulp.src(
         [
             //'./node_modules/bootstrap/scss/bootstrap.scss',
-            './obebs4/scss/obebs4-bootstrap.scss'
+            //'./obebs4/scss/obebs4-bootstrap.scss',
+            './obebs4/scss/obebs4-bootstrap-dev.scss'
         ]
     )
     .pipe(sass({outputStyle: 'compressed'}))
@@ -320,7 +321,7 @@ gulp.task('concat-library-js', function(){
 gulp.task('concat-css', function(){
     return gulp.src(
         [
-            './library/css/obebs4-bootstrap.css',
+            './library/css/obebs4-bootstrap-dev.css',
             './obebs4/prismjs/css/prism.css',
             './node_modules/datatables.net-bs4/css/dataTables.bootstrap4.min.css',
             './obebs4/core/css/obebs4-library.css'
@@ -339,7 +340,7 @@ gulp.task('concat-css', function(){
 gulp.task('concat-production-css', function(){
     return gulp.src(
         [
-            './library/css/obebs4-bootstrap.css'
+            './library/css/obebs4-bootstrap-dev.css'
         ]
     )
     .pipe(sourcemaps.init({loadMaps: true}))
@@ -370,7 +371,7 @@ gulp.task('concat-library-css', function(){
 
 gulp.task('clean-up', function () {
     return del([
-        './library/css/obebs4-bootstrap.css'
+        './library/css/obebs4-bootstrap-dev.css'
     ]);
 });
 
