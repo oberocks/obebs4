@@ -243,7 +243,7 @@
                                     {% set googleFontsTabClasses = ' show active' %}
                                     {% set bootstrapFontsTabClasses = '' %}
 
-                                    {% set googleFontsString = '<link href="https://' + obe_settings['google-fonts-url'] | replace("___", ".") | replace("---", ":") | replace("qqq", "?") + ' rel="stylesheet">' %}
+                                    {% set googleFontsString = '<link href="https://' + obe_settings['google-fonts-url'] | replace("___", ".") | replace("---", ":") | replace("qqq", "?") + '" rel="stylesheet">' %}
                                     {% set googleSansSerifString = 'font-family: ' + obe_settings['font-family-sans-serif'] + ';' %}
                                     {% set googleMonospaceString = 'font-family: ' + obe_settings['font-family-monospace'] + ';' %}
                                     {% set googleSecondaryString = 'font-family: ' + obe_settings['font-family-secondary'] + ';' %}
@@ -423,6 +423,10 @@
                             </svg>
                             <div class="text-center pt-3">
                                 <button id="view-all-slices" class="btn btn-sm btn-primary">VIEW ALL</button>
+                            </div>
+                            <div class="text-center pt-3">
+                                <button class="btn btn-sm btn-primary mb-3" data-toggle="modal" data-target="#blend-tool-modal">BLENDER TOOL</button>
+                                <button class="btn btn-sm btn-primary mb-3" data-toggle="modal" data-target="#color-combo-tool-modal">HARMONY TOOL</button>
                             </div>
                         </div>
 
@@ -725,3 +729,153 @@
             </div>
 
         </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- OC Nav Left Modal -->
+<div id="blend-tool-modal" class="modal fade left-pinned" tabindex="-1" role="dialog" aria-labelledby="blend-tool-modal-title" aria-hidden="true">
+    <div class="modal-dialog modal-lg mt-0">
+        <div class="modal-content d-flex flex-column border-0 rounded-0 text-left">
+            <div class="modal-header border-light-gray-100">
+                <h6 id="blend-tool-modal-title" class="modal-title">BLENDER TOOL</h6>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+            </div>
+            <div class="modal-body m-3" role="navigation">
+                
+                <p class="font-italic text-primary">Use this tool to get blended hex color codes between two colors!</p>
+                
+                <div class="form-group">
+                    <label for="blend-first-color" class="font-weight-bold">First Color</label>
+                    <div class="input-group">
+                        <input type="text" class="form-control" id="blend-first-color" aria-describedby="blend-first-color-help" placeholder="#000000" value="#000000" style="background-color:#000000; color:#ffffff;">
+                        <div class="input-group-append">
+                            <button class="js-input-group-clear-btn btn btn-light border" type="button"><i class="fas fa-trash-alt"></i></button>
+                        </div>
+                    </div>
+                    <small id="blend-first-color-help" class="form-text text-muted">Enter a color hex code to blend.</small>
+                </div>
+                
+                <!--div class="form-group">
+                    <label for="blend-first-color" class="font-weight-bold">First Color</label>
+                    <input type="text" class="form-control" id="blend-first-color" aria-describedby="blend-first-color-help" placeholder="#000000" value="#000000">
+                    <small id="blend-first-color-help" class="form-text text-muted">Enter a color hex code to blend.</small>
+                </div-->
+
+                <div class="form-group">
+                    <label for="blend-second-color" class="font-weight-bold">Second Color</label>
+                    <div class="input-group">
+                        <input type="text" class="form-control" id="blend-second-color" aria-describedby="blend-second-color-help" placeholder="#ffffff" value="#ffffff" style="background-color:#ffffff; color:#000000;">
+                        <div class="input-group-append">
+                            <button class="js-input-group-clear-btn btn btn-light border" type="button"><i class="fas fa-trash-alt"></i></button>
+                        </div>
+                    </div>
+                    <small id="blend-second-color-help" class="form-text text-muted">Enter a color hex code to blend.</small>
+                </div>
+
+                <!--div class="form-group">
+                    <label for="blend-second-color" class="font-weight-bold">Second Color</label>
+                    <input type="text" class="form-control" id="blend-second-color" aria-describedby="blend-second-color-help" placeholder="#ffffff" value="#ffffff">
+                    <small id="blend-second-color-help" class="form-text text-muted">Enter a color hex code to blend.</small>
+                </div-->
+
+                <div class="input-group text-center pt-3">
+                    <button id="blend-tool-btn" class="btn btn-lg btn-block btn-primary" type="button">BLEND</button>
+                </div>
+
+                <hr class="my-5">
+
+                <div class="pb-5">
+
+                    <label class="d-block text-left font-weight-bold">Blend Results</label>
+
+                    <div class="form-group">
+                        <label for="color-one-block" class="small font-weight-bold">First Color</label>
+                        <div class="input-group">
+                            <input type="text" class="form-control" placeholder="#000000" id="color-one-block" aria-describedby="blend-first-color-help" style="background-color:#000000; color:#ffffff;" value="#000000" readonly>
+                            <div class="input-group-append">
+                                <button class="js-input-group-copy-btn btn btn-light border" type="button" data-clipboard-target="#color-one-block"><i class="fas fa-copy"></i></button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="color-blend25-block" class="small font-weight-bold">25/75% Blend</label>
+                        <div class="input-group">
+                            <input type="text" class="form-control" placeholder="#404040" id="color-blend25-block" style="background-color:#404040; color:#ffffff;" value="#404040" readonly>
+                            <div class="input-group-append">
+                                <button class="js-input-group-copy-btn btn btn-light border" type="button" data-clipboard-target="#color-blend25-block"><i class="fas fa-copy"></i></button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="color-blend50-block" class="small font-weight-bold">50/50% Blend</label>
+                        <div class="input-group">
+                            <input type="text" class="form-control" placeholder="#000000" id="color-blend50-block" style="background-color:#808080; color:#000000;" value="#808080" readonly>
+                            <div class="input-group-append">
+                                <button class="js-input-group-copy-btn btn btn-light border" type="button" data-clipboard-target="#color-blend50-block"><i class="fas fa-copy"></i></button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="color-blend75-block" class="small font-weight-bold">75/25% Blend</label>
+                        <div class="input-group">
+                            <input type="text" class="form-control" placeholder="#c0c0c0" id="color-blend75-block" style="background-color:#c0c0c0; color:#000000;" value="#c0c0c0" readonly>
+                            <div class="input-group-append">
+                                <button class="js-input-group-copy-btn btn btn-light border" type="button" data-clipboard-target="#color-blend75-block"><i class="fas fa-copy"></i></button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="color-two-block" class="small font-weight-bold">Second Color</label>
+                        <div class="input-group">
+                            <input type="text" class="form-control" placeholder="#000000" id="color-two-block" aria-describedby="blend-first-color-help" style="background-color:#ffffff; color:#000000;" value="#ffffff" readonly>
+                            <div class="input-group-append">
+                                <button class="js-input-group-copy-btn btn btn-light border" type="button" data-clipboard-target="#color-two-block"><i class="fas fa-copy"></i></button>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+            <div class="modal-footer justify-content-center border-light-gray-100">
+                <button type="button" class="btn btn-sm btn-outline-secondary" data-dismiss="modal">CLOSE</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- OC Nav Left Modal -->
+<div id="color-combo-tool-modal" class="modal fade left-pinned" tabindex="-1" role="dialog" aria-labelledby="color-combo-tool-modal-title" aria-hidden="true">
+    <div class="modal-dialog modal-lg mt-0">
+        <div class="modal-content d-flex flex-column border-0 rounded-0 text-left">
+            <div class="modal-header border-light-gray-100">
+                <h6 id="color-combo-tool-modal-title" class="modal-title">HARMONY TOOL</h6>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+            </div>
+            <div class="modal-body m-3" role="navigation">
+                
+                <p class="font-italic text-primary">Coming Soon!</p>
+
+            </div>
+            <div class="modal-footer justify-content-center border-light-gray-100">
+                <button type="button" class="btn btn-sm btn-outline-secondary" data-dismiss="modal">CLOSE</button>
+            </div>
+        </div>
+    </div>
+</div>

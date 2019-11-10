@@ -25,6 +25,9 @@
 
 {% block javascript %}
         
+    <!-- OBE:BS4 Library Bundles JS -->
+    <script src="js/obebs4.production.bundle.js"></script>
+    
     <script>
         
         $(function() {
@@ -381,7 +384,12 @@
                 var cleanGoogleFontURL = function(element){
                     var input = $(element);
                     var currentVal = $(input).val();
-                    var cleanedVal = currentVal.replace('https://', '').replace('<link href="', '').replace('" rel="stylesheet">', '').replace(/\./g, '___').replace(/:/g, '---').replace('?', 'qqq');
+                    var parent = document.createElement('div');
+                    parent.innerHTML = currentVal;
+                    var dataNode = parent.childNodes[0];
+                    var href = dataNode.href;
+                    var cleanedVal = href.replace('https://', '').replace(/\./g, '___').replace(/:/g, '---').replace('?', 'qqq');
+                    // var cleanedVal = currentVal.replace('https://', '').replace('<link href="', '').replace('" rel="stylesheet">', '').replace(/\./g, '___').replace(/:/g, '---').replace('?', 'qqq');
                     return cleanedVal;
                 }
                 
@@ -1597,6 +1605,94 @@
                 let colorVal = $('#' + svgColors[i]).val();
                 $("#" + svgColors[i] + "-slice").attr('style', "fill:" + colorVal);
 			}
+
+            
+            // utility function to run blend tool functionality
+            var blendColors = function(){
+                
+                var input1 = $('#blend-first-color');
+                var input2 = $('#blend-second-color');
+                
+                var val1 = input1.val() ? input1.val() : '#000000';
+                var val2 = input2.val() ? input2.val() : '#ffffff';
+                
+                var hex1, hex2;
+                
+                if (val1.indexOf('#') !== -1) {
+                    hex1 = val1;
+                } else {
+                    hex1 = '#' + val1;
+                }
+                if (val2.indexOf('#') !== -1) {
+                    hex2 = val2;
+                } else {
+                    hex2 = '#' + val2;
+                }
+                
+                input1.val(hex1);
+                input2.val(hex2);
+
+                var color1 = new tinycolor(hex1);
+                var color2 = new tinycolor(hex2);
+                var blend25 = tinycolor.mix(color1, color2, amount = 25);
+                var blend50 = tinycolor.mix(color1, color2, amount = 50);
+                var blend75 = tinycolor.mix(color1, color2, amount = 75);
+
+                var lightTextHex = '#ffffff';
+                var darkTextHex = '#000000';
+
+                input1.css('background-color', color1).css('color', darkTextHex);
+                input2.css('background-color', color2).css('color', darkTextHex);
+                
+                $('#color-one-block').val(color1.toHexString()).css('background-color', color1).css('color', darkTextHex);
+                $('#color-blend25-block').val(blend25.toHexString()).css('background-color', blend25).css('color', darkTextHex);
+                $('#color-blend50-block').val(blend50.toHexString()).css('background-color', blend50).css('color', darkTextHex);
+                $('#color-blend75-block').val(blend75.toHexString()).css('background-color', blend75).css('color', darkTextHex);
+                $('#color-two-block').val(color2.toHexString()).css('background-color', color2).css('color', darkTextHex);
+                
+                if (color1.isDark()){
+                    $('#color-one-block').css('color', lightTextHex);
+                    input1.css('color', lightTextHex);
+                }
+                if (blend25.isDark()){
+                    $('#color-blend25-block').css('color', lightTextHex);
+                }
+                if (blend50.isDark()){
+                    $('#color-blend50-block').css('color', lightTextHex);
+                }
+                if (blend75.isDark()){
+                    $('#color-blend75-block').css('color', lightTextHex);
+                }
+                if (color2.isDark()){
+                    $('#color-two-block').css('color', lightTextHex);
+                    input2.css('color', lightTextHex);
+                }
+
+            };
+            
+            $('#blend-first-color, #blend-second-color').on('change', function() {
+                blendColors();
+            });
+
+            $('#blend-first-color, #blend-second-color').on('blur', function() {
+                blendColors();
+            });
+
+            $('#blend-tool-btn').on('click', function() {
+                blendColors();
+            });
+
+            // instantiate ClipboardJS for input group copy button elements
+            var clipboard = new ClipboardJS('.js-input-group-copy-btn');
+
+            // script for input group clear input functionality
+            $('.js-input-group-clear-btn').on('click', function() {
+                
+                var input = $(this).parents('.input-group').find('input');
+                input.val('');
+                input.focus();
+
+            });
 
         });
 
