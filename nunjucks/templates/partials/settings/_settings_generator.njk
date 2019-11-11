@@ -765,14 +765,14 @@
 <!-- OC Nav Left Modal -->
 <div id="blend-tool-modal" class="modal fade left-pinned" tabindex="-1" role="dialog" aria-labelledby="blend-tool-modal-title" aria-hidden="true">
     <div class="modal-dialog modal-lg mt-0">
-        <div class="modal-content border-0 rounded-0 text-left">
-            <div class="modal-header border-light-gray-100">
+        <div class="modal-content border-0 rounded-0 text-left bg-dark-gray-600 text-white">
+            <div class="modal-header border-dark-gray-700">
                 <h6 id="blend-tool-modal-title" class="modal-title">BLENDER TOOL</h6>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                <!--button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button-->
             </div>
             <div class="modal-body m-3" role="navigation">
                 
-                <p class="font-italic text-primary">Use this tool to get blended hex color codes between two colors!</p>
+                <p class="font-italic text-light">Use this tool to get blended hex color codes between two colors!</p>
                 
                 {% macro color_blend_color_input(id, labelText, bgHex, textHex, helpText) %}
                 <div class="form-group">
@@ -783,7 +783,7 @@
                             <button class="js-input-group-clear-btn btn btn-light border" type="button"><i class="fas fa-trash-alt"></i></button>
                         </div>
                     </div>
-                    <small id="{{ id }}-help" class="form-text text-muted">{{ helpText }}</small>
+                    <small id="{{ id }}-help" class="form-text text-light-gray">{{ helpText }}</small>
                 </div>
                 {% endmacro %}
 
@@ -817,7 +817,7 @@
                     <button id="blend-tool-btn" class="btn btn-lg btn-block btn-primary" type="button">BLEND</button>
                 </div>
 
-                <hr class="my-5">
+                <hr class="my-5 border-dark-gray-700">
 
                 <div class="pb-5">
 
@@ -827,7 +827,7 @@
                     <div class="form-group">
                         <label for="{{ id }}" class="small font-weight-bold">{{ labelText }}</label>
                         <div class="input-group">
-                            <input type="text" class="form-control" placeholder="{{ bgHex }}" id="{{ id }}" aria-describedby="blend-first-color-help" style="background-color:{{ bgHex }}; color:{{ textHex }};" value="{{ bgHex }}" readonly>
+                            <input type="text" class="form-control" placeholder="{{ bgHex }}" id="{{ id }}" style="background-color:{{ bgHex }}; color:{{ textHex }};" value="{{ bgHex }}" readonly>
                             <div class="input-group-append">
                                 <button class="js-input-group-copy-btn btn btn-light border" type="button" data-clipboard-target="#{{ id }}"><i class="fas fa-copy"></i></button>
                             </div>
@@ -898,8 +898,8 @@
                 </div>
 
             </div>
-            <div class="modal-footer justify-content-center border-light-gray-100">
-                <button type="button" class="btn btn-sm btn-outline-secondary" data-dismiss="modal">CLOSE</button>
+            <div class="modal-footer justify-content-center border-dark-gray-700">
+                <button type="button" class="btn btn-sm btn-outline-light" data-dismiss="modal">CLOSE</button>
             </div>
         </div>
     </div>
@@ -909,18 +909,95 @@
 <!-- OC Nav Left Modal -->
 <div id="color-combo-tool-modal" class="modal fade left-pinned" tabindex="-1" role="dialog" aria-labelledby="color-combo-tool-modal-title" aria-hidden="true">
     <div class="modal-dialog modal-lg mt-0">
-        <div class="modal-content border-0 rounded-0 text-left">
-            <div class="modal-header border-light-gray-100">
+        <div class="modal-content border-0 rounded-0 text-left bg-dark-gray-600 text-white">
+            <div class="modal-header border-dark-gray-700">
                 <h6 id="color-combo-tool-modal-title" class="modal-title">HARMONY TOOL</h6>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                <!--button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button-->
             </div>
             <div class="modal-body m-3" role="navigation">
                 
-                <p class="font-italic text-primary">Coming Soon!</p>
+                <p class="font-italic text-light">Use this tool to get different color harmonies derived from a single hex color code!</p>
+
+                {{ color_blend_color_input('harmony-base-color', 'Harmony Base Color', '#000000', '#ffffff', 'Enter your base color harmony hex code.') }}
+
+                <div class="form-group">
+                    
+                    {% macro harmony_mode_radio(label, count, checked = 'false') %}
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="harmony-mode" id="harmony-mode-{{ count }}" value="{{ label }}" aria-describedby="harmony-mode-help"{% if checked === 'true' %} checked{% endif %}>
+                        <label class="form-check-label" for="harmony-mode-{{ count }}">{{ label }}</label>
+                    </div>
+                    {% endmacro %}
+                    
+                    <label class="font-weight-bold">Harmony Mode</label>
+
+                    {{ harmony_mode_radio('Monochromatic', 1, 'true') }}
+                    {{ harmony_mode_radio('Complementary', 2) }}
+                    {{ harmony_mode_radio('Analogous', 3) }}
+                    {{ harmony_mode_radio('Split Complementary', 4) }}
+                    {{ harmony_mode_radio('Triad', 5) }}
+                    {{ harmony_mode_radio('Tetrad', 6) }}
+
+                    <!--div class="form-check">
+                        <input class="form-check-input" type="radio" name="harmony-mode" id="harmony-mode-1" value="Monochromatic" aria-describedby="harmony-mode-help" checked>
+                        <label class="form-check-label" for="harmony-mode-1">Monochromatic</label>
+                    </div>
+
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="harmony-mode" id="harmony-mode-2" value="Complementary" aria-describedby="harmony-mode-help">
+                        <label class="form-check-label" for="harmony-mode-2">Complementary</label>
+                    </div>
+
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="harmony-mode" id="harmony-mode-3" value="Analogous" aria-describedby="harmony-mode-help">
+                        <label class="form-check-label" for="harmony-mode-3">Analogous</label>
+                    </div>
+
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="harmony-mode" id="harmony-mode-4" value="Split Complementary" aria-describedby="harmony-mode-help">
+                        <label class="form-check-label" for="harmony-mode-4">Split Complementary</label>
+                    </div>
+
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="harmony-mode" id="harmony-mode-5" value="Triad" aria-describedby="harmony-mode-help">
+                        <label class="form-check-label" for="harmony-mode-5">Triad</label>
+                    </div>
+
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="harmony-mode" id="harmony-mode-6" value="Tetrad" aria-describedby="harmony-mode-help">
+                        <label class="form-check-label" for="harmony-mode-6">Tetrad</label>
+                    </div-->
+
+                    <small id="harmony-mode-help" class="form-text text-light-gray">Select a color harmony mode.</small>
+
+                </div>
+
+                <div class="input-group text-center pt-3">
+                    <button id="harmony-tool-btn" class="btn btn-lg btn-block btn-primary" type="button">GET COLORS</button>
+                </div>
+
+                <hr class="my-5 border-dark-gray-700">
+
+                <div class="pb-5">
+
+                    <label id="harmony-label" class="d-block text-left font-weight-bold"></label>
+
+                    <div id="harmony-colors-wrapper">
+
+                        {{ color_blend_result_input('default-monochromatic-1', 'Monochromatic Color 1', '#000000', '#ffffff') }}
+                        {{ color_blend_result_input('default-monochromatic-2', 'Monochromatic Color 2', '#2a2a2a', '#ffffff') }}
+                        {{ color_blend_result_input('default-monochromatic-3', 'Monochromatic Color 3', '#555555', '#ffffff') }}
+                        {{ color_blend_result_input('default-monochromatic-4', 'Monochromatic Color 4', '#808080', '#000000') }}
+                        {{ color_blend_result_input('default-monochromatic-5', 'Monochromatic Color 5', '#aaaaaa', '#000000') }}
+                        {{ color_blend_result_input('default-monochromatic-6', 'Monochromatic Color 6', '#d4d4d4', '#000000') }}
+
+                    </div>
+
+                </div>
 
             </div>
-            <div class="modal-footer justify-content-center border-light-gray-100">
-                <button type="button" class="btn btn-sm btn-outline-secondary" data-dismiss="modal">CLOSE</button>
+            <div class="modal-footer justify-content-center border-dark-gray-700">
+                <button type="button" class="btn btn-sm btn-outline-light" data-dismiss="modal">CLOSE</button>
             </div>
         </div>
     </div>

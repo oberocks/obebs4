@@ -1759,6 +1759,178 @@
                 updateWheelColor($(this));
             });
 
+
+
+
+
+
+            // utility function to generate the readonly form input groups for dynamically generated harmony color hex codes
+            var createHarmonyInput = function(hexString, labelTxt, id){
+                
+                var parent = document.createElement('div');
+                    parent.classList = 'form-group';
+                
+                var label = document.createElement('label');
+                    label.setAttribute('for', id);
+                    label.classList = 'small font-weight-bold';
+                
+                parent.appendChild(label);
+                
+                var label_text = document.createTextNode(labelTxt);
+                
+                label.appendChild(label_text);
+                
+                var inputGroup = document.createElement('div');
+                    inputGroup.classList = 'input-group';
+                
+                parent.appendChild(inputGroup);
+
+                var inputTextHex = '#000000';
+                var tcColor = new tinycolor(hexString);
+                if (tcColor.isDark())
+                {
+                    inputTextHex = '#ffffff';
+                }
+                
+                var input = document.createElement('input');
+                    input.setAttribute('type', 'text');
+                    input.classList = 'form-control';
+                    input.value = hexString;
+                    input.setAttribute('type', 'text');
+                    input.setAttribute('placeholder', hexString);
+                    input.setAttribute('id', id);
+                    input.setAttribute('readonly', 'readonly');
+                    input.style.backgroundColor = hexString;
+                    input.style.color = inputTextHex;
+                
+                inputGroup.appendChild(input);
+                
+                var btnParent = document.createElement('div');
+                    btnParent.classList = 'input-group-append';
+                
+                inputGroup.appendChild(btnParent);
+                
+                var copyBtn = document.createElement('button');
+                    copyBtn.classList = 'js-input-group-copy-btn btn btn-light border';
+                    copyBtn.setAttribute('type', 'button');
+                    copyBtn.setAttribute('data-clipboard-target', '#' + id);
+                
+                btnParent.appendChild(copyBtn);
+                
+                var icon = document.createElement('i');
+                    icon.classList = 'fas fa-copy';
+                
+                copyBtn.appendChild(icon);
+
+                return parent;
+            };
+
+
+
+            // utility function to apply the harmony updates for different element listeners
+            var updateHarmonyColors = function(){
+
+                var baseHex = $('#harmony-base-color').val();
+                
+                var value = $("input[name='harmony-mode']:checked"). val();
+
+                var tcColor = new tinycolor(baseHex);
+                
+                var colorsArray = [];
+                var singleHex = '';
+
+                if (value === 'Monochromatic')
+                {
+                    var colors = tcColor.monochromatic();
+                    colorsArray = colors.map( function(t) { return t.toHexString(); } );
+                }
+                else if (value === 'Complementary')
+                {
+                    singleHex = tcColor.complement().toHexString();
+                }
+                else if (value === 'Analogous')
+                {
+                    var colors = tcColor.analogous();
+                    colorsArray = colors.map( function(t) { return t.toHexString(); } );
+                }
+                else if (value === 'Split Complementary')
+                {
+                    var colors = tcColor.splitcomplement();
+                    colorsArray = colors.map( function(t) { return t.toHexString(); } );
+                }
+                else if (value === 'Triad')
+                {
+                    var colors = tcColor.triad();
+                    colorsArray = colors.map( function(t) { return t.toHexString(); } );
+                }
+                else if (value === 'Tetrad')
+                {
+                    var colors = tcColor.tetrad();
+                    colorsArray = colors.map( function(t) { return t.toHexString(); } );
+                }
+                
+                var target = document.getElementById('harmony-colors-wrapper');
+
+                // clear out the target element's existing html
+                if (colorsArray.length > 0 || singleHex != '')
+                {
+                    target.innerHTML = '';
+                }
+                
+                if (colorsArray.length > 0)
+                {
+                    // initialize an array to hold unique hex code values
+                    var uniqueHexCodes = [];
+                    
+                    // remove any duplicate hex codes from the colorsArray and add to uniqueHexCodes array
+                    $.each(colorsArray, function(i, el){
+                        if($.inArray(el, uniqueHexCodes) === -1) uniqueHexCodes.push(el);
+                    });
+                    
+                    // loop through the uniqueHexCodes array
+                    for (var i = 0; i < uniqueHexCodes.length; i++)
+                    {
+                        var number = i + 1;
+                        var markup = createHarmonyInput(uniqueHexCodes[i], value + ' Color ' + number, 'harmony-color-' + i);
+                        target.appendChild(markup);
+                    }
+                }
+                else if (singleHex != '')
+                {
+                    var markup = createHarmonyInput(singleHex, value + ' Color', 'harmony-color')
+                    target.appendChild(markup);
+                }
+
+            };
+
+            // utility function to update visual colors of #harmony-base-color
+            var updateHarmonyColorInput = function(){
+                var target = $('#harmony-base-color');
+                var value = target.val() ? target.val() : '#000000';
+                var tcColor = new tinycolor(value);
+                var textColor = '#000000';
+                if (tcColor.isDark()) {
+                    textColor = '#ffffff';
+                }
+                target.val(tcColor.toHexString()).css('background-color', tcColor.toHexString()).css('color', textColor);
+            };
+
+            
+
+            $( "input[name='harmony-mode'], #harmony-base-color" ).on('change', function() {
+                updateHarmonyColors();
+                updateHarmonyColorInput();
+            });
+
+            $( "#harmony-base-color" ).on('blur', function() {
+                updateHarmonyColors();
+                updateHarmonyColorInput();
+            });
+
+            $( "#harmony-tool-btn" ).on('click', function() {
+                updateHarmonyColors();
+            });
+
         });
 
     </script>

@@ -2522,14 +2522,14 @@
     <!-- OC Nav Left Modal -->
     <div id="blend-tool-modal" class="modal fade left-pinned" tabindex="-1" role="dialog" aria-labelledby="blend-tool-modal-title" aria-hidden="true">
         <div class="modal-dialog modal-lg mt-0">
-            <div class="modal-content border-0 rounded-0 text-left">
-                <div class="modal-header border-light-gray-100">
+            <div class="modal-content border-0 rounded-0 text-left bg-dark-gray-600 text-white">
+                <div class="modal-header border-dark-gray-700">
                     <h6 id="blend-tool-modal-title" class="modal-title">BLENDER TOOL</h6>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                    <!--button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button-->
                 </div>
                 <div class="modal-body m-3" role="navigation">
 
-                    <p class="font-italic text-primary">Use this tool to get blended hex color codes between two colors!</p>
+                    <p class="font-italic text-light">Use this tool to get blended hex color codes between two colors!</p>
 
                     <div class="form-group">
                         <label for="blend-first-color" class="font-weight-bold">First Color</label>
@@ -2539,7 +2539,7 @@
                                 <button class="js-input-group-clear-btn btn btn-light border" type="button"><i class="fas fa-trash-alt"></i></button>
                             </div>
                         </div>
-                        <small id="blend-first-color-help" class="form-text text-muted">Enter your first color hex code to blend.</small>
+                        <small id="blend-first-color-help" class="form-text text-light-gray">Enter your first color hex code to blend.</small>
                     </div>
 
                     <div class="form-group">
@@ -2550,7 +2550,7 @@
                                 <button class="js-input-group-clear-btn btn btn-light border" type="button"><i class="fas fa-trash-alt"></i></button>
                             </div>
                         </div>
-                        <small id="blend-second-color-help" class="form-text text-muted">Enter your second color hex code to blend.</small>
+                        <small id="blend-second-color-help" class="form-text text-light-gray">Enter your second color hex code to blend.</small>
                     </div>
 
                     <!--div class="form-group">
@@ -2579,7 +2579,7 @@
                         <button id="blend-tool-btn" class="btn btn-lg btn-block btn-primary" type="button">BLEND</button>
                     </div>
 
-                    <hr class="my-5">
+                    <hr class="my-5 border-dark-gray-700">
 
                     <div class="pb-5">
 
@@ -2588,7 +2588,7 @@
                         <div class="form-group">
                             <label for="color-one-block" class="small font-weight-bold">First Color</label>
                             <div class="input-group">
-                                <input type="text" class="form-control" placeholder="#000000" id="color-one-block" aria-describedby="blend-first-color-help" style="background-color:#000000; color:#ffffff;" value="#000000" readonly>
+                                <input type="text" class="form-control" placeholder="#000000" id="color-one-block" style="background-color:#000000; color:#ffffff;" value="#000000" readonly>
                                 <div class="input-group-append">
                                     <button class="js-input-group-copy-btn btn btn-light border" type="button" data-clipboard-target="#color-one-block"><i class="fas fa-copy"></i></button>
                                 </div>
@@ -2598,7 +2598,7 @@
                         <div class="form-group">
                             <label for="color-blend25-block" class="small font-weight-bold">25%/75% Blend</label>
                             <div class="input-group">
-                                <input type="text" class="form-control" placeholder="#404040" id="color-blend25-block" aria-describedby="blend-first-color-help" style="background-color:#404040; color:#ffffff;" value="#404040" readonly>
+                                <input type="text" class="form-control" placeholder="#404040" id="color-blend25-block" style="background-color:#404040; color:#ffffff;" value="#404040" readonly>
                                 <div class="input-group-append">
                                     <button class="js-input-group-copy-btn btn btn-light border" type="button" data-clipboard-target="#color-blend25-block"><i class="fas fa-copy"></i></button>
                                 </div>
@@ -2608,7 +2608,7 @@
                         <div class="form-group">
                             <label for="color-blend50-block" class="small font-weight-bold">50%/50% Blend</label>
                             <div class="input-group">
-                                <input type="text" class="form-control" placeholder="#808080" id="color-blend50-block" aria-describedby="blend-first-color-help" style="background-color:#808080; color:#000000;" value="#808080" readonly>
+                                <input type="text" class="form-control" placeholder="#808080" id="color-blend50-block" style="background-color:#808080; color:#000000;" value="#808080" readonly>
                                 <div class="input-group-append">
                                     <button class="js-input-group-copy-btn btn btn-light border" type="button" data-clipboard-target="#color-blend50-block"><i class="fas fa-copy"></i></button>
                                 </div>
@@ -2618,7 +2618,7 @@
                         <div class="form-group">
                             <label for="color-blend75-block" class="small font-weight-bold">75%/25% Blend</label>
                             <div class="input-group">
-                                <input type="text" class="form-control" placeholder="#c0c0c0" id="color-blend75-block" aria-describedby="blend-first-color-help" style="background-color:#c0c0c0; color:#000000;" value="#c0c0c0" readonly>
+                                <input type="text" class="form-control" placeholder="#c0c0c0" id="color-blend75-block" style="background-color:#c0c0c0; color:#000000;" value="#c0c0c0" readonly>
                                 <div class="input-group-append">
                                     <button class="js-input-group-copy-btn btn btn-light border" type="button" data-clipboard-target="#color-blend75-block"><i class="fas fa-copy"></i></button>
                                 </div>
@@ -2628,7 +2628,7 @@
                         <div class="form-group">
                             <label for="color-two-block" class="small font-weight-bold">Second Color</label>
                             <div class="input-group">
-                                <input type="text" class="form-control" placeholder="#ffffff" id="color-two-block" aria-describedby="blend-first-color-help" style="background-color:#ffffff; color:#000000;" value="#ffffff" readonly>
+                                <input type="text" class="form-control" placeholder="#ffffff" id="color-two-block" style="background-color:#ffffff; color:#000000;" value="#ffffff" readonly>
                                 <div class="input-group-append">
                                     <button class="js-input-group-copy-btn btn btn-light border" type="button" data-clipboard-target="#color-two-block"><i class="fas fa-copy"></i></button>
                                 </div>
@@ -2688,8 +2688,8 @@
                     </div>
 
                 </div>
-                <div class="modal-footer justify-content-center border-light-gray-100">
-                    <button type="button" class="btn btn-sm btn-outline-secondary" data-dismiss="modal">CLOSE</button>
+                <div class="modal-footer justify-content-center border-dark-gray-700">
+                    <button type="button" class="btn btn-sm btn-outline-light" data-dismiss="modal">CLOSE</button>
                 </div>
             </div>
         </div>
@@ -2698,18 +2698,173 @@
     <!-- OC Nav Left Modal -->
     <div id="color-combo-tool-modal" class="modal fade left-pinned" tabindex="-1" role="dialog" aria-labelledby="color-combo-tool-modal-title" aria-hidden="true">
         <div class="modal-dialog modal-lg mt-0">
-            <div class="modal-content border-0 rounded-0 text-left">
-                <div class="modal-header border-light-gray-100">
+            <div class="modal-content border-0 rounded-0 text-left bg-dark-gray-600 text-white">
+                <div class="modal-header border-dark-gray-700">
                     <h6 id="color-combo-tool-modal-title" class="modal-title">HARMONY TOOL</h6>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                    <!--button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button-->
                 </div>
                 <div class="modal-body m-3" role="navigation">
 
-                    <p class="font-italic text-primary">Coming Soon!</p>
+                    <p class="font-italic text-light">Use this tool to get different color harmonies derived from a single hex color code!</p>
+
+                    <div class="form-group">
+                        <label for="harmony-base-color" class="font-weight-bold">Harmony Base Color</label>
+                        <div class="input-group">
+                            <input type="text" class="form-control" id="harmony-base-color" aria-describedby="harmony-base-color-help" placeholder="#000000" value="#000000" style="background-color:#000000; color:#ffffff;">
+                            <div class="input-group-append">
+                                <button class="js-input-group-clear-btn btn btn-light border" type="button"><i class="fas fa-trash-alt"></i></button>
+                            </div>
+                        </div>
+                        <small id="harmony-base-color-help" class="form-text text-light-gray">Enter your base color harmony hex code.</small>
+                    </div>
+
+                    <div class="form-group">
+
+                        <label class="font-weight-bold">Harmony Mode</label>
+
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="harmony-mode" id="harmony-mode-1" value="Monochromatic" aria-describedby="harmony-mode-help" checked>
+                            <label class="form-check-label" for="harmony-mode-1">Monochromatic</label>
+                        </div>
+
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="harmony-mode" id="harmony-mode-2" value="Complementary" aria-describedby="harmony-mode-help">
+                            <label class="form-check-label" for="harmony-mode-2">Complementary</label>
+                        </div>
+
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="harmony-mode" id="harmony-mode-3" value="Analogous" aria-describedby="harmony-mode-help">
+                            <label class="form-check-label" for="harmony-mode-3">Analogous</label>
+                        </div>
+
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="harmony-mode" id="harmony-mode-4" value="Split Complementary" aria-describedby="harmony-mode-help">
+                            <label class="form-check-label" for="harmony-mode-4">Split Complementary</label>
+                        </div>
+
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="harmony-mode" id="harmony-mode-5" value="Triad" aria-describedby="harmony-mode-help">
+                            <label class="form-check-label" for="harmony-mode-5">Triad</label>
+                        </div>
+
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="harmony-mode" id="harmony-mode-6" value="Tetrad" aria-describedby="harmony-mode-help">
+                            <label class="form-check-label" for="harmony-mode-6">Tetrad</label>
+                        </div>
+
+                        <!--div class="form-check">
+                        <input class="form-check-input" type="radio" name="harmony-mode" id="harmony-mode-1" value="Monochromatic" aria-describedby="harmony-mode-help" checked>
+                        <label class="form-check-label" for="harmony-mode-1">Monochromatic</label>
+                    </div>
+
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="harmony-mode" id="harmony-mode-2" value="Complementary" aria-describedby="harmony-mode-help">
+                        <label class="form-check-label" for="harmony-mode-2">Complementary</label>
+                    </div>
+
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="harmony-mode" id="harmony-mode-3" value="Analogous" aria-describedby="harmony-mode-help">
+                        <label class="form-check-label" for="harmony-mode-3">Analogous</label>
+                    </div>
+
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="harmony-mode" id="harmony-mode-4" value="Split Complementary" aria-describedby="harmony-mode-help">
+                        <label class="form-check-label" for="harmony-mode-4">Split Complementary</label>
+                    </div>
+
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="harmony-mode" id="harmony-mode-5" value="Triad" aria-describedby="harmony-mode-help">
+                        <label class="form-check-label" for="harmony-mode-5">Triad</label>
+                    </div>
+
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="harmony-mode" id="harmony-mode-6" value="Tetrad" aria-describedby="harmony-mode-help">
+                        <label class="form-check-label" for="harmony-mode-6">Tetrad</label>
+                    </div-->
+
+                        <small id="harmony-mode-help" class="form-text text-light-gray">Select a color harmony mode.</small>
+
+                    </div>
+
+                    <div class="input-group text-center pt-3">
+                        <button id="harmony-tool-btn" class="btn btn-lg btn-block btn-primary" type="button">GET COLORS</button>
+                    </div>
+
+                    <hr class="my-5 border-dark-gray-700">
+
+                    <div class="pb-5">
+
+                        <label id="harmony-label" class="d-block text-left font-weight-bold"></label>
+
+                        <div id="harmony-colors-wrapper">
+
+                            <div class="form-group">
+                                <label for="default-monochromatic-1" class="small font-weight-bold">Monochromatic Color 1</label>
+                                <div class="input-group">
+                                    <input type="text" class="form-control" placeholder="#000000" id="default-monochromatic-1" style="background-color:#000000; color:#ffffff;" value="#000000" readonly>
+                                    <div class="input-group-append">
+                                        <button class="js-input-group-copy-btn btn btn-light border" type="button" data-clipboard-target="#default-monochromatic-1"><i class="fas fa-copy"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="default-monochromatic-2" class="small font-weight-bold">Monochromatic Color 2</label>
+                                <div class="input-group">
+                                    <input type="text" class="form-control" placeholder="#2a2a2a" id="default-monochromatic-2" style="background-color:#2a2a2a; color:#ffffff;" value="#2a2a2a" readonly>
+                                    <div class="input-group-append">
+                                        <button class="js-input-group-copy-btn btn btn-light border" type="button" data-clipboard-target="#default-monochromatic-2"><i class="fas fa-copy"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="default-monochromatic-3" class="small font-weight-bold">Monochromatic Color 3</label>
+                                <div class="input-group">
+                                    <input type="text" class="form-control" placeholder="#555555" id="default-monochromatic-3" style="background-color:#555555; color:#ffffff;" value="#555555" readonly>
+                                    <div class="input-group-append">
+                                        <button class="js-input-group-copy-btn btn btn-light border" type="button" data-clipboard-target="#default-monochromatic-3"><i class="fas fa-copy"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="default-monochromatic-4" class="small font-weight-bold">Monochromatic Color 4</label>
+                                <div class="input-group">
+                                    <input type="text" class="form-control" placeholder="#808080" id="default-monochromatic-4" style="background-color:#808080; color:#000000;" value="#808080" readonly>
+                                    <div class="input-group-append">
+                                        <button class="js-input-group-copy-btn btn btn-light border" type="button" data-clipboard-target="#default-monochromatic-4"><i class="fas fa-copy"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="default-monochromatic-5" class="small font-weight-bold">Monochromatic Color 5</label>
+                                <div class="input-group">
+                                    <input type="text" class="form-control" placeholder="#aaaaaa" id="default-monochromatic-5" style="background-color:#aaaaaa; color:#000000;" value="#aaaaaa" readonly>
+                                    <div class="input-group-append">
+                                        <button class="js-input-group-copy-btn btn btn-light border" type="button" data-clipboard-target="#default-monochromatic-5"><i class="fas fa-copy"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="default-monochromatic-6" class="small font-weight-bold">Monochromatic Color 6</label>
+                                <div class="input-group">
+                                    <input type="text" class="form-control" placeholder="#d4d4d4" id="default-monochromatic-6" style="background-color:#d4d4d4; color:#000000;" value="#d4d4d4" readonly>
+                                    <div class="input-group-append">
+                                        <button class="js-input-group-copy-btn btn btn-light border" type="button" data-clipboard-target="#default-monochromatic-6"><i class="fas fa-copy"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
 
                 </div>
-                <div class="modal-footer justify-content-center border-light-gray-100">
-                    <button type="button" class="btn btn-sm btn-outline-secondary" data-dismiss="modal">CLOSE</button>
+                <div class="modal-footer justify-content-center border-dark-gray-700">
+                    <button type="button" class="btn btn-sm btn-outline-light" data-dismiss="modal">CLOSE</button>
                 </div>
             </div>
         </div>
@@ -2973,7 +3128,7 @@
 
                 <small class="text-light">OBE:BS4 VERSION:</small>
 
-                <p class="lead">0.6.2</p>
+                <p class="lead">0.7.0</p>
 
                 <hr class="border-gray" />
 
@@ -5178,6 +5333,128 @@
             });
             $(".js-hex-code-input").on('blur', function() {
                 updateWheelColor($(this));
+            });
+            // utility function to generate the readonly form input groups for dynamically generated harmony color hex codes
+            var createHarmonyInput = function(hexString, labelTxt, id) {
+                var parent = document.createElement('div');
+                parent.classList = 'form-group';
+                var label = document.createElement('label');
+                label.setAttribute('for', id);
+                label.classList = 'small font-weight-bold';
+                parent.appendChild(label);
+                var label_text = document.createTextNode(labelTxt);
+                label.appendChild(label_text);
+                var inputGroup = document.createElement('div');
+                inputGroup.classList = 'input-group';
+                parent.appendChild(inputGroup);
+                var inputTextHex = '#000000';
+                var tcColor = new tinycolor(hexString);
+                if (tcColor.isDark()) {
+                    inputTextHex = '#ffffff';
+                }
+                var input = document.createElement('input');
+                input.setAttribute('type', 'text');
+                input.classList = 'form-control';
+                input.value = hexString;
+                input.setAttribute('type', 'text');
+                input.setAttribute('placeholder', hexString);
+                input.setAttribute('id', id);
+                input.setAttribute('readonly', 'readonly');
+                input.style.backgroundColor = hexString;
+                input.style.color = inputTextHex;
+                inputGroup.appendChild(input);
+                var btnParent = document.createElement('div');
+                btnParent.classList = 'input-group-append';
+                inputGroup.appendChild(btnParent);
+                var copyBtn = document.createElement('button');
+                copyBtn.classList = 'js-input-group-copy-btn btn btn-light border';
+                copyBtn.setAttribute('type', 'button');
+                copyBtn.setAttribute('data-clipboard-target', '#' + id);
+                btnParent.appendChild(copyBtn);
+                var icon = document.createElement('i');
+                icon.classList = 'fas fa-copy';
+                copyBtn.appendChild(icon);
+                return parent;
+            };
+            // utility function to apply the harmony updates for different element listeners
+            var updateHarmonyColors = function() {
+                var baseHex = $('#harmony-base-color').val();
+                var value = $("input[name='harmony-mode']:checked").val();
+                var tcColor = new tinycolor(baseHex);
+                var colorsArray = [];
+                var singleHex = '';
+                if (value === 'Monochromatic') {
+                    var colors = tcColor.monochromatic();
+                    colorsArray = colors.map(function(t) {
+                        return t.toHexString();
+                    });
+                } else if (value === 'Complementary') {
+                    singleHex = tcColor.complement().toHexString();
+                } else if (value === 'Analogous') {
+                    var colors = tcColor.analogous();
+                    colorsArray = colors.map(function(t) {
+                        return t.toHexString();
+                    });
+                } else if (value === 'Split Complementary') {
+                    var colors = tcColor.splitcomplement();
+                    colorsArray = colors.map(function(t) {
+                        return t.toHexString();
+                    });
+                } else if (value === 'Triad') {
+                    var colors = tcColor.triad();
+                    colorsArray = colors.map(function(t) {
+                        return t.toHexString();
+                    });
+                } else if (value === 'Tetrad') {
+                    var colors = tcColor.tetrad();
+                    colorsArray = colors.map(function(t) {
+                        return t.toHexString();
+                    });
+                }
+                var target = document.getElementById('harmony-colors-wrapper');
+                // clear out the target element's existing html
+                if (colorsArray.length > 0 || singleHex != '') {
+                    target.innerHTML = '';
+                }
+                if (colorsArray.length > 0) {
+                    // initialize an array to hold unique hex code values
+                    var uniqueHexCodes = [];
+                    // remove any duplicate hex codes from the colorsArray and add to uniqueHexCodes array
+                    $.each(colorsArray, function(i, el) {
+                        if ($.inArray(el, uniqueHexCodes) === -1) uniqueHexCodes.push(el);
+                    });
+                    // loop through the uniqueHexCodes array
+                    for (var i = 0; i < uniqueHexCodes.length; i++) {
+                        var number = i + 1;
+                        var markup = createHarmonyInput(uniqueHexCodes[i], value + ' Color ' + number, 'harmony-color-' + i);
+                        target.appendChild(markup);
+                    }
+                } else if (singleHex != '') {
+                    var markup = createHarmonyInput(singleHex, value + ' Color', 'harmony-color')
+                    target.appendChild(markup);
+                }
+            };
+            // utility function to update visual colors of #harmony-base-color
+            var updateHarmonyColorInput = function() {
+                var target = $('#harmony-base-color');
+                var value = target.val() ? target.val() : '#000000';
+                var tcColor = new tinycolor(value);
+                var textColor = '#000000';
+                if (tcColor.isDark()) {
+                    textColor = '#ffffff';
+                }
+                target.val(tcColor.toHexString()).css('background-color', tcColor.toHexString()).css('color', textColor);
+            };
+            $("input[name='harmony-mode'], #harmony-base-color").on('change', function() {
+                updateHarmonyColors();
+                updateHarmonyColorInput();
+            });
+            $("#harmony-base-color").on('blur', function() {
+                updateHarmonyColors();
+                updateHarmonyColorInput();
+            });
+            $("#harmony-tool-btn").on('click', function() {
+                updateHarmonyColors();
             });
         });
     </script>
