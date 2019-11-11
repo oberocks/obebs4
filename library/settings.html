@@ -743,7 +743,7 @@
                         </div>
                         <div class="text-center pt-3">
                             <button class="btn btn-sm btn-primary mb-3" data-toggle="modal" data-target="#blend-tool-modal">BLENDER TOOL</button>
-                            <button class="btn btn-sm btn-primary mb-3" data-toggle="modal" data-target="#color-combo-tool-modal">HARMONY TOOL</button>
+                            <button class="btn btn-sm btn-primary mb-3" data-toggle="modal" data-target="#color-harmony-tool-modal">HARMONY TOOL</button>
                         </div>
                     </div>
 
@@ -2696,11 +2696,11 @@
     </div>
 
     <!-- OC Nav Left Modal -->
-    <div id="color-combo-tool-modal" class="modal fade left-pinned" tabindex="-1" role="dialog" aria-labelledby="color-combo-tool-modal-title" aria-hidden="true">
+    <div id="color-harmony-tool-modal" class="modal fade left-pinned" tabindex="-1" role="dialog" aria-labelledby="color-harmony-tool-modal-title" aria-hidden="true">
         <div class="modal-dialog modal-lg mt-0">
             <div class="modal-content border-0 rounded-0 text-left bg-dark-gray-600 text-white">
                 <div class="modal-header border-dark-gray-700">
-                    <h6 id="color-combo-tool-modal-title" class="modal-title">HARMONY TOOL</h6>
+                    <h6 id="color-harmony-tool-modal-title" class="modal-title">HARMONY TOOL</h6>
                     <!--button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button-->
                 </div>
                 <div class="modal-body m-3" role="navigation">
@@ -3128,7 +3128,7 @@
 
                 <small class="text-light">OBE:BS4 VERSION:</small>
 
-                <p class="lead">0.7.0</p>
+                <p class="lead">0.7.1</p>
 
                 <hr class="border-gray" />
 
@@ -5433,6 +5433,7 @@
                     var markup = createHarmonyInput(singleHex, value + ' Color', 'harmony-color')
                     target.appendChild(markup);
                 }
+                $('#color-harmony-tool-modal').modal('handleUpdate');
             };
             // utility function to update visual colors of #harmony-base-color
             var updateHarmonyColorInput = function() {
