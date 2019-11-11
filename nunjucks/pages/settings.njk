@@ -80,20 +80,6 @@
                 $(input).val(finalNumb + units);
             });
 
-            $( ".js-hex-code-input" ).on( "change", function() {
-                var input = $(this);
-                var id = $(this).attr('id');
-                var currentVal = $(input).val();
-                var cleanedVal = currentVal.replace(/[^a-z0-9]/gi, '');
-                if (cleanedVal.length > 1) {
-                    $(input).val('#' + cleanedVal);
-                    // update the wheel svg to match the new hex color
-                    $("#" + id + "-slice").attr('style', "fill:#" + cleanedVal);
-                } else {
-                    $(input).val('');
-                }
-            });
-
             
             // script to toggle the OBE Condensed Font checkbox on/off depending on bootstrap vs google fonts selection
             $('#js-font-options a[data-toggle="tab"]').on('click', function () {
@@ -1692,6 +1678,85 @@
                 input.val('');
                 input.focus();
 
+            });
+
+            
+            
+            
+            // utility function for color wheel input group inputs
+            var updateWheelColor = function(jqueryElRef){
+                
+                // assign the passed jQuery element reference to a var
+                var input = jqueryElRef;
+                
+                // get the id of the passed element
+                var id = $(input).attr('id');
+                
+                // get the current value of the passed element & clean it + add a prepended #
+                var currentVal = $(input).val();
+                var cleanedVal = '#' + currentVal.replace(/[^a-z0-9]/gi, '');
+                
+                // set the default input text hex color
+                var textHex = '#000000';
+                
+                // if the current value is longer than just a # symbol...
+                if (cleanedVal.length > 1)
+                {
+                    // create a tinycolor instance with the current value
+                    var color = new tinycolor(cleanedVal);
+                    
+                    // if the color is dark, change the text color to white
+                    if (color.isDark()){
+                        textHex = '#ffffff';
+                    }
+
+                    // update the input value and it's background and text colors
+                    $(input).val(cleanedVal).css('background-color', cleanedVal).css('color', textHex);
+                    
+                    // update the wheel svg to match the new hex color
+                    $("#" + id + "-slice").attr('style', "fill:" + cleanedVal);
+                }
+                // else if the current value is just a # symbol...
+                else
+                {
+                    // get the placeholder hex value from the passed element
+                    var placeholder = $(input).attr('placeholder');
+                    
+                    // create a tinycolor instance with the placeholder value
+                    var placeholderColor = new tinycolor(placeholder);
+                    
+                    // if the color is dark, change the text color to white
+                    if (placeholderColor.isDark()){
+                        textHex = '#ffffff';
+                    }
+                    
+                    // update the input value and it's background and text colors
+                    $(input).val(placeholder).css('background-color', placeholder).css('color', textHex);
+
+                    // update the wheel svg back to the default/placeholder color
+                    $("#" + id + "-slice").attr('style', "fill:" + placeholder);
+                }
+
+            };
+            
+            // script for color wheel color input groups
+            $( ".js-hex-code-input" ).on( "change", function() {
+                /*var input = $(this);
+                var id = $(this).attr('id');
+                var currentVal = $(input).val();
+                var cleanedVal = currentVal.replace(/[^a-z0-9]/gi, '');
+                if (cleanedVal.length > 1) {
+                    $(input).val('#' + cleanedVal);
+                    // update the wheel svg to match the new hex color
+                    $("#" + id + "-slice").attr('style', "fill:#" + cleanedVal);
+                } else {
+                    $(input).val('');
+                }*/
+                updateWheelColor($(this));
+            });
+
+            $( ".js-hex-code-input" ).on('blur', function() {
+                updateWheelColor($(this));
             });
 
         });

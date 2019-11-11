@@ -321,14 +321,6 @@
                 <div class="row justify-content-center">
 
                     <div class="col-sm-10 col-md-8 col-lg-7 col-xl-6 pb-2 text-left">
-
-                            {% macro form_text_input(id, labelText, placeholder, value) %}
-                            <div class="form-group">
-                                <label for="{{ id }}" class="font-weight-bold">{{ labelText }}</label>
-                                <input type="text" class="js-hex-code-input form-control" id="{{ id }}" placeholder="{{ placeholder }}" value="{{ value }}">
-                            </div>
-                            {% endmacro %}
-
                         
                         <h3 class="pt-4 pb-2 text-center">OBE:BS4 Color Wheel Hex Codes</h3>
 
@@ -432,27 +424,54 @@
 
                         <div class="js-color-wheel-inputs">
 
-                            {{ form_text_input('white', 'White Hex Color', obe_settings['white'], obe_settings['white']) }}
-                            {{ form_text_input('light-gray', 'Light Gray Hex Color', obe_settings['light-gray'], obe_settings['light-gray']) }}
-                            {{ form_text_input('gray', 'Gray Hex Color', obe_settings['gray'], obe_settings['gray']) }}
-                            {{ form_text_input('dark-gray', 'Dark Gray Hex Color', obe_settings['dark-gray'], obe_settings['dark-gray']) }}
-                            {{ form_text_input('black', 'Black Hex Color', obe_settings['black'], obe_settings['black']) }}
-                            {{ form_text_input('red', 'Red Hex Color', obe_settings['red'], obe_settings['red']) }}
-                            {{ form_text_input('rose', 'Rose Hex Color', obe_settings['rose'], obe_settings['rose']) }}
-                            {{ form_text_input('magenta', 'Magenta Hex Color', obe_settings['magenta'], obe_settings['magenta']) }}
-                            {{ form_text_input('violet', 'Violet Hex Color', obe_settings['violet'], obe_settings['violet']) }}
-                            {{ form_text_input('blue', 'Blue Hex Color', obe_settings['blue'], obe_settings['blue']) }}
-                            {{ form_text_input('azure', 'Azure Hex Color', obe_settings['azure'], obe_settings['azure']) }}
-                            {{ form_text_input('cyan', 'Cyan Hex Color', obe_settings['cyan'], obe_settings['cyan']) }}
-                            {{ form_text_input('spring-green', 'Spring Green Hex Color', obe_settings['spring-green'], obe_settings['spring-green']) }}
-                            {{ form_text_input('green', 'Green Hex Color', obe_settings['green'], obe_settings['green']) }}
-                            {{ form_text_input('chartreuse', 'Chartreuse Hex Color', obe_settings['chartreuse'], obe_settings['chartreuse']) }}
-                            {{ form_text_input('yellow', 'Yellow Hex Color', obe_settings['yellow'], obe_settings['yellow']) }}
-                            {{ form_text_input('orange', 'Orange Hex Color', obe_settings['orange'], obe_settings['orange']) }}
-                            {{ form_text_input('orange-gray', 'Orange Gray Hex Color', obe_settings['orange-gray'], obe_settings['orange-gray']) }}
-                            {{ form_text_input('dark-gray-orange', 'Dark Gray Orange Hex Color', obe_settings['dark-gray-orange'], obe_settings['dark-gray-orange']) }}
-                            {{ form_text_input('blue-gray', 'Blue Gray Hex Color', obe_settings['blue-gray'], obe_settings['blue-gray']) }}
-                            {{ form_text_input('light-gray-azure', 'Light Gray Zaure Hex Color', obe_settings['light-gray-azure'], obe_settings['light-gray-azure']) }}
+                            {% macro form_text_input(id, labelText, placeholder, value) %}
+                            <div class="form-group">
+                                <label for="{{ id }}" class="font-weight-bold">{{ labelText }}</label>
+                                <input type="text" class="js-hex-code-input form-control" id="{{ id }}" placeholder="{{ placeholder }}" value="{{ value }}">
+                            </div>
+                            {% endmacro %}
+
+
+
+
+                            {% macro color_wheel_input(id, labelText, bgHex, textHex) %}
+                            <div class="form-group">
+                                <label for="{{ id }}" class="font-weight-bold">{{ labelText }}</label>
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <button class="js-input-group-copy-btn btn btn-light border" type="button" data-clipboard-target="#{{ id }}"><i class="fas fa-copy"></i></button>
+                                    </div>
+                                    <input type="text" class="js-hex-code-input form-control" id="{{ id }}" placeholder="{{ bgHex }}" value="{{ bgHex }}" style="background-color:{{ bgHex }}; color:{{ textHex }};">
+                                    <div class="input-group-append">
+                                        <button class="js-input-group-clear-btn btn btn-light border" type="button"><i class="fas fa-trash-alt"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+                            {% endmacro %}
+
+                            {{ color_wheel_input('white', 'White Hex Color', obe_settings['white'], '#000000') }}
+                            {{ color_wheel_input('light-gray', 'Light Gray Hex Color', obe_settings['light-gray'], '#000000') }}
+                            {{ color_wheel_input('gray', 'Gray Hex Color', obe_settings['gray'], '#ffffff') }}
+                            {{ color_wheel_input('dark-gray', 'Dark Gray Hex Color', obe_settings['dark-gray'], '#ffffff') }}
+                            {{ color_wheel_input('black', 'Black Hex Color', obe_settings['black'], '#ffffff') }}
+
+                            {{ color_wheel_input('red', 'Red Hex Color', obe_settings['red'], '#ffffff') }}
+                            {{ color_wheel_input('rose', 'Rose Hex Color', obe_settings['rose'], '#ffffff') }}
+                            {{ color_wheel_input('magenta', 'Magenta Hex Color', obe_settings['magenta'], '#ffffff') }}
+                            {{ color_wheel_input('violet', 'Violet Hex Color', obe_settings['violet'], '#ffffff') }}
+                            {{ color_wheel_input('blue', 'Blue Hex Color', obe_settings['blue'], '#ffffff') }}
+                            {{ color_wheel_input('azure', 'Azure Hex Color', obe_settings['azure'], '#ffffff') }}
+                            {{ color_wheel_input('cyan', 'Cyan Hex Color', obe_settings['cyan'], '#000000') }}
+                            {{ color_wheel_input('spring-green', 'Spring Green Hex Color', obe_settings['spring-green'], '#000000') }}
+                            {{ color_wheel_input('green', 'Green Hex Color', obe_settings['green'], '#000000') }}
+                            {{ color_wheel_input('chartreuse', 'Chartreuse Hex Color', obe_settings['chartreuse'], '#000000') }}
+                            {{ color_wheel_input('yellow', 'Yellow Hex Color', obe_settings['yellow'], '#000000') }}
+                            {{ color_wheel_input('orange', 'Orange Hex Color', obe_settings['orange'], '#000000') }}
+
+                            {{ color_wheel_input('orange-gray', 'Orange Gray Hex Color', obe_settings['orange-gray'], '#ffffff') }}
+                            {{ color_wheel_input('dark-gray-orange', 'Dark Gray Orange Hex Color', obe_settings['dark-gray-orange'], '#ffffff') }}
+                            {{ color_wheel_input('blue-gray', 'Blue Gray Hex Color', obe_settings['blue-gray'], '#ffffff') }}
+                            {{ color_wheel_input('light-gray-azure', 'Light Gray Azure Hex Color', obe_settings['light-gray-azure'], '#000000') }}
 
                         </div>
 
@@ -755,7 +774,24 @@
                 
                 <p class="font-italic text-primary">Use this tool to get blended hex color codes between two colors!</p>
                 
+                {% macro color_blend_color_input(id, labelText, bgHex, textHex, helpText) %}
                 <div class="form-group">
+                    <label for="{{ id }}" class="font-weight-bold">{{ labelText }}</label>
+                    <div class="input-group">
+                        <input type="text" class="form-control" id="{{ id }}" aria-describedby="{{ id }}-help" placeholder="{{ bgHex }}" value="{{ bgHex }}" style="background-color:{{ bgHex }}; color:{{ textHex }};">
+                        <div class="input-group-append">
+                            <button class="js-input-group-clear-btn btn btn-light border" type="button"><i class="fas fa-trash-alt"></i></button>
+                        </div>
+                    </div>
+                    <small id="{{ id }}-help" class="form-text text-muted">{{ helpText }}</small>
+                </div>
+                {% endmacro %}
+
+                {{ color_blend_color_input('blend-first-color', 'First Color', '#000000', '#ffffff', 'Enter your first color hex code to blend.') }}
+
+                {{ color_blend_color_input('blend-second-color', 'Second Color', '#ffffff', '#000000', 'Enter your second color hex code to blend.') }}
+                
+                <!--div class="form-group">
                     <label for="blend-first-color" class="font-weight-bold">First Color</label>
                     <div class="input-group">
                         <input type="text" class="form-control" id="blend-first-color" aria-describedby="blend-first-color-help" placeholder="#000000" value="#000000" style="background-color:#000000; color:#ffffff;">
@@ -765,12 +801,6 @@
                     </div>
                     <small id="blend-first-color-help" class="form-text text-muted">Enter a color hex code to blend.</small>
                 </div>
-                
-                <!--div class="form-group">
-                    <label for="blend-first-color" class="font-weight-bold">First Color</label>
-                    <input type="text" class="form-control" id="blend-first-color" aria-describedby="blend-first-color-help" placeholder="#000000" value="#000000">
-                    <small id="blend-first-color-help" class="form-text text-muted">Enter a color hex code to blend.</small>
-                </div-->
 
                 <div class="form-group">
                     <label for="blend-second-color" class="font-weight-bold">Second Color</label>
@@ -780,12 +810,6 @@
                             <button class="js-input-group-clear-btn btn btn-light border" type="button"><i class="fas fa-trash-alt"></i></button>
                         </div>
                     </div>
-                    <small id="blend-second-color-help" class="form-text text-muted">Enter a color hex code to blend.</small>
-                </div>
-
-                <!--div class="form-group">
-                    <label for="blend-second-color" class="font-weight-bold">Second Color</label>
-                    <input type="text" class="form-control" id="blend-second-color" aria-describedby="blend-second-color-help" placeholder="#ffffff" value="#ffffff">
                     <small id="blend-second-color-help" class="form-text text-muted">Enter a color hex code to blend.</small>
                 </div-->
 
@@ -799,7 +823,29 @@
 
                     <label class="d-block text-left font-weight-bold">Blend Results</label>
 
+                    {% macro color_blend_result_input(id, labelText, bgHex, textHex) %}
                     <div class="form-group">
+                        <label for="{{ id }}" class="small font-weight-bold">{{ labelText }}</label>
+                        <div class="input-group">
+                            <input type="text" class="form-control" placeholder="{{ bgHex }}" id="{{ id }}" aria-describedby="blend-first-color-help" style="background-color:{{ bgHex }}; color:{{ textHex }};" value="{{ bgHex }}" readonly>
+                            <div class="input-group-append">
+                                <button class="js-input-group-copy-btn btn btn-light border" type="button" data-clipboard-target="#{{ id }}"><i class="fas fa-copy"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                    {% endmacro %}
+
+                    {{ color_blend_result_input('color-one-block', 'First Color', '#000000', '#ffffff') }}
+
+                    {{ color_blend_result_input('color-blend25-block', '25%/75% Blend', '#404040', '#ffffff') }}
+
+                    {{ color_blend_result_input('color-blend50-block', '50%/50% Blend', '#808080', '#000000') }}
+
+                    {{ color_blend_result_input('color-blend75-block', '75%/25% Blend', '#c0c0c0', '#000000') }}
+
+                    {{ color_blend_result_input('color-two-block', 'Second Color', '#ffffff', '#000000') }}
+                    
+                    <!--div class="form-group">
                         <label for="color-one-block" class="small font-weight-bold">First Color</label>
                         <div class="input-group">
                             <input type="text" class="form-control" placeholder="#000000" id="color-one-block" aria-describedby="blend-first-color-help" style="background-color:#000000; color:#ffffff;" value="#000000" readonly>
@@ -847,7 +893,7 @@
                                 <button class="js-input-group-copy-btn btn btn-light border" type="button" data-clipboard-target="#color-two-block"><i class="fas fa-copy"></i></button>
                             </div>
                         </div>
-                    </div>
+                    </div-->
 
                 </div>
 
