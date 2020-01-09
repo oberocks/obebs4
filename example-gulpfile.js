@@ -229,7 +229,6 @@ gulp.task('concat-js', function(){
             './node_modules/bootstrap/dist/js/bootstrap.bundle.min.js',
             './node_modules/obebs4/obebs4/core/js/obebs4-popovers.js',
             './node_modules/obebs4/obebs4/core/js/obebs4-tooltips.js',
-            //'./node_modules/obebs4/obebs4/core/js/obebs4-dropdown-selects.js',
             './node_modules/obebs4/obebs4/core/js/obebs4-fa5-animated-checkboxes.js',
             './node_modules/obebs4/obebs4/prismjs/js/prism.min.js',
             './node_modules/tinycolor2/dist/tinycolor-min.js',
@@ -266,7 +265,6 @@ gulp.task('concat-production-js', function(){
             './node_modules/bootstrap/dist/js/bootstrap.bundle.min.js',
             './node_modules/obebs4/obebs4/core/js/obebs4-popovers.js',
             './node_modules/obebs4/obebs4/core/js/obebs4-tooltips.js',
-            //'./node_modules/obebs4/obebs4/core/js/obebs4-dropdown-selects.js',
             './node_modules/obebs4/obebs4/core/js/obebs4-fa5-animated-checkboxes.js',
             './node_modules/obebs4/obebs4/core/js/obebs4-calendar-datepicker-plugin.js',
             './node_modules/obebs4/obebs4/core/js/obe-text-toggle-vanilla-mini-plugin.js',
@@ -289,20 +287,20 @@ gulp.task('concat-production-js', function(){
 
 
 
-
-gulp.task('concat-library-js', function(){
+gulp.task('concat-wds-js', function(){
     return gulp.src(
         [
-            './node_modules/obebs4/obebs4/prismjs/js/prism.min.js',
-            './node_modules/tinycolor2/dist/tinycolor-min.js',
-            './node_modules/datatables.net/js/jquery.dataTables.min.js',
-            './node_modules/datatables.net-bs4/js/dataTables.bootstrap4.min.js',
-            './node_modules/obebs4/obebs4/core/js/obebs4-library.js',
-            './node_modules/obebs4/obebs4/core/js/obebs4-dataTables.js'
+            './node_modules/bootstrap/dist/js/bootstrap.bundle.min.js',
+            './node_modules/obebs4/obebs4/core/js/obebs4-popovers.js',
+            './node_modules/obebs4/obebs4/core/js/obebs4-tooltips.js',
+            './node_modules/obebs4/obebs4/core/js/obebs4-fa5-animated-checkboxes.js',
+            './node_modules/obebs4/obebs4/core/js/obebs4-calendar-datepicker-plugin.js',
+            './node_modules/obebs4/obebs4/core/js/obe-text-toggle-vanilla-mini-plugin.js',
+            './node_modules/obebs4/obebs4/core/js/obebs4-dropdown-select-plugin.js'
         ]
     )
     .pipe(sourcemaps.init({loadMaps: true}))
-    .pipe(concat('obebs4.library.site.bundle.js'))
+    .pipe(concat('./obebs4.wds.bundle.js'))
     .pipe(terser({
         output: {
             comments: true // Options: some, all, true, or regex
@@ -313,6 +311,70 @@ gulp.task('concat-library-js', function(){
       }))
     .pipe(sourcemaps.write('.'))
     .pipe(gulp.dest('./library/js'))
+});
+
+
+
+
+gulp.task('concat-plugins-js', function(){
+    return gulp.src(
+        [
+            './node_modules/obebs4/obebs4/prismjs/js/prism.min.js',
+            './node_modules/tinycolor2/dist/tinycolor-min.js',
+            './node_modules/datatables.net/js/jquery.dataTables.min.js',
+            './node_modules/datatables.net-bs4/js/dataTables.bootstrap4.min.js',
+            './node_modules/obebs4/obebs4/core/js/obebs4-dataTables.js'
+        ]
+    )
+    .pipe(sourcemaps.init({loadMaps: true}))
+    .pipe(concat('obebs4.plugins.bundle.js'))
+    .pipe(terser({
+        output: {
+            comments: true // Options: some, all, true, or regex
+        },
+        keep_fnames: true,
+        keep_classnames: true,
+        mangle: false
+      }))
+    .pipe(sourcemaps.write('.'))
+    .pipe(gulp.dest('./library/js'))
+});
+
+
+
+gulp.task('copy-prism-js', function () {
+    return gulp.src('./node_modules/obebs4/obebs4/prismjs/js/prism.min.js')
+    .pipe(gulp.dest('./library/js'));
+});
+
+
+
+gulp.task('copy-datatables-js', function(){
+    return gulp.src(
+        [
+            './node_modules/datatables.net/js/jquery.dataTables.min.js',
+            './node_modules/datatables.net-bs4/js/dataTables.bootstrap4.min.js'
+        ]
+    )
+    .pipe(sourcemaps.init({loadMaps: true}))
+    .pipe(concat('bootstrap4.datatables.min.js'))
+    .pipe(terser({
+        output: {
+            comments: true // Options: some, all, true, or regex
+        },
+        keep_fnames: true,
+        keep_classnames: true,
+        mangle: false
+      }))
+    .pipe(sourcemaps.write('.'))
+    .pipe(gulp.dest('./library/js'))
+});
+
+
+
+gulp.task('copy-tinycolor-js', function () {
+    return gulp.src('./node_modules/tinycolor2/dist/tinycolor-min.js')
+    .pipe(gulp.dest('./library/js'));
 });
 
 
@@ -351,7 +413,23 @@ gulp.task('concat-production-css', function(){
 
 
 
-gulp.task('concat-library-css', function(){
+
+gulp.task('concat-wds-css', function(){
+    return gulp.src(
+        [
+            './library/css/obebs4-bootstrap.css'
+        ]
+    )
+    .pipe(sourcemaps.init({loadMaps: true}))
+    .pipe(concat('obebs4.wds.bundle.css'))
+    .pipe(cleanCSS({compatibility: '*'}))
+    .pipe(sourcemaps.write('.'))
+    .pipe(gulp.dest('./library/css'))
+});
+
+
+
+gulp.task('concat-plugins-css', function(){
     return gulp.src(
         [
             './node_modules/obebs4/obebs4/prismjs/css/prism.css',
@@ -360,10 +438,22 @@ gulp.task('concat-library-css', function(){
         ]
     )
     .pipe(sourcemaps.init({loadMaps: true}))
-    .pipe(concat('obebs4.library.site.bundle.css'))
+    .pipe(concat('obebs4.plugins.bundle.css'))
     .pipe(cleanCSS({compatibility: '*'}))
     .pipe(sourcemaps.write('.'))
     .pipe(gulp.dest('./library/css'))
+});
+
+
+gulp.task('copy-prism-css', function () {
+    return gulp.src('./node_modules/obebs4/obebs4/prismjs/css/prism.css')
+    .pipe(gulp.dest('./library/css'));
+});
+
+
+gulp.task('copy-datatables-css', function () {
+    return gulp.src('./node_modules/datatables.net-bs4/css/dataTables.bootstrap4.min.css')
+    .pipe(gulp.dest('./library/css'));
 });
 
 
@@ -384,11 +474,18 @@ gulp.task('obebs4', function() {
         'move-favicon-files',
         'compile-nunjucks',
         'concat-js',
-        'concat-library-js',
+        'concat-plugins-js',
         'concat-production-js',
+        'concat-wds-js',
+        'copy-prism-js',
+        'copy-datatables-js',
+        'copy-tinycolor-js',
         'concat-css',
         'concat-production-css',
-        'concat-library-css',
+        'concat-plugins-css',
+        'concat-wds-css',
+        'copy-prism-css',
+        'copy-datatables-css',
         'clean-up'
     );
 });
