@@ -3,7 +3,7 @@
 @if $enable-obebs4-background-wheel-colors {
 	
 	@each $key, $value in $obebs4-color-wheel-colors {
-		@include bg-variant(".bg-#{$key}", $value);
+		@include obebs4-bg-variant(".bg-#{$key}", $value);
 	}
 	
 }
@@ -11,87 +11,87 @@
 @if $enable-obebs4-background-tints-shades {
 	
 	@each $key, $value in $whites {
-		@include bg-variant(".bg-white-#{$key}", $value);
+		@include obebs4-bg-variant(".bg-white-#{$key}", $value);
 	}
 
 	@each $key, $value in $light-grays {
-		@include bg-variant(".bg-light-gray-#{$key}", $value);
+		@include obebs4-bg-variant(".bg-light-gray-#{$key}", $value);
 	}
 
 	@each $key, $value in $grays {
-		@include bg-variant(".bg-gray-#{$key}", $value);
+		@include obebs4-bg-variant(".bg-gray-#{$key}", $value);
 	}
 
 	@each $key, $value in $dark-grays {
-		@include bg-variant(".bg-dark-gray-#{$key}", $value);
+		@include obebs4-bg-variant(".bg-dark-gray-#{$key}", $value);
 	}
 
 	@each $key, $value in $blacks {
-		@include bg-variant(".bg-black-#{$key}", $value);
+		@include obebs4-bg-variant(".bg-black-#{$key}", $value);
 	}
 
 	@each $key, $value in $reds {
-		@include bg-variant(".bg-red-#{$key}", $value);
+		@include obebs4-bg-variant(".bg-red-#{$key}", $value);
 	}
 
 	@each $key, $value in $roses {
-		@include bg-variant(".bg-rose-#{$key}", $value);
+		@include obebs4-bg-variant(".bg-rose-#{$key}", $value);
 	}
 
 	@each $key, $value in $magentas {
-		@include bg-variant(".bg-magenta-#{$key}", $value);
+		@include obebs4-bg-variant(".bg-magenta-#{$key}", $value);
 	}
 
 	@each $key, $value in $violets {
-		@include bg-variant(".bg-violet-#{$key}", $value);
+		@include obebs4-bg-variant(".bg-violet-#{$key}", $value);
 	}
 
 	@each $key, $value in $blues {
-		@include bg-variant(".bg-blue-#{$key}", $value);
+		@include obebs4-bg-variant(".bg-blue-#{$key}", $value);
 	}
 
 	@each $key, $value in $azures {
-		@include bg-variant(".bg-azure-#{$key}", $value);
+		@include obebs4-bg-variant(".bg-azure-#{$key}", $value);
 	}
 
 	@each $key, $value in $cyans {
-		@include bg-variant(".bg-cyan-#{$key}", $value);
+		@include obebs4-bg-variant(".bg-cyan-#{$key}", $value);
 	}
 
 	@each $key, $value in $spring-greens {
-		@include bg-variant(".bg-spring-green-#{$key}", $value);
+		@include obebs4-bg-variant(".bg-spring-green-#{$key}", $value);
 	}
 
 	@each $key, $value in $greens {
-		@include bg-variant(".bg-green-#{$key}", $value);
+		@include obebs4-bg-variant(".bg-green-#{$key}", $value);
 	}
 
 	@each $key, $value in $chartreuses {
-		@include bg-variant(".bg-chartreuse-#{$key}", $value);
+		@include obebs4-bg-variant(".bg-chartreuse-#{$key}", $value);
 	}
 
 	@each $key, $value in $yellows {
-		@include bg-variant(".bg-yellow-#{$key}", $value);
+		@include obebs4-bg-variant(".bg-yellow-#{$key}", $value);
 	}
 
 	@each $key, $value in $oranges {
-		@include bg-variant(".bg-orange-#{$key}", $value);
+		@include obebs4-bg-variant(".bg-orange-#{$key}", $value);
 	}
 
 	@each $key, $value in $orange-grays {
-		@include bg-variant(".bg-orange-gray-#{$key}", $value);
+		@include obebs4-bg-variant(".bg-orange-gray-#{$key}", $value);
 	}
 
 	@each $key, $value in $dark-gray-oranges {
-		@include bg-variant(".bg-dark-gray-orange-#{$key}", $value);
+		@include obebs4-bg-variant(".bg-dark-gray-orange-#{$key}", $value);
 	}
 
 	@each $key, $value in $blue-grays {
-		@include bg-variant(".bg-blue-gray-#{$key}", $value);
+		@include obebs4-bg-variant(".bg-blue-gray-#{$key}", $value);
 	}
 
 	@each $key, $value in $light-gray-azures {
-		@include bg-variant(".bg-light-gray-azure-#{$key}", $value);
+		@include obebs4-bg-variant(".bg-light-gray-azure-#{$key}", $value);
 	}
 	
 }
