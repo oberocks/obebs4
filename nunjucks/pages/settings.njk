@@ -227,9 +227,11 @@
                     $('#js-json-target').collapse('hide');
                 }
                 
+                /*
                 if ($('#template-url').hasClass('js-json-is-visible')) {
                     $('#template-url').collapse('hide');
                 }
+                */
 
             });
 
@@ -682,6 +684,7 @@
                     }
                 }
 
+                /*
                 var currentURL = window.location.href;
                 var url;
                 if (currentURL.indexOf('?') > -1) {
@@ -690,9 +693,13 @@
                     url = currentURL;
                 }
                 //console.log(url);
+                */
 
+                /*
                 var template = {};
+                */
                 
+                /*
                 // OBE Color Options
                 template.a = get_checkbox_val('#enable-obebs4-alert-wheel-colors');
                 template.b = get_checkbox_val('#enable-obebs4-alert-variations');
@@ -846,6 +853,7 @@
                 template.g2_ = $('#dropdown-link-hover-bg-modifier').val();
                 template.g3 = $('#dropdown-link-disabled-color').val();
                 template.g3_ = $('#dropdown-link-disabled-color-modifier').val();
+                */
 
 
 
@@ -871,6 +879,7 @@
                 // STRINGIFY OBJECT INTO JSON AND USE PRISM TO DISPLAY AS HIGHLIGHTED CODE
                 //
 
+                /*
                 $('#template-url pre').remove();
                 
                 var target2 = document.getElementById('template-url');
@@ -884,6 +893,7 @@
                 code2.appendChild(textnode2);
                 pre2.appendChild(code2);
                 target2.appendChild(pre2);
+                */
 
                 //$('#template-url-test').text(generateTemplateURL(url, template));
 
@@ -892,7 +902,9 @@
                 // add class name to target element to use as a selector to hide the code output
                 // when a user clicks on any setting elements after generating a JSON output
                 $(target).addClass('js-json-is-visible').collapse('show');
+                /*
                 $(target2).addClass('js-json-is-visible').collapse('show');
+                */
 
             });
 
@@ -1035,7 +1047,7 @@
             }
 
 
-            
+            /*
             // OBE Color Options
             if (get_URL_var('a').length > 0) {
                 set_checkbox(get_URL_var('a'), '#enable-obebs4-alert-wheel-colors');
@@ -1478,6 +1490,7 @@
             if (get_URL_var('g3_').length > 0) {
                 set_select_val('#dropdown-link-disabled-color-modifier', get_URL_var('g3_'));
             }
+            */
             
 
             
@@ -1490,10 +1503,12 @@
             
             
 
+            /*
             $('#template-selector').on('change', function() {
                 var link = $(this).val();
                 window.location.href = link;
             });
+            */
 
 
 
