@@ -75,11 +75,11 @@
 {%- macro responsive_classes_thead(theadClasses) %}
 <thead class="{{ theadClasses }}">
     <tr>
-        <th scope="col">Base Class</th>
+        <th scope="col">Extra Small</th>
         <th scope="col">Small</th>
         <th scope="col">Medium</th>
         <th scope="col">Large</th>
-        <th scope="col">X-Large</th>
+        <th scope="col">Extra Large</th>
     </tr>
 </thead>
 {%- endmacro %}
@@ -226,6 +226,18 @@
     <td><samp>.text-md-{{ string }}</samp></td>
     <td><samp>.text-lg-{{ string }}</samp></td>
     <td><samp>.text-xl-{{ string }}</samp></td>
+</tr>
+{%- endmacro %}
+
+
+
+{%- macro row_columns_classes(string) %}
+<tr>
+    <th scope="row" class="bg-dark text-light border-light"><samp>.row-cols-{{ string }}</samp></th>
+    <td><samp>.row-cols-sm-{{ string }}</samp></td>
+    <td><samp>.row-cols-md-{{ string }}</samp></td>
+    <td><samp>.row-cols-lg-{{ string }}</samp></td>
+    <td><samp>.row-cols-xl-{{ string }}</samp></td>
 </tr>
 {%- endmacro %}
 

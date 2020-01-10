@@ -1334,7 +1334,7 @@
                 "head" : "Margin & Padding",
                 "subhead" : "C L A S S E S",
                 "link" : "Margin & Padding Classes",
-                "descrip" : "These are the Bootstrap 4 element margin and padding utility classes.",
+                "descrip" : "These are the Bootstrap 4 element margin, padding, and negative margin utility classes.",
                 "id" : "margin-and-padding-classes-table"
             },{
                 "index" : 19,
@@ -1343,6 +1343,27 @@
                 "link" : "Text Alignment Classes",
                 "descrip" : "These are Bootstrap 4 text alignment utility classes.",
                 "id" : "text-alignment-classes-table"
+            },{
+                "index" : 20,
+                "head" : "Row Column",
+                "subhead" : "C L A S S E S",
+                "link" : "Row Column Classes",
+                "descrip" : "These are the available Bootstrap 4 row column utility classes.",
+                "id" : "row-column-classes-table"
+            },{
+                "index" : 21,
+                "head" : "Responsive Containers",
+                "subhead" : "C L A S S E S",
+                "link" : "Responsive Container Classes",
+                "descrip" : "These are the available Bootstrap 4 responsive container utility classes and their corresponding widths at specfic system breakpoints.",
+                "id" : "responsive-containers-classes-table"
+            },{
+                "index" : 22,
+                "head" : "List Group Horizontal",
+                "subhead" : "C L A S S E S",
+                "link" : "List Group Horizontal Classes",
+                "descrip" : "These are the available Bootstrap 4 list group horizontal utility classe.",
+                "id" : "list-group-horizontal-classes-table"
             }
         ]
     },

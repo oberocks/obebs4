@@ -1,0 +1,45 @@
+<!-- _table_row_columns.njk -->
+		<div class="container-fluid pt-5 text-center bg-white text-dark">
+        
+            <div class="container modal-workspace">
+
+                <div class="row justify-content-center">
+                    
+                    <div id="{{ global_strings['reference']['sections'][20]['id'] }}" class="col-12">
+                        
+                        {{ macros.page_section_heading(global_strings['reference']['sections'][20]['head'], global_strings['reference']['sections'][20]['subhead'], global_strings['reference']['sections'][20]['descrip']) }}
+
+                    </div>
+
+                </div>
+
+                <div class="row justify-content-center">
+
+                    <div class="col pb-5">
+                        
+                        <div class="table-responsive text-left">
+                            <table class="js-data-tables-element table table-striped table-hover table-bordered table-sm text-nowrap">
+                                
+                                {{ macros.responsive_classes_thead('thead-dark') }}
+                                
+                                <tbody>
+                                    
+                                    {{ macros.row_columns_classes('1') }}
+                                    {{ macros.row_columns_classes('2') }}
+                                    {{ macros.row_columns_classes('3') }}
+                                    {{ macros.row_columns_classes('4') }}
+                                    {{ macros.row_columns_classes('5') }}
+                                    {{ macros.row_columns_classes('6') }}
+
+                                </tbody>
+                            </table>
+                            
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>

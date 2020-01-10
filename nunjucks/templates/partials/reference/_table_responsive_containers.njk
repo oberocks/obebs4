@@ -1,0 +1,102 @@
+<!-- _table_responsive_containers.njk -->
+		<div class="container-fluid pt-5 text-center bg-white text-dark">
+        
+            <div class="container modal-workspace">
+
+                <div class="row justify-content-center">
+                    
+                    <div id="{{ global_strings['reference']['sections'][21]['id'] }}" class="col-12">
+                        
+                        {{ macros.page_section_heading(global_strings['reference']['sections'][21]['head'], global_strings['reference']['sections'][21]['subhead'], global_strings['reference']['sections'][21]['descrip']) }}
+
+                    </div>
+
+                </div>
+
+                <div class="row justify-content-center">
+
+                    <div class="col pb-5">
+                        
+                        <div class="alert alert-danger alert-dismissible text-left fade show" role="alert">
+                            <strong>NOTE:</strong> All of the pixel numbers in the following table will be innacurate if you change your breakpoint dimentions when using/generating Bootstrap 4 CSS files with SASS. Only use these numbers as a guide if you do so!
+                            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                <span aria-hidden="true">×</span>
+                            </button>
+                        </div>
+                        
+                        <div class="table-responsive text-left">
+                            
+                            <table class="table table-striped table-hover table-bordered table-sm text-nowrap">
+                                
+                                <thead class="thead-dark">
+                                    <tr class="text-center">
+                                        <th scope="col" class="text-left">Type</th>
+                                        <th scope="col">Extra Small (<576px)</th>
+                                        <th scope="col">Small (≥576px)</th>
+                                        <th scope="col">Medium (≥768px)</th>
+                                        <th scope="col">Large (≥992px)</th>
+                                        <th scope="col">Extra Large (≥1200px)</th>
+                                    </tr>
+                                </thead>
+
+                                <tbody>
+                                    <tr class="text-center">
+                                        <th scope="row" class="bg-dark text-light border-light text-left"><samp>.container</samp></th>
+                                        <td>100%</td>
+                                        <td>540px</td>
+                                        <td>720px</td>
+                                        <td>960px</td>
+                                        <td>1140px</td>
+                                    </tr>
+                                    <tr class="text-center">
+                                        <th scope="row" class="bg-dark text-light border-light text-left"><samp>.container-sm</samp></th>
+                                        <td>100%</td>
+                                        <td>540px</td>
+                                        <td>720px</td>
+                                        <td>960px</td>
+                                        <td>1140px</td>
+                                    </tr>
+                                    <tr class="text-center">
+                                        <th scope="row" class="bg-dark text-light border-light text-left"><samp>.container-md</samp></th>
+                                        <td>100%</td>
+                                        <td>100%</td>
+                                        <td>720px</td>
+                                        <td>960px</td>
+                                        <td>1140px</td>
+                                    </tr>
+                                    <tr class="text-center">
+                                        <th scope="row" class="bg-dark text-light border-light text-left"><samp>.container-lg</samp></th>
+                                        <td>100%</td>
+                                        <td>100%</td>
+                                        <td>100%</td>
+                                        <td>960px</td>
+                                        <td>1140px</td>
+                                    </tr>
+                                    <tr class="text-center">
+                                        <th scope="row" class="bg-dark text-light border-light text-left"><samp>.container-xl</samp></th>
+                                        <td>100%</td>
+                                        <td>100%</td>
+                                        <td>100%</td>
+                                        <td>100%</td>
+                                        <td>1140px</td>
+                                    </tr>
+                                    <tr class="text-center">
+                                        <th scope="row" class="bg-dark text-light border-light text-left"><samp>.container-fluid</samp></th>
+                                        <td>100%</td>
+                                        <td>100%</td>
+                                        <td>100%</td>
+                                        <td>100%</td>
+                                        <td>100%</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
