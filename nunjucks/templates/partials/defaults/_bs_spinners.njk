@@ -1,0 +1,126 @@
+<!-- _bs_spinners.njk -->
+		<div class="container-fluid pt-5 text-center bg-white text-dark">
+        
+            <div class="container modal-workspace">
+
+                <div class="row justify-content-center pt-5">
+                    
+                    <div id="{{ global_strings['defaults']['sections'][77]['id'] }}" class="col-12">
+                        
+                        {{ macros.page_section_heading(global_strings['defaults']['sections'][77]['head'], global_strings['defaults']['sections'][77]['subhead'], global_strings['defaults']['sections'][77]['descrip']) }}
+
+                    </div>
+
+                </div>
+
+                <div class="row justify-content-center">
+
+                    <div class="col-md-6 pb-5">
+
+                        {% macro spinner(label, classes, style = 'false') %}
+                        <label class="d-block">{{ label }} Spinner</label>
+                        <div class="js-prism mb-2">
+                            <div class="{{ classes }}" role="status"{% if style != 'false' %} style="{{ style }}"{% endif %}>
+                                <span class="sr-only">Loading...</span>
+                            </div>
+                        </div>
+                        {% endmacro %}
+                        
+                        <h5 class="pt-4">Spinner Types</h5>
+
+                        {{ spinner('Border', 'spinner-border') }}
+                        {{ spinner('Growing', 'spinner-grow') }}
+
+                        <h5 class="pt-4">Small Spinners</h5>
+                        
+                        {{ spinner('Small Border', 'spinner-border spinner-border-sm') }}
+                        {{ spinner('Small Growing', 'spinner-grow spinner-grow-sm') }}
+
+                        <h5 class="pt-4">Large Spinners</h5>
+
+                        {{ spinner('Large Border', 'spinner-border', 'width: 3rem; height: 3rem;') }}
+                        {{ spinner('Large Growing', 'spinner-grow', 'width: 3rem; height: 3rem;') }}
+
+                        <h5 class="pt-4">Spinner Buttons</h5>
+
+                        <label class="d-block">Border Spinner Button</label>
+                        <div class="js-prism mb-2">
+                            <button class="btn btn-primary" type="button" disabled>
+                                <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+                                <span class="sr-only">Loading...</span>
+                            </button>
+                        </div>
+
+                        <label class="d-block">Grow Spinner Button</label>
+                        <div class="js-prism mb-2">
+                            <button class="btn btn-primary" type="button" disabled>
+                                <span class="spinner-grow spinner-grow-sm" role="status" aria-hidden="true"></span>
+                                <span class="sr-only">Loading...</span>
+                            </button>
+                        </div>
+
+                        <label class="d-block">Border Spinner &amp; Text Button</label>
+                        <div class="js-prism mb-2">
+                            <button class="btn btn-primary" type="button" disabled>
+                                <span class="spinner-border spinner-border-sm mr-2" role="status" aria-hidden="true"></span>
+                                Loading...
+                            </button>
+                        </div>
+
+                        <label class="d-block">Grow Spinner &amp; Text Button</label>
+                        <div class="js-prism mb-2">
+                            <button class="btn btn-primary" type="button" disabled>
+                                <span class="spinner-grow spinner-grow-sm mr-2" role="status" aria-hidden="true"></span>
+                                Loading...
+                            </button>
+                        </div>
+
+                        <label class="d-block">Large Border Spinner Button</label>
+                        <div class="js-prism mb-2">
+                            <button class="btn btn-xl btn-primary" type="button" disabled>
+                                <span class="spinner-border" role="status" aria-hidden="true"></span>
+                                <span class="sr-only">Loading...</span>
+                            </button>
+                        </div>
+
+                        <label class="d-block">Large Grow Spinner Button</label>
+                        <div class="js-prism mb-2">
+                            <button class="btn btn-xl btn-primary" type="button" disabled>
+                                <span class="spinner-grow" role="status" aria-hidden="true"></span>
+                                <span class="sr-only">Loading...</span>
+                            </button>
+                        </div>
+
+                    </div>
+
+                    <div class="col-md-6 pb-5">
+
+                        <h5 class="pt-4">Border Spinner Colors</h5>
+
+                        {{ spinner('Primary Border', 'spinner-border text-primary') }}
+                        {{ spinner('Secondary Border', 'spinner-border text-secondary') }}
+                        {{ spinner('Success Border', 'spinner-border text-success') }}
+                        {{ spinner('Danger Border', 'spinner-border text-danger') }}
+                        {{ spinner('Warning Border', 'spinner-border text-warning') }}
+                        {{ spinner('Info Border', 'spinner-border text-info') }}
+                        {{ spinner('Light Border', 'spinner-border text-light') }}
+                        {{ spinner('Dark Border', 'spinner-border text-dark') }}
+
+                        <h5 class="pt-4">Grow Spinner Colors</h5>
+
+                        {{ spinner('Primary Grow', 'spinner-grow text-primary') }}
+                        {{ spinner('Secondary Grow', 'spinner-grow text-secondary') }}
+                        {{ spinner('Success Grow', 'spinner-grow text-success') }}
+                        {{ spinner('Danger Grow', 'spinner-grow text-danger') }}
+                        {{ spinner('Warning Grow', 'spinner-grow text-warning') }}
+                        {{ spinner('Info Grow', 'spinner-grow text-info') }}
+                        {{ spinner('Light Grow', 'spinner-grow text-light') }}
+                        {{ spinner('Dark Grow', 'spinner-grow text-dark') }}
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>

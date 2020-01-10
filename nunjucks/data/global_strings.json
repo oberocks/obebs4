@@ -865,6 +865,13 @@
                 "link" : "Visibility Utilities",
                 "descrip" : "These are your two visibility Bootstrap 4 classes.",
                 "id" : "visibility-utilities-section"
+            },{
+                "index" : 77,
+                "head" : "Spinner",
+                "subhead" : "C O M P O N E N T S",
+                "link" : "Spinner Components",
+                "descrip" : "These are a variety of Bootstrap 4 spinner component examples.",
+                "id" : "spinner-components-section"
             }
         ]
     },
@@ -1159,18 +1166,32 @@
                 "id" : "container-grid-fluid-layouts-section"
             },{
                 "index" : 2,
+                "head" : "Responsive Container",
+                "subhead" : "L A Y O U T S",
+                "link" : "Responsive Container Layouts",
+                "descrip" : "These are Bootstrap 4 responsive container layout examples.",
+                "id" : "responsive-container-layouts-section"
+            },{
+                "index" : 3,
                 "head" : "Hero",
                 "subhead" : "S E C T I O N S",
                 "link" : "Hero Sections",
                 "descrip" : "These are some Bootstrap 4 hero section layouts.",
                 "id" : "hero-sections-layouts-section"
             },{
-                "index" : 3,
+                "index" : 4,
                 "head" : "Card Group",
                 "subhead" : "L A Y O U T S",
                 "link" : "Card Group Layouts",
                 "descrip" : "These are your Bootstrap 4 card group layouts.",
                 "id" : "card-group-layouts-section"
+            },{
+                "index" : 5,
+                "head" : "Row Column",
+                "subhead" : "L A Y O U T S",
+                "link" : "Row Column Layouts",
+                "descrip" : "These are examples of different Bootstrap 4 row column layouts.",
+                "id" : "row-column-layouts-section"
             }
         ]
     },
