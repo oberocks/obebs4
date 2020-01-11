@@ -11,27 +11,13 @@
 					
 						{{ macros.page_section_heading(global_strings['extensions']['sections'][6]['head'], global_strings['extensions']['sections'][6]['subhead'], global_strings['extensions']['sections'][6]['descrip']) }}
 						
-						<div class="js-prism mb-2">
-							<button type="button" class="btn btn-primary btn-xxs">XXS Button</button>
-						</div>
-						<div class="js-prism mb-2">
-							<button type="button" class="btn btn-primary btn-xs">XS Button</button>
-						</div>
-						<div class="js-prism mb-2">
-							<button type="button" class="btn btn-primary btn-sm">SM Button</button>
-						</div>
-						<div class="js-prism mb-2">
-							<button type="button" class="btn btn-primary btn-md">MD Button</button>
-						</div>
-						<div class="js-prism mb-2">
-							<button type="button" class="btn btn-primary btn-lg">LG Button</button>
-						</div>
-						<div class="js-prism mb-2">
-							<button type="button" class="btn btn-primary btn-xl">XL Button</button>
-						</div>
-						<div class="js-prism mb-2">
-							<button type="button" class="btn btn-primary btn-xxl">XXL Button</button>
-						</div>
+						{{ macros.button_sizes('xxs', 'XXS') }}
+						{{ macros.button_sizes('xs', 'XS') }}
+						{{ macros.button_sizes('sm', 'SM') }}
+						{{ macros.button_sizes('md', 'MD') }}
+						{{ macros.button_sizes('lg', 'LG') }}
+						{{ macros.button_sizes('xl', 'XL') }}
+						{{ macros.button_sizes('xxl', 'XXL') }}
 						
 					</div>
 					{% endif %}
@@ -41,21 +27,13 @@
 
 						{{ macros.page_section_heading(global_strings['extensions']['sections'][7]['head'], global_strings['extensions']['sections'][7]['subhead'], global_strings['extensions']['sections'][7]['descrip']) }}
 
-						
-						{% macro text_sizes(classPartial, namePartial) %}
-						<div class="js-prism mb-2">
-							<div class="text-{{ classPartial }}">{{ namePartial }} Text</div>
-						</div>
-						{% endmacro %}
-
-
-						{{ text_sizes('xxs', 'XXS') }}
-						{{ text_sizes('xs', 'XS') }}
-						{{ text_sizes('sm', 'SM') }}
-						{{ text_sizes('md', 'MD') }}
-						{{ text_sizes('lg', 'LG') }}
-						{{ text_sizes('xl', 'XL') }}
-						{{ text_sizes('xxl', 'XXL') }}
+						{{ macros.text_sizes('xxs', 'XXS') }}
+						{{ macros.text_sizes('xs', 'XS') }}
+						{{ macros.text_sizes('sm', 'SM') }}
+						{{ macros.text_sizes('md', 'MD') }}
+						{{ macros.text_sizes('lg', 'LG') }}
+						{{ macros.text_sizes('xl', 'XL') }}
+						{{ macros.text_sizes('xxl', 'XXL') }}
 
 					</div>
 					{% endif %}

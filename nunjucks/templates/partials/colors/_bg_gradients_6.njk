@@ -10,51 +10,45 @@
                     <div id="{{ global_strings['colors']['sections'][29]['id'] }}" class="col-md-6 pb-5">
                     
                         {{ macros.page_section_heading(global_strings['colors']['sections'][29]['head'], global_strings['colors']['sections'][29]['subhead'], global_strings['colors']['sections'][29]['descrip']) }}
-
-                        {% macro bg_2col_grad_radial(classPartial, namePartial) %}
-                        <div class="js-prism mb-2">
-                            <div class="bg-gradient-{{ classPartial }}-radial">{{ namePartial }} Radial</div>
-                        </div>
-                        {% endmacro %}
                         
-                        {{ bg_2col_grad_radial('red-rose', 'Red/Rose') }}
-                        {{ bg_2col_grad_radial('rose-magenta', 'Rose/Magenta') }}
-                        {{ bg_2col_grad_radial('magenta-violet', 'Magenta/Violet') }}
-                        {{ bg_2col_grad_radial('violet-blue', 'Violet/Blue') }}
-                        {{ bg_2col_grad_radial('blue-azure', 'Blue/Azure') }}
-                        {{ bg_2col_grad_radial('azure-cyan', 'Azure/Cyan') }}
-                        {{ bg_2col_grad_radial('cyan-spring-green', 'Cyan/Spring Green') }}
-                        {{ bg_2col_grad_radial('spring-green-green', 'Spring Green/Green') }}
-                        {{ bg_2col_grad_radial('green-chartreuse', 'Green/Chartreuse') }}
-                        {{ bg_2col_grad_radial('chartreuse-yellow', 'Chartreuse/Yellow') }}
-                        {{ bg_2col_grad_radial('yellow-orange', 'Yellow/Orange') }}
-                        {{ bg_2col_grad_radial('orange-red', 'Orange/Red') }}
-                        {{ bg_2col_grad_radial('orange-gray-dark-gray-orange', 'Orange Gray/Dark Gray Orange') }}
-                        {{ bg_2col_grad_radial('light-gray-azure-blue-gray', 'Light Gray Azure/Blue Gray') }}
-                        {{ bg_2col_grad_radial('white-light-gray', 'White/Light Gray') }}
-                        {{ bg_2col_grad_radial('light-gray-gray', 'Light Gray/Gray') }}
-                        {{ bg_2col_grad_radial('gray-dark-gray', 'Gray/Dark Gray') }}
-                        {{ bg_2col_grad_radial('dark-gray-black', 'Dark Gray/Black') }}
+                        {{ macros.bg_2col_grad_radial('red-rose', 'Red/Rose') }}
+                        {{ macros.bg_2col_grad_radial('rose-magenta', 'Rose/Magenta') }}
+                        {{ macros.bg_2col_grad_radial('magenta-violet', 'Magenta/Violet') }}
+                        {{ macros.bg_2col_grad_radial('violet-blue', 'Violet/Blue') }}
+                        {{ macros.bg_2col_grad_radial('blue-azure', 'Blue/Azure') }}
+                        {{ macros.bg_2col_grad_radial('azure-cyan', 'Azure/Cyan') }}
+                        {{ macros.bg_2col_grad_radial('cyan-spring-green', 'Cyan/Spring Green') }}
+                        {{ macros.bg_2col_grad_radial('spring-green-green', 'Spring Green/Green') }}
+                        {{ macros.bg_2col_grad_radial('green-chartreuse', 'Green/Chartreuse') }}
+                        {{ macros.bg_2col_grad_radial('chartreuse-yellow', 'Chartreuse/Yellow') }}
+                        {{ macros.bg_2col_grad_radial('yellow-orange', 'Yellow/Orange') }}
+                        {{ macros.bg_2col_grad_radial('orange-red', 'Orange/Red') }}
+                        {{ macros.bg_2col_grad_radial('orange-gray-dark-gray-orange', 'Orange Gray/Dark Gray Orange') }}
+                        {{ macros.bg_2col_grad_radial('light-gray-azure-blue-gray', 'Light Gray Azure/Blue Gray') }}
+                        {{ macros.bg_2col_grad_radial('white-light-gray', 'White/Light Gray') }}
+                        {{ macros.bg_2col_grad_radial('light-gray-gray', 'Light Gray/Gray') }}
+                        {{ macros.bg_2col_grad_radial('gray-dark-gray', 'Gray/Dark Gray') }}
+                        {{ macros.bg_2col_grad_radial('dark-gray-black', 'Dark Gray/Black') }}
 
 
-                        {{ bg_2col_grad_radial('rose-red', 'Rose/Red') }}
-                        {{ bg_2col_grad_radial('magenta-rose', 'Magenta/Rose') }}
-                        {{ bg_2col_grad_radial('violet-magenta', 'Violet/Magenta') }}
-                        {{ bg_2col_grad_radial('blue-violet', 'Blue/Violet') }}
-                        {{ bg_2col_grad_radial('azure-blue', 'Azure/Blue') }}
-                        {{ bg_2col_grad_radial('cyan-azure', 'Cyan/Azure') }}
-                        {{ bg_2col_grad_radial('spring-green-cyan', 'Spring Green/Cyan') }}
-                        {{ bg_2col_grad_radial('green-spring-green', 'Green/Spring Green') }}
-                        {{ bg_2col_grad_radial('chartreuse-green', 'Chartreuse/Green') }}
-                        {{ bg_2col_grad_radial('yellow-chartreuse', 'Yellow/Chartreuse') }}
-                        {{ bg_2col_grad_radial('orange-yellow', 'Orange/Yellow') }}
-                        {{ bg_2col_grad_radial('red-orange', 'Red/Orange') }}
-                        {{ bg_2col_grad_radial('dark-gray-orange-orange-gray', 'Dark Gray Orange/Orange Gray') }}
-                        {{ bg_2col_grad_radial('blue-gray-light-gray-azure', 'Blue Gray/Light Gray Azure') }}
-                        {{ bg_2col_grad_radial('light-gray-white', 'Light Gray/White') }}
-                        {{ bg_2col_grad_radial('gray-light-gray', 'Gray/Light Gray') }}
-                        {{ bg_2col_grad_radial('dark-gray-gray', 'Dark Gray/Gray') }}
-                        {{ bg_2col_grad_radial('black-dark-gray', 'Black/Dark Gray') }}
+                        {{ macros.bg_2col_grad_radial('rose-red', 'Rose/Red') }}
+                        {{ macros.bg_2col_grad_radial('magenta-rose', 'Magenta/Rose') }}
+                        {{ macros.bg_2col_grad_radial('violet-magenta', 'Violet/Magenta') }}
+                        {{ macros.bg_2col_grad_radial('blue-violet', 'Blue/Violet') }}
+                        {{ macros.bg_2col_grad_radial('azure-blue', 'Azure/Blue') }}
+                        {{ macros.bg_2col_grad_radial('cyan-azure', 'Cyan/Azure') }}
+                        {{ macros.bg_2col_grad_radial('spring-green-cyan', 'Spring Green/Cyan') }}
+                        {{ macros.bg_2col_grad_radial('green-spring-green', 'Green/Spring Green') }}
+                        {{ macros.bg_2col_grad_radial('chartreuse-green', 'Chartreuse/Green') }}
+                        {{ macros.bg_2col_grad_radial('yellow-chartreuse', 'Yellow/Chartreuse') }}
+                        {{ macros.bg_2col_grad_radial('orange-yellow', 'Orange/Yellow') }}
+                        {{ macros.bg_2col_grad_radial('red-orange', 'Red/Orange') }}
+                        {{ macros.bg_2col_grad_radial('dark-gray-orange-orange-gray', 'Dark Gray Orange/Orange Gray') }}
+                        {{ macros.bg_2col_grad_radial('blue-gray-light-gray-azure', 'Blue Gray/Light Gray Azure') }}
+                        {{ macros.bg_2col_grad_radial('light-gray-white', 'Light Gray/White') }}
+                        {{ macros.bg_2col_grad_radial('gray-light-gray', 'Gray/Light Gray') }}
+                        {{ macros.bg_2col_grad_radial('dark-gray-gray', 'Dark Gray/Gray') }}
+                        {{ macros.bg_2col_grad_radial('black-dark-gray', 'Black/Dark Gray') }}
                         
                     </div>
                     {% endif %}
@@ -63,45 +57,39 @@
                     <div id="{{ global_strings['colors']['sections'][30]['id'] }}" class="col-md-6 pb-5">
                     
                         {{ macros.page_section_heading(global_strings['colors']['sections'][30]['head'], global_strings['colors']['sections'][30]['subhead'], global_strings['colors']['sections'][30]['descrip']) }}
-
-                        {% macro bg_3col_grad_radial(classPartial, namePartial) %}
-                        <div class="js-prism mb-2">
-                            <div class="bg-gradient-{{ classPartial }}-radial">{{ namePartial }} Radial</div>
-                        </div>
-                        {% endmacro %}
                         
-                        {{ bg_3col_grad_radial('red-magenta', 'Red/Magenta') }}
-                        {{ bg_3col_grad_radial('rose-violet', 'Rose/Violet') }}
-                        {{ bg_3col_grad_radial('magenta-blue', 'Magenta/Blue') }}
-                        {{ bg_3col_grad_radial('violet-azure', 'Violet/Azure') }}
-                        {{ bg_3col_grad_radial('blue-cyan', 'Blue/Cyan') }}
-                        {{ bg_3col_grad_radial('azure-spring-green', 'Azure/Spring Green') }}
-                        {{ bg_3col_grad_radial('cyan-green', 'Cyan/Green') }}
-                        {{ bg_3col_grad_radial('spring-green-chartreuse', 'Spring Green/Chartreuse') }}
-                        {{ bg_3col_grad_radial('green-yellow', 'Green/Yellow') }}
-                        {{ bg_3col_grad_radial('chartreuse-orange', 'Chartreuse/Orange') }}
-                        {{ bg_3col_grad_radial('yellow-red', 'Yellow/Red') }}
-                        {{ bg_3col_grad_radial('orange-rose', 'Orange/Rose') }}
-                        {{ bg_3col_grad_radial('white-gray', 'White/Gray') }}
-                        {{ bg_3col_grad_radial('light-gray-dark-gray', 'Light Gray/Dark Gray') }}
-                        {{ bg_3col_grad_radial('gray-black', 'Gray/Black') }}
+                        {{ macros.bg_3col_grad_radial('red-magenta', 'Red/Magenta') }}
+                        {{ macros.bg_3col_grad_radial('rose-violet', 'Rose/Violet') }}
+                        {{ macros.bg_3col_grad_radial('magenta-blue', 'Magenta/Blue') }}
+                        {{ macros.bg_3col_grad_radial('violet-azure', 'Violet/Azure') }}
+                        {{ macros.bg_3col_grad_radial('blue-cyan', 'Blue/Cyan') }}
+                        {{ macros.bg_3col_grad_radial('azure-spring-green', 'Azure/Spring Green') }}
+                        {{ macros.bg_3col_grad_radial('cyan-green', 'Cyan/Green') }}
+                        {{ macros.bg_3col_grad_radial('spring-green-chartreuse', 'Spring Green/Chartreuse') }}
+                        {{ macros.bg_3col_grad_radial('green-yellow', 'Green/Yellow') }}
+                        {{ macros.bg_3col_grad_radial('chartreuse-orange', 'Chartreuse/Orange') }}
+                        {{ macros.bg_3col_grad_radial('yellow-red', 'Yellow/Red') }}
+                        {{ macros.bg_3col_grad_radial('orange-rose', 'Orange/Rose') }}
+                        {{ macros.bg_3col_grad_radial('white-gray', 'White/Gray') }}
+                        {{ macros.bg_3col_grad_radial('light-gray-dark-gray', 'Light Gray/Dark Gray') }}
+                        {{ macros.bg_3col_grad_radial('gray-black', 'Gray/Black') }}
 
 
-                        {{ bg_3col_grad_radial('magenta-red', 'Magenta/Red') }}
-                        {{ bg_3col_grad_radial('violet-rose', 'Violet-Rose') }}
-                        {{ bg_3col_grad_radial('blue-magenta', 'Blue/Magenta') }}
-                        {{ bg_3col_grad_radial('azure-violet', 'Azure/Violet') }}
-                        {{ bg_3col_grad_radial('cyan-blue', 'Cyan/Blue') }}
-                        {{ bg_3col_grad_radial('spring-green-azure', 'Spring Green/Azure') }}
-                        {{ bg_3col_grad_radial('green-cyan', 'Green/Cyan') }}
-                        {{ bg_3col_grad_radial('chartreuse-spring-green', 'Chartreuse/Spring Green') }}
-                        {{ bg_3col_grad_radial('green-yellow', 'Green/Yellow') }}
-                        {{ bg_3col_grad_radial('orange-chartreuse', 'Orange/Chartreuse') }}
-                        {{ bg_3col_grad_radial('red-yellow', 'Red/Yellow') }}
-                        {{ bg_3col_grad_radial('rose-orange', 'Rose/Orange') }}
-                        {{ bg_3col_grad_radial('white-gray', 'White/Gray') }}
-                        {{ bg_3col_grad_radial('dark-gray-light-gray', 'Dark Gray/Light Gray') }}
-                        {{ bg_3col_grad_radial('black-gray', 'Black/Gray') }}
+                        {{ macros.bg_3col_grad_radial('magenta-red', 'Magenta/Red') }}
+                        {{ macros.bg_3col_grad_radial('violet-rose', 'Violet-Rose') }}
+                        {{ macros.bg_3col_grad_radial('blue-magenta', 'Blue/Magenta') }}
+                        {{ macros.bg_3col_grad_radial('azure-violet', 'Azure/Violet') }}
+                        {{ macros.bg_3col_grad_radial('cyan-blue', 'Cyan/Blue') }}
+                        {{ macros.bg_3col_grad_radial('spring-green-azure', 'Spring Green/Azure') }}
+                        {{ macros.bg_3col_grad_radial('green-cyan', 'Green/Cyan') }}
+                        {{ macros.bg_3col_grad_radial('chartreuse-spring-green', 'Chartreuse/Spring Green') }}
+                        {{ macros.bg_3col_grad_radial('green-yellow', 'Green/Yellow') }}
+                        {{ macros.bg_3col_grad_radial('orange-chartreuse', 'Orange/Chartreuse') }}
+                        {{ macros.bg_3col_grad_radial('red-yellow', 'Red/Yellow') }}
+                        {{ macros.bg_3col_grad_radial('rose-orange', 'Rose/Orange') }}
+                        {{ macros.bg_3col_grad_radial('white-gray', 'White/Gray') }}
+                        {{ macros.bg_3col_grad_radial('dark-gray-light-gray', 'Dark Gray/Light Gray') }}
+                        {{ macros.bg_3col_grad_radial('black-gray', 'Black/Gray') }}
                         
                     </div>
                     {% endif %}

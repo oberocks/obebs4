@@ -9,45 +9,39 @@
                     <div id="{{ global_strings['colors']['sections'][2]['id'] }}" class="col-12 pb-5">
                     
                         {{ macros.page_section_heading(global_strings['colors']['sections'][2]['head'], global_strings['colors']['sections'][2]['subhead'], global_strings['colors']['sections'][2]['descrip']) }}
-
-                        {% macro bg_element(classPartial, namePartial, textColorClass) %}
-                        <div class="js-prism mb-2">
-                            <div class="bg-{{ classPartial }} {{textColorClass}}">{{ namePartial }} Background</div>
-                        </div>
-                        {% endmacro %}
                         
-                        {{ bg_element('primary', 'Primary', 'text-white') }}
-                        {{ bg_element('secondary', 'Secondary', 'text-white') }}
-                        {{ bg_element('success', 'Success', 'text-white') }}
-                        {{ bg_element('danger', 'Danger', 'text-white') }}
-                        {{ bg_element('warning', 'Warning', 'text-white') }}
-                        {{ bg_element('info', 'Info', 'text-white') }}
-                        {{ bg_element('light', 'Light', 'text-black') }}
-                        {{ bg_element('dark', 'Dark', 'text-white') }}
+                        {{ macros.bg_element('primary', 'Primary', 'text-white') }}
+                        {{ macros.bg_element('secondary', 'Secondary', 'text-white') }}
+                        {{ macros.bg_element('success', 'Success', 'text-white') }}
+                        {{ macros.bg_element('danger', 'Danger', 'text-white') }}
+                        {{ macros.bg_element('warning', 'Warning', 'text-white') }}
+                        {{ macros.bg_element('info', 'Info', 'text-white') }}
+                        {{ macros.bg_element('light', 'Light', 'text-black') }}
+                        {{ macros.bg_element('dark', 'Dark', 'text-white') }}
                         
-                        {{ bg_element('white', 'White', 'text-black') }}
-                        {{ bg_element('light-gray', 'Light Gray', 'text-white') }}
-                        {{ bg_element('gray', 'Gray', 'text-white') }}
-                        {{ bg_element('dark-gray', 'Dark Gray', 'text-white') }}
-                        {{ bg_element('black', 'Black', 'text-white') }}
+                        {{ macros.bg_element('white', 'White', 'text-black') }}
+                        {{ macros.bg_element('light-gray', 'Light Gray', 'text-white') }}
+                        {{ macros.bg_element('gray', 'Gray', 'text-white') }}
+                        {{ macros.bg_element('dark-gray', 'Dark Gray', 'text-white') }}
+                        {{ macros.bg_element('black', 'Black', 'text-white') }}
 
-                        {{ bg_element('red', 'Red', 'text-white') }}
-                        {{ bg_element('rose', 'Rose', 'text-white') }}
-                        {{ bg_element('magenta', 'Magenta', 'text-white') }}
-                        {{ bg_element('violet', 'Violet', 'text-white') }}
-                        {{ bg_element('blue', 'Blue', 'text-white') }}
-                        {{ bg_element('azure', 'Azure', 'text-white') }}
-                        {{ bg_element('cyan', 'Cyan', 'text-white') }}
-                        {{ bg_element('spring-green', 'Spring Green', 'text-white') }}
-                        {{ bg_element('green', 'Green', 'text-white') }}
-                        {{ bg_element('chartreuse', 'Chartreuse', 'text-black') }}
-                        {{ bg_element('yellow', 'Yellow', 'text-black') }}
-                        {{ bg_element('orange', 'Orange', 'text-white') }}
+                        {{ macros.bg_element('red', 'Red', 'text-white') }}
+                        {{ macros.bg_element('rose', 'Rose', 'text-white') }}
+                        {{ macros.bg_element('magenta', 'Magenta', 'text-white') }}
+                        {{ macros.bg_element('violet', 'Violet', 'text-white') }}
+                        {{ macros.bg_element('blue', 'Blue', 'text-white') }}
+                        {{ macros.bg_element('azure', 'Azure', 'text-white') }}
+                        {{ macros.bg_element('cyan', 'Cyan', 'text-white') }}
+                        {{ macros.bg_element('spring-green', 'Spring Green', 'text-white') }}
+                        {{ macros.bg_element('green', 'Green', 'text-white') }}
+                        {{ macros.bg_element('chartreuse', 'Chartreuse', 'text-black') }}
+                        {{ macros.bg_element('yellow', 'Yellow', 'text-black') }}
+                        {{ macros.bg_element('orange', 'Orange', 'text-white') }}
 
-                        {{ bg_element('orange-gray', 'Orange Gray', 'text-white') }}
-                        {{ bg_element('dark-gray-orange', 'Dark Gray Orange', 'text-white') }}
-                        {{ bg_element('blue-gray', 'Blue Gray', 'text-white') }}
-                        {{ bg_element('light-gray-azure', 'Light Gray Azure', 'text-white') }}
+                        {{ macros.bg_element('orange-gray', 'Orange Gray', 'text-white') }}
+                        {{ macros.bg_element('dark-gray-orange', 'Dark Gray Orange', 'text-white') }}
+                        {{ macros.bg_element('blue-gray', 'Blue Gray', 'text-white') }}
+                        {{ macros.bg_element('light-gray-azure', 'Light Gray Azure', 'text-white') }}
                     
                     </div>
                     

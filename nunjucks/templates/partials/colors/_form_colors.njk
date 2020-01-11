@@ -10,49 +10,38 @@
 					
 						{{ macros.page_section_heading(global_strings['colors']['sections'][24]['head'], global_strings['colors']['sections'][24]['subhead'], global_strings['colors']['sections'][24]['descrip']) }}
 
-						{% macro form_colors(classPartial, namePartial) %}
-						<div class="js-prism text-left mb-2">
-							<form>
-								<div class="form-group">
-									<label for="input-{{ classPartial }}" class="text-{{ classPartial }}">{{ namePartial }} Label</label>
-									<input type="text" class="form-control form-{{ classPartial }}" id="input-{{ classPartial }}" placeholder="{{ namePartial }} Input">
-								</div>
-							</form>
-						</div>
-						{% endmacro %}
+						{{ macros.form_colors('primary', 'Primary') }}
+						{{ macros.form_colors('secondary', 'Secondary') }}
+						{{ macros.form_colors('success', 'Success') }}
+						{{ macros.form_colors('danger', 'Danger') }}
+						{{ macros.form_colors('warning', 'Warning') }}
+						{{ macros.form_colors('info', 'Info') }}
+						{{ macros.form_colors('light', 'Light') }}
+						{{ macros.form_colors('dark', 'Dark') }}
 
-						{{ form_colors('primary', 'Primary') }}
-						{{ form_colors('secondary', 'Secondary') }}
-						{{ form_colors('success', 'Success') }}
-						{{ form_colors('danger', 'Danger') }}
-						{{ form_colors('warning', 'Warning') }}
-						{{ form_colors('info', 'Info') }}
-						{{ form_colors('light', 'Light') }}
-						{{ form_colors('dark', 'Dark') }}
+						{{ macros.form_colors('white', 'White') }}
+						{{ macros.form_colors('light-gray', 'Light Gray') }}
+						{{ macros.form_colors('gray', 'Gray') }}
+						{{ macros.form_colors('dark-gray', 'Dark Gray') }}
+						{{ macros.form_colors('black', 'Black') }}
 
-						{{ form_colors('white', 'White') }}
-						{{ form_colors('light-gray', 'Light Gray') }}
-						{{ form_colors('gray', 'Gray') }}
-						{{ form_colors('dark-gray', 'Dark Gray') }}
-						{{ form_colors('black', 'Black') }}
+						{{ macros.form_colors('red', 'Red') }}
+						{{ macros.form_colors('rose', 'Rose') }}
+						{{ macros.form_colors('magenta', 'Magenta') }}
+						{{ macros.form_colors('violet', 'Violet') }}
+						{{ macros.form_colors('blue', 'Blue') }}
+						{{ macros.form_colors('azure', 'Azure') }}
+						{{ macros.form_colors('cyan', 'Cyan') }}
+						{{ macros.form_colors('spring-green', 'Spring Green') }}
+						{{ macros.form_colors('green', 'Green') }}
+						{{ macros.form_colors('chartreuse', 'Chartreuse') }}
+						{{ macros.form_colors('yellow', 'Yellow') }}
+						{{ macros.form_colors('orange', 'Orange') }}
 
-						{{ form_colors('red', 'Red') }}
-						{{ form_colors('rose', 'Rose') }}
-						{{ form_colors('magenta', 'Magenta') }}
-						{{ form_colors('violet', 'Violet') }}
-						{{ form_colors('blue', 'Blue') }}
-						{{ form_colors('azure', 'Azure') }}
-						{{ form_colors('cyan', 'Cyan') }}
-						{{ form_colors('spring-green', 'Spring Green') }}
-						{{ form_colors('green', 'Green') }}
-						{{ form_colors('chartreuse', 'Chartreuse') }}
-						{{ form_colors('yellow', 'Yellow') }}
-						{{ form_colors('orange', 'Orange') }}
-
-						{{ form_colors('orange-gray', 'Orange Gray') }}
-						{{ form_colors('dark-gray-orange', 'Dark Gray Orange') }}
-						{{ form_colors('blue-gray', 'Blue Gray') }}
-						{{ form_colors('light-gray-azure', 'Light Gray Azure') }}
+						{{ macros.form_colors('orange-gray', 'Orange Gray') }}
+						{{ macros.form_colors('dark-gray-orange', 'Dark Gray Orange') }}
+						{{ macros.form_colors('blue-gray', 'Blue Gray') }}
+						{{ macros.form_colors('light-gray-azure', 'Light Gray Azure') }}
 						
 					</div>
 					

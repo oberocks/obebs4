@@ -9,90 +9,78 @@
 					<div id="{{ global_strings['colors']['sections'][17]['id'] }}" class="col-md-6 pb-5">
 					
 						{{ macros.page_section_heading(global_strings['colors']['sections'][17]['head'], global_strings['colors']['sections'][17]['subhead'], global_strings['colors']['sections'][17]['descrip']) }}
-
-                        {% macro disabled_button_colors(classPartial, namePartial) %}
-                        <div class="js-prism d-flex justify-content-around mb-2">
-                            <button type="button" class="btn btn-{{ classPartial }}" disabled>{{ namePartial }}</button>
-                        </div>
-                        {% endmacro %}
 						
-						{{ disabled_button_colors('primary', 'Primary') }}
-						{{ disabled_button_colors('secondary', 'Secondary') }}
-						{{ disabled_button_colors('success', 'Success') }}
-						{{ disabled_button_colors('danger', 'Danger') }}
-						{{ disabled_button_colors('warning', 'Warning') }}
-						{{ disabled_button_colors('info', 'Info') }}
-						{{ disabled_button_colors('light', 'Light') }}
-						{{ disabled_button_colors('dark', 'Dark') }}
+						{{ macros.button_disabled_colors('primary', 'Primary') }}
+						{{ macros.button_disabled_colors('secondary', 'Secondary') }}
+						{{ macros.button_disabled_colors('success', 'Success') }}
+						{{ macros.button_disabled_colors('danger', 'Danger') }}
+						{{ macros.button_disabled_colors('warning', 'Warning') }}
+						{{ macros.button_disabled_colors('info', 'Info') }}
+						{{ macros.button_disabled_colors('light', 'Light') }}
+						{{ macros.button_disabled_colors('dark', 'Dark') }}
 
-						{{ disabled_button_colors('white', 'White') }}
-						{{ disabled_button_colors('light-gray', 'Light Gray') }}
-						{{ disabled_button_colors('gray', 'Gray') }}
-						{{ disabled_button_colors('dark-gray', 'Dark Gray') }}
-						{{ disabled_button_colors('black', 'Black') }}
+						{{ macros.button_disabled_colors('white', 'White') }}
+						{{ macros.button_disabled_colors('light-gray', 'Light Gray') }}
+						{{ macros.button_disabled_colors('gray', 'Gray') }}
+						{{ macros.button_disabled_colors('dark-gray', 'Dark Gray') }}
+						{{ macros.button_disabled_colors('black', 'Black') }}
 
-						{{ disabled_button_colors('red', 'Red') }}
-						{{ disabled_button_colors('rose', 'Rose') }}
-						{{ disabled_button_colors('magenta', 'Magenta') }}
-						{{ disabled_button_colors('violet', 'Violet') }}
-						{{ disabled_button_colors('blue', 'Blue') }}
-						{{ disabled_button_colors('azure', 'Azure') }}
-						{{ disabled_button_colors('cyan', 'Cyan') }}
-						{{ disabled_button_colors('spring-green', 'Spring Green') }}
-						{{ disabled_button_colors('green', 'Green') }}
-						{{ disabled_button_colors('chartreuse', 'Chartreuse') }}
-						{{ disabled_button_colors('yellow', 'Yellow') }}
-						{{ disabled_button_colors('orange', 'Orange') }}
+						{{ macros.button_disabled_colors('red', 'Red') }}
+						{{ macros.button_disabled_colors('rose', 'Rose') }}
+						{{ macros.button_disabled_colors('magenta', 'Magenta') }}
+						{{ macros.button_disabled_colors('violet', 'Violet') }}
+						{{ macros.button_disabled_colors('blue', 'Blue') }}
+						{{ macros.button_disabled_colors('azure', 'Azure') }}
+						{{ macros.button_disabled_colors('cyan', 'Cyan') }}
+						{{ macros.button_disabled_colors('spring-green', 'Spring Green') }}
+						{{ macros.button_disabled_colors('green', 'Green') }}
+						{{ macros.button_disabled_colors('chartreuse', 'Chartreuse') }}
+						{{ macros.button_disabled_colors('yellow', 'Yellow') }}
+						{{ macros.button_disabled_colors('orange', 'Orange') }}
 
-						{{ disabled_button_colors('orange-gray', 'Orange Gray') }}
-						{{ disabled_button_colors('dark-gray-orange', 'Dark Gray Orange') }}
-						{{ disabled_button_colors('blue-gray', 'Blue Gray') }}
-						{{ disabled_button_colors('light-gray-azure', 'Light Gray Azure') }}
+						{{ macros.button_disabled_colors('orange-gray', 'Orange Gray') }}
+						{{ macros.button_disabled_colors('dark-gray-orange', 'Dark Gray Orange') }}
+						{{ macros.button_disabled_colors('blue-gray', 'Blue Gray') }}
+						{{ macros.button_disabled_colors('light-gray-azure', 'Light Gray Azure') }}
 						
 					</div>
 					
 					<div id="{{ global_strings['colors']['sections'][18]['id'] }}" class="col-md-6 pb-5">
 					
 						{{ macros.page_section_heading(global_strings['colors']['sections'][18]['head'], global_strings['colors']['sections'][18]['subhead'], global_strings['colors']['sections'][18]['descrip']) }}
-
-                        {% macro disabled_button_outline_colors(classPartial, namePartial) %}
-                        <div class="js-prism d-flex justify-content-around mb-2">
-                            <button type="button" class="btn btn-outline-{{ classPartial }}" disabled>{{ namePartial }}</button>
-                        </div>
-                        {% endmacro %}
 						
-						{{ disabled_button_outline_colors('primary', 'Primary') }}
-						{{ disabled_button_outline_colors('secondary', 'Secondary') }}
-						{{ disabled_button_outline_colors('success', 'Success') }}
-						{{ disabled_button_outline_colors('danger', 'Danger') }}
-						{{ disabled_button_outline_colors('warning', 'Warning') }}
-						{{ disabled_button_outline_colors('info', 'Info') }}
-						{{ disabled_button_outline_colors('light', 'Light') }}
-						{{ disabled_button_outline_colors('dark', 'Dark') }}
+						{{ macros.button_disabled_outline_colors('primary', 'Primary') }}
+						{{ macros.button_disabled_outline_colors('secondary', 'Secondary') }}
+						{{ macros.button_disabled_outline_colors('success', 'Success') }}
+						{{ macros.button_disabled_outline_colors('danger', 'Danger') }}
+						{{ macros.button_disabled_outline_colors('warning', 'Warning') }}
+						{{ macros.button_disabled_outline_colors('info', 'Info') }}
+						{{ macros.button_disabled_outline_colors('light', 'Light') }}
+						{{ macros.button_disabled_outline_colors('dark', 'Dark') }}
 
-						{{ disabled_button_outline_colors('white', 'White') }}
-						{{ disabled_button_outline_colors('light-gray', 'Light Gray') }}
-						{{ disabled_button_outline_colors('gray', 'Gray') }}
-						{{ disabled_button_outline_colors('dark-gray', 'Dark Gray') }}
-						{{ disabled_button_outline_colors('black', 'Black') }}
+						{{ macros.button_disabled_outline_colors('white', 'White') }}
+						{{ macros.button_disabled_outline_colors('light-gray', 'Light Gray') }}
+						{{ macros.button_disabled_outline_colors('gray', 'Gray') }}
+						{{ macros.button_disabled_outline_colors('dark-gray', 'Dark Gray') }}
+						{{ macros.button_disabled_outline_colors('black', 'Black') }}
 
-						{{ disabled_button_outline_colors('red', 'Red') }}
-						{{ disabled_button_outline_colors('rose', 'Rose') }}
-						{{ disabled_button_outline_colors('magenta', 'Magenta') }}
-						{{ disabled_button_outline_colors('violet', 'Violet') }}
-						{{ disabled_button_outline_colors('blue', 'Blue') }}
-						{{ disabled_button_outline_colors('azure', 'Azure') }}
-						{{ disabled_button_outline_colors('cyan', 'Cyan') }}
-						{{ disabled_button_outline_colors('spring-green', 'Spring Green') }}
-						{{ disabled_button_outline_colors('green', 'Green') }}
-						{{ disabled_button_outline_colors('chartreuse', 'Chartreuse') }}
-						{{ disabled_button_outline_colors('yellow', 'Yellow') }}
-						{{ disabled_button_outline_colors('orange', 'Orange') }}
+						{{ macros.button_disabled_outline_colors('red', 'Red') }}
+						{{ macros.button_disabled_outline_colors('rose', 'Rose') }}
+						{{ macros.button_disabled_outline_colors('magenta', 'Magenta') }}
+						{{ macros.button_disabled_outline_colors('violet', 'Violet') }}
+						{{ macros.button_disabled_outline_colors('blue', 'Blue') }}
+						{{ macros.button_disabled_outline_colors('azure', 'Azure') }}
+						{{ macros.button_disabled_outline_colors('cyan', 'Cyan') }}
+						{{ macros.button_disabled_outline_colors('spring-green', 'Spring Green') }}
+						{{ macros.button_disabled_outline_colors('green', 'Green') }}
+						{{ macros.button_disabled_outline_colors('chartreuse', 'Chartreuse') }}
+						{{ macros.button_disabled_outline_colors('yellow', 'Yellow') }}
+						{{ macros.button_disabled_outline_colors('orange', 'Orange') }}
 
-						{{ disabled_button_outline_colors('orange-gray', 'Orange Gray') }}
-						{{ disabled_button_outline_colors('dark-gray-orange', 'Dark Gray Orange') }}
-						{{ disabled_button_outline_colors('blue-gray', 'Blue Gray') }}
-						{{ disabled_button_outline_colors('light-gray-azure', 'Light Gray Azure') }}
+						{{ macros.button_disabled_outline_colors('orange-gray', 'Orange Gray') }}
+						{{ macros.button_disabled_outline_colors('dark-gray-orange', 'Dark Gray Orange') }}
+						{{ macros.button_disabled_outline_colors('blue-gray', 'Blue Gray') }}
+						{{ macros.button_disabled_outline_colors('light-gray-azure', 'Light Gray Azure') }}
 						
 					</div>
 					

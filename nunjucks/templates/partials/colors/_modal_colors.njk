@@ -16,95 +16,40 @@
                 <div class="row justify-content-center">
 
                     <div class="col-md-6 pb-5">
-                        
-                        {% macro modal_colors(titlePart, classPart, mainTxtClass, closeClass, borderClass) %}
-                        <div class="js-prism-fa prism-hidden mb-2" style="cursor: help;">
-                            <!-- Modal Trigger -->
-                            <button type="button" class="btn btn-{{ classPart }}" data-toggle="modal" data-target="#modal-{{ classPart }}">{{ titlePart }} Modal</button>
 
-                            <!-- Modal Markup -->
-                            <div class="modal fade" id="modal-{{ classPart }}" tabindex="-1" role="dialog" aria-labelledby="modal-{{ classPart }}-title" aria-hidden="true">
-                                <div class="modal-dialog" role="document">
-                                    <div class="modal-content bg-{{ classPart }}{{ mainTxtClass }}">
-                                        <div class="modal-header border-0">
-                                            <h5 class="modal-title" id="modal-{{ classPart }}-title">{{ titlePart }} Modal</h5>
-                                            <button type="button" class="close{{ closeClass }}" data-dismiss="modal" aria-label="Close">
-                                                <span aria-hidden="true">&times;</span>
-                                            </button>
-                                        </div>
-                                        <div class="modal-body text-left border-top border-bottom{{ borderClass }} opacity-70">
-                                            <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque egestas nulla at mauris malesuada viverra. Aenean consequat ante ipsum, quis imperdiet ipsum fermentum vitae. Vivamus consectetur metus sit amet justo maximus, non volutpat nunc sollicitudin. Vivamus vel pharetra ex, eget rhoncus neque. Aenean at mollis lorem, et dapibus odio.</p>
-                                        </div>
-                                        <div class="modal-footer border-0">
-                                            <button type="button" class="btn btn-{{ classPart }}" data-dismiss="modal">CLOSE</button>
-                                            <button type="button" class="btn btn-{{ classPart }}">SAVE</button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <pre>
-                            <code class="language-html line-numbers">
-                                &lt;!-- Modal Trigger --&gt;
-                                &lt;button type="button" class="btn btn-{{ classPart }}" data-toggle="modal" data-target="#modal-{{ classPart }}"&gt;{{ titlePart }} Modal&lt;/button&gt;
-
-                                &lt;!-- Modal Markup --&gt;
-                                &lt;div class="modal fade" id="modal-{{ classPart }}" tabindex="-1" role="dialog" aria-labelledby="modal-{{ classPart }}-title" aria-hidden="true"&gt;
-                                    &lt;div class="modal-dialog" role="document"&gt;
-                                        &lt;div class="modal-content bg-{{ classPart }}{{ mainTxtClass }}"&gt;
-                                            &lt;div class="modal-header border-0"&gt;
-                                                &lt;h5 class="modal-title" id="modal-{{ classPart }}-title"&gt;{{ titlePart }} Modal&lt;/h5&gt;
-                                                &lt;button type="button" class="close{{ closeClass }}" data-dismiss="modal" aria-label="Close"&gt;
-                                                    &lt;span aria-hidden="true"&gt;&times;&lt;/span&gt;
-                                                &lt;/button&gt;
-                                            &lt;/div&gt;
-                                            &lt;div class="modal-body text-left border-top border-bottom{{ borderClass }} opacity-70"&gt;
-                                                &lt;p class="mb-0"&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque egestas nulla at mauris malesuada viverra. Aenean consequat ante ipsum, quis imperdiet ipsum fermentum vitae. Vivamus consectetur metus sit amet justo maximus, non volutpat nunc sollicitudin. Vivamus vel pharetra ex, eget rhoncus neque. Aenean at mollis lorem, et dapibus odio.&lt;/p&gt;
-                                            &lt;/div&gt;
-                                            &lt;div class="modal-footer border-0"&gt;
-                                                &lt;button type="button" class="btn btn-{{ classPart }}" data-dismiss="modal"&gt;CLOSE&lt;/button&gt;
-                                                &lt;button type="button" class="btn btn-{{ classPart }}"&gt;SAVE&lt;/button&gt;
-                                            &lt;/div&gt;
-                                        &lt;/div&gt;
-                                    &lt;/div&gt;
-                                &lt;/div&gt;
-                            </code>
-                        </pre>
-                        {% endmacro %}
-
-                        {{ modal_colors('Primary', 'primary', ' text-white', ' text-light', ' border-dark') }}
-                        {{ modal_colors('Secondary', 'secondary', ' text-white', ' text-light', ' border-dark') }}
-                        {{ modal_colors('Success', 'success', '', '', '') }}
-                        {{ modal_colors('Danger', 'danger', ' text-white', ' text-light', ' border-dark') }}
-                        {{ modal_colors('Warning', 'warning', '', '', '') }}
-                        {{ modal_colors('Info', 'info', '', '', '') }}
-                        {{ modal_colors('Light', 'light', '', '', '') }}
-                        {{ modal_colors('Dark', 'dark', ' text-white', ' text-light', ' border-black') }}
+                        {{ macros.modal_colors('Primary', 'primary', ' text-white', ' text-light', ' border-dark') }}
+                        {{ macros.modal_colors('Secondary', 'secondary', ' text-white', ' text-light', ' border-dark') }}
+                        {{ macros.modal_colors('Success', 'success', '', '', '') }}
+                        {{ macros.modal_colors('Danger', 'danger', ' text-white', ' text-light', ' border-dark') }}
+                        {{ macros.modal_colors('Warning', 'warning', '', '', '') }}
+                        {{ macros.modal_colors('Info', 'info', '', '', '') }}
+                        {{ macros.modal_colors('Light', 'light', '', '', '') }}
+                        {{ macros.modal_colors('Dark', 'dark', ' text-white', ' text-light', ' border-black') }}
 
                         {% if obe_settings['enable-obebs4-text-wheel-colors'] === 'true' %}
                         
-                            {{ modal_colors('White', 'white', '', '', '') }}
-                            {{ modal_colors('Light Gray', 'light-gray', '', '', '') }}
-                            {{ modal_colors('Gray', 'gray', ' text-white', ' text-light', ' border-dark') }}
-                            {{ modal_colors('Dark Gray', 'dark-gray', ' text-white', ' text-light', ' border-dark') }}
-                            {{ modal_colors('Black', 'black', ' text-white', ' text-light', ' border-gray') }}
+                            {{ macros.modal_colors('White', 'white', '', '', '') }}
+                            {{ macros.modal_colors('Light Gray', 'light-gray', '', '', '') }}
+                            {{ macros.modal_colors('Gray', 'gray', ' text-white', ' text-light', ' border-dark') }}
+                            {{ macros.modal_colors('Dark Gray', 'dark-gray', ' text-white', ' text-light', ' border-dark') }}
+                            {{ macros.modal_colors('Black', 'black', ' text-white', ' text-light', ' border-gray') }}
 
-                            {{ modal_colors('Red', 'red', ' text-white', ' text-light', ' border-dark') }}
-                            {{ modal_colors('Rose', 'rose', ' text-white', ' text-light', ' border-dark') }}
-                            {{ modal_colors('Magenta', 'magenta', ' text-white', ' text-light', ' border-dark') }}
-                            {{ modal_colors('Violet', 'violet', ' text-white', ' text-light', ' border-dark') }}
-                            {{ modal_colors('Blue', 'blue', ' text-white', ' text-light', ' border-dark') }}
-                            {{ modal_colors('Azure', 'azure', ' text-white', ' text-light', ' border-dark') }}
-                            {{ modal_colors('Cyan', 'cyan', '', '', '') }}
-                            {{ modal_colors('Spring Green', 'spring-green', '', '', '') }}
-                            {{ modal_colors('Green', 'green', '', '', '') }}
-                            {{ modal_colors('Chartreuse', 'chartreuse', '', '', '') }}
-                            {{ modal_colors('Yellow', 'yellow', '', '', '') }}
-                            {{ modal_colors('Orange', 'orange', '', '', '') }}
-                            {{ modal_colors('Orange Gray', 'orange-gray', ' text-white', ' text-light', ' border-dark') }}
-                            {{ modal_colors('Dark Gray Orange', 'dark-gray-orange', ' text-white', ' text-light', ' border-dark') }}
-                            {{ modal_colors('Blue Gray', 'blue-gray', ' text-white', ' text-light', ' border-dark') }}
-                            {{ modal_colors('Light Gray Azure', 'light-gray-azure', '', '', '') }}
+                            {{ macros.modal_colors('Red', 'red', ' text-white', ' text-light', ' border-dark') }}
+                            {{ macros.modal_colors('Rose', 'rose', ' text-white', ' text-light', ' border-dark') }}
+                            {{ macros.modal_colors('Magenta', 'magenta', ' text-white', ' text-light', ' border-dark') }}
+                            {{ macros.modal_colors('Violet', 'violet', ' text-white', ' text-light', ' border-dark') }}
+                            {{ macros.modal_colors('Blue', 'blue', ' text-white', ' text-light', ' border-dark') }}
+                            {{ macros.modal_colors('Azure', 'azure', ' text-white', ' text-light', ' border-dark') }}
+                            {{ macros.modal_colors('Cyan', 'cyan', '', '', '') }}
+                            {{ macros.modal_colors('Spring Green', 'spring-green', '', '', '') }}
+                            {{ macros.modal_colors('Green', 'green', '', '', '') }}
+                            {{ macros.modal_colors('Chartreuse', 'chartreuse', '', '', '') }}
+                            {{ macros.modal_colors('Yellow', 'yellow', '', '', '') }}
+                            {{ macros.modal_colors('Orange', 'orange', '', '', '') }}
+                            {{ macros.modal_colors('Orange Gray', 'orange-gray', ' text-white', ' text-light', ' border-dark') }}
+                            {{ macros.modal_colors('Dark Gray Orange', 'dark-gray-orange', ' text-white', ' text-light', ' border-dark') }}
+                            {{ macros.modal_colors('Blue Gray', 'blue-gray', ' text-white', ' text-light', ' border-dark') }}
+                            {{ macros.modal_colors('Light Gray Azure', 'light-gray-azure', '', '', '') }}
 
                         {% endif %}
 

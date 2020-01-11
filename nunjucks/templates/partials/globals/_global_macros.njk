@@ -1,11 +1,282 @@
 <!-- _global_macros.njk -->
 
-{%- macro page_section_heading(headline, subline, description) %}
-    <h1>{{ headline }}</h1>
-    <div class="lead">{{ subline }}</div>
-    <hr />
-    <p class="description-text text-muted"><em>{{ description }}</em></p>
-    <hr/>
+
+
+{%- macro alert_colors(classPartial, namePartial) %}
+<div class="js-prism">
+    <div class="alert alert-{{ classPartial }} alert-dismissible mb-2 fade show text-left" role="alert">
+        <h4 class="alert-heading">{{ namePartial }} Alert</h4>
+        <hr />
+        <p>This is an example alert component with <a href="#" class="alert-link">an example link</a>! You can use this to display important information to a user in a way that visually stands out.</p>
+        <hr />
+        <p class="mb-0">Note, you can use margin utilities to keep things tidy.</p>
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+    </div>
+</div>
+{%- endmacro %}
+
+
+
+{%- macro alert_colors_inv(classPartial, namePartial) %}
+<div class="js-prism">
+    <div class="alert alert-{{ classPartial }}-inversed alert-dismissible mb-2 fade show text-left" role="alert">
+        <h4 class="alert-heading">{{ namePartial }} Alert</h4>
+        <hr />
+        <p>This is an example alert component with <a href="#" class="alert-link">an example link</a>! You can use this to display important information to a user in a way that visually stands out.</p>
+        <hr />
+        <p class="mb-0">Note, you can use margin utilities to keep things tidy.</p>
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+    </div>
+</div>
+{%- endmacro %}
+
+
+
+{%- macro align_items_classes(string) %}
+<tr>
+    <th scope="row" class="bg-dark text-light border-light"><samp>.align-items-{{ string }}</samp></th>
+    <td><samp>.align-items-sm-{{ string }}</samp></td>
+    <td><samp>.align-items-md-{{ string }}</samp></td>
+    <td><samp>.align-items-lg-{{ string }}</samp></td>
+    <td><samp>.align-items-xl-{{ string }}</samp></td>
+</tr>
+{%- endmacro %}
+
+
+
+{%- macro align_self_classes(string) %}
+<tr>
+    <th scope="row" class="bg-dark text-light border-light"><samp>.align-self-{{ string }}</samp></th>
+    <td><samp>.align-self-sm-{{ string }}</samp></td>
+    <td><samp>.align-self-md-{{ string }}</samp></td>
+    <td><samp>.align-self-lg-{{ string }}</samp></td>
+    <td><samp>.align-self-xl-{{ string }}</samp></td>
+</tr>
+{%- endmacro %}
+
+
+
+{%- macro badge_colors(classPartial, namePartial) %}
+<div class="js-prism mb-2">
+    {{ namePartial }} <span class="badge badge-{{ classPartial }}">10</span>
+</div>
+{%- endmacro %}
+
+
+
+{%- macro badge_colors_inv(colorPartial, namePartial, textPartial, badgePartial) %}
+<div class="js-prism mb-2">
+    <div class="d-flex flex-row justify-content-between align-items-center bg-{{ colorPartial }} text-{{ textPartial }} py-1 px-2">
+        <span>{{ namePartial }}</span>
+        <span class="badge badge-{{ badgePartial }} text-{{ colorPartial }}">10</span>
+    </div>
+</div>
+{%- endmacro %}
+
+
+
+{%- macro bg_2col_grad(classPartial, namePartial) %}
+<div class="js-prism mb-2">
+    <div class="bg-gradient-{{ classPartial }}-vertical">{{ namePartial }} Vertical</div>
+</div>
+{%- endmacro %}
+
+
+
+{%- macro bg_2col_grad_diag_down(classPartial, namePartial) %}
+<div class="js-prism mb-2">
+    <div class="bg-gradient-{{ classPartial }}-diagonal-down">{{ namePartial }} Diagonal Down</div>
+</div>
+{%- endmacro %}
+
+
+
+{%- macro bg_2col_grad_diag_up(classPartial, namePartial) %}
+<div class="js-prism mb-2">
+    <div class="bg-gradient-{{ classPartial }}-diagonal-up">{{ namePartial }} Diagonal Up</div>
+</div>
+{%- endmacro %}
+
+
+
+{%- macro bg_2col_grad_horiz(classPartial, namePartial) %}
+<div class="js-prism mb-2">
+    <div class="bg-gradient-{{ classPartial }}-horizontal">{{ namePartial }} Horizontal</div>
+</div>
+{%- endmacro %}
+
+
+
+{%- macro bg_2col_grad_radial(classPartial, namePartial) %}
+<div class="js-prism mb-2">
+    <div class="bg-gradient-{{ classPartial }}-radial">{{ namePartial }} Radial</div>
+</div>
+{%- endmacro %}
+
+
+
+{%- macro bg_3col_grad(classPartial, namePartial) %}
+<div class="js-prism mb-2">
+    <div class="bg-gradient-{{ classPartial }}-vertical">{{ namePartial }} Vertical</div>
+</div>
+{%- endmacro %}
+
+
+
+{%- macro bg_3col_grad_diag_down(classPartial, namePartial) %}
+<div class="js-prism mb-2">
+    <div class="bg-gradient-{{ classPartial }}-diagonal-down">{{ namePartial }} Diagonal Down</div>
+</div>
+{%- endmacro %}
+
+
+
+{%- macro bg_3col_grad_diag_up(classPartial, namePartial) %}
+<div class="js-prism mb-2">
+    <div class="bg-gradient-{{ classPartial }}-diagonal-up">{{ namePartial }} Diagonal Up</div>
+</div>
+{%- endmacro %}
+
+
+
+{%- macro bg_3col_grad_horiz(classPartial, namePartial) %}
+<div class="js-prism mb-2">
+    <div class="bg-gradient-{{ classPartial }}-horizontal">{{ namePartial }} Horizontal</div>
+</div>
+{%- endmacro %}
+
+
+
+{%- macro bg_3col_grad_radial(classPartial, namePartial) %}
+<div class="js-prism mb-2">
+    <div class="bg-gradient-{{ classPartial }}-radial">{{ namePartial }} Radial</div>
+</div>
+{%- endmacro %}
+
+
+
+{%- macro bg_element(classPartial, namePartial, textColorClass) %}
+<div class="js-prism mb-2">
+    <div class="bg-{{ classPartial }} {{textColorClass}}">{{ namePartial }} Background</div>
+</div>
+{%- endmacro %}
+
+
+
+{%- macro bg_gradient(classPartial, namePartial) %}
+<div class="js-prism mb-2">
+    <div class="bg-gradient-{{ classPartial }}">{{ namePartial }} Gradient</div>
+</div>
+{%- endmacro %}
+
+
+
+{%- macro bg_gradient_bl(classPartial, namePartial) %}
+<div class="js-prism mb-2">
+    <div class="bg-gradient-{{ classPartial }}-bottom-left">{{ namePartial }} Bottom Left Gradient</div>
+</div>
+{%- endmacro %}
+
+
+
+{%- macro bg_gradient_br(classPartial, namePartial) %}
+<div class="js-prism mb-2">
+    <div class="bg-gradient-{{ classPartial }}-bottom-right">{{ namePartial }} Bottom Right Gradient</div>
+</div>
+{%- endmacro %}
+
+
+
+{%- macro bg_gradient_horiz(classPartial, namePartial) %}
+<div class="js-prism mb-2">
+    <div class="bg-gradient-{{ classPartial }}-left">{{ namePartial }} Left Gradient</div>
+</div>
+{%- endmacro %}
+
+
+
+{%- macro bg_gradient_horiz_rev(classPartial, namePartial) %}
+<div class="js-prism mb-2">
+    <div class="bg-gradient-{{ classPartial }}-right">{{ namePartial }} Right Gradient</div>
+</div>
+{%- endmacro %}
+
+
+
+{%- macro bg_gradient_radial(classPartial, namePartial) %}
+<div class="js-prism mb-2">
+    <div class="bg-gradient-{{ classPartial }}-radial">{{ namePartial }} Radial Gradient</div>
+</div>
+{%- endmacro %}
+
+
+
+{%- macro bg_gradient_radial_rev(classPartial, namePartial) %}
+<div class="js-prism mb-2">
+    <div class="bg-gradient-{{ classPartial }}-radial-reversed">{{ namePartial }} Reversed Radial</div>
+</div>
+{%- endmacro %}
+
+
+
+{%- macro bg_gradient_rev(classPartial, namePartial) %}
+<div class="js-prism mb-2">
+    <div class="bg-gradient-{{ classPartial }}-reversed">{{ namePartial }} Reversed Gradient</div>
+</div>
+{%- endmacro %}
+
+
+
+{%- macro bg_gradient_tl(classPartial, namePartial) %}
+<div class="js-prism mb-2">
+    <div class="bg-gradient-{{ classPartial }}-top-left">{{ namePartial }} Top Left Gradient</div>
+</div>
+{%- endmacro %}
+
+
+
+{%- macro bg_gradient_tr(classPartial, namePartial) %}
+<div class="js-prism mb-2">
+    <div class="bg-gradient-{{ classPartial }}-top-right">{{ namePartial }} Top Right Gradient</div>
+</div>
+{%- endmacro %}
+
+
+
+{%- macro bg_variants(classPartial, namePartial) %}
+<div class="col-md-6 mb-5">
+    <h4>{{ namePartial }} Variants</h4>
+    <div class="js-prism">
+        <div class="bg-{{ classPartial }}-50">50 {{ namePartial }} Background</div>
+    </div>
+    <div class="js-prism">
+        <div class="bg-{{ classPartial }}-100">100 {{ namePartial }} Background</div>
+    </div>
+    <div class="js-prism">
+        <div class="bg-{{ classPartial }}-200">200 {{ namePartial }} Background</div>
+    </div>
+    <div class="js-prism">
+        <div class="bg-{{ classPartial }}-300">300 {{ namePartial }} Background</div>
+    </div>
+    <div class="js-prism">
+        <div class="bg-{{ classPartial }}-400">400 {{ namePartial }} Background</div>
+    </div>
+    <div class="js-prism">
+        <div class="bg-{{ classPartial }}-500">500 {{ namePartial }} Background</div>
+    </div>
+    <div class="js-prism">
+        <div class="bg-{{ classPartial }}-600">600 {{ namePartial }} Background</div>
+    </div>
+    <div class="js-prism">
+        <div class="bg-{{ classPartial }}-700">700 {{ namePartial }} Background</div>
+    </div>
+    <div class="js-prism">
+        <div class="bg-{{ classPartial }}-800">800 {{ namePartial }} Background</div>
+    </div>
+    <div class="js-prism">
+        <div class="bg-{{ classPartial }}-900">900 {{ namePartial }} Background</div>
+    </div>
+</div>
 {%- endmacro %}
 
 
@@ -51,6 +322,1450 @@
 
 
 
+{%- macro border_colors(classPartial, namePartial) %}
+<div class="js-prism mb-2">
+    <div class="border border-{{ classPartial }}">{{ namePartial }} Border</div>
+</div>
+{%- endmacro %}
+
+
+
+{%- macro border_width(number) %}
+<div class="js-prism mb-2">
+    <div class="border border-width-{{ number }}">Border Width {{ number }}</div>
+</div>
+{%- endmacro %}
+
+
+
+{%- macro border_variants(classPartial, namePartial) %}
+<div class="col-md-6 mb-5">
+    <h4>{{ namePartial }} Variants</h4>
+    <div class="js-prism mb-2">
+        <div class="border border-{{ classPartial }}-50">{{ namePartial }} 50 Border</div>
+    </div>
+    <div class="js-prism mb-2">
+        <div class="border border-{{ classPartial }}-100">{{ namePartial }} 100 Border</div>
+    </div>
+    <div class="js-prism mb-2">
+        <div class="border border-{{ classPartial }}-200">{{ namePartial }} 200 Border</div>
+    </div>
+    <div class="js-prism mb-2">
+        <div class="border border-{{ classPartial }}-300">{{ namePartial }} 300 Border</div>
+    </div>
+    <div class="js-prism mb-2">
+        <div class="border border-{{ classPartial }}-400">{{ namePartial }} 400 Border</div>
+    </div>
+    <div class="js-prism mb-2">
+        <div class="border border-{{ classPartial }}-500">{{ namePartial }} 500 Border</div>
+    </div>
+    <div class="js-prism mb-2">
+        <div class="border border-{{ classPartial }}-600">{{ namePartial }} 600 Border</div>
+    </div>
+    <div class="js-prism mb-2">
+        <div class="border border-{{ classPartial }}-700">{{ namePartial }} 700 Border</div>
+    </div>
+    <div class="js-prism mb-2">
+        <div class="border border-{{ classPartial }}-800">{{ namePartial }} 800 Border</div>
+    </div>
+    <div class="js-prism mb-2">
+        <div class="border border-{{ classPartial }}-900">{{ namePartial }} 900 Border</div>
+    </div>
+</div>
+{%- endmacro %}
+
+
+
+{%- macro box_shadow(classPartial, namePartial) %}
+<div class="js-prism mb-2">
+    <div class="box-shadow-{{ classPartial }}">{{ namePartial }} Box Shadow</div>
+</div>
+<div style="height: 20px;"></div>
+{%- endmacro %}
+
+
+
+{%- macro box_shadow_hover(classPartial, namePartial) %}
+<div class="js-prism mb-2">
+    <div class="box-shadow-{{ classPartial }} shadow-hover-down">{{ namePartial }} Shadow Down</div>
+</div>
+<div style="height: 20px;"></div>
+<div class="js-prism mb-2">
+    <div class="box-shadow-{{ classPartial }} shadow-hover-up">{{ namePartial }} Shadow Up</div>
+</div>
+<div style="height: 20px;"></div>
+{%- endmacro %}
+
+
+
+{%- macro brand_fonts(class, name) %}
+<div class="js-prism mb-2">
+    <h3 class="{{ class }}">Your {{ name }} Font</h3>
+    <p class="{{ class }}">No kidding, Lorenzo called off his trip to Mexico City just because they told him the conquistadors were extinct.</p>
+</div>
+{%- endmacro %}
+
+
+
+{%- macro button_colors(classPartial, namePartial) %}
+<div class="js-prism mb-2">
+    <button type="button" class="btn btn-{{ classPartial }}">{{ namePartial }}</button>
+</div>
+{%- endmacro %}
+
+
+
+{%- macro button_disabled_colors(classPartial, namePartial) %}
+<div class="js-prism d-flex justify-content-around mb-2">
+    <button type="button" class="btn btn-{{ classPartial }}" disabled>{{ namePartial }}</button>
+</div>
+{%- endmacro %}
+
+
+
+{%- macro button_disabled_outline_colors(classPartial, namePartial) %}
+<div class="js-prism d-flex justify-content-around mb-2">
+    <button type="button" class="btn btn-outline-{{ classPartial }}" disabled>{{ namePartial }}</button>
+</div>
+{%- endmacro %}
+
+
+
+{%- macro button_groups(label, alignmentClass, spacer = true) %}
+<label class="d-block font-weight-bold">{{ label }}</label>
+<div class="js-prism mb-2">
+    <div class="btn-toolbar{{ alignmentClass }}" role="toolbar" aria-label="Buttons Toolbar">
+        <div class="btn-group{% if spacer %} mr-2{% endif %}" role="group" aria-label="Toolbar Group One">
+            <button type="button" class="btn btn-primary">1</button>
+            <button type="button" class="btn btn-primary">2</button>
+            <button type="button" class="btn btn-primary">3</button>
+        </div>
+        <div class="btn-group" role="group" aria-label="Toolbar Group One">
+            <button type="button" class="btn btn-primary">4</button>
+            <button type="button" class="btn btn-primary">5</button>
+            <button type="button" class="btn btn-primary">6</button>
+        </div>
+    </div>
+</div>
+{%- endmacro %}
+
+
+
+{%- macro button_outline_colors(classPartial, namePartial) %}
+<div class="js-prism mb-2">
+    <button type="button" class="btn btn-outline-{{ classPartial }}">{{ namePartial }}</button>
+</div>
+{%- endmacro %}
+
+
+
+{%- macro button_sizes(classPartial, namePartial) %}
+<div class="js-prism mb-2">
+    <button type="button" class="btn btn-primary btn-{{ classPartial }}">{{ namePartial }} Button</button>
+</div>
+{%- endmacro %}
+
+
+
+{%- macro card_border_colors(name, borderClass, textClass) %}
+<div class="col-sm-6 pb-4">
+
+    <div class="js-prism mb-2">
+        <div class="card border-{{ borderClass }} text-{{ textClass }}">
+            <div class="card-header border-{{ borderClass }}">{{ name }} Card Header</div>
+            <div class="card-body">
+                <h5 class="card-title">{{ name }} Card Title</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            </div>
+            <div class="card-footer text-right border-{{ borderClass }}">
+                <small>{{ name }} Footer</small>
+            </div>
+        </div>
+    </div>
+
+</div>
+{%- endmacro %}
+
+
+
+{%- macro card_colors(name, bgClass, txtClass) %}
+<div class="col-sm-6 pb-4">
+
+    <div class="js-prism mb-2">
+        <div class="card text-{{ txtClass }} bg-{{ bgClass }}">
+            <div class="card-header">{{ name }} Card Heading</div>
+            <div class="card-body">
+                <h5 class="card-title">{{ name }} Card Title</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            </div>
+            <div class="card-footer text-right">
+                <small>{{ name }} Footer</small>
+            </div>
+        </div>
+    </div>
+
+</div>
+{%- endmacro %}
+
+
+
+{%- macro component_navs(headline, classPart, toggleVal) %}
+<h5 class="pt-4">Interactive {{ headline }} Component</h5>
+
+<div class="js-prism mb-2 text-left">
+    <ul class="nav nav-{{ classPart }}" id="{{ classPart }}-component" role="tablist">
+        <li class="nav-item">
+            <a class="nav-link active" id="{{ classPart }}-item-1" data-toggle="{{ toggleVal }}" href="#{{ classPart }}-item-1-content" role="tab" aria-controls="{{ classPart }}-item-1-content" aria-selected="true">Item 1</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" id="{{ classPart }}-item-2" data-toggle="{{ toggleVal }}" href="#{{ classPart }}-item-2-content" role="tab" aria-controls="{{ classPart }}-item-2-content" aria-selected="false">Item 2</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" id="{{ classPart }}-item-3" data-toggle="{{ toggleVal }}" href="#{{ classPart }}-item-3-content" role="tab" aria-controls="{{ classPart }}-item-3-content" aria-selected="false">Item 3</a>
+        </li>
+    </ul>
+    <div class="tab-content" id="{{ classPart }}-component-content">
+        <div class="tab-pane p-2 fade show active" id="{{ classPart }}-item-1-content" role="tabpanel" aria-labelledby="{{ classPart }}-item-1">{{ variables.laurem_1 }}</div>
+        <div class="tab-pane p-2 fade" id="{{ classPart }}-item-2-content" role="tabpanel" aria-labelledby="{{ classPart }}-item-2">{{ variables.laurem_2 }}</div>
+        <div class="tab-pane p-2 fade" id="{{ classPart }}-item-3-content" role="tabpanel" aria-labelledby="{{ classPart }}-item-3">{{ variables.laurem_3 }}</div>
+    </div>
+</div>
+{%- endmacro %}
+
+
+
+{%- macro display(number) %}
+<div class="js-prism mb-2">
+    <h{{ number }} class="display-{{ number }}">Display {{ number }}</h{{ number }}>
+</div>
+{%- endmacro %}
+
+
+
+{%- macro display_print_classes(string) %}
+<tr>
+    <th scope="row" class="bg-dark text-light border-light"><samp>.d-print-{{ string }}</samp></th>
+    <td><samp>.d-print-sm-{{ string }}</samp></td>
+    <td><samp>.d-print-md-{{ string }}</samp></td>
+    <td><samp>.d-print-lg-{{ string }}</samp></td>
+    <td><samp>.d-print-xl-{{ string }}</samp></td>
+</tr>
+{%- endmacro %}
+
+
+
+{%- macro display_responsive_classes(string) %}
+<tr>
+    <th scope="row" class="bg-dark text-light border-light"><samp>.d-{{ string }}</samp></th>
+    <td><samp>.d-sm-{{ string }}</samp></td>
+    <td><samp>.d-md-{{ string }}</samp></td>
+    <td><samp>.d-lg-{{ string }}</samp></td>
+    <td><samp>.d-xl-{{ string }}</samp></td>
+</tr>
+{%- endmacro %}
+
+
+
+{%- macro dropdown_colors(classPartial, namePartial) %}
+<div class="js-prism mb-2">
+    <div class="btn-group">
+        <button type="button" class="btn btn-{{ classPartial }} dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{ namePartial }} Dropdown</button>
+        <div class="dropdown-menu dropdown-menu-{{ classPartial }}">
+            <h6 class="dropdown-header">HEADING</h6>
+            <a class="dropdown-item" href="#">Standard Link</a>
+            <a class="dropdown-item" href="#">Standard Link</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item disabled" href="#">Disabled Link</a>
+            <a class="dropdown-item active" href="#">Active Link</a>
+        </div>
+    </div>
+</div>
+{%- endmacro %}
+
+
+
+{%- macro dropdown_items() %}
+<h6 class="dropdown-header">Dropdown header</h6>
+<a class="dropdown-item" href="#">Action Item</a>
+<a class="dropdown-item active" href="#">Active Item</a>
+<div class="dropdown-divider"></div>
+<span class="dropdown-item-text text-muted">Non-Interactive</span>
+<a class="dropdown-item disabled" href="#">Disabled Item</a>
+{%- endmacro %}
+
+
+
+{%- macro dropdown_navs(headline, classPart) %}
+<h5 class="pt-4">{{ headline }}</h5>
+
+<div class="js-prism mb-2 text-center">
+    <ul class="nav nav-{{ classPart }}">
+        <li class="nav-item">
+            <a class="nav-link active" href="#">Active</a>
+        </li>
+        <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Dropdown</a>
+            <div class="dropdown-menu">
+                <a class="dropdown-item" href="#">Action</a>
+                <a class="dropdown-item" href="#">Action 2</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#">Action 3</a>
+            </div>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link disabled" href="#">Disabled</a>
+        </li>
+    </ul>
+</div>
+{%- endmacro %}
+
+
+
+{%- macro element_height_utils(number, text) %}
+<div class="js-prism mb-2">
+    <div class="bg-light text-white w-100" style="height: 50px;">
+        <div class="bg-primary h-{{ number }}">{{ text }}</div>
+    </div>
+</div>
+{%- endmacro %}
+
+
+
+{%- macro element_width_utils(number, text) %}
+<div class="js-prism mb-2">
+    <div class="bg-light text-white w-100">
+        <div class="bg-primary w-{{ number }}">{{ text }}</div>
+    </div>
+</div>
+{%- endmacro %}
+
+
+
+{%- macro element_heights(number) %}
+<div class="js-prism mb-2">
+    <div class="bg-light text-white" style="height: 50px;">
+        <div class="bg-primary h-{{ number }}">{{ number }}%</div>
+    </div>
+</div>
+{%- endmacro %}
+
+
+
+{%- macro element_widths(number) %}
+<div class="js-prism mb-2">
+    <div class="bg-light text-white w-100">
+        <div class="bg-primary w-{{ number }}">{{ number }}%</div>
+    </div>
+</div>
+{%- endmacro %}
+
+
+
+{%- macro fa5_icon_checkboxes(headline, checkGroundClasses, iconClass, txtClass, inputName, animationClass) %}
+<div class="js-prism-fa prism-hidden mb-2 pt-4" style="cursor: help;">
+    <label class="d-block">{{ headline }} Label</label>
+    <div class="form-group mb-1">
+        <div class="obe-icon-checkbox d-flex flex-row justify-content-start align-items-start {{ animationClass }}">
+            <div class="obe-checkbox-icon {{ checkGroundClasses }}">
+                <i class="fas fa-sm fa-fw {{ iconClass }} {{ txtClass }}"></i>
+            </div>
+            <div class="pl-2">{{ headline }}</div>
+        </div>
+        <input type="hidden" name="{{ inputName }}" value="checked">
+    </div>
+</div>
+<pre>
+    <code class="language-html line-numbers">
+        &lt;label class="d-block"&gt;{{ headline }} Label&lt;/label&gt;
+        &lt;div class="form-group mb-1"&gt;
+            &lt;div class="obe-icon-checkbox d-flex flex-row justify-content-start align-items-start {{ animationClass }}"&gt;
+                &lt;div class="obe-checkbox-icon {{ checkGroundClasses }}"&gt;
+                    &lt;i class="fas fa-sm fa-fw {{ iconClass }} {{ txtClass }}"&gt;&lt;/i&gt;
+                &lt;/div&gt;
+                &lt;div class="pl-2"&gt;{{ headline }}&lt;/div&gt;
+            &lt;/div&gt;
+            &lt;input type="hidden" name="{{ inputName }}" value="checked"&gt;
+        &lt;/div&gt;
+    </code>
+</pre>
+{%- endmacro %}
+
+
+
+{%- macro fab_buttons(headline, classes) %}
+<label class="d-block font-weight-bold mb-2">{{ headline }}</label>
+
+<div class="js-prism mb-2">
+    <button type="button" class="btn btn-primary btn-xxs fab-xxs{{ classes }}">&copy;</button>
+</div>
+<div class="js-prism mb-2">
+    <button type="button" class="btn btn-primary btn-xs fab-xs{{ classes }}">&copy;</button>
+</div>
+<div class="js-prism mb-2">
+    <button type="button" class="btn btn-primary btn-sm fab-sm{{ classes }}">&copy;</button>
+</div>
+<div class="js-prism mb-2">
+    <button type="button" class="btn btn-primary btn-md fab-md{{ classes }}">&copy;</button>
+</div>
+<div class="js-prism mb-2">
+    <button type="button" class="btn btn-primary btn-lg fab-lg{{ classes }}">&copy;</button>
+</div>
+<div class="js-prism mb-2">
+    <button type="button" class="btn btn-primary btn-xl fab-xl{{ classes }}">&copy;</button>
+</div>
+<div class="js-prism mb-2">
+    <button type="button" class="btn btn-primary btn-xxl fab-xxl{{ classes }}">&copy;</button>
+</div>
+{%- endmacro %}
+
+
+
+{%- macro flex_alignment(heading, classPart) %}
+<h5 class="mt-4">{{ heading }}</h5>
+<div class="js-prism pb-2">
+    <div class="d-flex align-items-{{ classPart }} bg-light p-1" style="height: 90px;">
+        <div class="p-2 m-1 bg-primary text-light">ITEM 1</div>
+        <div class="p-2 m-1 bg-primary text-light">ITEM 2</div>
+        <div class="p-2 m-1 bg-primary text-light">ITEM 3</div>
+    </div>
+</div>
+{%- endmacro %}
+
+
+
+{%- macro flex_align_content(string) %}
+<tr>
+    <th scope="row" class="bg-dark text-light border-light"><samp>.align-content-{{ string }}</samp></th>
+    <td><samp>.align-content-sm-{{ string }}</samp></td>
+    <td><samp>.align-content-md-{{ string }}</samp></td>
+    <td><samp>.align-content-lg-{{ string }}</samp></td>
+    <td><samp>.align-content-xl-{{ string }}</samp></td>
+</tr>
+{%- endmacro %}
+
+
+
+{%- macro flex_align_content_classes(headline, string) %}
+<h5 class="mt-4">Align {{ headline }}:</h5>
+<div class="js-prism pb-2">
+    <div class="d-flex align-content-{{ string }} flex-wrap bg-light p-1" style="height: 200px;">
+        {%- for i in range(1, 9) %}
+        <div class="p-2 m-1 bg-primary text-light">ITEM {{ i }}</div>
+        {%- endfor %}
+    </div>
+</div>
+{%- endmacro %}
+
+
+
+{%- macro flex_align_self(heading, classPart) %}
+<h5 class="mt-4">{{ heading }}</h5>
+<div class="js-prism pb-2">
+    <div class="d-flex bg-light p-1" style="height: 90px;">
+        <div class="align-self-{{ classPart }} p-2 m-1 bg-primary text-light">ITEM 1</div>
+        <div class="align-self-{{ classPart }} p-2 m-1 bg-primary text-light">ITEM 2</div>
+        <div class="align-self-{{ classPart }} p-2 m-1 bg-primary text-light">ITEM 3</div>
+    </div>
+</div>
+{%- endmacro %}
+
+
+
+{%- macro flex_auto_margins(string) %}
+<tr>
+    <th scope="row" class="bg-dark text-light border-light"><samp>.{{ string }}-auto</samp></th>
+    <td><samp>.{{ string }}-sm-auto</samp></td>
+    <td><samp>.{{ string }}-md-auto</samp></td>
+    <td><samp>.{{ string }}-lg-auto</samp></td>
+    <td><samp>.{{ string }}-xl-auto</samp></td>
+</tr>
+{%- endmacro %}
+
+
+
+{%- macro flex_auto_margins_fixed_height(str1, str2, str3) %}
+<div class="js-prism pb-2">
+    <div class="d-flex align-items-center flex-column bg-light p-1" style="height: 200px;">
+        <div class="p-2 m-1 bg-primary text-light{{ str1 }}">ITEM 1</div>
+        <div class="p-2 m-1 bg-primary text-light{{ str2 }}">ITEM 2</div>
+        <div class="p-2 m-1 bg-primary text-light{{ str3 }}">ITEM 3</div>
+    </div>
+</div>
+{%- endmacro %}
+
+
+
+{%- macro flex_auto_margins_horiz(str1, str2, str3) %}
+<div class="js-prism pb-2">
+    <div class="d-flex bg-light p-1">
+        <div class="p-2 m-1 bg-primary text-light{{ str1 }}">ITEM 1</div>
+        <div class="p-2 m-1 bg-primary text-light{{ str2 }}">ITEM 2</div>
+        <div class="p-2 m-1 bg-primary text-light{{ str3 }}">ITEM 3</div>
+    </div>
+</div>
+{%- endmacro %}
+
+
+
+{%- macro flex_direction(heading, classPart) %}
+<h5 class="mt-4">{{ heading }}</h5>
+<div class="js-prism pb-2">
+    <div class="d-flex flex-{{ classPart }} bg-light p-1">
+        <div class="p-2 m-1 bg-primary text-light">ITEM 1</div>
+        <div class="p-2 m-1 bg-primary text-light">ITEM 2</div>
+        <div class="p-2 m-1 bg-primary text-light">ITEM 3</div>
+    </div>
+</div>
+{%- endmacro %}
+
+
+
+{%- macro flex_fill(integer) %}
+<div class="js-prism pb-2">
+    <div class="d-flex flex-wrap bg-light p-1">
+        {%- for i in range(1, integer) %}
+        <div class="flex-fill p-2 m-1 bg-primary text-light">ITEM {{ i }}</div>
+        {%- endfor %}
+    </div>
+</div>
+{%- endmacro %}
+
+
+
+{%- macro flex_grow_shrink(str1, str2, str3) %}
+<div class="js-prism pb-2">
+    <div class="d-flex bg-light p-1">
+        <div class="p-2 m-1 bg-primary text-light{{ str1 }}">ITEM 1</div>
+        <div class="p-2 m-1 bg-primary text-light{{ str2 }}">ITEM 2</div>
+        <div class="p-2 m-1 bg-primary text-light{{ str3 }}">ITEM 3</div>
+    </div>
+</div>
+{%- endmacro %}
+
+
+
+{%- macro flex_justification(heading, classPart) %}
+<h5 class="mt-4">{{ heading }}</h5>
+<div class="js-prism pb-2">
+    <div class="d-flex justify-content-{{ classPart }} bg-light p-1">
+        <div class="p-2 m-1 bg-primary text-light">ITEM 1</div>
+        <div class="p-2 m-1 bg-primary text-light">ITEM 2</div>
+        <div class="p-2 m-1 bg-primary text-light">ITEM 3</div>
+    </div>
+</div>
+{%- endmacro %}
+
+
+
+{%- macro flex_ordering(string) %}
+<tr>
+    <th scope="row" class="bg-dark text-light border-light"><samp>.order-{{ string }}</samp></th>
+    <td><samp>.order-sm-{{ string }}</samp></td>
+    <td><samp>.order-md-{{ string }}</samp></td>
+    <td><samp>.order-lg-{{ string }}</samp></td>
+    <td><samp>.order-xl-{{ string }}</samp></td>
+</tr>
+{%- endmacro %}
+
+
+
+{%- macro flex_responsive_classes(string) %}
+<tr>
+    <th scope="row" class="bg-dark text-light border-light"><samp>.flex-{{ string }}</samp></th>
+    <td><samp>.flex-sm-{{ string }}</samp></td>
+    <td><samp>.flex-md-{{ string }}</samp></td>
+    <td><samp>.flex-lg-{{ string }}</samp></td>
+    <td><samp>.flex-xl-{{ string }}</samp></td>
+</tr>
+{%- endmacro %}
+
+
+
+{%- macro float_classes(string) %}
+<tr>
+    <th scope="row" class="bg-dark text-light border-light"><samp>.float-{{ string }}</samp></th>
+    <td><samp>.float-sm-{{ string }}</samp></td>
+    <td><samp>.float-md-{{ string }}</samp></td>
+    <td><samp>.float-lg-{{ string }}</samp></td>
+    <td><samp>.float-xl-{{ string }}</samp></td>
+</tr>
+{%- endmacro %}
+
+
+
+{%- macro font_weights(fontClass, fontName, weightClass, weightName) %}
+<div class="js-prism mb-2">
+    <h3 class="{{ fontClass }} {{ weightClass }}">{{ fontName }} ({{ weightName }}) Font</h3>
+    <p class="{{ fontClass }} {{ weightClass }}">No kidding, Lorenzo called off his trip to Mexico City just because they told him the conquistadors were extinct.</p>
+</div>
+{%- endmacro %}
+
+
+
+{%- macro footer_heading(iconPartial, headline) %}
+<div class="text-center pb-4">
+    <i class="fas fa-{{ iconPartial }} fa-4x text-light-gray"></i>
+</div>
+<h6 class="text-light text-center mb-4">{{ headline }}</h6>
+{%- endmacro %}
+
+
+
+{%- macro footer_link(url, name) %}
+<li>
+    <a href="{{ url }}" class="text-light" target="_blank" rel="noopener noreferrer">{{ name }}</a>
+</li>
+{%- endmacro %}
+
+
+
+{%- macro form_colors(classPartial, namePartial) %}
+<div class="js-prism text-left mb-2">
+    <form>
+        <div class="form-group">
+            <label for="input-{{ classPartial }}" class="text-{{ classPartial }}">{{ namePartial }} Label</label>
+            <input type="text" class="form-control form-{{ classPartial }}" id="input-{{ classPartial }}" placeholder="{{ namePartial }} Input">
+        </div>
+    </form>
+</div>
+{%- endmacro %}
+
+
+
+{%- macro form_input(type, label, placeholderStr, helpText, value, placeholder = 'true') %}
+<div class="form-group">
+    <label for="{{ type }}-input">{{ label }}</label>
+    <input type="{{ type }}" class="form-control" id="{{ type }}-input" name="{{ type }}-input" aria-describedby="{{ type }}-help"{% if placeholder === 'true' %} placeholder="{{ placeholderStr }}"{% endif %} value="{{ value }}">
+    <small id="{{ type }}-help" class="form-text text-muted">{{ helpText }}</small>
+</div>
+{%- endmacro %}
+
+
+
+{%- macro form_row(heading, rowClass, uniqueMod) %}
+<h5>{{ heading }}</h5>
+<form>
+    <div class="{{ rowClass }}">
+        <div class="col">
+            <div class="form-group">
+                <label for="form-grid-fname{{ uniqueMod }}">First Name:</label>
+                <input class="form-control" type="text" placeholder="Enter Name" id="form-grid-fname{{ uniqueMod }}" name="form-grid-fname{{ uniqueMod }}" aria-describedby="form-grid-fname{{ uniqueMod }}-help">
+                <small id="form-grid-fname{{ uniqueMod }}-help" class="form-text text-muted">First name help text.</small>
+            </div>
+        </div>
+        <div class="col">
+            <div class="form-group">
+                <label for="form-grid-lname{{ uniqueMod }}">Last Name:</label>
+                <input class="form-control" type="text" placeholder="Enter Name" id="form-grid-lname{{ uniqueMod }}" name="form-grid-lname{{ uniqueMod }}" aria-describedby="form-grid-lname{{ uniqueMod }}-help">
+                <small id="form-grid-lname{{ uniqueMod }}-help" class="form-text text-muted">Last name help text.</small>
+            </div>
+        </div>
+    </div>
+</form>
+{%- endmacro %}
+
+
+
+{%- macro headline(number) %}
+<div class="js-prism mb-2">
+    <h{{ number }}>H{{ number }} Headline</h{{ number }}>
+</div>
+{%- endmacro %}
+
+
+
+{%- macro headline_class(number) %}
+<div class="js-prism mb-2">
+    <div class="h{{ number }}">H{{ number }} Headline</div>
+</div>
+{%- endmacro %}
+
+
+
+{%- macro hidden_color_elements(colorSlug, colorName) %}
+<div class="js-color-source d-none text-{{ colorSlug }}"></div>
+<div class="js-color-source d-none text-{{ colorSlug }}-50"></div>
+<div class="js-color-source d-none text-{{ colorSlug }}-100"></div>
+<div class="js-color-source d-none text-{{ colorSlug }}-200"></div>
+<div class="js-color-source d-none text-{{ colorSlug }}-300"></div>
+<div class="js-color-source d-none text-{{ colorSlug }}-400"></div>
+<div class="js-color-source d-none text-{{ colorSlug }}-500"></div>
+<div class="js-color-source d-none text-{{ colorSlug }}-600"></div>
+<div class="js-color-source d-none text-{{ colorSlug }}-700"></div>
+<div class="js-color-source d-none text-{{ colorSlug }}-800"></div>
+<div class="js-color-source d-none text-{{ colorSlug }}-900"></div>
+{%- endmacro %}
+
+
+
+{%- macro icon_animation_pulse_block(faType, iconClass) %}
+<div class="col-sm-6 col-md-4 mb-5">
+    <div class="js-prism-fa prism-hidden mb-2" style="cursor: help;">
+        <i class="{{ faType }} fa-2x {{ iconClass }} fa-pulse"></i>
+    </div>
+    <pre>
+        <code class="language-html line-numbers">
+            &lt;i class="{{ faType }} fa-2x {{ iconClass }} fa-pulse"&gt;&lt;/i&gt;
+        </code>
+    </pre>
+</div>
+{%- endmacro %}
+
+
+
+{%- macro icon_animation_spin_block(faType, iconClass) %}
+<div class="col-sm-6 col-md-4 mb-5">
+    <div class="js-prism-fa prism-hidden mb-2" style="cursor: help;">
+        <i class="{{ faType }} fa-2x {{ iconClass }} fa-spin"></i>
+    </div>
+    <pre>
+        <code class="language-html line-numbers">
+            &lt;i class="{{ faType }} fa-2x {{ iconClass }} fa-spin"&gt;&lt;/i&gt;
+        </code>
+    </pre>
+</div>
+{%- endmacro %}
+
+
+
+{%- macro icon_borders(widthHeight, paddingTop, faSizeClass) %}
+<div class="js-prism-fa prism-hidden mb-2" style="cursor: help;">
+    <span class="d-inline-block border border-light border-width-4" style="height: {{ widthHeight }}; width: {{ widthHeight }}; padding-top: {{ paddingTop }};">
+        <i class="fas fa-arrow-right{{ faSizeClass }}"></i>
+    </span>
+</div>
+<pre>
+    <code class="language-html line-numbers">
+        &lt;span class="d-inline-block border border-light border-width-4" style="height: {{ widthHeight }}; width: {{ widthHeight }}; padding-top: {{ paddingTop }};"&gt;
+            &lt;i class="fas fa-arrow-right{{ faSizeClass }}"&gt;&lt;/i&gt;
+        &lt;/span&gt;
+    </code>
+</pre>
+{%- endmacro %}
+
+
+
+{%- macro icon_fa_lists(label, listType) %}
+<div class="js-prism-fa prism-hidden mb-2" style="cursor: help;">
+    <label class="d-block font-weight-bold text-left">{{ label }}</label>
+    <{{ listType }} class="fa-ul text-left">
+        <li><span class="fa-li"><i class="fas fa-home"></i></span>Home Icon</li>
+        <li><span class="fa-li"><i class="fas fa-info"></i></span>Info Icon</li>
+        <li><span class="fa-li"><i class="fas fa-pencil-alt"></i></span>Pencil Icon</li>
+        <li><span class="fa-li"><i class="fas fa-phone"></i></span>Phone Icon</li>
+    </{{ listType }}>
+</div>
+<pre>
+    <code class="language-html line-numbers">
+        &lt;{{ listType }} class="fa-ul text-left"&gt;
+            &lt;li&gt;&lt;span class="fa-li"&gt;&lt;i class="fas fa-home"&gt;&lt;/i&gt;&lt;/span&gt;Home Icon&lt;/li&gt;
+            &lt;li&gt;&lt;span class="fa-li"&gt;&lt;i class="fas fa-info"&gt;&lt;/i&gt;&lt;/span&gt;Info Icon&lt;/li&gt;
+            &lt;li&gt;&lt;span class="fa-li"&gt;&lt;i class="fas fa-pencil-alt"&gt;&lt;/i&gt;&lt;/span&gt;Pencil Icon&lt;/li&gt;
+            &lt;li&gt;&lt;span class="fa-li"&gt;&lt;i class="fas fa-phone"&gt;&lt;/i&gt;&lt;/span&gt;Phone Icon&lt;/li&gt;
+        &lt;/{{ listType }}&gt;
+    </code>
+</pre>
+{%- endmacro %}
+
+
+
+{%- macro icons_fixed_width() %}
+<div class="js-prism-fa prism-hidden mb-2" style="cursor: help;">
+    <ul class="list-unstyled text-left">
+        <li><i class="fas fa-home fa-fw"></i> Home</li>
+        <li><i class="fas fa-info fa-fw"></i> Info</li>
+        <li><i class="fas fa-pencil-alt fa-fw"></i> Edit</li>
+        <li><i class="fas fa-phone fa-fw"></i> Call</li>
+    </ul>
+</div>
+<pre>
+    <code class="language-html line-numbers">
+        &lt;ul class="list-unstyled text-left"&gt;
+            &lt;li&gt;&lt;i class="fas fa-home fa-fw"&gt;&lt;/i&gt; Home&lt;/li&gt;
+            &lt;li&gt;&lt;i class="fas fa-info fa-fw"&gt;&lt;/i&gt; Info&lt;/li&gt;
+            &lt;li&gt;&lt;i class="fas fa-pencil-alt fa-fw"&gt;&lt;/i&gt; Edit&lt;/li&gt;
+            &lt;li&gt;&lt;i class="fas fa-phone fa-fw"&gt;&lt;/i&gt; Call&lt;/li&gt;
+        &lt;/ul&gt;
+    </code>
+</pre>
+{%- endmacro %}
+
+
+
+{%- macro icon_floats(label, direction) %}
+<label class="d-block text-left font-weight-bold">{{ label }}</label>
+<div class="js-prism-fa prism-hidden mb-2" style="cursor: help;">
+    <div class="text-left">
+        <i class="fas fa-quote-{{ direction }} fa-2x fa-pull-{{ direction }}"></i>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque egestas nulla at mauris malesuada viverra. Aenean consequat ante ipsum, quis imperdiet ipsum fermentum vitae. Vivamus consectetur metus sit amet justo maximus, non volutpat nunc sollicitudin. Vivamus vel pharetra ex, eget rhoncus neque. Aenean at mollis lorem, et dapibus odio.</p>
+    </div>
+</div>
+<pre>
+    <code class="language-html line-numbers">
+        &lt;div class="text-left"&gt;
+            &lt;i class="fas fa-quote-{{ direction }} fa-2x fa-pull-{{ direction }}"&gt;&lt;/i&gt;
+            &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque egestas nulla at mauris malesuada viverra. Aenean consequat ante ipsum, quis imperdiet ipsum fermentum vitae. Vivamus consectetur metus sit amet justo maximus, non volutpat nunc sollicitudin. Vivamus vel pharetra ex, eget rhoncus neque. Aenean at mollis lorem, et dapibus odio.&lt;/p&gt;
+        &lt;/div&gt;
+    </code>
+</pre>
+{%- endmacro %}
+
+
+
+{%- macro icon_mask(iconClasses, transformClasses, maskClasses, bgClass) %}
+<div class="col-sm-6 col-md-4 mb-5">
+    <div class="js-prism-fa prism-hidden mb-2 text-center fa-2x {{ bgClass }}" style="cursor: help;">
+        <i class="{{ iconClasses }}" data-fa-transform="{{ transformClasses }}" data-fa-mask="{{ maskClasses }}"></i>
+    </div>
+    <pre>
+        <code class="language-html line-numbers">
+            &lt;i class="{{ iconClasses }}" data-fa-transform="{{ transformClasses }}" data-fa-mask="{{ maskClasses }}"&gt;&lt;/i&gt;
+        </code>
+    </pre>
+</div>
+{%- endmacro %}
+
+
+
+{%- macro icon_orientation(label, faRotationClass) %}
+<label class="d-block font-weight-bold">{{ label }}</label>
+<div class="js-prism-fa prism-hidden mb-2" style="cursor: help;">
+    <i class="fas fa-home fa-2x {{ faRotationClass }}"></i>
+</div>
+<pre>
+    <code class="language-html line-numbers">
+        &lt;i class="fas fa-home fa-2x {{ faRotationClass }}"&gt;&lt;/i&gt;
+    </code>
+</pre>
+{%- endmacro %}
+
+
+
+{%- macro icon_positioning(label, positionClasses) %}
+<div class="col-sm-6 col-md-4 mb-5">
+    <label class="d-block font-weight-bold pb-2">{{ label }}</label>
+    <div class="js-prism-fa prism-hidden mb-2 text-center" style="cursor: help;">
+        <span class="bg-light fa-2x">
+            <i class="fas fa-magic" data-fa-transform="{{ positionClasses }}"></i>
+        </span>
+    </div>
+    <pre>
+        <code class="language-html line-numbers">
+            &lt;i class="fas fa-2x fa-magic" data-fa-transform="{{ positionClasses }}"&gt;&lt;/i&gt;
+        </code>
+    </pre>
+</div>
+{%- endmacro %}
+
+
+
+{%- macro icon_rotate_flip(label, rotateFlip) %}
+<div class="col-sm-6 col-md-4 mb-5">
+    <label class="d-block font-weight-bold pb-2">{{ label }}</label>
+    <div class="js-prism-fa prism-hidden mb-2 text-center" style="cursor: help;">
+        <span class="bg-light fa-2x">
+            <i class="fas fa-magic" data-fa-transform="{{ rotateFlip }}"></i>
+        </span>
+    </div>
+    <pre>
+        <code class="language-html line-numbers">
+            &lt;i class="fas fa-magic" data-fa-transform="{{ rotateFlip }}"&gt;&lt;/i&gt;
+        </code>
+    </pre>
+</div>
+{%- endmacro %}
+
+
+
+{%- macro icon_shrink_grow(label, shrinkGrow) %}
+<div class="col-sm-6 col-md-4 mb-5">
+    <label class="d-block font-weight-bold pb-2">{{ label }}</label>
+    <div class="js-prism-fa prism-hidden mb-2 text-center" style="cursor: help;">
+        <span class="bg-light fa-2x">
+            <i class="fas fa-magic" data-fa-transform="{{ shrinkGrow }}"></i>
+        </span>
+    </div>
+    <pre>
+        <code class="language-html line-numbers">
+            &lt;i class="fas fa-magic" data-fa-transform="{{ shrinkGrow }}"&gt;&lt;/i&gt;
+        </code>
+    </pre>
+</div>
+{%- endmacro %}
+
+
+
+{%- macro icon_sizes(leadingSpaceClass) %}
+<div class="js-prism-fa prism-hidden mb-2" style="cursor: help;">
+    <i class="fas fa-home{{ leadingSpaceClass }}"></i>
+</div>
+<pre>
+    <code class="language-html line-numbers">
+        &lt;i class="fas fa-home{{ leadingSpaceClass }}"&gt;&lt;/i&gt;
+    </code>
+</pre>
+{%- endmacro %}
+
+
+
+{%- macro icon_stack_block(label, sizeClass, baseScale, baseClasses, baseColor, topScale, topClasses, topColor) %}
+<div class="col-sm-6 col-md-4 mb-5">
+    <label class="d-block text-center font-weight-bold pb-2">{{ label }}</label>
+    <div class="js-prism-fa prism-hidden mb-2" style="cursor: help;">
+        <span class="fa-stack{{ sizeClass }}">
+            <i class="{{ baseClasses }} fa-stack-{{ baseScale }}{{ baseColor }}"></i>
+            <i class="{{ topClasses }} fa-stack-{{ topScale }} {{ topColor }}"></i>
+        </span>
+    </div>
+    <pre>
+        <code class="language-html line-numbers">
+            &lt;span class="fa-stack{{ sizeClass }}"&gt;
+                &lt;i class="{{ baseClasses }} fa-stack-{{ baseScale }}{{ baseColor }}"&gt;&lt;/i&gt;
+                &lt;i class="{{ topClasses }} fa-stack-{{ topScale }} {{ topColor }}"&gt;&lt;/i&gt;
+            &lt;/span&gt;
+        </code>
+    </pre>
+</div>
+{%- endmacro %}
+
+
+
+{%- macro iframe_embeds(headline, classPart) %}
+<div class="js-prism mb-2 pt-4">
+    <h5>{{ headline }} Embed</h5>
+    <div class="embed-responsive embed-responsive-{{ classPart }}">
+        <iframe class="embed-responsive-item border-0" width="560" height="315" src="https://www.youtube.com/embed/a0mvTamiNeA" allowfullscreen></iframe>
+    </div>
+</div>
+{%- endmacro %}
+
+
+
+{%- macro justify_content_classes(string) %}
+<tr>
+    <th scope="row" class="bg-dark text-light border-light"><samp>.justify-content-{{ string }}</samp></th>
+    <td><samp>.justify-content-sm-{{ string }}</samp></td>
+    <td><samp>.justify-content-md-{{ string }}</samp></td>
+    <td><samp>.justify-content-lg-{{ string }}</samp></td>
+    <td><samp>.justify-content-xl-{{ string }}</samp></td>
+</tr>
+{%- endmacro %}
+
+
+
+{%- macro link_element(classPartial, namePartial) %}
+<div class="js-prism text-center">
+    <a href="#" class="text-{{ classPartial }}">{{ namePartial }} Link</a>
+</div>
+{%- endmacro %}
+
+
+
+{%- macro link_variants(classPartial, namePartial) %}
+<h4>{{ namePartial }} Variants</h4>
+
+<div class="js-prism text-center">
+    <a href="#" class="text-{{ classPartial }}-50">50 {{ namePartial }} Text</a>
+</div>
+<div class="js-prism text-center">
+    <a href="#" class="text-{{ classPartial }}-100">100 {{ namePartial }} Text</a>
+</div>
+<div class="js-prism text-center">
+    <a href="#" class="text-{{ classPartial }}-200">200 {{ namePartial }} Text</a>
+</div>
+<div class="js-prism text-center">
+    <a href="#" class="text-{{ classPartial }}-300">300 {{ namePartial }} Text</a>
+</div>
+<div class="js-prism text-center">
+    <a href="#" class="text-{{ classPartial }}-400">400 {{ namePartial }} Text</a>
+</div>
+<div class="js-prism text-center">
+    <a href="#" class="text-{{ classPartial }}-500">500 {{ namePartial }} Text</a>
+</div>
+<div class="js-prism text-center">
+    <a href="#" class="text-{{ classPartial }}-600">600 {{ namePartial }} Text</a>
+</div>
+<div class="js-prism text-center">
+    <a href="#" class="text-{{ classPartial }}-700">700 {{ namePartial }} Text</a>
+</div>
+<div class="js-prism text-center">
+    <a href="#" class="text-{{ classPartial }}-800">800 {{ namePartial }} Text</a>
+</div>
+<div class="js-prism text-center mb-3">
+    <a href="#" class="text-{{ classPartial }}-900">900 {{ namePartial }} Text</a>
+</div>
+{%- endmacro %}
+
+
+
+{%- macro list_elements(fullClassTrailingSpace, textDescrip) %}
+<div class="js-prism">
+    <ol class="{{ fullClassTrailingSpace }}text-left text-capitalize text-dark">
+        <li>{{ textDescrip }} ordered list</li>
+        <li class="text-danger"><span class="text-dark">Custom colored item</span></li>
+        <li>
+            Standard Item
+            <ol class="{{ fullClassTrailingSpace }}text-capitalize">
+                <li>Nested {{ textDescrip }} item</li>
+                <li class="text-danger"><span class="text-dark">Nested colored item</span></li>
+            </ol>
+        </li>
+    </ol>
+</div>
+{%- endmacro %}
+
+
+
+{%- macro list_group_colors(classPartial, namePartial) %}
+<div class="js-prism text-left">		
+    <ul class="list-group">
+        <li class="list-group-item list-group-item-{{ classPartial }}">{{ namePartial }} List</li>
+        <li class="list-group-item list-group-item-{{ classPartial }}">{{ namePartial }} Group</li>
+        <li class="list-group-item list-group-item-{{ classPartial }}">{{ namePartial }} Items</li>
+    </ul>
+</div>
+<div style="height: 20px;"> </div>
+{%- endmacro %}
+
+
+
+{%- macro list_group_colors_action(classPartial, namePartial) %}
+<div class="js-prism text-left">		
+    <div class="list-group">
+        <a href="#" class="list-group-item list-group-item-action list-group-item-{{ classPartial }}">{{ namePartial }} Action List</a>
+        <a href="#" class="list-group-item list-group-item-action list-group-item-{{ classPartial }}">{{ namePartial }} Action Group</a>
+        <a href="#" class="list-group-item list-group-item-action list-group-item-{{ classPartial }}">{{ namePartial }} Action Items</a>
+    </div>
+</div>
+<div style="height: 20px;"> </div>
+{%- endmacro %}
+
+
+
+{%- macro list_unordered_elements(fullClassTrailingSpace, textDescrip) %}
+<div class="js-prism">
+    <ul class="{{ fullClassTrailingSpace }}text-left text-capitalize text-dark">
+        <li>{{ textDescrip }} ordered list</li>
+        <li class="text-danger"><span class="text-dark">Custom colored item</span></li>
+        <li>
+            Standard Item
+            <ul class="{{ fullClassTrailingSpace }}text-capitalize">
+                <li>Nested {{ textDescrip }} item</li>
+                <li class="text-danger"><span class="text-dark">Nested colored item</span></li>
+            </ul>
+        </li>
+    </ul>
+</div>
+{%- endmacro %}
+
+
+
+{%- macro margin_examps(number) %}
+<h5 class="mt-4">Margin: {{ number }}</h5>
+<div class="js-prism pb-2">
+    <div class="d-inline-block bg-light">
+        <div class="m-{{ number }} d-inline-block bg-primary text-light">.m-{{ number }}</div>
+    </div>
+</div>
+{%- endmacro %}
+
+
+
+{%- macro margin_padding_classes(prefix, number) %}
+<tr>
+    <th scope="row" class="bg-dark text-light border-light"><samp>.{{ prefix }}-{{ number }}</samp></th>
+    <td><samp>.{{ prefix }}-sm-{{ number }}</samp></td>
+    <td><samp>.{{ prefix }}-md-{{ number }}</samp></td>
+    <td><samp>.{{ prefix }}-lg-{{ number }}</samp></td>
+    <td><samp>.{{ prefix }}-xl-{{ number }}</samp></td>
+</tr>
+{%- endmacro %}
+
+
+
+{%- macro material_float_text_inputs(headline, classPart) %}
+<div class="js-prism pt-4 mb-2 text-left">
+    <form novalidate>
+        <div class="material-float-input-group material-group-{{ classPart }} mb-4">
+            <input type="text" id="md-float-text-{{ classPart }}" name="md-float-text-{{ classPart }}" class="material-input rounded-0 border-bottom" aria-describedby="md-float-text-{{ classPart }}-label" required>
+            <span class="material-bar"></span>
+            <label id="md-float-text-{{ classPart }}-label" class="material-label">{{ headline }} Text Input</label>
+            <small class="form-text text-muted">Additional help text here.</small>
+        </div>
+    </form>
+</div>
+{%- endmacro %}
+
+
+
+{%- macro material_text_inputs(headline, classPart) %}
+<div class="js-prism pt-4 mb-2 text-left">
+    <form novalidate>
+        <div class="material-static-input-group material-group-{{ classPart }}">
+            <input type="text" id="md-static-text-{{ classPart }}" name="md-static-text-{{ classPart }}" class="material-input rounded-0 border-bottom" aria-describedby="md-static-{{ classPart }}-label" required>
+            <span class="material-bar"></span>
+            <label id="md-static-{{ classPart }}-label" class="material-label">{{ headline }} Text Input</label>
+            <small class="form-text text-muted">Additional help text here.</small>
+        </div>
+    </form>
+</div>
+{%- endmacro %}
+
+
+
+{%- macro modal_bottom_pinned(headline, modalClass, idString) %}
+<label class="d-block font-weight-bold pt-4">{{ headline }} Modal</label>
+<div class="js-prism mb-2">
+    <!-- Bottom Pinned Trigger -->
+    <button type="button" class="btn btn-primary mb-2" data-toggle="modal" data-target="#{{ idString }}">Bottom Pinned</button>
+
+    <!-- Bottom Pinned BS Modal -->
+    <div id="{{ idString }}" class="modal fade{{ modalClass }}" tabindex="-1" role="dialog" aria-labelledby="{{ idString }}" aria-hidden="true">
+        <div class="modal-dialog fixed-bottom mb-0">
+            <div class="modal-content border-0">
+                <div class="modal-header">
+                    <h6 class="modal-title">{{ headline }}</h6>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                </div>
+                <div class="modal-body text-left">
+                    {{ headline }} Modal Body
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                    <button type="button" class="btn btn-primary">Action</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{%- endmacro %}
+
+
+
+{%- macro modal_colors(titlePart, classPart, mainTxtClass, closeClass, borderClass) %}
+<div class="js-prism-fa prism-hidden mb-2" style="cursor: help;">
+    <!-- Modal Trigger -->
+    <button type="button" class="btn btn-{{ classPart }}" data-toggle="modal" data-target="#modal-{{ classPart }}">{{ titlePart }} Modal</button>
+
+    <!-- Modal Markup -->
+    <div class="modal fade" id="modal-{{ classPart }}" tabindex="-1" role="dialog" aria-labelledby="modal-{{ classPart }}-title" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content bg-{{ classPart }}{{ mainTxtClass }}">
+                <div class="modal-header border-0">
+                    <h5 class="modal-title" id="modal-{{ classPart }}-title">{{ titlePart }} Modal</h5>
+                    <button type="button" class="close{{ closeClass }}" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body text-left border-top border-bottom{{ borderClass }} opacity-70">
+                    <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque egestas nulla at mauris malesuada viverra. Aenean consequat ante ipsum, quis imperdiet ipsum fermentum vitae. Vivamus consectetur metus sit amet justo maximus, non volutpat nunc sollicitudin. Vivamus vel pharetra ex, eget rhoncus neque. Aenean at mollis lorem, et dapibus odio.</p>
+                </div>
+                <div class="modal-footer border-0">
+                    <button type="button" class="btn btn-{{ classPart }}" data-dismiss="modal">CLOSE</button>
+                    <button type="button" class="btn btn-{{ classPart }}">SAVE</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<pre>
+    <code class="language-html line-numbers">
+        &lt;!-- Modal Trigger --&gt;
+        &lt;button type="button" class="btn btn-{{ classPart }}" data-toggle="modal" data-target="#modal-{{ classPart }}"&gt;{{ titlePart }} Modal&lt;/button&gt;
+
+        &lt;!-- Modal Markup --&gt;
+        &lt;div class="modal fade" id="modal-{{ classPart }}" tabindex="-1" role="dialog" aria-labelledby="modal-{{ classPart }}-title" aria-hidden="true"&gt;
+            &lt;div class="modal-dialog" role="document"&gt;
+                &lt;div class="modal-content bg-{{ classPart }}{{ mainTxtClass }}"&gt;
+                    &lt;div class="modal-header border-0"&gt;
+                        &lt;h5 class="modal-title" id="modal-{{ classPart }}-title"&gt;{{ titlePart }} Modal&lt;/h5&gt;
+                        &lt;button type="button" class="close{{ closeClass }}" data-dismiss="modal" aria-label="Close"&gt;
+                            &lt;span aria-hidden="true"&gt;&times;&lt;/span&gt;
+                        &lt;/button&gt;
+                    &lt;/div&gt;
+                    &lt;div class="modal-body text-left border-top border-bottom{{ borderClass }} opacity-70"&gt;
+                        &lt;p class="mb-0"&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque egestas nulla at mauris malesuada viverra. Aenean consequat ante ipsum, quis imperdiet ipsum fermentum vitae. Vivamus consectetur metus sit amet justo maximus, non volutpat nunc sollicitudin. Vivamus vel pharetra ex, eget rhoncus neque. Aenean at mollis lorem, et dapibus odio.&lt;/p&gt;
+                    &lt;/div&gt;
+                    &lt;div class="modal-footer border-0"&gt;
+                        &lt;button type="button" class="btn btn-{{ classPart }}" data-dismiss="modal"&gt;CLOSE&lt;/button&gt;
+                        &lt;button type="button" class="btn btn-{{ classPart }}"&gt;SAVE&lt;/button&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    </code>
+</pre>
+{%- endmacro %}
+
+
+
+{%- macro modal_fullscreen(headline, modalClass, idString) %}
+<label class="d-block font-weight-bold pt-4">{{ headline }} Modal</label>
+<div class="js-prism mb-2">
+    <!-- {{ headline }} Modal Trigger -->
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#{{ idString }}">{{ headline }} Modal</button>
+
+    <!-- {{ headline }} Modal -->
+    <div id="{{ idString }}" class="modal fade{{ modalClass }}" tabindex="-1" role="dialog" aria-labelledby="{{ idString }}" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content text-center">
+                <div class="modal-header">
+                    <div class="modal-heading-spacer">×</div>
+                    <h2 class="modal-title">{{ headline }} Modal</h2>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span> </button>
+                </div>
+                <div class="modal-body">
+                    {{ headline }} Modal Body
+                </div>
+                <div class="modal-footer justify-content-center">
+                    <button type="button" class="btn btn-lg btn-secondary" data-dismiss="modal">Cancel</button>
+                    <button type="button" class="btn btn-lg btn-primary">Action</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{%- endmacro %}
+
+
+
+{%- macro modal_left_right_pinned(headline, modalClass, idString) %}
+<label class="d-block font-weight-bold pt-4">{{ headline }} Modal</label>
+<div class="js-prism mb-2">
+    <!-- {{ headline }} Modal Trigger -->
+    <button type="button" class="btn btn-primary mb-2" data-toggle="modal" data-target="#{{ idString }}">{{ headline }} Modal</button>
+
+    <!-- {{ headline }} Modal -->
+    <div id="{{ idString }}" class="modal fade{{ modalClass }}" tabindex="-1" role="dialog" aria-labelledby="{{ idString }}" aria-hidden="true">
+        <div class="modal-dialog modal-lg mt-0">
+            <div class="modal-content border-0 rounded-0">
+                <div class="modal-header">
+                    <h6 class="modal-title">{{ headline }}</h6>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                </div>
+                <div class="modal-body text-left p-2">
+                    {{ headline }} Modal Body
+                </div>
+                <div class="modal-footer justify-content-end">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                    <button type="button" class="btn btn-primary">Action</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{%- endmacro %}
+
+
+
+{%- macro modal_offcanvas_nav_accordian(directionName, pinClass, uniqueIdPart) %}
+<label class="d-block font-weight-bold pt-4">Off-Canvas Accordian Nav {{ directionName }} Modal</label>
+<div class="js-prism mb-2">
+    <!-- OC Nav {{ directionName }} Modal Trigger -->
+    <button type="button" class="btn btn-primary mb-2" data-toggle="modal" data-target="#{{ uniqueIdPart }}-modal">Accordian OC {{ directionName }}</button>
+
+    <!-- OC Nav {{ directionName }} Modal -->
+    <div id="{{ uniqueIdPart }}-modal" class="modal fade{{ pinClass }}" tabindex="-1" role="dialog" aria-labelledby="{{ uniqueIdPart }}-modal" aria-hidden="true">
+        <div class="modal-dialog modal-lg mt-0">
+            <div class="modal-content d-flex flex-column border-0 rounded-0 text-left">
+                <div class="modal-header border-light-gray-100">
+                    <h6 class="modal-title">MENU</h6>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                </div>
+                <div id="{{ uniqueIdPart }}-accordnav" class="modal-body" role="presentation">
+                    <div id="{{ uniqueIdPart }}-heading-1" class="lead text-dark rounded-0 border-top border-bottom border-light-gray-100 px-3 py-2" data-toggle="collapse" data-target="#{{ uniqueIdPart }}-content-1" aria-expanded="false" aria-controls="{{ uniqueIdPart }}-content-1" role="heading">Group 1</div>
+                    <div id="{{ uniqueIdPart }}-content-1" class="collapse" aria-labelledby="{{ uniqueIdPart }}-heading-1" data-parent="#{{ uniqueIdPart }}-accordnav" role="navigation">
+                        <ul class="nav flex-column bg-transparent text-sm py-2 pl-2">
+                            <li class="nav-item">
+                                <a class="nav-link text-dark py-1" href="#">Link One</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-dark py-1" href="#">Link Two</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-dark py-1" href="#">Link Three</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div id="{{ uniqueIdPart }}-heading-2" class="lead text-dark rounded-0 border-top border-bottom border-light-gray-100 px-3 py-2" data-toggle="collapse" data-target="#{{ uniqueIdPart }}-content-2" aria-expanded="false" aria-controls="{{ uniqueIdPart }}-content-2" role="heading">Group 2</div>
+                    <div id="{{ uniqueIdPart }}-content-2" class="collapse" aria-labelledby="{{ uniqueIdPart }}-heading-2" data-parent="#{{ uniqueIdPart }}-accordnav" role="navigation">
+                        <ul class="nav flex-column bg-transparent text-sm py-2 pl-2">
+                            <li class="nav-item">
+                                <a class="nav-link text-dark py-1" href="#">Link One</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-dark py-1" href="#">Link Two</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-dark py-1" href="#">Link Three</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div id="{{ uniqueIdPart }}-heading-3" class="lead text-dark rounded-0 border-top border-bottom border-light-gray-100 px-3 py-2" data-toggle="collapse" data-target="#{{ uniqueIdPart }}-content-3" aria-expanded="false" aria-controls="{{ uniqueIdPart }}-content-3" role="heading">Group 3</div>
+                    <div id="{{ uniqueIdPart }}-content-3" class="collapse" aria-labelledby="{{ uniqueIdPart }}-heading-3" data-parent="#{{ uniqueIdPart }}-accordnav" role="navigation">
+                        <ul class="nav flex-column bg-transparent text-sm py-2 pl-2">
+                            <li class="nav-item">
+                                <a class="nav-link text-dark py-1" href="#">Link One</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-dark py-1" href="#">Link Two</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-dark py-1" href="#">Link Three</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="modal-footer justify-content-center border-light-gray-100">
+                    <button type="button" class="btn btn-sm btn-outline-secondary" data-dismiss="modal">CLOSE</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{%- endmacro %}
+
+
+
+{%- macro modal_offcanvas_nav_basic(directionName, pinClass, uniqueIdPart) %}
+<label class="d-block font-weight-bold pt-4">{{ directionName }} Off-Canvas Nav Modal</label>
+<div class="js-prism mb-2">
+    <!-- OC Nav {{ directionName }} Modal Trigger -->
+    <button type="button" class="btn btn-primary mb-2" data-toggle="modal" data-target="#{{ uniqueIdPart }}-modal">OC Nav {{ directionName }}</button>
+
+    <!-- OC Nav {{ directionName }} Modal -->
+    <div id="{{ uniqueIdPart }}-modal" class="modal fade{{ pinClass }}" tabindex="-1" role="dialog" aria-labelledby="{{ uniqueIdPart }}-modal" aria-hidden="true">
+        <div class="modal-dialog modal-lg mt-0">
+            <div class="modal-content d-flex flex-column border-0 rounded-0 text-left">
+                <div class="modal-header border-light-gray-100">
+                    <h6 class="modal-title">MENU</h6>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                </div>
+                <div class="modal-body m-3" role="navigation">
+                    <ul class="nav flex-column align-items-start">
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" href="#">Nav Link 1</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" href="#">Nav Link 2</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark disabled" href="#">Nav Disabled</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" href="#">Nav Link 4</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="modal-footer justify-content-center border-light-gray-100">
+                    <button type="button" class="btn btn-sm btn-outline-secondary" data-dismiss="modal">CLOSE</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{%- endmacro %}
+
+
+
+{%- macro modal_offcanvas_top_inline_nav(directionName, pinClass, uniqueIdPart) %}
+<label class="d-block font-weight-bold pt-4">Off-Canvas {{ directionName }} Nav Modal</label>
+<div class="js-prism mb-2">
+    <!-- OC Nav {{ directionName }} Modal Trigger -->
+    <button type="button" class="btn btn-primary mb-2" data-toggle="modal" data-target="#{{ uniqueIdPart }}-modal">OC {{ directionName }}</button>
+
+    <!-- OC Nav {{ directionName }} Modal -->
+    <div id="{{ uniqueIdPart }}-modal" class="modal fade{{ pinClass }}" tabindex="-1" role="dialog" aria-labelledby="{{ uniqueIdPart }}-modal" aria-hidden="true">
+        <div class="modal-dialog modal-lg mt-0">
+            <div class="modal-content d-flex flex-column border-0 rounded-0 text-left">
+                <div class="modal-header justify-content-center border-0 pb-0">
+                    <h6 class="modal-title">MENU</h6>
+                </div>
+                <div class="modal-body">
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col">
+                                <nav class="nav justify-content-center">
+                                    <a class="nav-item nav-link text-dark" href="#">Nav Link One</a>
+                                    <a class="nav-item nav-link text-dark" href="#">Nav Link Two</a>
+                                    <a class="nav-item nav-link text-dark" href="#">Nav Link Three</a>
+                                    <a class="nav-item nav-link text-dark" href="#">Nav Link Four</a>
+                                    <a class="nav-item nav-link text-dark" href="#">Nav Link Five</a>
+                                    <a class="nav-item nav-link text-dark" href="#">Nav Link Six</a>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer justify-content-center border-0">
+                    <button type="button" class="btn btn-sm btn-outline-secondary" data-dismiss="modal">CLOSE</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{%- endmacro %}
+
+
+
+{%- macro modal_top_pinned(headline, modalClass, idString) %}
+<label class="d-block font-weight-bold pt-4">{{ headline }} Modal</label>
+<div class="js-prism mb-2">
+    <!-- {{ headline }} Modal Trigger -->
+    <button type="button" class="btn btn-primary mb-2" data-toggle="modal" data-target="#{{ idString }}">{{ headline }} Modal</button>
+
+    <!-- {{ headline }} Modal -->
+    <div id="{{ idString }}" class="modal fade{{ modalClass }}" tabindex="-1" role="dialog" aria-labelledby="{{ idString }}" aria-hidden="true">
+        <div class="modal-dialog modal-lg mt-0">
+            <div class="modal-content border-0 rounded-0">
+                <div class="modal-header">
+                    <h6 class="modal-title">{{ headline }}</h6>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                </div>
+                <div class="modal-body text-left">
+                    {{ headline }} Modal Body
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                    <button type="button" class="btn btn-primary">Action</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{%- endmacro %}
+
+
+
+{%- macro modal_utils(headline, modalClass, idString) %}
+<label class="d-block font-weight-bold pt-4">{{ headline }} Modal</label>
+<div class="js-prism mb-2">
+    <!-- {{ headline }} Trigger -->
+    <button type="button" class="btn btn-primary mb-2" data-toggle="modal" data-target="#{{ idString }}">{{ headline }}</button>
+
+    <!-- {{ headline }} BS Modal -->
+    <div id="{{ idString }}" class="modal fade{{ modalClass }}" tabindex="-1" role="dialog" aria-labelledby="{{ idString }}" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h6 class="modal-title">{{ headline }}</h6>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                </div>
+                <div class="modal-body text-left">
+                    {{ headline }} Modal Body
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                    <button type="button" class="btn btn-primary">Action</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{%- endmacro %}
+
+
+
 {%- macro nav_accordian_section(idNumb, titleName, titleSlug, linksArray, pageFileName, bgGradient) %}
 <div id="ocnrm-h{{ idNumb }}" class="js-nav-handle d-flex justify-content-between align-content-center lead text-light rounded-0 border-top border-bottom border-dark-gray-700 text-shadow-lg text-white px-3 py-2 {{ bgGradient }}" data-toggle="collapse" data-target="#ocnrm-c{{ idNumb }}" aria-expanded="false" aria-controls="ocnrm-c{{ idNumb }}" role="heading">
     <div>{{ titleName }}</div>
@@ -72,161 +1787,168 @@
 
 
 
-{%- macro responsive_classes_thead(theadClasses) %}
-<thead class="{{ theadClasses }}">
-    <tr>
-        <th scope="col">Extra Small</th>
-        <th scope="col">Small</th>
-        <th scope="col">Medium</th>
-        <th scope="col">Large</th>
-        <th scope="col">Extra Large</th>
-    </tr>
-</thead>
+{%- macro nav_anchor_items(active = 'false', long = 'false') -%}
+<a class="nav-item nav-link{% if active === 'true' %} active{% endif %}" href="#">{% if active === 'true' %}Active{% else %}Link 1{% endif %}</a>
+<a class="nav-item nav-link" href="#">{% if active === 'true' %}Super-Long Link{% else %}Link 2{% endif %}</a>
+<a class="nav-item nav-link disabled" href="#">Disabled</a>
 {%- endmacro %}
 
 
 
-{%- macro display_responsive_classes(string) %}
-<tr>
-    <th scope="row" class="bg-dark text-light border-light"><samp>.d-{{ string }}</samp></th>
-    <td><samp>.d-sm-{{ string }}</samp></td>
-    <td><samp>.d-md-{{ string }}</samp></td>
-    <td><samp>.d-lg-{{ string }}</samp></td>
-    <td><samp>.d-xl-{{ string }}</samp></td>
-</tr>
+{%- macro nav_ul_items(active = 'false', long = 'false') -%}
+<li class="nav-item">
+    <a class="nav-link{% if active === 'true' %} active{% endif %}" href="#">{% if active === 'true' %}Active{% else %}Link 1{% endif %}</a>
+</li>
+<li class="nav-item">
+    <a class="nav-link" href="#">{% if active === 'true' %}Super-Long Link{% else %}Link 2{% endif %}</a>
+</li>
+<li class="nav-item">
+    <a class="nav-link disabled" href="#">Disabled</a>
+</li>
 {%- endmacro %}
 
 
 
-{%- macro flex_responsive_classes(string) %}
-<tr>
-    <th scope="row" class="bg-dark text-light border-light"><samp>.flex-{{ string }}</samp></th>
-    <td><samp>.flex-sm-{{ string }}</samp></td>
-    <td><samp>.flex-md-{{ string }}</samp></td>
-    <td><samp>.flex-lg-{{ string }}</samp></td>
-    <td><samp>.flex-xl-{{ string }}</samp></td>
-</tr>
+{%- macro navbar_colors(classPartial, namePartial, darkLightPartial, inputPartial, btnOutlinePartial) %}
+<div class="js-prism text-left mb-2">
+    <nav class="navbar navbar-expand-lg navbar-{{ darkLightPartial }} bg-{{ classPartial }}">
+
+        <a class="navbar-brand" href="#">{{ namePartial }}</a>
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" aria-expanded="false" aria-label="Toggle navigation" data-target="#navbar-{{ classPartial }}" aria-controls="navbar-{{ classPartial }}">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbar-{{ classPartial }}">
+
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Link</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbar-dropdown-menu-{{ classPartial }}" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Dropdown
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-{{ classPartial }}" aria-labelledby="navbar-dropdown-menu-{{ classPartial }}">
+                        <div class="dropdown-header h6">HEADING</div>
+                        <a class="dropdown-item" href="#">Action</a>
+                        <a class="dropdown-item" href="#">Another action</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">Something else here</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link disabled" href="#">Disabled</a>
+                </li>
+            </ul>
+
+            <form class="form-inline my-2 my-lg-0">
+                <input class="form-control form-{{ inputPartial }} mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-{{ btnOutlinePartial }} my-2 my-sm-0" type="submit">Search</button>
+            </form>
+
+        </div>
+
+    </nav>
+</div>
 {%- endmacro %}
 
 
 
-{%- macro justify_content_classes(string) %}
-<tr>
-    <th scope="row" class="bg-dark text-light border-light"><samp>.justify-content-{{ string }}</samp></th>
-    <td><samp>.justify-content-sm-{{ string }}</samp></td>
-    <td><samp>.justify-content-md-{{ string }}</samp></td>
-    <td><samp>.justify-content-lg-{{ string }}</samp></td>
-    <td><samp>.justify-content-xl-{{ string }}</samp></td>
-</tr>
+{%- macro negative_margin_examps(number) %}
+<h5 class="mt-4">Negative Margin: (n){{ number }}</h5>
+<div class="js-prism pb-2">
+    <div class="row mx-md-n{{ number }}">
+        <div class="col px-md-{{ number }}">
+            <div class="p-2 bg-light">One</div>
+        </div>
+        <div class="col px-md-{{ number }}">
+            <div class="p-2 bg-light">Two</div>
+        </div>
+    </div>
+</div>
 {%- endmacro %}
 
 
 
-{%- macro align_items_classes(string) %}
-<tr>
-    <th scope="row" class="bg-dark text-light border-light"><samp>.align-items-{{ string }}</samp></th>
-    <td><samp>.align-items-sm-{{ string }}</samp></td>
-    <td><samp>.align-items-md-{{ string }}</samp></td>
-    <td><samp>.align-items-lg-{{ string }}</samp></td>
-    <td><samp>.align-items-xl-{{ string }}</samp></td>
-</tr>
+{%- macro opacity_util(number) %}
+<div class="js-prism bg-primary text-white p-2 mb-2">
+    <div class="opacity-{{ number }}">{{ number }}%</div>
+</div>
 {%- endmacro %}
 
 
 
-{%- macro align_self_classes(string) %}
-<tr>
-    <th scope="row" class="bg-dark text-light border-light"><samp>.align-self-{{ string }}</samp></th>
-    <td><samp>.align-self-sm-{{ string }}</samp></td>
-    <td><samp>.align-self-md-{{ string }}</samp></td>
-    <td><samp>.align-self-lg-{{ string }}</samp></td>
-    <td><samp>.align-self-xl-{{ string }}</samp></td>
-</tr>
+{%- macro padding_examps(number) %}
+<h5 class="mt-4">Padding: {{ number }}</h5>
+<div class="js-prism pb-2">
+    <div class="p-{{ number }} d-inline-block bg-primary text-light">.p-{{ number }}</div>
+</div>
 {%- endmacro %}
 
 
 
-{%- macro display_print_classes(string) %}
-<tr>
-    <th scope="row" class="bg-dark text-light border-light"><samp>.d-print-{{ string }}</samp></th>
-    <td><samp>.d-print-sm-{{ string }}</samp></td>
-    <td><samp>.d-print-md-{{ string }}</samp></td>
-    <td><samp>.d-print-lg-{{ string }}</samp></td>
-    <td><samp>.d-print-xl-{{ string }}</samp></td>
-</tr>
+{%- macro page_section_heading(headline, subline, description) %}
+    <h1>{{ headline }}</h1>
+    <div class="lead">{{ subline }}</div>
+    <hr />
+    <p class="description-text text-muted"><em>{{ description }}</em></p>
+    <hr/>
 {%- endmacro %}
 
 
 
-{%- macro flex_auto_margins(string) %}
-<tr>
-    <th scope="row" class="bg-dark text-light border-light"><samp>.{{ string }}-auto</samp></th>
-    <td><samp>.{{ string }}-sm-auto</samp></td>
-    <td><samp>.{{ string }}-md-auto</samp></td>
-    <td><samp>.{{ string }}-lg-auto</samp></td>
-    <td><samp>.{{ string }}-xl-auto</samp></td>
-</tr>
+{%- macro popover_colors(classPartial, namePartial, headerTextPartial, bodyTextPartial) %}
+<div class="js-prism mb-2">
+    <button type="button" class="btn btn-{{ classPartial }}" data-container="body" data-toggle="popover" data-placement="top" data-popover-header-bg="bg-{{ classPartial }}" data-popover-header-text="text-{{ headerTextPartial }}" data-popover-body-text="text-{{ bodyTextPartial }}" title="{{ namePartial }} Popover" data-content="Wow! Check out this amazing content. It's engaging. Right?">
+        {{ namePartial }} Popover
+    </button>
+</div>
 {%- endmacro %}
 
 
 
-
-{%- macro flex_ordering(string) %}
-<tr>
-    <th scope="row" class="bg-dark text-light border-light"><samp>.order-{{ string }}</samp></th>
-    <td><samp>.order-sm-{{ string }}</samp></td>
-    <td><samp>.order-md-{{ string }}</samp></td>
-    <td><samp>.order-lg-{{ string }}</samp></td>
-    <td><samp>.order-xl-{{ string }}</samp></td>
-</tr>
+{%- macro progress_bar_colors(widthVal, colorClass, labelTxt) %}
+<div class="js-prism mb-2">
+    <div class="progress">
+        <div class="progress-bar w-{{ widthVal }}{{ colorClass }}" role="progressbar" aria-valuenow="{{ widthVal }}" aria-valuemin="0" aria-valuemax="100">{{ labelTxt }}</div>
+    </div>
+</div>
 {%- endmacro %}
 
 
 
-{%- macro flex_align_content(string) %}
-<tr>
-    <th scope="row" class="bg-dark text-light border-light"><samp>.align-content-{{ string }}</samp></th>
-    <td><samp>.align-content-sm-{{ string }}</samp></td>
-    <td><samp>.align-content-md-{{ string }}</samp></td>
-    <td><samp>.align-content-lg-{{ string }}</samp></td>
-    <td><samp>.align-content-xl-{{ string }}</samp></td>
-</tr>
+{%- macro progress_bar_gradient_colors(color) %}
+<div class="js-prism mb-2">
+    <div class="progress">
+        <div class="progress-bar bg-gradient-{{ color }} w-75" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">75%</div>
+    </div>
+</div>
 {%- endmacro %}
 
 
 
-{%- macro float_classes(string) %}
-<tr>
-    <th scope="row" class="bg-dark text-light border-light"><samp>.float-{{ string }}</samp></th>
-    <td><samp>.float-sm-{{ string }}</samp></td>
-    <td><samp>.float-md-{{ string }}</samp></td>
-    <td><samp>.float-lg-{{ string }}</samp></td>
-    <td><samp>.float-xl-{{ string }}</samp></td>
-</tr>
+{%- macro progress_bar_mono_multi_colors(color1, color2, color3) %}
+<div class="js-prism mb-2">
+    <div class="progress">
+        <div class="progress-bar {{ color1 }} w-25" role="progressbar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">25%</div>
+        <div class="progress-bar {{ color2 }} w-25" role="progressbar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">25%</div>
+        <div class="progress-bar {{ color3 }} w-25" role="progressbar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">25%</div>
+    </div>
+</div>
 {%- endmacro %}
 
 
 
-{%- macro margin_padding_classes(prefix, number) %}
-<tr>
-    <th scope="row" class="bg-dark text-light border-light"><samp>.{{ prefix }}-{{ number }}</samp></th>
-    <td><samp>.{{ prefix }}-sm-{{ number }}</samp></td>
-    <td><samp>.{{ prefix }}-md-{{ number }}</samp></td>
-    <td><samp>.{{ prefix }}-lg-{{ number }}</samp></td>
-    <td><samp>.{{ prefix }}-xl-{{ number }}</samp></td>
-</tr>
-{%- endmacro %}
-
-
-
-{%- macro text_alignment_classes(string) %}
-<tr>
-    <th scope="row" class="bg-dark text-light border-light"><samp>.text-{{ string }}</samp></th>
-    <td><samp>.text-sm-{{ string }}</samp></td>
-    <td><samp>.text-md-{{ string }}</samp></td>
-    <td><samp>.text-lg-{{ string }}</samp></td>
-    <td><samp>.text-xl-{{ string }}</samp></td>
-</tr>
+{%- macro progress_bar_striped_colors(colorClass) %}
+<div class="js-prism mb-2">
+    <div class="progress">
+        <div class="progress-bar progress-bar-striped {{ colorClass }} w-75" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+    </div>
+</div>
 {%- endmacro %}
 
 
@@ -243,17 +1965,433 @@
 
 
 
-{%- macro footer_heading(iconPartial, headline) %}
-<div class="text-center pb-4">
-    <i class="fas fa-{{ iconPartial }} fa-4x text-light-gray"></i>
-</div>
-<h6 class="text-light text-center mb-4">{{ headline }}</h6>
+{%- macro responsive_classes_thead(theadClasses) %}
+<thead class="{{ theadClasses }}">
+    <tr>
+        <th scope="col">Extra Small</th>
+        <th scope="col">Small</th>
+        <th scope="col">Medium</th>
+        <th scope="col">Large</th>
+        <th scope="col">Extra Large</th>
+    </tr>
+</thead>
 {%- endmacro %}
 
 
 
-{%- macro footer_link(url, name) %}
-<li>
-    <a href="{{ url }}" class="text-light" target="_blank" rel="noopener noreferrer">{{ name }}</a>
-</li>
+{%- macro settings_bs_font_defaults_input(id, labelText, value) %}
+<div class="form-group">
+    <label for="{{ id }}" class="font-weight-bold">{{ labelText }}</label>
+    <input type="text" class="js-css-value form-control" id="{{ id }}" value="{{ value }}" disabled>
+</div>
+{%- endmacro %}
+
+
+
+{%- macro settings_color_blend_color_input(id, labelText, bgHex, textHex, helpText) %}
+<div class="form-group">
+    <label for="{{ id }}" class="font-weight-bold">{{ labelText }}</label>
+    <div class="input-group">
+        <input type="text" class="form-control" id="{{ id }}" aria-describedby="{{ id }}-help" placeholder="{{ bgHex }}" value="{{ bgHex }}" style="background-color:{{ bgHex }}; color:{{ textHex }};">
+        <div class="input-group-append">
+            <button class="js-input-group-clear-btn btn btn-light border" type="button"><i class="fas fa-trash-alt"></i></button>
+        </div>
+    </div>
+    <small id="{{ id }}-help" class="form-text text-light-gray">{{ helpText }}</small>
+</div>
+{%- endmacro %}
+
+
+
+{%- macro settings_color_blend_result_input(id, labelText, bgHex, textHex) %}
+<div class="form-group">
+    <label for="{{ id }}" class="small font-weight-bold">{{ labelText }}</label>
+    <div class="input-group">
+        <input type="text" class="form-control" placeholder="{{ bgHex }}" id="{{ id }}" style="background-color:{{ bgHex }}; color:{{ textHex }};" value="{{ bgHex }}" readonly>
+        <div class="input-group-append">
+            <button class="js-input-group-copy-btn btn btn-light border" type="button" data-clipboard-target="#{{ id }}"><i class="fas fa-copy"></i></button>
+        </div>
+    </div>
+</div>
+{%- endmacro %}
+
+
+
+{%- macro settings_color_wheel_input(id, labelText, bgHex, textHex) %}
+<div class="form-group">
+    <label for="{{ id }}" class="font-weight-bold">{{ labelText }}</label>
+    <div class="input-group">
+        <div class="input-group-prepend">
+            <button class="js-input-group-copy-btn btn btn-light border" type="button" data-clipboard-target="#{{ id }}"><i class="fas fa-copy"></i></button>
+        </div>
+        <input type="text" class="js-hex-code-input form-control" id="{{ id }}" placeholder="{{ bgHex }}" value="{{ bgHex }}" style="background-color:{{ bgHex }}; color:{{ textHex }};">
+        <div class="input-group-append">
+            <button class="js-input-group-clear-btn btn btn-light border" type="button"><i class="fas fa-trash-alt"></i></button>
+        </div>
+    </div>
+</div>
+{%- endmacro %}
+
+
+
+{%- macro settings_context_head(title) %}
+<div class="lead font-weight-bold text-center">{{ title }}</div>
+<div class="small text-center border-bottom pb-2 mb-3" style="opacity: 0.6;">(Impacted BS4 SCSS)</div>
+{%- endmacro %}
+
+
+
+{%- macro settings_contextual_selects(id, label, selection1, selection2, note='false') %}
+<div class="form-row align-items-end">
+    <div class="col-7">
+        <div class="form-group{% if note != 'false' %} mb-0{% endif %}">
+            <label class="d-block font-weight-bold">{{ label }} Color</label>
+            <select id="{{ id }}" class="form-control"{% if note != 'false' %} aria-describedby="{{id}}-help"{% endif %}>
+                {% if selection1 === 'none' %}<option value="none" selected>None</option>{% endif %}
+                <option value="white"{% if selection1 == 'white' %} selected{% endif %}>White</option>
+                <option value="light-gray"{% if selection1 == 'light-gray' %} selected{% endif %}>Light Gray</option>
+                <option value="gray"{% if selection1 == 'gray' %} selected{% endif %}>Gray</option>
+                <option value="dark-gray"{% if selection1 == 'dark-gray' %} selected{% endif %}>Dark Gray</option>
+                <option value="black"{% if selection1 == 'black' %} selected{% endif %}>Black</option>
+                <option value="red"{% if selection1 == 'red' %} selected{% endif %}>Red</option>
+                <option value="rose"{% if selection1 == 'rose' %} selected{% endif %}>Rose</option>
+                <option value="magenta"{% if selection1 == 'magenta' %} selected{% endif %}>Magenta</option>
+                <option value="violet"{% if selection1 == 'violet' %} selected{% endif %}>Violet</option>
+                <option value="blue"{% if selection1 == 'blue' %} selected{% endif %}>Blue</option>
+                <option value="azure"{% if selection1 == 'azure' %} selected{% endif %}>Azure</option>
+                <option value="cyan"{% if selection1 == 'cyan' %} selected{% endif %}>Cyan</option>
+                <option value="spring-green"{% if selection1 == 'spring-green' %} selected{% endif %}>Spring Green</option>
+                <option value="green"{% if selection1 == 'green' %} selected{% endif %}>Green</option>
+                <option value="chartreuse"{% if selection1 == 'chartreuse' %} selected{% endif %}>Chartreuse</option>
+                <option value="yellow"{% if selection1 == 'yellow' %} selected{% endif %}>Yellow</option>
+                <option value="orange"{% if selection1 == 'orange' %} selected{% endif %}>Orange</option>
+                <option value="orange-gray"{% if selection1 == 'orange-gray' %} selected{% endif %}>Orange Gray</option>
+                <option value="dark-gray-orange"{% if selection1 == 'dark-gray-orange' %} selected{% endif %}>Dark Gray Orange</option>
+                <option value="blue-gray"{% if selection1 == 'blue-gray' %} selected{% endif %}>Blue Gray</option>
+                <option value="light-gray-azure"{% if selection1 == 'light-gray-azure' %} selected{% endif %}>Light Gray Azure</option>
+            </select>
+        </div>
+    </div>
+    <div class="col-5">
+        <div class="form-group{% if note != 'false' %} mb-0{% endif %}">
+            <label class="d-block font-weight-bold">Tint / Shade</label>
+            <select id="{{ id }}-modifier" class="form-control">
+                <option value="50"{% if selection2 == '50' %} selected{% endif %}>50</option>
+                <option value="100"{% if selection2 == '100' %} selected{% endif %}>100</option>
+                <option value="200"{% if selection2 == '200' %} selected{% endif %}>200</option>
+                <option value="300"{% if selection2 == '300' %} selected{% endif %}>300</option>
+                <option value="400"{% if selection2 == '400' %} selected{% endif %}>400</option>
+                <option value="none"{% if selection2 == 'none' %} selected{% endif %}>None</option>
+                <option value="600"{% if selection2 == '600' %} selected{% endif %}>600</option>
+                <option value="700"{% if selection2 == '700' %} selected{% endif %}>700</option>
+                <option value="800"{% if selection2 == '800' %} selected{% endif %}>800</option>
+                <option value="900"{% if selection2 == '900' %} selected{% endif %}>900</option>
+            </select>
+        </div>
+    </div>
+</div>
+{% if note != 'false' %}<small id="{{id}}-help" class="form-text pb-2" style="opacity: 0.6;">{{ note }}</small>{% endif %}
+{%- endmacro %}
+
+
+
+{%- macro settings_css_value_input(id, labelText, value) %}
+<div class="form-group">
+    <label for="{{ id }}" class="font-weight-bold">{{ labelText }}</label>
+    <input type="text" class="js-css-value form-control" id="{{ id }}" value="{{ value }}">
+</div>
+{%- endmacro %}
+
+
+
+{%- macro settings_decoration_select(id, label, selection1, note='false') %}
+<div class="form-group{% if note != 'false' %} mb-0{% endif %}">
+    <label class="d-block font-weight-bold">{{ label }}</label>
+    <select id="{{ id }}" class="form-control"{% if note != 'false' %} aria-describedby="{{id}}-help"{% endif %}>
+        
+        <option value="none"{% if selection1 == 'none' %} selected{% endif %}>None</option>
+
+        <option value="underline"{% if selection1 == 'underline' %} selected{% endif %}>Underline</option>
+        <option value="underline dotted"{% if selection1 == 'underline dotted' %} selected{% endif %}>Underline Dotted</option>
+        <option value="underline double"{% if selection1 == 'underline double' %} selected{% endif %}>Underline Double</option>
+        <option value="underline dashed"{% if selection1 == 'underline dashed' %} selected{% endif %}>Underline Dashed</option>
+        <option value="underline wavy"{% if selection1 == 'underline wavy' %} selected{% endif %}>Underline Wavy</option>
+
+        <option value="underline overline"{% if selection1 == 'underline overline' %} selected{% endif %}>Underline + Overline</option>
+
+        <option value="overline"{% if selection1 == 'overline' %} selected{% endif %}>Overline</option>
+        <option value="overline dotted"{% if selection1 == 'overline dotted' %} selected{% endif %}>Overline Dotted</option>
+        <option value="overline double"{% if selection1 == 'overline double' %} selected{% endif %}>Overline Double</option>
+        <option value="overline dashed"{% if selection1 == 'overline dashed' %} selected{% endif %}>Overline Dashed</option>
+        <option value="overline wavy"{% if selection1 == 'overline wavy' %} selected{% endif %}>Overline Wavy</option>
+
+        <option value="line-through"{% if selection1 == 'line-through' %} selected{% endif %}>Line-Through</option>
+        <option value="line-through dotted"{% if selection1 == 'line-through dotted' %} selected{% endif %}>Line-Through Dotted</option>
+        <option value="line-through double"{% if selection1 == 'line-through double' %} selected{% endif %}>Line-Through Double</option>
+        <option value="line-through dashed"{% if selection1 == 'line-through dashed' %} selected{% endif %}>Line-Through Dashed</option>
+        <option value="line-through wavy"{% if selection1 == 'line-through wavy' %} selected{% endif %}>Line-Through Wavy</option>
+
+    </select>
+</div>
+{% if note != 'false' %}<small id="{{id}}-help" class="form-text pb-2" style="opacity: 0.6;">{{ note }}</small>{% endif %}
+{%- endmacro %}
+
+
+
+{%- macro settings_form_checkbox(id, text, status, note='false') %}
+<div class="form-check">
+    <input class="form-check-input" type="checkbox" value="" id="{{ id }}"{{ status }}>
+    <label class="form-check-label" for="{{ id }}">{{ text }}</label>
+    {% if note != 'false' %}<small class="d-block text-muted">{{ note }}</small>{% endif %}
+</div>
+{%- endmacro %}
+
+
+
+{%- macro settings_google_font_input(id, labelText, value) %}
+<div class="form-group">
+    <label for="{{ id }}" class="font-weight-bold">{{ labelText }}</label>
+    <input type="text" class="js-google-font-url form-control" id="{{ id }}" value="{{ value }}">
+</div>
+{%- endmacro %}
+
+
+
+{%- macro settings_harmony_mode_radio(label, count, checked = 'false') %}
+<div class="form-check">
+    <input class="form-check-input" type="radio" name="harmony-mode" id="harmony-mode-{{ count }}" value="{{ label }}" aria-describedby="harmony-mode-help"{% if checked === 'true' %} checked{% endif %}>
+    <label class="form-check-label" for="harmony-mode-{{ count }}">{{ label }}</label>
+</div>
+{%- endmacro %}
+
+
+
+{%- macro settings_number_step_input(id, labelText, placeholder, value) %}
+<div class="form-group">
+    <label for="{{ id }}" class="d-block font-weight-bold">{{ labelText }}</label>
+    <div class="input-group">
+        <div class="input-group-prepend js-increment-down">
+            <button class="btn btn-light border" type="button"><i class="fas fa-angle-left"></i></button>
+        </div>
+        <input type="text" class="js-increment-target form-control text-center" id="{{ id }}" value="{{ value }}" placeholder="{{ placeholder }}" data-units="%" data-max="100" data-min="0">
+        <div class="input-group-append js-increment-up">
+            <button class="btn btn-light border" type="button"><i class="fas fa-angle-right"></i></button>
+        </div>
+    </div>
+</div>
+{%- endmacro %}
+
+
+
+{%- macro spinner(label, classes, style = 'false') %}
+<label class="d-block">{{ label }} Spinner</label>
+<div class="js-prism mb-2">
+    <div class="{{ classes }}" role="status"{% if style != 'false' %} style="{{ style }}"{% endif %}>
+        <span class="sr-only">Loading...</span>
+    </div>
+</div>
+{%- endmacro %}
+
+
+
+{%- macro table_colors(classPartial, namePartial) %}
+<div class="js-prism text-left mb-2">					
+    <div class="table-responsive">
+        <table class="table table-striped table-hover table-bordered table-{{ classPartial }}">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Type</th>
+                    <th scope="col">Element</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="row">1</th>
+                    <td>{{ namePartial }} Class (Striped)</td>
+                    <td>Row</td>
+                </tr>
+                <tr>
+                    <th scope="row">2</th>
+                    <td>{{ namePartial }} Class</td>
+                    <td>Row</td>
+                </tr>
+                <tr>
+                    <th scope="row">3</th>
+                    <td>{{ namePartial }} Class (Striped)</td>
+                    <td>Row</td>
+                </tr>
+                <tr>
+                    <th scope="row">4</th>
+                    <td>{{ namePartial }} Class</td>
+                    <td>Row</td>
+                </tr>
+                <tr class="active">
+                    <th scope="row">5</th>
+                    <td>{{ namePartial }} Active Row</td>
+                    <td>Row</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+{%- endmacro %}
+
+
+
+{%- macro table_colors_dark(classPartial, namePartial) %}
+<div class="js-prism text-left mb-2">					
+    <div class="table-responsive">
+        <table class="table table-striped table-hover table-bordered table-dark">
+            <thead class="thead-dark">
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Type</th>
+                    <th scope="col">Element</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="bg-{{ classPartial }}">
+                    <th scope="row">1</th>
+                    <td>{{ namePartial }} Class</td>
+                    <td>Row</td>
+                </tr>
+                <tr class="bg-{{ classPartial }}">
+                    <th scope="row">2</th>
+                    <td>{{ namePartial }} Class</td>
+                    <td>Row</td>
+                </tr>
+                <tr class="bg-{{ classPartial }}">
+                    <th scope="row">3</th>
+                    <td>{{ namePartial }} Class</td>
+                    <td>Row</td>
+                </tr>
+                <tr class="bg-{{ classPartial }}">
+                    <th scope="row">4</th>
+                    <td>{{ namePartial }} Class</td>
+                    <td>Row</td>
+                </tr>
+                <tr class="bg-{{ classPartial }} active">
+                    <th scope="row">5</th>
+                    <td>{{ namePartial }} Active Row</td>
+                    <td>Row</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+{%- endmacro %}
+
+
+
+{%- macro text_alignment_classes(string) %}
+<tr>
+    <th scope="row" class="bg-dark text-light border-light"><samp>.text-{{ string }}</samp></th>
+    <td><samp>.text-sm-{{ string }}</samp></td>
+    <td><samp>.text-md-{{ string }}</samp></td>
+    <td><samp>.text-lg-{{ string }}</samp></td>
+    <td><samp>.text-xl-{{ string }}</samp></td>
+</tr>
+{%- endmacro %}
+
+
+
+{%- macro text_badge(element) %}
+<div class="js-prism mb-2">
+    <{{ element }}>Example <span class="badge badge-primary">NEW</span></{{ element }}>
+</div>
+{%- endmacro %}
+
+
+
+{%- macro text_element(classPartial, namePartial) %}
+<div class="js-prism">
+    <div class="text-{{ classPartial }}">{{ namePartial }} Text</div>
+</div>
+{%- endmacro %}
+
+
+
+{%- macro text_justification(classPartial, namePartial, labelJustification) %}
+<strong class="d-block text-{{ labelJustification }}">{{ namePartial }} Text:</strong>
+<div class="js-prism mb-2">
+    <p class="text-{{ classPartial }}">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean vehicula, lacus id tincidunt congue, arcu nisi pharetra dui, nec convallis enim odio vitae diam. Curabitur ut ullamcorper nisi. Phasellus quam nisi, facilisis et neque quis, tempor consequat enim.</p>
+</div>
+{%- endmacro %}
+
+
+
+{%- macro text_shadows(bgClass, textClass, shadowClassPart, headline) %}
+<div class="js-prism {{ bgClass }} p-2 mb-2">
+    <div class="{{ textClass }} text-shadow{{ shadowClassPart }}">{{ headline }}</div>
+</div>
+<div style="height: 10px;"></div>
+{%- endmacro %}
+
+
+
+{%- macro text_sizes(classPartial, namePartial) %}
+<div class="js-prism mb-2">
+    <div class="text-{{ classPartial }}">{{ namePartial }} Text</div>
+</div>
+{%- endmacro %}
+
+
+
+{%- macro text_variants(classPartial, namePartial) %}
+<h4>{{ namePartial }} Variants</h4>
+
+<div class="js-prism">
+    <div class="text-{{ classPartial }}-50">50 {{ namePartial }} Text</div>
+</div>
+<div class="js-prism">
+    <div class="text-{{ classPartial }}-100">100 {{ namePartial }} Text</div>
+</div>
+<div class="js-prism">
+    <div class="text-{{ classPartial }}-200">200 {{ namePartial }} Text</div>
+</div>
+<div class="js-prism">
+    <div class="text-{{ classPartial }}-300">300 {{ namePartial }} Text</div>
+</div>
+<div class="js-prism">
+    <div class="text-{{ classPartial }}-400">400 {{ namePartial }} Text</div>
+</div>
+<div class="js-prism">
+    <div class="text-{{ classPartial }}-500">500 {{ namePartial }} Text</div>
+</div>
+<div class="js-prism">
+    <div class="text-{{ classPartial }}-600">600 {{ namePartial }} Text</div>
+</div>
+<div class="js-prism">
+    <div class="text-{{ classPartial }}-700">700 {{ namePartial }} Text</div>
+</div>
+<div class="js-prism">
+    <div class="text-{{ classPartial }}-800">800 {{ namePartial }} Text</div>
+</div>
+<div class="js-prism mb-3">
+    <div class="text-{{ classPartial }}-900">900 {{ namePartial }} Text</div>
+</div>
+{%- endmacro %}
+
+
+
+{%- macro thead_template() %}
+<!-- DELETE UNUSUED? -->
+<thead class="thead-dark">
+    <tr>
+        <th scope="col">Base Class</th>
+        <th scope="col">Small</th>
+        <th scope="col">Medium</th>
+        <th scope="col">Large</th>
+        <th scope="col">X-Large</th>
+    </tr>
+</thead>
+{%- endmacro %}
+
+
+
+{%- macro tooltip_colors(classPartial, namePartial) %}
+<div class="js-prism mb-2">
+    <button type="button" class="btn btn-{{ classPartial }}" data-obe-color-class="tooltip-{{ classPartial }}" data-toggle="tooltip" data-placement="top" title="{{ namePartial }} Tooltip">{{ namePartial }} Tooltip</button>
+</div>
 {%- endmacro %}

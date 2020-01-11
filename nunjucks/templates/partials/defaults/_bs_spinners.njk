@@ -16,30 +16,21 @@
                 <div class="row justify-content-center">
 
                     <div class="col-md-6 pb-5">
-
-                        {% macro spinner(label, classes, style = 'false') %}
-                        <label class="d-block">{{ label }} Spinner</label>
-                        <div class="js-prism mb-2">
-                            <div class="{{ classes }}" role="status"{% if style != 'false' %} style="{{ style }}"{% endif %}>
-                                <span class="sr-only">Loading...</span>
-                            </div>
-                        </div>
-                        {% endmacro %}
                         
                         <h5 class="pt-4">Spinner Types</h5>
 
-                        {{ spinner('Border', 'spinner-border') }}
-                        {{ spinner('Growing', 'spinner-grow') }}
+                        {{ macros.spinner('Border', 'spinner-border') }}
+                        {{ macros.spinner('Growing', 'spinner-grow') }}
 
                         <h5 class="pt-4">Small Spinners</h5>
                         
-                        {{ spinner('Small Border', 'spinner-border spinner-border-sm') }}
-                        {{ spinner('Small Growing', 'spinner-grow spinner-grow-sm') }}
+                        {{ macros.spinner('Small Border', 'spinner-border spinner-border-sm') }}
+                        {{ macros.spinner('Small Growing', 'spinner-grow spinner-grow-sm') }}
 
                         <h5 class="pt-4">Large Spinners</h5>
 
-                        {{ spinner('Large Border', 'spinner-border', 'width: 3rem; height: 3rem;') }}
-                        {{ spinner('Large Growing', 'spinner-grow', 'width: 3rem; height: 3rem;') }}
+                        {{ macros.spinner('Large Border', 'spinner-border', 'width: 3rem; height: 3rem;') }}
+                        {{ macros.spinner('Large Growing', 'spinner-grow', 'width: 3rem; height: 3rem;') }}
 
                         <h5 class="pt-4">Spinner Buttons</h5>
 
@@ -97,25 +88,25 @@
 
                         <h5 class="pt-4">Border Spinner Colors</h5>
 
-                        {{ spinner('Primary Border', 'spinner-border text-primary') }}
-                        {{ spinner('Secondary Border', 'spinner-border text-secondary') }}
-                        {{ spinner('Success Border', 'spinner-border text-success') }}
-                        {{ spinner('Danger Border', 'spinner-border text-danger') }}
-                        {{ spinner('Warning Border', 'spinner-border text-warning') }}
-                        {{ spinner('Info Border', 'spinner-border text-info') }}
-                        {{ spinner('Light Border', 'spinner-border text-light') }}
-                        {{ spinner('Dark Border', 'spinner-border text-dark') }}
+                        {{ macros.spinner('Primary Border', 'spinner-border text-primary') }}
+                        {{ macros.spinner('Secondary Border', 'spinner-border text-secondary') }}
+                        {{ macros.spinner('Success Border', 'spinner-border text-success') }}
+                        {{ macros.spinner('Danger Border', 'spinner-border text-danger') }}
+                        {{ macros.spinner('Warning Border', 'spinner-border text-warning') }}
+                        {{ macros.spinner('Info Border', 'spinner-border text-info') }}
+                        {{ macros.spinner('Light Border', 'spinner-border text-light') }}
+                        {{ macros.spinner('Dark Border', 'spinner-border text-dark') }}
 
                         <h5 class="pt-4">Grow Spinner Colors</h5>
 
-                        {{ spinner('Primary Grow', 'spinner-grow text-primary') }}
-                        {{ spinner('Secondary Grow', 'spinner-grow text-secondary') }}
-                        {{ spinner('Success Grow', 'spinner-grow text-success') }}
-                        {{ spinner('Danger Grow', 'spinner-grow text-danger') }}
-                        {{ spinner('Warning Grow', 'spinner-grow text-warning') }}
-                        {{ spinner('Info Grow', 'spinner-grow text-info') }}
-                        {{ spinner('Light Grow', 'spinner-grow text-light') }}
-                        {{ spinner('Dark Grow', 'spinner-grow text-dark') }}
+                        {{ macros.spinner('Primary Grow', 'spinner-grow text-primary') }}
+                        {{ macros.spinner('Secondary Grow', 'spinner-grow text-secondary') }}
+                        {{ macros.spinner('Success Grow', 'spinner-grow text-success') }}
+                        {{ macros.spinner('Danger Grow', 'spinner-grow text-danger') }}
+                        {{ macros.spinner('Warning Grow', 'spinner-grow text-warning') }}
+                        {{ macros.spinner('Info Grow', 'spinner-grow text-info') }}
+                        {{ macros.spinner('Light Grow', 'spinner-grow text-light') }}
+                        {{ macros.spinner('Dark Grow', 'spinner-grow text-dark') }}
 
                     </div>
 

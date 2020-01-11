@@ -15,56 +15,37 @@
                 
                 <div class="row justify-content-center text-left">
 
-                    {% macro card_border_colors(name, borderClass, textClass) %}
-                    <div class="col-sm-6 pb-4">
+                    {{ macros.card_border_colors('Primary', 'primary', 'primary') }}
+                    {{ macros.card_border_colors('Secondary', 'secondary', 'secondary') }}
+                    {{ macros.card_border_colors('Success', 'success', 'success') }}
+                    {{ macros.card_border_colors('Danger', 'danger', 'danger') }}
+                    {{ macros.card_border_colors('Warning', 'warning', 'warning') }}
+                    {{ macros.card_border_colors('Info', 'info', 'info') }}
+                    {{ macros.card_border_colors('Light', 'light', 'dark') }}
+                    {{ macros.card_border_colors('Dark', 'dark', 'dark') }}
 
-                        <div class="js-prism mb-2">
-                            <div class="card border-{{ borderClass }} text-{{ textClass }}">
-                                <div class="card-header border-{{ borderClass }}">{{ name }} Card Header</div>
-                                <div class="card-body">
-                                    <h5 class="card-title">{{ name }} Card Title</h5>
-                                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                </div>
-                                <div class="card-footer text-right border-{{ borderClass }}">
-                                    <small>{{ name }} Footer</small>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-                    {% endmacro %}
-
-                    {{ card_border_colors('Primary', 'primary', 'primary') }}
-                    {{ card_border_colors('Secondary', 'secondary', 'secondary') }}
-                    {{ card_border_colors('Success', 'success', 'success') }}
-                    {{ card_border_colors('Danger', 'danger', 'danger') }}
-                    {{ card_border_colors('Warning', 'warning', 'warning') }}
-                    {{ card_border_colors('Info', 'info', 'info') }}
-                    {{ card_border_colors('Light', 'light', 'dark') }}
-                    {{ card_border_colors('Dark', 'dark', 'dark') }}
-
-                    {{ card_border_colors('White', 'white', 'gray') }}
-                    {{ card_border_colors('Light Gray', 'light-gray', 'gray') }}
-                    {{ card_border_colors('Gray', 'gray', 'gray') }}
-                    {{ card_border_colors('Dark Gray', 'dark-gray', 'dark-gray') }}
-                    {{ card_border_colors('Black', 'black', 'black') }}
+                    {{ macros.card_border_colors('White', 'white', 'gray') }}
+                    {{ macros.card_border_colors('Light Gray', 'light-gray', 'gray') }}
+                    {{ macros.card_border_colors('Gray', 'gray', 'gray') }}
+                    {{ macros.card_border_colors('Dark Gray', 'dark-gray', 'dark-gray') }}
+                    {{ macros.card_border_colors('Black', 'black', 'black') }}
                     
-                    {{ card_border_colors('Red', 'red', 'red') }}
-                    {{ card_border_colors('Rose', 'rose', 'rose') }}
-                    {{ card_border_colors('Magenta', 'magenta', 'magenta') }}
-                    {{ card_border_colors('Violet', 'violet', 'violet') }}
-                    {{ card_border_colors('Blue', 'blue', 'blue') }}
-                    {{ card_border_colors('Azure', 'azure', 'azure') }}
-                    {{ card_border_colors('Cyan', 'cyan', 'cyan') }}
-                    {{ card_border_colors('Spring Green', 'spring-green', 'spring-green') }}
-                    {{ card_border_colors('Green', 'green', 'green') }}
-                    {{ card_border_colors('Chartreuse', 'chartreuse', 'chartreuse') }}
-                    {{ card_border_colors('Yellow', 'yellow', 'yellow') }}
-                    {{ card_border_colors('Orange', 'orange', 'orange') }}
-                    {{ card_border_colors('Orange Gray', 'orange-gray', 'orange-gray') }}
-                    {{ card_border_colors('Dark Gray Orange', 'dark-gray-orange', 'dark-gray-orange') }}
-                    {{ card_border_colors('Blue Gray', 'blue-gray', 'blue-gray') }}
-                    {{ card_border_colors('Light Gray Azure', 'light-gray-azure', 'light-gray-azure') }}
+                    {{ macros.card_border_colors('Red', 'red', 'red') }}
+                    {{ macros.card_border_colors('Rose', 'rose', 'rose') }}
+                    {{ macros.card_border_colors('Magenta', 'magenta', 'magenta') }}
+                    {{ macros.card_border_colors('Violet', 'violet', 'violet') }}
+                    {{ macros.card_border_colors('Blue', 'blue', 'blue') }}
+                    {{ macros.card_border_colors('Azure', 'azure', 'azure') }}
+                    {{ macros.card_border_colors('Cyan', 'cyan', 'cyan') }}
+                    {{ macros.card_border_colors('Spring Green', 'spring-green', 'spring-green') }}
+                    {{ macros.card_border_colors('Green', 'green', 'green') }}
+                    {{ macros.card_border_colors('Chartreuse', 'chartreuse', 'chartreuse') }}
+                    {{ macros.card_border_colors('Yellow', 'yellow', 'yellow') }}
+                    {{ macros.card_border_colors('Orange', 'orange', 'orange') }}
+                    {{ macros.card_border_colors('Orange Gray', 'orange-gray', 'orange-gray') }}
+                    {{ macros.card_border_colors('Dark Gray Orange', 'dark-gray-orange', 'dark-gray-orange') }}
+                    {{ macros.card_border_colors('Blue Gray', 'blue-gray', 'blue-gray') }}
+                    {{ macros.card_border_colors('Light Gray Azure', 'light-gray-azure', 'light-gray-azure') }}
 
                 </div>
 

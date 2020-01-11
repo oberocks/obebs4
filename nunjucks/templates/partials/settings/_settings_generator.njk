@@ -50,53 +50,45 @@
 
                     <div class="col-md-6 pb-5 text-left">
                         
-                        {% macro form_checkbox(id, text, status, note='false') %}
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="" id="{{ id }}"{{ status }}>
-                            <label class="form-check-label" for="{{ id }}">{{ text }}</label>
-                            {% if note != 'false' %}<small class="d-block text-muted">{{ note }}</small>{% endif %}
-                        </div>
-                        {% endmacro %}
-                        
                         <h3 class="pb-2">OBE:BS4 Color Classes</h3>
                         
-                        {{ form_checkbox('enable-obebs4-alert-wheel-colors', 'Enable Alert Color Classes', ' checked') }}
+                        {{ macros.settings_form_checkbox('enable-obebs4-alert-wheel-colors', 'Enable Alert Color Classes', ' checked') }}
                         
-                        {{ form_checkbox('enable-obebs4-alert-variations', 'Enable Alert Color Variation Classes', ' checked') }}
+                        {{ macros.settings_form_checkbox('enable-obebs4-alert-variations', 'Enable Alert Color Variation Classes', ' checked') }}
                         
-                        {{ form_checkbox('enable-obebs4-background-wheel-colors', 'Enable Background Classes', ' checked') }}
+                        {{ macros.settings_form_checkbox('enable-obebs4-background-wheel-colors', 'Enable Background Classes', ' checked') }}
                         
-                        {{ form_checkbox('enable-obebs4-background-tints-shades', 'Enable Background Tint/Shade Classes', ' checked') }}
+                        {{ macros.settings_form_checkbox('enable-obebs4-background-tints-shades', 'Enable Background Tint/Shade Classes', ' checked') }}
                         
-                        {{ form_checkbox('enable-obebs4-1-color-gradients', 'Enable 1 Color Gradient Background Classes', ' checked') }}
+                        {{ macros.settings_form_checkbox('enable-obebs4-1-color-gradients', 'Enable 1 Color Gradient Background Classes', ' checked') }}
 
-                        {{ form_checkbox('enable-obebs4-2-color-gradients', 'Enable 2 Color Gradient Background Classes', ' checked') }}
+                        {{ macros.settings_form_checkbox('enable-obebs4-2-color-gradients', 'Enable 2 Color Gradient Background Classes', ' checked') }}
                         
-                        {{ form_checkbox('enable-obebs4-3-color-gradients', 'Enable 3 Color Gradient Background Classes', ' checked') }}
+                        {{ macros.settings_form_checkbox('enable-obebs4-3-color-gradients', 'Enable 3 Color Gradient Background Classes', ' checked') }}
                         
-                        {{ form_checkbox('enable-obebs4-badge-wheel-colors', 'Enable Badge Color Classes', ' checked') }}
+                        {{ macros.settings_form_checkbox('enable-obebs4-badge-wheel-colors', 'Enable Badge Color Classes', ' checked') }}
                         
-                        {{ form_checkbox('enable-obebs4-border-wheel-colors', 'Enable Border Color Classes', ' checked') }}
+                        {{ macros.settings_form_checkbox('enable-obebs4-border-wheel-colors', 'Enable Border Color Classes', ' checked') }}
                         
-                        {{ form_checkbox('enable-obebs4-border-tints-shades', 'Enable Border Tint/Shade Classes', ' checked') }}
+                        {{ macros.settings_form_checkbox('enable-obebs4-border-tints-shades', 'Enable Border Tint/Shade Classes', ' checked') }}
                         
-                        {{ form_checkbox('enable-obebs4-button-wheel-colors', 'Enable Button Color Classes', ' checked') }}
+                        {{ macros.settings_form_checkbox('enable-obebs4-button-wheel-colors', 'Enable Button Color Classes', ' checked') }}
                         
-                        {{ form_checkbox('enable-obebs4-dropdowns', 'Enable Dropdown Color Classes', ' checked') }}
+                        {{ macros.settings_form_checkbox('enable-obebs4-dropdowns', 'Enable Dropdown Color Classes', ' checked') }}
                         
-                        {{ form_checkbox('enable-obebs4-list-groups', 'Enable List Groups Color Classes', ' checked') }}
+                        {{ macros.settings_form_checkbox('enable-obebs4-list-groups', 'Enable List Groups Color Classes', ' checked') }}
                         
-                        {{ form_checkbox('enable-obebs4-tables', 'Enable Table Color Classes', ' checked') }}
+                        {{ macros.settings_form_checkbox('enable-obebs4-tables', 'Enable Table Color Classes', ' checked') }}
                         
-                        {{ form_checkbox('enable-obebs4-text-wheel-colors', 'Enable Text Color Classes', ' checked') }}
+                        {{ macros.settings_form_checkbox('enable-obebs4-text-wheel-colors', 'Enable Text Color Classes', ' checked') }}
                         
-                        {{ form_checkbox('enable-obebs4-text-tints-shades', 'Enable Text Tint/Shade Classes', ' checked') }}
+                        {{ macros.settings_form_checkbox('enable-obebs4-text-tints-shades', 'Enable Text Tint/Shade Classes', ' checked') }}
                         
-                        {{ form_checkbox('enable-obebs4-tooltips', 'Enable Tooltip Color Classes', ' checked') }}
+                        {{ macros.settings_form_checkbox('enable-obebs4-tooltips', 'Enable Tooltip Color Classes', ' checked') }}
                         
-                        {{ form_checkbox('enable-obebs4-form-element-wheel-colors', 'Enable Form Element Color Classes', ' checked') }}
+                        {{ macros.settings_form_checkbox('enable-obebs4-form-element-wheel-colors', 'Enable Form Element Color Classes', ' checked') }}
                         
-                        {{ form_checkbox('enable-obebs4-popovers', 'Enable Popover Color Classes', ' checked') }}
+                        {{ macros.settings_form_checkbox('enable-obebs4-popovers', 'Enable Popover Color Classes', ' checked') }}
 
                         
                         
@@ -104,19 +96,19 @@
                         
                         <h3 class="pt-4 pb-2">OBE:BS4 Elements, Components, &amp; Plugins</h3>
                         
-                        {{ form_checkbox('enable-obebs4-material-design-forms', 'Enable Material Design Input Elements', ' checked') }}
+                        {{ macros.settings_form_checkbox('enable-obebs4-material-design-forms', 'Enable Material Design Input Elements', ' checked') }}
 
-                        {{ form_checkbox('enable-obebs4-off-canvas-nav-modals', 'Enable Off-Canvas Nav/Modal Components', ' checked', note='Dependency: Extended Modal Utility Classes') }}
+                        {{ macros.settings_form_checkbox('enable-obebs4-off-canvas-nav-modals', 'Enable Off-Canvas Nav/Modal Components', ' checked', note='Dependency: Extended Modal Utility Classes') }}
 
-                        {{ form_checkbox('enable-obebs4-custom-dropdown-selects', 'Enable OBE:BS4 Dropdown Select Plugin', ' checked') }}
+                        {{ macros.settings_form_checkbox('enable-obebs4-custom-dropdown-selects', 'Enable OBE:BS4 Dropdown Select Plugin', ' checked') }}
                         
-                        {{ form_checkbox('enable-obebs4-fab-buttons', 'Enable Fab Button Elements', ' checked') }}
+                        {{ macros.settings_form_checkbox('enable-obebs4-fab-buttons', 'Enable Fab Button Elements', ' checked') }}
 
-                        {{ form_checkbox('enable-obebs4-fa5-icon-checkboxes', 'Enable FontAwesome 5 Icon Checkbox Elements', ' checked') }}
+                        {{ macros.settings_form_checkbox('enable-obebs4-fa5-icon-checkboxes', 'Enable FontAwesome 5 Icon Checkbox Elements', ' checked') }}
 
-                        {{ form_checkbox('enable-obebs4-datepicker-component', 'Enable OBE:BS4 Calendar Datepicker Plugin', ' checked') }}
+                        {{ macros.settings_form_checkbox('enable-obebs4-datepicker-component', 'Enable OBE:BS4 Calendar Datepicker Plugin', ' checked') }}
 
-                        {{ form_checkbox('enable-obebs4-toggle-text-mini-plugin', 'Enable Toggle Text Mini-Plugin', ' checked') }}
+                        {{ macros.settings_form_checkbox('enable-obebs4-toggle-text-mini-plugin', 'Enable Toggle Text Mini-Plugin', ' checked') }}
                         
                         
                         
@@ -125,31 +117,31 @@
                         
                         <h3 class="pt-4 pb-2">OBE:BS4 Utility Classes</h3>
 
-                        {{ form_checkbox('enable-obebs4-border-widths', 'Enable Border Width Utility Classes', ' checked') }}
+                        {{ macros.settings_form_checkbox('enable-obebs4-border-widths', 'Enable Border Width Utility Classes', ' checked') }}
                         
-                        {{ form_checkbox('enable-obebs4-button-sizes', 'Enable Button Sizes Utility Classes', ' checked') }}
+                        {{ macros.settings_form_checkbox('enable-obebs4-button-sizes', 'Enable Button Sizes Utility Classes', ' checked') }}
                         
-                        {{ form_checkbox('enable-obebs4-element-sizes', 'Enable Element Height & Width Utility Classes', ' checked') }}
+                        {{ macros.settings_form_checkbox('enable-obebs4-element-sizes', 'Enable Element Height & Width Utility Classes', ' checked') }}
                         
-                        {{ form_checkbox('enable-obebs4-lists', 'Enable List Utility Classes', ' checked') }}
+                        {{ macros.settings_form_checkbox('enable-obebs4-lists', 'Enable List Utility Classes', ' checked') }}
                         
-                        {{ form_checkbox('enable-obebs4-box-shadows', 'Enable Box Shadow Utility Classes', ' checked') }}
+                        {{ macros.settings_form_checkbox('enable-obebs4-box-shadows', 'Enable Box Shadow Utility Classes', ' checked') }}
                         
-                        {{ form_checkbox('enable-obebs4-text-shadows', 'Enable Text Shadow Utility Classes', ' checked') }}
+                        {{ macros.settings_form_checkbox('enable-obebs4-text-shadows', 'Enable Text Shadow Utility Classes', ' checked') }}
                         
-                        {{ form_checkbox('enable-obebs4-text-sizes', 'Enable Text Size Utility Classes', ' checked') }}
+                        {{ macros.settings_form_checkbox('enable-obebs4-text-sizes', 'Enable Text Size Utility Classes', ' checked') }}
                         
-                        <!--{{ form_checkbox('enable-obebs4-font-weights', 'Enable Font Weights Utility Classes', ' checked') }}-->
+                        <!--{{ macros.settings_form_checkbox('enable-obebs4-font-weights', 'Enable Font Weights Utility Classes', ' checked') }}-->
 
-                        {{ form_checkbox('enable-obebs4-responsive-headlines', 'Enable Responsive Headline Utility Classes', ' checked') }}
+                        {{ macros.settings_form_checkbox('enable-obebs4-responsive-headlines', 'Enable Responsive Headline Utility Classes', ' checked') }}
                         
-                        {{ form_checkbox('enable-obebs4-opacity', 'Enable Extended Opacity Classes', ' checked') }}
+                        {{ macros.settings_form_checkbox('enable-obebs4-opacity', 'Enable Extended Opacity Classes', ' checked') }}
                         
-                        {{ form_checkbox('enable-obebs4-modal-utilities', 'Enable Extended Modal Utility Classes', ' checked', note='Dependency: Off-Canvas Nav/Modal Components') }}
+                        {{ macros.settings_form_checkbox('enable-obebs4-modal-utilities', 'Enable Extended Modal Utility Classes', ' checked', note='Dependency: Off-Canvas Nav/Modal Components') }}
 
                         <hr/>
                         
-                        {{ form_checkbox('enable-obebs4-spacing-utilities', 'Enable Margin & Padding Utility Classes', '') }}
+                        {{ macros.settings_form_checkbox('enable-obebs4-spacing-utilities', 'Enable Margin & Padding Utility Classes', '') }}
 
                         <div class="alert alert-danger alert-dismissible fade show mt-3" role="alert">
                             <p class="font-weight-bold mb-1">PLEASE NOTE:</p>
@@ -167,47 +159,32 @@
                     </div>
 
                     <div class="col-md-6 pb-5 text-left">
-
-                        {% macro number_step_input(id, labelText, placeholder, value) %}
-                        <div class="form-group">
-                            <label for="{{ id }}" class="d-block font-weight-bold">{{ labelText }}</label>
-                            <div class="input-group">
-                                <div class="input-group-prepend js-increment-down">
-                                    <button class="btn btn-light border" type="button"><i class="fas fa-angle-left"></i></button>
-                                </div>
-                                <input type="text" class="js-increment-target form-control text-center" id="{{ id }}" value="{{ value }}" placeholder="{{ placeholder }}" data-units="%" data-max="100" data-min="0">
-                                <div class="input-group-append js-increment-up">
-                                    <button class="btn btn-light border" type="button"><i class="fas fa-angle-right"></i></button>
-                                </div>
-                            </div>
-                        </div>
-                        {% endmacro %}
                         
                         <h3 class="pb-2">OBE:BS4 1 Color Gradient Tints/Shades</h3>
 
-                        {{ number_step_input('obebs4-1-color-tint-value', '1 Color Gradient Tint Value', '5%', '5%') }}
+                        {{ macros.settings_number_step_input('obebs4-1-color-tint-value', '1 Color Gradient Tint Value', '5%', '5%') }}
                         
-                        {{ number_step_input('obebs4-1-color-shade-value', '1 Color Gradient Shade Value', '10%', '10%') }}
+                        {{ macros.settings_number_step_input('obebs4-1-color-shade-value', '1 Color Gradient Shade Value', '10%', '10%') }}
 
                         <h3 class="pt-4 pb-2">OBE:BS4 Contextual Color Tints/Shades</h3>
 
-                        {{ number_step_input('color-50-lighten-percent', '[50] Color Lighten Value', '30%', '30%') }}
+                        {{ macros.settings_number_step_input('color-50-lighten-percent', '[50] Color Lighten Value', '30%', '30%') }}
 
-                        {{ number_step_input('color-100-lighten-percent', '[100] Color Lighten Value', '20%', '20%') }}
+                        {{ macros.settings_number_step_input('color-100-lighten-percent', '[100] Color Lighten Value', '20%', '20%') }}
 
-                        {{ number_step_input('color-200-lighten-percent', '[200] Color Lighten Value', '15%', '15%') }}
+                        {{ macros.settings_number_step_input('color-200-lighten-percent', '[200] Color Lighten Value', '15%', '15%') }}
 
-                        {{ number_step_input('color-300-lighten-percent', '[300] Color Lighten Value', '10%', '10%') }}
+                        {{ macros.settings_number_step_input('color-300-lighten-percent', '[300] Color Lighten Value', '10%', '10%') }}
 
-                        {{ number_step_input('color-400-lighten-percent', '[400] Color Lighten Value', '5%', '5%') }}
+                        {{ macros.settings_number_step_input('color-400-lighten-percent', '[400] Color Lighten Value', '5%', '5%') }}
 
-                        {{ number_step_input('color-600-darken-percent', '[600] Color Darken Value', '5%', '5%') }}
+                        {{ macros.settings_number_step_input('color-600-darken-percent', '[600] Color Darken Value', '5%', '5%') }}
 
-                        {{ number_step_input('color-700-darken-percent', '[700] Color Darken Value', '10%', '10%') }}
+                        {{ macros.settings_number_step_input('color-700-darken-percent', '[700] Color Darken Value', '10%', '10%') }}
 
-                        {{ number_step_input('color-800-darken-percent', '[800] Color Darken Value', '15%', '15%') }}
+                        {{ macros.settings_number_step_input('color-800-darken-percent', '[800] Color Darken Value', '15%', '15%') }}
 
-                        {{ number_step_input('color-900-darken-percent', '[900] Color Darken Value', '20%', '20%') }}
+                        {{ macros.settings_number_step_input('color-900-darken-percent', '[900] Color Darken Value', '20%', '20%') }}
 
 
                         <h3 class="pt-4 pb-2">OBE:BS4 Font Options</h3>
@@ -259,32 +236,17 @@
                             <div class="tab-content" id="myTabContent">
                                 
                                 <div class="tab-pane pt-3 fade{{ googleFontsTabClasses }}" id="google-fonts" role="tabpanel" aria-labelledby="google-fonts-tab">
-                                    
-                                    {% macro google_font_input(id, labelText, value) %}
-                                    <div class="form-group">
-                                        <label for="{{ id }}" class="font-weight-bold">{{ labelText }}</label>
-                                        <input type="text" class="js-google-font-url form-control" id="{{ id }}" value="{{ value }}">
-                                    </div>
-                                    {% endmacro %}
 
-                                    {{ google_font_input('google-fonts-url', 'Google Fonts Embed Code', googleFontsString) }}
+                                    {{ macros.settings_google_font_input('google-fonts-url', 'Google Fonts Embed Code', googleFontsString) }}
 
                                     
-                                    {% macro css_value_input(id, labelText, value) %}
-                                    <div class="form-group">
-                                        <label for="{{ id }}" class="font-weight-bold">{{ labelText }}</label>
-                                        <input type="text" class="js-css-value form-control" id="{{ id }}" value="{{ value }}">
-                                    </div>
-                                    {% endmacro %}
+                                    {{ macros.settings_css_value_input('google-font-family-sans-serif', 'Primary Google Font CSS', googleSansSerifString) }}
 
-                                    
-                                    {{ css_value_input('google-font-family-sans-serif', 'Primary Google Font CSS', googleSansSerifString) }}
-
-                                    {{ css_value_input('google-font-family-monospace', 'Monospace Google Font CSS', googleMonospaceString) }}
+                                    {{ macros.settings_css_value_input('google-font-family-monospace', 'Monospace Google Font CSS', googleMonospaceString) }}
 
                                     <label class="d-block font-weight-bold">Add a Secondary Font</label>
                                     
-                                    {{ form_checkbox('enable-obebs4-secondary-font', 'Enable Secondary Google Font', ' checked') }}
+                                    {{ macros.settings_form_checkbox('enable-obebs4-secondary-font', 'Enable Secondary Google Font', ' checked') }}
 
                                     <div style="height:10px;"> </div>
                                     
@@ -297,16 +259,9 @@
                                 
                                 <div class="tab-pane pt-3 fade{{ bootstrapFontsTabClasses }}" id="bootstrap" role="tabpanel" aria-labelledby="bootstrap-tab">
 
-                                    {% macro bootstrap_font_defaults_input(id, labelText, value) %}
-                                    <div class="form-group">
-                                        <label for="{{ id }}" class="font-weight-bold">{{ labelText }}</label>
-                                        <input type="text" class="js-css-value form-control" id="{{ id }}" value="{{ value }}" disabled>
-                                    </div>
-                                    {% endmacro %}
+                                    {{ macros.settings_bs_font_defaults_input('bootstrap-font-family-sans-serif', 'Sans Serif Font Defaults', '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"') }}
 
-                                    {{ bootstrap_font_defaults_input('bootstrap-font-family-sans-serif', 'Sans Serif Font Defaults', '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"') }}
-
-                                    {{ bootstrap_font_defaults_input('bootstrap-font-family-monospace', 'Monospace Font Defaults', 'SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace') }}
+                                    {{ macros.settings_bs_font_defaults_input('bootstrap-font-family-monospace', 'Monospace Font Defaults', 'SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace') }}
 
                                 </div>
 
@@ -424,152 +379,42 @@
 
                         <div class="js-color-wheel-inputs">
 
-                            {% macro form_text_input(id, labelText, placeholder, value) %}
-                            <div class="form-group">
-                                <label for="{{ id }}" class="font-weight-bold">{{ labelText }}</label>
-                                <input type="text" class="js-hex-code-input form-control" id="{{ id }}" placeholder="{{ placeholder }}" value="{{ value }}">
-                            </div>
-                            {% endmacro %}
+                            {{ macros.settings_color_wheel_input('white', 'White Hex Color', obe_settings['white'], '#000000') }}
+                            {{ macros.settings_color_wheel_input('light-gray', 'Light Gray Hex Color', obe_settings['light-gray'], '#000000') }}
+                            {{ macros.settings_color_wheel_input('gray', 'Gray Hex Color', obe_settings['gray'], '#ffffff') }}
+                            {{ macros.settings_color_wheel_input('dark-gray', 'Dark Gray Hex Color', obe_settings['dark-gray'], '#ffffff') }}
+                            {{ macros.settings_color_wheel_input('black', 'Black Hex Color', obe_settings['black'], '#ffffff') }}
 
+                            {{ macros.settings_color_wheel_input('red', 'Red Hex Color', obe_settings['red'], '#ffffff') }}
+                            {{ macros.settings_color_wheel_input('rose', 'Rose Hex Color', obe_settings['rose'], '#ffffff') }}
+                            {{ macros.settings_color_wheel_input('magenta', 'Magenta Hex Color', obe_settings['magenta'], '#ffffff') }}
+                            {{ macros.settings_color_wheel_input('violet', 'Violet Hex Color', obe_settings['violet'], '#ffffff') }}
+                            {{ macros.settings_color_wheel_input('blue', 'Blue Hex Color', obe_settings['blue'], '#ffffff') }}
+                            {{ macros.settings_color_wheel_input('azure', 'Azure Hex Color', obe_settings['azure'], '#ffffff') }}
+                            {{ macros.settings_color_wheel_input('cyan', 'Cyan Hex Color', obe_settings['cyan'], '#000000') }}
+                            {{ macros.settings_color_wheel_input('spring-green', 'Spring Green Hex Color', obe_settings['spring-green'], '#000000') }}
+                            {{ macros.settings_color_wheel_input('green', 'Green Hex Color', obe_settings['green'], '#000000') }}
+                            {{ macros.settings_color_wheel_input('chartreuse', 'Chartreuse Hex Color', obe_settings['chartreuse'], '#000000') }}
+                            {{ macros.settings_color_wheel_input('yellow', 'Yellow Hex Color', obe_settings['yellow'], '#000000') }}
+                            {{ macros.settings_color_wheel_input('orange', 'Orange Hex Color', obe_settings['orange'], '#000000') }}
 
-
-
-                            {% macro color_wheel_input(id, labelText, bgHex, textHex) %}
-                            <div class="form-group">
-                                <label for="{{ id }}" class="font-weight-bold">{{ labelText }}</label>
-                                <div class="input-group">
-                                    <div class="input-group-prepend">
-                                        <button class="js-input-group-copy-btn btn btn-light border" type="button" data-clipboard-target="#{{ id }}"><i class="fas fa-copy"></i></button>
-                                    </div>
-                                    <input type="text" class="js-hex-code-input form-control" id="{{ id }}" placeholder="{{ bgHex }}" value="{{ bgHex }}" style="background-color:{{ bgHex }}; color:{{ textHex }};">
-                                    <div class="input-group-append">
-                                        <button class="js-input-group-clear-btn btn btn-light border" type="button"><i class="fas fa-trash-alt"></i></button>
-                                    </div>
-                                </div>
-                            </div>
-                            {% endmacro %}
-
-                            {{ color_wheel_input('white', 'White Hex Color', obe_settings['white'], '#000000') }}
-                            {{ color_wheel_input('light-gray', 'Light Gray Hex Color', obe_settings['light-gray'], '#000000') }}
-                            {{ color_wheel_input('gray', 'Gray Hex Color', obe_settings['gray'], '#ffffff') }}
-                            {{ color_wheel_input('dark-gray', 'Dark Gray Hex Color', obe_settings['dark-gray'], '#ffffff') }}
-                            {{ color_wheel_input('black', 'Black Hex Color', obe_settings['black'], '#ffffff') }}
-
-                            {{ color_wheel_input('red', 'Red Hex Color', obe_settings['red'], '#ffffff') }}
-                            {{ color_wheel_input('rose', 'Rose Hex Color', obe_settings['rose'], '#ffffff') }}
-                            {{ color_wheel_input('magenta', 'Magenta Hex Color', obe_settings['magenta'], '#ffffff') }}
-                            {{ color_wheel_input('violet', 'Violet Hex Color', obe_settings['violet'], '#ffffff') }}
-                            {{ color_wheel_input('blue', 'Blue Hex Color', obe_settings['blue'], '#ffffff') }}
-                            {{ color_wheel_input('azure', 'Azure Hex Color', obe_settings['azure'], '#ffffff') }}
-                            {{ color_wheel_input('cyan', 'Cyan Hex Color', obe_settings['cyan'], '#000000') }}
-                            {{ color_wheel_input('spring-green', 'Spring Green Hex Color', obe_settings['spring-green'], '#000000') }}
-                            {{ color_wheel_input('green', 'Green Hex Color', obe_settings['green'], '#000000') }}
-                            {{ color_wheel_input('chartreuse', 'Chartreuse Hex Color', obe_settings['chartreuse'], '#000000') }}
-                            {{ color_wheel_input('yellow', 'Yellow Hex Color', obe_settings['yellow'], '#000000') }}
-                            {{ color_wheel_input('orange', 'Orange Hex Color', obe_settings['orange'], '#000000') }}
-
-                            {{ color_wheel_input('orange-gray', 'Orange Gray Hex Color', obe_settings['orange-gray'], '#ffffff') }}
-                            {{ color_wheel_input('dark-gray-orange', 'Dark Gray Orange Hex Color', obe_settings['dark-gray-orange'], '#ffffff') }}
-                            {{ color_wheel_input('blue-gray', 'Blue Gray Hex Color', obe_settings['blue-gray'], '#ffffff') }}
-                            {{ color_wheel_input('light-gray-azure', 'Light Gray Azure Hex Color', obe_settings['light-gray-azure'], '#000000') }}
+                            {{ macros.settings_color_wheel_input('orange-gray', 'Orange Gray Hex Color', obe_settings['orange-gray'], '#ffffff') }}
+                            {{ macros.settings_color_wheel_input('dark-gray-orange', 'Dark Gray Orange Hex Color', obe_settings['dark-gray-orange'], '#ffffff') }}
+                            {{ macros.settings_color_wheel_input('blue-gray', 'Blue Gray Hex Color', obe_settings['blue-gray'], '#ffffff') }}
+                            {{ macros.settings_color_wheel_input('light-gray-azure', 'Light Gray Azure Hex Color', obe_settings['light-gray-azure'], '#000000') }}
 
                         </div>
-
-                        {% macro contextual_selects(id, label, selection1, selection2, note='false') %}
-                        <div class="form-row align-items-end">
-                            <div class="col-7">
-                                <div class="form-group{% if note != 'false' %} mb-0{% endif %}">
-                                    <label class="d-block font-weight-bold">{{ label }} Color</label>
-                                    <select id="{{ id }}" class="form-control"{% if note != 'false' %} aria-describedby="{{id}}-help"{% endif %}>
-                                        {% if selection1 === 'none' %}<option value="none" selected>None</option>{% endif %}
-                                        <option value="white"{% if selection1 == 'white' %} selected{% endif %}>White</option>
-                                        <option value="light-gray"{% if selection1 == 'light-gray' %} selected{% endif %}>Light Gray</option>
-                                        <option value="gray"{% if selection1 == 'gray' %} selected{% endif %}>Gray</option>
-                                        <option value="dark-gray"{% if selection1 == 'dark-gray' %} selected{% endif %}>Dark Gray</option>
-                                        <option value="black"{% if selection1 == 'black' %} selected{% endif %}>Black</option>
-                                        <option value="red"{% if selection1 == 'red' %} selected{% endif %}>Red</option>
-                                        <option value="rose"{% if selection1 == 'rose' %} selected{% endif %}>Rose</option>
-                                        <option value="magenta"{% if selection1 == 'magenta' %} selected{% endif %}>Magenta</option>
-                                        <option value="violet"{% if selection1 == 'violet' %} selected{% endif %}>Violet</option>
-                                        <option value="blue"{% if selection1 == 'blue' %} selected{% endif %}>Blue</option>
-                                        <option value="azure"{% if selection1 == 'azure' %} selected{% endif %}>Azure</option>
-                                        <option value="cyan"{% if selection1 == 'cyan' %} selected{% endif %}>Cyan</option>
-                                        <option value="spring-green"{% if selection1 == 'spring-green' %} selected{% endif %}>Spring Green</option>
-                                        <option value="green"{% if selection1 == 'green' %} selected{% endif %}>Green</option>
-                                        <option value="chartreuse"{% if selection1 == 'chartreuse' %} selected{% endif %}>Chartreuse</option>
-                                        <option value="yellow"{% if selection1 == 'yellow' %} selected{% endif %}>Yellow</option>
-                                        <option value="orange"{% if selection1 == 'orange' %} selected{% endif %}>Orange</option>
-                                        <option value="orange-gray"{% if selection1 == 'orange-gray' %} selected{% endif %}>Orange Gray</option>
-                                        <option value="dark-gray-orange"{% if selection1 == 'dark-gray-orange' %} selected{% endif %}>Dark Gray Orange</option>
-                                        <option value="blue-gray"{% if selection1 == 'blue-gray' %} selected{% endif %}>Blue Gray</option>
-                                        <option value="light-gray-azure"{% if selection1 == 'light-gray-azure' %} selected{% endif %}>Light Gray Azure</option>
-                                    </select>
-                                </div>
-                            </div>
-                            <div class="col-5">
-                                <div class="form-group{% if note != 'false' %} mb-0{% endif %}">
-                                    <label class="d-block font-weight-bold">Tint / Shade</label>
-                                    <select id="{{ id }}-modifier" class="form-control">
-                                        <option value="50"{% if selection2 == '50' %} selected{% endif %}>50</option>
-                                        <option value="100"{% if selection2 == '100' %} selected{% endif %}>100</option>
-                                        <option value="200"{% if selection2 == '200' %} selected{% endif %}>200</option>
-                                        <option value="300"{% if selection2 == '300' %} selected{% endif %}>300</option>
-                                        <option value="400"{% if selection2 == '400' %} selected{% endif %}>400</option>
-                                        <option value="none"{% if selection2 == 'none' %} selected{% endif %}>None</option>
-                                        <option value="600"{% if selection2 == '600' %} selected{% endif %}>600</option>
-                                        <option value="700"{% if selection2 == '700' %} selected{% endif %}>700</option>
-                                        <option value="800"{% if selection2 == '800' %} selected{% endif %}>800</option>
-                                        <option value="900"{% if selection2 == '900' %} selected{% endif %}>900</option>
-                                    </select>
-                                </div>
-                            </div>
-                        </div>
-                        {% if note != 'false' %}<small id="{{id}}-help" class="form-text pb-2" style="opacity: 0.6;">{{ note }}</small>{% endif %}
-                        {% endmacro %}
-
-                        {% macro decoration_select(id, label, selection1, note='false') %}
-                        <div class="form-group{% if note != 'false' %} mb-0{% endif %}">
-                            <label class="d-block font-weight-bold">{{ label }}</label>
-                            <select id="{{ id }}" class="form-control"{% if note != 'false' %} aria-describedby="{{id}}-help"{% endif %}>
-                                
-                                <option value="none"{% if selection1 == 'none' %} selected{% endif %}>None</option>
-
-                                <option value="underline"{% if selection1 == 'underline' %} selected{% endif %}>Underline</option>
-                                <option value="underline dotted"{% if selection1 == 'underline dotted' %} selected{% endif %}>Underline Dotted</option>
-                                <option value="underline double"{% if selection1 == 'underline double' %} selected{% endif %}>Underline Double</option>
-                                <option value="underline dashed"{% if selection1 == 'underline dashed' %} selected{% endif %}>Underline Dashed</option>
-                                <option value="underline wavy"{% if selection1 == 'underline wavy' %} selected{% endif %}>Underline Wavy</option>
-
-                                <option value="underline overline"{% if selection1 == 'underline overline' %} selected{% endif %}>Underline + Overline</option>
-
-                                <option value="overline"{% if selection1 == 'overline' %} selected{% endif %}>Overline</option>
-                                <option value="overline dotted"{% if selection1 == 'overline dotted' %} selected{% endif %}>Overline Dotted</option>
-                                <option value="overline double"{% if selection1 == 'overline double' %} selected{% endif %}>Overline Double</option>
-                                <option value="overline dashed"{% if selection1 == 'overline dashed' %} selected{% endif %}>Overline Dashed</option>
-                                <option value="overline wavy"{% if selection1 == 'overline wavy' %} selected{% endif %}>Overline Wavy</option>
-
-                                <option value="line-through"{% if selection1 == 'line-through' %} selected{% endif %}>Line-Through</option>
-                                <option value="line-through dotted"{% if selection1 == 'line-through dotted' %} selected{% endif %}>Line-Through Dotted</option>
-                                <option value="line-through double"{% if selection1 == 'line-through double' %} selected{% endif %}>Line-Through Double</option>
-                                <option value="line-through dashed"{% if selection1 == 'line-through dashed' %} selected{% endif %}>Line-Through Dashed</option>
-                                <option value="line-through wavy"{% if selection1 == 'line-through wavy' %} selected{% endif %}>Line-Through Wavy</option>
-
-                            </select>
-                        </div>
-                        {% if note != 'false' %}<small id="{{id}}-help" class="form-text pb-2" style="opacity: 0.6;">{{ note }}</small>{% endif %}
-                        {% endmacro %}
-                        
                         
                         <h3 class="pt-4 pb-2 text-center">Bootstrap Contextual Classes</h3>
 
-                        {{ contextual_selects('primary', 'Primary', obe_settings['primary-C'], obe_settings['primary-M']) }}
-                        {{ contextual_selects('secondary', 'Secondary', obe_settings['secondary-C'], obe_settings['secondary-M']) }}
-                        {{ contextual_selects('success', 'Success', obe_settings['success-C'], obe_settings['success-M']) }}
-                        {{ contextual_selects('info', 'Info', obe_settings['info-C'], obe_settings['info-M']) }}
-                        {{ contextual_selects('warning', 'Warning', obe_settings['warning-C'], obe_settings['warning-M']) }}
-                        {{ contextual_selects('danger', 'Danger', obe_settings['danger-C'], obe_settings['danger-M']) }}
-                        {{ contextual_selects('light', 'Light', obe_settings['light-C'], obe_settings['light-M']) }}
-                        {{ contextual_selects('dark', 'Dark', obe_settings['dark-C'], obe_settings['dark-M']) }}
+                        {{ macros.settings_contextual_selects('primary', 'Primary', obe_settings['primary-C'], obe_settings['primary-M']) }}
+                        {{ macros.settings_contextual_selects('secondary', 'Secondary', obe_settings['secondary-C'], obe_settings['secondary-M']) }}
+                        {{ macros.settings_contextual_selects('success', 'Success', obe_settings['success-C'], obe_settings['success-M']) }}
+                        {{ macros.settings_contextual_selects('info', 'Info', obe_settings['info-C'], obe_settings['info-M']) }}
+                        {{ macros.settings_contextual_selects('warning', 'Warning', obe_settings['warning-C'], obe_settings['warning-M']) }}
+                        {{ macros.settings_contextual_selects('danger', 'Danger', obe_settings['danger-C'], obe_settings['danger-M']) }}
+                        {{ macros.settings_contextual_selects('light', 'Light', obe_settings['light-C'], obe_settings['light-M']) }}
+                        {{ macros.settings_contextual_selects('dark', 'Dark', obe_settings['dark-C'], obe_settings['dark-M']) }}
 
                     </div>
 
@@ -585,31 +430,26 @@
 
                     <div class="col-md-9 col-lg-6 text-left px-0 px-md-2">
 
-                            {% macro context_head(title) %}
-                            <div class="lead font-weight-bold text-center">{{ title }}</div>
-                            <div class="small text-center border-bottom pb-2 mb-3" style="opacity: 0.6;">(Impacted BS4 SCSS)</div>
-                            {% endmacro %}
-
                         <div class="bg-light p-3 mb-3 rounded box-shadow-xs">
                             
-                            {{ context_head('BODY STYLES') }}
+                            {{ macros.settings_context_head('BODY STYLES') }}
 
-                            {{ contextual_selects('body-bg', 'Background', obe_settings['body-bg-C'], obe_settings['body-bg-M'], note='Sets $body-bg') }}
+                            {{ macros.settings_contextual_selects('body-bg', 'Background', obe_settings['body-bg-C'], obe_settings['body-bg-M'], note='Sets $body-bg') }}
 
-                            {{ contextual_selects('body-color', 'Text', obe_settings['body-color-C'], obe_settings['body-color-M'], note='Sets $body-color') }}
+                            {{ macros.settings_contextual_selects('body-color', 'Text', obe_settings['body-color-C'], obe_settings['body-color-M'], note='Sets $body-color') }}
 
                         </div>
 
                         <div class="bg-light p-3 mb-3 rounded box-shadow-xs">
                             
-                            {{ context_head('LINK STYLES') }}
+                            {{ macros.settings_context_head('LINK STYLES') }}
 
-                            {{ contextual_selects('link-color', 'Link', obe_settings['link-color-C'], obe_settings['link-color-M'], note='Sets $link-color and $link-hover-color (with darken(15%))') }}
+                            {{ macros.settings_contextual_selects('link-color', 'Link', obe_settings['link-color-C'], obe_settings['link-color-M'], note='Sets $link-color and $link-hover-color (with darken(15%))') }}
 
                             <div>
 
-                                <!-- NOTE sthis is a select element -->
-                                {{ decoration_select('link-decoration-type', 'Default Decoration', 'none', note='Sets $link-decoration') }}
+                                <!-- NOTE this is a select element -->
+                                {{ macros.settings_decoration_select('link-decoration-type', 'Default Decoration', 'none', note='Sets $link-decoration') }}
 
                                 <!-- NOTE this is the SCSS variable bound for JSON -->
                                 <input type="hidden" id="link-decoration" value="none">
@@ -617,7 +457,7 @@
 
                                 <div id="link-decoration-color-block" class="collapse">
                                     
-                                    {{ contextual_selects('link-decoration-color', 'Hover Decoration', 'none', 'none', note='This color gets appended to the $link-decoration value above.') }}
+                                    {{ macros.settings_contextual_selects('link-decoration-color', 'Hover Decoration', 'none', 'none', note='This color gets appended to the $link-decoration value above.') }}
 
                                 </div>
                                 
@@ -633,7 +473,7 @@
                             <div>
 
                                 <!-- NOTE sthis is a select element -->
-                                {{ decoration_select('link-hover-decoration-type', 'Hover Decoration', 'underline', note='Sets $link-hover-decoration') }}
+                                {{ macros.settings_decoration_select('link-hover-decoration-type', 'Hover Decoration', 'underline', note='Sets $link-hover-decoration') }}
 
                                 <!-- NOTE this is the SCSS variable bound for JSON -->
                                 <input type="hidden" id="link-hover-decoration" value="underline">
@@ -641,7 +481,7 @@
 
                                 <div id="link-hover-decoration-color-block" class="collapse">
                                     
-                                    {{ contextual_selects('link-hover-decoration-color', 'Hover Decoration', 'none', 'none', note='This color gets appended to the $link-hover-decoration value above.') }}
+                                    {{ macros.settings_contextual_selects('link-hover-decoration-color', 'Hover Decoration', 'none', 'none', note='This color gets appended to the $link-hover-decoration value above.') }}
 
                                 </div>
                                 
@@ -657,19 +497,19 @@
 
                         <div class="bg-light p-3 mb-3 rounded box-shadow-xs">
                             
-                            {{ context_head('HIGHLIGHTS & MARKS') }}
+                            {{ macros.settings_context_head('HIGHLIGHTS & MARKS') }}
 
-                            {{ contextual_selects('mark-bg', ' Background', obe_settings['mark-bg-C'], obe_settings['mark-bg-M'], note='Sets $mark-bg') }}
+                            {{ macros.settings_contextual_selects('mark-bg', ' Background', obe_settings['mark-bg-C'], obe_settings['mark-bg-M'], note='Sets $mark-bg') }}
 
                         </div>
 
                         <div class="bg-light p-3 mb-3 rounded box-shadow-xs">
                             
-                            {{ context_head('ACTIVE COMPONENT ELEMENTS') }}
+                            {{ macros.settings_context_head('ACTIVE COMPONENT ELEMENTS') }}
                             
-                            {{ contextual_selects('component-active-bg', 'Background', obe_settings['component-active-bg-C'], obe_settings['component-active-bg-M'], note='Sets $component-active-bg') }}
+                            {{ macros.settings_contextual_selects('component-active-bg', 'Background', obe_settings['component-active-bg-C'], obe_settings['component-active-bg-M'], note='Sets $component-active-bg') }}
                             
-                            {{ contextual_selects('component-active-color', 'Text', obe_settings['component-active-color-C'], obe_settings['component-active-color-M'], note='Sets $component-active-color') }}
+                            {{ macros.settings_contextual_selects('component-active-color', 'Text', obe_settings['component-active-color-C'], obe_settings['component-active-color-M'], note='Sets $component-active-color') }}
 
                         </div>
 
@@ -679,39 +519,39 @@
 
                         <div class="bg-light p-3 mb-3 rounded box-shadow-xs">
                             
-                            {{ context_head('INPUT ELEMENTS') }}
+                            {{ macros.settings_context_head('INPUT ELEMENTS') }}
 
-                            {{ contextual_selects('input-bg', 'Background', obe_settings['input-bg-C'], obe_settings['input-bg-M'], note='Sets $input-bg') }}
+                            {{ macros.settings_contextual_selects('input-bg', 'Background', obe_settings['input-bg-C'], obe_settings['input-bg-M'], note='Sets $input-bg') }}
 
-                            {{ contextual_selects('input-color', 'Text', obe_settings['input-color-C'], obe_settings['input-color-M'], note='Sets $input-color') }}
+                            {{ macros.settings_contextual_selects('input-color', 'Text', obe_settings['input-color-C'], obe_settings['input-color-M'], note='Sets $input-color') }}
 
-                            {{ contextual_selects('input-placeholder-color', 'Placeholder Text', obe_settings['input-placeholder-color-C'], obe_settings['input-placeholder-color-M'], note='Sets $input-placeholder-color') }}
+                            {{ macros.settings_contextual_selects('input-placeholder-color', 'Placeholder Text', obe_settings['input-placeholder-color-C'], obe_settings['input-placeholder-color-M'], note='Sets $input-placeholder-color') }}
 
-                            {{ contextual_selects('input-disabled-bg', 'Disabled Background', obe_settings['input-disabled-bg-C'], obe_settings['input-disabled-bg-M'], note='Sets $input-disabled-bg') }}
-
-                        </div>
-
-                        <div class="bg-light p-3 mb-3 rounded box-shadow-xs">
-                            
-                            {{ context_head('INPUT GROUP ADDONS') }}
-
-                            {{ contextual_selects('input-group-addon-bg', 'Background', obe_settings['input-group-addon-bg-C'], obe_settings['input-group-addon-bg-M'], note='Sets $input-group-addon-bg') }}
-
-                            {{ contextual_selects('input-group-addon-color', 'Text', obe_settings['input-group-addon-color-C'], obe_settings['input-group-addon-color-M'], note='Sets $input-group-addon-color') }}
+                            {{ macros.settings_contextual_selects('input-disabled-bg', 'Disabled Background', obe_settings['input-disabled-bg-C'], obe_settings['input-disabled-bg-M'], note='Sets $input-disabled-bg') }}
 
                         </div>
 
                         <div class="bg-light p-3 mb-3 rounded box-shadow-xs">
                             
-                            {{ context_head('DROPDOWN COMPONENTS') }}
+                            {{ macros.settings_context_head('INPUT GROUP ADDONS') }}
+
+                            {{ macros.settings_contextual_selects('input-group-addon-bg', 'Background', obe_settings['input-group-addon-bg-C'], obe_settings['input-group-addon-bg-M'], note='Sets $input-group-addon-bg') }}
+
+                            {{ macros.settings_contextual_selects('input-group-addon-color', 'Text', obe_settings['input-group-addon-color-C'], obe_settings['input-group-addon-color-M'], note='Sets $input-group-addon-color') }}
+
+                        </div>
+
+                        <div class="bg-light p-3 mb-3 rounded box-shadow-xs">
                             
-                            {{ contextual_selects('dropdown-header-color', 'Heading', obe_settings['dropdown-header-color-C'], obe_settings['dropdown-header-color-M'], note='Sets $dropdown-header-color') }}
+                            {{ macros.settings_context_head('DROPDOWN COMPONENTS') }}
+                            
+                            {{ macros.settings_contextual_selects('dropdown-header-color', 'Heading', obe_settings['dropdown-header-color-C'], obe_settings['dropdown-header-color-M'], note='Sets $dropdown-header-color') }}
 
-                            {{ contextual_selects('dropdown-link-color', 'Link', obe_settings['dropdown-link-color-C'], obe_settings['dropdown-link-color-M'], note='Sets $dropdown-link-color, plus $dropdown-link-hover-color, $dropdown-link-active-color using darken(5%)') }}
+                            {{ macros.settings_contextual_selects('dropdown-link-color', 'Link', obe_settings['dropdown-link-color-C'], obe_settings['dropdown-link-color-M'], note='Sets $dropdown-link-color, plus $dropdown-link-hover-color, $dropdown-link-active-color using darken(5%)') }}
 
-                            {{ contextual_selects('dropdown-link-hover-bg', 'Hover/Active Background', obe_settings['dropdown-link-hover-bg-C'], obe_settings['dropdown-link-hover-bg-M'], note='Sets dropdown-link-hover-bg, $dropdown-link-active-bg, $pagination-hover-bg, $list-group-hover-bg and $list-group-action-active-bg') }}
+                            {{ macros.settings_contextual_selects('dropdown-link-hover-bg', 'Hover/Active Background', obe_settings['dropdown-link-hover-bg-C'], obe_settings['dropdown-link-hover-bg-M'], note='Sets dropdown-link-hover-bg, $dropdown-link-active-bg, $pagination-hover-bg, $list-group-hover-bg and $list-group-action-active-bg') }}
 
-                            {{ contextual_selects('dropdown-link-disabled-color', 'Disabled Link', obe_settings['dropdown-link-disabled-color-C'], obe_settings['dropdown-link-disabled-color-M'], note='Sets $dropdown-link-disabled-color and $dropdown-header-color') }}
+                            {{ macros.settings_contextual_selects('dropdown-link-disabled-color', 'Disabled Link', obe_settings['dropdown-link-disabled-color-C'], obe_settings['dropdown-link-disabled-color-M'], note='Sets $dropdown-link-disabled-color and $dropdown-header-color') }}
 
                         </div>
 
@@ -772,23 +612,10 @@
             <div class="modal-body m-3" role="navigation">
                 
                 <p class="font-italic text-light">Use this tool to get blended hex color codes between two colors!</p>
-                
-                {% macro color_blend_color_input(id, labelText, bgHex, textHex, helpText) %}
-                <div class="form-group">
-                    <label for="{{ id }}" class="font-weight-bold">{{ labelText }}</label>
-                    <div class="input-group">
-                        <input type="text" class="form-control" id="{{ id }}" aria-describedby="{{ id }}-help" placeholder="{{ bgHex }}" value="{{ bgHex }}" style="background-color:{{ bgHex }}; color:{{ textHex }};">
-                        <div class="input-group-append">
-                            <button class="js-input-group-clear-btn btn btn-light border" type="button"><i class="fas fa-trash-alt"></i></button>
-                        </div>
-                    </div>
-                    <small id="{{ id }}-help" class="form-text text-light-gray">{{ helpText }}</small>
-                </div>
-                {% endmacro %}
 
-                {{ color_blend_color_input('blend-first-color', 'First Color', '#000000', '#ffffff', 'Enter your first color hex code to blend.') }}
+                {{ macros.settings_color_blend_color_input('blend-first-color', 'First Color', '#000000', '#ffffff', 'Enter your first color hex code to blend.') }}
 
-                {{ color_blend_color_input('blend-second-color', 'Second Color', '#ffffff', '#000000', 'Enter your second color hex code to blend.') }}
+                {{ macros.settings_color_blend_color_input('blend-second-color', 'Second Color', '#ffffff', '#000000', 'Enter your second color hex code to blend.') }}
 
                 <div class="input-group text-center pt-3">
                     <button id="blend-tool-btn" class="btn btn-lg btn-block btn-primary" type="button">BLEND</button>
@@ -800,27 +627,15 @@
 
                     <label class="d-block text-left font-weight-bold">Blend Results</label>
 
-                    {% macro color_blend_result_input(id, labelText, bgHex, textHex) %}
-                    <div class="form-group">
-                        <label for="{{ id }}" class="small font-weight-bold">{{ labelText }}</label>
-                        <div class="input-group">
-                            <input type="text" class="form-control" placeholder="{{ bgHex }}" id="{{ id }}" style="background-color:{{ bgHex }}; color:{{ textHex }};" value="{{ bgHex }}" readonly>
-                            <div class="input-group-append">
-                                <button class="js-input-group-copy-btn btn btn-light border" type="button" data-clipboard-target="#{{ id }}"><i class="fas fa-copy"></i></button>
-                            </div>
-                        </div>
-                    </div>
-                    {% endmacro %}
+                    {{ macros.settings_color_blend_result_input('color-one-block', 'First Color', '#000000', '#ffffff') }}
 
-                    {{ color_blend_result_input('color-one-block', 'First Color', '#000000', '#ffffff') }}
+                    {{ macros.settings_color_blend_result_input('color-blend25-block', '25%/75% Blend', '#404040', '#ffffff') }}
 
-                    {{ color_blend_result_input('color-blend25-block', '25%/75% Blend', '#404040', '#ffffff') }}
+                    {{ macros.settings_color_blend_result_input('color-blend50-block', '50%/50% Blend', '#808080', '#000000') }}
 
-                    {{ color_blend_result_input('color-blend50-block', '50%/50% Blend', '#808080', '#000000') }}
+                    {{ macros.settings_color_blend_result_input('color-blend75-block', '75%/25% Blend', '#c0c0c0', '#000000') }}
 
-                    {{ color_blend_result_input('color-blend75-block', '75%/25% Blend', '#c0c0c0', '#000000') }}
-
-                    {{ color_blend_result_input('color-two-block', 'Second Color', '#ffffff', '#000000') }}
+                    {{ macros.settings_color_blend_result_input('color-two-block', 'Second Color', '#ffffff', '#000000') }}
 
                 </div>
 
@@ -844,25 +659,18 @@
                 
                 <p class="font-italic text-light">Use this tool to get different color harmonies derived from a single hex color code!</p>
 
-                {{ color_blend_color_input('harmony-base-color', 'Harmony Base Color', '#000000', '#ffffff', 'Enter your base color harmony hex code.') }}
+                {{ macros.settings_color_blend_color_input('harmony-base-color', 'Harmony Base Color', '#000000', '#ffffff', 'Enter your base color harmony hex code.') }}
 
                 <div class="form-group">
                     
-                    {% macro harmony_mode_radio(label, count, checked = 'false') %}
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="harmony-mode" id="harmony-mode-{{ count }}" value="{{ label }}" aria-describedby="harmony-mode-help"{% if checked === 'true' %} checked{% endif %}>
-                        <label class="form-check-label" for="harmony-mode-{{ count }}">{{ label }}</label>
-                    </div>
-                    {% endmacro %}
-                    
                     <label class="font-weight-bold">Harmony Mode</label>
 
-                    {{ harmony_mode_radio('Monochromatic', 1, 'true') }}
-                    {{ harmony_mode_radio('Complementary', 2) }}
-                    {{ harmony_mode_radio('Analogous', 3) }}
-                    {{ harmony_mode_radio('Split Complementary', 4) }}
-                    {{ harmony_mode_radio('Triad', 5) }}
-                    {{ harmony_mode_radio('Tetrad', 6) }}
+                    {{ macros.settings_harmony_mode_radio('Monochromatic', 1, 'true') }}
+                    {{ macros.settings_harmony_mode_radio('Complementary', 2) }}
+                    {{ macros.settings_harmony_mode_radio('Analogous', 3) }}
+                    {{ macros.settings_harmony_mode_radio('Split Complementary', 4) }}
+                    {{ macros.settings_harmony_mode_radio('Triad', 5) }}
+                    {{ macros.settings_harmony_mode_radio('Tetrad', 6) }}
 
                     <small id="harmony-mode-help" class="form-text text-light-gray">Select a color harmony mode.</small>
 
@@ -880,12 +688,12 @@
 
                     <div id="harmony-colors-wrapper">
 
-                        {{ color_blend_result_input('default-monochromatic-1', 'Monochromatic Color 1', '#000000', '#ffffff') }}
-                        {{ color_blend_result_input('default-monochromatic-2', 'Monochromatic Color 2', '#2a2a2a', '#ffffff') }}
-                        {{ color_blend_result_input('default-monochromatic-3', 'Monochromatic Color 3', '#555555', '#ffffff') }}
-                        {{ color_blend_result_input('default-monochromatic-4', 'Monochromatic Color 4', '#808080', '#000000') }}
-                        {{ color_blend_result_input('default-monochromatic-5', 'Monochromatic Color 5', '#aaaaaa', '#000000') }}
-                        {{ color_blend_result_input('default-monochromatic-6', 'Monochromatic Color 6', '#d4d4d4', '#000000') }}
+                        {{ macros.settings_color_blend_result_input('default-monochromatic-1', 'Monochromatic Color 1', '#000000', '#ffffff') }}
+                        {{ macros.settings_color_blend_result_input('default-monochromatic-2', 'Monochromatic Color 2', '#2a2a2a', '#ffffff') }}
+                        {{ macros.settings_color_blend_result_input('default-monochromatic-3', 'Monochromatic Color 3', '#555555', '#ffffff') }}
+                        {{ macros.settings_color_blend_result_input('default-monochromatic-4', 'Monochromatic Color 4', '#808080', '#000000') }}
+                        {{ macros.settings_color_blend_result_input('default-monochromatic-5', 'Monochromatic Color 5', '#aaaaaa', '#000000') }}
+                        {{ macros.settings_color_blend_result_input('default-monochromatic-6', 'Monochromatic Color 6', '#d4d4d4', '#000000') }}
 
                     </div>
 

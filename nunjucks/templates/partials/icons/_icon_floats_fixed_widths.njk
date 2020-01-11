@@ -9,26 +9,8 @@
 
                         {{ macros.page_section_heading(global_strings['icons']['sections'][2]['head'], global_strings['icons']['sections'][2]['subhead'], global_strings['icons']['sections'][2]['descrip']) }}
 
-                        {% macro icon_floats(label, direction) %}
-                        <label class="d-block text-left font-weight-bold">{{ label }}</label>
-                        <div class="js-prism-fa prism-hidden mb-2" style="cursor: help;">
-                            <div class="text-left">
-                                <i class="fas fa-quote-{{ direction }} fa-2x fa-pull-{{ direction }}"></i>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque egestas nulla at mauris malesuada viverra. Aenean consequat ante ipsum, quis imperdiet ipsum fermentum vitae. Vivamus consectetur metus sit amet justo maximus, non volutpat nunc sollicitudin. Vivamus vel pharetra ex, eget rhoncus neque. Aenean at mollis lorem, et dapibus odio.</p>
-                            </div>
-                        </div>
-                        <pre>
-                            <code class="language-html line-numbers">
-                                &lt;div class="text-left"&gt;
-                                    &lt;i class="fas fa-quote-{{ direction }} fa-2x fa-pull-{{ direction }}"&gt;&lt;/i&gt;
-                                    &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque egestas nulla at mauris malesuada viverra. Aenean consequat ante ipsum, quis imperdiet ipsum fermentum vitae. Vivamus consectetur metus sit amet justo maximus, non volutpat nunc sollicitudin. Vivamus vel pharetra ex, eget rhoncus neque. Aenean at mollis lorem, et dapibus odio.&lt;/p&gt;
-                                &lt;/div&gt;
-                            </code>
-                        </pre>
-                        {% endmacro %}
-
-                        {{ icon_floats('Float Icon Left:', 'left') }}
-                        {{ icon_floats('Float Icon Right:', 'right') }}
+                        {{ macros.icon_floats('Float Icon Left:', 'left') }}
+                        {{ macros.icon_floats('Float Icon Right:', 'right') }}
 
                     </div>
 
@@ -36,28 +18,7 @@
 
                         {{ macros.page_section_heading(global_strings['icons']['sections'][3]['head'], global_strings['icons']['sections'][3]['subhead'], global_strings['icons']['sections'][3]['descrip']) }}
 
-                        {% macro fixed_width_icons() %}
-                        <div class="js-prism-fa prism-hidden mb-2" style="cursor: help;">
-                            <ul class="list-unstyled text-left">
-                                <li><i class="fas fa-home fa-fw"></i> Home</li>
-                                <li><i class="fas fa-info fa-fw"></i> Info</li>
-                                <li><i class="fas fa-pencil-alt fa-fw"></i> Edit</li>
-                                <li><i class="fas fa-phone fa-fw"></i> Call</li>
-                            </ul>
-                        </div>
-                        <pre>
-                            <code class="language-html line-numbers">
-                                &lt;ul class="list-unstyled text-left"&gt;
-                                    &lt;li&gt;&lt;i class="fas fa-home fa-fw"&gt;&lt;/i&gt; Home&lt;/li&gt;
-                                    &lt;li&gt;&lt;i class="fas fa-info fa-fw"&gt;&lt;/i&gt; Info&lt;/li&gt;
-                                    &lt;li&gt;&lt;i class="fas fa-pencil-alt fa-fw"&gt;&lt;/i&gt; Edit&lt;/li&gt;
-                                    &lt;li&gt;&lt;i class="fas fa-phone fa-fw"&gt;&lt;/i&gt; Call&lt;/li&gt;
-                                &lt;/ul&gt;
-                            </code>
-                        </pre>
-                        {% endmacro %}
-
-                        {{ fixed_width_icons() }}
+                        {{ macros.icons_fixed_width() }}
 
                     </div>
 

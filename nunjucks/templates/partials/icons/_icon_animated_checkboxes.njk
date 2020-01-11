@@ -17,51 +17,21 @@
                 <div class="row justify-content-center">
                     
                     <div class="col-md-6 mb-5 text-left">
-                        
-                        {% macro fa5_icon_checkboxes(headline, checkGroundClasses, iconClass, txtClass, inputName, animationClass) %}
-                        <div class="js-prism-fa prism-hidden mb-2 pt-4" style="cursor: help;">
-                            <label class="d-block">{{ headline }} Label</label>
-                            <div class="form-group mb-1">
-                                <div class="obe-icon-checkbox d-flex flex-row justify-content-start align-items-start {{ animationClass }}">
-                                    <div class="obe-checkbox-icon {{ checkGroundClasses }}">
-                                        <i class="fas fa-sm fa-fw {{ iconClass }} {{ txtClass }}"></i>
-                                    </div>
-                                    <div class="pl-2">{{ headline }}</div>
-                                </div>
-                                <input type="hidden" name="{{ inputName }}" value="checked">
-                            </div>
-                        </div>
-                        <pre>
-                            <code class="language-html line-numbers">
-                                &lt;label class="d-block"&gt;{{ headline }} Label&lt;/label&gt;
-                                &lt;div class="form-group mb-1"&gt;
-                                    &lt;div class="obe-icon-checkbox d-flex flex-row justify-content-start align-items-start {{ animationClass }}"&gt;
-                                        &lt;div class="obe-checkbox-icon {{ checkGroundClasses }}"&gt;
-                                            &lt;i class="fas fa-sm fa-fw {{ iconClass }} {{ txtClass }}"&gt;&lt;/i&gt;
-                                        &lt;/div&gt;
-                                        &lt;div class="pl-2"&gt;{{ headline }}&lt;/div&gt;
-                                    &lt;/div&gt;
-                                    &lt;input type="hidden" name="{{ inputName }}" value="checked"&gt;
-                                &lt;/div&gt;
-                            </code>
-                        </pre>
-                        {% endmacro %}
-
 
                         <label class="d-block font-weight-bold text-center pt-4">Fade & Scale Animation Examples:</label>
                         
-                        {{ fa5_icon_checkboxes('Square Icon Checkbox', 'bg-primary', 'fa-check', 'text-white', 'square-icon-checkbox', 'fade-and-scale-animation') }}
+                        {{ macros.fa5_icon_checkboxes('Square Icon Checkbox', 'bg-primary', 'fa-check', 'text-white', 'square-icon-checkbox', 'fade-and-scale-animation') }}
 
-                        {{ fa5_icon_checkboxes('Round Square Icon Checkbox', 'rounded bg-primary', 'fa-check', 'text-white', 'round-square-icon-checkbox', 'fade-and-scale-animation') }}
+                        {{ macros.fa5_icon_checkboxes('Round Square Icon Checkbox', 'rounded bg-primary', 'fa-check', 'text-white', 'round-square-icon-checkbox', 'fade-and-scale-animation') }}
 
-                        {{ fa5_icon_checkboxes('Circular Icon Checkbox', 'rounded-circle bg-primary', 'fa-check', 'text-white', 'circular-square-icon-checkbox', 'fade-and-scale-animation') }}
+                        {{ macros.fa5_icon_checkboxes('Circular Icon Checkbox', 'rounded-circle bg-primary', 'fa-check', 'text-white', 'circular-square-icon-checkbox', 'fade-and-scale-animation') }}
 
                         
-                        {{ fa5_icon_checkboxes('Square Outline Icon Checkbox', 'border border-primary border-width-2', 'fa-check', 'text-primary', 'square-outline-icon-checkbox', 'fade-and-scale-animation') }}
+                        {{ macros.fa5_icon_checkboxes('Square Outline Icon Checkbox', 'border border-primary border-width-2', 'fa-check', 'text-primary', 'square-outline-icon-checkbox', 'fade-and-scale-animation') }}
 
-                        {{ fa5_icon_checkboxes('Round Square Outline Icon Checkbox', 'rounded border border-primary border-width-2', 'fa-check', 'text-primary', 'rounded-square-outline-icon-checkbox', 'fade-and-scale-animation') }}
+                        {{ macros.fa5_icon_checkboxes('Round Square Outline Icon Checkbox', 'rounded border border-primary border-width-2', 'fa-check', 'text-primary', 'rounded-square-outline-icon-checkbox', 'fade-and-scale-animation') }}
 
-                        {{ fa5_icon_checkboxes('Circle Outline Icon Checkbox', 'rounded-circle border border-primary border-width-2', 'fa-check', 'text-primary', 'circle-outline-icon-checkbox', 'fade-and-scale-animation') }}
+                        {{ macros.fa5_icon_checkboxes('Circle Outline Icon Checkbox', 'rounded-circle border border-primary border-width-2', 'fa-check', 'text-primary', 'circle-outline-icon-checkbox', 'fade-and-scale-animation') }}
 
                     </div>
 
@@ -69,18 +39,18 @@
 
                         <label class="d-block font-weight-bold text-center pt-4">Spin Animation Examples:</label>
                         
-                        {{ fa5_icon_checkboxes('Square Icon Checkbox', 'bg-primary', 'fa-times', 'text-white', 'square-icon-checkbox', 'spin-animation') }}
+                        {{ macros.fa5_icon_checkboxes('Square Icon Checkbox', 'bg-primary', 'fa-times', 'text-white', 'square-icon-checkbox', 'spin-animation') }}
 
-                        {{ fa5_icon_checkboxes('Round Square Icon Checkbox', 'rounded bg-primary', 'fa-times', 'text-white', 'round-square-icon-checkbox', 'spin-animation') }}
+                        {{ macros.fa5_icon_checkboxes('Round Square Icon Checkbox', 'rounded bg-primary', 'fa-times', 'text-white', 'round-square-icon-checkbox', 'spin-animation') }}
 
-                        {{ fa5_icon_checkboxes('Circular Icon Checkbox', 'rounded-circle bg-primary', 'fa-times', 'text-white', 'circular-square-icon-checkbox', 'spin-animation') }}
+                        {{ macros.fa5_icon_checkboxes('Circular Icon Checkbox', 'rounded-circle bg-primary', 'fa-times', 'text-white', 'circular-square-icon-checkbox', 'spin-animation') }}
 
                         
-                        {{ fa5_icon_checkboxes('Square Outline Icon Checkbox', 'border border-primary border-width-2', 'fa-times', 'text-primary', 'square-outline-icon-checkbox', 'spin-animation') }}
+                        {{ macros.fa5_icon_checkboxes('Square Outline Icon Checkbox', 'border border-primary border-width-2', 'fa-times', 'text-primary', 'square-outline-icon-checkbox', 'spin-animation') }}
 
-                        {{ fa5_icon_checkboxes('Round Square Outline Icon Checkbox', 'rounded border border-primary border-width-2', 'fa-times', 'text-primary', 'rounded-square-outline-icon-checkbox', 'spin-animation') }}
+                        {{ macros.fa5_icon_checkboxes('Round Square Outline Icon Checkbox', 'rounded border border-primary border-width-2', 'fa-times', 'text-primary', 'rounded-square-outline-icon-checkbox', 'spin-animation') }}
 
-                        {{ fa5_icon_checkboxes('Circle Outline Icon Checkbox', 'rounded-circle border border-primary border-width-2', 'fa-times', 'text-primary', 'circle-outline-icon-checkbox', 'spin-animation') }}
+                        {{ macros.fa5_icon_checkboxes('Circle Outline Icon Checkbox', 'rounded-circle border border-primary border-width-2', 'fa-times', 'text-primary', 'circle-outline-icon-checkbox', 'spin-animation') }}
 
                     </div>
 

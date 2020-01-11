@@ -18,45 +18,19 @@
 
                     <div class="col-md-4 pb-5">
 
-                        {% macro fab_buttons(headline, classes) %}
-						<label class="d-block font-weight-bold mb-2">{{ headline }}</label>
-						
-						<div class="js-prism mb-2">
-							<button type="button" class="btn btn-primary btn-xxs fab-xxs{{ classes }}">&copy;</button>
-						</div>
-						<div class="js-prism mb-2">
-							<button type="button" class="btn btn-primary btn-xs fab-xs{{ classes }}">&copy;</button>
-						</div>
-						<div class="js-prism mb-2">
-							<button type="button" class="btn btn-primary btn-sm fab-sm{{ classes }}">&copy;</button>
-						</div>
-						<div class="js-prism mb-2">
-							<button type="button" class="btn btn-primary btn-md fab-md{{ classes }}">&copy;</button>
-						</div>
-						<div class="js-prism mb-2">
-							<button type="button" class="btn btn-primary btn-lg fab-lg{{ classes }}">&copy;</button>
-						</div>
-						<div class="js-prism mb-2">
-							<button type="button" class="btn btn-primary btn-xl fab-xl{{ classes }}">&copy;</button>
-						</div>
-						<div class="js-prism mb-2">
-							<button type="button" class="btn btn-primary btn-xxl fab-xxl{{ classes }}">&copy;</button>
-						</div>
-						{% endmacro %}
-
-                        {{ fab_buttons('Round Corner Fabs', '') }}
+                        {{ macros.fab_buttons('Round Corner Fabs', '') }}
 						
 					</div>
 
                     <div class="col-md-4 pb-5">
                     
-                        {{ fab_buttons('Square Corner Fabs', ' rounded-0') }}    
+                        {{ macros.fab_buttons('Square Corner Fabs', ' rounded-0') }}    
 
                     </div>
 
                     <div class="col-md-4 pb-5">
                     
-                        {{ fab_buttons('Circle Fabs', ' rounded-circle') }}    
+                        {{ macros.fab_buttons('Circle Fabs', ' rounded-circle') }}    
 
                     </div>
 

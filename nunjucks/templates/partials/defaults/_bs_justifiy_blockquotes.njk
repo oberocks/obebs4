@@ -9,17 +9,10 @@
                         
                         {{ macros.page_section_heading(global_strings['defaults']['sections'][69]['head'], global_strings['defaults']['sections'][69]['subhead'], global_strings['defaults']['sections'][69]['descrip']) }}
 
-                        {% macro text_justification(classPartial, namePartial, labelJustification) %}
-                        <strong class="d-block text-{{ labelJustification }}">{{ namePartial }} Text:</strong>
-                        <div class="js-prism mb-2">
-                            <p class="text-{{ classPartial }}">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean vehicula, lacus id tincidunt congue, arcu nisi pharetra dui, nec convallis enim odio vitae diam. Curabitur ut ullamcorper nisi. Phasellus quam nisi, facilisis et neque quis, tempor consequat enim.</p>
-                        </div>
-                        {% endmacro %}
-
-                        {{ text_justification('justify', 'Justified', 'left') }}
-                        {{ text_justification('left', 'Left Aligned', 'left') }}
-                        {{ text_justification('center', 'Center Aligned', 'left') }}
-                        {{ text_justification('right', 'Right Aligned', 'left') }}
+                        {{ macros.text_justification('justify', 'Justified', 'left') }}
+                        {{ macros.text_justification('left', 'Left Aligned', 'left') }}
+                        {{ macros.text_justification('center', 'Center Aligned', 'left') }}
+                        {{ macros.text_justification('right', 'Right Aligned', 'left') }}
 
                     </div>
 

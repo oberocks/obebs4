@@ -9,45 +9,39 @@
 					<div id="{{ global_strings['colors']['sections'][13]['id'] }}" class="col-md-6 pb-5">
 					
 						{{ macros.page_section_heading(global_strings['colors']['sections'][13]['head'], global_strings['colors']['sections'][13]['subhead'], global_strings['colors']['sections'][13]['descrip']) }}
-
-						{% macro badge_colors(classPartial, namePartial) %}
-						<div class="js-prism mb-2">
-							{{ namePartial }} <span class="badge badge-{{ classPartial }}">10</span>
-						</div>
-						{% endmacro %}
 						
-						{{ badge_colors('primary', 'Primary') }}
-						{{ badge_colors('secondary', 'Secondary') }}
-						{{ badge_colors('success', 'Success') }}
-						{{ badge_colors('danger', 'Danger') }}
-						{{ badge_colors('warning', 'Warning') }}
-						{{ badge_colors('info', 'Info') }}
-						{{ badge_colors('light', 'Light') }}
-						{{ badge_colors('dark', 'Dark') }}
+						{{ macros.badge_colors('primary', 'Primary') }}
+						{{ macros.badge_colors('secondary', 'Secondary') }}
+						{{ macros.badge_colors('success', 'Success') }}
+						{{ macros.badge_colors('danger', 'Danger') }}
+						{{ macros.badge_colors('warning', 'Warning') }}
+						{{ macros.badge_colors('info', 'Info') }}
+						{{ macros.badge_colors('light', 'Light') }}
+						{{ macros.badge_colors('dark', 'Dark') }}
 
-						{{ badge_colors('white', 'White') }}
-						{{ badge_colors('light-gray', 'Light Gray') }}
-						{{ badge_colors('gray', 'Gray') }}
-						{{ badge_colors('dark-gray', 'Dark Gray') }}
-						{{ badge_colors('black', 'Black') }}
+						{{ macros.badge_colors('white', 'White') }}
+						{{ macros.badge_colors('light-gray', 'Light Gray') }}
+						{{ macros.badge_colors('gray', 'Gray') }}
+						{{ macros.badge_colors('dark-gray', 'Dark Gray') }}
+						{{ macros.badge_colors('black', 'Black') }}
 
-						{{ badge_colors('red', 'Red') }}
-						{{ badge_colors('rose', 'Rose') }}
-						{{ badge_colors('magenta', 'Magenta') }}
-						{{ badge_colors('violet', 'Violet') }}
-						{{ badge_colors('blue', 'Blue') }}
-						{{ badge_colors('azure', 'Azure') }}
-						{{ badge_colors('cyan', 'Cyan') }}
-						{{ badge_colors('spring-green', 'Spring Green') }}
-						{{ badge_colors('green', 'Green') }}
-						{{ badge_colors('chartreuse', 'Chartreuse') }}
-						{{ badge_colors('yellow', 'Yellow') }}
-						{{ badge_colors('orange', 'Orange') }}
+						{{ macros.badge_colors('red', 'Red') }}
+						{{ macros.badge_colors('rose', 'Rose') }}
+						{{ macros.badge_colors('magenta', 'Magenta') }}
+						{{ macros.badge_colors('violet', 'Violet') }}
+						{{ macros.badge_colors('blue', 'Blue') }}
+						{{ macros.badge_colors('azure', 'Azure') }}
+						{{ macros.badge_colors('cyan', 'Cyan') }}
+						{{ macros.badge_colors('spring-green', 'Spring Green') }}
+						{{ macros.badge_colors('green', 'Green') }}
+						{{ macros.badge_colors('chartreuse', 'Chartreuse') }}
+						{{ macros.badge_colors('yellow', 'Yellow') }}
+						{{ macros.badge_colors('orange', 'Orange') }}
 
-						{{ badge_colors('orange-gray', 'Orange Gray') }}
-						{{ badge_colors('dark-gray-orange', 'Dark Gray Orange') }}
-						{{ badge_colors('blue-gray', 'Blue Gray') }}
-						{{ badge_colors('light-gray-azure', 'Light Gray Azure') }}
+						{{ macros.badge_colors('orange-gray', 'Orange Gray') }}
+						{{ macros.badge_colors('dark-gray-orange', 'Dark Gray Orange') }}
+						{{ macros.badge_colors('blue-gray', 'Blue Gray') }}
+						{{ macros.badge_colors('light-gray-azure', 'Light Gray Azure') }}
 						
 					</div>
 					
@@ -55,47 +49,38 @@
 					
 						{{ macros.page_section_heading(global_strings['colors']['sections'][14]['head'], global_strings['colors']['sections'][14]['subhead'], global_strings['colors']['sections'][14]['descrip']) }}
 
-						{% macro badge_colors_inv(colorPartial, namePartial, textPartial, badgePartial) %}
-						<div class="js-prism mb-2">
-							<div class="d-flex flex-row justify-content-between align-items-center bg-{{ colorPartial }} text-{{ textPartial }} py-1 px-2">
-								<span>{{ namePartial }}</span>
-								<span class="badge badge-{{ badgePartial }} text-{{ colorPartial }}">10</span>
-							</div>
-						</div>
-						{% endmacro %}
+						{{ macros.badge_colors_inv('primary', 'Primary', 'white', 'white') }}
+						{{ macros.badge_colors_inv('secondary', 'Secondary', 'white', 'white') }}
+						{{ macros.badge_colors_inv('success', 'Success', 'white', 'white') }}
+						{{ macros.badge_colors_inv('danger', 'Danger', 'white', 'white') }}
+						{{ macros.badge_colors_inv('warning', 'Warning', 'white', 'white') }}
+						{{ macros.badge_colors_inv('info', 'Info', 'white', 'white') }}
+						{{ macros.badge_colors_inv('light', 'Light', 'white', 'white') }}
+						{{ macros.badge_colors_inv('dark', 'Dark', 'white', 'white') }}
 
-						{{ badge_colors_inv('primary', 'Primary', 'white', 'white') }}
-						{{ badge_colors_inv('secondary', 'Secondary', 'white', 'white') }}
-						{{ badge_colors_inv('success', 'Success', 'white', 'white') }}
-						{{ badge_colors_inv('danger', 'Danger', 'white', 'white') }}
-						{{ badge_colors_inv('warning', 'Warning', 'white', 'white') }}
-						{{ badge_colors_inv('info', 'Info', 'white', 'white') }}
-						{{ badge_colors_inv('light', 'Light', 'white', 'white') }}
-						{{ badge_colors_inv('dark', 'Dark', 'white', 'white') }}
+						{{ macros.badge_colors_inv('white', 'White', 'dark', 'dark') }}
+						{{ macros.badge_colors_inv('light-gray', 'Light Gray', 'white', 'white') }}
+						{{ macros.badge_colors_inv('gray', 'Gray', 'white', 'white') }}
+						{{ macros.badge_colors_inv('dark-gray', 'Dark Gray', 'white', 'white') }}
+						{{ macros.badge_colors_inv('black', 'Black', 'white', 'white') }}
 
-						{{ badge_colors_inv('white', 'White', 'dark', 'dark') }}
-						{{ badge_colors_inv('light-gray', 'Light Gray', 'white', 'white') }}
-						{{ badge_colors_inv('gray', 'Gray', 'white', 'white') }}
-						{{ badge_colors_inv('dark-gray', 'Dark Gray', 'white', 'white') }}
-						{{ badge_colors_inv('black', 'Black', 'white', 'white') }}
+						{{ macros.badge_colors_inv('red', 'Red', 'white', 'white') }}
+						{{ macros.badge_colors_inv('rose', 'Rose', 'white', 'white') }}
+						{{ macros.badge_colors_inv('magenta', 'Magenta', 'white', 'white') }}
+						{{ macros.badge_colors_inv('violet', 'Violet', 'white', 'white') }}
+						{{ macros.badge_colors_inv('blue', 'Blue', 'white', 'white') }}
+						{{ macros.badge_colors_inv('azure', 'Azure', 'white', 'white') }}
+						{{ macros.badge_colors_inv('cyan', 'Cyan', 'white', 'white') }}
+						{{ macros.badge_colors_inv('spring-green', 'Spring Green', 'white', 'white') }}
+						{{ macros.badge_colors_inv('green', 'Green', 'white', 'white') }}
+						{{ macros.badge_colors_inv('chartreuse', 'Chartreuse', 'white', 'white') }}
+						{{ macros.badge_colors_inv('yellow', 'Yellow', 'white', 'white') }}
+						{{ macros.badge_colors_inv('orange', 'Orange', 'white', 'white') }}
 
-						{{ badge_colors_inv('red', 'Red', 'white', 'white') }}
-						{{ badge_colors_inv('rose', 'Rose', 'white', 'white') }}
-						{{ badge_colors_inv('magenta', 'Magenta', 'white', 'white') }}
-						{{ badge_colors_inv('violet', 'Violet', 'white', 'white') }}
-						{{ badge_colors_inv('blue', 'Blue', 'white', 'white') }}
-						{{ badge_colors_inv('azure', 'Azure', 'white', 'white') }}
-						{{ badge_colors_inv('cyan', 'Cyan', 'white', 'white') }}
-						{{ badge_colors_inv('spring-green', 'Spring Green', 'white', 'white') }}
-						{{ badge_colors_inv('green', 'Green', 'white', 'white') }}
-						{{ badge_colors_inv('chartreuse', 'Chartreuse', 'white', 'white') }}
-						{{ badge_colors_inv('yellow', 'Yellow', 'white', 'white') }}
-						{{ badge_colors_inv('orange', 'Orange', 'white', 'white') }}
-
-						{{ badge_colors_inv('orange-gray', 'Orange Gray', 'white', 'white') }}
-						{{ badge_colors_inv('dark-gray-orange', 'Dark Gray Orange', 'white', 'white') }}
-						{{ badge_colors_inv('blue-gray', 'Blue Gray', 'white', 'white') }}
-						{{ badge_colors_inv('light-gray-azure', 'Light Gray Azure', 'white', 'white') }}
+						{{ macros.badge_colors_inv('orange-gray', 'Orange Gray', 'white', 'white') }}
+						{{ macros.badge_colors_inv('dark-gray-orange', 'Dark Gray Orange', 'white', 'white') }}
+						{{ macros.badge_colors_inv('blue-gray', 'Blue Gray', 'white', 'white') }}
+						{{ macros.badge_colors_inv('light-gray-azure', 'Light Gray Azure', 'white', 'white') }}
 						
 					</div>
 					

@@ -8,30 +8,12 @@
                     <div id="{{ global_strings['defaults']['sections'][22]['id'] }}" class="col-md-6 pb-5">
                         
                         {{ macros.page_section_heading(global_strings['defaults']['sections'][22]['head'], global_strings['defaults']['sections'][22]['subhead'], global_strings['defaults']['sections'][22]['descrip']) }}
-                        
-                        {% macro button_groups(label, alignmentClass, spacer = true) %}
-                        <label class="d-block font-weight-bold">{{ label }}</label>
-                        <div class="js-prism mb-2">
-                            <div class="btn-toolbar{{ alignmentClass }}" role="toolbar" aria-label="Buttons Toolbar">
-                                <div class="btn-group{% if spacer %} mr-2{% endif %}" role="group" aria-label="Toolbar Group One">
-                                    <button type="button" class="btn btn-primary">1</button>
-                                    <button type="button" class="btn btn-primary">2</button>
-                                    <button type="button" class="btn btn-primary">3</button>
-                                </div>
-                                <div class="btn-group" role="group" aria-label="Toolbar Group One">
-                                    <button type="button" class="btn btn-primary">4</button>
-                                    <button type="button" class="btn btn-primary">5</button>
-                                    <button type="button" class="btn btn-primary">6</button>
-                                </div>
-                            </div>
-                        </div>
-                        {% endmacro %}
 
-                        {{ button_groups('Left-Aligned Toolbar', ' justify-content-start') }}
-                        {{ button_groups('Center-Aligned Toolbar', ' justify-content-center') }}
-                        {{ button_groups('Right-Aligned Toolbar', ' justify-content-end') }}
-                        {{ button_groups('Justified Toolbar', ' justify-content-between', spacer = false) }}
-                        {{ button_groups('Justified Gutter Toolbar', ' justify-content-around', spacer = false) }}
+                        {{ macros.button_groups('Left-Aligned Toolbar', ' justify-content-start') }}
+                        {{ macros.button_groups('Center-Aligned Toolbar', ' justify-content-center') }}
+                        {{ macros.button_groups('Right-Aligned Toolbar', ' justify-content-end') }}
+                        {{ macros.button_groups('Justified Toolbar', ' justify-content-between', spacer = false) }}
+                        {{ macros.button_groups('Justified Gutter Toolbar', ' justify-content-around', spacer = false) }}
 
                     </div>
 

@@ -16,31 +16,9 @@
                 <div class="row justify-content-center">
                     
                     <div class="col-sm-9 col-md-6 mb-5">
-                        
-                        {% macro icon_fa_lists(label, listType) %}
-                        <div class="js-prism-fa prism-hidden mb-2" style="cursor: help;">
-                            <label class="d-block font-weight-bold text-left">{{ label }}</label>
-                            <{{ listType }} class="fa-ul text-left">
-                                <li><span class="fa-li"><i class="fas fa-home"></i></span>Home Icon</li>
-                                <li><span class="fa-li"><i class="fas fa-info"></i></span>Info Icon</li>
-                                <li><span class="fa-li"><i class="fas fa-pencil-alt"></i></span>Pencil Icon</li>
-                                <li><span class="fa-li"><i class="fas fa-phone"></i></span>Phone Icon</li>
-                            </{{ listType }}>
-                        </div>
-                        <pre>
-                            <code class="language-html line-numbers">
-                                &lt;{{ listType }} class="fa-ul text-left"&gt;
-                                    &lt;li&gt;&lt;span class="fa-li"&gt;&lt;i class="fas fa-home"&gt;&lt;/i&gt;&lt;/span&gt;Home Icon&lt;/li&gt;
-                                    &lt;li&gt;&lt;span class="fa-li"&gt;&lt;i class="fas fa-info"&gt;&lt;/i&gt;&lt;/span&gt;Info Icon&lt;/li&gt;
-                                    &lt;li&gt;&lt;span class="fa-li"&gt;&lt;i class="fas fa-pencil-alt"&gt;&lt;/i&gt;&lt;/span&gt;Pencil Icon&lt;/li&gt;
-                                    &lt;li&gt;&lt;span class="fa-li"&gt;&lt;i class="fas fa-phone"&gt;&lt;/i&gt;&lt;/span&gt;Phone Icon&lt;/li&gt;
-                                &lt;/{{ listType }}&gt;
-                            </code>
-                        </pre>
-                        {% endmacro %}
 
-                        {{ icon_fa_lists('Unordered List:', 'ul') }}
-                        {{ icon_fa_lists('Ordered List:', 'ol') }}
+                        {{ macros.icon_fa_lists('Unordered List:', 'ul') }}
+                        {{ macros.icon_fa_lists('Ordered List:', 'ol') }}
                         
                         <label class="d-block font-weight-bold text-left">Icons as Bullets + Flexbox</label>
                         <div class="js-prism-fa prism-hidden mb-2" style="cursor: help;">

@@ -16,225 +16,79 @@
                 <div class="row justify-content-center">
 
                     <div class="col pb-5">
-                                
-                                {% macro thead_template() %}
-                                <thead class="thead-dark">
-                                    <tr>
-                                        <th scope="col">Base Class</th>
-                                        <th scope="col">Small</th>
-                                        <th scope="col">Medium</th>
-                                        <th scope="col">Large</th>
-                                        <th scope="col">X-Large</th>
-                                    </tr>
-                                </thead>
-                                {% endmacro %}
 
-                        
-                        
-                        
-                        
-                        
-                        {% macro flex_direction(heading, classPart) %}
-                        <h5 class="mt-4">{{ heading }}</h5>
-                        <div class="js-prism pb-2">
-                            <div class="d-flex flex-{{ classPart }} bg-light p-1">
-                                <div class="p-2 m-1 bg-primary text-light">ITEM 1</div>
-                                <div class="p-2 m-1 bg-primary text-light">ITEM 2</div>
-                                <div class="p-2 m-1 bg-primary text-light">ITEM 3</div>
-                            </div>
-                        </div>
-                        {% endmacro %}
-
-                        {{ flex_direction('Flex Row', 'row') }}
-                        {{ flex_direction('Flex Reversed Row', 'row-reverse') }}
-                        {{ flex_direction('Flex Column', 'column') }}
-                        {{ flex_direction('Flex Reversed Column', 'column-reverse') }}
+                        {{ macros.flex_direction('Flex Row', 'row') }}
+                        {{ macros.flex_direction('Flex Reversed Row', 'row-reverse') }}
+                        {{ macros.flex_direction('Flex Column', 'column') }}
+                        {{ macros.flex_direction('Flex Reversed Column', 'column-reverse') }}
 
 
+                        {{ macros.flex_justification('Justify Start', 'start') }}
+                        {{ macros.flex_justification('Justify End', 'end') }}
+                        {{ macros.flex_justification('Justify Center', 'center') }}
+                        {{ macros.flex_justification('Justify Between', 'between') }}
+                        {{ macros.flex_justification('Justify Around', 'around') }}
 
 
+                        {{ macros.flex_alignment('Align Items Start', 'start') }}
+                        {{ macros.flex_alignment('Align Items End', 'end') }}
+                        {{ macros.flex_alignment('Align Items Center', 'center') }}
+                        {{ macros.flex_alignment('Align Items Baseline', 'baseline') }}
+                        {{ macros.flex_alignment('Align Items Stretch', 'stretch') }}
 
 
-                        {% macro flex_justification(heading, classPart) %}
-                        <h5 class="mt-4">{{ heading }}</h5>
-                        <div class="js-prism pb-2">
-                            <div class="d-flex justify-content-{{ classPart }} bg-light p-1">
-                                <div class="p-2 m-1 bg-primary text-light">ITEM 1</div>
-                                <div class="p-2 m-1 bg-primary text-light">ITEM 2</div>
-                                <div class="p-2 m-1 bg-primary text-light">ITEM 3</div>
-                            </div>
-                        </div>
-                        {% endmacro %}
-
-                        {{ flex_justification('Justify Start', 'start') }}
-                        {{ flex_justification('Justify End', 'end') }}
-                        {{ flex_justification('Justify Center', 'center') }}
-                        {{ flex_justification('Justify Between', 'between') }}
-                        {{ flex_justification('Justify Around', 'around') }}
-                        
-
-
-
-
-
-                        {% macro flex_alignment(heading, classPart) %}
-                        <h5 class="mt-4">{{ heading }}</h5>
-                        <div class="js-prism pb-2">
-                            <div class="d-flex align-items-{{ classPart }} bg-light p-1" style="height: 90px;">
-                                <div class="p-2 m-1 bg-primary text-light">ITEM 1</div>
-                                <div class="p-2 m-1 bg-primary text-light">ITEM 2</div>
-                                <div class="p-2 m-1 bg-primary text-light">ITEM 3</div>
-                            </div>
-                        </div>
-                        {% endmacro %}
-
-                        {{ flex_alignment('Align Items Start', 'start') }}
-                        {{ flex_alignment('Align Items End', 'end') }}
-                        {{ flex_alignment('Align Items Center', 'center') }}
-                        {{ flex_alignment('Align Items Baseline', 'baseline') }}
-                        {{ flex_alignment('Align Items Stretch', 'stretch') }}
-
-
-
-
-
-
-                        {% macro flex_align_self(heading, classPart) %}
-                        <h5 class="mt-4">{{ heading }}</h5>
-                        <div class="js-prism pb-2">
-                            <div class="d-flex bg-light p-1" style="height: 90px;">
-                                <div class="align-self-{{ classPart }} p-2 m-1 bg-primary text-light">ITEM 1</div>
-                                <div class="align-self-{{ classPart }} p-2 m-1 bg-primary text-light">ITEM 2</div>
-                                <div class="align-self-{{ classPart }} p-2 m-1 bg-primary text-light">ITEM 3</div>
-                            </div>
-                        </div>
-                        {% endmacro %}
-
-                        {{ flex_align_self('Align Self Start', 'start') }}
-                        {{ flex_align_self('Align Self End', 'end') }}
-                        {{ flex_align_self('Align Self Center', 'center') }}
-                        {{ flex_align_self('Align Self Baseline', 'baseline') }}
-                        {{ flex_align_self('Align Self Stretch', 'stretch') }}
-                        
-
-
-
-
+                        {{ macros.flex_align_self('Align Self Start', 'start') }}
+                        {{ macros.flex_align_self('Align Self End', 'end') }}
+                        {{ macros.flex_align_self('Align Self Center', 'center') }}
+                        {{ macros.flex_align_self('Align Self Baseline', 'baseline') }}
+                        {{ macros.flex_align_self('Align Self Stretch', 'stretch') }}
 
                         <h5 class="mt-4">Flex Fill</h5>
-                        
-                        {% macro flex_fill(integer) %}
-                        <div class="js-prism pb-2">
-                            <div class="d-flex flex-wrap bg-light p-1">
-                                {%- for i in range(1, integer) %}
-                                <div class="flex-fill p-2 m-1 bg-primary text-light">ITEM {{ i }}</div>
-                                {%- endfor %}
-                            </div>
-                        </div>
-                        {% endmacro %}
 
-                        {{ flex_fill(3) }}
-                        {{ flex_fill(4) }}
-                        {{ flex_fill(5) }}
-                        {{ flex_fill(6) }}
-                        
-
-
-
-
-
-                        {% macro flex_grow_shrink(str1, str2, str3) %}
-                        <div class="js-prism pb-2">
-                            <div class="d-flex bg-light p-1">
-                                <div class="p-2 m-1 bg-primary text-light{{ str1 }}">ITEM 1</div>
-                                <div class="p-2 m-1 bg-primary text-light{{ str2 }}">ITEM 2</div>
-                                <div class="p-2 m-1 bg-primary text-light{{ str3 }}">ITEM 3</div>
-                            </div>
-                        </div>
-                        {% endmacro %}
+                        {{ macros.flex_fill(3) }}
+                        {{ macros.flex_fill(4) }}
+                        {{ macros.flex_fill(5) }}
+                        {{ macros.flex_fill(6) }}
                         
                         <h5 class="mt-4">Flex Grow Examples</h5>
                         
-                        {{ flex_grow_shrink(' flex-grow-1', '', '') }}
-                        {{ flex_grow_shrink('', ' flex-grow-1', '') }}
-                        {{ flex_grow_shrink('', '', ' flex-grow-1') }}
+                        {{ macros.flex_grow_shrink(' flex-grow-1', '', '') }}
+                        {{ macros.flex_grow_shrink('', ' flex-grow-1', '') }}
+                        {{ macros.flex_grow_shrink('', '', ' flex-grow-1') }}
 
                         <h5 class="mt-4">Flex Shrink Examples</h5>
                         
-                        {{ flex_grow_shrink(' w-100', ' flex-shrink-1', ' flex-shrink-1') }}
-                        {{ flex_grow_shrink(' flex-shrink-1', ' w-100', ' flex-shrink-1') }}
-                        {{ flex_grow_shrink(' flex-shrink-1', ' flex-shrink-1', ' w-100') }}
-                        
-                        
-                        
-                        
+                        {{ macros.flex_grow_shrink(' w-100', ' flex-shrink-1', ' flex-shrink-1') }}
+                        {{ macros.flex_grow_shrink(' flex-shrink-1', ' w-100', ' flex-shrink-1') }}
+                        {{ macros.flex_grow_shrink(' flex-shrink-1', ' flex-shrink-1', ' w-100') }}
                         
                         <h5 class="mt-4">Horizontal Auto Margins</h5>
                         
-                        {% macro auto_margins(str1, str2, str3) %}
-                        <div class="js-prism pb-2">
-                            <div class="d-flex bg-light p-1">
-                                <div class="p-2 m-1 bg-primary text-light{{ str1 }}">ITEM 1</div>
-                                <div class="p-2 m-1 bg-primary text-light{{ str2 }}">ITEM 2</div>
-                                <div class="p-2 m-1 bg-primary text-light{{ str3 }}">ITEM 3</div>
-                            </div>
-                        </div>
-                        {% endmacro %}
-                        
-                        {{ auto_margins(' mr-auto', '', '') }}
-                        {{ auto_margins('', ' mr-auto', '') }}
-                        {{ auto_margins('', '', ' mr-auto') }}
-                        {{ auto_margins(' ml-auto', '', '') }}
-                        {{ auto_margins('', ' ml-auto', '') }}
-                        {{ auto_margins('', '', ' ml-auto') }}
-                        
-                        
-                        
-                        
-                        
+                        {{ macros.flex_auto_margins_horiz(' mr-auto', '', '') }}
+                        {{ macros.flex_auto_margins_horiz('', ' mr-auto', '') }}
+                        {{ macros.flex_auto_margins_horiz('', '', ' mr-auto') }}
+                        {{ macros.flex_auto_margins_horiz(' ml-auto', '', '') }}
+                        {{ macros.flex_auto_margins_horiz('', ' ml-auto', '') }}
+                        {{ macros.flex_auto_margins_horiz('', '', ' ml-auto') }}
+
                         <h5 class="mt-4">Vertical Auto Margins</h5>
                         
-                        {% macro auto_margins(str1, str2, str3) %}
-                        <div class="js-prism pb-2">
-                            <div class="d-flex align-items-center flex-column bg-light p-1" style="height: 200px;">
-                                <div class="p-2 m-1 bg-primary text-light{{ str1 }}">ITEM 1</div>
-                                <div class="p-2 m-1 bg-primary text-light{{ str2 }}">ITEM 2</div>
-                                <div class="p-2 m-1 bg-primary text-light{{ str3 }}">ITEM 3</div>
-                            </div>
-                        </div>
-                        {% endmacro %}
-                        
-                        {{ auto_margins(' mt-auto', '', '') }}
-                        {{ auto_margins('', ' mt-auto', '') }}
-                        {{ auto_margins('', '', ' mt-auto') }}
-                        {{ auto_margins(' mb-auto', '', '') }}
-                        {{ auto_margins('', ' mb-auto', '') }}
-                        {{ auto_margins('', '', ' mb-auto') }}
-                        
-                        
-                        
-                        
+                        {{ macros.flex_auto_margins_fixed_height(' mt-auto', '', '') }}
+                        {{ macros.flex_auto_margins_fixed_height('', ' mt-auto', '') }}
+                        {{ macros.flex_auto_margins_fixed_height('', '', ' mt-auto') }}
+                        {{ macros.flex_auto_margins_fixed_height(' mb-auto', '', '') }}
+                        {{ macros.flex_auto_margins_fixed_height('', ' mb-auto', '') }}
+                        {{ macros.flex_auto_margins_fixed_height('', '', ' mb-auto') }}
                         
                         <div class="row justify-content-center">
                             
                             <div class="col-sm-6 pt-4">
                                 
-                                {% macro align_content(headline, string) %}
-                                <h5 class="mt-4">Align {{ headline }}:</h5>
-                                <div class="js-prism pb-2">
-                                    <div class="d-flex align-content-{{ string }} flex-wrap bg-light p-1" style="height: 200px;">
-                                        {%- for i in range(1, 9) %}
-                                        <div class="p-2 m-1 bg-primary text-light">ITEM {{ i }}</div>
-                                        {%- endfor %}
-                                    </div>
-                                </div>
-                                {% endmacro %}
-                                
-                                {{ align_content('Start', 'start') }}
-                                {{ align_content('End', 'end') }}
-                                {{ align_content('Center', 'center') }}
-                                {{ align_content('Around', 'around') }}
-                                {{ align_content('Stretch', 'stretch') }}
+                                {{ macros.flex_align_content_classes('Start', 'start') }}
+                                {{ macros.flex_align_content_classes('End', 'end') }}
+                                {{ macros.flex_align_content_classes('Center', 'center') }}
+                                {{ macros.flex_align_content_classes('Around', 'around') }}
+                                {{ macros.flex_align_content_classes('Stretch', 'stretch') }}
 
                             </div>
 

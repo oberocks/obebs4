@@ -45,41 +45,27 @@
 
             </div>
 
-            {% macro hidden_color_elements(colorSlug, colorName) %}
-            <div class="js-color-source d-none text-{{ colorSlug }}"></div>
-            <div class="js-color-source d-none text-{{ colorSlug }}-50"></div>
-            <div class="js-color-source d-none text-{{ colorSlug }}-100"></div>
-            <div class="js-color-source d-none text-{{ colorSlug }}-200"></div>
-            <div class="js-color-source d-none text-{{ colorSlug }}-300"></div>
-            <div class="js-color-source d-none text-{{ colorSlug }}-400"></div>
-            <div class="js-color-source d-none text-{{ colorSlug }}-500"></div>
-            <div class="js-color-source d-none text-{{ colorSlug }}-600"></div>
-            <div class="js-color-source d-none text-{{ colorSlug }}-700"></div>
-            <div class="js-color-source d-none text-{{ colorSlug }}-800"></div>
-            <div class="js-color-source d-none text-{{ colorSlug }}-900"></div>
-            {% endmacro %}
-
-            {{ hidden_color_elements('white') }}
-            {{ hidden_color_elements('light-gray') }}
-            {{ hidden_color_elements('gray') }}
-            {{ hidden_color_elements('dark-gray') }}
-            {{ hidden_color_elements('black') }}
-            {{ hidden_color_elements('red') }}
-            {{ hidden_color_elements('rose') }}
-            {{ hidden_color_elements('magenta') }}
-            {{ hidden_color_elements('violet') }}
-            {{ hidden_color_elements('blue') }}
-            {{ hidden_color_elements('azure') }}
-            {{ hidden_color_elements('cyan') }}
-            {{ hidden_color_elements('spring-green') }}
-            {{ hidden_color_elements('green') }}
-            {{ hidden_color_elements('chartreuse') }}
-            {{ hidden_color_elements('yellow') }}
-            {{ hidden_color_elements('orange') }}
-            {{ hidden_color_elements('orange-gray') }}
-            {{ hidden_color_elements('dark-gray-orange') }}
-            {{ hidden_color_elements('blue-gray') }}
-            {{ hidden_color_elements('light-gray-azure') }}
+            {{ macros.hidden_color_elements('white') }}
+            {{ macros.hidden_color_elements('light-gray') }}
+            {{ macros.hidden_color_elements('gray') }}
+            {{ macros.hidden_color_elements('dark-gray') }}
+            {{ macros.hidden_color_elements('black') }}
+            {{ macros.hidden_color_elements('red') }}
+            {{ macros.hidden_color_elements('rose') }}
+            {{ macros.hidden_color_elements('magenta') }}
+            {{ macros.hidden_color_elements('violet') }}
+            {{ macros.hidden_color_elements('blue') }}
+            {{ macros.hidden_color_elements('azure') }}
+            {{ macros.hidden_color_elements('cyan') }}
+            {{ macros.hidden_color_elements('spring-green') }}
+            {{ macros.hidden_color_elements('green') }}
+            {{ macros.hidden_color_elements('chartreuse') }}
+            {{ macros.hidden_color_elements('yellow') }}
+            {{ macros.hidden_color_elements('orange') }}
+            {{ macros.hidden_color_elements('orange-gray') }}
+            {{ macros.hidden_color_elements('dark-gray-orange') }}
+            {{ macros.hidden_color_elements('blue-gray') }}
+            {{ macros.hidden_color_elements('light-gray-azure') }}
             
             
 

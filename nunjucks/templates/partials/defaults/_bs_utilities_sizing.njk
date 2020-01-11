@@ -16,46 +16,27 @@
                 <div class="row justify-content-center">
 
                     <div class="col pb-5">
-                        
-                        {% macro element_width_utils(number, text) %}
-                        <div class="js-prism mb-2">
-                            <div class="bg-light text-white w-100">
-                                <div class="bg-primary w-{{ number }}">{{ text }}</div>
-                            </div>
-                        </div>
-                        {% endmacro %}
 
                         <h5 class="mt-4">Width Utility Classes</h5>
                         
-                        {{ element_width_utils('25', '25%') }}
-                        {{ element_width_utils('50', '50%') }}
-                        {{ element_width_utils('75', '75%') }}
-                        {{ element_width_utils('100', '100%') }}
+                        {{ macros.element_width_utils('25', '25%') }}
+                        {{ macros.element_width_utils('50', '50%') }}
+                        {{ macros.element_width_utils('75', '75%') }}
+                        {{ macros.element_width_utils('100', '100%') }}
+
                         <div class="js-prism mb-2">
                             <div class="bg-light text-white w-100">
                                 <span class="bg-primary w-auto">Auto</span>
                             </div>
                         </div>
 
-                        
-                        
-                        
-                        
-                        {% macro element_height_utils(number, text) %}
-                        <div class="js-prism mb-2">
-                            <div class="bg-light text-white w-100" style="height: 50px;">
-                                <div class="bg-primary h-{{ number }}">{{ text }}</div>
-                            </div>
-                        </div>
-                        {% endmacro %}
-
                         <h5 class="mt-4">Height Utility Classes</h5>
 
-                        {{ element_height_utils('25', '25%') }}
-                        {{ element_height_utils('50', '50%') }}
-                        {{ element_height_utils('75', '75%') }}
-                        {{ element_height_utils('100', '100%') }}
-                        {{ element_height_utils('auto', 'Auto') }}
+                        {{ macros.element_height_utils('25', '25%') }}
+                        {{ macros.element_height_utils('50', '50%') }}
+                        {{ macros.element_height_utils('75', '75%') }}
+                        {{ macros.element_height_utils('100', '100%') }}
+                        {{ macros.element_height_utils('auto', 'Auto') }}
 
                     </div>
 

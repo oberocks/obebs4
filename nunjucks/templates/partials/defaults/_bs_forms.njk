@@ -16,14 +16,6 @@
                 <div class="row justify-content-center">
 
                     <div class="col-md-6 pb-5 text-left">
-                            
-                            {% macro form_input(type, label, placeholderStr, helpText, value, placeholder = 'true') %}
-                            <div class="form-group">
-                                <label for="{{ type }}-input">{{ label }}</label>
-                                <input type="{{ type }}" class="form-control" id="{{ type }}-input" name="{{ type }}-input" aria-describedby="{{ type }}-help"{% if placeholder === 'true' %} placeholder="{{ placeholderStr }}"{% endif %} value="{{ value }}">
-                                <small id="{{ type }}-help" class="form-text text-muted">{{ helpText }}</small>
-                            </div>
-                            {% endmacro %}
 
                         <div class="js-prism mb-2">
                             <div class="form-group">
@@ -34,7 +26,7 @@
                         </div>
                         
                         <div class="js-prism mb-2">
-                            {{ form_input('text', 'Text Input:', 'Example Text', 'Text help text here.', '') }}
+                            {{ macros.form_input('text', 'Text Input:', 'Example Text', 'Text help text here.', '') }}
                         </div>
                         
                         <div class="js-prism mb-2">
@@ -46,51 +38,51 @@
                         </div>
 
                         <div class="js-prism mb-2">
-                            {{ form_input('email', 'Email Input:', 'email@example.com', 'Email input help text here.', '') }}
+                            {{ macros.form_input('email', 'Email Input:', 'email@example.com', 'Email input help text here.', '') }}
                         </div>
 
                         <div class="js-prism mb-2">
-                            {{ form_input('password', 'Password Input:', 'Enter Password', 'Password input help text here.', '') }}
+                            {{ macros.form_input('password', 'Password Input:', 'Enter Password', 'Password input help text here.', '') }}
                         </div>
 
                         <div class="js-prism mb-2">
-                            {{ form_input('color', 'Color Input:', '', 'Color input help text here.', '#222222', placeholder = 'false') }}
+                            {{ macros.form_input('color', 'Color Input:', '', 'Color input help text here.', '#222222', placeholder = 'false') }}
                         </div>
 
                         <div class="js-prism mb-2">
-                            {{ form_input('date', 'Date Input:', '', 'Date input help text here.', '', placeholder = 'false') }}
+                            {{ macros.form_input('date', 'Date Input:', '', 'Date input help text here.', '', placeholder = 'false') }}
                         </div>
 
                         <div class="js-prism mb-2">
-                            {{ form_input('datetime-local', 'Date/Time Local Input:', '', 'Date/Time Local input help text here.', '', placeholder = 'false') }}
+                            {{ macros.form_input('datetime-local', 'Date/Time Local Input:', '', 'Date/Time Local input help text here.', '', placeholder = 'false') }}
                         </div>
 
                         <div class="js-prism mb-2">
-                            {{ form_input('month', 'Month Input:', '', 'Month input help text here.', '', placeholder = 'false') }}
+                            {{ macros.form_input('month', 'Month Input:', '', 'Month input help text here.', '', placeholder = 'false') }}
                         </div>
 
                         <div class="js-prism mb-2">
-                            {{ form_input('number', 'Number Input:', '', 'Number input help text here.', '') }}
+                            {{ macros.form_input('number', 'Number Input:', '', 'Number input help text here.', '') }}
                         </div>
 
                         <div class="js-prism mb-2">
-                            {{ form_input('search', 'Search Input:', 'Search...', 'Search input help text here.', '') }}
+                            {{ macros.form_input('search', 'Search Input:', 'Search...', 'Search input help text here.', '') }}
                         </div>
 
                         <div class="js-prism mb-2">
-                            {{ form_input('tel', 'Telephone Input:', '', 'Tel input help text here.', '') }}
+                            {{ macros.form_input('tel', 'Telephone Input:', '', 'Tel input help text here.', '') }}
                         </div>
 
                         <div class="js-prism mb-2">
-                            {{ form_input('time', 'Time Input:', '', 'Time input help text here.', '', placeholder = 'false') }}
+                            {{ macros.form_input('time', 'Time Input:', '', 'Time input help text here.', '', placeholder = 'false') }}
                         </div>
 
                         <div class="js-prism mb-2">
-                            {{ form_input('url', 'URL Input:', 'https://example.com', 'URL input help text here.', '') }}
+                            {{ macros.form_input('url', 'URL Input:', 'https://example.com', 'URL input help text here.', '') }}
                         </div>
 
                         <div class="js-prism mb-2">
-                            {{ form_input('week', 'Week Input:', '', 'Week input help text here.', '', placeholder = 'false') }}
+                            {{ macros.form_input('week', 'Week Input:', '', 'Week input help text here.', '', placeholder = 'false') }}
                         </div>
 
                         <div class="js-prism mb-2">
@@ -498,34 +490,12 @@
 
                     <div class="col-md-9 pb-5 text-left">
 
-                            {% macro form_row(heading, rowClass, uniqueMod) %}
-                            <h5>{{ heading }}</h5>
-                            <form>
-                                <div class="{{ rowClass }}">
-                                    <div class="col">
-                                        <div class="form-group">
-                                            <label for="form-grid-fname{{ uniqueMod }}">First Name:</label>
-                                            <input class="form-control" type="text" placeholder="Enter Name" id="form-grid-fname{{ uniqueMod }}" name="form-grid-fname{{ uniqueMod }}" aria-describedby="form-grid-fname{{ uniqueMod }}-help">
-                                            <small id="form-grid-fname{{ uniqueMod }}-help" class="form-text text-muted">First name help text.</small>
-                                        </div>
-                                    </div>
-                                    <div class="col">
-                                        <div class="form-group">
-                                            <label for="form-grid-lname{{ uniqueMod }}">Last Name:</label>
-                                            <input class="form-control" type="text" placeholder="Enter Name" id="form-grid-lname{{ uniqueMod }}" name="form-grid-lname{{ uniqueMod }}" aria-describedby="form-grid-lname{{ uniqueMod }}-help">
-                                            <small id="form-grid-lname{{ uniqueMod }}-help" class="form-text text-muted">Last name help text.</small>
-                                        </div>
-                                    </div>
-                                </div>
-                            </form>
-                            {% endmacro %}
-
                         <div class="js-prism mb-2">
-                            {{ form_row('Default Form Grid:', 'row', '-1') }}
+                            {{ macros.form_row('Default Form Grid:', 'row', '-1') }}
                         </div>
 
                         <div class="js-prism mb-2">
-                            {{ form_row('Form-Row Form Grid:', 'form-row', '-2') }}
+                            {{ macros.form_row('Form-Row Form Grid:', 'form-row', '-2') }}
                         </div>
 
                         <div class="js-prism mb-2">

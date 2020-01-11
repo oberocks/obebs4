@@ -9,172 +9,25 @@
                     <div id="{{ global_strings['extensions']['sections'][13]['id'] }}" class="col-12 pb-5">
                         
                         {{ macros.page_section_heading(global_strings['extensions']['sections'][13]['head'], global_strings['extensions']['sections'][13]['subhead'], global_strings['extensions']['sections'][13]['descrip']) }}
-
-                        {% macro modal_utils(headline, modalClass, idString) %}
-                        <label class="d-block font-weight-bold pt-4">{{ headline }} Modal</label>
-                        <div class="js-prism mb-2">
-                            <!-- {{ headline }} Trigger -->
-                            <button type="button" class="btn btn-primary mb-2" data-toggle="modal" data-target="#{{ idString }}">{{ headline }}</button>
-
-                            <!-- {{ headline }} BS Modal -->
-                            <div id="{{ idString }}" class="modal fade{{ modalClass }}" tabindex="-1" role="dialog" aria-labelledby="{{ idString }}" aria-hidden="true">
-                                <div class="modal-dialog">
-                                    <div class="modal-content">
-                                        <div class="modal-header">
-                                            <h6 class="modal-title">{{ headline }}</h6>
-                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
-                                        </div>
-                                        <div class="modal-body text-left">
-                                            {{ headline }} Modal Body
-                                        </div>
-                                        <div class="modal-footer">
-                                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
-                                            <button type="button" class="btn btn-primary">Action</button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        {% endmacro %}
                         
-                        {{ modal_utils('Slide From Top', '', 'modal-slide-top') }}
-                        {{ modal_utils('Slide From Right', ' slide-from-right', 'modal-slide-right') }}
-                        {{ modal_utils('Slide From Left', ' slide-from-left', 'modal-slide-left') }}
-                        {{ modal_utils('Slide From Bottom', ' slide-from-bottom', 'modal-slide-bottom') }}
-                        {{ modal_utils('Fade and Scale', ' fade-scale', 'modal-fade-scale') }}
-
+                        {{ macros.modal_utils('Slide From Top', '', 'modal-slide-top') }}
+                        {{ macros.modal_utils('Slide From Right', ' slide-from-right', 'modal-slide-right') }}
+                        {{ macros.modal_utils('Slide From Left', ' slide-from-left', 'modal-slide-left') }}
+                        {{ macros.modal_utils('Slide From Bottom', ' slide-from-bottom', 'modal-slide-bottom') }}
+                        {{ macros.modal_utils('Fade and Scale', ' fade-scale', 'modal-fade-scale') }}
                         
                         
-                        {% macro top_pinned_modal(headline, modalClass, idString) %}
-                        <label class="d-block font-weight-bold pt-4">{{ headline }} Modal</label>
-                        <div class="js-prism mb-2">
-                            <!-- {{ headline }} Modal Trigger -->
-                            <button type="button" class="btn btn-primary mb-2" data-toggle="modal" data-target="#{{ idString }}">{{ headline }} Modal</button>
-
-                            <!-- {{ headline }} Modal -->
-                            <div id="{{ idString }}" class="modal fade{{ modalClass }}" tabindex="-1" role="dialog" aria-labelledby="{{ idString }}" aria-hidden="true">
-                                <div class="modal-dialog modal-lg mt-0">
-                                    <div class="modal-content border-0 rounded-0">
-                                        <div class="modal-header">
-                                            <h6 class="modal-title">{{ headline }}</h6>
-                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
-                                        </div>
-                                        <div class="modal-body text-left">
-                                            {{ headline }} Modal Body
-                                        </div>
-                                        <div class="modal-footer">
-                                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
-                                            <button type="button" class="btn btn-primary">Action</button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        {% endmacro %}
-                        
-                        {{ top_pinned_modal('Top Pinned', ' top-pinned', 'modal-top-pinned') }}
+                        {{ macros.modal_top_pinned('Top Pinned', ' top-pinned', 'modal-top-pinned') }}
 
 
+                        {{ macros.modal_bottom_pinned('Bottom Pinned', ' bottom-pinned', 'modal-bottom-pinned') }}
 
 
+                        {{ macros.modal_left_right_pinned('Left Pinned', ' left-pinned', 'modal-left-pinned') }}
+                        {{ macros.modal_left_right_pinned('Right Pinned', ' right-pinned', 'modal-right-pinned') }}
 
 
-                        {% macro bottom_pinned_modal(headline, modalClass, idString) %}
-                        <label class="d-block font-weight-bold pt-4">{{ headline }} Modal</label>
-                        <div class="js-prism mb-2">
-                            <!-- Bottom Pinned Trigger -->
-                            <button type="button" class="btn btn-primary mb-2" data-toggle="modal" data-target="#{{ idString }}">Bottom Pinned</button>
-
-                            <!-- Bottom Pinned BS Modal -->
-                            <div id="{{ idString }}" class="modal fade{{ modalClass }}" tabindex="-1" role="dialog" aria-labelledby="{{ idString }}" aria-hidden="true">
-                                <div class="modal-dialog fixed-bottom mb-0">
-                                    <div class="modal-content border-0">
-                                        <div class="modal-header">
-                                            <h6 class="modal-title">{{ headline }}</h6>
-                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
-                                        </div>
-                                        <div class="modal-body text-left">
-                                            {{ headline }} Modal Body
-                                        </div>
-                                        <div class="modal-footer">
-                                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
-                                            <button type="button" class="btn btn-primary">Action</button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        {% endmacro %}
-
-                        {{ bottom_pinned_modal('Bottom Pinned', ' bottom-pinned', 'modal-bottom-pinned') }}
-
-
-
-                        
-                        
-                        
-                        {% macro lr_pinned_modal(headline, modalClass, idString) %}
-                        <label class="d-block font-weight-bold pt-4">{{ headline }} Modal</label>
-                        <div class="js-prism mb-2">
-                            <!-- {{ headline }} Modal Trigger -->
-                            <button type="button" class="btn btn-primary mb-2" data-toggle="modal" data-target="#{{ idString }}">{{ headline }} Modal</button>
-
-                            <!-- {{ headline }} Modal -->
-                            <div id="{{ idString }}" class="modal fade{{ modalClass }}" tabindex="-1" role="dialog" aria-labelledby="{{ idString }}" aria-hidden="true">
-                                <div class="modal-dialog modal-lg mt-0">
-                                    <div class="modal-content border-0 rounded-0">
-                                        <div class="modal-header">
-                                            <h6 class="modal-title">{{ headline }}</h6>
-                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
-                                        </div>
-                                        <div class="modal-body text-left p-2">
-                                            {{ headline }} Modal Body
-                                        </div>
-                                        <div class="modal-footer justify-content-end">
-                                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
-                                            <button type="button" class="btn btn-primary">Action</button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        {% endmacro %}
-
-                        {{ lr_pinned_modal('Left Pinned', ' left-pinned', 'modal-left-pinned') }}
-                        {{ lr_pinned_modal('Right Pinned', ' right-pinned', 'modal-right-pinned') }}
-
-
-
-
-                        {% macro fullscreen_modal(headline, modalClass, idString) %}
-                        <label class="d-block font-weight-bold pt-4">{{ headline }} Modal</label>
-                        <div class="js-prism mb-2">
-                            <!-- {{ headline }} Modal Trigger -->
-                            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#{{ idString }}">{{ headline }} Modal</button>
-
-                            <!-- {{ headline }} Modal -->
-                            <div id="{{ idString }}" class="modal fade{{ modalClass }}" tabindex="-1" role="dialog" aria-labelledby="{{ idString }}" aria-hidden="true">
-                                <div class="modal-dialog">
-                                    <div class="modal-content text-center">
-                                        <div class="modal-header">
-                                            <div class="modal-heading-spacer">×</div>
-                                            <h2 class="modal-title">{{ headline }} Modal</h2>
-                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span> </button>
-                                        </div>
-                                        <div class="modal-body">
-                                            {{ headline }} Modal Body
-                                        </div>
-                                        <div class="modal-footer justify-content-center">
-                                            <button type="button" class="btn btn-lg btn-secondary" data-dismiss="modal">Cancel</button>
-                                            <button type="button" class="btn btn-lg btn-primary">Action</button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        {% endmacro %}
-
-                        {{ fullscreen_modal('Fullscreen', ' modal-fullscreen', 'modal-fullscreen') }}
+                        {{ macros.modal_fullscreen('Fullscreen', ' modal-fullscreen', 'modal-fullscreen') }}
                         
                     </div>
 

@@ -30,104 +30,75 @@
                         </div-->
                         <!-- this is NOT working yet, currently have no default option! :( -->
 
-                        
-                        {% macro material_text_inputs(headline, classPart) %}
-                        <div class="js-prism pt-4 mb-2 text-left">
-                            <form novalidate>
-                                <div class="material-static-input-group material-group-{{ classPart }}">
-                                    <input type="text" id="md-static-text-{{ classPart }}" name="md-static-text-{{ classPart }}" class="material-input rounded-0 border-bottom" aria-describedby="md-static-{{ classPart }}-label" required>
-                                    <span class="material-bar"></span>
-                                    <label id="md-static-{{ classPart }}-label" class="material-label">{{ headline }} Text Input</label>
-                                    <small class="form-text text-muted">Additional help text here.</small>
-                                </div>
-                            </form>
-                        </div>
-                        {% endmacro %}
+                        {{ macros.material_text_inputs('Primary', 'primary') }}
+                        {{ macros.material_text_inputs('Secondary', 'secondary') }}
+                        {{ macros.material_text_inputs('Success', 'success') }}
+                        {{ macros.material_text_inputs('Danger', 'danger') }}
+                        {{ macros.material_text_inputs('Warning', 'warning') }}
+                        {{ macros.material_text_inputs('Info', 'info') }}
+                        {{ macros.material_text_inputs('Light', 'light') }}
+                        {{ macros.material_text_inputs('Dark', 'dark') }}
 
-                        {{ material_text_inputs('Primary', 'primary') }}
-                        {{ material_text_inputs('Secondary', 'secondary') }}
-                        {{ material_text_inputs('Success', 'success') }}
-                        {{ material_text_inputs('Danger', 'danger') }}
-                        {{ material_text_inputs('Warning', 'warning') }}
-                        {{ material_text_inputs('Info', 'info') }}
-                        {{ material_text_inputs('Light', 'light') }}
-                        {{ material_text_inputs('Dark', 'dark') }}
+                        {{ macros.material_text_inputs('White', 'white') }}
+                        {{ macros.material_text_inputs('Light Gray', 'light-gray') }}
+                        {{ macros.material_text_inputs('Gray', 'gray') }}
+                        {{ macros.material_text_inputs('Dark Gray', 'dark-gray') }}
+                        {{ macros.material_text_inputs('Black', 'black') }}
 
-                        {{ material_text_inputs('White', 'white') }}
-                        {{ material_text_inputs('Light Gray', 'light-gray') }}
-                        {{ material_text_inputs('Gray', 'gray') }}
-                        {{ material_text_inputs('Dark Gray', 'dark-gray') }}
-                        {{ material_text_inputs('Black', 'black') }}
-
-                        {{ material_text_inputs('Red', 'red') }}
-                        {{ material_text_inputs('Rose', 'rose') }}
-                        {{ material_text_inputs('Magenta', 'magenta') }}
-                        {{ material_text_inputs('Violet', 'violet') }}
-                        {{ material_text_inputs('Blue', 'blue') }}
-                        {{ material_text_inputs('Azure', 'azure') }}
-                        {{ material_text_inputs('Cyan', 'cyan') }}
-                        {{ material_text_inputs('Spring Green', 'spring-green') }}
-                        {{ material_text_inputs('Green', 'green') }}
-                        {{ material_text_inputs('Chartreuse', 'chartreuse') }}
-                        {{ material_text_inputs('Yellow', 'yellow') }}
-                        {{ material_text_inputs('Orange', 'orange') }}
-                        {{ material_text_inputs('Orange Gray', 'orange-gray') }}
-                        {{ material_text_inputs('Dark Gray Orange', 'dark-gray-orange') }}
-                        {{ material_text_inputs('Blue Gray', 'blue-gray') }}
-                        {{ material_text_inputs('Light Gray Azure', 'light-gray-azure') }}
+                        {{ macros.material_text_inputs('Red', 'red') }}
+                        {{ macros.material_text_inputs('Rose', 'rose') }}
+                        {{ macros.material_text_inputs('Magenta', 'magenta') }}
+                        {{ macros.material_text_inputs('Violet', 'violet') }}
+                        {{ macros.material_text_inputs('Blue', 'blue') }}
+                        {{ macros.material_text_inputs('Azure', 'azure') }}
+                        {{ macros.material_text_inputs('Cyan', 'cyan') }}
+                        {{ macros.material_text_inputs('Spring Green', 'spring-green') }}
+                        {{ macros.material_text_inputs('Green', 'green') }}
+                        {{ macros.material_text_inputs('Chartreuse', 'chartreuse') }}
+                        {{ macros.material_text_inputs('Yellow', 'yellow') }}
+                        {{ macros.material_text_inputs('Orange', 'orange') }}
+                        {{ macros.material_text_inputs('Orange Gray', 'orange-gray') }}
+                        {{ macros.material_text_inputs('Dark Gray Orange', 'dark-gray-orange') }}
+                        {{ macros.material_text_inputs('Blue Gray', 'blue-gray') }}
+                        {{ macros.material_text_inputs('Light Gray Azure', 'light-gray-azure') }}
 
                     </div>
 
                     <div class="col-md-6 pb-5">
 
                         <label class="d-block font-weight-bold">Floating Variations</label>
-                        
-                        {% macro md_float_text_inputs(headline, classPart) %}
-                        <div class="js-prism pt-4 mb-2 text-left">
-                            <form novalidate>
-                                <div class="material-float-input-group material-group-{{ classPart }} mb-4">
-                                    <input type="text" id="md-float-text-{{ classPart }}" name="md-float-text-{{ classPart }}" class="material-input rounded-0 border-bottom" aria-describedby="md-float-text-{{ classPart }}-label" required>
-                                    <span class="material-bar"></span>
-                                    <label id="md-float-text-{{ classPart }}-label" class="material-label">{{ headline }} Text Input</label>
-                                    <small class="form-text text-muted">Additional help text here.</small>
-                                </div>
-                            </form>
-                        </div>
-                        {% endmacro %}
 
-                        {{ md_float_text_inputs('Primary', 'primary') }}
-                        {{ md_float_text_inputs('Secondary', 'secondary') }}
-                        {{ md_float_text_inputs('Success', 'success') }}
-                        {{ md_float_text_inputs('Danger', 'danger') }}
-                        {{ md_float_text_inputs('Warning', 'warning') }}
-                        {{ md_float_text_inputs('Info', 'info') }}
-                        {{ md_float_text_inputs('Light', 'light') }}
-                        {{ md_float_text_inputs('Dark', 'dark') }}
+                        {{ macros.material_float_text_inputs('Primary', 'primary') }}
+                        {{ macros.material_float_text_inputs('Secondary', 'secondary') }}
+                        {{ macros.material_float_text_inputs('Success', 'success') }}
+                        {{ macros.material_float_text_inputs('Danger', 'danger') }}
+                        {{ macros.material_float_text_inputs('Warning', 'warning') }}
+                        {{ macros.material_float_text_inputs('Info', 'info') }}
+                        {{ macros.material_float_text_inputs('Light', 'light') }}
+                        {{ macros.material_float_text_inputs('Dark', 'dark') }}
 
-                        {{ md_float_text_inputs('White', 'white') }}
-                        {{ md_float_text_inputs('Light Gray', 'light-gray') }}
-                        {{ md_float_text_inputs('Gray', 'gray') }}
-                        {{ md_float_text_inputs('Dark Gray', 'dark-gray') }}
-                        {{ md_float_text_inputs('Black', 'black') }}
+                        {{ macros.material_float_text_inputs('White', 'white') }}
+                        {{ macros.material_float_text_inputs('Light Gray', 'light-gray') }}
+                        {{ macros.material_float_text_inputs('Gray', 'gray') }}
+                        {{ macros.material_float_text_inputs('Dark Gray', 'dark-gray') }}
+                        {{ macros.material_float_text_inputs('Black', 'black') }}
 
-                        {{ md_float_text_inputs('Red', 'red') }}
-                        {{ md_float_text_inputs('Rose', 'rose') }}
-                        {{ md_float_text_inputs('Magenta', 'magenta') }}
-                        {{ md_float_text_inputs('Violet', 'violet') }}
-                        {{ md_float_text_inputs('Blue', 'blue') }}
-                        {{ md_float_text_inputs('Azure', 'azure') }}
-                        {{ md_float_text_inputs('Cyan', 'cyan') }}
-                        {{ md_float_text_inputs('Spring Green', 'spring-green') }}
-                        {{ md_float_text_inputs('Green', 'green') }}
-                        {{ md_float_text_inputs('Chartreuse', 'chartreuse') }}
-                        {{ md_float_text_inputs('Yellow', 'yellow') }}
-                        {{ md_float_text_inputs('Orange', 'orange') }}
-                        {{ md_float_text_inputs('Orange Gray', 'orange-gray') }}
-                        {{ md_float_text_inputs('Dark Gray Orange', 'dark-gray-orange') }}
-                        {{ md_float_text_inputs('Blue Gray', 'blue-gray') }}
-                        {{ md_float_text_inputs('Light Gray Azure', 'light-gray-azure') }}
-
-
+                        {{ macros.material_float_text_inputs('Red', 'red') }}
+                        {{ macros.material_float_text_inputs('Rose', 'rose') }}
+                        {{ macros.material_float_text_inputs('Magenta', 'magenta') }}
+                        {{ macros.material_float_text_inputs('Violet', 'violet') }}
+                        {{ macros.material_float_text_inputs('Blue', 'blue') }}
+                        {{ macros.material_float_text_inputs('Azure', 'azure') }}
+                        {{ macros.material_float_text_inputs('Cyan', 'cyan') }}
+                        {{ macros.material_float_text_inputs('Spring Green', 'spring-green') }}
+                        {{ macros.material_float_text_inputs('Green', 'green') }}
+                        {{ macros.material_float_text_inputs('Chartreuse', 'chartreuse') }}
+                        {{ macros.material_float_text_inputs('Yellow', 'yellow') }}
+                        {{ macros.material_float_text_inputs('Orange', 'orange') }}
+                        {{ macros.material_float_text_inputs('Orange Gray', 'orange-gray') }}
+                        {{ macros.material_float_text_inputs('Dark Gray Orange', 'dark-gray-orange') }}
+                        {{ macros.material_float_text_inputs('Blue Gray', 'blue-gray') }}
+                        {{ macros.material_float_text_inputs('Light Gray Azure', 'light-gray-azure') }}
 
                     </div>
 

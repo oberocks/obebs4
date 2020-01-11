@@ -9,16 +9,10 @@
                         
                         {{ macros.page_section_heading(global_strings['defaults']['sections'][7]['head'], global_strings['defaults']['sections'][7]['subhead'], global_strings['defaults']['sections'][7]['descrip']) }}
 
-                        {% macro display(number) %}
-                        <div class="js-prism mb-2">
-                            <h{{ number }} class="display-{{ number }}">Display {{ number }}</h{{ number }}>
-                        </div>
-                        {% endmacro %}
-
-                        {{ display('1') }}
-                        {{ display('2') }}
-                        {{ display('3') }}
-                        {{ display('4') }}
+                        {{ macros.display('1') }}
+                        {{ macros.display('2') }}
+                        {{ macros.display('3') }}
+                        {{ macros.display('4') }}
 
                     </div>
 
@@ -30,13 +24,9 @@
                         
                         {{ macros.page_section_heading(global_strings['defaults']['sections'][8]['head'], global_strings['defaults']['sections'][8]['subhead'], global_strings['defaults']['sections'][8]['descrip']) }}
 
-                        {% macro lead(className) %}
                         <div class="js-prism mb-2">
-                            <p class="{{ className }}">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean vehicula, lacus id tincidunt congue, arcu nisi pharetra dui, nec convallis enim odio vitae diam. Curabitur ut ullamcorper nisi. Phasellus quam nisi, facilisis et neque quis, tempor consequat enim.</p>
+                            <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean vehicula, lacus id tincidunt congue, arcu nisi pharetra dui, nec convallis enim odio vitae diam. Curabitur ut ullamcorper nisi. Phasellus quam nisi, facilisis et neque quis, tempor consequat enim.</p>
                         </div>
-                        {% endmacro %}
-
-                        {{ lead('lead') }}
 
                     </div>
 

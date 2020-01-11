@@ -51,81 +51,38 @@
                             </div>
                         </div>
                         
-                        {% macro table_colors(classPartial, namePartial) %}
-                        <div class="js-prism text-left mb-2">					
-                            <div class="table-responsive">
-                                <table class="table table-striped table-hover table-bordered table-{{ classPartial }}">
-                                    <thead>
-                                        <tr>
-                                            <th scope="col">#</th>
-                                            <th scope="col">Type</th>
-                                            <th scope="col">Element</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <th scope="row">1</th>
-                                            <td>{{ namePartial }} Class (Striped)</td>
-                                            <td>Row</td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row">2</th>
-                                            <td>{{ namePartial }} Class</td>
-                                            <td>Row</td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row">3</th>
-                                            <td>{{ namePartial }} Class (Striped)</td>
-                                            <td>Row</td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row">4</th>
-                                            <td>{{ namePartial }} Class</td>
-                                            <td>Row</td>
-                                        </tr>
-                                        <tr class="active">
-                                            <th scope="row">5</th>
-                                            <td>{{ namePartial }} Active Row</td>
-                                            <td>Row</td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-                        </div>
-                        {% endmacro %}
-                        
-                        {{ table_colors('primary', 'Primary') }}
-                        {{ table_colors('secondary', 'Secondary') }}
-                        {{ table_colors('success', 'Success') }}
-                        {{ table_colors('danger', 'Danger') }}
-                        {{ table_colors('warning', 'Warning') }}
-                        {{ table_colors('info', 'Info') }}
-                        {{ table_colors('light', 'Light') }}
-                        {{ table_colors('dark', 'Dark') }}
+                        {{ macros.table_colors('primary', 'Primary') }}
+                        {{ macros.table_colors('secondary', 'Secondary') }}
+                        {{ macros.table_colors('success', 'Success') }}
+                        {{ macros.table_colors('danger', 'Danger') }}
+                        {{ macros.table_colors('warning', 'Warning') }}
+                        {{ macros.table_colors('info', 'Info') }}
+                        {{ macros.table_colors('light', 'Light') }}
+                        {{ macros.table_colors('dark', 'Dark') }}
 
-                        {{ table_colors('white', 'White') }}
-                        {{ table_colors('light-gray', 'Light Gray') }}
-                        {{ table_colors('gray', 'Gray') }}
-                        {{ table_colors('dark-gray', 'Dark Gray') }}
-                        {{ table_colors('black', 'Black') }}
+                        {{ macros.table_colors('white', 'White') }}
+                        {{ macros.table_colors('light-gray', 'Light Gray') }}
+                        {{ macros.table_colors('gray', 'Gray') }}
+                        {{ macros.table_colors('dark-gray', 'Dark Gray') }}
+                        {{ macros.table_colors('black', 'Black') }}
 
-                        {{ table_colors('red', 'Red') }}
-                        {{ table_colors('rose', 'Rose') }}
-                        {{ table_colors('magenta', 'Magenta') }}
-                        {{ table_colors('violet', 'Violet') }}
-                        {{ table_colors('blue', 'Blue') }}
-                        {{ table_colors('azure', 'Azure') }}
-                        {{ table_colors('cyan', 'Cyan') }}
-                        {{ table_colors('spring-green', 'Spring Green') }}
-                        {{ table_colors('green', 'Green') }}
-                        {{ table_colors('chartreuse', 'Chartreuse') }}
-                        {{ table_colors('yellow', 'Yellow') }}
-                        {{ table_colors('orange', 'Orange') }}
+                        {{ macros.table_colors('red', 'Red') }}
+                        {{ macros.table_colors('rose', 'Rose') }}
+                        {{ macros.table_colors('magenta', 'Magenta') }}
+                        {{ macros.table_colors('violet', 'Violet') }}
+                        {{ macros.table_colors('blue', 'Blue') }}
+                        {{ macros.table_colors('azure', 'Azure') }}
+                        {{ macros.table_colors('cyan', 'Cyan') }}
+                        {{ macros.table_colors('spring-green', 'Spring Green') }}
+                        {{ macros.table_colors('green', 'Green') }}
+                        {{ macros.table_colors('chartreuse', 'Chartreuse') }}
+                        {{ macros.table_colors('yellow', 'Yellow') }}
+                        {{ macros.table_colors('orange', 'Orange') }}
 
-                        {{ table_colors('orange-gray', 'Orange Gray') }}
-                        {{ table_colors('dark-gray-orange', 'Dark Gray Orange') }}
-                        {{ table_colors('blue-gray', 'Blue Gray') }}
-                        {{ table_colors('light-gray-azure', 'Light Gray Azure') }}
+                        {{ macros.table_colors('orange-gray', 'Orange Gray') }}
+                        {{ macros.table_colors('dark-gray-orange', 'Dark Gray Orange') }}
+                        {{ macros.table_colors('blue-gray', 'Blue Gray') }}
+                        {{ macros.table_colors('light-gray-azure', 'Light Gray Azure') }}
                         
                     </div>
                     
@@ -173,82 +130,39 @@
                                 </table>
                             </div>
                         </div>
-                        
-                        {% macro table_colors_dark(classPartial, namePartial) %}
-                        <div class="js-prism text-left mb-2">					
-                            <div class="table-responsive">
-                                <table class="table table-striped table-hover table-bordered table-dark">
-                                    <thead class="thead-dark">
-                                        <tr>
-                                            <th scope="col">#</th>
-                                            <th scope="col">Type</th>
-                                            <th scope="col">Element</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr class="bg-{{ classPartial }}">
-                                            <th scope="row">1</th>
-                                            <td>{{ namePartial }} Class</td>
-                                            <td>Row</td>
-                                        </tr>
-                                        <tr class="bg-{{ classPartial }}">
-                                            <th scope="row">2</th>
-                                            <td>{{ namePartial }} Class</td>
-                                            <td>Row</td>
-                                        </tr>
-                                        <tr class="bg-{{ classPartial }}">
-                                            <th scope="row">3</th>
-                                            <td>{{ namePartial }} Class</td>
-                                            <td>Row</td>
-                                        </tr>
-                                        <tr class="bg-{{ classPartial }}">
-                                            <th scope="row">4</th>
-                                            <td>{{ namePartial }} Class</td>
-                                            <td>Row</td>
-                                        </tr>
-                                        <tr class="bg-{{ classPartial }} active">
-                                            <th scope="row">5</th>
-                                            <td>{{ namePartial }} Active Row</td>
-                                            <td>Row</td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-                        </div>
-                        {% endmacro %}
 
-                        {{ table_colors_dark('primary', 'Primary') }}
-                        {{ table_colors_dark('secondary', 'Secondary') }}
-                        {{ table_colors_dark('success', 'Success') }}
-                        {{ table_colors_dark('danger', 'Danger') }}
-                        {{ table_colors_dark('warning', 'Warning') }}
-                        {{ table_colors_dark('info', 'Info') }}
-                        {{ table_colors_dark('light', 'Light') }}
-                        {{ table_colors_dark('dark', 'Dark') }}
+                        {{ macros.table_colors_dark('primary', 'Primary') }}
+                        {{ macros.table_colors_dark('secondary', 'Secondary') }}
+                        {{ macros.table_colors_dark('success', 'Success') }}
+                        {{ macros.table_colors_dark('danger', 'Danger') }}
+                        {{ macros.table_colors_dark('warning', 'Warning') }}
+                        {{ macros.table_colors_dark('info', 'Info') }}
+                        {{ macros.table_colors_dark('light', 'Light') }}
+                        {{ macros.table_colors_dark('dark', 'Dark') }}
 
-                        {{ table_colors_dark('white', 'White') }}
-                        {{ table_colors_dark('light-gray', 'Light Gray') }}
-                        {{ table_colors_dark('gray', 'Gray') }}
-                        {{ table_colors_dark('dark-gray', 'Dark Gray') }}
-                        {{ table_colors_dark('black', 'Black') }}
+                        {{ macros.table_colors_dark('white', 'White') }}
+                        {{ macros.table_colors_dark('light-gray', 'Light Gray') }}
+                        {{ macros.table_colors_dark('gray', 'Gray') }}
+                        {{ macros.table_colors_dark('dark-gray', 'Dark Gray') }}
+                        {{ macros.table_colors_dark('black', 'Black') }}
 
-                        {{ table_colors_dark('red', 'Red') }}
-                        {{ table_colors_dark('rose', 'Rose') }}
-                        {{ table_colors_dark('magenta', 'Magenta') }}
-                        {{ table_colors_dark('violet', 'Violet') }}
-                        {{ table_colors_dark('blue', 'Blue') }}
-                        {{ table_colors_dark('azure', 'Azure') }}
-                        {{ table_colors_dark('cyan', 'Cyan') }}
-                        {{ table_colors_dark('spring-green', 'Spring Green') }}
-                        {{ table_colors_dark('green', 'Green') }}
-                        {{ table_colors_dark('chartreuse', 'Chartreuse') }}
-                        {{ table_colors_dark('yellow', 'Yellow') }}
-                        {{ table_colors_dark('orange', 'Orange') }}
+                        {{ macros.table_colors_dark('red', 'Red') }}
+                        {{ macros.table_colors_dark('rose', 'Rose') }}
+                        {{ macros.table_colors_dark('magenta', 'Magenta') }}
+                        {{ macros.table_colors_dark('violet', 'Violet') }}
+                        {{ macros.table_colors_dark('blue', 'Blue') }}
+                        {{ macros.table_colors_dark('azure', 'Azure') }}
+                        {{ macros.table_colors_dark('cyan', 'Cyan') }}
+                        {{ macros.table_colors_dark('spring-green', 'Spring Green') }}
+                        {{ macros.table_colors_dark('green', 'Green') }}
+                        {{ macros.table_colors_dark('chartreuse', 'Chartreuse') }}
+                        {{ macros.table_colors_dark('yellow', 'Yellow') }}
+                        {{ macros.table_colors_dark('orange', 'Orange') }}
 
-                        {{ table_colors_dark('orange-gray', 'Orange Gray') }}
-                        {{ table_colors_dark('dark-gray-orange', 'Dark Gray Orange') }}
-                        {{ table_colors_dark('blue-gray', 'Blue Gray') }}
-                        {{ table_colors_dark('light-gray-azure', 'Light Gray Azure') }}
+                        {{ macros.table_colors_dark('orange-gray', 'Orange Gray') }}
+                        {{ macros.table_colors_dark('dark-gray-orange', 'Dark Gray Orange') }}
+                        {{ macros.table_colors_dark('blue-gray', 'Blue Gray') }}
+                        {{ macros.table_colors_dark('light-gray-azure', 'Light Gray Azure') }}
                         
                     </div>
                     

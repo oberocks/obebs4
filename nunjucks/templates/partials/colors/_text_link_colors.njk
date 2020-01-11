@@ -10,44 +10,38 @@
 						
 						{{ macros.page_section_heading(global_strings['colors']['sections'][0]['head'], global_strings['colors']['sections'][0]['subhead'], global_strings['colors']['sections'][0]['descrip']) }}
 
-						{% macro text_element(classPartial, namePartial) %}
-						<div class="js-prism">
-							<div class="text-{{ classPartial }}">{{ namePartial }} Text</div>
-						</div>
-						{% endmacro %}
+						{{ macros.text_element('primary', 'Primary') }}
+						{{ macros.text_element('secondary', 'Secondary') }}
+						{{ macros.text_element('success', 'Success') }}
+						{{ macros.text_element('danger', 'Danger') }}
+						{{ macros.text_element('warning', 'Warning') }}
+						{{ macros.text_element('info', 'Info') }}
+						{{ macros.text_element('light', 'Light') }}
+						{{ macros.text_element('dark', 'Dark') }}
 
-						{{ text_element('primary', 'Primary') }}
-						{{ text_element('secondary', 'Secondary') }}
-						{{ text_element('success', 'Success') }}
-						{{ text_element('danger', 'Danger') }}
-						{{ text_element('warning', 'Warning') }}
-						{{ text_element('info', 'Info') }}
-						{{ text_element('light', 'Light') }}
-						{{ text_element('dark', 'Dark') }}
+						{{ macros.text_element('white', 'White') }}
+						{{ macros.text_element('light-gray', 'Light Gray') }}
+						{{ macros.text_element('gray', 'Gray') }}
+						{{ macros.text_element('dark-gray', 'Dark Gray') }}
+						{{ macros.text_element('black', 'Black') }}
 
-						{{ text_element('white', 'White') }}
-						{{ text_element('light-gray', 'Light Gray') }}
-						{{ text_element('gray', 'Gray') }}
-						{{ text_element('dark-gray', 'Dark Gray') }}
-						{{ text_element('black', 'Black') }}
+						{{ macros.text_element('red', 'Red') }}
+						{{ macros.text_element('rose', 'Rose') }}
+						{{ macros.text_element('magenta', 'Magenta') }}
+						{{ macros.text_element('violet', 'Violet') }}
+						{{ macros.text_element('blue', 'Blue') }}
+						{{ macros.text_element('azure', 'Azure') }}
+						{{ macros.text_element('cyan', 'Cyan') }}
+						{{ macros.text_element('spring-green', 'Spring Green') }}
+						{{ macros.text_element('green', 'Green') }}
+						{{ macros.text_element('chartreuse', 'Chartreuse') }}
+						{{ macros.text_element('yellow', 'Yellow') }}
+						{{ macros.text_element('orange', 'Orange') }}
 
-						{{ text_element('red', 'Red') }}
-						{{ text_element('rose', 'Rose') }}
-						{{ text_element('magenta', 'Magenta') }}
-						{{ text_element('violet', 'Violet') }}
-						{{ text_element('blue', 'Blue') }}
-						{{ text_element('azure', 'Azure') }}
-						{{ text_element('cyan', 'Cyan') }}
-						{{ text_element('spring-green', 'Spring Green') }}
-						{{ text_element('green', 'Green') }}
-						{{ text_element('chartreuse', 'Chartreuse') }}
-						{{ text_element('yellow', 'Yellow') }}
-						{{ text_element('orange', 'Orange') }}
-
-						{{ text_element('orange-gray', 'Orange Gray') }}
-						{{ text_element('dark-gray-orange', 'Dark Gray Orange') }}
-						{{ text_element('blue-gray', 'Blue Gray') }}
-						{{ text_element('light-gray-azure', 'Light Gray Azure') }}
+						{{ macros.text_element('orange-gray', 'Orange Gray') }}
+						{{ macros.text_element('dark-gray-orange', 'Dark Gray Orange') }}
+						{{ macros.text_element('blue-gray', 'Blue Gray') }}
+						{{ macros.text_element('light-gray-azure', 'Light Gray Azure') }}
 						
 					</div>
 					
@@ -55,44 +49,38 @@
 						
 						{{ macros.page_section_heading(global_strings['colors']['sections'][1]['head'], global_strings['colors']['sections'][1]['subhead'], global_strings['colors']['sections'][1]['descrip']) }}
 
-						{% macro link_element(classPartial, namePartial) %}
-						<div class="js-prism text-center">
-							<a href="#" class="text-{{ classPartial }}">{{ namePartial }} Link</a>
-						</div>
-						{% endmacro %}
+						{{ macros.link_element('primary', 'Primary') }}
+						{{ macros.link_element('secondary', 'Secondary') }}
+						{{ macros.link_element('success', 'Success') }}
+						{{ macros.link_element('danger', 'Danger') }}
+						{{ macros.link_element('warning', 'Warning') }}
+						{{ macros.link_element('info', 'Info') }}
+						{{ macros.link_element('light', 'Light') }}
+						{{ macros.link_element('dark', 'Dark') }}
 
-						{{ link_element('primary', 'Primary') }}
-						{{ link_element('secondary', 'Secondary') }}
-						{{ link_element('success', 'Success') }}
-						{{ link_element('danger', 'Danger') }}
-						{{ link_element('warning', 'Warning') }}
-						{{ link_element('info', 'Info') }}
-						{{ link_element('light', 'Light') }}
-						{{ link_element('dark', 'Dark') }}
+						{{ macros.link_element('white', 'White') }}
+						{{ macros.link_element('light-gray', 'Light Gray') }}
+						{{ macros.link_element('gray', 'Gray') }}
+						{{ macros.link_element('dark-gray', 'Dark Gray') }}
+						{{ macros.link_element('black', 'Black') }}
 
-						{{ link_element('white', 'White') }}
-						{{ link_element('light-gray', 'Light Gray') }}
-						{{ link_element('gray', 'Gray') }}
-						{{ link_element('dark-gray', 'Dark Gray') }}
-						{{ link_element('black', 'Black') }}
+						{{ macros.link_element('red', 'Red') }}
+						{{ macros.link_element('rose', 'Rose') }}
+						{{ macros.link_element('magenta', 'Magenta') }}
+						{{ macros.link_element('violet', 'Violet') }}
+						{{ macros.link_element('blue', 'Blue') }}
+						{{ macros.link_element('azure', 'Azure') }}
+						{{ macros.link_element('cyan', 'Cyan') }}
+						{{ macros.link_element('spring-green', 'Spring Green') }}
+						{{ macros.link_element('green', 'Green') }}
+						{{ macros.link_element('chartreuse', 'Chartreuse') }}
+						{{ macros.link_element('yellow', 'Yellow') }}
+						{{ macros.link_element('orange', 'Orange') }}
 
-						{{ link_element('red', 'Red') }}
-						{{ link_element('rose', 'Rose') }}
-						{{ link_element('magenta', 'Magenta') }}
-						{{ link_element('violet', 'Violet') }}
-						{{ link_element('blue', 'Blue') }}
-						{{ link_element('azure', 'Azure') }}
-						{{ link_element('cyan', 'Cyan') }}
-						{{ link_element('spring-green', 'Spring Green') }}
-						{{ link_element('green', 'Green') }}
-						{{ link_element('chartreuse', 'Chartreuse') }}
-						{{ link_element('yellow', 'Yellow') }}
-						{{ link_element('orange', 'Orange') }}
-
-						{{ link_element('orange-gray', 'Orange Gray') }}
-						{{ link_element('dark-gray-orange', 'Dark Gray Orange') }}
-						{{ link_element('blue-gray', 'Blue Gray') }}
-						{{ link_element('light-gray-azure', 'Light Gray Azure') }}
+						{{ macros.link_element('orange-gray', 'Orange Gray') }}
+						{{ macros.link_element('dark-gray-orange', 'Dark Gray Orange') }}
+						{{ macros.link_element('blue-gray', 'Blue Gray') }}
+						{{ macros.link_element('light-gray-azure', 'Light Gray Azure') }}
 
 					</div>
 					

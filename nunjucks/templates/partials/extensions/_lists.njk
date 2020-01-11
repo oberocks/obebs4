@@ -10,34 +10,18 @@
                     
                         {{ macros.page_section_heading(global_strings['extensions']['sections'][10]['head'], global_strings['extensions']['sections'][10]['subhead'], global_strings['extensions']['sections'][10]['descrip']) }}
 
-                        {% macro list_elements(fullClassTrailingSpace, textDescrip) %}
-                        <div class="js-prism">
-                            <ol class="{{ fullClassTrailingSpace }}text-left text-capitalize text-dark">
-                                <li>{{ textDescrip }} ordered list</li>
-                                <li class="text-danger"><span class="text-dark">Custom colored item</span></li>
-                                <li>
-                                    Standard Item
-                                    <ol class="{{ fullClassTrailingSpace }}text-capitalize">
-                                        <li>Nested {{ textDescrip }} item</li>
-                                        <li class="text-danger"><span class="text-dark">Nested colored item</span></li>
-                                    </ol>
-                                </li>
-                            </ol>
-                        </div>
-                        {% endmacro %}
+                        {{ macros.list_elements('', 'Default') }}
+                        {{ macros.list_elements('decimal-list ', 'Decimal') }}
+                        {{ macros.list_elements('decimal-leading-zero-list ', 'Leading Zero Decimal') }}
+                        {{ macros.list_elements('lower-roman-list ', 'Lowercase Roman') }}
+                        {{ macros.list_elements('upper-roman-list ', 'Uppercase Roman') }}
+                        {{ macros.list_elements('lower-latin-list ', 'Lowercase Latin') }}
+                        {{ macros.list_elements('upper-latin-list ', 'Uppercase Latin') }}
+                        {{ macros.list_elements('lower-greek-list ', 'Lowercase Greek') }}
 
-                        {{ list_elements('', 'Default') }}
-                        {{ list_elements('decimal-list ', 'Decimal') }}
-                        {{ list_elements('decimal-leading-zero-list ', 'Leading Zero Decimal') }}
-                        {{ list_elements('lower-roman-list ', 'Lowercase Roman') }}
-                        {{ list_elements('upper-roman-list ', 'Uppercase Roman') }}
-                        {{ list_elements('lower-latin-list ', 'Lowercase Latin') }}
-                        {{ list_elements('upper-latin-list ', 'Uppercase Latin') }}
-                        {{ list_elements('lower-greek-list ', 'Lowercase Greek') }}
-
-                        {{ list_elements('disc-list ', 'Disc') }}
-                        {{ list_elements('cirle-list ', 'Circle') }}
-                        {{ list_elements('square-list ', 'Square') }}
+                        {{ macros.list_elements('disc-list ', 'Disc') }}
+                        {{ macros.list_elements('cirle-list ', 'Circle') }}
+                        {{ macros.list_elements('square-list ', 'Square') }}
 
                     </div>
 
@@ -45,34 +29,18 @@
                     
                         {{ macros.page_section_heading(global_strings['extensions']['sections'][11]['head'], global_strings['extensions']['sections'][11]['subhead'], global_strings['extensions']['sections'][11]['descrip']) }}
 
-                        {% macro unordered_list_elements(fullClassTrailingSpace, textDescrip) %}
-                        <div class="js-prism">
-                            <ul class="{{ fullClassTrailingSpace }}text-left text-capitalize text-dark">
-                                <li>{{ textDescrip }} ordered list</li>
-                                <li class="text-danger"><span class="text-dark">Custom colored item</span></li>
-                                <li>
-                                    Standard Item
-                                    <ul class="{{ fullClassTrailingSpace }}text-capitalize">
-                                        <li>Nested {{ textDescrip }} item</li>
-                                        <li class="text-danger"><span class="text-dark">Nested colored item</span></li>
-                                    </ul>
-                                </li>
-                            </ul>
-                        </div>
-                        {% endmacro %}
+                        {{ macros.list_unordered_elements('', 'Default') }}
+                        {{ macros.list_unordered_elements('decimal-list ', 'Decimal') }}
+                        {{ macros.list_unordered_elements('decimal-leading-zero-list ', 'Leading Zero Decimal') }}
+                        {{ macros.list_unordered_elements('lower-roman-list ', 'Lowercase Roman') }}
+                        {{ macros.list_unordered_elements('upper-roman-list ', 'Uppercase Roman') }}
+                        {{ macros.list_unordered_elements('lower-latin-list ', 'Lowercase Latin') }}
+                        {{ macros.list_unordered_elements('upper-latin-list ', 'Uppercase Latin') }}
+                        {{ macros.list_unordered_elements('lower-greek-list ', 'Lowercase Greek') }}
 
-                        {{ unordered_list_elements('', 'Default') }}
-                        {{ unordered_list_elements('decimal-list ', 'Decimal') }}
-                        {{ unordered_list_elements('decimal-leading-zero-list ', 'Leading Zero Decimal') }}
-                        {{ unordered_list_elements('lower-roman-list ', 'Lowercase Roman') }}
-                        {{ unordered_list_elements('upper-roman-list ', 'Uppercase Roman') }}
-                        {{ unordered_list_elements('lower-latin-list ', 'Lowercase Latin') }}
-                        {{ unordered_list_elements('upper-latin-list ', 'Uppercase Latin') }}
-                        {{ unordered_list_elements('lower-greek-list ', 'Lowercase Greek') }}
-
-                        {{ unordered_list_elements('disc-list ', 'Disc') }}
-                        {{ unordered_list_elements('cirle-list ', 'Circle') }}
-                        {{ unordered_list_elements('square-list ', 'Square') }}
+                        {{ macros.list_unordered_elements('disc-list ', 'Disc') }}
+                        {{ macros.list_unordered_elements('cirle-list ', 'Circle') }}
+                        {{ macros.list_unordered_elements('square-list ', 'Square') }}
 
                     </div>
 

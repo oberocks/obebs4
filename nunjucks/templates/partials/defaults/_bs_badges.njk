@@ -8,20 +8,14 @@
                     <div id="{{ global_strings['defaults']['sections'][13]['id'] }}" class="col-md-6 pb-5">
                         
                         {{ macros.page_section_heading(global_strings['defaults']['sections'][13]['head'], global_strings['defaults']['sections'][13]['subhead'], global_strings['defaults']['sections'][13]['descrip']) }}
-
-                        {% macro text_badge(element) %}
-                        <div class="js-prism mb-2">
-                            <{{ element }}>Example <span class="badge badge-primary">NEW</span></{{ element }}>
-                        </div>
-                        {% endmacro %}
                         
-                        {{ text_badge('h1') }}
-                        {{ text_badge('h2') }}
-                        {{ text_badge('h3') }}
-                        {{ text_badge('h4') }}
-                        {{ text_badge('h5') }}
-                        {{ text_badge('h6') }}
-                        {{ text_badge('div') }}
+                        {{ macros.text_badge('h1') }}
+                        {{ macros.text_badge('h2') }}
+                        {{ macros.text_badge('h3') }}
+                        {{ macros.text_badge('h4') }}
+                        {{ macros.text_badge('h5') }}
+                        {{ macros.text_badge('h6') }}
+                        {{ macros.text_badge('div') }}
 
                     </div>
                     

@@ -10,50 +10,44 @@
                     
                         {{ macros.page_section_heading(global_strings['colors']['sections'][25]['head'], global_strings['colors']['sections'][25]['subhead'], global_strings['colors']['sections'][25]['descrip']) }}
 
-                        {% macro bg_2col_grad(classPartial, namePartial) %}
-                        <div class="js-prism mb-2">
-                            <div class="bg-gradient-{{ classPartial }}-vertical">{{ namePartial }} Vertical</div>
-                        </div>
-                        {% endmacro %}
-
-                        {{ bg_2col_grad('red-rose', 'Red/Rose') }}
-                        {{ bg_2col_grad('rose-magenta', 'Rose/Magenta') }}
-                        {{ bg_2col_grad('magenta-violet', 'Magenta/Violet') }}
-                        {{ bg_2col_grad('violet-blue', 'Violet/Blue') }}
-                        {{ bg_2col_grad('blue-azure', 'Blue/Azure') }}
-                        {{ bg_2col_grad('azure-cyan', 'Azure/Cyan') }}
-                        {{ bg_2col_grad('cyan-spring-green', 'Cyan/Spring Green') }}
-                        {{ bg_2col_grad('spring-green-green', 'Spring Green/Green') }}
-                        {{ bg_2col_grad('green-chartreuse', 'Green/Chartreuse') }}
-                        {{ bg_2col_grad('chartreuse-yellow', 'Chartreuse/Yellow') }}
-                        {{ bg_2col_grad('yellow-orange', 'Yellow/Orange') }}
-                        {{ bg_2col_grad('orange-red', 'Orange/Red') }}
-                        {{ bg_2col_grad('orange-gray-dark-gray-orange', 'Orange Gray/Dark Gray Orange') }}
-                        {{ bg_2col_grad('light-gray-azure-blue-gray', 'Light Gray Azure/Blue Gray') }}
-                        {{ bg_2col_grad('white-light-gray', 'White/Light Gray') }}
-                        {{ bg_2col_grad('light-gray-gray', 'Light Gray/Gray') }}
-                        {{ bg_2col_grad('gray-dark-gray', 'Gray/Dark Gray') }}
-                        {{ bg_2col_grad('dark-gray-black', 'Dark Gray/Black') }}
+                        {{ macros.bg_2col_grad('red-rose', 'Red/Rose') }}
+                        {{ macros.bg_2col_grad('rose-magenta', 'Rose/Magenta') }}
+                        {{ macros.bg_2col_grad('magenta-violet', 'Magenta/Violet') }}
+                        {{ macros.bg_2col_grad('violet-blue', 'Violet/Blue') }}
+                        {{ macros.bg_2col_grad('blue-azure', 'Blue/Azure') }}
+                        {{ macros.bg_2col_grad('azure-cyan', 'Azure/Cyan') }}
+                        {{ macros.bg_2col_grad('cyan-spring-green', 'Cyan/Spring Green') }}
+                        {{ macros.bg_2col_grad('spring-green-green', 'Spring Green/Green') }}
+                        {{ macros.bg_2col_grad('green-chartreuse', 'Green/Chartreuse') }}
+                        {{ macros.bg_2col_grad('chartreuse-yellow', 'Chartreuse/Yellow') }}
+                        {{ macros.bg_2col_grad('yellow-orange', 'Yellow/Orange') }}
+                        {{ macros.bg_2col_grad('orange-red', 'Orange/Red') }}
+                        {{ macros.bg_2col_grad('orange-gray-dark-gray-orange', 'Orange Gray/Dark Gray Orange') }}
+                        {{ macros.bg_2col_grad('light-gray-azure-blue-gray', 'Light Gray Azure/Blue Gray') }}
+                        {{ macros.bg_2col_grad('white-light-gray', 'White/Light Gray') }}
+                        {{ macros.bg_2col_grad('light-gray-gray', 'Light Gray/Gray') }}
+                        {{ macros.bg_2col_grad('gray-dark-gray', 'Gray/Dark Gray') }}
+                        {{ macros.bg_2col_grad('dark-gray-black', 'Dark Gray/Black') }}
 
 
-                        {{ bg_2col_grad('rose-red', 'Rose/Red') }}
-                        {{ bg_2col_grad('magenta-rose', 'Magenta/Rose') }}
-                        {{ bg_2col_grad('violet-magenta', 'Violet/Magenta') }}
-                        {{ bg_2col_grad('blue-violet', 'Blue/Violet') }}
-                        {{ bg_2col_grad('azure-blue', 'Azure/Blue') }}
-                        {{ bg_2col_grad('cyan-azure', 'Cyan/Azure') }}
-                        {{ bg_2col_grad('spring-green-cyan', 'Spring Green/Cyan') }}
-                        {{ bg_2col_grad('green-spring-green', 'Green/Spring Green') }}
-                        {{ bg_2col_grad('chartreuse-green', 'Chartreuse/Green') }}
-                        {{ bg_2col_grad('yellow-chartreuse', 'Yellow/Chartreuse') }}
-                        {{ bg_2col_grad('orange-yellow', 'Orange/Yellow') }}
-                        {{ bg_2col_grad('red-orange', 'Red/Orange') }}
-                        {{ bg_2col_grad('dark-gray-orange-orange-gray', 'Dark Gray Orange/Orange Gray') }}
-                        {{ bg_2col_grad('blue-gray-light-gray-azure', 'Blue Gray/Light Gray Azure') }}
-                        {{ bg_2col_grad('light-gray-white', 'Light Gray/White') }}
-                        {{ bg_2col_grad('gray-light-gray', 'Gray/Light Gray') }}
-                        {{ bg_2col_grad('dark-gray-gray', 'Dark Gray/Gray') }}
-                        {{ bg_2col_grad('black-dark-gray', 'Black/Dark Gray') }}
+                        {{ macros.bg_2col_grad('rose-red', 'Rose/Red') }}
+                        {{ macros.bg_2col_grad('magenta-rose', 'Magenta/Rose') }}
+                        {{ macros.bg_2col_grad('violet-magenta', 'Violet/Magenta') }}
+                        {{ macros.bg_2col_grad('blue-violet', 'Blue/Violet') }}
+                        {{ macros.bg_2col_grad('azure-blue', 'Azure/Blue') }}
+                        {{ macros.bg_2col_grad('cyan-azure', 'Cyan/Azure') }}
+                        {{ macros.bg_2col_grad('spring-green-cyan', 'Spring Green/Cyan') }}
+                        {{ macros.bg_2col_grad('green-spring-green', 'Green/Spring Green') }}
+                        {{ macros.bg_2col_grad('chartreuse-green', 'Chartreuse/Green') }}
+                        {{ macros.bg_2col_grad('yellow-chartreuse', 'Yellow/Chartreuse') }}
+                        {{ macros.bg_2col_grad('orange-yellow', 'Orange/Yellow') }}
+                        {{ macros.bg_2col_grad('red-orange', 'Red/Orange') }}
+                        {{ macros.bg_2col_grad('dark-gray-orange-orange-gray', 'Dark Gray Orange/Orange Gray') }}
+                        {{ macros.bg_2col_grad('blue-gray-light-gray-azure', 'Blue Gray/Light Gray Azure') }}
+                        {{ macros.bg_2col_grad('light-gray-white', 'Light Gray/White') }}
+                        {{ macros.bg_2col_grad('gray-light-gray', 'Gray/Light Gray') }}
+                        {{ macros.bg_2col_grad('dark-gray-gray', 'Dark Gray/Gray') }}
+                        {{ macros.bg_2col_grad('black-dark-gray', 'Black/Dark Gray') }}
                         
                     </div>
                     
@@ -61,50 +55,44 @@
                     
                         {{ macros.page_section_heading(global_strings['colors']['sections'][26]['head'], global_strings['colors']['sections'][26]['subhead'], global_strings['colors']['sections'][26]['descrip']) }}
 
-                        {% macro bg_2col_grad_horiz(classPartial, namePartial) %}
-                        <div class="js-prism mb-2">
-                            <div class="bg-gradient-{{ classPartial }}-horizontal">{{ namePartial }} Horizontal</div>
-                        </div>
-                        {% endmacro %}
-
-                        {{ bg_2col_grad_horiz('red-rose', 'Red/Rose') }}
-                        {{ bg_2col_grad_horiz('rose-magenta', 'Rose/Magenta') }}
-                        {{ bg_2col_grad_horiz('magenta-violet', 'Magenta/Violet') }}
-                        {{ bg_2col_grad_horiz('violet-blue', 'Violet/Blue') }}
-                        {{ bg_2col_grad_horiz('blue-azure', 'Blue/Azure') }}
-                        {{ bg_2col_grad_horiz('azure-cyan', 'Azure/Cyan') }}
-                        {{ bg_2col_grad_horiz('cyan-spring-green', 'Cyan/Spring Green') }}
-                        {{ bg_2col_grad_horiz('spring-green-green', 'Spring Green/Green') }}
-                        {{ bg_2col_grad_horiz('green-chartreuse', 'Green/Chartreuse') }}
-                        {{ bg_2col_grad_horiz('chartreuse-yellow', 'Chartreuse/Yellow') }}
-                        {{ bg_2col_grad_horiz('yellow-orange', 'Yellow/Orange') }}
-                        {{ bg_2col_grad_horiz('orange-red', 'Orange/Red') }}
-                        {{ bg_2col_grad_horiz('orange-gray-dark-gray-orange', 'Orange Gray/Dark Gray Orange') }}
-                        {{ bg_2col_grad_horiz('light-gray-azure-blue-gray', 'Light Gray Azure/Blue Gray') }}
-                        {{ bg_2col_grad_horiz('white-light-gray', 'White/Light Gray') }}
-                        {{ bg_2col_grad_horiz('light-gray-gray', 'Light Gray/Gray') }}
-                        {{ bg_2col_grad_horiz('gray-dark-gray', 'Gray/Dark Gray') }}
-                        {{ bg_2col_grad_horiz('dark-gray-black', 'Dark Gray/Black') }}
+                        {{ macros.bg_2col_grad_horiz('red-rose', 'Red/Rose') }}
+                        {{ macros.bg_2col_grad_horiz('rose-magenta', 'Rose/Magenta') }}
+                        {{ macros.bg_2col_grad_horiz('magenta-violet', 'Magenta/Violet') }}
+                        {{ macros.bg_2col_grad_horiz('violet-blue', 'Violet/Blue') }}
+                        {{ macros.bg_2col_grad_horiz('blue-azure', 'Blue/Azure') }}
+                        {{ macros.bg_2col_grad_horiz('azure-cyan', 'Azure/Cyan') }}
+                        {{ macros.bg_2col_grad_horiz('cyan-spring-green', 'Cyan/Spring Green') }}
+                        {{ macros.bg_2col_grad_horiz('spring-green-green', 'Spring Green/Green') }}
+                        {{ macros.bg_2col_grad_horiz('green-chartreuse', 'Green/Chartreuse') }}
+                        {{ macros.bg_2col_grad_horiz('chartreuse-yellow', 'Chartreuse/Yellow') }}
+                        {{ macros.bg_2col_grad_horiz('yellow-orange', 'Yellow/Orange') }}
+                        {{ macros.bg_2col_grad_horiz('orange-red', 'Orange/Red') }}
+                        {{ macros.bg_2col_grad_horiz('orange-gray-dark-gray-orange', 'Orange Gray/Dark Gray Orange') }}
+                        {{ macros.bg_2col_grad_horiz('light-gray-azure-blue-gray', 'Light Gray Azure/Blue Gray') }}
+                        {{ macros.bg_2col_grad_horiz('white-light-gray', 'White/Light Gray') }}
+                        {{ macros.bg_2col_grad_horiz('light-gray-gray', 'Light Gray/Gray') }}
+                        {{ macros.bg_2col_grad_horiz('gray-dark-gray', 'Gray/Dark Gray') }}
+                        {{ macros.bg_2col_grad_horiz('dark-gray-black', 'Dark Gray/Black') }}
 
 
-                        {{ bg_2col_grad_horiz('rose-red', 'Rose/Red') }}
-                        {{ bg_2col_grad_horiz('magenta-rose', 'Magenta/Rose') }}
-                        {{ bg_2col_grad_horiz('violet-magenta', 'Violet/Magenta') }}
-                        {{ bg_2col_grad_horiz('blue-violet', 'Blue/Violet') }}
-                        {{ bg_2col_grad_horiz('azure-blue', 'Azure/Blue') }}
-                        {{ bg_2col_grad_horiz('cyan-azure', 'Cyan/Azure') }}
-                        {{ bg_2col_grad_horiz('spring-green-cyan', 'Spring Green/Cyan') }}
-                        {{ bg_2col_grad_horiz('green-spring-green', 'Green/Spring Green') }}
-                        {{ bg_2col_grad_horiz('chartreuse-green', 'Chartreuse/Green') }}
-                        {{ bg_2col_grad_horiz('yellow-chartreuse', 'Yellow/Chartreuse') }}
-                        {{ bg_2col_grad_horiz('orange-yellow', 'Orange/Yellow') }}
-                        {{ bg_2col_grad_horiz('red-orange', 'Red/Orange') }}
-                        {{ bg_2col_grad_horiz('dark-gray-orange-orange-gray', 'Dark Gray Orange/Orange Gray') }}
-                        {{ bg_2col_grad_horiz('blue-gray-light-gray-azure', 'Blue Gray/Light Gray Azure') }}
-                        {{ bg_2col_grad_horiz('light-gray-white', 'Light Gray/White') }}
-                        {{ bg_2col_grad_horiz('gray-light-gray', 'Gray/Light Gray') }}
-                        {{ bg_2col_grad_horiz('dark-gray-gray', 'Dark Gray/Gray') }}
-                        {{ bg_2col_grad_horiz('black-dark-gray', 'Black/Dark Gray') }}
+                        {{ macros.bg_2col_grad_horiz('rose-red', 'Rose/Red') }}
+                        {{ macros.bg_2col_grad_horiz('magenta-rose', 'Magenta/Rose') }}
+                        {{ macros.bg_2col_grad_horiz('violet-magenta', 'Violet/Magenta') }}
+                        {{ macros.bg_2col_grad_horiz('blue-violet', 'Blue/Violet') }}
+                        {{ macros.bg_2col_grad_horiz('azure-blue', 'Azure/Blue') }}
+                        {{ macros.bg_2col_grad_horiz('cyan-azure', 'Cyan/Azure') }}
+                        {{ macros.bg_2col_grad_horiz('spring-green-cyan', 'Spring Green/Cyan') }}
+                        {{ macros.bg_2col_grad_horiz('green-spring-green', 'Green/Spring Green') }}
+                        {{ macros.bg_2col_grad_horiz('chartreuse-green', 'Chartreuse/Green') }}
+                        {{ macros.bg_2col_grad_horiz('yellow-chartreuse', 'Yellow/Chartreuse') }}
+                        {{ macros.bg_2col_grad_horiz('orange-yellow', 'Orange/Yellow') }}
+                        {{ macros.bg_2col_grad_horiz('red-orange', 'Red/Orange') }}
+                        {{ macros.bg_2col_grad_horiz('dark-gray-orange-orange-gray', 'Dark Gray Orange/Orange Gray') }}
+                        {{ macros.bg_2col_grad_horiz('blue-gray-light-gray-azure', 'Blue Gray/Light Gray Azure') }}
+                        {{ macros.bg_2col_grad_horiz('light-gray-white', 'Light Gray/White') }}
+                        {{ macros.bg_2col_grad_horiz('gray-light-gray', 'Gray/Light Gray') }}
+                        {{ macros.bg_2col_grad_horiz('dark-gray-gray', 'Dark Gray/Gray') }}
+                        {{ macros.bg_2col_grad_horiz('black-dark-gray', 'Black/Dark Gray') }}
                         
                     </div>
                     

@@ -10,130 +10,59 @@
 						
 						{{ macros.page_section_heading(global_strings['colors']['sections'][35]['head'], global_strings['colors']['sections'][35]['subhead'], global_strings['colors']['sections'][35]['descrip']) }}
 						
-						{% macro text_variants(classPartial, namePartial) %}
-						
-						<h4>{{ namePartial }} Variants</h4>
-						
-						<div class="js-prism">
-							<div class="text-{{ classPartial }}-50">50 {{ namePartial }} Text</div>
-						</div>
-						<div class="js-prism">
-							<div class="text-{{ classPartial }}-100">100 {{ namePartial }} Text</div>
-						</div>
-						<div class="js-prism">
-							<div class="text-{{ classPartial }}-200">200 {{ namePartial }} Text</div>
-						</div>
-						<div class="js-prism">
-							<div class="text-{{ classPartial }}-300">300 {{ namePartial }} Text</div>
-						</div>
-						<div class="js-prism">
-							<div class="text-{{ classPartial }}-400">400 {{ namePartial }} Text</div>
-						</div>
-						<div class="js-prism">
-							<div class="text-{{ classPartial }}-500">500 {{ namePartial }} Text</div>
-						</div>
-						<div class="js-prism">
-							<div class="text-{{ classPartial }}-600">600 {{ namePartial }} Text</div>
-						</div>
-						<div class="js-prism">
-							<div class="text-{{ classPartial }}-700">700 {{ namePartial }} Text</div>
-						</div>
-						<div class="js-prism">
-							<div class="text-{{ classPartial }}-800">800 {{ namePartial }} Text</div>
-						</div>
-						<div class="js-prism mb-3">
-							<div class="text-{{ classPartial }}-900">900 {{ namePartial }} Text</div>
-						</div>
-						{% endmacro %}
-						
-						{{ text_variants('white', 'White') }}
-						{{ text_variants('light-gray', 'Light Gray') }}
-						{{ text_variants('gray', 'Gray') }}
-						{{ text_variants('dark-gray', 'Dark Gray') }}
-						{{ text_variants('black', 'Black') }}
+						{{ macros.text_variants('white', 'White') }}
+						{{ macros.text_variants('light-gray', 'Light Gray') }}
+						{{ macros.text_variants('gray', 'Gray') }}
+						{{ macros.text_variants('dark-gray', 'Dark Gray') }}
+						{{ macros.text_variants('black', 'Black') }}
 
-						{{ text_variants('red', 'Red') }}
-						{{ text_variants('rose', 'Rose') }}
-						{{ text_variants('magenta', 'Magenta') }}
-						{{ text_variants('violet', 'Violet') }}
-						{{ text_variants('blue', 'Blue') }}
-						{{ text_variants('azure', 'Azure') }}
-						{{ text_variants('cyan', 'Cyan') }}
-						{{ text_variants('spring-green', 'Spring Green') }}
-						{{ text_variants('green', 'Green') }}
-						{{ text_variants('chartreuse', 'Chartreuse') }}
-						{{ text_variants('yellow', 'Yellow') }}
-						{{ text_variants('orange', 'Orange') }}
+						{{ macros.text_variants('red', 'Red') }}
+						{{ macros.text_variants('rose', 'Rose') }}
+						{{ macros.text_variants('magenta', 'Magenta') }}
+						{{ macros.text_variants('violet', 'Violet') }}
+						{{ macros.text_variants('blue', 'Blue') }}
+						{{ macros.text_variants('azure', 'Azure') }}
+						{{ macros.text_variants('cyan', 'Cyan') }}
+						{{ macros.text_variants('spring-green', 'Spring Green') }}
+						{{ macros.text_variants('green', 'Green') }}
+						{{ macros.text_variants('chartreuse', 'Chartreuse') }}
+						{{ macros.text_variants('yellow', 'Yellow') }}
+						{{ macros.text_variants('orange', 'Orange') }}
 
-						{{ text_variants('orange-gray', 'Orange Gray') }}
-						{{ text_variants('dark-gray-orange', 'Dark Gray Orange') }}
-						{{ text_variants('blue-gray', 'Blue Gray') }}
-						{{ text_variants('light-gray-azure', 'Light Gray Azure') }}
+						{{ macros.text_variants('orange-gray', 'Orange Gray') }}
+						{{ macros.text_variants('dark-gray-orange', 'Dark Gray Orange') }}
+						{{ macros.text_variants('blue-gray', 'Blue Gray') }}
+						{{ macros.text_variants('light-gray-azure', 'Light Gray Azure') }}
 						
 					</div>
 					
 					<div id="{{ global_strings['colors']['sections'][36]['id'] }}" class="col-md-6 pb-5">
 						
 						{{ macros.page_section_heading(global_strings['colors']['sections'][36]['head'], global_strings['colors']['sections'][36]['subhead'], global_strings['colors']['sections'][36]['descrip']) }}
-
-						{% macro link_variants(classPartial, namePartial) %}
-						<h4>{{ namePartial }} Variants</h4>
 						
-						<div class="js-prism text-center">
-							<a href="#" class="text-{{ classPartial }}-50">50 {{ namePartial }} Text</a>
-						</div>
-						<div class="js-prism text-center">
-							<a href="#" class="text-{{ classPartial }}-100">100 {{ namePartial }} Text</a>
-						</div>
-						<div class="js-prism text-center">
-							<a href="#" class="text-{{ classPartial }}-200">200 {{ namePartial }} Text</a>
-						</div>
-						<div class="js-prism text-center">
-							<a href="#" class="text-{{ classPartial }}-300">300 {{ namePartial }} Text</a>
-						</div>
-						<div class="js-prism text-center">
-							<a href="#" class="text-{{ classPartial }}-400">400 {{ namePartial }} Text</a>
-						</div>
-						<div class="js-prism text-center">
-							<a href="#" class="text-{{ classPartial }}-500">500 {{ namePartial }} Text</a>
-						</div>
-						<div class="js-prism text-center">
-							<a href="#" class="text-{{ classPartial }}-600">600 {{ namePartial }} Text</a>
-						</div>
-						<div class="js-prism text-center">
-							<a href="#" class="text-{{ classPartial }}-700">700 {{ namePartial }} Text</a>
-						</div>
-						<div class="js-prism text-center">
-							<a href="#" class="text-{{ classPartial }}-800">800 {{ namePartial }} Text</a>
-						</div>
-						<div class="js-prism text-center mb-3">
-							<a href="#" class="text-{{ classPartial }}-900">900 {{ namePartial }} Text</a>
-						</div>
-						{% endmacro %}
-						
-						{{ link_variants('white', 'White') }}
-						{{ link_variants('light-gray', 'Light Gray') }}
-						{{ link_variants('gray', 'Gray') }}
-						{{ link_variants('dark-gray', 'Dark Gray') }}
-						{{ link_variants('black', 'Black') }}
+						{{ macros.link_variants('white', 'White') }}
+						{{ macros.link_variants('light-gray', 'Light Gray') }}
+						{{ macros.link_variants('gray', 'Gray') }}
+						{{ macros.link_variants('dark-gray', 'Dark Gray') }}
+						{{ macros.link_variants('black', 'Black') }}
 
-						{{ link_variants('red', 'Red') }}
-						{{ link_variants('rose', 'Rose') }}
-						{{ link_variants('magenta', 'Magenta') }}
-						{{ link_variants('violet', 'Violet') }}
-						{{ link_variants('blue', 'Blue') }}
-						{{ link_variants('azure', 'Azure') }}
-						{{ link_variants('cyan', 'Cyan') }}
-						{{ link_variants('spring-green', 'Spring Green') }}
-						{{ link_variants('green', 'Green') }}
-						{{ link_variants('chartreuse', 'Chartreuse') }}
-						{{ link_variants('yellow', 'Yellow') }}
-						{{ link_variants('orange', 'Orange') }}
+						{{ macros.link_variants('red', 'Red') }}
+						{{ macros.link_variants('rose', 'Rose') }}
+						{{ macros.link_variants('magenta', 'Magenta') }}
+						{{ macros.link_variants('violet', 'Violet') }}
+						{{ macros.link_variants('blue', 'Blue') }}
+						{{ macros.link_variants('azure', 'Azure') }}
+						{{ macros.link_variants('cyan', 'Cyan') }}
+						{{ macros.link_variants('spring-green', 'Spring Green') }}
+						{{ macros.link_variants('green', 'Green') }}
+						{{ macros.link_variants('chartreuse', 'Chartreuse') }}
+						{{ macros.link_variants('yellow', 'Yellow') }}
+						{{ macros.link_variants('orange', 'Orange') }}
 
-						{{ link_variants('orange-gray', 'Orange Gray') }}
-						{{ link_variants('dark-gray-orange', 'Dark Gray Orange') }}
-						{{ link_variants('blue-gray', 'Blue Gray') }}
-						{{ link_variants('light-gray-azure', 'Light Gray Azure') }}
+						{{ macros.link_variants('orange-gray', 'Orange Gray') }}
+						{{ macros.link_variants('dark-gray-orange', 'Dark Gray Orange') }}
+						{{ macros.link_variants('blue-gray', 'Blue Gray') }}
+						{{ macros.link_variants('light-gray-azure', 'Light Gray Azure') }}
 						
 					</div>
 					

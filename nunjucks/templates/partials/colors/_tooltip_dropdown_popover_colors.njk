@@ -11,44 +11,38 @@
 					
 						{{ macros.page_section_heading(global_strings['colors']['sections'][21]['head'], global_strings['colors']['sections'][21]['subhead'], global_strings['colors']['sections'][21]['descrip']) }}
 						
-						{% macro tooltip_colors(classPartial, namePartial) %}
-						<div class="js-prism mb-2">
-							<button type="button" class="btn btn-{{ classPartial }}" data-obe-color-class="tooltip-{{ classPartial }}" data-toggle="tooltip" data-placement="top" title="{{ namePartial }} Tooltip">{{ namePartial }} Tooltip</button>
-						</div>
-						{% endmacro %}
-						
-						{{ tooltip_colors('primary', 'Primary') }}
-						{{ tooltip_colors('secondary', 'Secondary') }}
-						{{ tooltip_colors('success', 'Success') }}
-						{{ tooltip_colors('danger', 'Danger') }}
-						{{ tooltip_colors('warning', 'Warning') }}
-						{{ tooltip_colors('info', 'Info') }}
-						{{ tooltip_colors('light', 'Light') }}
-						{{ tooltip_colors('dark', 'Dark') }}
+						{{ macros.tooltip_colors('primary', 'Primary') }}
+						{{ macros.tooltip_colors('secondary', 'Secondary') }}
+						{{ macros.tooltip_colors('success', 'Success') }}
+						{{ macros.tooltip_colors('danger', 'Danger') }}
+						{{ macros.tooltip_colors('warning', 'Warning') }}
+						{{ macros.tooltip_colors('info', 'Info') }}
+						{{ macros.tooltip_colors('light', 'Light') }}
+						{{ macros.tooltip_colors('dark', 'Dark') }}
 
-						{{ tooltip_colors('white', 'White') }}
-						{{ tooltip_colors('light-gray', 'Light Gray') }}
-						{{ tooltip_colors('gray', 'Gray') }}
-						{{ tooltip_colors('dark-gray', 'Dark Gray') }}
-						{{ tooltip_colors('black', 'Black') }}
+						{{ macros.tooltip_colors('white', 'White') }}
+						{{ macros.tooltip_colors('light-gray', 'Light Gray') }}
+						{{ macros.tooltip_colors('gray', 'Gray') }}
+						{{ macros.tooltip_colors('dark-gray', 'Dark Gray') }}
+						{{ macros.tooltip_colors('black', 'Black') }}
 
-						{{ tooltip_colors('red', 'Red') }}
-						{{ tooltip_colors('rose', 'Rose') }}
-						{{ tooltip_colors('magenta', 'Magenta') }}
-						{{ tooltip_colors('violet', 'Violet') }}
-						{{ tooltip_colors('blue', 'Blue') }}
-						{{ tooltip_colors('azure', 'Azure') }}
-						{{ tooltip_colors('cyan', 'Cyan') }}
-						{{ tooltip_colors('spring-green', 'Spring Green') }}
-						{{ tooltip_colors('green', 'Green') }}
-						{{ tooltip_colors('chartreuse', 'Chartreuse') }}
-						{{ tooltip_colors('yellow', 'Yellow') }}
-						{{ tooltip_colors('orange', 'Orange') }}
+						{{ macros.tooltip_colors('red', 'Red') }}
+						{{ macros.tooltip_colors('rose', 'Rose') }}
+						{{ macros.tooltip_colors('magenta', 'Magenta') }}
+						{{ macros.tooltip_colors('violet', 'Violet') }}
+						{{ macros.tooltip_colors('blue', 'Blue') }}
+						{{ macros.tooltip_colors('azure', 'Azure') }}
+						{{ macros.tooltip_colors('cyan', 'Cyan') }}
+						{{ macros.tooltip_colors('spring-green', 'Spring Green') }}
+						{{ macros.tooltip_colors('green', 'Green') }}
+						{{ macros.tooltip_colors('chartreuse', 'Chartreuse') }}
+						{{ macros.tooltip_colors('yellow', 'Yellow') }}
+						{{ macros.tooltip_colors('orange', 'Orange') }}
 
-						{{ tooltip_colors('orange-gray', 'Orange Gray') }}
-						{{ tooltip_colors('dark-gray-orange', 'Dark Gray Orange') }}
-						{{ tooltip_colors('blue-gray', 'Blue Gray') }}
-						{{ tooltip_colors('light-gray-azure', 'Light Gray Azure') }}
+						{{ macros.tooltip_colors('orange-gray', 'Orange Gray') }}
+						{{ macros.tooltip_colors('dark-gray-orange', 'Dark Gray Orange') }}
+						{{ macros.tooltip_colors('blue-gray', 'Blue Gray') }}
+						{{ macros.tooltip_colors('light-gray-azure', 'Light Gray Azure') }}
 						
 					</div>
 					{% endif %}
@@ -58,54 +52,38 @@
 					
 						{{ macros.page_section_heading(global_strings['colors']['sections'][22]['head'], global_strings['colors']['sections'][22]['subhead'], global_strings['colors']['sections'][22]['descrip']) }}
 						
-						{% macro dropdown_colors(classPartial, namePartial) %}
-						<div class="js-prism mb-2">
-							<div class="btn-group">
-								<button type="button" class="btn btn-{{ classPartial }} dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{ namePartial }} Dropdown</button>
-								<div class="dropdown-menu dropdown-menu-{{ classPartial }}">
-									<h6 class="dropdown-header">HEADING</h6>
-									<a class="dropdown-item" href="#">Standard Link</a>
-									<a class="dropdown-item" href="#">Standard Link</a>
-									<div class="dropdown-divider"></div>
-									<a class="dropdown-item disabled" href="#">Disabled Link</a>
-									<a class="dropdown-item active" href="#">Active Link</a>
-								</div>
-							</div>
-						</div>
-						{% endmacro %}
-						
-						{{ dropdown_colors('primary', 'Primary') }}
-						{{ dropdown_colors('secondary', 'Secondary') }}
-						{{ dropdown_colors('success', 'Success') }}
-						{{ dropdown_colors('danger', 'Danger') }}
-						{{ dropdown_colors('warning', 'Warning') }}
-						{{ dropdown_colors('info', 'Info') }}
-						{{ dropdown_colors('light', 'Light') }}
-						{{ dropdown_colors('dark', 'Dark') }}
+						{{ macros.dropdown_colors('primary', 'Primary') }}
+						{{ macros.dropdown_colors('secondary', 'Secondary') }}
+						{{ macros.dropdown_colors('success', 'Success') }}
+						{{ macros.dropdown_colors('danger', 'Danger') }}
+						{{ macros.dropdown_colors('warning', 'Warning') }}
+						{{ macros.dropdown_colors('info', 'Info') }}
+						{{ macros.dropdown_colors('light', 'Light') }}
+						{{ macros.dropdown_colors('dark', 'Dark') }}
 
-						{{ dropdown_colors('white', 'White') }}
-						{{ dropdown_colors('light-gray', 'Light Gray') }}
-						{{ dropdown_colors('gray', 'Gray') }}
-						{{ dropdown_colors('dark-gray', 'Dark Gray') }}
-						{{ dropdown_colors('black', 'Black') }}
+						{{ macros.dropdown_colors('white', 'White') }}
+						{{ macros.dropdown_colors('light-gray', 'Light Gray') }}
+						{{ macros.dropdown_colors('gray', 'Gray') }}
+						{{ macros.dropdown_colors('dark-gray', 'Dark Gray') }}
+						{{ macros.dropdown_colors('black', 'Black') }}
 
-						{{ dropdown_colors('red', 'Red') }}
-						{{ dropdown_colors('rose', 'Rose') }}
-						{{ dropdown_colors('magenta', 'Magenta') }}
-						{{ dropdown_colors('violet', 'Violet') }}
-						{{ dropdown_colors('blue', 'Blue') }}
-						{{ dropdown_colors('azure', 'Azure') }}
-						{{ dropdown_colors('cyan', 'Cyan') }}
-						{{ dropdown_colors('spring-green', 'Spring Green') }}
-						{{ dropdown_colors('green', 'Green') }}
-						{{ dropdown_colors('chartreuse', 'Chartreuse') }}
-						{{ dropdown_colors('yellow', 'Yellow') }}
-						{{ dropdown_colors('orange', 'Orange') }}
+						{{ macros.dropdown_colors('red', 'Red') }}
+						{{ macros.dropdown_colors('rose', 'Rose') }}
+						{{ macros.dropdown_colors('magenta', 'Magenta') }}
+						{{ macros.dropdown_colors('violet', 'Violet') }}
+						{{ macros.dropdown_colors('blue', 'Blue') }}
+						{{ macros.dropdown_colors('azure', 'Azure') }}
+						{{ macros.dropdown_colors('cyan', 'Cyan') }}
+						{{ macros.dropdown_colors('spring-green', 'Spring Green') }}
+						{{ macros.dropdown_colors('green', 'Green') }}
+						{{ macros.dropdown_colors('chartreuse', 'Chartreuse') }}
+						{{ macros.dropdown_colors('yellow', 'Yellow') }}
+						{{ macros.dropdown_colors('orange', 'Orange') }}
 
-						{{ dropdown_colors('orange-gray', 'Orange Gray') }}
-						{{ dropdown_colors('dark-gray-orange', 'Dark Gray Orange') }}
-						{{ dropdown_colors('blue-gray', 'Blue Gray') }}
-						{{ dropdown_colors('light-gray-azure', 'Light Gray Azure') }}
+						{{ macros.dropdown_colors('orange-gray', 'Orange Gray') }}
+						{{ macros.dropdown_colors('dark-gray-orange', 'Dark Gray Orange') }}
+						{{ macros.dropdown_colors('blue-gray', 'Blue Gray') }}
+						{{ macros.dropdown_colors('light-gray-azure', 'Light Gray Azure') }}
 						
 					</div>
 					{% endif %}
@@ -115,46 +93,38 @@
 					
 						{{ macros.page_section_heading(global_strings['colors']['sections'][23]['head'], global_strings['colors']['sections'][23]['subhead'], global_strings['colors']['sections'][23]['descrip']) }}
 						
-						{% macro popover_colors(classPartial, namePartial, headerTextPartial, bodyTextPartial) %}
-						<div class="js-prism mb-2">
-							<button type="button" class="btn btn-{{ classPartial }}" data-container="body" data-toggle="popover" data-placement="top" data-popover-header-bg="bg-{{ classPartial }}" data-popover-header-text="text-{{ headerTextPartial }}" data-popover-body-text="text-{{ bodyTextPartial }}" title="{{ namePartial }} Popover" data-content="Wow! Check out this amazing content. It's engaging. Right?">
-								{{ namePartial }} Popover
-							</button>
-						</div>
-						{% endmacro %}
-						
-						{{ popover_colors('primary', 'Primary', 'white', 'gray') }}
-						{{ popover_colors('secondary', 'Secondary', 'white', 'gray') }}
-						{{ popover_colors('success', 'Success', 'white', 'gray') }}
-						{{ popover_colors('danger', 'Danger', 'white', 'gray') }}
-						{{ popover_colors('warning', 'Warning', 'white', 'gray') }}
-						{{ popover_colors('info', 'Info', 'white', 'gray') }}
-						{{ popover_colors('light', 'Light', 'dark', 'gray') }}
-						{{ popover_colors('dark', 'Dark', 'white', 'gray') }}
+						{{ macros.popover_colors('primary', 'Primary', 'white', 'gray') }}
+						{{ macros.popover_colors('secondary', 'Secondary', 'white', 'gray') }}
+						{{ macros.popover_colors('success', 'Success', 'white', 'gray') }}
+						{{ macros.popover_colors('danger', 'Danger', 'white', 'gray') }}
+						{{ macros.popover_colors('warning', 'Warning', 'white', 'gray') }}
+						{{ macros.popover_colors('info', 'Info', 'white', 'gray') }}
+						{{ macros.popover_colors('light', 'Light', 'dark', 'gray') }}
+						{{ macros.popover_colors('dark', 'Dark', 'white', 'gray') }}
 
-						{{ popover_colors('white', 'White', 'dark', 'gray') }}
-						{{ popover_colors('light-gray', 'Light Gray', 'white', 'gray') }}
-						{{ popover_colors('gray', 'Gray', 'white', 'gray') }}
-						{{ popover_colors('dark-gray', 'Dark Gray', 'white', 'gray') }}
-						{{ popover_colors('black', 'Black', 'white', 'gray') }}
+						{{ macros.popover_colors('white', 'White', 'dark', 'gray') }}
+						{{ macros.popover_colors('light-gray', 'Light Gray', 'white', 'gray') }}
+						{{ macros.popover_colors('gray', 'Gray', 'white', 'gray') }}
+						{{ macros.popover_colors('dark-gray', 'Dark Gray', 'white', 'gray') }}
+						{{ macros.popover_colors('black', 'Black', 'white', 'gray') }}
 
-						{{ popover_colors('red', 'Red', 'white', 'gray') }}
-						{{ popover_colors('rose', 'Rose', 'white', 'gray') }}
-						{{ popover_colors('magenta', 'Magenta', 'white', 'gray') }}
-						{{ popover_colors('violet', 'Violet', 'white', 'gray') }}
-						{{ popover_colors('blue', 'Blue', 'white', 'gray') }}
-						{{ popover_colors('azure', 'Azure', 'white', 'gray') }}
-						{{ popover_colors('cyan', 'Cyan', 'white', 'gray') }}
-						{{ popover_colors('spring-green', 'Spring Green', 'white', 'gray') }}
-						{{ popover_colors('green', 'Green', 'white', 'gray') }}
-						{{ popover_colors('chartreuse', 'Chartreuse', 'white', 'gray') }}
-						{{ popover_colors('yellow', 'Yellow', 'white', 'gray') }}
-						{{ popover_colors('orange', 'Orange', 'white', 'gray') }}
+						{{ macros.popover_colors('red', 'Red', 'white', 'gray') }}
+						{{ macros.popover_colors('rose', 'Rose', 'white', 'gray') }}
+						{{ macros.popover_colors('magenta', 'Magenta', 'white', 'gray') }}
+						{{ macros.popover_colors('violet', 'Violet', 'white', 'gray') }}
+						{{ macros.popover_colors('blue', 'Blue', 'white', 'gray') }}
+						{{ macros.popover_colors('azure', 'Azure', 'white', 'gray') }}
+						{{ macros.popover_colors('cyan', 'Cyan', 'white', 'gray') }}
+						{{ macros.popover_colors('spring-green', 'Spring Green', 'white', 'gray') }}
+						{{ macros.popover_colors('green', 'Green', 'white', 'gray') }}
+						{{ macros.popover_colors('chartreuse', 'Chartreuse', 'white', 'gray') }}
+						{{ macros.popover_colors('yellow', 'Yellow', 'white', 'gray') }}
+						{{ macros.popover_colors('orange', 'Orange', 'white', 'gray') }}
 
-						{{ popover_colors('orange-gray', 'Orange Gray', 'white', 'gray') }}
-						{{ popover_colors('dark-gray-orange', 'Dark Gray Orange', 'white', 'gray') }}
-						{{ popover_colors('blue-gray', 'Blue Gray', 'white', 'gray') }}
-						{{ popover_colors('light-gray-azure', 'Light Gray Azure', 'white', 'gray') }}
+						{{ macros.popover_colors('orange-gray', 'Orange Gray', 'white', 'gray') }}
+						{{ macros.popover_colors('dark-gray-orange', 'Dark Gray Orange', 'white', 'gray') }}
+						{{ macros.popover_colors('blue-gray', 'Blue Gray', 'white', 'gray') }}
+						{{ macros.popover_colors('light-gray-azure', 'Light Gray Azure', 'white', 'gray') }}
 						
 					</div>
 					{% endif %}

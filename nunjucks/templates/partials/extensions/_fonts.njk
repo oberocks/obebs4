@@ -1,4 +1,4 @@
-<!-- _condensed_font.njk -->
+<!-- _fonts.njk -->
 		<div class="container-fluid pt-5 text-center bg-white text-dark">
         
             <div class="container">
@@ -8,19 +8,12 @@
                     <div id="{{ global_strings['extensions']['sections'][0]['id'] }}" class="col-md-6 pb-5">
                         
                         {{ macros.page_section_heading(global_strings['extensions']['sections'][0]['head'], global_strings['extensions']['sections'][0]['subhead'], global_strings['extensions']['sections'][0]['descrip']) }}
-
-                        {% macro brand_fonts(class, name) %}
-                        <div class="js-prism mb-2">
-                            <h3 class="{{ class }}">Your {{ name }} Font</h3>
-                            <p class="{{ class }}">No kidding, Lorenzo called off his trip to Mexico City just because they told him the conquistadors were extinct.</p>
-                        </div>
-                        {% endmacro %}
                         
-                        {{ brand_fonts('font-primary', 'Primary') }}
-                        {{ brand_fonts('font-monospace', 'Monospace') }}
+                        {{ macros.brand_fonts('font-primary', 'Primary') }}
+                        {{ macros.brand_fonts('font-monospace', 'Monospace') }}
                         
                         {% if obe_settings['enable-obebs4-secondary-font'] === 'true' %}
-                            {{ brand_fonts('font-secondary', 'Secondary') }}
+                            {{ macros.brand_fonts('font-secondary', 'Secondary') }}
                         {% endif %}
 
                     </div>
@@ -33,143 +26,135 @@
                     <div id="{{ global_strings['extensions']['sections'][1]['id'] }}" class="col-md-6 pb-5">
 
                         {{ macros.page_section_heading(global_strings['extensions']['sections'][1]['head'], global_strings['extensions']['sections'][1]['subhead'], global_strings['extensions']['sections'][1]['descrip']) }}
-
-                        {% macro font_weights(fontClass, fontName, weightClass, weightName) %}
-                        <div class="js-prism mb-2">
-                            <h3 class="{{ fontClass }} {{ weightClass }}">{{ fontName }} ({{ weightName }}) Font</h3>
-                            <p class="{{ fontClass }} {{ weightClass }}">No kidding, Lorenzo called off his trip to Mexico City just because they told him the conquistadors were extinct.</p>
-                        </div>
-                        {% endmacro %}
-
                         
                         {% if obe_settings['primary-font-weight-100'] === 'true' %}
-                            {{ font_weights('font-primary', 'Primary', 'font-primary-100', '100') }}
+                            {{ macros.font_weights('font-primary', 'Primary', 'font-primary-100', '100') }}
                         {% endif %}
 
                         {% if obe_settings['primary-font-weight-100i'] === 'true' %}
-                            {{ font_weights('font-primary', 'Primary', 'font-primary-100i', '100i') }}
+                            {{ macros.font_weights('font-primary', 'Primary', 'font-primary-100i', '100i') }}
                         {% endif %}
 
                         {% if obe_settings['primary-font-weight-200'] === 'true' %}
-                            {{ font_weights('font-primary', 'Primary', 'font-primary-200', '200') }}
+                            {{ macros.font_weights('font-primary', 'Primary', 'font-primary-200', '200') }}
                         {% endif %}
 
                         {% if obe_settings['primary-font-weight-200i'] === 'true' %}
-                            {{ font_weights('font-primary', 'Primary', 'font-primary-200i', '200i') }}
+                            {{ macros.font_weights('font-primary', 'Primary', 'font-primary-200i', '200i') }}
                         {% endif %}
 
                         {% if obe_settings['primary-font-weight-300'] === 'true' %}
-                            {{ font_weights('font-primary', 'Primary', 'font-primary-300', '300') }}
+                            {{ macros.font_weights('font-primary', 'Primary', 'font-primary-300', '300') }}
                         {% endif %}
 
                         {% if obe_settings['primary-font-weight-300i'] === 'true' %}
-                            {{ font_weights('font-primary', 'Primary', 'font-primary-300i', '300i') }}
+                            {{ macros.font_weights('font-primary', 'Primary', 'font-primary-300i', '300i') }}
                         {% endif %}
 
                         {% if obe_settings['primary-font-weight-400'] === 'true' %}
-                            {{ font_weights('font-primary', 'Primary', 'font-primary-400', '400') }}
+                            {{ macros.font_weights('font-primary', 'Primary', 'font-primary-400', '400') }}
                         {% endif %}
 
                         {% if obe_settings['primary-font-weight-400i'] === 'true' %}
-                            {{ font_weights('font-primary', 'Primary', 'font-primary-400i', '400i') }}
+                            {{ macros.font_weights('font-primary', 'Primary', 'font-primary-400i', '400i') }}
                         {% endif %}
 
                         {% if obe_settings['primary-font-weight-500'] === 'true' %}
-                            {{ font_weights('font-primary', 'Primary', 'font-primary-500', '500') }}
+                            {{ macros.font_weights('font-primary', 'Primary', 'font-primary-500', '500') }}
                         {% endif %}
 
                         {% if obe_settings['primary-font-weight-500i'] === 'true' %}
-                            {{ font_weights('font-primary', 'Primary', 'font-primary-500i', '500i') }}
+                            {{ macros.font_weights('font-primary', 'Primary', 'font-primary-500i', '500i') }}
                         {% endif %}
 
                         {% if obe_settings['primary-font-weight-600'] === 'true' %}
-                            {{ font_weights('font-primary', 'Primary', 'font-primary-600', '600') }}
+                            {{ macros.font_weights('font-primary', 'Primary', 'font-primary-600', '600') }}
                         {% endif %}
 
                         {% if obe_settings['primary-font-weight-600i'] === 'true' %}
-                            {{ font_weights('font-primary', 'Primary', 'font-primary-600i', '600i') }}
+                            {{ macros.font_weights('font-primary', 'Primary', 'font-primary-600i', '600i') }}
                         {% endif %}
 
                         {% if obe_settings['primary-font-weight-700'] === 'true' %}
-                            {{ font_weights('font-primary', 'Primary', 'font-primary-700', '700') }}
+                            {{ macros.font_weights('font-primary', 'Primary', 'font-primary-700', '700') }}
                         {% endif %}
 
                         {% if obe_settings['primary-font-weight-700i'] === 'true' %}
-                            {{ font_weights('font-primary', 'Primary', 'font-primary-700i', '700i') }}
+                            {{ macros.font_weights('font-primary', 'Primary', 'font-primary-700i', '700i') }}
                         {% endif %}
 
                         {% if obe_settings['primary-font-weight-800'] === 'true' %}
-                            {{ font_weights('font-primary', 'Primary', 'font-primary-800', '800') }}
+                            {{ macros.font_weights('font-primary', 'Primary', 'font-primary-800', '800') }}
                         {% endif %}
 
                         {% if obe_settings['primary-font-weight-800i'] === 'true' %}
-                            {{ font_weights('font-primary', 'Primary', 'font-primary-800i', '800i') }}
+                            {{ macros.font_weights('font-primary', 'Primary', 'font-primary-800i', '800i') }}
                         {% endif %}
 
 
 
                         {% if obe_settings['monospace-font-weight-100'] === 'true' %}
-                            {{ font_weights('font-monospace', 'Monospace', 'font-monospace-100', '100') }}
+                            {{ macros.font_weights('font-monospace', 'Monospace', 'font-monospace-100', '100') }}
                         {% endif %}
 
                         {% if obe_settings['monospace-font-weight-100i'] === 'true' %}
-                            {{ font_weights('font-monospace', 'Monospace', 'font-monospace-100i', '100i') }}
+                            {{ macros.font_weights('font-monospace', 'Monospace', 'font-monospace-100i', '100i') }}
                         {% endif %}
 
                         {% if obe_settings['monospace-font-weight-200'] === 'true' %}
-                            {{ font_weights('font-monospace', 'Monospace', 'font-monospace-200', '200') }}
+                            {{ macros.font_weights('font-monospace', 'Monospace', 'font-monospace-200', '200') }}
                         {% endif %}
 
                         {% if obe_settings['monospace-font-weight-200i'] === 'true' %}
-                            {{ font_weights('font-monospace', 'Monospace', 'font-monospace-200i', '200i') }}
+                            {{ macros.font_weights('font-monospace', 'Monospace', 'font-monospace-200i', '200i') }}
                         {% endif %}
 
                         {% if obe_settings['monospace-font-weight-300'] === 'true' %}
-                            {{ font_weights('font-monospace', 'Monospace', 'font-monospace-300', '300') }}
+                            {{ macros.font_weights('font-monospace', 'Monospace', 'font-monospace-300', '300') }}
                         {% endif %}
 
                         {% if obe_settings['monospace-font-weight-300i'] === 'true' %}
-                            {{ font_weights('font-monospace', 'Monospace', 'font-monospace-300i', '300i') }}
+                            {{ macros.font_weights('font-monospace', 'Monospace', 'font-monospace-300i', '300i') }}
                         {% endif %}
 
                         {% if obe_settings['monospace-font-weight-400'] === 'true' %}
-                            {{ font_weights('font-monospace', 'Monospace', 'font-monospace-400', '400') }}
+                            {{ macros.font_weights('font-monospace', 'Monospace', 'font-monospace-400', '400') }}
                         {% endif %}
 
                         {% if obe_settings['monospace-font-weight-400i'] === 'true' %}
-                            {{ font_weights('font-monospace', 'Monospace', 'font-monospace-400i', '400i') }}
+                            {{ macros.font_weights('font-monospace', 'Monospace', 'font-monospace-400i', '400i') }}
                         {% endif %}
 
                         {% if obe_settings['monospace-font-weight-500'] === 'true' %}
-                            {{ font_weights('font-monospace', 'Monospace', 'font-monospace-500', '500') }}
+                            {{ macros.font_weights('font-monospace', 'Monospace', 'font-monospace-500', '500') }}
                         {% endif %}
 
                         {% if obe_settings['monospace-font-weight-500i'] === 'true' %}
-                            {{ font_weights('font-monospace', 'Monospace', 'font-weight-500i', '500i') }}
+                            {{ macros.font_weights('font-monospace', 'Monospace', 'font-weight-500i', '500i') }}
                         {% endif %}
 
                         {% if obe_settings['monospace-font-weight-600'] === 'true' %}
-                            {{ font_weights('font-monospace', 'Monospace', 'font-monospace-600', '600') }}
+                            {{ macros.font_weights('font-monospace', 'Monospace', 'font-monospace-600', '600') }}
                         {% endif %}
 
                         {% if obe_settings['monospace-font-weight-600i'] === 'true' %}
-                            {{ font_weights('font-monospace', 'Monospace', 'font-monospace-600i', '600i') }}
+                            {{ macros.font_weights('font-monospace', 'Monospace', 'font-monospace-600i', '600i') }}
                         {% endif %}
 
                         {% if obe_settings['monospace-font-weight-700'] === 'true' %}
-                            {{ font_weights('font-monospace', 'Monospace', 'font-monospace-700', '700') }}
+                            {{ macros.font_weights('font-monospace', 'Monospace', 'font-monospace-700', '700') }}
                         {% endif %}
 
                         {% if obe_settings['monospace-font-weight-700i'] === 'true' %}
-                            {{ font_weights('font-monospace', 'Monospace', 'font-monospace-700i', '700i') }}
+                            {{ macros.font_weights('font-monospace', 'Monospace', 'font-monospace-700i', '700i') }}
                         {% endif %}
 
                         {% if obe_settings['monospace-font-weight-800'] === 'true' %}
-                            {{ font_weights('font-monospace', 'Monospace', 'font-monospace-800', '800') }}
+                            {{ macros.font_weights('font-monospace', 'Monospace', 'font-monospace-800', '800') }}
                         {% endif %}
 
                         {% if obe_settings['monospace-font-weight-800i'] === 'true' %}
-                            {{ font_weights('font-monospace', 'Monospace', 'font-monospace-800i', '800i') }}
+                            {{ macros.font_weights('font-monospace', 'Monospace', 'font-monospace-800i', '800i') }}
                         {% endif %}
 
 
@@ -177,67 +162,67 @@
                         {% if obe_settings['enable-obebs4-secondary-font'] === 'true' %}
                         
                             {% if obe_settings['secondary-font-weight-100'] === 'true' %}
-                                {{ font_weights('font-secondary', 'Secondary', 'font-secondary-100', '100') }}
+                                {{ macros.font_weights('font-secondary', 'Secondary', 'font-secondary-100', '100') }}
                             {% endif %}
 
                             {% if obe_settings['secondary-font-weight-100i'] === 'true' %}
-                                {{ font_weights('font-secondary', 'Secondary', 'font-secondary-100i', '100i') }}
+                                {{ macros.font_weights('font-secondary', 'Secondary', 'font-secondary-100i', '100i') }}
                             {% endif %}
 
                             {% if obe_settings['secondary-font-weight-200'] === 'true' %}
-                                {{ font_weights('font-secondary', 'Secondary', 'font-secondary-200', '200') }}
+                                {{ macros.font_weights('font-secondary', 'Secondary', 'font-secondary-200', '200') }}
                             {% endif %}
 
                             {% if obe_settings['secondary-font-weight-200i'] === 'true' %}
-                                {{ font_weights('font-secondary', 'Secondary', 'font-secondary-200i', '200i') }}
+                                {{ macros.font_weights('font-secondary', 'Secondary', 'font-secondary-200i', '200i') }}
                             {% endif %}
 
                             {% if obe_settings['secondary-font-weight-300'] === 'true' %}
-                                {{ font_weights('font-secondary', 'Secondary', 'font-secondary-300', '300') }}
+                                {{ macros.font_weights('font-secondary', 'Secondary', 'font-secondary-300', '300') }}
                             {% endif %}
 
                             {% if obe_settings['secondary-font-weight-300i'] === 'true' %}
-                                {{ font_weights('font-secondary', 'Secondary', 'font-secondary-300i', '300i') }}
+                                {{ macros.font_weights('font-secondary', 'Secondary', 'font-secondary-300i', '300i') }}
                             {% endif %}
 
                             {% if obe_settings['secondary-font-weight-400'] === 'true' %}
-                                {{ font_weights('font-secondary', 'Secondary', 'font-secondary-400', '400') }}
+                                {{ macros.font_weights('font-secondary', 'Secondary', 'font-secondary-400', '400') }}
                             {% endif %}
 
                             {% if obe_settings['secondary-font-weight-400i'] === 'true' %}
-                                {{ font_weights('font-secondary', 'Secondary', 'font-secondary-400i', '400i') }}
+                                {{ macros.font_weights('font-secondary', 'Secondary', 'font-secondary-400i', '400i') }}
                             {% endif %}
 
                             {% if obe_settings['secondary-font-weight-500'] === 'true' %}
-                                {{ font_weights('font-secondary', 'Secondary', 'font-secondary-500', '500') }}
+                                {{ macros.font_weights('font-secondary', 'Secondary', 'font-secondary-500', '500') }}
                             {% endif %}
 
                             {% if obe_settings['secondary-font-weight-500i'] === 'true' %}
-                                {{ font_weights('font-secondary', 'Secondary', 'font-secondary-500i', '500i') }}
+                                {{ macros.font_weights('font-secondary', 'Secondary', 'font-secondary-500i', '500i') }}
                             {% endif %}
 
                             {% if obe_settings['secondary-font-weight-600'] === 'true' %}
-                                {{ font_weights('font-secondary', 'Secondary', 'font-secondary-600', '600') }}
+                                {{ macros.font_weights('font-secondary', 'Secondary', 'font-secondary-600', '600') }}
                             {% endif %}
 
                             {% if obe_settings['secondary-font-weight-600i'] === 'true' %}
-                                {{ font_weights('font-secondary', 'Secondary', 'font-secondary-600i', '600i') }}
+                                {{ macros.font_weights('font-secondary', 'Secondary', 'font-secondary-600i', '600i') }}
                             {% endif %}
 
                             {% if obe_settings['secondary-font-weight-700'] === 'true' %}
-                                {{ font_weights('font-secondary', 'Secondary', 'font-secondary-700', '700') }}
+                                {{ macros.font_weights('font-secondary', 'Secondary', 'font-secondary-700', '700') }}
                             {% endif %}
 
                             {% if obe_settings['secondary-font-weight-700i'] === 'true' %}
-                                {{ font_weights('font-secondary', 'Secondary', 'font-secondary-700i', '700i') }}
+                                {{ macros.font_weights('font-secondary', 'Secondary', 'font-secondary-700i', '700i') }}
                             {% endif %}
 
                             {% if obe_settings['secondary-font-weight-800'] === 'true' %}
-                                {{ font_weights('font-secondary', 'Secondary', 'font-secondary-800', '800') }}
+                                {{ macros.font_weights('font-secondary', 'Secondary', 'font-secondary-800', '800') }}
                             {% endif %}
 
                             {% if obe_settings['secondary-font-weight-800i'] === 'true' %}
-                                {{ font_weights('font-secondary', 'Secondary', 'font-secondary-800i', '800i') }}
+                                {{ macros.font_weights('font-secondary', 'Secondary', 'font-secondary-800i', '800i') }}
                             {% endif %}
 
                         {% endif %}

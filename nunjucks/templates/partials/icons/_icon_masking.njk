@@ -14,30 +14,17 @@
                 </div>
                 
                 <div class="row justify-content-center">
-                    
-                    {% macro icon_mask(iconClasses, transformClasses, maskClasses, bgClass) %}
-                    <div class="col-sm-6 col-md-4 mb-5">
-                        <div class="js-prism-fa prism-hidden mb-2 text-center fa-2x {{ bgClass }}" style="cursor: help;">
-                            <i class="{{ iconClasses }}" data-fa-transform="{{ transformClasses }}" data-fa-mask="{{ maskClasses }}"></i>
-                        </div>
-                        <pre>
-                            <code class="language-html line-numbers">
-                               &lt;i class="{{ iconClasses }}" data-fa-transform="{{ transformClasses }}" data-fa-mask="{{ maskClasses }}"&gt;&lt;/i&gt;
-                            </code>
-                        </pre>
-                    </div>
-                    {% endmacro %}
 
-                    {{ icon_mask('fas fa-pencil-alt', 'shrink-10 up-0.5', 'fas fa-comment', 'bg-success') }}
-                    {{ icon_mask('fab fa-facebook-f text-light', 'shrink-3.5 down-1.6 right-1.25', 'fas fa-circle', 'bg-primary') }}
-                    {{ icon_mask('fas fa-headphones text-light', 'shrink-6', 'fas fa-square', 'bg-danger') }}
+                    {{ macros.icon_mask('fas fa-pencil-alt', 'shrink-10 up-0.5', 'fas fa-comment', 'bg-success') }}
+                    {{ macros.icon_mask('fab fa-facebook-f text-light', 'shrink-3.5 down-1.6 right-1.25', 'fas fa-circle', 'bg-primary') }}
+                    {{ macros.icon_mask('fas fa-headphones text-light', 'shrink-6', 'fas fa-square', 'bg-danger') }}
 
-                    {{ icon_mask('far fa-star', 'shrink-10 up-2', 'fas fa-map-marker', 'bg-warning') }}
-                    {{ icon_mask('fas fa-thumbs-up', 'shrink-9 up-0.5 rotate--30', 'fas fa-certificate', 'bg-info') }}
-                    {{ icon_mask('fas fa-file-upload', 'shrink-8 down-3', 'fas fa-cloud', 'bg-light') }}
+                    {{ macros.icon_mask('far fa-star', 'shrink-10 up-2', 'fas fa-map-marker', 'bg-warning') }}
+                    {{ macros.icon_mask('fas fa-thumbs-up', 'shrink-9 up-0.5 rotate--30', 'fas fa-certificate', 'bg-info') }}
+                    {{ macros.icon_mask('fas fa-file-upload', 'shrink-8 down-3', 'fas fa-cloud', 'bg-light') }}
 
-                    {{ icon_mask('far fa-star text-light', 'shrink-6', 'fas fa-star', 'bg-dark') }}
-                    {{ icon_mask('far fa-clock text-light', 'shrink-8 down-3', 'fas fa-calendar', 'bg-secondary') }}
+                    {{ macros.icon_mask('far fa-star text-light', 'shrink-6', 'fas fa-star', 'bg-dark') }}
+                    {{ macros.icon_mask('far fa-clock text-light', 'shrink-8 down-3', 'fas fa-calendar', 'bg-secondary') }}
 
                 </div>
 

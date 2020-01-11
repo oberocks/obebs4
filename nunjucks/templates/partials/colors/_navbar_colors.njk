@@ -11,85 +11,38 @@
 					
 						{{ macros.page_section_heading(global_strings['colors']['sections'][39]['head'], global_strings['colors']['sections'][39]['subhead'], global_strings['colors']['sections'][39]['descrip']) }}
 
-						{% macro navbar_colors(classPartial, namePartial, darkLightPartial, inputPartial, btnOutlinePartial) %}
-						<div class="js-prism text-left mb-2">
-							<nav class="navbar navbar-expand-lg navbar-{{ darkLightPartial }} bg-{{ classPartial }}">
-		
-								<a class="navbar-brand" href="#">{{ namePartial }}</a>
-		
-								<button class="navbar-toggler" type="button" data-toggle="collapse" aria-expanded="false" aria-label="Toggle navigation" data-target="#navbar-{{ classPartial }}" aria-controls="navbar-{{ classPartial }}">
-									<span class="navbar-toggler-icon"></span>
-								</button>
-		
-								<div class="collapse navbar-collapse" id="navbar-{{ classPartial }}">
-			
-									<ul class="navbar-nav mr-auto">
-										<li class="nav-item active">
-											<a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-										</li>
-										<li class="nav-item">
-											<a class="nav-link" href="#">Link</a>
-										</li>
-										<li class="nav-item dropdown">
-											<a class="nav-link dropdown-toggle" href="#" id="navbar-dropdown-menu-{{ classPartial }}" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-												Dropdown
-											</a>
-											<div class="dropdown-menu dropdown-menu-{{ classPartial }}" aria-labelledby="navbar-dropdown-menu-{{ classPartial }}">
-												<div class="dropdown-header h6">HEADING</div>
-												<a class="dropdown-item" href="#">Action</a>
-												<a class="dropdown-item" href="#">Another action</a>
-												<div class="dropdown-divider"></div>
-												<a class="dropdown-item" href="#">Something else here</a>
-											</div>
-										</li>
-										<li class="nav-item">
-											<a class="nav-link disabled" href="#">Disabled</a>
-										</li>
-									</ul>
-			
-									<form class="form-inline my-2 my-lg-0">
-										<input class="form-control form-{{ inputPartial }} mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-										<button class="btn btn-outline-{{ btnOutlinePartial }} my-2 my-sm-0" type="submit">Search</button>
-									</form>
-			
-								</div>
-		
-							</nav>
-						</div>
-						{% endmacro %}
+						{{ macros.navbar_colors('primary', 'Primary', 'dark', 'primary', 'white') }}
+						{{ macros.navbar_colors('secondary', 'Secondary', 'dark', 'secondary', 'white') }}
+						{{ macros.navbar_colors('success', 'Success', 'dark', 'success', 'white') }}
+						{{ macros.navbar_colors('danger', 'Danger', 'dark', 'danger', 'white') }}
+						{{ macros.navbar_colors('warning', 'Warning', 'dark', 'warning', 'white') }}
+						{{ macros.navbar_colors('info', 'Info', 'dark', 'info', 'white') }}
+						{{ macros.navbar_colors('light', 'Light', 'light', 'dark', 'dark') }}
+						{{ macros.navbar_colors('dark', 'Dark', 'dark', 'dark', 'white') }}
 
-						{{ navbar_colors('primary', 'Primary', 'dark', 'primary', 'white') }}
-						{{ navbar_colors('secondary', 'Secondary', 'dark', 'secondary', 'white') }}
-						{{ navbar_colors('success', 'Success', 'dark', 'success', 'white') }}
-						{{ navbar_colors('danger', 'Danger', 'dark', 'danger', 'white') }}
-						{{ navbar_colors('warning', 'Warning', 'dark', 'warning', 'white') }}
-						{{ navbar_colors('info', 'Info', 'dark', 'info', 'white') }}
-						{{ navbar_colors('light', 'Light', 'light', 'dark', 'dark') }}
-						{{ navbar_colors('dark', 'Dark', 'dark', 'dark', 'white') }}
+						{{ macros.navbar_colors('white', 'White', 'light', 'dark', 'dark') }}
+						{{ macros.navbar_colors('light-gray', 'Light Gray', 'dark', 'light-gray', 'white') }}
+						{{ macros.navbar_colors('gray', 'Gray', 'dark', 'gray', 'white') }}
+						{{ macros.navbar_colors('dark-gray', 'Dark Gray', 'dark', 'dark-gray', 'white') }}
+						{{ macros.navbar_colors('black', 'Black', 'dark', 'black', 'white') }}
 
-						{{ navbar_colors('white', 'White', 'light', 'dark', 'dark') }}
-						{{ navbar_colors('light-gray', 'Light Gray', 'dark', 'light-gray', 'white') }}
-						{{ navbar_colors('gray', 'Gray', 'dark', 'gray', 'white') }}
-						{{ navbar_colors('dark-gray', 'Dark Gray', 'dark', 'dark-gray', 'white') }}
-						{{ navbar_colors('black', 'Black', 'dark', 'black', 'white') }}
+						{{ macros.navbar_colors('red', 'Red', 'dark', 'red', 'white') }}
+						{{ macros.navbar_colors('rose', 'Rose', 'dark', 'rose', 'white') }}
+						{{ macros.navbar_colors('magenta', 'Magenta', 'dark', 'magenta', 'white') }}
+						{{ macros.navbar_colors('violet', 'Violet', 'dark', 'violet', 'white') }}
+						{{ macros.navbar_colors('blue', 'Blue', 'dark', 'blue', 'white') }}
+						{{ macros.navbar_colors('azure', 'Azure', 'dark', 'azure', 'white') }}
+						{{ macros.navbar_colors('cyan', 'Cyan', 'dark', 'cyan', 'white') }}
+						{{ macros.navbar_colors('spring-green', 'Spring Green', 'dark', 'spring-green', 'white') }}
+						{{ macros.navbar_colors('green', 'Green', 'dark', 'green', 'white') }}
+						{{ macros.navbar_colors('chartreuse', 'Chartreuse', 'dark', 'chartreuse', 'white') }}
+						{{ macros.navbar_colors('yellow', 'Yellow', 'light', 'dark', 'dark') }}
+						{{ macros.navbar_colors('orange', 'Orange', 'dark', 'orange', 'white') }}
 
-						{{ navbar_colors('red', 'Red', 'dark', 'red', 'white') }}
-						{{ navbar_colors('rose', 'Rose', 'dark', 'rose', 'white') }}
-						{{ navbar_colors('magenta', 'Magenta', 'dark', 'magenta', 'white') }}
-						{{ navbar_colors('violet', 'Violet', 'dark', 'violet', 'white') }}
-						{{ navbar_colors('blue', 'Blue', 'dark', 'blue', 'white') }}
-						{{ navbar_colors('azure', 'Azure', 'dark', 'azure', 'white') }}
-						{{ navbar_colors('cyan', 'Cyan', 'dark', 'cyan', 'white') }}
-						{{ navbar_colors('spring-green', 'Spring Green', 'dark', 'spring-green', 'white') }}
-						{{ navbar_colors('green', 'Green', 'dark', 'green', 'white') }}
-						{{ navbar_colors('chartreuse', 'Chartreuse', 'dark', 'chartreuse', 'white') }}
-						{{ navbar_colors('yellow', 'Yellow', 'light', 'dark', 'dark') }}
-						{{ navbar_colors('orange', 'Orange', 'dark', 'orange', 'white') }}
-
-						{{ navbar_colors('orange-gray', 'Orange Gray', 'dark', 'orange-gray', 'white') }}
-						{{ navbar_colors('dark-gray-orange', 'Dark Gray Orange', 'dark', 'dark-gray-orange', 'white') }}
-						{{ navbar_colors('blue-gray', 'Blue Gray', 'dark', 'blue-gray', 'white') }}
-						{{ navbar_colors('light-gray-azure', 'Light Gray Azure', 'dark', 'light-gray-azure', 'white') }}
+						{{ macros.navbar_colors('orange-gray', 'Orange Gray', 'dark', 'orange-gray', 'white') }}
+						{{ macros.navbar_colors('dark-gray-orange', 'Dark Gray Orange', 'dark', 'dark-gray-orange', 'white') }}
+						{{ macros.navbar_colors('blue-gray', 'Blue Gray', 'dark', 'blue-gray', 'white') }}
+						{{ macros.navbar_colors('light-gray-azure', 'Light Gray Azure', 'dark', 'light-gray-azure', 'white') }}
 						
 					</div>
 					

@@ -18,91 +18,75 @@
 
                     <div class="col-md-6 pb-5">
 
-                        {% macro progress_bar_colors(widthVal, colorClass, labelTxt) %}
-                        <div class="js-prism mb-2">
-                            <div class="progress">
-                                <div class="progress-bar w-{{ widthVal }}{{ colorClass }}" role="progressbar" aria-valuenow="{{ widthVal }}" aria-valuemin="0" aria-valuemax="100">{{ labelTxt }}</div>
-                            </div>
-                        </div>
-                        {% endmacro %}
-
 						<h5>Standard Progress Bars</h5>
                         
-                        {{ progress_bar_colors('75', ' bg-primary', 'Primary') }}
-                        {{ progress_bar_colors('75', ' bg-secondary', 'Secondary') }}
-                        {{ progress_bar_colors('75', ' bg-success', 'Success') }}
-                        {{ progress_bar_colors('75', ' bg-danger', 'Danger') }}
-                        {{ progress_bar_colors('75', ' bg-warning', 'Warning') }}
-                        {{ progress_bar_colors('75', ' bg-info', 'Info') }}
-                        {{ progress_bar_colors('75', ' bg-light', 'Light') }}
-                        {{ progress_bar_colors('75', ' bg-dark', 'Dark') }}
+                        {{ macros.progress_bar_colors('75', ' bg-primary', 'Primary') }}
+                        {{ macros.progress_bar_colors('75', ' bg-secondary', 'Secondary') }}
+                        {{ macros.progress_bar_colors('75', ' bg-success', 'Success') }}
+                        {{ macros.progress_bar_colors('75', ' bg-danger', 'Danger') }}
+                        {{ macros.progress_bar_colors('75', ' bg-warning', 'Warning') }}
+                        {{ macros.progress_bar_colors('75', ' bg-info', 'Info') }}
+                        {{ macros.progress_bar_colors('75', ' bg-light', 'Light') }}
+                        {{ macros.progress_bar_colors('75', ' bg-dark', 'Dark') }}
 
-                        {{ progress_bar_colors('75', ' bg-white', 'White') }}
-                        {{ progress_bar_colors('75', ' bg-light-gray', 'Light Gray') }}
-                        {{ progress_bar_colors('75', ' bg-gray', 'Gray') }}
-                        {{ progress_bar_colors('75', ' bg-dark-gray', 'Dark Gray') }}
-                        {{ progress_bar_colors('75', ' bg-black', 'Black') }}
-                        {{ progress_bar_colors('75', ' bg-red', 'Red') }}
-                        {{ progress_bar_colors('75', ' bg-rose', 'Rose') }}
-                        {{ progress_bar_colors('75', ' bg-magenta', 'Magenta') }}
-                        {{ progress_bar_colors('75', ' bg-violet', 'Violet') }}
-                        {{ progress_bar_colors('75', ' bg-blue', 'Blue') }}
-                        {{ progress_bar_colors('75', ' bg-azure', 'Azure') }}
-                        {{ progress_bar_colors('75', ' bg-cyan', 'Cyan') }}
-                        {{ progress_bar_colors('75', ' bg-spring-green', 'Spring Green') }}
-                        {{ progress_bar_colors('75', ' bg-green', 'Green') }}
-                        {{ progress_bar_colors('75', ' bg-chartreuse', 'Chartreuse') }}
-                        {{ progress_bar_colors('75', ' bg-yellow', 'Yellow') }}
-                        {{ progress_bar_colors('75', ' bg-orange', 'Orange') }}
-                        {{ progress_bar_colors('75', ' bg-orange-gray', 'Orange Gray') }}
-                        {{ progress_bar_colors('75', ' bg-dark-gray-orange', 'Dark Gray Orange') }}
-                        {{ progress_bar_colors('75', ' bg-blue-gray', 'Blue Gray') }}
-                        {{ progress_bar_colors('75', ' bg-light-gray-azure', 'Light Gray Azure') }}
+                        {{ macros.progress_bar_colors('75', ' bg-white', 'White') }}
+                        {{ macros.progress_bar_colors('75', ' bg-light-gray', 'Light Gray') }}
+                        {{ macros.progress_bar_colors('75', ' bg-gray', 'Gray') }}
+                        {{ macros.progress_bar_colors('75', ' bg-dark-gray', 'Dark Gray') }}
+                        {{ macros.progress_bar_colors('75', ' bg-black', 'Black') }}
+                        {{ macros.progress_bar_colors('75', ' bg-red', 'Red') }}
+                        {{ macros.progress_bar_colors('75', ' bg-rose', 'Rose') }}
+                        {{ macros.progress_bar_colors('75', ' bg-magenta', 'Magenta') }}
+                        {{ macros.progress_bar_colors('75', ' bg-violet', 'Violet') }}
+                        {{ macros.progress_bar_colors('75', ' bg-blue', 'Blue') }}
+                        {{ macros.progress_bar_colors('75', ' bg-azure', 'Azure') }}
+                        {{ macros.progress_bar_colors('75', ' bg-cyan', 'Cyan') }}
+                        {{ macros.progress_bar_colors('75', ' bg-spring-green', 'Spring Green') }}
+                        {{ macros.progress_bar_colors('75', ' bg-green', 'Green') }}
+                        {{ macros.progress_bar_colors('75', ' bg-chartreuse', 'Chartreuse') }}
+                        {{ macros.progress_bar_colors('75', ' bg-yellow', 'Yellow') }}
+                        {{ macros.progress_bar_colors('75', ' bg-orange', 'Orange') }}
+                        {{ macros.progress_bar_colors('75', ' bg-orange-gray', 'Orange Gray') }}
+                        {{ macros.progress_bar_colors('75', ' bg-dark-gray-orange', 'Dark Gray Orange') }}
+                        {{ macros.progress_bar_colors('75', ' bg-blue-gray', 'Blue Gray') }}
+                        {{ macros.progress_bar_colors('75', ' bg-light-gray-azure', 'Light Gray Azure') }}
 
                     </div>
 
                     <div class="col-md-6 pb-5">
 
-                        {% macro progress_bar_striped_colors(colorClass) %}
-                        <div class="js-prism mb-2">
-                            <div class="progress">
-                                <div class="progress-bar progress-bar-striped {{ colorClass }} w-75" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
-                            </div>
-                        </div>
-                        {% endmacro %}
-
 						<h5>Striped Progress Bars</h5>
 
-                        {{ progress_bar_striped_colors('bg-primary') }}
-                        {{ progress_bar_striped_colors('bg-secondary') }}
-                        {{ progress_bar_striped_colors('bg-success') }}
-                        {{ progress_bar_striped_colors('bg-danger') }}
-                        {{ progress_bar_striped_colors('bg-warning') }}
-                        {{ progress_bar_striped_colors('bg-info') }}
-                        {{ progress_bar_striped_colors('bg-light') }}
-                        {{ progress_bar_striped_colors('bg-dark') }}
+                        {{ macros.progress_bar_striped_colors('bg-primary') }}
+                        {{ macros.progress_bar_striped_colors('bg-secondary') }}
+                        {{ macros.progress_bar_striped_colors('bg-success') }}
+                        {{ macros.progress_bar_striped_colors('bg-danger') }}
+                        {{ macros.progress_bar_striped_colors('bg-warning') }}
+                        {{ macros.progress_bar_striped_colors('bg-info') }}
+                        {{ macros.progress_bar_striped_colors('bg-light') }}
+                        {{ macros.progress_bar_striped_colors('bg-dark') }}
 
-                        {{ progress_bar_striped_colors('bg-white') }}
-                        {{ progress_bar_striped_colors('bg-light-gray') }}
-                        {{ progress_bar_striped_colors('bg-gray') }}
-                        {{ progress_bar_striped_colors('bg-dark-gray') }}
-                        {{ progress_bar_striped_colors('bg-black') }}
-                        {{ progress_bar_striped_colors('bg-red') }}
-                        {{ progress_bar_striped_colors('bg-rose') }}
-                        {{ progress_bar_striped_colors('bg-magenta') }}
-                        {{ progress_bar_striped_colors('bg-violet') }}
-                        {{ progress_bar_striped_colors('bg-blue') }}
-                        {{ progress_bar_striped_colors('bg-azure') }}
-                        {{ progress_bar_striped_colors('bg-cyan') }}
-                        {{ progress_bar_striped_colors('bg-spring-green') }}
-                        {{ progress_bar_striped_colors('bg-green') }}
-                        {{ progress_bar_striped_colors('bg-chartreuse') }}
-                        {{ progress_bar_striped_colors('bg-yellow') }}
-                        {{ progress_bar_striped_colors('bg-orange') }}
-                        {{ progress_bar_striped_colors('bg-orange-gray') }}
-                        {{ progress_bar_striped_colors('bg-dark-gray-orange') }}
-                        {{ progress_bar_striped_colors('bg-blue-gray') }}
-                        {{ progress_bar_striped_colors('bg-light-gray-azure') }}
+                        {{ macros.progress_bar_striped_colors('bg-white') }}
+                        {{ macros.progress_bar_striped_colors('bg-light-gray') }}
+                        {{ macros.progress_bar_striped_colors('bg-gray') }}
+                        {{ macros.progress_bar_striped_colors('bg-dark-gray') }}
+                        {{ macros.progress_bar_striped_colors('bg-black') }}
+                        {{ macros.progress_bar_striped_colors('bg-red') }}
+                        {{ macros.progress_bar_striped_colors('bg-rose') }}
+                        {{ macros.progress_bar_striped_colors('bg-magenta') }}
+                        {{ macros.progress_bar_striped_colors('bg-violet') }}
+                        {{ macros.progress_bar_striped_colors('bg-blue') }}
+                        {{ macros.progress_bar_striped_colors('bg-azure') }}
+                        {{ macros.progress_bar_striped_colors('bg-cyan') }}
+                        {{ macros.progress_bar_striped_colors('bg-spring-green') }}
+                        {{ macros.progress_bar_striped_colors('bg-green') }}
+                        {{ macros.progress_bar_striped_colors('bg-chartreuse') }}
+                        {{ macros.progress_bar_striped_colors('bg-yellow') }}
+                        {{ macros.progress_bar_striped_colors('bg-orange') }}
+                        {{ macros.progress_bar_striped_colors('bg-orange-gray') }}
+                        {{ macros.progress_bar_striped_colors('bg-dark-gray-orange') }}
+                        {{ macros.progress_bar_striped_colors('bg-blue-gray') }}
+                        {{ macros.progress_bar_striped_colors('bg-light-gray-azure') }}
 
                     </div>
 
@@ -112,81 +96,65 @@
 
                     <div class="col-md-6 pb-5">
 
-                        {% macro mono_mulit_bars_colors(color1, color2, color3) %}
-                        <div class="js-prism mb-2">
-                            <div class="progress">
-                                <div class="progress-bar {{ color1 }} w-25" role="progressbar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">25%</div>
-                                <div class="progress-bar {{ color2 }} w-25" role="progressbar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">25%</div>
-                                <div class="progress-bar {{ color3 }} w-25" role="progressbar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">25%</div>
-                            </div>
-                        </div>
-                        {% endmacro %}
+
 
 						<h5>Chromatic Multi-Progress Bars</h5>
 
-                        {{ mono_mulit_bars_colors('bg-light-gray', 'bg-gray', 'bg-dark-gray') }}
-                        {{ mono_mulit_bars_colors('bg-gray', 'bg-dark-gray', 'bg-black') }}
+                        {{ macros.progress_bar_mono_multi_colors('bg-light-gray', 'bg-gray', 'bg-dark-gray') }}
+                        {{ macros.progress_bar_mono_multi_colors('bg-gray', 'bg-dark-gray', 'bg-black') }}
 
-                        {{ mono_mulit_bars_colors('bg-red', 'bg-rose', 'bg-magenta') }}
-                        {{ mono_mulit_bars_colors('bg-rose', 'bg-magenta', 'bg-violet') }}
-                        {{ mono_mulit_bars_colors('bg-magenta', 'bg-violet', 'bg-blue') }}
-                        {{ mono_mulit_bars_colors('bg-violet', 'bg-blue', 'bg-azure') }}
-                        {{ mono_mulit_bars_colors('bg-blue', 'bg-azure', 'bg-cyan') }}
-                        {{ mono_mulit_bars_colors('bg-azure', 'bg-cyan', 'bg-spring-green') }}
-                        {{ mono_mulit_bars_colors('bg-cyan', 'bg-spring-green', 'bg-green') }}
-                        {{ mono_mulit_bars_colors('bg-spring-green', 'bg-green', 'bg-chartreuse') }}
-                        {{ mono_mulit_bars_colors('bg-green', 'bg-chartreuse', 'bg-yellow') }}
-                        {{ mono_mulit_bars_colors('bg-chartreuse', 'bg-yellow', 'bg-orange') }}
-                        {{ mono_mulit_bars_colors('bg-yellow', 'bg-orange', 'bg-red') }}
-                        {{ mono_mulit_bars_colors('bg-orange', 'bg-red', 'bg-rose') }}
+                        {{ macros.progress_bar_mono_multi_colors('bg-red', 'bg-rose', 'bg-magenta') }}
+                        {{ macros.progress_bar_mono_multi_colors('bg-rose', 'bg-magenta', 'bg-violet') }}
+                        {{ macros.progress_bar_mono_multi_colors('bg-magenta', 'bg-violet', 'bg-blue') }}
+                        {{ macros.progress_bar_mono_multi_colors('bg-violet', 'bg-blue', 'bg-azure') }}
+                        {{ macros.progress_bar_mono_multi_colors('bg-blue', 'bg-azure', 'bg-cyan') }}
+                        {{ macros.progress_bar_mono_multi_colors('bg-azure', 'bg-cyan', 'bg-spring-green') }}
+                        {{ macros.progress_bar_mono_multi_colors('bg-cyan', 'bg-spring-green', 'bg-green') }}
+                        {{ macros.progress_bar_mono_multi_colors('bg-spring-green', 'bg-green', 'bg-chartreuse') }}
+                        {{ macros.progress_bar_mono_multi_colors('bg-green', 'bg-chartreuse', 'bg-yellow') }}
+                        {{ macros.progress_bar_mono_multi_colors('bg-chartreuse', 'bg-yellow', 'bg-orange') }}
+                        {{ macros.progress_bar_mono_multi_colors('bg-yellow', 'bg-orange', 'bg-red') }}
+                        {{ macros.progress_bar_mono_multi_colors('bg-orange', 'bg-red', 'bg-rose') }}
 
-                        {{ mono_mulit_bars_colors('bg-orange', 'bg-orange-gray', 'bg-dark-gray-orange') }}
-                        {{ mono_mulit_bars_colors('bg-light-gray-azure', 'bg-blue', 'bg-blue-gray') }}
+                        {{ macros.progress_bar_mono_multi_colors('bg-orange', 'bg-orange-gray', 'bg-dark-gray-orange') }}
+                        {{ macros.progress_bar_mono_multi_colors('bg-light-gray-azure', 'bg-blue', 'bg-blue-gray') }}
 
                     </div>
 
                     <div class="col-md-6 pb-5">
 
-                        {% macro gradient_progress_colors(color) %}
-                        <div class="js-prism mb-2">
-                            <div class="progress">
-                                <div class="progress-bar bg-gradient-{{ color }} w-75" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">75%</div>
-                            </div>
-                        </div>
-                        {% endmacro %}
-
 						<h5>Gradient Progress Bars</h5>
 
-                        {{ gradient_progress_colors('primary') }}
-                        {{ gradient_progress_colors('secondary') }}
-                        {{ gradient_progress_colors('success') }}
-                        {{ gradient_progress_colors('danger') }}
-                        {{ gradient_progress_colors('warning') }}
-                        {{ gradient_progress_colors('info') }}
-                        {{ gradient_progress_colors('light') }}
-                        {{ gradient_progress_colors('dark') }}
+                        {{ macros.progress_bar_gradient_colors('primary') }}
+                        {{ macros.progress_bar_gradient_colors('secondary') }}
+                        {{ macros.progress_bar_gradient_colors('success') }}
+                        {{ macros.progress_bar_gradient_colors('danger') }}
+                        {{ macros.progress_bar_gradient_colors('warning') }}
+                        {{ macros.progress_bar_gradient_colors('info') }}
+                        {{ macros.progress_bar_gradient_colors('light') }}
+                        {{ macros.progress_bar_gradient_colors('dark') }}
 
-                        {{ gradient_progress_colors('white') }}
-                        {{ gradient_progress_colors('light-gray') }}
-                        {{ gradient_progress_colors('gray') }}
-                        {{ gradient_progress_colors('dark-gray') }}
-                        {{ gradient_progress_colors('black') }}
-                        {{ gradient_progress_colors('red') }}
-                        {{ gradient_progress_colors('rose') }}
-                        {{ gradient_progress_colors('magenta') }}
-                        {{ gradient_progress_colors('violet') }}
-                        {{ gradient_progress_colors('blue') }}
-                        {{ gradient_progress_colors('azure') }}
-                        {{ gradient_progress_colors('cyan') }}
-                        {{ gradient_progress_colors('spring-green') }}
-                        {{ gradient_progress_colors('green') }}
-                        {{ gradient_progress_colors('chartreuse') }}
-                        {{ gradient_progress_colors('yellow') }}
-                        {{ gradient_progress_colors('orange') }}
-                        {{ gradient_progress_colors('orange-gray') }}
-                        {{ gradient_progress_colors('dark-gray-orange') }}
-                        {{ gradient_progress_colors('blue-gray') }}
-                        {{ gradient_progress_colors('light-gray-azure') }}
+                        {{ macros.progress_bar_gradient_colors('white') }}
+                        {{ macros.progress_bar_gradient_colors('light-gray') }}
+                        {{ macros.progress_bar_gradient_colors('gray') }}
+                        {{ macros.progress_bar_gradient_colors('dark-gray') }}
+                        {{ macros.progress_bar_gradient_colors('black') }}
+                        {{ macros.progress_bar_gradient_colors('red') }}
+                        {{ macros.progress_bar_gradient_colors('rose') }}
+                        {{ macros.progress_bar_gradient_colors('magenta') }}
+                        {{ macros.progress_bar_gradient_colors('violet') }}
+                        {{ macros.progress_bar_gradient_colors('blue') }}
+                        {{ macros.progress_bar_gradient_colors('azure') }}
+                        {{ macros.progress_bar_gradient_colors('cyan') }}
+                        {{ macros.progress_bar_gradient_colors('spring-green') }}
+                        {{ macros.progress_bar_gradient_colors('green') }}
+                        {{ macros.progress_bar_gradient_colors('chartreuse') }}
+                        {{ macros.progress_bar_gradient_colors('yellow') }}
+                        {{ macros.progress_bar_gradient_colors('orange') }}
+                        {{ macros.progress_bar_gradient_colors('orange-gray') }}
+                        {{ macros.progress_bar_gradient_colors('dark-gray-orange') }}
+                        {{ macros.progress_bar_gradient_colors('blue-gray') }}
+                        {{ macros.progress_bar_gradient_colors('light-gray-azure') }}
 
                     </div>
 

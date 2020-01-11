@@ -15,56 +15,37 @@
                 
                 <div class="row justify-content-center text-left">
 
-                    {% macro card_colors(name, bgClass, txtClass) %}
-                    <div class="col-sm-6 pb-4">
+                    {{ macros.card_colors('Primary', 'primary', 'white') }}
+                    {{ macros.card_colors('Secondary', 'secondary', 'white') }}
+                    {{ macros.card_colors('Success', 'success', 'white') }}
+                    {{ macros.card_colors('Danger', 'danger', 'white') }}
+                    {{ macros.card_colors('Warning', 'warning', 'white') }}
+                    {{ macros.card_colors('Info', 'info', 'white') }}
+                    {{ macros.card_colors('Light', 'light', 'dark') }}
+                    {{ macros.card_colors('Dark', 'dark', 'white') }}
 
-                        <div class="js-prism mb-2">
-                            <div class="card text-{{ txtClass }} bg-{{ bgClass }}">
-                                <div class="card-header">{{ name }} Card Heading</div>
-                                <div class="card-body">
-                                    <h5 class="card-title">{{ name }} Card Title</h5>
-                                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                </div>
-                                <div class="card-footer text-right">
-                                    <small>{{ name }} Footer</small>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-                    {% endmacro %}
-
-                    {{ card_colors('Primary', 'primary', 'white') }}
-                    {{ card_colors('Secondary', 'secondary', 'white') }}
-                    {{ card_colors('Success', 'success', 'white') }}
-                    {{ card_colors('Danger', 'danger', 'white') }}
-                    {{ card_colors('Warning', 'warning', 'white') }}
-                    {{ card_colors('Info', 'info', 'white') }}
-                    {{ card_colors('Light', 'light', 'dark') }}
-                    {{ card_colors('Dark', 'dark', 'white') }}
-
-                    {{ card_colors('White', 'white', 'dark') }}
-                    {{ card_colors('Light Gray', 'light-gray', 'dark') }}
-                    {{ card_colors('Gray', 'gray', 'white') }}
-                    {{ card_colors('Dark Gray', 'dark-gray', 'white') }}
-                    {{ card_colors('Black', 'black', 'white') }}
+                    {{ macros.card_colors('White', 'white', 'dark') }}
+                    {{ macros.card_colors('Light Gray', 'light-gray', 'dark') }}
+                    {{ macros.card_colors('Gray', 'gray', 'white') }}
+                    {{ macros.card_colors('Dark Gray', 'dark-gray', 'white') }}
+                    {{ macros.card_colors('Black', 'black', 'white') }}
                     
-                    {{ card_colors('Red', 'red', 'white') }}
-                    {{ card_colors('Rose', 'rose', 'white') }}
-                    {{ card_colors('Magenta', 'magenta', 'white') }}
-                    {{ card_colors('Violet', 'violet', 'white') }}
-                    {{ card_colors('Blue', 'blue', 'white') }}
-                    {{ card_colors('Azure', 'azure', 'white') }}
-                    {{ card_colors('Cyan', 'cyan', 'white') }}
-                    {{ card_colors('Spring Green', 'spring-green', 'white') }}
-                    {{ card_colors('Green', 'green', 'white') }}
-                    {{ card_colors('Chartreuse', 'chartreuse', 'dark') }}
-                    {{ card_colors('Yellow', 'yellow', 'dark') }}
-                    {{ card_colors('Orange', 'orange', 'white') }}
-                    {{ card_colors('Orange Gray', 'orange-gray', 'white') }}
-                    {{ card_colors('Dark Gray Orange', 'dark-gray-orange', 'white') }}
-                    {{ card_colors('Blue Gray', 'blue-gray', 'white') }}
-                    {{ card_colors('Light Gray Azure', 'light-gray-azure', 'white') }}
+                    {{ macros.card_colors('Red', 'red', 'white') }}
+                    {{ macros.card_colors('Rose', 'rose', 'white') }}
+                    {{ macros.card_colors('Magenta', 'magenta', 'white') }}
+                    {{ macros.card_colors('Violet', 'violet', 'white') }}
+                    {{ macros.card_colors('Blue', 'blue', 'white') }}
+                    {{ macros.card_colors('Azure', 'azure', 'white') }}
+                    {{ macros.card_colors('Cyan', 'cyan', 'white') }}
+                    {{ macros.card_colors('Spring Green', 'spring-green', 'white') }}
+                    {{ macros.card_colors('Green', 'green', 'white') }}
+                    {{ macros.card_colors('Chartreuse', 'chartreuse', 'dark') }}
+                    {{ macros.card_colors('Yellow', 'yellow', 'dark') }}
+                    {{ macros.card_colors('Orange', 'orange', 'white') }}
+                    {{ macros.card_colors('Orange Gray', 'orange-gray', 'white') }}
+                    {{ macros.card_colors('Dark Gray Orange', 'dark-gray-orange', 'white') }}
+                    {{ macros.card_colors('Blue Gray', 'blue-gray', 'white') }}
+                    {{ macros.card_colors('Light Gray Azure', 'light-gray-azure', 'white') }}
 
                 </div>
 

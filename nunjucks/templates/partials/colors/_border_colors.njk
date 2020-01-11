@@ -9,45 +9,39 @@
 					<div id="{{ global_strings['colors']['sections'][4]['id'] }}" class="col-12 pb-5">
 						
 						{{ macros.page_section_heading(global_strings['colors']['sections'][4]['head'], global_strings['colors']['sections'][4]['subhead'], global_strings['colors']['sections'][4]['descrip']) }}
-
-						{% macro border_colors(classPartial, namePartial) %}
-						<div class="js-prism mb-2">
-							<div class="border border-{{ classPartial }}">{{ namePartial }} Border</div>
-						</div>
-						{% endmacro %}
 						
-						{{ border_colors('primary', 'Primary') }}
-						{{ border_colors('secondary', 'Secondary') }}
-						{{ border_colors('success', 'Success') }}
-						{{ border_colors('danger', 'Danger') }}
-						{{ border_colors('warning', 'Warning') }}
-						{{ border_colors('info', 'Info') }}
-						{{ border_colors('light', 'Light') }}
-						{{ border_colors('dark', 'Dark') }}
+						{{ macros.border_colors('primary', 'Primary') }}
+						{{ macros.border_colors('secondary', 'Secondary') }}
+						{{ macros.border_colors('success', 'Success') }}
+						{{ macros.border_colors('danger', 'Danger') }}
+						{{ macros.border_colors('warning', 'Warning') }}
+						{{ macros.border_colors('info', 'Info') }}
+						{{ macros.border_colors('light', 'Light') }}
+						{{ macros.border_colors('dark', 'Dark') }}
 
-						{{ border_colors('white', 'White') }}
-						{{ border_colors('light-gray', 'Light Gray') }}
-						{{ border_colors('gray', 'Gray') }}
-						{{ border_colors('dark-gray', 'Dark Gray') }}
-						{{ border_colors('black', 'Black') }}
+						{{ macros.border_colors('white', 'White') }}
+						{{ macros.border_colors('light-gray', 'Light Gray') }}
+						{{ macros.border_colors('gray', 'Gray') }}
+						{{ macros.border_colors('dark-gray', 'Dark Gray') }}
+						{{ macros.border_colors('black', 'Black') }}
 
-						{{ border_colors('red', 'Red') }}
-						{{ border_colors('rose', 'Rose') }}
-						{{ border_colors('magenta', 'Magenta') }}
-						{{ border_colors('violet', 'Violet') }}
-						{{ border_colors('blue', 'Blue') }}
-						{{ border_colors('azure', 'Azure') }}
-						{{ border_colors('cyan', 'Cyan') }}
-						{{ border_colors('spring-green', 'Spring Green') }}
-						{{ border_colors('green', 'Green') }}
-						{{ border_colors('chartreuse', 'Chartreuse') }}
-						{{ border_colors('yellow', 'Yellow') }}
-						{{ border_colors('orange', 'Orange') }}
+						{{ macros.border_colors('red', 'Red') }}
+						{{ macros.border_colors('rose', 'Rose') }}
+						{{ macros.border_colors('magenta', 'Magenta') }}
+						{{ macros.border_colors('violet', 'Violet') }}
+						{{ macros.border_colors('blue', 'Blue') }}
+						{{ macros.border_colors('azure', 'Azure') }}
+						{{ macros.border_colors('cyan', 'Cyan') }}
+						{{ macros.border_colors('spring-green', 'Spring Green') }}
+						{{ macros.border_colors('green', 'Green') }}
+						{{ macros.border_colors('chartreuse', 'Chartreuse') }}
+						{{ macros.border_colors('yellow', 'Yellow') }}
+						{{ macros.border_colors('orange', 'Orange') }}
 
-						{{ border_colors('orange-gray', 'Orange Gray') }}
-						{{ border_colors('dark-gray-orange', 'Dark Gray Orange') }}
-						{{ border_colors('blue-gray', 'Blue Gray') }}
-						{{ border_colors('light-gray-azure', 'Light Gray Azure') }}
+						{{ macros.border_colors('orange-gray', 'Orange Gray') }}
+						{{ macros.border_colors('dark-gray-orange', 'Dark Gray Orange') }}
+						{{ macros.border_colors('blue-gray', 'Blue Gray') }}
+						{{ macros.border_colors('light-gray-azure', 'Light Gray Azure') }}
 						
 					</div>
 				

@@ -16,40 +16,38 @@
                 <div class="row justify-content-center">
 
                     <div class="col-md-6 pb-5">
-                        
-                        {% macro margin_examps(number) %}
-                        <h5 class="mt-4">Margin: {{ number }}</h5>
-                        <div class="js-prism pb-2">
-                            <div class="d-inline-block bg-light">
-                                <div class="m-{{ number }} d-inline-block bg-primary text-light">.m-{{ number }}</div>
-                            </div>
-                        </div>
-                        {% endmacro %}
 
-                        {{ margin_examps('0') }}
-                        {{ margin_examps('1') }}
-                        {{ margin_examps('2') }}
-                        {{ margin_examps('3') }}
-                        {{ margin_examps('4') }}
-                        {{ margin_examps('5') }}
+                        {{ macros.margin_examps('0') }}
+                        {{ macros.margin_examps('1') }}
+                        {{ macros.margin_examps('2') }}
+                        {{ macros.margin_examps('3') }}
+                        {{ macros.margin_examps('4') }}
+                        {{ macros.margin_examps('5') }}
 
                     </div>
                     
                     <div class="col-md-6 pb-5">
-                        
-                        {% macro padding_examps(number) %}
-                        <h5 class="mt-4">Padding: {{ number }}</h5>
-                        <div class="js-prism pb-2">
-                            <div class="p-{{ number }} d-inline-block bg-primary text-light">.p-{{ number }}</div>
-                        </div>
-                        {% endmacro %}
 
-                        {{ padding_examps('0') }}
-                        {{ padding_examps('1') }}
-                        {{ padding_examps('2') }}
-                        {{ padding_examps('3') }}
-                        {{ padding_examps('4') }}
-                        {{ padding_examps('5') }}
+                        {{ macros.padding_examps('0') }}
+                        {{ macros.padding_examps('1') }}
+                        {{ macros.padding_examps('2') }}
+                        {{ macros.padding_examps('3') }}
+                        {{ macros.padding_examps('4') }}
+                        {{ macros.padding_examps('5') }}
+
+                    </div>
+
+                </div>
+
+                <div class="row justify-content-center">
+
+                    <div class="col-md-6 pb-5">
+
+                        {{ macros.negative_margin_examps('1') }}
+                        {{ macros.negative_margin_examps('2') }}
+                        {{ macros.negative_margin_examps('3') }}
+                        {{ macros.negative_margin_examps('4') }}
+                        {{ macros.negative_margin_examps('5') }}
 
                     </div>
 

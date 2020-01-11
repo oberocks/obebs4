@@ -9,30 +9,19 @@
 
                         {{ macros.page_section_heading(global_strings['icons']['sections'][0]['head'], global_strings['icons']['sections'][0]['subhead'], global_strings['icons']['sections'][0]['descrip']) }}
 
-                        {% macro icon_sizes(leadingSpaceClass) %}
-                        <div class="js-prism-fa prism-hidden mb-2" style="cursor: help;">
-                            <i class="fas fa-home{{ leadingSpaceClass }}"></i>
-                        </div>
-                        <pre>
-                            <code class="language-html line-numbers">
-                                &lt;i class="fas fa-home{{ leadingSpaceClass }}"&gt;&lt;/i&gt;
-                            </code>
-                        </pre>
-                        {% endmacro %}
-
-                        {{ icon_sizes(' fa-xs') }}
-                        {{ icon_sizes(' fa-sm') }}
-                        {{ icon_sizes('') }}
-                        {{ icon_sizes(' fa-lg') }}
-                        {{ icon_sizes(' fa-2x') }}
-                        {{ icon_sizes(' fa-3x') }}
-                        {{ icon_sizes(' fa-4x') }}
-                        {{ icon_sizes(' fa-5x') }}
-                        {{ icon_sizes(' fa-6x') }}
-                        {{ icon_sizes(' fa-7x') }}
-                        {{ icon_sizes(' fa-8x') }}
-                        {{ icon_sizes(' fa-9x') }}
-                        {{ icon_sizes(' fa-10x') }}
+                        {{ macros.icon_sizes(' fa-xs') }}
+                        {{ macros.icon_sizes(' fa-sm') }}
+                        {{ macros.icon_sizes('') }}
+                        {{ macros.icon_sizes(' fa-lg') }}
+                        {{ macros.icon_sizes(' fa-2x') }}
+                        {{ macros.icon_sizes(' fa-3x') }}
+                        {{ macros.icon_sizes(' fa-4x') }}
+                        {{ macros.icon_sizes(' fa-5x') }}
+                        {{ macros.icon_sizes(' fa-6x') }}
+                        {{ macros.icon_sizes(' fa-7x') }}
+                        {{ macros.icon_sizes(' fa-8x') }}
+                        {{ macros.icon_sizes(' fa-9x') }}
+                        {{ macros.icon_sizes(' fa-10x') }}
 
                     </div>
 
@@ -40,32 +29,17 @@
 
                         {{ macros.page_section_heading(global_strings['icons']['sections'][1]['head'], global_strings['icons']['sections'][1]['subhead'], global_strings['icons']['sections'][1]['descrip']) }}
 
-                        {% macro icon_borders(widthHeight, paddingTop, faSizeClass) %}
-                        <div class="js-prism-fa prism-hidden mb-2" style="cursor: help;">
-                            <span class="d-inline-block border border-light border-width-4" style="height: {{ widthHeight }}; width: {{ widthHeight }}; padding-top: {{ paddingTop }};">
-                                <i class="fas fa-arrow-right{{ faSizeClass }}"></i>
-                            </span>
-                        </div>
-                        <pre>
-                            <code class="language-html line-numbers">
-                                &lt;span class="d-inline-block border border-light border-width-4" style="height: {{ widthHeight }}; width: {{ widthHeight }}; padding-top: {{ paddingTop }};"&gt;
-                                    &lt;i class="fas fa-arrow-right{{ faSizeClass }}"&gt;&lt;/i&gt;
-                                &lt;/span&gt;
-                            </code>
-                        </pre>
-                        {% endmacro %}
-
-                        {{ icon_borders('1.8rem', '0px', ' fa-sm') }}
-                        {{ icon_borders('2rem', '2px', '') }}
-                        {{ icon_borders('3rem', '5px', ' fa-2x') }}
-                        {{ icon_borders('4rem', '5px', ' fa-3x') }}
-                        {{ icon_borders('5rem', '5px', ' fa-4x') }}
-                        {{ icon_borders('6rem', '5px', ' fa-5x') }}
-                        {{ icon_borders('7rem', '5px', ' fa-6x') }}
-                        {{ icon_borders('8rem', '5px', ' fa-7x') }}
-                        {{ icon_borders('9rem', '5px', ' fa-8x') }}
-                        {{ icon_borders('10rem', '5px', ' fa-9x') }}
-                        {{ icon_borders('11rem', '5px', ' fa-10x') }}
+                        {{ macros.icon_borders('1.8rem', '0px', ' fa-sm') }}
+                        {{ macros.icon_borders('2rem', '2px', '') }}
+                        {{ macros.icon_borders('3rem', '5px', ' fa-2x') }}
+                        {{ macros.icon_borders('4rem', '5px', ' fa-3x') }}
+                        {{ macros.icon_borders('5rem', '5px', ' fa-4x') }}
+                        {{ macros.icon_borders('6rem', '5px', ' fa-5x') }}
+                        {{ macros.icon_borders('7rem', '5px', ' fa-6x') }}
+                        {{ macros.icon_borders('8rem', '5px', ' fa-7x') }}
+                        {{ macros.icon_borders('9rem', '5px', ' fa-8x') }}
+                        {{ macros.icon_borders('10rem', '5px', ' fa-9x') }}
+                        {{ macros.icon_borders('11rem', '5px', ' fa-10x') }}
 
                     </div>
 

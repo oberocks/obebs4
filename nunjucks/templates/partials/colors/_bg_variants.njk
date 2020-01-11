@@ -16,66 +16,29 @@
 
 				<div class="row justify-content-center">
 
-					{% macro bg_variants(classPartial, namePartial) %}
-					
-					<div class="col-md-6 mb-5">
-						<h4>{{ namePartial }} Variants</h4>
-						<div class="js-prism">
-							<div class="bg-{{ classPartial }}-50">50 {{ namePartial }} Background</div>
-						</div>
-						<div class="js-prism">
-							<div class="bg-{{ classPartial }}-100">100 {{ namePartial }} Background</div>
-						</div>
-						<div class="js-prism">
-							<div class="bg-{{ classPartial }}-200">200 {{ namePartial }} Background</div>
-						</div>
-						<div class="js-prism">
-							<div class="bg-{{ classPartial }}-300">300 {{ namePartial }} Background</div>
-						</div>
-						<div class="js-prism">
-							<div class="bg-{{ classPartial }}-400">400 {{ namePartial }} Background</div>
-						</div>
-						<div class="js-prism">
-							<div class="bg-{{ classPartial }}-500">500 {{ namePartial }} Background</div>
-						</div>
-						<div class="js-prism">
-							<div class="bg-{{ classPartial }}-600">600 {{ namePartial }} Background</div>
-						</div>
-						<div class="js-prism">
-							<div class="bg-{{ classPartial }}-700">700 {{ namePartial }} Background</div>
-						</div>
-						<div class="js-prism">
-							<div class="bg-{{ classPartial }}-800">800 {{ namePartial }} Background</div>
-						</div>
-						<div class="js-prism">
-							<div class="bg-{{ classPartial }}-900">900 {{ namePartial }} Background</div>
-						</div>
-					</div>
-					{% endmacro %}
+					{{ macros.bg_variants('white', 'White') }}
+					{{ macros.bg_variants('light-gray', 'Light Gray') }}
+					{{ macros.bg_variants('gray', 'Gray') }}
+					{{ macros.bg_variants('dark-gray', 'Dark Gray') }}
+					{{ macros.bg_variants('black', 'Black') }}
 
-					{{ bg_variants('white', 'White') }}
-					{{ bg_variants('light-gray', 'Light Gray') }}
-					{{ bg_variants('gray', 'Gray') }}
-					{{ bg_variants('dark-gray', 'Dark Gray') }}
-					{{ bg_variants('black', 'Black') }}
+					{{ macros.bg_variants('red', 'Red') }}
+					{{ macros.bg_variants('rose', 'Rose') }}
+					{{ macros.bg_variants('magenta', 'Magenta') }}
+					{{ macros.bg_variants('violet', 'Violet') }}
+					{{ macros.bg_variants('blue', 'Blue') }}
+					{{ macros.bg_variants('azure', 'Azure') }}
+					{{ macros.bg_variants('cyan', 'Cyan') }}
+					{{ macros.bg_variants('spring-green', 'Spring Green') }}
+					{{ macros.bg_variants('green', 'Green') }}
+					{{ macros.bg_variants('chartreuse', 'Chartreuse') }}
+					{{ macros.bg_variants('yellow', 'Yellow') }}
+					{{ macros.bg_variants('orange', 'Orange') }}
 
-					{{ bg_variants('red', 'Red') }}
-					{{ bg_variants('rose', 'Rose') }}
-					{{ bg_variants('magenta', 'Magenta') }}
-					{{ bg_variants('violet', 'Violet') }}
-					{{ bg_variants('blue', 'Blue') }}
-					{{ bg_variants('azure', 'Azure') }}
-					{{ bg_variants('cyan', 'Cyan') }}
-					{{ bg_variants('spring-green', 'Spring Green') }}
-					{{ bg_variants('green', 'Green') }}
-					{{ bg_variants('chartreuse', 'Chartreuse') }}
-					{{ bg_variants('yellow', 'Yellow') }}
-					{{ bg_variants('orange', 'Orange') }}
-
-					{{ bg_variants('orange-gray', 'Orange Gray') }}
-					{{ bg_variants('dark-gray-orange', 'Dark Gray Orange') }}
-					{{ bg_variants('blue-gray', 'Blue Gray') }}
-					{{ bg_variants('light-gray-azure', 'Light Gray Azure') }}
+					{{ macros.bg_variants('orange-gray', 'Orange Gray') }}
+					{{ macros.bg_variants('dark-gray-orange', 'Dark Gray Orange') }}
+					{{ macros.bg_variants('blue-gray', 'Blue Gray') }}
+					{{ macros.bg_variants('light-gray-azure', 'Light Gray Azure') }}
 
 				</div>
 
