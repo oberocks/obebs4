@@ -1,7 +1,5 @@
 <!-- _global_macros.njk -->
 
-
-
 {%- macro alert_colors(classPartial, namePartial) %}
 <div class="js-prism">
     <div class="alert alert-{{ classPartial }} alert-dismissible mb-2 fade show text-left" role="alert">
@@ -505,6 +503,30 @@
     </div>
 
 </div>
+{%- endmacro %}
+
+
+
+{%- macro columns_responsive_classes(int) %}
+<tr>
+    <th scope="row" class="bg-dark text-light border-light"><samp>.col-{{ int }}</samp></th>
+    <td><samp>.col-sm-{{ int }}</samp></td>
+    <td><samp>.col-md-{{ int }}</samp></td>
+    <td><samp>.col-lg-{{ int }}</samp></td>
+    <td><samp>.col-xl-{{ int }}</samp></td>
+</tr>
+{%- endmacro %}
+
+
+
+{%- macro columns_single_classes(string) %}
+<tr>
+    <th scope="row" class="bg-dark text-light border-light"><samp>.{{ string }}</samp></th>
+    <td><samp>.{{ string }}-sm</samp></td>
+    <td><samp>.{{ string }}-md</samp></td>
+    <td><samp>.{{ string }}-lg</samp></td>
+    <td><samp>.{{ string }}-xl</samp></td>
+</tr>
 {%- endmacro %}
 
 
@@ -1325,6 +1347,19 @@
     </ul>
 </div>
 <div style="height: 20px;"> </div>
+{%- endmacro %}
+
+
+
+{%- macro list_group_responsive(namePartial, classPartial) %}
+<label class="font-weight-bold pb-1 pt-4">{{ namePartial }} Horiz. List Group Example</label>
+<div class="js-prism mb-2 text-left">
+    <ul class="list-group list-group-horizontal{{ classPartial }}">
+        <li class="list-group-item">Item One</li>
+        <li class="list-group-item">Item Two</li>
+        <li class="list-group-item">Item Three</li>
+    </ul>
+</div>
 {%- endmacro %}
 
 
@@ -2386,6 +2421,30 @@
         <th scope="col">X-Large</th>
     </tr>
 </thead>
+{%- endmacro %}
+
+
+
+{%- macro toast_colors(name, toastClasses, headingClasses, closeBtnClasses, bodyClasses) %}
+<label class="d-block font-weight-bold text-center">{{ name }} Toast Example</label>
+<div class="js-prism mb-2">
+    <!-- Flexbox container to align toasts -->
+    <div aria-live="polite" aria-atomic="true" class="d-flex justify-content-center align-items-center bg-dark p-4">
+        
+        <!-- Toasts go in an aria-live & aria-atomic element with aria-live & aria-atomic attributes on the toast, too! -->
+        <div class="toast {{ toastClasses }} rounded-0 fade show" role="alert" aria-live="assertive" aria-atomic="true">
+            <div class="toast-header {{ headingClasses }} rounded-0">
+                <strong class="mr-auto">{{ name }} Toast</strong>
+                <small>11 mins ago</small>
+                <button type="button" class="btn-link {{ closeBtnClasses }} ml-2 close" data-dismiss="toast" aria-label="Close">
+                    <span aria-hidden="false">&times;</span>
+                </button>
+            </div>
+            <div class="toast-body {{ bodyClasses }}">This is a {{ name }} toast message body element.</div>
+        </div>
+
+    </div>
+</div>
 {%- endmacro %}
 
 

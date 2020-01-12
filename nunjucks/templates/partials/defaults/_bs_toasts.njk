@@ -1,0 +1,88 @@
+<!-- _bs_toasts.njk -->
+		<div class="container-fluid pt-5 text-center bg-white text-dark">
+        
+            <div class="container modal-workspace">
+
+                <div class="row justify-content-center pt-5">
+                    
+                    <div id="{{ global_strings['defaults']['sections'][78]['id'] }}" class="col-12">
+                        
+                        {{ macros.page_section_heading(global_strings['defaults']['sections'][78]['head'], global_strings['defaults']['sections'][78]['subhead'], global_strings['defaults']['sections'][78]['descrip']) }}
+
+                    </div>
+
+                </div>
+
+                <div class="row justify-content-center">
+
+                    <div class="col pb-5">
+
+                        <h5>Minimalist Toast</h5>
+                        
+                        <div class="js-prism mb-2">
+                            <!-- Flexbox container to align toasts -->
+                            <div aria-live="polite" aria-atomic="true" class="d-flex justify-content-center align-items-center bg-dark p-4">
+                                
+                                <!-- Toasts go in an aria-live & aria-atomic element with aria-live & aria-atomic attributes on the toast, too! -->
+                                <div class="toast fade show" role="alert" aria-live="assertive" aria-atomic="true">
+                                    <div class="toast-header">
+                                        <strong class="mr-auto">Minimalist Toast</strong>
+                                        <button type="button" class="btn-link ml-2 close" data-dismiss="toast" aria-label="Close">
+                                            <span aria-hidden="false">&times;</span>
+                                        </button>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <h5 class="pt-3">Basic Toast Notification</h5>
+                        
+                        <div class="js-prism mb-2">
+                            <!-- Flexbox container to align toasts -->
+                            <div aria-live="polite" aria-atomic="true" class="d-flex justify-content-center align-items-center bg-dark p-4">
+                                
+                                <!-- Toasts go in an aria-live & aria-atomic element with aria-live & aria-atomic attributes on the toast, too! -->
+                                <div class="toast fade show" role="alert" aria-live="assertive" aria-atomic="true">
+                                    <div class="toast-header">
+                                        <strong class="mr-auto">Basic Toast</strong>
+                                        <small>11 mins ago</small>
+                                        <button type="button" class="btn-link ml-2 close" data-dismiss="toast" aria-label="Close">
+                                            <span aria-hidden="false">&times;</span>
+                                        </button>
+                                    </div>
+                                    <div class="toast-body text-left">This is a translucient toast message body element.</div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <h5 class="pt-3">Toast with Thumbnail</h5>
+                        
+                        <div class="js-prism mb-2">
+                            <!-- Flexbox container to align toasts -->
+                            <div aria-live="polite" aria-atomic="true" class="d-flex justify-content-center align-items-center bg-dark p-4">
+                                
+                                <!-- Toasts go in an aria-live & aria-atomic element with aria-live & aria-atomic attributes on the toast, too! -->
+                                <div class="toast fade show" role="alert" aria-live="assertive" aria-atomic="true">
+                                    <div class="toast-header">
+                                        <img src="images/64x64.jpg" class="rounded mr-2" alt="Thumbnail Alt Text" style="height:20px; width:20px;">
+                                        <strong class="mr-auto">Thumbnail Toast</strong>
+                                        <small>2 mins ago</small>
+                                        <button type="button" class="btn-link ml-2 close" data-dismiss="toast" aria-label="Close">
+                                            <span aria-hidden="false">&times;</span>
+                                        </button>
+                                    </div>
+                                    <div class="toast-body text-left">This is a translucient toast message body element.</div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>

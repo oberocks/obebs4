@@ -18,6 +18,10 @@ $(function(){
 $('[data-toggle="popover"]').popover(),
 // Inject OBEB4 color class into popover injected elements
 $('[data-toggle="popover"]').on("inserted.bs.popover",function(){var headBg="";void 0!==$(this).data("popover-header-bg")&&(headBg=$(this).data("popover-header-bg").trim());var headTextCol="";void 0!==$(this).data("popover-header-text")&&(headTextCol=$(this).data("popover-header-text").trim());var bodyTextCol="";void 0!==$(this).data("popover-body-text")&&(bodyTextCol=$(this).data("popover-body-text").trim()),$(".popover .popover-header").last().addClass(headBg),$(".popover .popover-header").last().addClass(headTextCol),$(".popover .popover-body").last().addClass(bodyTextCol)})}),// end document ready
+/* obebs4-toasts.js */
+$(function(){
+// Initialize Bootstrap Toasts with OBE:BS4 default options
+$(".toast").toast({animation:!0,autohide:!0,delay:500})}),// end document ready
 $(function(){
 // Initialize Bootstrap Tooltips
 $('[data-toggle="tooltip"]').tooltip(),

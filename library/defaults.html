@@ -5027,6 +5027,61 @@
 
             </div>
 
+            <div class="row justify-content-center">
+
+                <div class="col pb-5">
+
+                    <h5 class="pt-3">Responsive Horizontal List Groups</h5>
+
+                    <label class="font-weight-bold pb-1 pt-4">Extra Small Horiz. List Group Example</label>
+                    <div class="js-prism mb-2 text-left">
+                        <ul class="list-group list-group-horizontal">
+                            <li class="list-group-item">Item One</li>
+                            <li class="list-group-item">Item Two</li>
+                            <li class="list-group-item">Item Three</li>
+                        </ul>
+                    </div>
+
+                    <label class="font-weight-bold pb-1 pt-4">Small Horiz. List Group Example</label>
+                    <div class="js-prism mb-2 text-left">
+                        <ul class="list-group list-group-horizontal-sm">
+                            <li class="list-group-item">Item One</li>
+                            <li class="list-group-item">Item Two</li>
+                            <li class="list-group-item">Item Three</li>
+                        </ul>
+                    </div>
+
+                    <label class="font-weight-bold pb-1 pt-4">Medium Horiz. List Group Example</label>
+                    <div class="js-prism mb-2 text-left">
+                        <ul class="list-group list-group-horizontal-md">
+                            <li class="list-group-item">Item One</li>
+                            <li class="list-group-item">Item Two</li>
+                            <li class="list-group-item">Item Three</li>
+                        </ul>
+                    </div>
+
+                    <label class="font-weight-bold pb-1 pt-4">Large Horiz. List Group Example</label>
+                    <div class="js-prism mb-2 text-left">
+                        <ul class="list-group list-group-horizontal-lg">
+                            <li class="list-group-item">Item One</li>
+                            <li class="list-group-item">Item Two</li>
+                            <li class="list-group-item">Item Three</li>
+                        </ul>
+                    </div>
+
+                    <label class="font-weight-bold pb-1 pt-4">Extra Large Horiz. List Group Example</label>
+                    <div class="js-prism mb-2 text-left">
+                        <ul class="list-group list-group-horizontal-xl">
+                            <li class="list-group-item">Item One</li>
+                            <li class="list-group-item">Item Two</li>
+                            <li class="list-group-item">Item Three</li>
+                        </ul>
+                    </div>
+
+                </div>
+
+            </div>
+
         </div>
 
     </div>
@@ -6812,6 +6867,98 @@
         </div>
 
     </div>
+    <!-- _bs_toasts.njk -->
+    <div class="container-fluid pt-5 text-center bg-white text-dark">
+
+        <div class="container modal-workspace">
+
+            <div class="row justify-content-center pt-5">
+
+                <div id="toast-notification-components-section" class="col-12">
+
+                    <h1>Toast Notification</h1>
+                    <div class="lead">C O M P O N E N T S</div>
+                    <hr />
+                    <p class="description-text text-muted"><em>These are a variety of Bootstrap 4 toast notification component examples.</em></p>
+                    <hr />
+
+                </div>
+
+            </div>
+
+            <div class="row justify-content-center">
+
+                <div class="col pb-5">
+
+                    <h5>Minimalist Toast</h5>
+
+                    <div class="js-prism mb-2">
+                        <!-- Flexbox container to align toasts -->
+                        <div aria-live="polite" aria-atomic="true" class="d-flex justify-content-center align-items-center bg-dark p-4">
+
+                            <!-- Toasts go in an aria-live & aria-atomic element with aria-live & aria-atomic attributes on the toast, too! -->
+                            <div class="toast fade show" role="alert" aria-live="assertive" aria-atomic="true">
+                                <div class="toast-header">
+                                    <strong class="mr-auto">Minimalist Toast</strong>
+                                    <button type="button" class="btn-link ml-2 close" data-dismiss="toast" aria-label="Close">
+                                        <span aria-hidden="false">&times;</span>
+                                    </button>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <h5 class="pt-3">Basic Toast Notification</h5>
+
+                    <div class="js-prism mb-2">
+                        <!-- Flexbox container to align toasts -->
+                        <div aria-live="polite" aria-atomic="true" class="d-flex justify-content-center align-items-center bg-dark p-4">
+
+                            <!-- Toasts go in an aria-live & aria-atomic element with aria-live & aria-atomic attributes on the toast, too! -->
+                            <div class="toast fade show" role="alert" aria-live="assertive" aria-atomic="true">
+                                <div class="toast-header">
+                                    <strong class="mr-auto">Basic Toast</strong>
+                                    <small>11 mins ago</small>
+                                    <button type="button" class="btn-link ml-2 close" data-dismiss="toast" aria-label="Close">
+                                        <span aria-hidden="false">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="toast-body text-left">This is a translucient toast message body element.</div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <h5 class="pt-3">Toast with Thumbnail</h5>
+
+                    <div class="js-prism mb-2">
+                        <!-- Flexbox container to align toasts -->
+                        <div aria-live="polite" aria-atomic="true" class="d-flex justify-content-center align-items-center bg-dark p-4">
+
+                            <!-- Toasts go in an aria-live & aria-atomic element with aria-live & aria-atomic attributes on the toast, too! -->
+                            <div class="toast fade show" role="alert" aria-live="assertive" aria-atomic="true">
+                                <div class="toast-header">
+                                    <img src="images/64x64.jpg" class="rounded mr-2" alt="Thumbnail Alt Text" style="height:20px; width:20px;">
+                                    <strong class="mr-auto">Thumbnail Toast</strong>
+                                    <small>2 mins ago</small>
+                                    <button type="button" class="btn-link ml-2 close" data-dismiss="toast" aria-label="Close">
+                                        <span aria-hidden="false">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="toast-body text-left">This is a translucient toast message body element.</div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
     <!-- _bs_tooltips.njk -->
     <div class="container-fluid pt-5 text-center bg-white text-dark">
 
@@ -8305,7 +8452,7 @@
 
                 <small class="text-light">OBE:BS4 VERSION:</small>
 
-                <p class="lead">0.8.8</p>
+                <p class="lead">0.8.9</p>
 
                 <hr class="border-gray" />
 
@@ -8487,6 +8634,9 @@
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link text-light py-1" href="colors.html#text-tints-shades-section" data-description="These are your sets of tints (via adding white) and shades (via adding black) for each of your text colors.">Text Tints/Shades</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-light py-1" href="colors.html#toast-notification-colors-section" data-description="These are examples of color variations for Bootstrap 4 toast notification components.">Toast Notification Colors</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link text-light py-1" href="colors.html#tooltip-colors-section" data-description="These are your tooltip color options.">Tooltip Colors</a>
@@ -8729,6 +8879,9 @@
                                 <a class="nav-link text-light py-1" href="#text-wrapping-truncation-section" data-description="These are the text wrapping and text overflow/truncation options in Bootstrap 4.">Text: Wrapping &amp; Truncation</a>
                             </li>
                             <li class="nav-item">
+                                <a class="nav-link text-light py-1" href="#toast-notification-components-section" data-description="These are a variety of Bootstrap 4 toast notification component examples.">Toast Notification Components</a>
+                            </li>
+                            <li class="nav-item">
                                 <a class="nav-link text-light py-1" href="#tooltip-elements-section" data-description="These are examples of different tooltip options in Bootstrap 4.">Tooltip Elements</a>
                             </li>
                             <li class="nav-item">
@@ -8964,6 +9117,9 @@
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link text-light py-1" href="reference.html#position-classes-table" data-description="These are examples of different block-level positioning options in Bootstrap 4.">Position Utility Classes</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-light py-1" href="reference.html#responsive-columns-classes-table" data-description="These are the available Bootstrap 4 responsive column utility classe.">Responsive Columns Classes</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link text-light py-1" href="reference.html#responsive-containers-classes-table" data-description="These are the available Bootstrap 4 responsive container utility classes and their corresponding widths at specfic system breakpoints.">Responsive Container Classes</a>

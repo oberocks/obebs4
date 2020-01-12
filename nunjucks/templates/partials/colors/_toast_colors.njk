@@ -1,0 +1,53 @@
+<!-- _toast_colors.njk -->
+		{% if obe_settings['enable-obebs4-background-wheel-colors'] === 'true' %}
+		<div class="container-fluid pt-5 text-center bg-white text-dark">
+		
+			<div class="container">
+				
+				<div class="row justify-content-center">
+
+					<div id="{{ global_strings['colors']['sections'][44]['id'] }}" class="col pb-5">
+					
+						{{ macros.page_section_heading(global_strings['colors']['sections'][44]['head'], global_strings['colors']['sections'][44]['subhead'], global_strings['colors']['sections'][44]['descrip']) }}
+
+						{{ macros.toast_colors('Primary', 'text-primary', 'bg-primary text-white', 'text-light', 'text-left') }}
+                        {{ macros.toast_colors('Secondary', 'text-secondary', 'bg-secondary text-white', 'text-light', 'text-left') }}
+                        {{ macros.toast_colors('Success', 'text-success', 'bg-success text-white', 'text-light', 'text-left') }}
+                        {{ macros.toast_colors('Danger', 'text-danger', 'bg-danger text-white', 'text-light', 'text-left') }}
+                        {{ macros.toast_colors('Warning', 'text-warning', 'bg-warning text-white', 'text-light', 'text-left') }}
+                        {{ macros.toast_colors('Info', 'text-info', 'bg-info text-white', 'text-light', 'text-left') }}
+                        {{ macros.toast_colors('Light', 'text-dark', 'bg-light text-dark', 'text-white', 'text-left') }}
+                        {{ macros.toast_colors('Dark', 'text-dark', 'bg-dark text-white', 'text-light', 'text-left') }}
+
+                        {{ macros.toast_colors('White', 'bg-white text-dark', 'bg-white text-dark', 'text-light', 'text-left') }}
+                        {{ macros.toast_colors('Light Gray', 'text-dark', 'bg-light-gray text-dark', 'text-dark', 'text-left') }}
+                        {{ macros.toast_colors('Gray', 'bg-gray text-white', 'bg-gray-700 text-white', 'text-light', 'text-left') }}
+                        {{ macros.toast_colors('Dark Gray', 'bg-dark-gray text-white', 'bg-dark-gray-700 text-white', 'text-light', 'text-left') }}
+                        {{ macros.toast_colors('Black', 'bg-black text-white', 'bg-black-700 text-white', 'text-light', 'text-left') }}
+
+                        {{ macros.toast_colors('Red', 'bg-red text-white', 'bg-red-700 text-white', 'text-red-100', 'text-left') }}
+                        {{ macros.toast_colors('Rose', 'bg-rose text-white', 'bg-rose-700 text-white', 'text-rose-100', 'text-left') }}
+                        {{ macros.toast_colors('Magenta', 'bg-magenta text-white', 'bg-magenta-700 text-white', 'text-magenta-100', 'text-left') }}
+                        {{ macros.toast_colors('Violet', 'bg-violet text-white', 'bg-violet-700 text-white', 'text-violet-100', 'text-left') }}
+                        {{ macros.toast_colors('Blue', 'bg-blue text-white', 'bg-blue-700 text-white', 'text-blue-100', 'text-left') }}
+                        {{ macros.toast_colors('Azure', 'bg-azure text-white', 'bg-azure-700 text-white', 'text-azure-100', 'text-left') }}
+                        {{ macros.toast_colors('Cyan', 'bg-cyan text-white', 'bg-cyan-700 text-white', 'text-cyan-100', 'text-left') }}
+                        {{ macros.toast_colors('Spring Green', 'bg-spring-green text-white', 'bg-spring-green-700 text-white', 'text-spring-green-100', 'text-left') }}
+                        {{ macros.toast_colors('Green', 'bg-green text-white', 'bg-green-700 text-white', 'text-green-100', 'text-left') }}
+                        {{ macros.toast_colors('Chartreuse', 'bg-chartreuse text-dark', 'bg-chartreuse-700 text-dark', 'text-chartreuse-100', 'text-left') }}
+                        {{ macros.toast_colors('Yellow', 'bg-yellow text-dark', 'bg-yellow-700 text-dark', 'text-yellow-100', 'text-left') }}
+                        {{ macros.toast_colors('Orange', 'bg-orange text-white', 'bg-orange-700 text-white', 'text-orange-100', 'text-left') }}
+
+                        {{ macros.toast_colors('Orange Gray', 'bg-orange-gray text-white', 'bg-orange-gray-700 text-white', 'text-orange-gray-100', 'text-left') }}
+                        {{ macros.toast_colors('Dark Gray Orange', 'bg-dark-gray-orange text-white', 'bg-dark-gray-orange-700 text-white', 'text-dark-gray-orange-100', 'text-left') }}
+                        {{ macros.toast_colors('Blue Gray', 'bg-blue-gray text-white', 'bg-blue-gray-700 text-white', 'text-blue-gray-100', 'text-left') }}
+                        {{ macros.toast_colors('Light Gray Azure', 'bg-light-gray-azure text-white', 'bg-light-gray-azure-700 text-white', 'text-light-gray-azure-100', 'text-left') }}
+						
+					</div>
+					
+				</div>
+
+			</div>
+
+		</div>
+		{% endif %}

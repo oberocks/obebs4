@@ -315,6 +315,13 @@
                 "link" : "Modal Colors",
                 "descrip" : "These are examples of colored modal components that use Bootstrap 4 utility and color classes.",
                 "id" : "modal-colors-section"
+            },{
+                "index" : 44,
+                "head" : "Toast Notification",
+                "subhead" : "C O L O R S",
+                "link" : "Toast Notification Colors",
+                "descrip" : "These are examples of color variations for Bootstrap 4 toast notification components.",
+                "id" : "toast-notification-colors-section"
             }
         ]
     },
@@ -872,6 +879,13 @@
                 "link" : "Spinner Components",
                 "descrip" : "These are a variety of Bootstrap 4 spinner component examples.",
                 "id" : "spinner-components-section"
+            },{
+                "index" : 78,
+                "head" : "Toast Notification",
+                "subhead" : "C O M P O N E N T S",
+                "link" : "Toast Notification Components",
+                "descrip" : "These are a variety of Bootstrap 4 toast notification component examples.",
+                "id" : "toast-notification-components-section"
             }
         ]
     },
@@ -1364,6 +1378,13 @@
                 "link" : "List Group Horizontal Classes",
                 "descrip" : "These are the available Bootstrap 4 list group horizontal utility classe.",
                 "id" : "list-group-horizontal-classes-table"
+            },{
+                "index" : 23,
+                "head" : "Responsive Columns",
+                "subhead" : "C L A S S E S",
+                "link" : "Responsive Columns Classes",
+                "descrip" : "These are the available Bootstrap 4 responsive column utility classe.",
+                "id" : "responsive-columns-classes-table"
             }
         ]
     },

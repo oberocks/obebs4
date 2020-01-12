@@ -228,6 +228,7 @@ gulp.task('concat-js', function(){
             './node_modules/jquery/dist/jquery.min.js',
             './node_modules/bootstrap/dist/js/bootstrap.bundle.min.js',
             './node_modules/obebs4/obebs4/core/js/obebs4-popovers.js',
+            './node_modules/obebs4/obebs4/core/js/obebs4-toasts.js',
             './node_modules/obebs4/obebs4/core/js/obebs4-tooltips.js',
             './node_modules/obebs4/obebs4/core/js/obebs4-fa5-animated-checkboxes.js',
             './node_modules/obebs4/obebs4/prismjs/js/prism.min.js',
@@ -264,6 +265,7 @@ gulp.task('concat-production-js', function(){
             './node_modules/jquery/dist/jquery.min.js',
             './node_modules/bootstrap/dist/js/bootstrap.bundle.min.js',
             './node_modules/obebs4/obebs4/core/js/obebs4-popovers.js',
+            './node_modules/obebs4/obebs4/core/js/obebs4-toasts.js',
             './node_modules/obebs4/obebs4/core/js/obebs4-tooltips.js',
             './node_modules/obebs4/obebs4/core/js/obebs4-fa5-animated-checkboxes.js',
             './node_modules/obebs4/obebs4/core/js/obebs4-calendar-datepicker-plugin.js',
@@ -292,6 +294,7 @@ gulp.task('concat-wds-js', function(){
         [
             './node_modules/bootstrap/dist/js/bootstrap.bundle.min.js',
             './node_modules/obebs4/obebs4/core/js/obebs4-popovers.js',
+            './node_modules/obebs4/obebs4/core/js/obebs4-toasts.js',
             './node_modules/obebs4/obebs4/core/js/obebs4-tooltips.js',
             './node_modules/obebs4/obebs4/core/js/obebs4-fa5-animated-checkboxes.js',
             './node_modules/obebs4/obebs4/core/js/obebs4-calendar-datepicker-plugin.js',
