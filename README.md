@@ -26,6 +26,7 @@ THE OBE:BS4 Web Design System was designed to bridge the gaps between web projec
 * [Updating Versions](#updating-versions)
     * [Updating OBE:BS4 to Latest Version](#updating-obebs4-to-latest-version)
     * [Updating OBE:BS4 Build Scripts for Gulp](#updating-obebs4-build-scripts-for-gulp)
+    * [Updating OBE:BS4 obebs4_settings.json file](#updating-obebs4-obebs4settingsjson-file)
 * [Customizing Your Library](#cutromizing-your-library)
     * [Bringing System Directories to Root](#bringing-system-directories-to-root)
     * [Adjusting the Gulp File](#adjusting-the-gulp-file)
@@ -303,6 +304,40 @@ open library/boilerplates.html
 
 You'll often find yourself in a position to update your OBE:BS4 web design system to get the newest goodies available in your current project. To update the system, use the following command(s):
 
+### Updating OBE:BS4 Build Dependencies
+
+Before updating your OBE:BS4 system, you'll want to ensure your project has all of the build dependencies for the OBE:BS4 build process scripts. Use the following commands to ensure your project dependencies are up to date:
+
+Bootstrap:
+```bash
+npm install bootstrap@latest --save
+```
+
+jQuery:
+```bash
+npm install jquery@latest --save
+```
+
+Prism.js:
+```bash
+npm install prismjs@latest --save
+```
+
+jQuery DataTables:
+```bash
+npm install datatables.net@latest --save
+```
+
+jQuery BS4 DataTables:
+```bash
+npm install datatables.net-bs4@latest --save
+```
+
+TinyColor 2:
+```bash
+npm install tinycolor2@latest --save
+```
+
 ### Updating OBE:BS4 to Latest Version
 
 First use npm install:
@@ -323,6 +358,39 @@ open node_modules/obebs4/example-gulpfile.js
 ```bash
 cp node_modules/obebs4/example-gulpfile.js gulpfile.js
 ```
+
+### Updating OBE:BS4 obebs4_settings.json file
+
+While this project is in an alpha stage, whenever changes are made to the default `obebs4_settings.json` project file, and you are already using an `obebs4_settings.json` file in your project, you might want to update the `obebs4_settings.json` file manually - allowing you to run the library generation script and see these settings reflected correctly in the Library Settings Page.
+
+The following changes were made to the default `obebs4_settings.json` file during the BE:BS4 v0.8.* upgrades:
+```json
+"enable-caret": "true",
+"enable-rounded": "true",
+"enable-shadows": "false",
+"enable-gradients": "false",
+"enable-transitions": "true",
+"enable-prefers-reduced-motion-media-query": "true",
+"enable-grid-classes": "true",
+"enable-pointer-cursor-for-buttons": "true",
+"enable-print-styles": "true",
+"enable-responsive-font-sizes": "false",
+"enable-validation-icons": "true",
+"enable-deprecation-messages": "true",
+```
+
+```json
+"color-50-lighten-percent": "30%",
+"color-100-lighten-percent": "20%",
+"color-200-lighten-percent": "15%",
+"color-300-lighten-percent": "10%",
+"color-400-lighten-percent": "5%",
+"color-600-darken-percent": "5%",
+"color-700-darken-percent": "10%",
+"color-800-darken-percent": "15%",
+"color-900-darken-percent": "20%",
+```
+
 
 <!---
 ## Customizing Your Web Design System
