@@ -303,7 +303,7 @@ open library/boilerplates.html
 ## Updating Versions
 
 You'll often find yourself in a position to update your OBE:BS4 web design system to get the newest goodies available in your current project. To update the system, use the following command(s):
-
+<!---
 ### Updating OBE:BS4 Build Dependencies
 
 Before updating your OBE:BS4 system, you'll want to ensure your project has all of the build dependencies for the OBE:BS4 build process scripts. Use the following commands to ensure your project dependencies are up to date:
@@ -337,6 +337,7 @@ TinyColor 2:
 ```bash
 npm install tinycolor2@latest --save
 ```
+-->
 
 ### Updating OBE:BS4 to Latest Version
 
