@@ -25,6 +25,7 @@ THE OBE:BS4 Web Design System was designed to bridge the gaps between web projec
     * [Installing via NPM](#installing-via-npm)
 * [Updating Versions](#updating-versions)
     * [Updating OBE:BS4 to Latest Version](#updating-obebs4-to-latest-version)
+    * [Updating OBE:BS4 Build Scripts for Gulp](#updating-obebs4-build-scripts-for-gulp)
 * [Customizing Your Library](#cutromizing-your-library)
     * [Bringing System Directories to Root](#bringing-system-directories-to-root)
     * [Adjusting the Gulp File](#adjusting-the-gulp-file)
@@ -304,9 +305,23 @@ You'll often find yourself in a position to update your OBE:BS4 web design syste
 
 ### Updating OBE:BS4 to Latest Version
 
-Using npm install:
+First use npm install:
 ```bash
-npm install obebs4@latest --save
+npm install oberocks/obebs4#master --save
+```
+
+### Updating OBE:BS4 Build Scripts for Gulp
+
+If your project is using Gulp in any way, you won't want to overwrite your project's build scripts with the OBE:BS4 gulp file scripts! In this case, you'll need to use the first command from the following options:
+
+**If Project IS using Gulp**: you'll just want to open the file and manually copy over the new `gulpfile.js` scripts to your project `gulpfile.js` file using:
+```bash
+open node_modules/obebs4/example-gulpfile.js
+```
+
+**If Project IS NOT using Gulp**: Then simply update your current OBE:BS4 `gulpfile.js` file to the new one with:
+```bash
+cp node_modules/obebs4/example-gulpfile.js gulpfile.js
 ```
 
 <!---
