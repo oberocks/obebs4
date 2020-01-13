@@ -1352,12 +1352,12 @@
 
 
 {%- macro list_group_responsive(namePartial, classPartial) %}
-<label class="font-weight-bold pb-1 pt-4">{{ namePartial }} Horiz. List Group Example</label>
+<label class="d-block font-weight-bold pb-1 pt-4 text-left">{{ namePartial }} Horiz. List Group Example</label>
 <div class="js-prism mb-2 text-left">
     <ul class="list-group list-group-horizontal{{ classPartial }}">
-        <li class="list-group-item">Item One</li>
-        <li class="list-group-item">Item Two</li>
-        <li class="list-group-item">Item Three</li>
+        <li class="list-group-item flex-fill">Item One</li>
+        <li class="list-group-item flex-fill">Item Two</li>
+        <li class="list-group-item flex-fill">Item Three</li>
     </ul>
 </div>
 {%- endmacro %}

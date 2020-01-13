@@ -50,45 +50,50 @@
 
                     <div class="col-md-6 pb-5 text-left">
                         
+                        <h3 class="pb-2">Bootstrap Options</h3>
+
+                        {{ macros.settings_form_checkbox('enable-caret', 'Enable Bootstrap Caret', obe_settings['enable-caret-checkbox']) }}
+                        {{ macros.settings_form_checkbox('enable-rounded', 'Enable Bootstrap Rounded Corners', obe_settings['enable-rounded-checkbox']) }}
+                        {{ macros.settings_form_checkbox('enable-shadows', 'Enable Bootstrap Box Shadows', obe_settings['enable-shadows-checkbox']) }}
+                        {{ macros.settings_form_checkbox('enable-gradients', 'Enable Bootstrap Gradients', obe_settings['enable-gradients-checkbox']) }}
+                        {{ macros.settings_form_checkbox('enable-transitions', 'Enable Bootstrap Transitions', obe_settings['enable-transitions-checkbox']) }}
+                        {{ macros.settings_form_checkbox('enable-prefers-reduced-motion-media-query', 'Enable Bootstrap Prefers Reduced Motion Media Query', obe_settings['enable-prefers-reduced-motion-media-query-checkbox']) }}
+                        {{ macros.settings_form_checkbox('enable-grid-classes', 'Enable Bootstrap Grid Classes', obe_settings['enable-grid-classes-checkbox']) }}
+                        {{ macros.settings_form_checkbox('enable-pointer-cursor-for-buttons', 'Enable Bootstrap Pointer Cursor for Buttons', obe_settings['enable-pointer-cursor-for-buttons-checkbox']) }}
+                        {{ macros.settings_form_checkbox('enable-print-styles', 'Enable Bootstrap Print Styles', obe_settings['enable-print-styles-checkbox']) }}
+                        {{ macros.settings_form_checkbox('enable-responsive-font-sizes', 'Enable Bootstrap Responsive Font Sizes', obe_settings['enable-responsive-font-sizes-checkbox']) }}
+                        {{ macros.settings_form_checkbox('enable-validation-icons', 'Enable Bootstrap Validation Icons', obe_settings['enable-validation-icons-checkbox']) }}
+                        {{ macros.settings_form_checkbox('enable-deprecation-messages', 'Enable Bootstrap Build Depreciation Messages', obe_settings['enable-deprecation-messages-checkbox']) }}
+
+                    </div>
+
+                </div>
+
+                <div class="row justify-content-center pt-5">
+
+                    <div class="col-md-6 pb-5 text-left">
+                        
                         <h3 class="pb-2">OBE:BS4 Color Classes</h3>
                         
-                        {{ macros.settings_form_checkbox('enable-obebs4-alert-wheel-colors', 'Enable Alert Color Classes', ' checked') }}
-                        
-                        {{ macros.settings_form_checkbox('enable-obebs4-alert-variations', 'Enable Alert Color Variation Classes', ' checked') }}
-                        
-                        {{ macros.settings_form_checkbox('enable-obebs4-background-wheel-colors', 'Enable Background Classes', ' checked') }}
-                        
-                        {{ macros.settings_form_checkbox('enable-obebs4-background-tints-shades', 'Enable Background Tint/Shade Classes', ' checked') }}
-                        
-                        {{ macros.settings_form_checkbox('enable-obebs4-1-color-gradients', 'Enable 1 Color Gradient Background Classes', ' checked') }}
-
-                        {{ macros.settings_form_checkbox('enable-obebs4-2-color-gradients', 'Enable 2 Color Gradient Background Classes', ' checked') }}
-                        
-                        {{ macros.settings_form_checkbox('enable-obebs4-3-color-gradients', 'Enable 3 Color Gradient Background Classes', ' checked') }}
-                        
-                        {{ macros.settings_form_checkbox('enable-obebs4-badge-wheel-colors', 'Enable Badge Color Classes', ' checked') }}
-                        
-                        {{ macros.settings_form_checkbox('enable-obebs4-border-wheel-colors', 'Enable Border Color Classes', ' checked') }}
-                        
-                        {{ macros.settings_form_checkbox('enable-obebs4-border-tints-shades', 'Enable Border Tint/Shade Classes', ' checked') }}
-                        
-                        {{ macros.settings_form_checkbox('enable-obebs4-button-wheel-colors', 'Enable Button Color Classes', ' checked') }}
-                        
-                        {{ macros.settings_form_checkbox('enable-obebs4-dropdowns', 'Enable Dropdown Color Classes', ' checked') }}
-                        
-                        {{ macros.settings_form_checkbox('enable-obebs4-list-groups', 'Enable List Groups Color Classes', ' checked') }}
-                        
-                        {{ macros.settings_form_checkbox('enable-obebs4-tables', 'Enable Table Color Classes', ' checked') }}
-                        
-                        {{ macros.settings_form_checkbox('enable-obebs4-text-wheel-colors', 'Enable Text Color Classes', ' checked') }}
-                        
-                        {{ macros.settings_form_checkbox('enable-obebs4-text-tints-shades', 'Enable Text Tint/Shade Classes', ' checked') }}
-                        
-                        {{ macros.settings_form_checkbox('enable-obebs4-tooltips', 'Enable Tooltip Color Classes', ' checked') }}
-                        
-                        {{ macros.settings_form_checkbox('enable-obebs4-form-element-wheel-colors', 'Enable Form Element Color Classes', ' checked') }}
-                        
-                        {{ macros.settings_form_checkbox('enable-obebs4-popovers', 'Enable Popover Color Classes', ' checked') }}
+                        {{ macros.settings_form_checkbox('enable-obebs4-alert-wheel-colors', 'Enable Alert Color Classes', obe_settings['enable-obebs4-alert-wheel-colors-checkbox']) }}
+                        {{ macros.settings_form_checkbox('enable-obebs4-alert-variations', 'Enable Alert Color Variation Classes', obe_settings['enable-obebs4-alert-variations-checkbox']) }}
+                        {{ macros.settings_form_checkbox('enable-obebs4-background-wheel-colors', 'Enable Background Classes', obe_settings['enable-obebs4-background-wheel-colors-checkbox']) }}
+                        {{ macros.settings_form_checkbox('enable-obebs4-background-tints-shades', 'Enable Background Tint/Shade Classes', obe_settings['enable-obebs4-background-tints-shades-checkbox']) }}
+                        {{ macros.settings_form_checkbox('enable-obebs4-1-color-gradients', 'Enable 1 Color Gradient Background Classes', obe_settings['enable-obebs4-1-color-gradients-checkbox']) }}
+                        {{ macros.settings_form_checkbox('enable-obebs4-2-color-gradients', 'Enable 2 Color Gradient Background Classes', obe_settings['enable-obebs4-2-color-gradients-checkbox']) }}
+                        {{ macros.settings_form_checkbox('enable-obebs4-3-color-gradients', 'Enable 3 Color Gradient Background Classes', obe_settings['enable-obebs4-3-color-gradients-checkbox']) }}
+                        {{ macros.settings_form_checkbox('enable-obebs4-badge-wheel-colors', 'Enable Badge Color Classes', obe_settings['enable-obebs4-badge-wheel-colors-checkbox']) }}
+                        {{ macros.settings_form_checkbox('enable-obebs4-border-wheel-colors', 'Enable Border Color Classes', obe_settings['enable-obebs4-border-wheel-colors-checkbox']) }}
+                        {{ macros.settings_form_checkbox('enable-obebs4-border-tints-shades', 'Enable Border Tint/Shade Classes', obe_settings['enable-obebs4-border-tints-shades-checkbox']) }}
+                        {{ macros.settings_form_checkbox('enable-obebs4-button-wheel-colors', 'Enable Button Color Classes', obe_settings['enable-obebs4-button-wheel-colors-checkbox']) }}
+                        {{ macros.settings_form_checkbox('enable-obebs4-dropdowns', 'Enable Dropdown Color Classes', obe_settings['enable-obebs4-dropdowns-checkbox']) }}
+                        {{ macros.settings_form_checkbox('enable-obebs4-list-groups', 'Enable List Groups Color Classes', obe_settings['enable-obebs4-list-groups-checkbox']) }}
+                        {{ macros.settings_form_checkbox('enable-obebs4-tables', 'Enable Table Color Classes', obe_settings['enable-obebs4-tables-checkbox']) }}
+                        {{ macros.settings_form_checkbox('enable-obebs4-text-wheel-colors', 'Enable Text Color Classes', obe_settings['enable-obebs4-text-wheel-colors-checkbox']) }}
+                        {{ macros.settings_form_checkbox('enable-obebs4-text-tints-shades', 'Enable Text Tint/Shade Classes', obe_settings['enable-obebs4-text-tints-shades-checkbox']) }}
+                        {{ macros.settings_form_checkbox('enable-obebs4-tooltips', 'Enable Tooltip Color Classes', obe_settings['enable-obebs4-tooltips-checkbox']) }}
+                        {{ macros.settings_form_checkbox('enable-obebs4-form-element-wheel-colors', 'Enable Form Element Color Classes', obe_settings['enable-obebs4-form-element-wheel-colors-checkbox']) }}
+                        {{ macros.settings_form_checkbox('enable-obebs4-popovers', 'Enable Popover Color Classes', obe_settings['enable-obebs4-popovers-checkbox']) }}
 
                         
                         
@@ -96,19 +101,13 @@
                         
                         <h3 class="pt-4 pb-2">OBE:BS4 Elements, Components, &amp; Plugins</h3>
                         
-                        {{ macros.settings_form_checkbox('enable-obebs4-material-design-forms', 'Enable Material Design Input Elements', ' checked') }}
-
-                        {{ macros.settings_form_checkbox('enable-obebs4-off-canvas-nav-modals', 'Enable Off-Canvas Nav/Modal Components', ' checked', note='Dependency: Extended Modal Utility Classes') }}
-
-                        {{ macros.settings_form_checkbox('enable-obebs4-custom-dropdown-selects', 'Enable OBE:BS4 Dropdown Select Plugin', ' checked') }}
-                        
-                        {{ macros.settings_form_checkbox('enable-obebs4-fab-buttons', 'Enable Fab Button Elements', ' checked') }}
-
-                        {{ macros.settings_form_checkbox('enable-obebs4-fa5-icon-checkboxes', 'Enable FontAwesome 5 Icon Checkbox Elements', ' checked') }}
-
-                        {{ macros.settings_form_checkbox('enable-obebs4-datepicker-component', 'Enable OBE:BS4 Calendar Datepicker Plugin', ' checked') }}
-
-                        {{ macros.settings_form_checkbox('enable-obebs4-toggle-text-mini-plugin', 'Enable Toggle Text Mini-Plugin', ' checked') }}
+                        {{ macros.settings_form_checkbox('enable-obebs4-material-design-forms', 'Enable Material Design Input Elements', obe_settings['enable-obebs4-material-design-forms-checkbox']) }}
+                        {{ macros.settings_form_checkbox('enable-obebs4-off-canvas-nav-modals', 'Enable Off-Canvas Nav/Modal Components', obe_settings['enable-obebs4-off-canvas-nav-modals-checkbox'], note='Dependency: Extended Modal Utility Classes') }}
+                        {{ macros.settings_form_checkbox('enable-obebs4-custom-dropdown-selects', 'Enable OBE:BS4 Dropdown Select Plugin', obe_settings['enable-obebs4-custom-dropdown-selects-checkbox']) }}
+                        {{ macros.settings_form_checkbox('enable-obebs4-fab-buttons', 'Enable Fab Button Elements', obe_settings['enable-obebs4-fab-buttons-checkbox']) }}
+                        {{ macros.settings_form_checkbox('enable-obebs4-fa5-icon-checkboxes', 'Enable FontAwesome 5 Icon Checkbox Elements', obe_settings['enable-obebs4-fa5-icon-checkboxes-checkbox']) }}
+                        {{ macros.settings_form_checkbox('enable-obebs4-datepicker-component', 'Enable OBE:BS4 Calendar Datepicker Plugin', obe_settings['enable-obebs4-datepicker-component-checkbox']) }}
+                        {{ macros.settings_form_checkbox('enable-obebs4-toggle-text-mini-plugin', 'Enable Toggle Text Mini-Plugin', obe_settings['enable-obebs4-toggle-text-mini-plugin-checkbox']) }}
                         
                         
                         
@@ -117,31 +116,21 @@
                         
                         <h3 class="pt-4 pb-2">OBE:BS4 Utility Classes</h3>
 
-                        {{ macros.settings_form_checkbox('enable-obebs4-border-widths', 'Enable Border Width Utility Classes', ' checked') }}
-                        
-                        {{ macros.settings_form_checkbox('enable-obebs4-button-sizes', 'Enable Button Sizes Utility Classes', ' checked') }}
-                        
-                        {{ macros.settings_form_checkbox('enable-obebs4-element-sizes', 'Enable Element Height & Width Utility Classes', ' checked') }}
-                        
-                        {{ macros.settings_form_checkbox('enable-obebs4-lists', 'Enable List Utility Classes', ' checked') }}
-                        
-                        {{ macros.settings_form_checkbox('enable-obebs4-box-shadows', 'Enable Box Shadow Utility Classes', ' checked') }}
-                        
-                        {{ macros.settings_form_checkbox('enable-obebs4-text-shadows', 'Enable Text Shadow Utility Classes', ' checked') }}
-                        
-                        {{ macros.settings_form_checkbox('enable-obebs4-text-sizes', 'Enable Text Size Utility Classes', ' checked') }}
-                        
+                        {{ macros.settings_form_checkbox('enable-obebs4-border-widths', 'Enable Border Width Utility Classes', obe_settings['enable-obebs4-border-widths-checkbox']) }}
+                        {{ macros.settings_form_checkbox('enable-obebs4-button-sizes', 'Enable Button Sizes Utility Classes', obe_settings['enable-obebs4-button-sizes-checkbox']) }}
+                        {{ macros.settings_form_checkbox('enable-obebs4-element-sizes', 'Enable Element Height & Width Utility Classes', obe_settings['enable-obebs4-element-sizes-checkbox']) }}
+                        {{ macros.settings_form_checkbox('enable-obebs4-lists', 'Enable List Utility Classes', obe_settings['enable-obebs4-lists-checkbox']) }}
+                        {{ macros.settings_form_checkbox('enable-obebs4-box-shadows', 'Enable Box Shadow Utility Classes', obe_settings['enable-obebs4-box-shadows-checkbox']) }}
+                        {{ macros.settings_form_checkbox('enable-obebs4-text-shadows', 'Enable Text Shadow Utility Classes', obe_settings['enable-obebs4-text-shadows-checkbox']) }}
+                        {{ macros.settings_form_checkbox('enable-obebs4-text-sizes', 'Enable Text Size Utility Classes', obe_settings['enable-obebs4-text-sizes-checkbox']) }}
                         <!--{{ macros.settings_form_checkbox('enable-obebs4-font-weights', 'Enable Font Weights Utility Classes', ' checked') }}-->
-
-                        {{ macros.settings_form_checkbox('enable-obebs4-responsive-headlines', 'Enable Responsive Headline Utility Classes', ' checked') }}
-                        
-                        {{ macros.settings_form_checkbox('enable-obebs4-opacity', 'Enable Extended Opacity Classes', ' checked') }}
-                        
-                        {{ macros.settings_form_checkbox('enable-obebs4-modal-utilities', 'Enable Extended Modal Utility Classes', ' checked', note='Dependency: Off-Canvas Nav/Modal Components') }}
+                        {{ macros.settings_form_checkbox('enable-obebs4-responsive-headlines', 'Enable Responsive Headline Utility Classes', obe_settings['enable-obebs4-responsive-headlines-checkbox']) }}
+                        {{ macros.settings_form_checkbox('enable-obebs4-opacity', 'Enable Extended Opacity Classes', obe_settings['enable-obebs4-opacity-checkbox']) }}
+                        {{ macros.settings_form_checkbox('enable-obebs4-modal-utilities', 'Enable Extended Modal Utility Classes', obe_settings['enable-obebs4-modal-utilities-checkbox'], note='Dependency: Off-Canvas Nav/Modal Components') }}
 
                         <hr/>
                         
-                        {{ macros.settings_form_checkbox('enable-obebs4-spacing-utilities', 'Enable Margin & Padding Utility Classes', '') }}
+                        {{ macros.settings_form_checkbox('enable-obebs4-spacing-utilities', 'Enable Margin & Padding Utility Classes', obe_settings['enable-obebs4-spacing-utilities-checkbox']) }}
 
                         <div class="alert alert-danger alert-dismissible fade show mt-3" role="alert">
                             <p class="font-weight-bold mb-1">PLEASE NOTE:</p>
@@ -162,29 +151,20 @@
                         
                         <h3 class="pb-2">OBE:BS4 1 Color Gradient Tints/Shades</h3>
 
-                        {{ macros.settings_number_step_input('obebs4-1-color-tint-value', '1 Color Gradient Tint Value', '5%', '5%') }}
-                        
-                        {{ macros.settings_number_step_input('obebs4-1-color-shade-value', '1 Color Gradient Shade Value', '10%', '10%') }}
+                        {{ macros.settings_number_step_input('obebs4-1-color-tint-value', '1 Color Gradient Tint Value', '5%', obe_settings['obebs4-1-color-tint-value']) }}
+                        {{ macros.settings_number_step_input('obebs4-1-color-shade-value', '1 Color Gradient Shade Value', '10%', obe_settings['obebs4-1-color-shade-value']) }}
 
                         <h3 class="pt-4 pb-2">OBE:BS4 Contextual Color Tints/Shades</h3>
 
-                        {{ macros.settings_number_step_input('color-50-lighten-percent', '[50] Color Lighten Value', '30%', '30%') }}
-
-                        {{ macros.settings_number_step_input('color-100-lighten-percent', '[100] Color Lighten Value', '20%', '20%') }}
-
-                        {{ macros.settings_number_step_input('color-200-lighten-percent', '[200] Color Lighten Value', '15%', '15%') }}
-
-                        {{ macros.settings_number_step_input('color-300-lighten-percent', '[300] Color Lighten Value', '10%', '10%') }}
-
-                        {{ macros.settings_number_step_input('color-400-lighten-percent', '[400] Color Lighten Value', '5%', '5%') }}
-
-                        {{ macros.settings_number_step_input('color-600-darken-percent', '[600] Color Darken Value', '5%', '5%') }}
-
-                        {{ macros.settings_number_step_input('color-700-darken-percent', '[700] Color Darken Value', '10%', '10%') }}
-
-                        {{ macros.settings_number_step_input('color-800-darken-percent', '[800] Color Darken Value', '15%', '15%') }}
-
-                        {{ macros.settings_number_step_input('color-900-darken-percent', '[900] Color Darken Value', '20%', '20%') }}
+                        {{ macros.settings_number_step_input('color-50-lighten-percent', '[50] Color Lighten Value', '30%', obe_settings['color-50-lighten-percent']) }}
+                        {{ macros.settings_number_step_input('color-100-lighten-percent', '[100] Color Lighten Value', '20%', obe_settings['color-100-lighten-percent']) }}
+                        {{ macros.settings_number_step_input('color-200-lighten-percent', '[200] Color Lighten Value', '15%', obe_settings['color-200-lighten-percent']) }}
+                        {{ macros.settings_number_step_input('color-300-lighten-percent', '[300] Color Lighten Value', '10%', obe_settings['color-300-lighten-percent']) }}
+                        {{ macros.settings_number_step_input('color-400-lighten-percent', '[400] Color Lighten Value', '5%', obe_settings['color-400-lighten-percent']) }}
+                        {{ macros.settings_number_step_input('color-600-darken-percent', '[600] Color Darken Value', '5%', obe_settings['color-600-darken-percent']) }}
+                        {{ macros.settings_number_step_input('color-700-darken-percent', '[700] Color Darken Value', '10%', obe_settings['color-700-darken-percent']) }}
+                        {{ macros.settings_number_step_input('color-800-darken-percent', '[800] Color Darken Value', '15%', obe_settings['color-800-darken-percent']) }}
+                        {{ macros.settings_number_step_input('color-900-darken-percent', '[900] Color Darken Value', '20%', obe_settings['color-900-darken-percent']) }}
 
 
                         <h3 class="pt-4 pb-2">OBE:BS4 Font Options</h3>

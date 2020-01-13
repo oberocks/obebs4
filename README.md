@@ -1,8 +1,8 @@
 # OBE:BS4 Design System
 
-The OBE:BS4 Design System is the world's first self-reflexive design system for web production. OBE:BS4 is based on the most popular/robust front-end web framework in the world, Bootstrap! The OBE:BS4 system was designed & built to give all project stakeholders complete visual & tactile access to every color, font, element, component, & layout in a web project... *before the project enters any design phases!*
+The OBE:BS4 Web Design System is the world's first self-reflexive web design system for web production. OBE:BS4 is based on the most popular/robust front-end web framework in the world, Bootstrap! The OBE:BS4 system was designed & built to give all project stakeholders complete visual & tactile access to every color, font, element, component, & layout in a web project... *before the project enters any design phases!*
 
-THE OBE:BS4 Design System was designed to bridge the gaps between web project owners, designers, and developers. OBE:BS4 achieves this goal by fostering a more healthy understanding of both code and design *constraints* in the context of the final output medium(s)... the web browsers!
+THE OBE:BS4 Web Design System was designed to bridge the gaps between web project owners, designers, and developers. OBE:BS4 achieves this goal by fostering a more healthy understanding of both code and design *constraints* in the context of the final output medium(s)... the web browsers!
 
 > **Please Note:** *This project is fully functional as far as the generated CSS, JS, and library HTML files are concerned. However the code will receive _substantial changes_ before being ready for all to use. Please consider this an alpha version, and keep an eye on this page to learn more about how everything works as documentation is figured out. Once the project is rezady, an offical release will follow!*
 
@@ -22,23 +22,25 @@ THE OBE:BS4 Design System was designed to bridge the gaps between web project ow
     * [Project Directories](#project-directories)
     * [Project Build Tooling](#project-build-tooling)
 * [Installation](#installation)
-    * [Installing via Zip](#installing-via-zip)
     * [Installing via NPM](#installing-via-npm)
+* [Updating Versions](#updating-versions)
+    * [Updating OBE:BS4 to Latest Version](#updating-obebs4-to-latest-version)
 * [Customizing Your Library](#cutromizing-your-library)
     * [Bringing System Directories to Root](#bringing-system-directories-to-root)
     * [Adjusting the Gulp File](#adjusting-the-gulp-file)
     * [Library Site Files](#library-site-files)
 * [Roadmap](#roadmap)
 
+<!--- * [Installing via Zip](#installing-via-zip) -->
 
 ---
 
 
 ## About The Project
 
-The OBE:BS4 Design System is meant to nudge web projects, web teams, and even entire web organizations towards making both strategic & design related decisions about their projects *exclusively within* the contexts of the browsers. This approach has tremendous value, especially when seeking a high-caliber device agnostic web user experiences.
+The OBE:BS4 Web Design System is meant to nudge web projects, web teams, and even entire web organizations towards making both strategic & design related decisions about their projects *exclusively within* the contexts of the browsers. This approach has tremendous value, especially when seeking a high-caliber device agnostic web user experiences.
 
-OBE:BS4 doesn't assume designers are incapable of learning how to hack a little markup or throw around some HTML snippets. Instead, the OBE:BS4 design system arms designers with both visual and markup examples of anything/everything a designer might need to solve a web-based design problem.
+OBE:BS4 doesn't assume designers are incapable of learning how to hack a little markup or throw around some HTML snippets. Instead, the OBE:BS4 web design system arms designers with both visual and markup examples of anything/everything a designer might need to solve a web-based design problem.
 
 > *"OBE:BS4 assumes that everyone working on a web project needs transparent access to each option and each limitation for the client-facing side of the project at all times."* - Matt McT
 
@@ -52,7 +54,7 @@ Additionally, what's magical about this situation from a developer's POV, is how
 
 > *"The aspect of this project that excites me the most, is how much further a team's strategic thinking and prototyping can reach upon embracing the OBE:BS4 process. It becomes clear after using the system fully, that somehow we've all accidentily been doing this web stuff in the wrong order all these years! D'OH!"* - Matt McT
 
-The OBE:BS4 Design System positions **_all_** project stakeholders to think more strategically about *responsive* content issues, by abstracting the design options to proactively to solve those issues into a tangible digital "toolbox" of fully responsive and designer-ready pieces.
+The OBE:BS4 Web Design System positions **_all_** project stakeholders to think more strategically about *responsive* content issues, by abstracting the design options to proactively to solve those issues into a tangible digital "toolbox" of fully responsive and designer-ready pieces.
 
 If each piece is in-turn *proactively* optimized for production (IE valid, semantic, cross-browser, ARIA accessibile, and refactored for reuse), teams find themselves with an abundance of cognative room to focus on the more meta-level goals of any given web project.
 
@@ -71,7 +73,7 @@ You know, stuff like:
 
 ## Project Color Wheel
 
-To work with the OBE:BS4 Design System, it's important to understand the system's "color wheel." Before we dive in, let's cover why a color wheel was necessary to begin with!
+To work with the OBE:BS4 Web Design System, it's important to understand the system's "color wheel." Before we dive in, let's cover why a color wheel was necessary to begin with!
 
 Long story short, it started with the Bootstrap "contextual" color classes (primary, danger, etc.) which were combined with Google's Material Design color guidelines. Next, branding was factored in, including concerns for both digital and analog collateral design needs. To organize all of that complexity into a customizable solution, and to ensure contingency color options for both digital and analog design edge cases, the color wheel system emerged!
 
@@ -107,7 +109,7 @@ PRO TIP: If possible, try to memorize these slugs and patterns! Knowing these wi
 
 ### Examples of Color Tints and Shades
 
-PRO TIP: When using the Design System's tints and shades, each color gets a set of tint and shade values like the example for Blue below. Also for all color options with tints and shade classes, using the color slug without any numbers is equal to the 500 variation of that color. So for example, "Blue" is equal to "Blue 500", "White" to "White 500", and so on!
+PRO TIP: When using the Web Design System's tints and shades, each color gets a set of tint and shade values like the example for Blue below. Also for all color options with tints and shade classes, using the color slug without any numbers is equal to the 500 variation of that color. So for example, "Blue" is equal to "Blue 500", "White" to "White 500", and so on!
 
 | Name | CSS Slug | JS Slug |
 | --- | --- | --- |
@@ -125,9 +127,9 @@ PRO TIP: When using the Design System's tints and shades, each color gets a set 
 
 ### The Color Codes Table
 
-The OBE:BS4 design system allows you to centralize your brand colors for web projects. It can also be used for non-web design disciplines, too. OBE:BS4 makes the challenge of keeping brand colors consistent across projects/mediums trivial.
+The OBE:BS4 web design system allows you to centralize your brand colors for web projects. It can also be used for non-web design disciplines, too. OBE:BS4 makes the challenge of keeping brand colors consistent across projects/mediums trivial.
 
-If you host your library, Visual Designers can use the design system's client-side generated [Color Reference Table](https://library.mattmct.com/reference.html#color-codes-table) to quickly find color codes for each color in the system. This means that it takes only seconds to add exact colors (even recently updated colors ;) into Photoshop, Illustrator, PowerPoint, Social Network account settings, video work, and so much more.
+If you host your library, Visual Designers can use the web design system's client-side generated [Color Reference Table](https://library.mattmct.com/reference.html#color-codes-table) to quickly find color codes for each color in the system. This means that it takes only seconds to add exact colors (even recently updated colors ;) into Photoshop, Illustrator, PowerPoint, Social Network account settings, video work, and so much more.
 
 The Color Codes Table is basically the best tool your team never knew they needed.
 
@@ -173,7 +175,7 @@ Here's a diagram to illustrate the intended workflow:
 
 <img src="https://library.mattmct.com/images/obebs4-build-big-picture.jpg" alt="OBE:BS4 Build Process - The Big Picture" width="100%">
 
-It's worth noting, that new projects and prototypes aren't necessarily a part of the library. To try out new ideas, it's best to use a boilerplate provided by the design system, with a fresh HTML file. However, when creating new components or element variations, you often will want to add your awesome creation into the library for your team and projects to use freely.
+It's worth noting, that new projects and prototypes aren't necessarily a part of the library. To try out new ideas, it's best to use a boilerplate provided by the web design system, with a fresh HTML file. However, when creating new components or element variations, you often will want to add your awesome creation into the library for your team and projects to use freely.
 
 *(More on extending the library with your own components/elements as the project matures a bit past this intial alpha stage! See the roadmap section for more!)*
 
@@ -215,9 +217,11 @@ This project consists of 3 project directories and a handful of process files, t
             - settings
 - package.json, gulpfile.js, etc.
 
+<!--- 
 ### Project Build Tooling
 
 (Coming Soon!)
+-->
 
 
 ---
@@ -225,17 +229,23 @@ This project consists of 3 project directories and a handful of process files, t
 
 ## Installation
 
-There are two basic ways to install the OBE:BS4 Design System. One method is to use Node.js/NPM to install the project as a node module from your console. The other way is to 'old school' download the project zip from here on GitHub, and then copying any necessary extracted files/directories into your project's root folder.
+<!--- 
+There are two basic ways to install the OBE:BS4 Web Design System. One method is to use Node.js/NPM to install the project as a node module from your console. The other way is to 'old school' download the project zip from here on GitHub, and then copying any necessary extracted files/directories into your project's root folder.
+-->
 
-To really start using your Design System however, you'll need to somehow use an OBE:BS4 Settings Tool page to get the JSON settings to customize your Design System. (Coversely you could also get your JSON settings from the project's offical example [OBE:BS4 Settings Page](https://library.mattmct.com/settings.html)).
+You'll need to use Node.js/NPM to install OBE:BS4 as a node module through your workstation's console.
 
-Then you'll need to use Gulp to run the scripts needed to apply your settings and re-generate the HTML, CSS, and JS files for your library. Then you are ready to use your Design System to make amazing web stuff!
+To really start using your Web Design System however, you'll need to use an OBE:BS4 Settings Tool page to get the JSON settings to customize your Web Design System. (Coversely you could also get your JSON settings from the project's offical example [OBE:BS4 Settings Page](https://library.mattmct.com/settings.html)).
 
-*NOTE: This project uses Gulp to manage and generate the Design System Library Site. So if you are already using Gulp, be sure to not override your gulpfile.js file with the OBE:BS4 gulpfile!*
+Then you'll need to use Gulp to run the scripts needed to apply your settings and re-generate the HTML, CSS, and JS files for your library. Then you are ready to use your Web Design System to make amazing web stuff!
 
+*NOTE: This project uses Gulp to manage and generate the Web Design System Library Site. So if you are already using Gulp, be sure to not override your gulpfile.js file with the OBE:BS4 gulpfile!*
+
+<!--- 
 ### Installing via Zip
 
 (Coming Soon!)
+-->
 
 ### Installing via NPM
 
@@ -288,7 +298,19 @@ open library/boilerplates.html
 ---
 
 
-## Customizing Your Design System
+## Updating Versions
+
+You'll often find yourself in a position to update your OBE:BS4 web design system to get the newest goodies available in your current project. To update the system, use the following command(s):
+
+### Updating OBE:BS4 to Latest Version
+
+Using npm install:
+```bash
+npm install obebs4@latest --save
+```
+
+<!---
+## Customizing Your Web Design System
 
 (Coming Soon!)
 
@@ -303,7 +325,7 @@ open library/boilerplates.html
 ### Library Site Files
 
 (Coming Soon!)
-
+-->
 
 ---
 

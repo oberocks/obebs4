@@ -172,6 +172,88 @@
 
                 <div class="col-md-6 pb-5 text-left">
 
+                    <h3 class="pb-2">Bootstrap Options</h3>
+
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="enable-caret" checked>
+                        <label class="form-check-label" for="enable-caret">Enable Bootstrap Caret</label>
+
+                    </div>
+
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="enable-rounded" checked>
+                        <label class="form-check-label" for="enable-rounded">Enable Bootstrap Rounded Corners</label>
+
+                    </div>
+
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="enable-shadows">
+                        <label class="form-check-label" for="enable-shadows">Enable Bootstrap Box Shadows</label>
+
+                    </div>
+
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="enable-gradients">
+                        <label class="form-check-label" for="enable-gradients">Enable Bootstrap Gradients</label>
+
+                    </div>
+
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="enable-transitions" checked>
+                        <label class="form-check-label" for="enable-transitions">Enable Bootstrap Transitions</label>
+
+                    </div>
+
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="enable-prefers-reduced-motion-media-query" checked>
+                        <label class="form-check-label" for="enable-prefers-reduced-motion-media-query">Enable Bootstrap Prefers Reduced Motion Media Query</label>
+
+                    </div>
+
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="enable-grid-classes" checked>
+                        <label class="form-check-label" for="enable-grid-classes">Enable Bootstrap Grid Classes</label>
+
+                    </div>
+
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="enable-pointer-cursor-for-buttons" checked>
+                        <label class="form-check-label" for="enable-pointer-cursor-for-buttons">Enable Bootstrap Pointer Cursor for Buttons</label>
+
+                    </div>
+
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="enable-print-styles" checked>
+                        <label class="form-check-label" for="enable-print-styles">Enable Bootstrap Print Styles</label>
+
+                    </div>
+
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="enable-responsive-font-sizes">
+                        <label class="form-check-label" for="enable-responsive-font-sizes">Enable Bootstrap Responsive Font Sizes</label>
+
+                    </div>
+
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="enable-validation-icons" checked>
+                        <label class="form-check-label" for="enable-validation-icons">Enable Bootstrap Validation Icons</label>
+
+                    </div>
+
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="enable-deprecation-messages" checked>
+                        <label class="form-check-label" for="enable-deprecation-messages">Enable Bootstrap Build Depreciation Messages</label>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="row justify-content-center pt-5">
+
+                <div class="col-md-6 pb-5 text-left">
+
                     <h3 class="pb-2">OBE:BS4 Color Classes</h3>
 
                     <div class="form-check">
@@ -375,7 +457,6 @@
                         <label class="form-check-label" for="enable-obebs4-text-sizes">Enable Text Size Utility Classes</label>
 
                     </div>
-
                     <!--
 <div class="form-check">
     <input class="form-check-input" type="checkbox" value="" id="enable-obebs4-font-weights" checked>
@@ -3031,7 +3112,7 @@
 
                 <small class="text-light">OBE:BS4 VERSION:</small>
 
-                <p class="lead">0.8.9</p>
+                <p class="lead">0.8.9.1</p>
 
                 <hr class="border-gray" />
 
@@ -3414,6 +3495,9 @@
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link text-light py-1" href="defaults.html#spinner-components-section" data-description="These are a variety of Bootstrap 4 spinner component examples.">Spinner Components</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-light py-1" href="defaults.html#stretched-link-components-section" data-description="These are a examples of Bootstrap 4 stretched link component examples.">Stretched Link Components</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link text-light py-1" href="defaults.html#summary-elements-section" data-description="These are examples of Bootstrap 4 styled details (summary) elements.">Summary Elements</a>
@@ -4089,6 +4173,20 @@
                 var color_700 = $('#color-700-darken-percent').val();
                 var color_800 = $('#color-800-darken-percent').val();
                 var color_900 = $('#color-900-darken-percent').val();
+                // handle Boostrap options
+                object['enable-caret'] = $('#enable-caret').is(':checked') ? "true" : "false";
+                object['enable-rounded'] = $('#enable-rounded').is(':checked') ? "true" : "false";
+                object['enable-shadows'] = $('#enable-shadows').is(':checked') ? "true" : "false";
+                object['enable-gradients'] = $('#enable-gradients').is(':checked') ? "true" : "false";
+                object['enable-transitions'] = $('#enable-transitions').is(':checked') ? "true" : "false";
+                object['enable-prefers-reduced-motion-media-query'] = $('#enable-prefers-reduced-motion-media-query').is(':checked') ? "true" : "false";
+                object['enable-grid-classes'] = $('#enable-grid-classes').is(':checked') ? "true" : "false";
+                object['enable-pointer-cursor-for-buttons'] = $('#enable-pointer-cursor-for-buttons').is(':checked') ? "true" : "false";
+                object['enable-print-styles'] = $('#enable-print-styles').is(':checked') ? "true" : "false";
+                object['enable-responsive-font-sizes'] = $('#enable-responsive-font-sizes').is(':checked') ? "true" : "false";
+                object['enable-validation-icons'] = $('#enable-validation-icons').is(':checked') ? "true" : "false";
+                object['enable-deprecation-messages'] = $('#enable-deprecation-messages').is(':checked') ? "true" : "false";
+                // handle OBE options
                 object['enable-obebs4-alert-wheel-colors'] = $('#enable-obebs4-alert-wheel-colors').is(':checked') ? "true" : "false";
                 object['enable-obebs4-alert-variations'] = $('#enable-obebs4-alert-variations').is(':checked') ? "true" : "false";
                 object['enable-obebs4-background-wheel-colors'] = $('#enable-obebs4-background-wheel-colors').is(':checked') ? "true" : "false";
@@ -4126,12 +4224,26 @@
                 object['enable-obebs4-spacing-utilities'] = $('#enable-obebs4-spacing-utilities').is(':checked') ? "true" : "false";
                 object['enable-obebs4-datepicker-component'] = $('#enable-obebs4-datepicker-component').is(':checked') ? "true" : "false";
                 object['enable-obebs4-toggle-text-mini-plugin'] = $('#enable-obebs4-toggle-text-mini-plugin').is(':checked') ? "true" : "false";
-                if ($('#obebs4-1-color-tint-value').val().length > 1) {
-                    object['obebs4-1-color-tint-value'] = $('#obebs4-1-color-tint-value').val();
-                }
-                if ($('#obebs4-1-color-shade-value').val().length > 1) {
-                    object['obebs4-1-color-shade-value'] = $('#obebs4-1-color-shade-value').val();
-                }
+                let setObjPercentage = function(obj, string, fallbackVal) {
+                    let element = document.getElementById(string);
+                    let value = element.value;
+                    if (value.length > 1) {
+                        object[string] = value;
+                    } else {
+                        object[string] = fallbackVal;
+                    }
+                };
+                setObjPercentage(object, 'obebs4-1-color-tint-value', '5%');
+                setObjPercentage(object, 'obebs4-1-color-shade-value', '10%');
+                setObjPercentage(object, 'color-50-lighten-percent', '30%');
+                setObjPercentage(object, 'color-100-lighten-percent', '20%');
+                setObjPercentage(object, 'color-200-lighten-percent', '15%');
+                setObjPercentage(object, 'color-300-lighten-percent', '10%');
+                setObjPercentage(object, 'color-400-lighten-percent', '5%');
+                setObjPercentage(object, 'color-600-darken-percent', '5%');
+                setObjPercentage(object, 'color-700-darken-percent', '10%');
+                setObjPercentage(object, 'color-800-darken-percent', '15%');
+                setObjPercentage(object, 'color-900-darken-percent', '20%');
                 var cleanFontFamCSS = function(element) {
                     var input = $(element);
                     var currentVal = $(input).val();

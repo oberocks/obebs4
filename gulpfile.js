@@ -66,6 +66,26 @@ function get_obebs4_settings(filepath) {
             theData[keys[i] + '-M'] = 'none';
         }
     }
+    // loop through the data object and init a property var
+    for (const property in theData) {
+        
+        // create a key with a suffix (for use in nunjucks settings page files)
+        const key = property + '-checkbox';
+        
+        // if the data property value is true
+        if (theData[property] === 'true')
+        {
+            // create a new key and string value to mark a HTML checkbox as checked
+            theData[key] = ' checked';
+        }
+        // else if the data property value is false
+        else if (theData[property] === 'false')
+        {
+            // create a new key and string value to mark a HTML checkbox as unchecked
+            theData[key] = '';
+        }
+    }
+    // return the data object accessible via the property in nunjucks
     return { obe_settings: theData };
 }
 

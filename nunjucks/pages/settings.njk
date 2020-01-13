@@ -254,7 +254,23 @@
                 var color_900 = $('#color-900-darken-percent').val();
 
 
-                
+                // handle Boostrap options
+
+                object['enable-caret'] = $('#enable-caret').is(':checked') ? "true" : "false";
+                object['enable-rounded'] = $('#enable-rounded').is(':checked') ? "true" : "false";
+                object['enable-shadows'] = $('#enable-shadows').is(':checked') ? "true" : "false";
+                object['enable-gradients'] = $('#enable-gradients').is(':checked') ? "true" : "false";
+                object['enable-transitions'] = $('#enable-transitions').is(':checked') ? "true" : "false";
+                object['enable-prefers-reduced-motion-media-query'] = $('#enable-prefers-reduced-motion-media-query').is(':checked') ? "true" : "false";
+                object['enable-grid-classes'] = $('#enable-grid-classes').is(':checked') ? "true" : "false";
+                object['enable-pointer-cursor-for-buttons'] = $('#enable-pointer-cursor-for-buttons').is(':checked') ? "true" : "false";
+                object['enable-print-styles'] = $('#enable-print-styles').is(':checked') ? "true" : "false";
+                object['enable-responsive-font-sizes'] = $('#enable-responsive-font-sizes').is(':checked') ? "true" : "false";
+                object['enable-validation-icons'] = $('#enable-validation-icons').is(':checked') ? "true" : "false";
+                object['enable-deprecation-messages'] = $('#enable-deprecation-messages').is(':checked') ? "true" : "false";
+
+                // handle OBE options
+
                 object['enable-obebs4-alert-wheel-colors'] = $('#enable-obebs4-alert-wheel-colors').is(':checked') ? "true" : "false";
 
                 object['enable-obebs4-alert-variations'] = $('#enable-obebs4-alert-variations').is(':checked') ? "true" : "false";
@@ -345,14 +361,28 @@
                 
                 
                 
-                
-                
-                if ($('#obebs4-1-color-tint-value').val().length > 1) {
-                    object['obebs4-1-color-tint-value'] = $('#obebs4-1-color-tint-value').val();
-                }
-                if ($('#obebs4-1-color-shade-value').val().length > 1) {
-                    object['obebs4-1-color-shade-value'] = $('#obebs4-1-color-shade-value').val();
-                }
+                let setObjPercentage = function (obj, string, fallbackVal) {
+                    let element = document.getElementById(string);
+                    let value = element.value;
+                    if (value.length > 1) {
+                        object[string] = value;
+                    } else {
+                        object[string] = fallbackVal;
+                    }
+                };
+
+                setObjPercentage(object, 'obebs4-1-color-tint-value', '5%');
+                setObjPercentage(object, 'obebs4-1-color-shade-value', '10%');
+
+                setObjPercentage(object, 'color-50-lighten-percent', '30%');
+                setObjPercentage(object, 'color-100-lighten-percent', '20%');
+                setObjPercentage(object, 'color-200-lighten-percent', '15%');
+                setObjPercentage(object, 'color-300-lighten-percent', '10%');
+                setObjPercentage(object, 'color-400-lighten-percent', '5%');
+                setObjPercentage(object, 'color-600-darken-percent', '5%');
+                setObjPercentage(object, 'color-700-darken-percent', '10%');
+                setObjPercentage(object, 'color-800-darken-percent', '15%');
+                setObjPercentage(object, 'color-900-darken-percent', '20%');
 
 
                 

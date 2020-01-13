@@ -2674,6 +2674,90 @@
         </div>
 
     </div>
+    <!-- _bs_stretched_links.njk -->
+    <div class="container-fluid pt-5 text-center bg-white text-dark">
+
+        <div class="container">
+
+            <div class="row justify-content-center pt-5">
+
+                <div id="stretched-link-components-section" class="col-md-8 pb-5">
+
+                    <h1>Stretched Links</h1>
+                    <div class="lead">C O M P O N E N T S</div>
+                    <hr />
+                    <p class="description-text text-muted"><em>These are a examples of Bootstrap 4 stretched link component examples.</em></p>
+                    <hr />
+
+                    <label class="d-block font-weight-bold pt-4">Stretched Link Card:</label>
+                    <div class="js-prism mb-2 text-left">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">Stretched Link Card</h5>
+                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                <a href="#" class="btn btn-primary stretched-link">Stretched Link</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <label class="d-block font-weight-bold pt-4">Media Object Stretched Link:</label>
+                    <div class="js-prism mb-2 text-left">
+                        <div class="media position-relative">
+                            <img src="images/64x64.jpg" class="mr-3" alt="Media Object Stretched Link Image Thumb Alt Text">
+                            <div class="media-body">
+                                <h5 class="mt-0">Media Object Stretched Link</h5>
+                                <p>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.</p>
+                                <a href="#" class="stretched-link">Stretched Link</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <label class="d-block font-weight-bold pt-4">Stretched Link Columns:</label>
+                    <div class="js-prism mb-2 text-left">
+                        <div class="row no-gutters bg-light position-relative">
+                            <div class="col-md-6 mb-md-0 p-md-4">
+                                <img src="images/600x338.jpg" class="w-100" alt="Stretched Link Columns Thumb Alt Text">
+                            </div>
+                            <div class="col-md-6 position-static p-4 pl-md-0">
+                                <h5 class="mt-0">Stretched Link Columns</h5>
+                                <p>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.</p>
+                                <a href="#" class="stretched-link">Stretched Link</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="alert alert-warning alert-dismissible text-left fade show mt-5" role="alert">
+                        <p class="font-weight-bold">ABOUT STRETCHED LINKS:</p>
+                        <p class="mb-2 small">Multiple links and tap targets are not recommended with stretched links. However, some position and z-index styles can help should this be required.</p>
+                        <p class="mb-2 small">Add .stretched-link to a link to make its containing block clickable via a ::after pseudo element. In most cases, this means that an element with position: relative; that contains a link with the .stretched-link class is clickable.</p>
+                        <p class="mb-2 small">Cards have position: relative by default in Bootstrap, so in this case you can safely add the .stretched-link class to a link in the card without any other HTML changes.</p>
+                        <p class="mb-0 small">Media objects do not have position: relative by default, so we need to add the .position-relative here to prevent the link from stretching outside the media object.</p>
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                            <span aria-hidden="true">×</span>
+                        </button>
+                    </div>
+
+                    <div class="alert alert-danger alert-dismissible text-left fade show mt-5" role="alert">
+                        <p class="font-weight-bold">IF STRETCHED LINKS ISSUES ARISE:</p>
+                        <p class="mb-2 small">If your stretched link functionality is acting wonky, the containing block will probably be the cause. The following CSS properties will make an element the containing block:</p>
+                        <ul class="mb-0 small">
+                            <li>A position value other than static</li>
+                            <li>A transform or perspective value other than none</li>
+                            <li>A will-change value of transform or perspective</li>
+                            <li>A filter value other than none or a will-change value of filter (only works on Firefox)</li>
+                        </ul>
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                            <span aria-hidden="true">×</span>
+                        </button>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
     <!-- _bs_carousels.njk -->
     <div class="container-fluid pt-5 text-center bg-white text-dark">
 
@@ -5033,48 +5117,48 @@
 
                     <h5 class="pt-3">Responsive Horizontal List Groups</h5>
 
-                    <label class="font-weight-bold pb-1 pt-4">Extra Small Horiz. List Group Example</label>
+                    <label class="d-block font-weight-bold pb-1 pt-4 text-left">Extra Small Horiz. List Group Example</label>
                     <div class="js-prism mb-2 text-left">
                         <ul class="list-group list-group-horizontal">
-                            <li class="list-group-item">Item One</li>
-                            <li class="list-group-item">Item Two</li>
-                            <li class="list-group-item">Item Three</li>
+                            <li class="list-group-item flex-fill">Item One</li>
+                            <li class="list-group-item flex-fill">Item Two</li>
+                            <li class="list-group-item flex-fill">Item Three</li>
                         </ul>
                     </div>
 
-                    <label class="font-weight-bold pb-1 pt-4">Small Horiz. List Group Example</label>
+                    <label class="d-block font-weight-bold pb-1 pt-4 text-left">Small Horiz. List Group Example</label>
                     <div class="js-prism mb-2 text-left">
                         <ul class="list-group list-group-horizontal-sm">
-                            <li class="list-group-item">Item One</li>
-                            <li class="list-group-item">Item Two</li>
-                            <li class="list-group-item">Item Three</li>
+                            <li class="list-group-item flex-fill">Item One</li>
+                            <li class="list-group-item flex-fill">Item Two</li>
+                            <li class="list-group-item flex-fill">Item Three</li>
                         </ul>
                     </div>
 
-                    <label class="font-weight-bold pb-1 pt-4">Medium Horiz. List Group Example</label>
+                    <label class="d-block font-weight-bold pb-1 pt-4 text-left">Medium Horiz. List Group Example</label>
                     <div class="js-prism mb-2 text-left">
                         <ul class="list-group list-group-horizontal-md">
-                            <li class="list-group-item">Item One</li>
-                            <li class="list-group-item">Item Two</li>
-                            <li class="list-group-item">Item Three</li>
+                            <li class="list-group-item flex-fill">Item One</li>
+                            <li class="list-group-item flex-fill">Item Two</li>
+                            <li class="list-group-item flex-fill">Item Three</li>
                         </ul>
                     </div>
 
-                    <label class="font-weight-bold pb-1 pt-4">Large Horiz. List Group Example</label>
+                    <label class="d-block font-weight-bold pb-1 pt-4 text-left">Large Horiz. List Group Example</label>
                     <div class="js-prism mb-2 text-left">
                         <ul class="list-group list-group-horizontal-lg">
-                            <li class="list-group-item">Item One</li>
-                            <li class="list-group-item">Item Two</li>
-                            <li class="list-group-item">Item Three</li>
+                            <li class="list-group-item flex-fill">Item One</li>
+                            <li class="list-group-item flex-fill">Item Two</li>
+                            <li class="list-group-item flex-fill">Item Three</li>
                         </ul>
                     </div>
 
-                    <label class="font-weight-bold pb-1 pt-4">Extra Large Horiz. List Group Example</label>
+                    <label class="d-block font-weight-bold pb-1 pt-4 text-left">Extra Large Horiz. List Group Example</label>
                     <div class="js-prism mb-2 text-left">
                         <ul class="list-group list-group-horizontal-xl">
-                            <li class="list-group-item">Item One</li>
-                            <li class="list-group-item">Item Two</li>
-                            <li class="list-group-item">Item Three</li>
+                            <li class="list-group-item flex-fill">Item One</li>
+                            <li class="list-group-item flex-fill">Item Two</li>
+                            <li class="list-group-item flex-fill">Item Three</li>
                         </ul>
                     </div>
 
@@ -8452,7 +8536,7 @@
 
                 <small class="text-light">OBE:BS4 VERSION:</small>
 
-                <p class="lead">0.8.9</p>
+                <p class="lead">0.8.9.1</p>
 
                 <hr class="border-gray" />
 
@@ -8835,6 +8919,9 @@
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link text-light py-1" href="#spinner-components-section" data-description="These are a variety of Bootstrap 4 spinner component examples.">Spinner Components</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-light py-1" href="#stretched-link-components-section" data-description="These are a examples of Bootstrap 4 stretched link component examples.">Stretched Link Components</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link text-light py-1" href="#summary-elements-section" data-description="These are examples of Bootstrap 4 styled details (summary) elements.">Summary Elements</a>

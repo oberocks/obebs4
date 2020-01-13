@@ -886,6 +886,13 @@
                 "link" : "Toast Notification Components",
                 "descrip" : "These are a variety of Bootstrap 4 toast notification component examples.",
                 "id" : "toast-notification-components-section"
+            },{
+                "index" : 79,
+                "head" : "Stretched Links",
+                "subhead" : "C O M P O N E N T S",
+                "link" : "Stretched Link Components",
+                "descrip" : "These are a examples of Bootstrap 4 stretched link component examples.",
+                "id" : "stretched-link-components-section"
             }
         ]
     },
