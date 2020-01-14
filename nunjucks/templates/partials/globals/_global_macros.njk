@@ -2201,18 +2201,29 @@
 
 
 
-{%- macro settings_number_step_input(id, labelText, placeholder, value) %}
+{%- macro settings_number_step_input(id, labelText, placeholder, value, units, max, min, increment, note='false') %}
 <div class="form-group">
     <label for="{{ id }}" class="d-block font-weight-bold">{{ labelText }}</label>
     <div class="input-group">
         <div class="input-group-prepend js-increment-down">
             <button class="btn btn-light border" type="button"><i class="fas fa-angle-left"></i></button>
         </div>
-        <input type="text" class="js-increment-target form-control text-center" id="{{ id }}" value="{{ value }}" placeholder="{{ placeholder }}" data-units="%" data-max="100" data-min="0">
+        <input type="text" class="js-increment-target form-control text-center" id="{{ id }}" value="{{ value }}" placeholder="{{ placeholder }}" data-units="{{ units }}" data-max="{{ max }}" data-min="{{ min }}" data-increment="{{ increment }}">
         <div class="input-group-append js-increment-up">
             <button class="btn btn-light border" type="button"><i class="fas fa-angle-right"></i></button>
         </div>
     </div>
+    {% if note != 'false' %}<small class="d-block text-muted pt-1">{{ note }}</small>{% endif %}
+</div>
+{%- endmacro %}
+
+
+
+{%- macro settings_text_input(id, labelText, value, note='false') %}
+<div class="form-group">
+    <label for="{{ id }}" class="font-weight-bold">{{ labelText }}</label>
+    <input type="text" class="form-control" id="{{ id }}" value="{{ value }}">
+    {% if note != 'false' %}<small class="d-block text-muted">{{ note }}</small>{% endif %}
 </div>
 {%- endmacro %}
 

@@ -126,7 +126,7 @@
                         <!--{{ macros.settings_form_checkbox('enable-obebs4-font-weights', 'Enable Font Weights Utility Classes', ' checked') }}-->
                         {{ macros.settings_form_checkbox('enable-obebs4-responsive-headlines', 'Enable Responsive Headline Utility Classes', obe_settings['enable-obebs4-responsive-headlines-checkbox']) }}
                         {{ macros.settings_form_checkbox('enable-obebs4-opacity', 'Enable Extended Opacity Classes', obe_settings['enable-obebs4-opacity-checkbox']) }}
-                        {{ macros.settings_form_checkbox('enable-obebs4-modal-utilities', 'Enable Extended Modal Utility Classes', obe_settings['enable-obebs4-modal-utilities-checkbox'], note='Dependency: Off-Canvas Nav/Modal Components') }}
+                        {{ macros.settings_form_checkbox('enable-obebs4-modal-utilities', 'Enable Extended Modal Utility Classes', obe_settings['enable-obebs4-modal-utilities-checkbox']) }}
 
                         <hr/>
                         
@@ -151,20 +151,20 @@
                         
                         <h3 class="pb-2">OBE:BS4 1 Color Gradient Tints/Shades</h3>
 
-                        {{ macros.settings_number_step_input('obebs4-1-color-tint-value', '1 Color Gradient Tint Value', '5%', obe_settings['obebs4-1-color-tint-value']) }}
-                        {{ macros.settings_number_step_input('obebs4-1-color-shade-value', '1 Color Gradient Shade Value', '10%', obe_settings['obebs4-1-color-shade-value']) }}
+                        {{ macros.settings_number_step_input('obebs4-1-color-tint-value', '1 Color Gradient Tint Value', '5%', obe_settings['obebs4-1-color-tint-value'], '%', '100', '0', '1') }}
+                        {{ macros.settings_number_step_input('obebs4-1-color-shade-value', '1 Color Gradient Shade Value', '10%', obe_settings['obebs4-1-color-shade-value'], '%', '100', '0', '1') }}
 
                         <h3 class="pt-4 pb-2">OBE:BS4 Contextual Color Tints/Shades</h3>
 
-                        {{ macros.settings_number_step_input('color-50-lighten-percent', '[50] Color Lighten Value', '30%', obe_settings['color-50-lighten-percent']) }}
-                        {{ macros.settings_number_step_input('color-100-lighten-percent', '[100] Color Lighten Value', '20%', obe_settings['color-100-lighten-percent']) }}
-                        {{ macros.settings_number_step_input('color-200-lighten-percent', '[200] Color Lighten Value', '15%', obe_settings['color-200-lighten-percent']) }}
-                        {{ macros.settings_number_step_input('color-300-lighten-percent', '[300] Color Lighten Value', '10%', obe_settings['color-300-lighten-percent']) }}
-                        {{ macros.settings_number_step_input('color-400-lighten-percent', '[400] Color Lighten Value', '5%', obe_settings['color-400-lighten-percent']) }}
-                        {{ macros.settings_number_step_input('color-600-darken-percent', '[600] Color Darken Value', '5%', obe_settings['color-600-darken-percent']) }}
-                        {{ macros.settings_number_step_input('color-700-darken-percent', '[700] Color Darken Value', '10%', obe_settings['color-700-darken-percent']) }}
-                        {{ macros.settings_number_step_input('color-800-darken-percent', '[800] Color Darken Value', '15%', obe_settings['color-800-darken-percent']) }}
-                        {{ macros.settings_number_step_input('color-900-darken-percent', '[900] Color Darken Value', '20%', obe_settings['color-900-darken-percent']) }}
+                        {{ macros.settings_number_step_input('color-50-lighten-percent', '[50] Color Lighten Value', '30%', obe_settings['color-50-lighten-percent'], '%', '100', '0', '1') }}
+                        {{ macros.settings_number_step_input('color-100-lighten-percent', '[100] Color Lighten Value', '20%', obe_settings['color-100-lighten-percent'], '%', '100', '0', '1') }}
+                        {{ macros.settings_number_step_input('color-200-lighten-percent', '[200] Color Lighten Value', '15%', obe_settings['color-200-lighten-percent'], '%', '100', '0', '1') }}
+                        {{ macros.settings_number_step_input('color-300-lighten-percent', '[300] Color Lighten Value', '10%', obe_settings['color-300-lighten-percent'], '%', '100', '0', '1') }}
+                        {{ macros.settings_number_step_input('color-400-lighten-percent', '[400] Color Lighten Value', '5%', obe_settings['color-400-lighten-percent'], '%', '100', '0', '1') }}
+                        {{ macros.settings_number_step_input('color-600-darken-percent', '[600] Color Darken Value', '5%', obe_settings['color-600-darken-percent'], '%', '100', '0', '1') }}
+                        {{ macros.settings_number_step_input('color-700-darken-percent', '[700] Color Darken Value', '10%', obe_settings['color-700-darken-percent'], '%', '100', '0', '1') }}
+                        {{ macros.settings_number_step_input('color-800-darken-percent', '[800] Color Darken Value', '15%', obe_settings['color-800-darken-percent'], '%', '100', '0', '1') }}
+                        {{ macros.settings_number_step_input('color-900-darken-percent', '[900] Color Darken Value', '20%', obe_settings['color-900-darken-percent'], '%', '100', '0', '1') }}
 
 
                         <h3 class="pt-4 pb-2">OBE:BS4 Font Options</h3>
@@ -218,7 +218,6 @@
                                 <div class="tab-pane pt-3 fade{{ googleFontsTabClasses }}" id="google-fonts" role="tabpanel" aria-labelledby="google-fonts-tab">
 
                                     {{ macros.settings_google_font_input('google-fonts-url', 'Google Fonts Embed Code', googleFontsString) }}
-
                                     
                                     {{ macros.settings_css_value_input('google-font-family-sans-serif', 'Primary Google Font CSS', googleSansSerifString) }}
 
@@ -385,7 +384,7 @@
 
                         </div>
                         
-                        <h3 class="pt-4 pb-2 text-center">Bootstrap Contextual Classes</h3>
+                        <h3 class="pt-4 pb-2 text-center">Bootstrap Contextual Classes Options</h3>
 
                         {{ macros.settings_contextual_selects('primary', 'Primary', obe_settings['primary-C'], obe_settings['primary-M']) }}
                         {{ macros.settings_contextual_selects('secondary', 'Secondary', obe_settings['secondary-C'], obe_settings['secondary-M']) }}
@@ -402,7 +401,7 @@
 
                 <div class="row justify-content-center">
                     <div class="col">
-                        <h3 class="pt-4 pb-2">Additional Bootstrap Color Options</h3>
+                        <h3 class="pt-4 pb-4">Additional Bootstrap Color Options</h3>
                     </div>
                 </div>
 
@@ -426,52 +425,25 @@
 
                             {{ macros.settings_contextual_selects('link-color', 'Link', obe_settings['link-color-C'], obe_settings['link-color-M'], note='Sets $link-color and $link-hover-color (with darken(15%))') }}
 
-                            <div>
+                            
+                            <!-- NOTE this is a select element -->
+                            {{ macros.settings_decoration_select('link-decoration-type', 'Default Decoration', 'none', note='Sets $link-decoration') }}
 
-                                <!-- NOTE this is a select element -->
-                                {{ macros.settings_decoration_select('link-decoration-type', 'Default Decoration', 'none', note='Sets $link-decoration') }}
+                            <!-- NOTE this is the SCSS variable bound for JSON -->
+                            <!-- NOTE: on page load - this value must match the fully concacted string value for whatever the default values would equate to to work correctly! -->
+                            <input type="hidden" id="link-decoration" value="none">
 
-                                <!-- NOTE this is the SCSS variable bound for JSON -->
-                                <input type="hidden" id="link-decoration" value="none">
-                                <!-- NOTE: on page load - this value must match the fully concacted string value for whatever the default values would equate to to work correctly! -->
-
-                                <div id="link-decoration-color-block" class="collapse">
-                                    
-                                    {{ macros.settings_contextual_selects('link-decoration-color', 'Hover Decoration', 'none', 'none', note='This color gets appended to the $link-decoration value above.') }}
-
-                                </div>
-                                
-                                <div class="text-center pb-3">
-                                    
-                                    <button class="btn btn-sm btn-light" data-toggle="collapse" data-target="#link-decoration-color-block" aria-expanded="false" aria-controls="link-decoration-color-block" data-obe-text-toggle="HIDE DECORATION COLOR">VIEW DECORATION COLOR</button>
-
-                                </div>
-
-                            </div>
+                            {{ macros.settings_contextual_selects('link-decoration-color', 'Hover Decoration', 'none', 'none', note='This color gets appended to the $link-decoration value above.') }}
 
 
-                            <div>
+                            <!-- NOTE sthis is a select element -->
+                            {{ macros.settings_decoration_select('link-hover-decoration-type', 'Hover Decoration', 'underline', note='Sets $link-hover-decoration') }}
 
-                                <!-- NOTE sthis is a select element -->
-                                {{ macros.settings_decoration_select('link-hover-decoration-type', 'Hover Decoration', 'underline', note='Sets $link-hover-decoration') }}
+                            <!-- NOTE this is the SCSS variable bound for JSON -->
+                            <input type="hidden" id="link-hover-decoration" value="underline">
+                            <!-- NOTE this value must match the fully concacted string value for whatever the default values would equate to to work correctly! -->
 
-                                <!-- NOTE this is the SCSS variable bound for JSON -->
-                                <input type="hidden" id="link-hover-decoration" value="underline">
-                                <!-- NOTE this value must match the fully concacted string value for whatever the default values would equate to to work correctly! -->
-
-                                <div id="link-hover-decoration-color-block" class="collapse">
-                                    
-                                    {{ macros.settings_contextual_selects('link-hover-decoration-color', 'Hover Decoration', 'none', 'none', note='This color gets appended to the $link-hover-decoration value above.') }}
-
-                                </div>
-                                
-                                <div class="text-center">
-                                    
-                                    <button class="btn btn-sm btn-light" data-toggle="collapse" data-target="#link-hover-decoration-color-block" aria-expanded="false" aria-controls="link-hover-decoration-color-block" data-obe-text-toggle="HIDE HOVER DECORATION COLOR">VIEW HOVER DECORATION COLOR</button>
-
-                                </div>
-
-                            </div>
+                            {{ macros.settings_contextual_selects('link-hover-decoration-color', 'Hover Decoration', 'none', 'none', note='This color gets appended to the $link-hover-decoration value above.') }}
 
                         </div>
 
@@ -534,6 +506,54 @@
                             {{ macros.settings_contextual_selects('dropdown-link-disabled-color', 'Disabled Link', obe_settings['dropdown-link-disabled-color-C'], obe_settings['dropdown-link-disabled-color-M'], note='Sets $dropdown-link-disabled-color and $dropdown-header-color') }}
 
                         </div>
+
+                    </div>
+
+                </div>
+
+                <div class="row justify-content-center">
+                    <div class="col">
+                        <h3 class="pt-4 pb-4">Bootstrap Core Options</h3>
+                    </div>
+                </div>
+
+                <div class="row justify-content-center pb-5">
+
+                    <div class="col-md-9 col-lg-6 text-left px-0 px-md-2">
+
+                        {{ macros.settings_number_step_input('theme-color-interval', 'Theme Color Interval', '8%', obe_settings['theme-color-interval'], '%', '100', '0', '1', note='Sets $theme-color-interval') }}
+
+                        {{ macros.settings_number_step_input('yiq-contrasted-threshold', 'YIQ Contrasted Threshold', '150', obe_settings['yiq-contrasted-threshold'], '%', '100', '0', '1', note='Sets $yiq-contrasted-threshold (values between 0 and 255)') }}
+
+                        <!-- HOLD FOR: $yiq-text-dark: $gray-900 !default; (NEEDS CONTEXTUAL SELECTS) -->
+
+                        <!-- HOLD FOR: $yiq-text-light: $white !default; (NEEDS CONTEXTUAL SELECTS) -->
+
+                        {{ macros.settings_number_step_input('spacer', 'Spacer', '1rem', obe_settings['spacer'], 'rem', '10000', '0', '1', note='Sets $spacer') }}
+
+                        {{ macros.settings_number_step_input('emphasized-link-hover-darken-percentage', 'Emphasized Link Hover Darken Percentage', '15%', obe_settings['emphasized-link-hover-darken-percentage'], '%', '100', '0', '1', note='Sets $emphasized-link-hover-darken-percentage (links with a .text-* class)') }}
+
+                        {{ macros.settings_number_step_input('paragraph-margin-bottom', 'Paragraph Margin Bottom', '1rem', obe_settings['paragraph-margin-bottom'], 'rem', '10000', '0', '1', note='Sets $paragraph-margin-bottom') }}
+
+                        {{ macros.settings_number_step_input('grid-columns', 'Grid Columns', '12', obe_settings['grid-columns'], '', '1000', '1', '1', note='Sets $grid-columns') }}
+
+                        {{ macros.settings_number_step_input('grid-gutter-width', 'Grid Gutter Width', '30px', obe_settings['grid-gutter-width'], 'px', '10000', '0', '1', note='Sets $grid-gutter-width') }}
+
+                        {{ macros.settings_number_step_input('grid-row-columns', 'Grid Row Columns', '6', obe_settings['grid-row-columns'], '', '1000', '1', '1', note='Sets $grid-row-columns (.row-cols-* classes)') }}
+
+                        {{ macros.settings_number_step_input('line-height-lg', 'Line Height Large', '1.5', obe_settings['line-height-lg'], '', '100', '0', '0.5', note='Sets $line-height-lg') }}
+
+                        {{ macros.settings_number_step_input('line-height-sm', 'Line Height Small', '1.5', obe_settings['line-height-sm'], '', '100', '0', '0.5', note='Sets $line-height-sm') }}
+
+                        {{ macros.settings_number_step_input('border-width', 'Border Width', '1px', obe_settings['border-width'], 'px', '10000', '0', '1', note='Sets $border-width') }}
+
+                        {{ macros.settings_number_step_input('border-radius', 'Border Radius', '0.25rem', obe_settings['border-radius'], 'rem', '100', '0', '0.05', note='Sets $border-radius') }}
+
+                        {{ macros.settings_number_step_input('border-radius-lg', 'Border Radius Large', '0.3rem', obe_settings['border-radius-lg'], 'rem', '100', '0', '0.05', note='Sets $border-radius-lg') }}
+
+                        {{ macros.settings_number_step_input('border-radius-sm', 'Border Radius Small', '0.2rem', obe_settings['border-radius-sm'], 'rem', '100', '0', '0.05', note='Sets $border-radius-sm') }}
+
+                        {{ macros.settings_number_step_input('rounded-pill', 'Rounded Pill', '50rem', obe_settings['rounded-pill'], 'rem', '1000', '0', '10', note='Sets $rounded-pill') }}
 
                     </div>
 

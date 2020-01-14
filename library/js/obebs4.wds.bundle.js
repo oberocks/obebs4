@@ -145,33 +145,30 @@ var yearPlus=document.createElement("div");yearPlus.className=settings.yearPlusC
 var parent=document.getElementById(finalWrapper.id);parent.innerHTML="";var year=Number(parent.dataset.year)+1,month=parent.dataset.month,day=parent.dataset.day;el.renderCalendar(year,month,day),displayCalData(day,month,year)},yearPlus.appendChild(yearPlus_text),calYear_UI.appendChild(yearPlus),finalWrapper.appendChild(dayOfWeek_UI),finalWrapper.appendChild(calDay_UI),finalWrapper.appendChild(calMonth_UI),finalWrapper.appendChild(calYear_UI),!1===settings.compactMode&&finalWrapper.appendChild(table),finalWrapper.dataset.year=yyyy,finalWrapper.dataset.month=monthIndex,finalWrapper.dataset.day=dd,finalWrapper.dataset.weekday=dayIndex,el.appendChild(finalWrapper)},el.renderCalendar(),null!=settings.outputSelector&&"input"===settings.outputType){let target=document.querySelector(settings.outputSelector);const update_mdy_calendar=function(str,char){let array=str.split(char),d=array[1],m=Number(array[0])-1,y=array[2];el.children[0].innerHTML="",el.renderCalendar(y,m,d)},update_dmy_calendar=function(str,char){let array=str.split(char),d=array[0],m=Number(array[1])-1,y=array[2];el.children[0].innerHTML="",el.renderCalendar(y,m,d)},update_ymd_calendar=function(str,char){let array=str.split(char),d=array[2],m=Number(array[1])-1,y=array[0];el.children[0].innerHTML="",el.renderCalendar(y,m,d)};target.onchange=function(){
 //console.log('changed');
 let value=target.value;"MM/DD/YYYY"===settings.outputFormat?update_mdy_calendar(value,"/"):"MM-DD-YYYY"===settings.outputFormat?update_mdy_calendar(value,"-"):"DD/MM/YYYY"===settings.outputFormat?update_dmy_calendar(value,"/"):"DD-MM-YYYY"===settings.outputFormat?update_dmy_calendar(value,"-"):"YYYY/MM/DD"===settings.outputFormat?update_ymd_calendar(value,"/"):"YYYY-MM-DD"===settings.outputFormat&&update_ymd_calendar(value,"-")}}})}}(jQuery);
-// loop through each toggle and add click functionality
-for(
 /*!
  * OBE Toggle Text Vanilla JavaScript Mini-Plugin v1.0.0 (https://library.mattmct.com)
  * Copyright 2018 by Matt McT Designs
  * Licensed under: Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)
  * (https://creativecommons.org/licenses/by-nc-sa/4.0/)
  */
+var domReady=function(callback){"interactive"===document.readyState||"complete"===document.readyState?callback():document.addEventListener("DOMContentLoaded",callback)};domReady(function(){
+// loop through each toggle and add click functionality
+for(
 // Utility function
 // Source: https://stackoverflow.com/questions/1787322/htmlspecialchars-equivalent-in-javascript
 var obeEscapeHtml=function(text){var map={"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#039;"};return text.replace(/[&<>"']/g,function(m){return map[m]})},obeUnescapeHtml=function(text){return text.replace(/&amp;/g,"&").replace(/&lt;/g,"<").replace(/&gt;/g,">").replace(/&quot;/g,'"').replace(/&#039;/g,"'")},obeTextToggles=document.querySelectorAll("[data-obe-text-toggle]"),i=0
 // Utility function
 // Source: https://stackoverflow.com/questions/1787322/htmlspecialchars-equivalent-in-javascript
-;i<obeTextToggles.length;i++){var el=obeTextToggles[i];el.addEventListener("click",function(e){e.preventDefault();var visibleText=obeEscapeHtml(this.textContent),hiddenText=obeEscapeHtml(this.dataset.obeTextToggle);this.innerText=obeUnescapeHtml(hiddenText),this.dataset.obeTextToggle=obeUnescapeHtml(visibleText)}),el.addEventListener("mouseover",function(){this.style.cursor="pointer"}),el.addEventListener("mouseout",function(){this.style.cursor="default"})}
+;i<obeTextToggles.length;i++){var el=obeTextToggles[i];el.addEventListener("click",function(e){
+//e.preventDefault();
+var visibleText=obeEscapeHtml(this.textContent),hiddenText=obeEscapeHtml(this.dataset.obeTextToggle);this.innerText=obeUnescapeHtml(hiddenText),this.dataset.obeTextToggle=obeUnescapeHtml(visibleText)}),el.addEventListener("mouseover",function(){this.style.cursor="pointer"}),el.addEventListener("mouseout",function(){this.style.cursor="default"})}}),
 /*!
  * OBE:BS4 Dropdown Select jQuery Plugin v1.0.0 (https://library.mattmct.com)
  * Copyright 2018 by Matt McT Designs
  * Licensed under: Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)
  * (https://creativecommons.org/licenses/by-nc-sa/4.0/)
  */
-/*!
- * OBE:BS4 Dropdown Select jQuery Plugin v1.0.0 (https://library.mattmct.com)
- * Copyright 2018 by Matt McT Designs
- * Licensed under: Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)
- * (https://creativecommons.org/licenses/by-nc-sa/4.0/)
- */
-!function($){$.fn.obeDropdownSelect=function(options){
+function($){$.fn.obeDropdownSelect=function(options){
 // Default Options
 let settings=$.extend({formMode:!0,parentSelector:".dropdown-select",optionSelector:".dropdown-select-option",cloneTargetSelector:".dropdown-select-target",dataAttributeString:"option-value",hiddenInputSelector:"input[type=hidden]",customEventString:"dropdown.select.selected"},options);return this.each(function(i,element){let el=element;el.init=function(){$(this).on("click",settings.optionSelector,function(){
 // clone the selection and replace the original dropdown select content with the selected markup

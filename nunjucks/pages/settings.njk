@@ -38,11 +38,15 @@
                 var units = $(input).data('units');
                 var max = Number($(input).data('max'));
                 var min = Number($(input).data('min'));
+                var increment = Number($(input).data('increment'));
                 var number = Number(currentVal.replace(/\D+/g, ''));
                 var finalNumb = number;
                 if (number > min && number <= max) {
-                    finalNumb--;
+                    finalNumb = number - increment;
                 } else if (number <= min) {
+                    finalNumb = min;
+                }
+                if (finalNumb < min) {
                     finalNumb = min;
                 }
                 $(input).val(finalNumb + units);
@@ -54,11 +58,15 @@
                 var units = $(input).data('units');
                 var max = Number($(input).data('max'));
                 var min = Number($(input).data('min'));
+                var increment = Number($(input).data('increment'));
                 var number = Number(currentVal.replace(/\D+/g, ''));
                 var finalNumb = number;
                 if (number >= min && number < max) {
-                    finalNumb++;
+                    finalNumb = number + increment;
                 } else if (number >= max) {
+                    finalNumb = max;
+                }
+                if (finalNumb > max) {
                     finalNumb = max;
                 }
                 $(input).val(finalNumb + units);
@@ -657,9 +665,23 @@
                 setColorsData('dropdown-link-disabled-color');
                 
                 //console.log(object);
-                
-                
 
+
+                setObjPercentage(object, 'theme-color-interval', '8%');
+                setObjPercentage(object, 'yiq-contrasted-threshold', '150');
+                setObjPercentage(object, 'spacer', '1rem');
+                setObjPercentage(object, 'emphasized-link-hover-darken-percentage', '15%');
+                setObjPercentage(object, 'paragraph-margin-bottom', '1rem');
+                setObjPercentage(object, 'grid-columns', '12');
+                setObjPercentage(object, 'grid-gutter-width', '30px');
+                setObjPercentage(object, 'grid-row-columns', '6');
+                setObjPercentage(object, 'line-height-lg', '1.5');
+                setObjPercentage(object, 'line-height-sm', '1.5');
+                setObjPercentage(object, 'border-width', '1px');
+                setObjPercentage(object, 'border-radius', '0.25rem');
+                setObjPercentage(object, 'border-radius-lg', '0.3rem');
+                setObjPercentage(object, 'border-radius-sm', '0.2rem');
+                setObjPercentage(object, 'rounded-pill', '50rem');
 
 
 
