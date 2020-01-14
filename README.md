@@ -27,13 +27,12 @@ THE OBE:BS4 Web Design System was designed to bridge the gaps between web projec
     * [Updating OBE:BS4 to Latest Version](#updating-obebs4-to-latest-version)
     * [Updating OBE:BS4 Build Scripts for Gulp](#updating-obebs4-build-scripts-for-gulp)
     * [Updating OBE:BS4 obebs4_settings.json file](#updating-obebs4-obebs4settingsjson-file)
-* [Customizing Your Library](#cutromizing-your-library)
+* [Roadmap](#roadmap)
+<!--- * [Installing via Zip](#installing-via-zip) -->
+<!-- * [Customizing Your Library](#cutromizing-your-library)
     * [Bringing System Directories to Root](#bringing-system-directories-to-root)
     * [Adjusting the Gulp File](#adjusting-the-gulp-file)
-    * [Library Site Files](#library-site-files)
-* [Roadmap](#roadmap)
-
-<!--- * [Installing via Zip](#installing-via-zip) -->
+    * [Library Site Files](#library-site-files) -->
 
 ---
 
