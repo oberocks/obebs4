@@ -39,10 +39,12 @@
                 var max = Number($(input).data('max'));
                 var min = Number($(input).data('min'));
                 var increment = Number($(input).data('increment'));
-                var number = Number(currentVal.replace(/\D+/g, ''));
+                // https://stackoverflow.com/questions/36321409/javascript-remove-all-charater-except-leading-one-dot-and-digits
+                var number = Number(currentVal.replace(/[^0-9.-]/g, '').replace(/(\..*)\./g, '$1').replace(/(?!^)-/g, ''));
                 var finalNumb = number;
                 if (number > min && number <= max) {
-                    finalNumb = number - increment;
+                    // https://stackoverflow.com/questions/10473994/javascript-adding-decimal-numbers-issue
+                    finalNumb = Math.round((number - increment) * 1e12) / 1e12;
                 } else if (number <= min) {
                     finalNumb = min;
                 }
@@ -59,10 +61,12 @@
                 var max = Number($(input).data('max'));
                 var min = Number($(input).data('min'));
                 var increment = Number($(input).data('increment'));
-                var number = Number(currentVal.replace(/\D+/g, ''));
+                // https://stackoverflow.com/questions/36321409/javascript-remove-all-charater-except-leading-one-dot-and-digits
+                var number = Number(currentVal.replace(/[^0-9.-]/g, '').replace(/(\..*)\./g, '$1').replace(/(?!^)-/g, ''));
                 var finalNumb = number;
                 if (number >= min && number < max) {
-                    finalNumb = number + increment;
+                    // https://stackoverflow.com/questions/10473994/javascript-adding-decimal-numbers-issue
+                    finalNumb = Math.round((number + increment) * 1e12) / 1e12;
                 } else if (number >= max) {
                     finalNumb = max;
                 }
@@ -78,7 +82,8 @@
                 var units = $(input).data('units');
                 var max = Number($(input).data('max'));
                 var min = Number($(input).data('min'));
-                var number = Number(currentVal.replace(/\D+/g, ''));
+                // https://stackoverflow.com/questions/36321409/javascript-remove-all-charater-except-leading-one-dot-and-digits
+                var number = Number(currentVal.replace(/[^0-9.-]/g, '').replace(/(\..*)\./g, '$1').replace(/(?!^)-/g, ''));
                 var finalNumb = number;
                 if (number >= max) {
                     finalNumb = max;
@@ -369,7 +374,7 @@
                 
                 
                 
-                let setObjPercentage = function (obj, string, fallbackVal) {
+                let setObjValOrFallback = function (obj, string, fallbackVal) {
                     let element = document.getElementById(string);
                     let value = element.value;
                     if (value.length > 1) {
@@ -379,18 +384,18 @@
                     }
                 };
 
-                setObjPercentage(object, 'obebs4-1-color-tint-value', '5%');
-                setObjPercentage(object, 'obebs4-1-color-shade-value', '10%');
+                setObjValOrFallback(object, 'obebs4-1-color-tint-value', "{{ global_strings['sass']['obebs4-1-color-tint-value'] }}");
+                setObjValOrFallback(object, 'obebs4-1-color-shade-value', "{{ global_strings['sass']['obebs4-1-color-shade-value'] }}");
 
-                setObjPercentage(object, 'color-50-lighten-percent', '30%');
-                setObjPercentage(object, 'color-100-lighten-percent', '20%');
-                setObjPercentage(object, 'color-200-lighten-percent', '15%');
-                setObjPercentage(object, 'color-300-lighten-percent', '10%');
-                setObjPercentage(object, 'color-400-lighten-percent', '5%');
-                setObjPercentage(object, 'color-600-darken-percent', '5%');
-                setObjPercentage(object, 'color-700-darken-percent', '10%');
-                setObjPercentage(object, 'color-800-darken-percent', '15%');
-                setObjPercentage(object, 'color-900-darken-percent', '20%');
+                setObjValOrFallback(object, 'color-50-lighten-percent', "{{ global_strings['sass']['color-50-lighten-percent'] }}");
+                setObjValOrFallback(object, 'color-100-lighten-percent', "{{ global_strings['sass']['color-100-lighten-percent'] }}");
+                setObjValOrFallback(object, 'color-200-lighten-percent', "{{ global_strings['sass']['color-200-lighten-percent'] }}");
+                setObjValOrFallback(object, 'color-300-lighten-percent', "{{ global_strings['sass']['color-300-lighten-percent'] }}");
+                setObjValOrFallback(object, 'color-400-lighten-percent', "{{ global_strings['sass']['color-400-lighten-percent'] }}");
+                setObjValOrFallback(object, 'color-600-darken-percent', "{{ global_strings['sass']['color-600-darken-percent'] }}");
+                setObjValOrFallback(object, 'color-700-darken-percent', "{{ global_strings['sass']['color-700-darken-percent'] }}");
+                setObjValOrFallback(object, 'color-800-darken-percent', "{{ global_strings['sass']['color-800-darken-percent'] }}");
+                setObjValOrFallback(object, 'color-900-darken-percent', "{{ global_strings['sass']['color-900-darken-percent'] }}");
 
 
                 
@@ -667,21 +672,54 @@
                 //console.log(object);
 
 
-                setObjPercentage(object, 'theme-color-interval', '8%');
-                setObjPercentage(object, 'yiq-contrasted-threshold', '150');
-                setObjPercentage(object, 'spacer', '1rem');
-                setObjPercentage(object, 'emphasized-link-hover-darken-percentage', '15%');
-                setObjPercentage(object, 'paragraph-margin-bottom', '1rem');
-                setObjPercentage(object, 'grid-columns', '12');
-                setObjPercentage(object, 'grid-gutter-width', '30px');
-                setObjPercentage(object, 'grid-row-columns', '6');
-                setObjPercentage(object, 'line-height-lg', '1.5');
-                setObjPercentage(object, 'line-height-sm', '1.5');
-                setObjPercentage(object, 'border-width', '1px');
-                setObjPercentage(object, 'border-radius', '0.25rem');
-                setObjPercentage(object, 'border-radius-lg', '0.3rem');
-                setObjPercentage(object, 'border-radius-sm', '0.2rem');
-                setObjPercentage(object, 'rounded-pill', '50rem');
+                // core colors
+                setObjValOrFallback(object, 'theme-color-interval', "{{ global_strings['sass']['theme-color-interval'] }}");
+                setObjValOrFallback(object, 'yiq-contrasted-threshold', "{{ global_strings['sass']['yiq-contrasted-threshold'] }}");
+
+                // core spacing
+                setObjValOrFallback(object, 'spacer', "{{ global_strings['sass']['spacer'] }}");
+
+                // core links
+                setObjValOrFallback(object, 'emphasized-link-hover-darken-percentage', "{{ global_strings['sass']['emphasized-link-hover-darken-percentage'] }}");
+
+                // core paragraphs
+                setObjValOrFallback(object, 'paragraph-margin-bottom', "{{ global_strings['sass']['paragraph-margin-bottom'] }}");
+
+                // core grids
+                setObjValOrFallback(object, 'grid-columns', "{{ global_strings['sass']['grid-columns'] }}");
+                setObjValOrFallback(object, 'grid-gutter-width', "{{ global_strings['sass']['grid-gutter-width'] }}");
+                setObjValOrFallback(object, 'grid-row-columns', "{{ global_strings['sass']['grid-row-columns'] }}");
+
+                // core components
+                setObjValOrFallback(object, 'line-height-lg', "{{ global_strings['sass']['line-height-lg'] }}");
+                setObjValOrFallback(object, 'line-height-sm', "{{ global_strings['sass']['line-height-sm'] }}");
+                setObjValOrFallback(object, 'border-width', "{{ global_strings['sass']['border-width'] }}");
+                setObjValOrFallback(object, 'border-radius', "{{ global_strings['sass']['border-radius'] }}");
+                setObjValOrFallback(object, 'border-radius-lg', "{{ global_strings['sass']['border-radius-lg'] }}");
+                setObjValOrFallback(object, 'border-radius-sm', "{{ global_strings['sass']['border-radius-sm'] }}");
+                setObjValOrFallback(object, 'rounded-pill', "{{ global_strings['sass']['rounded-pill'] }}");
+                setObjValOrFallback(object, 'box-shadow-sm', "{{ global_strings['sass']['box-shadow-sm'] }}");
+                setObjValOrFallback(object, 'box-shadow', "{{ global_strings['sass']['box-shadow'] }}");
+                setObjValOrFallback(object, 'box-shadow-lg', "{{ global_strings['sass']['box-shadow-lg'] }}");
+                setObjValOrFallback(object, 'caret-width', "{{ global_strings['sass']['caret-width'] }}");
+                setObjValOrFallback(object, 'transition-base', "{{ global_strings['sass']['transition-base'] }}");
+                setObjValOrFallback(object, 'transition-fade', "{{ global_strings['sass']['transition-fade'] }}");
+                setObjValOrFallback(object, 'transition-collapse', "{{ global_strings['sass']['transition-collapse'] }}");
+
+                // core typography
+                setObjValOrFallback(object, 'font-size-base', "{{ global_strings['sass']['font-size-base'] }}");
+                setObjValOrFallback(object, 'font-weight-lighter', "{{ global_strings['sass']['font-weight-lighter'] }}");
+                setObjValOrFallback(object, 'font-weight-light', "{{ global_strings['sass']['font-weight-light'] }}");
+                setObjValOrFallback(object, 'font-weight-normal', "{{ global_strings['sass']['font-weight-normal'] }}");
+                setObjValOrFallback(object, 'font-weight-bold', "{{ global_strings['sass']['font-weight-bold'] }}");
+                setObjValOrFallback(object, 'font-weight-bolder', "{{ global_strings['sass']['font-weight-bolder'] }}");
+
+
+
+
+
+
+
 
 
 

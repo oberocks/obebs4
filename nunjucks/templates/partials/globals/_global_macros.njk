@@ -2219,10 +2219,10 @@
 
 
 
-{%- macro settings_text_input(id, labelText, value, note='false') %}
+{%- macro settings_text_input(id, labelText, placeholder, value, note='false') %}
 <div class="form-group">
     <label for="{{ id }}" class="font-weight-bold">{{ labelText }}</label>
-    <input type="text" class="form-control" id="{{ id }}" value="{{ value }}">
+    <input type="text" class="form-control" id="{{ id }}" value="{{ value }}" placeholder="{{ placeholder }}">
     {% if note != 'false' %}<small class="d-block text-muted">{{ note }}</small>{% endif %}
 </div>
 {%- endmacro %}
