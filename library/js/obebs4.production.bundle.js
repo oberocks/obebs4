@@ -34,7 +34,7 @@ $(".obe-icon-checkbox").on("click",function(){var parent=$(this),target=parent.f
  * Licensed under: Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)
  * (https://creativecommons.org/licenses/by-nc-sa/4.0/)
  */
-function($){$.fn.obeDatepicker=function(options){
+jQuery(document).ready(function($){$.fn.obeDatepicker=function(options){
 // Default Options
 var settings=$.extend({outputSelector:null,outputType:"input",// choices are 'input' or 'text'
 outputFormat:"MM/DD/YYYY",// choices are 'MM/DD/YYYY', 'MM-DD-YYYY', 'DD/MM/YYYY', 'DD-MM-YYYY', 'YYYY/MM/DD', or 'YYYY-MM-DD'
@@ -142,7 +142,7 @@ var yearPlus=document.createElement("div");yearPlus.className=settings.yearPlusC
 //alert('yearPlus was clicked');
 var parent=document.getElementById(finalWrapper.id);parent.innerHTML="";var year=Number(parent.dataset.year)+1,month=parent.dataset.month,day=parent.dataset.day;el.renderCalendar(year,month,day),displayCalData(day,month,year)},yearPlus.appendChild(yearPlus_text),calYear_UI.appendChild(yearPlus),finalWrapper.appendChild(dayOfWeek_UI),finalWrapper.appendChild(calDay_UI),finalWrapper.appendChild(calMonth_UI),finalWrapper.appendChild(calYear_UI),!1===settings.compactMode&&finalWrapper.appendChild(table),finalWrapper.dataset.year=yyyy,finalWrapper.dataset.month=monthIndex,finalWrapper.dataset.day=dd,finalWrapper.dataset.weekday=dayIndex,el.appendChild(finalWrapper)},el.renderCalendar(),null!=settings.outputSelector&&"input"===settings.outputType){let target=document.querySelector(settings.outputSelector);const update_mdy_calendar=function(str,char){let array=str.split(char),d=array[1],m=Number(array[0])-1,y=array[2];el.children[0].innerHTML="",el.renderCalendar(y,m,d)},update_dmy_calendar=function(str,char){let array=str.split(char),d=array[0],m=Number(array[1])-1,y=array[2];el.children[0].innerHTML="",el.renderCalendar(y,m,d)},update_ymd_calendar=function(str,char){let array=str.split(char),d=array[2],m=Number(array[1])-1,y=array[0];el.children[0].innerHTML="",el.renderCalendar(y,m,d)};target.onchange=function(){
 //console.log('changed');
-let value=target.value;"MM/DD/YYYY"===settings.outputFormat?update_mdy_calendar(value,"/"):"MM-DD-YYYY"===settings.outputFormat?update_mdy_calendar(value,"-"):"DD/MM/YYYY"===settings.outputFormat?update_dmy_calendar(value,"/"):"DD-MM-YYYY"===settings.outputFormat?update_dmy_calendar(value,"-"):"YYYY/MM/DD"===settings.outputFormat?update_ymd_calendar(value,"/"):"YYYY-MM-DD"===settings.outputFormat&&update_ymd_calendar(value,"-")}}})}}(jQuery);
+let value=target.value;"MM/DD/YYYY"===settings.outputFormat?update_mdy_calendar(value,"/"):"MM-DD-YYYY"===settings.outputFormat?update_mdy_calendar(value,"-"):"DD/MM/YYYY"===settings.outputFormat?update_dmy_calendar(value,"/"):"DD-MM-YYYY"===settings.outputFormat?update_dmy_calendar(value,"-"):"YYYY/MM/DD"===settings.outputFormat?update_ymd_calendar(value,"/"):"YYYY-MM-DD"===settings.outputFormat&&update_ymd_calendar(value,"-")}}})}});
 /*!
  * OBE Toggle Text Vanilla JavaScript Mini-Plugin v1.0.0 (https://library.mattmct.com)
  * Copyright 2018 by Matt McT Designs
@@ -166,7 +166,7 @@ var visibleText=obeEscapeHtml(this.textContent),hiddenText=obeEscapeHtml(this.da
  * Licensed under: Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)
  * (https://creativecommons.org/licenses/by-nc-sa/4.0/)
  */
-function($){$.fn.obeDropdownSelect=function(options){
+jQuery(document).ready(function($){$.fn.obeDropdownSelect=function(options){
 // Default Options
 let settings=$.extend({formMode:!0,parentSelector:".dropdown-select",optionSelector:".dropdown-select-option",cloneTargetSelector:".dropdown-select-target",dataAttributeString:"option-value",hiddenInputSelector:"input[type=hidden]",customEventString:"dropdown.select.selected"},options);return this.each(function(i,element){let el=element;el.init=function(){$(this).on("click",settings.optionSelector,function(){
 // clone the selection and replace the original dropdown select content with the selected markup
@@ -178,5 +178,5 @@ $(content).trigger(settings.customEventString)):(console.log("ERROR: The matchin
 // trigger a change event for the input
 input.trigger("change")):(console.log("ERROR: The input selector: "+settings.hiddenInputSelector+" was not found."),err=!0)),err&&console.log("FINAL ERROR: A dropdown select element interaction failed. Please check that your markup selectors match your javascript options or use the .dropdown-select defaults.");
 // get the faux select option value and apply value to hidden input + trigger a change event
-})},el.init()})},$(".dropdown-select").obeDropdownSelect()}(jQuery);
+})},el.init()})},$(".dropdown-select").obeDropdownSelect()});
 //# sourceMappingURL=obebs4.production.bundle.js.map
