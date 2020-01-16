@@ -4,7 +4,7 @@
  * Licensed under: Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)
  * (https://creativecommons.org/licenses/by-nc-sa/4.0/)
  */
-jQuery(document).ready(function($) {
+(function($) {
                 
     $.fn.obeDatepicker = function( options ) {
         
@@ -648,4 +648,4 @@ jQuery(document).ready(function($) {
         
     };
 
-});
+})(jQuery);
