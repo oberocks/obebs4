@@ -1,4 +1,8 @@
-$(function() {
+/*!
+ * obebs4-library.js
+ */
+
+jQuery(document).ready(function($) {
 
     // HIJACK browser so it doesn't jump via url hash to the element id
     // setTimeout is used to allow time for the browser to collapse any dynamicly collapsed prism.js content to be collapsed. With this delay, the navigaiton using hashes to scroll to sections aligns correctly. Without this delay, the browser shows the position before the collapsing.

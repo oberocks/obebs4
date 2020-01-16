@@ -1,4 +1,8 @@
-$(function() {
+/*!
+ * obebs4-fa5-animated-checkboxes.js
+ */
+
+jQuery(document).ready(function($) {
 
     // obe fontawesome 5 animated checkboxes javascript
     $('.obe-icon-checkbox').on('click', function () {

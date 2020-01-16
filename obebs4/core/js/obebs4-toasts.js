@@ -1,6 +1,8 @@
-/* obebs4-toasts.js */
+/*!
+ * obebs4-toasts.js
+ */
 
-$(function() {
+jQuery(document).ready(function($) {
     
     // Initialize Bootstrap Toasts with OBE:BS4 default options
     $('.toast').toast({

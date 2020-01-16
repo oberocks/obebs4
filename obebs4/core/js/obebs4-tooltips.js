@@ -1,4 +1,8 @@
-$(function() {
+/*!
+ * obebs4-tooltips.js
+ */
+
+jQuery(document).ready(function($) {
     
     // Initialize Bootstrap Tooltips
     $('[data-toggle="tooltip"]').tooltip();

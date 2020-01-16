@@ -12,16 +12,12 @@ function(h){"function"==typeof define&&define.amd?define(["jquery"],function(E){
 */
 function(b){"function"==typeof define&&define.amd?define(["jquery","datatables.net"],function(a){return b(a,window,document)}):"object"==typeof exports?module.exports=function(a,d){return a||(a=window),d&&d.fn.dataTable||(d=require("datatables.net")(a,d).$),b(d,a,a.document)}:b(jQuery,window,document)}(function(b,a,d,m){var f=b.fn.dataTable;return b.extend(!0,f.defaults,{dom:"<'row'<'col-sm-12 col-md-6'l><'col-sm-12 col-md-6'f>><'row'<'col-sm-12'tr>><'row'<'col-sm-12 col-md-5'i><'col-sm-12 col-md-7'p>>",renderer:"bootstrap"}),b.extend(f.ext.classes,{sWrapper:"dataTables_wrapper dt-bootstrap4",sFilterInput:"form-control form-control-sm",sLengthSelect:"custom-select custom-select-sm form-control form-control-sm",sProcessing:"dataTables_processing card",sPageButton:"paginate_button page-item"}),f.ext.renderer.pageButton.bootstrap=function(a,h,r,s,j,n){var e,g,i,o=new f.Api(a),t=a.oClasses,k=a.oLanguage.oPaginate,u=a.oLanguage.oAria.paginate||{},p=0,q=function(d,f){var l,h,i,c,m=function(a){a.preventDefault(),!b(a.currentTarget).hasClass("disabled")&&o.page()!=a.data.action&&o.page(a.data.action).draw("page")};for(l=0,h=f.length;l<h;l++)if(c=f[l],b.isArray(c))q(d,c);else{switch(g=e="",c){case"ellipsis":e="&#x2026;",g="disabled";break;case"first":e=k.sFirst,g=c+(0<j?"":" disabled");break;case"previous":e=k.sPrevious,g=c+(0<j?"":" disabled");break;case"next":e=k.sNext,g=c+(j<n-1?"":" disabled");break;case"last":e=k.sLast,g=c+(j<n-1?"":" disabled");break;default:e=c+1,g=j===c?"active":""}e&&(i=b("<li>",{class:t.sPageButton+" "+g,id:0===r&&"string"==typeof c?a.sTableId+"_"+c:null}).append(b("<a>",{href:"#","aria-controls":a.sTableId,"aria-label":u[c],"data-dt-idx":p,tabindex:a.iTabIndex,class:"page-link"}).html(e)).appendTo(d),a.oApi._fnBindAction(i,{action:c},m),p++)}};try{i=b(h).find(d.activeElement).data("dt-idx")}catch(v){}q(b(h).empty().html('<ul class="pagination"/>').children("ul"),s),i!==m&&b(h).find("[data-dt-idx="+i+"]").focus()},f}),
 /*!
- * 
- * OBE:BS4 Library Design System v1.0.0 (https://library.mattmct.com)
- * The OBE:BS4 Design System is a self-reflexive reference library design system based on the most popular web framework in the world, Bootstrap! The OBE:BS4 system was built specifically to give all project stakeholders full visual, technical, and tactile access to every color, font, element, component and layout for any web project.
- * Copyright 2018 by Matt McT Designs
- * Licensed under: Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)
- * (https://creativecommons.org/licenses/by-nc-sa/4.0/)
- *
+ * obebs4-dataTables.js
  */
+jQuery(document).ready(function($){
 // DataTables global settings (effects all instances sitewide)
 $.extend(!0,$.fn.dataTable.defaults,{dom:'<"row justify-content-center"<"col-sm-4 text-center text-sm-left"f>>rt<"row"<"col-sm-6"l><"col-sm-6"p>><"row justify-content-center"<"col-sm-6 text-center font-italic text-muted"i>>',language:{search:"_INPUT_",lengthMenu:'<select class="form-control w-100"><option value="5">View 5 Table Rows</option><option value="10">View 10 Table Rows</option><option value="15">View 15 Table Rows</option><option value="25">View 25 Table Rows</option><option value="50">View 50 Table Rows</option></select>',paginate:{next:"<i class='fa fa-chevron-right'></i>",previous:"<i class='fa fa-chevron-left'></i>"},searchPlaceholder:"Search Colors"}});
 // DEV NOTE: the line/option below is causing the page to reload when switching back to a view with less than "All" table rows on iOS devices
 //'<option value="-1">View All Table Rows</option>'+
+});
 //# sourceMappingURL=obebs4.plugins.bundle.js.map
