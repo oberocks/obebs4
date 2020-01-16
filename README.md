@@ -391,6 +391,36 @@ The following changes were made to the default `obebs4_settings.json` file durin
 "color-900-darken-percent": "20%",
 ```
 
+```json
+"theme-color-interval": "8%",
+"yiq-contrasted-threshold": "150",
+"spacer": "1rem",
+"emphasized-link-hover-darken-percentage": "15%",
+"paragraph-margin-bottom": "1rem",
+"grid-columns": "12",
+"grid-gutter-width": "30px",
+"grid-row-columns": "6",
+"line-height-lg": "1.5",
+"line-height-sm": "1.5",
+"border-width": "1px",
+"border-radius": "0.25rem",
+"border-radius-lg": "0.3rem",
+"border-radius-sm": "0.2rem",
+"rounded-pill": "50rem",
+"box-shadow-sm" : "0 0.125rem 0.25rem rgba($black, 0.075)",
+"box-shadow": "0 0.5rem 1rem rgba($black, 0.15)",
+"box-shadow-lg": "0 1rem 3rem rgba($black, 0.175)",
+"caret-width": "0.3em",
+"transition-base": "all 0.2s ease-in-out",
+"transition-fade": "opacity 0.15s linear",
+"transition-collapse": "height 0.35s ease",
+"font-size-base": "1rem",
+"font-weight-lighter": "lighter",
+"font-weight-light": "300",
+"font-weight-normal": "400",
+"font-weight-bold": "700",
+"font-weight-bolder": "bolder"
+```
 
 <!---
 ## Customizing Your Web Design System
