@@ -25,7 +25,7 @@ function get_obebs4_settings(filepath) {
     // parse the data
     let theData = JSON.parse(fs.readFileSync(filepath));
     // array of all obebs4_settings.json keys that have color & modifier UI in _settings_generator.njk
-    let keys = ['primary', 'secondary', 'success', 'info', 'warning', 'danger', 'light', 'dark', 'body-bg', 'body-color', 'link-color', 'mark-bg', 'input-bg', 'input-color', 'input-placeholder-color', 'input-disabled-bg', 'input-group-addon-bg', 'input-group-addon-color', 'component-active-bg', 'component-active-color', 'dropdown-header-color', 'dropdown-link-color', 'dropdown-link-hover-bg', 'dropdown-link-disabled-color'];
+    let keys = ['primary', 'secondary', 'success', 'info', 'warning', 'danger', 'light', 'dark', 'body-bg', 'body-color', 'link-color', 'mark-bg', 'input-bg', 'input-color', 'input-placeholder-color', 'input-disabled-bg', 'input-group-addon-bg', 'input-group-addon-color', 'component-active-bg', 'component-active-color', 'dropdown-header-color', 'dropdown-link-color', 'dropdown-link-hover-bg', 'dropdown-link-disabled-color', 'yiq-text-dark', 'yiq-text-light', 'headings-color'];
     // loop through the keys array
     for ( var i = 0; i < keys.length; i++) {
         // replace the sass var $
@@ -61,6 +61,9 @@ function get_obebs4_settings(filepath) {
         } else if (val.indexOf('50') > -1) {
             theData[keys[i] + '-C'] = val.replace('-50', '');
             theData[keys[i] + '-M'] = '50';
+        } else if (val.indexOf('null') > -1) {
+            theData[keys[i] + '-C'] = 'none';
+            theData[keys[i] + '-M'] = 'none';
         } else {
             theData[keys[i] + '-C'] = val;
             theData[keys[i] + '-M'] = 'none';

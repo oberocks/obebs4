@@ -2082,7 +2082,7 @@
         <div class="form-group{% if note != 'false' %} mb-0{% endif %}">
             <label class="d-block font-weight-bold">{{ label }} Color</label>
             <select id="{{ id }}" class="form-control"{% if note != 'false' %} aria-describedby="{{id}}-help"{% endif %}>
-                {% if selection1 === 'none' %}<option value="none" selected>None</option>{% endif %}
+                <option value="none"{% if (selection1 === 'none') or (selection1 === 'null') %} selected{% endif %}>None</option>
                 <option value="white"{% if selection1 == 'white' %} selected{% endif %}>White</option>
                 <option value="light-gray"{% if selection1 == 'light-gray' %} selected{% endif %}>Light Gray</option>
                 <option value="gray"{% if selection1 == 'gray' %} selected{% endif %}>Gray</option>
@@ -2116,7 +2116,7 @@
                 <option value="200"{% if selection2 == '200' %} selected{% endif %}>200</option>
                 <option value="300"{% if selection2 == '300' %} selected{% endif %}>300</option>
                 <option value="400"{% if selection2 == '400' %} selected{% endif %}>400</option>
-                <option value="none"{% if selection2 == 'none' %} selected{% endif %}>None</option>
+                <option value="none"{% if (selection2 === 'none') or (selection2 === 'null') %} selected{% endif %}>None</option>
                 <option value="600"{% if selection2 == '600' %} selected{% endif %}>600</option>
                 <option value="700"{% if selection2 == '700' %} selected{% endif %}>700</option>
                 <option value="800"{% if selection2 == '800' %} selected{% endif %}>800</option>
