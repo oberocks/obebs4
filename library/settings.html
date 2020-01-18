@@ -2863,6 +2863,58 @@
                         <small class="d-block text-muted pt-1">Sets $border-width</small>
                     </div>
 
+                    <!-- HOLD FOR: $border-color: $gray-300 !default; -->
+
+                    <div class="form-row align-items-end">
+                        <div class="col-7">
+                            <div class="form-group mb-0">
+                                <label class="d-block font-weight-bold">Border Color Color</label>
+                                <select id="border-color" class="form-control" aria-describedby="border-color-help">
+                                    <option value="none">None</option>
+                                    <option value="white">White</option>
+                                    <option value="light-gray">Light Gray</option>
+                                    <option value="gray" selected>Gray</option>
+                                    <option value="dark-gray">Dark Gray</option>
+                                    <option value="black">Black</option>
+                                    <option value="red">Red</option>
+                                    <option value="rose">Rose</option>
+                                    <option value="magenta">Magenta</option>
+                                    <option value="violet">Violet</option>
+                                    <option value="blue">Blue</option>
+                                    <option value="azure">Azure</option>
+                                    <option value="cyan">Cyan</option>
+                                    <option value="spring-green">Spring Green</option>
+                                    <option value="green">Green</option>
+                                    <option value="chartreuse">Chartreuse</option>
+                                    <option value="yellow">Yellow</option>
+                                    <option value="orange">Orange</option>
+                                    <option value="orange-gray">Orange Gray</option>
+                                    <option value="dark-gray-orange">Dark Gray Orange</option>
+                                    <option value="blue-gray">Blue Gray</option>
+                                    <option value="light-gray-azure">Light Gray Azure</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-5">
+                            <div class="form-group mb-0">
+                                <label class="d-block font-weight-bold">Tint / Shade</label>
+                                <select id="border-color-modifier" class="form-control">
+                                    <option value="50">50</option>
+                                    <option value="100">100</option>
+                                    <option value="200">200</option>
+                                    <option value="300" selected>300</option>
+                                    <option value="400">400</option>
+                                    <option value="none">None</option>
+                                    <option value="600">600</option>
+                                    <option value="700">700</option>
+                                    <option value="800">800</option>
+                                    <option value="900">900</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <small id="border-color-help" class="form-text pb-2" style="opacity: 0.6;">Sets $border-color</small>
+
                     <div class="form-group">
                         <label for="border-radius" class="d-block font-weight-bold">Border Radius</label>
                         <div class="input-group">
@@ -3361,83 +3413,643 @@
 
                     <!-- HOLD FOR: $small-font-size: 80% !default; -->
 
+                    <div class="form-group">
+                        <label for="small-font-size" class="d-block font-weight-bold">Small Font Size</label>
+                        <div class="input-group">
+                            <div class="input-group-prepend js-increment-down">
+                                <button class="btn btn-light border" type="button"><i class="fas fa-angle-left"></i></button>
+                            </div>
+                            <input type="text" class="js-increment-target form-control text-center" id="small-font-size" value="80%" placeholder="80%" data-units="%" data-max="100" data-min="0" data-increment="1">
+                            <div class="input-group-append js-increment-up">
+                                <button class="btn btn-light border" type="button"><i class="fas fa-angle-right"></i></button>
+                            </div>
+                        </div>
+                        <small class="d-block text-muted pt-1">Sets $small-font-size</small>
+                    </div>
+
                     <!-- HOLD FOR: $text-muted: $gray-600 !default; -->
+
+                    <div class="form-row align-items-end">
+                        <div class="col-7">
+                            <div class="form-group mb-0">
+                                <label class="d-block font-weight-bold">Text Muted Color</label>
+                                <select id="text-muted" class="form-control" aria-describedby="text-muted-help">
+                                    <option value="none">None</option>
+                                    <option value="white">White</option>
+                                    <option value="light-gray">Light Gray</option>
+                                    <option value="gray" selected>Gray</option>
+                                    <option value="dark-gray">Dark Gray</option>
+                                    <option value="black">Black</option>
+                                    <option value="red">Red</option>
+                                    <option value="rose">Rose</option>
+                                    <option value="magenta">Magenta</option>
+                                    <option value="violet">Violet</option>
+                                    <option value="blue">Blue</option>
+                                    <option value="azure">Azure</option>
+                                    <option value="cyan">Cyan</option>
+                                    <option value="spring-green">Spring Green</option>
+                                    <option value="green">Green</option>
+                                    <option value="chartreuse">Chartreuse</option>
+                                    <option value="yellow">Yellow</option>
+                                    <option value="orange">Orange</option>
+                                    <option value="orange-gray">Orange Gray</option>
+                                    <option value="dark-gray-orange">Dark Gray Orange</option>
+                                    <option value="blue-gray">Blue Gray</option>
+                                    <option value="light-gray-azure">Light Gray Azure</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-5">
+                            <div class="form-group mb-0">
+                                <label class="d-block font-weight-bold">Tint / Shade</label>
+                                <select id="text-muted-modifier" class="form-control">
+                                    <option value="50">50</option>
+                                    <option value="100">100</option>
+                                    <option value="200">200</option>
+                                    <option value="300">300</option>
+                                    <option value="400">400</option>
+                                    <option value="none">None</option>
+                                    <option value="600" selected>600</option>
+                                    <option value="700">700</option>
+                                    <option value="800">800</option>
+                                    <option value="900">900</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <small id="text-muted-help" class="form-text pb-2" style="opacity: 0.6;">Sets $text-muted</small>
 
                     <!-- HOLD FOR: $blockquote-small-color: $gray-600 !default; -->
 
+                    <div class="form-row align-items-end">
+                        <div class="col-7">
+                            <div class="form-group mb-0">
+                                <label class="d-block font-weight-bold">Blockquote Small Color</label>
+                                <select id="blockquote-small-color" class="form-control" aria-describedby="blockquote-small-color-help">
+                                    <option value="none">None</option>
+                                    <option value="white">White</option>
+                                    <option value="light-gray">Light Gray</option>
+                                    <option value="gray" selected>Gray</option>
+                                    <option value="dark-gray">Dark Gray</option>
+                                    <option value="black">Black</option>
+                                    <option value="red">Red</option>
+                                    <option value="rose">Rose</option>
+                                    <option value="magenta">Magenta</option>
+                                    <option value="violet">Violet</option>
+                                    <option value="blue">Blue</option>
+                                    <option value="azure">Azure</option>
+                                    <option value="cyan">Cyan</option>
+                                    <option value="spring-green">Spring Green</option>
+                                    <option value="green">Green</option>
+                                    <option value="chartreuse">Chartreuse</option>
+                                    <option value="yellow">Yellow</option>
+                                    <option value="orange">Orange</option>
+                                    <option value="orange-gray">Orange Gray</option>
+                                    <option value="dark-gray-orange">Dark Gray Orange</option>
+                                    <option value="blue-gray">Blue Gray</option>
+                                    <option value="light-gray-azure">Light Gray Azure</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-5">
+                            <div class="form-group mb-0">
+                                <label class="d-block font-weight-bold">Tint / Shade</label>
+                                <select id="blockquote-small-color-modifier" class="form-control">
+                                    <option value="50">50</option>
+                                    <option value="100">100</option>
+                                    <option value="200">200</option>
+                                    <option value="300">300</option>
+                                    <option value="400">400</option>
+                                    <option value="none">None</option>
+                                    <option value="600" selected>600</option>
+                                    <option value="700">700</option>
+                                    <option value="800">800</option>
+                                    <option value="900">900</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <small id="blockquote-small-color-help" class="form-text pb-2" style="opacity: 0.6;">Sets $blockquote-small-color</small>
+
                     <!-- HOLD FOR: $blockquote-small-font-size: $small-font-size !default; -->
+
+                    <div class="form-group">
+                        <label for="blockquote-small-font-size" class="font-weight-bold">Blockquote Small Font Size</label>
+                        <input type="text" class="form-control" id="blockquote-small-font-size" value="$small-font-size" placeholder="$small-font-size">
+                        <small class="d-block text-muted">Sets $blockquote-small-font-size</small>
+                    </div>
 
                     <!-- HOLD FOR: $blockquote-font-size: $font-size-base * 1.25 !default; -->
 
-                    <!-- HOLD FOR: $hr-border-color: rgba($black, .1) !default; -->
+                    <div class="form-group">
+                        <label for="blockquote-font-size" class="font-weight-bold">Blockquote Font Size</label>
+                        <input type="text" class="form-control" id="blockquote-font-size" value="$font-size-base * 1.25" placeholder="$font-size-base * 1.25">
+                        <small class="d-block text-muted">Sets $blockquote-font-size</small>
+                    </div>
+
+                    <!-- HOLD FOR: $hr-border-color: rgba($black, 0.1) !default; -->
+
+                    <div class="form-group">
+                        <label for="hr-border-color" class="font-weight-bold">HR Border Color</label>
+                        <input type="text" class="form-control" id="hr-border-color" value="rgba($black, 0.1)" placeholder="rgba($black, 0.1)">
+                        <small class="d-block text-muted">Sets $hr-border-color</small>
+                    </div>
 
                     <!-- HOLD FOR: $hr-border-width: $border-width !default; -->
 
+                    <div class="form-group">
+                        <label for="hr-border-width" class="font-weight-bold">HR Border Width</label>
+                        <input type="text" class="form-control" id="hr-border-width" value="$border-width" placeholder="$border-width">
+                        <small class="d-block text-muted">Sets $hr-border-width</small>
+                    </div>
+
                     <!-- HOLD FOR: $mark-padding: 0.2em !default; -->
+
+                    <div class="form-group">
+                        <label for="mark-padding" class="d-block font-weight-bold">Mark Padding</label>
+                        <div class="input-group">
+                            <div class="input-group-prepend js-increment-down">
+                                <button class="btn btn-light border" type="button"><i class="fas fa-angle-left"></i></button>
+                            </div>
+                            <input type="text" class="js-increment-target form-control text-center" id="mark-padding" value="0.2em" placeholder="0.2em" data-units="em" data-max="1000" data-min="0" data-increment="0.05">
+                            <div class="input-group-append js-increment-up">
+                                <button class="btn btn-light border" type="button"><i class="fas fa-angle-right"></i></button>
+                            </div>
+                        </div>
+                        <small class="d-block text-muted pt-1">Sets $mark-padding</small>
+                    </div>
 
                     <!-- HOLD FOR: $dt-font-weight: $font-weight-bold !default; -->
 
-                    <!-- HOLD FOR: $kbd-box-shadow: inset 0 -.1rem 0 rgba($black, .25) !default; -->
+                    <div class="form-group">
+                        <label for="dt-font-weight" class="font-weight-bold">DT Font Weight</label>
+                        <input type="text" class="form-control" id="dt-font-weight" value="$font-weight-bold" placeholder="$font-weight-bold">
+                        <small class="d-block text-muted">Sets $dt-font-weight</small>
+                    </div>
+
+                    <!-- HOLD FOR: $kbd-box-shadow: inset 0 -0.1rem 0 rgba($black, 0.25) !default; -->
+
+                    <div class="form-group">
+                        <label for="kbd-box-shadow" class="font-weight-bold">KBD Box Shadow</label>
+                        <input type="text" class="form-control" id="kbd-box-shadow" value="inset 0 -0.1rem 0 rgba($black, 0.25)" placeholder="inset 0 -0.1rem 0 rgba($black, 0.25)">
+                        <small class="d-block text-muted">Sets $kbd-box-shadow</small>
+                    </div>
 
                     <!-- HOLD FOR: $nested-kbd-font-weight: $font-weight-bold !default; -->
 
+                    <div class="form-group">
+                        <label for="nested-kbd-font-weight" class="font-weight-bold">Nested KBD Font Weight</label>
+                        <input type="text" class="form-control" id="nested-kbd-font-weight" value="$font-weight-bold" placeholder="$font-weight-bold">
+                        <small class="d-block text-muted">Sets $nested-kbd-font-weight</small>
+                    </div>
+
                     <!-- HOLD FOR: $list-inline-padding: 0.5rem !default; -->
 
-                    <!-- HOLD FOR: $mark-bg: #fcf8e3 !default; -->
+                    <div class="form-group">
+                        <label for="list-inline-padding" class="d-block font-weight-bold">List Inline Padding</label>
+                        <div class="input-group">
+                            <div class="input-group-prepend js-increment-down">
+                                <button class="btn btn-light border" type="button"><i class="fas fa-angle-left"></i></button>
+                            </div>
+                            <input type="text" class="js-increment-target form-control text-center" id="list-inline-padding" value="0.5rem" placeholder="0.5rem" data-units="rem" data-max="1000" data-min="0" data-increment="0.05">
+                            <div class="input-group-append js-increment-up">
+                                <button class="btn btn-light border" type="button"><i class="fas fa-angle-right"></i></button>
+                            </div>
+                        </div>
+                        <small class="d-block text-muted pt-1">Sets $list-inline-padding</small>
+                    </div>
 
                     <!-- HOLD FOR: $hr-margin-y: $spacer !default; -->
 
+                    <div class="form-group">
+                        <label for="hr-margin-y" class="font-weight-bold">HR Margin Y (Axis)</label>
+                        <input type="text" class="form-control" id="hr-margin-y" value="$spacer" placeholder="$spacer">
+                        <small class="d-block text-muted">Sets $hr-margin-y</small>
+                    </div>
+
+                    <h3 class="pt-4 pb-2">Core Tables Options</h3>
+
                     <!-- TABLES SECTION -->
 
-                    <!-- HOLD FOR: $table-cell-padding: .75rem !default; -->
+                    <!-- HOLD FOR: $table-cell-padding: 0.75rem !default; -->
 
-                    <!-- HOLD FOR: $table-cell-padding-sm: .3rem !default; -->
+                    <div class="form-group">
+                        <label for="table-cell-padding" class="d-block font-weight-bold">Table Cell Padding</label>
+                        <div class="input-group">
+                            <div class="input-group-prepend js-increment-down">
+                                <button class="btn btn-light border" type="button"><i class="fas fa-angle-left"></i></button>
+                            </div>
+                            <input type="text" class="js-increment-target form-control text-center" id="table-cell-padding" value="0.75rem" placeholder="0.75rem" data-units="rem" data-max="1000" data-min="0" data-increment="0.05">
+                            <div class="input-group-append js-increment-up">
+                                <button class="btn btn-light border" type="button"><i class="fas fa-angle-right"></i></button>
+                            </div>
+                        </div>
+                        <small class="d-block text-muted pt-1">Sets $table-cell-padding</small>
+                    </div>
+
+                    <!-- HOLD FOR: $table-cell-padding-sm: 0.3rem !default; -->
+
+                    <div class="form-group">
+                        <label for="table-cell-padding-sm" class="d-block font-weight-bold">Table Cell Padding Small</label>
+                        <div class="input-group">
+                            <div class="input-group-prepend js-increment-down">
+                                <button class="btn btn-light border" type="button"><i class="fas fa-angle-left"></i></button>
+                            </div>
+                            <input type="text" class="js-increment-target form-control text-center" id="table-cell-padding-sm" value="0.3rem" placeholder="0.3rem" data-units="rem" data-max="1000" data-min="0" data-increment="0.05">
+                            <div class="input-group-append js-increment-up">
+                                <button class="btn btn-light border" type="button"><i class="fas fa-angle-right"></i></button>
+                            </div>
+                        </div>
+                        <small class="d-block text-muted pt-1">Sets $table-cell-padding-sm</small>
+                    </div>
 
                     <!-- HOLD FOR: $table-color: $body-color !default; -->
 
+                    <div class="form-group">
+                        <label for="table-color" class="font-weight-bold">Table Color</label>
+                        <input type="text" class="form-control" id="table-color" value="$body-color" placeholder="$body-color">
+                        <small class="d-block text-muted">Sets $table-color</small>
+                    </div>
+
                     <!-- HOLD FOR: $table-bg: null !default; -->
+
+                    <div class="form-group">
+                        <label for="table-bg" class="font-weight-bold">Table BG</label>
+                        <input type="text" class="form-control" id="table-bg" value="null" placeholder="null">
+                        <small class="d-block text-muted">Sets $table-bg</small>
+                    </div>
 
                     <!-- HOLD FOR: $table-accent-bg: rgba($black, .05) !default; -->
 
+                    <div class="form-group">
+                        <label for="table-accent-bg" class="font-weight-bold">Table Accent BG</label>
+                        <input type="text" class="form-control" id="table-accent-bg" value="rgba($black, .05)" placeholder="rgba($black, .05)">
+                        <small class="d-block text-muted">Sets $table-accent-bg</small>
+                    </div>
+
                     <!-- HOLD FOR: $table-hover-color: $table-color !default; -->
 
-                    <!-- HOLD FOR: $table-hover-bg: rgba($black, .075) !default; -->
+                    <div class="form-group">
+                        <label for="table-hover-color" class="font-weight-bold">Table Hover Color</label>
+                        <input type="text" class="form-control" id="table-hover-color" value="$table-color" placeholder="$table-color">
+                        <small class="d-block text-muted">Sets $table-hover-color</small>
+                    </div>
+
+                    <!-- HOLD FOR: $table-hover-bg: rgba($black, 0.075) !default; -->
+
+                    <div class="form-group">
+                        <label for="table-hover-bg" class="font-weight-bold">Table Hover BG</label>
+                        <input type="text" class="form-control" id="table-hover-bg" value="rgba($black, 0.075)" placeholder="rgba($black, 0.075)">
+                        <small class="d-block text-muted">Sets $table-hover-bg</small>
+                    </div>
 
                     <!-- HOLD FOR: $table-active-bg: $table-hover-bg !default; -->
 
+                    <div class="form-group">
+                        <label for="table-active-bg" class="font-weight-bold">Table Active BG</label>
+                        <input type="text" class="form-control" id="table-active-bg" value="$table-hover-bg" placeholder="$table-hover-bg">
+                        <small class="d-block text-muted">Sets $table-active-bg</small>
+                    </div>
+
                     <!-- HOLD FOR: $table-border-width: $border-width !default; -->
+
+                    <div class="form-group">
+                        <label for="table-border-width" class="font-weight-bold">Table Border Width</label>
+                        <input type="text" class="form-control" id="table-border-width" value="$border-width" placeholder="$border-width">
+                        <small class="d-block text-muted">Sets $table-border-width</small>
+                    </div>
 
                     <!-- HOLD FOR: $table-border-color: $border-color !default; -->
 
+                    <div class="form-group">
+                        <label for="table-border-color" class="font-weight-bold">Table Border Color</label>
+                        <input type="text" class="form-control" id="table-border-color" value="$border-color" placeholder="$border-color">
+                        <small class="d-block text-muted">Sets $table-border-color</small>
+                    </div>
+
                     <!-- HOLD FOR: $table-head-bg: $gray-200 !default; -->
+
+                    <div class="form-row align-items-end">
+                        <div class="col-7">
+                            <div class="form-group mb-0">
+                                <label class="d-block font-weight-bold">Table Head BG Color</label>
+                                <select id="table-head-bg" class="form-control" aria-describedby="table-head-bg-help">
+                                    <option value="none">None</option>
+                                    <option value="white">White</option>
+                                    <option value="light-gray">Light Gray</option>
+                                    <option value="gray" selected>Gray</option>
+                                    <option value="dark-gray">Dark Gray</option>
+                                    <option value="black">Black</option>
+                                    <option value="red">Red</option>
+                                    <option value="rose">Rose</option>
+                                    <option value="magenta">Magenta</option>
+                                    <option value="violet">Violet</option>
+                                    <option value="blue">Blue</option>
+                                    <option value="azure">Azure</option>
+                                    <option value="cyan">Cyan</option>
+                                    <option value="spring-green">Spring Green</option>
+                                    <option value="green">Green</option>
+                                    <option value="chartreuse">Chartreuse</option>
+                                    <option value="yellow">Yellow</option>
+                                    <option value="orange">Orange</option>
+                                    <option value="orange-gray">Orange Gray</option>
+                                    <option value="dark-gray-orange">Dark Gray Orange</option>
+                                    <option value="blue-gray">Blue Gray</option>
+                                    <option value="light-gray-azure">Light Gray Azure</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-5">
+                            <div class="form-group mb-0">
+                                <label class="d-block font-weight-bold">Tint / Shade</label>
+                                <select id="table-head-bg-modifier" class="form-control">
+                                    <option value="50">50</option>
+                                    <option value="100">100</option>
+                                    <option value="200" selected>200</option>
+                                    <option value="300">300</option>
+                                    <option value="400">400</option>
+                                    <option value="none">None</option>
+                                    <option value="600">600</option>
+                                    <option value="700">700</option>
+                                    <option value="800">800</option>
+                                    <option value="900">900</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <small id="table-head-bg-help" class="form-text pb-2" style="opacity: 0.6;">Sets $table-head-bg</small>
 
                     <!-- HOLD FOR: $table-head-color: $gray-700 !default; -->
 
+                    <div class="form-row align-items-end">
+                        <div class="col-7">
+                            <div class="form-group mb-0">
+                                <label class="d-block font-weight-bold">Table Head Color Color</label>
+                                <select id="table-head-color" class="form-control" aria-describedby="table-head-color-help">
+                                    <option value="none">None</option>
+                                    <option value="white">White</option>
+                                    <option value="light-gray">Light Gray</option>
+                                    <option value="gray" selected>Gray</option>
+                                    <option value="dark-gray">Dark Gray</option>
+                                    <option value="black">Black</option>
+                                    <option value="red">Red</option>
+                                    <option value="rose">Rose</option>
+                                    <option value="magenta">Magenta</option>
+                                    <option value="violet">Violet</option>
+                                    <option value="blue">Blue</option>
+                                    <option value="azure">Azure</option>
+                                    <option value="cyan">Cyan</option>
+                                    <option value="spring-green">Spring Green</option>
+                                    <option value="green">Green</option>
+                                    <option value="chartreuse">Chartreuse</option>
+                                    <option value="yellow">Yellow</option>
+                                    <option value="orange">Orange</option>
+                                    <option value="orange-gray">Orange Gray</option>
+                                    <option value="dark-gray-orange">Dark Gray Orange</option>
+                                    <option value="blue-gray">Blue Gray</option>
+                                    <option value="light-gray-azure">Light Gray Azure</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-5">
+                            <div class="form-group mb-0">
+                                <label class="d-block font-weight-bold">Tint / Shade</label>
+                                <select id="table-head-color-modifier" class="form-control">
+                                    <option value="50">50</option>
+                                    <option value="100">100</option>
+                                    <option value="200">200</option>
+                                    <option value="300">300</option>
+                                    <option value="400">400</option>
+                                    <option value="none">None</option>
+                                    <option value="600">600</option>
+                                    <option value="700" selected>700</option>
+                                    <option value="800">800</option>
+                                    <option value="900">900</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <small id="table-head-color-help" class="form-text pb-2" style="opacity: 0.6;">Sets $table-head-color</small>
+
                     <!-- HOLD FOR: $table-dark-color: $white !default; -->
+
+                    <div class="form-row align-items-end">
+                        <div class="col-7">
+                            <div class="form-group mb-0">
+                                <label class="d-block font-weight-bold">Table Dark Color Color</label>
+                                <select id="table-dark-color" class="form-control" aria-describedby="table-dark-color-help">
+                                    <option value="none">None</option>
+                                    <option value="white" selected>White</option>
+                                    <option value="light-gray">Light Gray</option>
+                                    <option value="gray">Gray</option>
+                                    <option value="dark-gray">Dark Gray</option>
+                                    <option value="black">Black</option>
+                                    <option value="red">Red</option>
+                                    <option value="rose">Rose</option>
+                                    <option value="magenta">Magenta</option>
+                                    <option value="violet">Violet</option>
+                                    <option value="blue">Blue</option>
+                                    <option value="azure">Azure</option>
+                                    <option value="cyan">Cyan</option>
+                                    <option value="spring-green">Spring Green</option>
+                                    <option value="green">Green</option>
+                                    <option value="chartreuse">Chartreuse</option>
+                                    <option value="yellow">Yellow</option>
+                                    <option value="orange">Orange</option>
+                                    <option value="orange-gray">Orange Gray</option>
+                                    <option value="dark-gray-orange">Dark Gray Orange</option>
+                                    <option value="blue-gray">Blue Gray</option>
+                                    <option value="light-gray-azure">Light Gray Azure</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-5">
+                            <div class="form-group mb-0">
+                                <label class="d-block font-weight-bold">Tint / Shade</label>
+                                <select id="table-dark-color-modifier" class="form-control">
+                                    <option value="50">50</option>
+                                    <option value="100">100</option>
+                                    <option value="200">200</option>
+                                    <option value="300">300</option>
+                                    <option value="400">400</option>
+                                    <option value="none" selected>None</option>
+                                    <option value="600">600</option>
+                                    <option value="700">700</option>
+                                    <option value="800">800</option>
+                                    <option value="900">900</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <small id="table-dark-color-help" class="form-text pb-2" style="opacity: 0.6;">Sets $table-dark-color</small>
 
                     <!-- HOLD FOR: $table-dark-bg: $gray-800 !default; -->
 
-                    <!-- HOLD FOR: $table-dark-accent-bg: rgba($white, .05) !default; -->
+                    <div class="form-row align-items-end">
+                        <div class="col-7">
+                            <div class="form-group mb-0">
+                                <label class="d-block font-weight-bold">Table Dark BG Color</label>
+                                <select id="table-dark-bg" class="form-control" aria-describedby="table-dark-bg-help">
+                                    <option value="none">None</option>
+                                    <option value="white">White</option>
+                                    <option value="light-gray">Light Gray</option>
+                                    <option value="gray" selected>Gray</option>
+                                    <option value="dark-gray">Dark Gray</option>
+                                    <option value="black">Black</option>
+                                    <option value="red">Red</option>
+                                    <option value="rose">Rose</option>
+                                    <option value="magenta">Magenta</option>
+                                    <option value="violet">Violet</option>
+                                    <option value="blue">Blue</option>
+                                    <option value="azure">Azure</option>
+                                    <option value="cyan">Cyan</option>
+                                    <option value="spring-green">Spring Green</option>
+                                    <option value="green">Green</option>
+                                    <option value="chartreuse">Chartreuse</option>
+                                    <option value="yellow">Yellow</option>
+                                    <option value="orange">Orange</option>
+                                    <option value="orange-gray">Orange Gray</option>
+                                    <option value="dark-gray-orange">Dark Gray Orange</option>
+                                    <option value="blue-gray">Blue Gray</option>
+                                    <option value="light-gray-azure">Light Gray Azure</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-5">
+                            <div class="form-group mb-0">
+                                <label class="d-block font-weight-bold">Tint / Shade</label>
+                                <select id="table-dark-bg-modifier" class="form-control">
+                                    <option value="50">50</option>
+                                    <option value="100">100</option>
+                                    <option value="200">200</option>
+                                    <option value="300">300</option>
+                                    <option value="400">400</option>
+                                    <option value="none">None</option>
+                                    <option value="600">600</option>
+                                    <option value="700">700</option>
+                                    <option value="800" selected>800</option>
+                                    <option value="900">900</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <small id="table-dark-bg-help" class="form-text pb-2" style="opacity: 0.6;">Sets $table-dark-bg</small>
+
+                    <!-- HOLD FOR: $table-dark-accent-bg: rgba($white, 0.05) !default; -->
+
+                    <div class="form-group">
+                        <label for="table-dark-accent-bg" class="font-weight-bold">Table Dark Accent BG</label>
+                        <input type="text" class="form-control" id="table-dark-accent-bg" value="rgba($white, 0.05)" placeholder="rgba($white, 0.05)">
+                        <small class="d-block text-muted">Sets $table-dark-accent-bg</small>
+                    </div>
 
                     <!-- HOLD FOR: $table-dark-hover-color: $table-dark-color !default; -->
 
-                    <!-- HOLD FOR: $table-dark-hover-bg: rgba($white, .075) !default; -->
+                    <div class="form-group">
+                        <label for="table-dark-hover-color" class="font-weight-bold">Table Dark Hover Color</label>
+                        <input type="text" class="form-control" id="table-dark-hover-color" value="$table-dark-color" placeholder="$table-dark-color">
+                        <small class="d-block text-muted">Sets $table-dark-hover-color</small>
+                    </div>
+
+                    <!-- HOLD FOR: $table-dark-hover-bg: rgba($white, 0.075) !default; -->
+
+                    <div class="form-group">
+                        <label for="table-dark-hover-bg" class="font-weight-bold">Table Dark Hover BG</label>
+                        <input type="text" class="form-control" id="table-dark-hover-bg" value="rgba($white, 0.075)" placeholder="rgba($white, 0.075)">
+                        <small class="d-block text-muted">Sets $table-dark-hover-bg</small>
+                    </div>
 
                     <!-- HOLD FOR: $table-dark-border-color: lighten($table-dark-bg, 7.5%) !default; -->
 
+                    <div class="form-group">
+                        <label for="table-dark-border-color" class="font-weight-bold">Table Dark Border Color</label>
+                        <input type="text" class="form-control" id="table-dark-border-color" value="lighten($table-dark-bg, 7.5%)" placeholder="lighten($table-dark-bg, 7.5%)">
+                        <small class="d-block text-muted">Sets $table-dark-border-color</small>
+                    </div>
+
                     <!-- HOLD FOR: $table-striped-order: odd !default; -->
+
+                    <div class="form-group">
+                        <label for="table-striped-order" class="font-weight-bold">Table Striped Order</label>
+                        <input type="text" class="form-control" id="table-striped-order" value="odd" placeholder="odd">
+                        <small class="d-block text-muted">Sets $table-striped-order</small>
+                    </div>
 
                     <!-- HOLD FOR: $table-caption-color: $text-muted !default; -->
 
+                    <div class="form-group">
+                        <label for="table-caption-color" class="font-weight-bold">Table Caption Color</label>
+                        <input type="text" class="form-control" id="table-caption-color" value="$text-muted" placeholder="$text-muted">
+                        <small class="d-block text-muted">Sets $table-caption-color</small>
+                    </div>
+
                     <!-- HOLD FOR: $table-bg-level: -9 !default; -->
 
+                    <div class="form-group">
+                        <label for="table-bg-level" class="d-block font-weight-bold">Table BG Level</label>
+                        <div class="input-group">
+                            <div class="input-group-prepend js-increment-down">
+                                <button class="btn btn-light border" type="button"><i class="fas fa-angle-left"></i></button>
+                            </div>
+                            <input type="text" class="js-increment-target form-control text-center" id="table-bg-level" value="-9" placeholder="-9" data-units="" data-max="255" data-min="-255" data-increment="1">
+                            <div class="input-group-append js-increment-up">
+                                <button class="btn btn-light border" type="button"><i class="fas fa-angle-right"></i></button>
+                            </div>
+                        </div>
+                        <small class="d-block text-muted pt-1">Sets $table-bg-level</small>
+                    </div>
+
                     <!-- HOLD FOR: $table-border-level: -6 !default; -->
+
+                    <div class="form-group">
+                        <label for="table-border-level" class="d-block font-weight-bold">Table Border Level</label>
+                        <div class="input-group">
+                            <div class="input-group-prepend js-increment-down">
+                                <button class="btn btn-light border" type="button"><i class="fas fa-angle-left"></i></button>
+                            </div>
+                            <input type="text" class="js-increment-target form-control text-center" id="table-border-level" value="-6" placeholder="-6" data-units="" data-max="255" data-min="-255" data-increment="1">
+                            <div class="input-group-append js-increment-up">
+                                <button class="btn btn-light border" type="button"><i class="fas fa-angle-right"></i></button>
+                            </div>
+                        </div>
+                        <small class="d-block text-muted pt-1">Sets $table-border-level</small>
+                    </div>
+
+                    <h3 class="pt-4 pb-2">Core Buttons + Forms Options</h3>
 
                     <!-- BUTTONS + FORMS SECTION -->
 
                     <!-- HOLD FOR: $input-btn-padding-y: 0.375rem !default; -->
 
+                    <div class="form-group">
+                        <label for="input-btn-padding-y" class="d-block font-weight-bold">Input Btn Padding Y</label>
+                        <div class="input-group">
+                            <div class="input-group-prepend js-increment-down">
+                                <button class="btn btn-light border" type="button"><i class="fas fa-angle-left"></i></button>
+                            </div>
+                            <input type="text" class="js-increment-target form-control text-center" id="input-btn-padding-y" value="0.375rem" placeholder="0.375rem" data-units="rem" data-max="100" data-min="0" data-increment="0.025">
+                            <div class="input-group-append js-increment-up">
+                                <button class="btn btn-light border" type="button"><i class="fas fa-angle-right"></i></button>
+                            </div>
+                        </div>
+                        <small class="d-block text-muted pt-1">Sets $input-btn-padding-y</small>
+                    </div>
+
                     <!-- HOLD FOR: $input-btn-padding-x: 0.75rem !default; -->
+
+                    <div class="form-group">
+                        <label for="input-btn-padding-x" class="d-block font-weight-bold">Input Btn Padding X</label>
+                        <div class="input-group">
+                            <div class="input-group-prepend js-increment-down">
+                                <button class="btn btn-light border" type="button"><i class="fas fa-angle-left"></i></button>
+                            </div>
+                            <input type="text" class="js-increment-target form-control text-center" id="input-btn-padding-x" value="0.75rem" placeholder="0.75rem" data-units="rem" data-max="100" data-min="0" data-increment="0.025">
+                            <div class="input-group-append js-increment-up">
+                                <button class="btn btn-light border" type="button"><i class="fas fa-angle-right"></i></button>
+                            </div>
+                        </div>
+                        <small class="d-block text-muted pt-1">Sets $input-btn-padding-x</small>
+                    </div>
 
                     <!-- HOLD FOR: $input-btn-font-family: null !default; -->
 
@@ -5065,7 +5677,7 @@
 
                 <small class="text-light">OBE:BS4 VERSION:</small>
 
-                <p class="lead">0.8.18</p>
+                <p class="lead">0.8.19</p>
 
                 <hr class="border-gray" />
 
@@ -6453,6 +7065,7 @@
                 setObjValOrFallback(object, 'line-height-lg', "1.5");
                 setObjValOrFallback(object, 'line-height-sm', "1.5");
                 setObjValOrFallback(object, 'border-width', "1px");
+                setColorsData('border-color');
                 setObjValOrFallback(object, 'border-radius', "0.25rem");
                 setObjValOrFallback(object, 'border-radius-lg', "0.3rem");
                 setObjValOrFallback(object, 'border-radius-sm', "0.2rem");
@@ -6500,6 +7113,45 @@
                 setObjValOrFallback(object, 'display-line-height', "$headings-line-height");
                 setObjValOrFallback(object, 'lead-font-size', "$font-size-base * 1.25");
                 setObjValOrFallback(object, 'lead-font-weight', "300");
+                setObjValOrFallback(object, 'small-font-size', "80%");
+                setColorsData('text-muted');
+                setColorsData('blockquote-small-color');
+                setObjValOrFallback(object, 'blockquote-small-font-size', "$small-font-size");
+                setObjValOrFallback(object, 'blockquote-font-size', "$font-size-base * 1.25");
+                setObjValOrFallback(object, 'hr-border-color', "rgba($black, 0.1)");
+                setObjValOrFallback(object, 'hr-border-width', "$border-width");
+                setObjValOrFallback(object, 'mark-padding', "0.2em");
+                setObjValOrFallback(object, 'dt-font-weight', "$font-weight-bold");
+                setObjValOrFallback(object, 'kbd-box-shadow', "inset 0 -0.1rem 0 rgba($black, 0.25)");
+                setObjValOrFallback(object, 'nested-kbd-font-weight', "$font-weight-bold");
+                setObjValOrFallback(object, 'list-inline-padding', "0.5rem");
+                setObjValOrFallback(object, 'hr-margin-y', "$spacer");
+                // core tables
+                setObjValOrFallback(object, 'table-cell-padding', "0.75rem");
+                setObjValOrFallback(object, 'table-cell-padding-sm', "0.3rem");
+                setObjValOrFallback(object, 'table-color', "$body-color");
+                setObjValOrFallback(object, 'table-bg', "null");
+                setObjValOrFallback(object, 'table-accent-bg', "rgba($black, .05)");
+                setObjValOrFallback(object, 'table-hover-color', "$table-color");
+                setObjValOrFallback(object, 'table-hover-bg', "rgba($black, 0.075)");
+                setObjValOrFallback(object, 'table-active-bg', "$table-hover-bg");
+                setObjValOrFallback(object, 'table-border-width', "$border-width");
+                setObjValOrFallback(object, 'table-border-color', "$border-color");
+                setColorsData('table-head-bg');
+                setColorsData('table-head-color');
+                setColorsData('table-dark-color');
+                setColorsData('table-dark-bg');
+                setObjValOrFallback(object, 'table-dark-accent-bg', "rgba($white, 0.05)");
+                setObjValOrFallback(object, 'table-dark-hover-color', "$table-dark-color");
+                setObjValOrFallback(object, 'table-dark-hover-bg', "rgba($white, 0.075)");
+                setObjValOrFallback(object, 'table-dark-border-color', "lighten($table-dark-bg, 7.5%)");
+                setObjValOrFallback(object, 'table-striped-order', "odd");
+                setObjValOrFallback(object, 'table-caption-color', "$text-muted");
+                setObjValOrFallback(object, 'table-bg-level', "-9");
+                setObjValOrFallback(object, 'table-border-level', "-6");
+                // core buttons + forms
+                setObjValOrFallback(object, 'input-btn-padding-y', "0.375rem");
+                setObjValOrFallback(object, 'input-btn-padding-x', "0.75rem");
                 //
                 // STRINGIFY OBJECT INTO JSON AND USE PRISM TO DISPLAY AS HIGHLIGHTED CODE
                 //

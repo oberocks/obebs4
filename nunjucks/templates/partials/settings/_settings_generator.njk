@@ -591,6 +591,9 @@
 
                         {{ macros.settings_number_step_input('border-width', 'Border Width', global_strings['sass-defaults']['border-width'], obe_settings['border-width'], 'px', '10000', '0', '1', note='Sets $border-width') }}
 
+                        <!-- HOLD FOR: $border-color: $gray-300 !default; -->
+                        {{ macros.settings_contextual_selects('border-color', 'Border Color', obe_settings['border-color-C'], obe_settings['border-color-M'], note='Sets $border-color') }}
+
                         {{ macros.settings_number_step_input('border-radius', 'Border Radius', global_strings['sass-defaults']['border-radius'], obe_settings['border-radius'], 'rem', '100', '0', '0.05', note='Sets $border-radius') }}
 
                         {{ macros.settings_number_step_input('border-radius-lg', 'Border Radius Large', global_strings['sass-defaults']['border-radius-lg'], obe_settings['border-radius-lg'], 'rem', '100', '0', '0.05', note='Sets $border-radius-lg') }}
@@ -694,88 +697,127 @@
                         {{ macros.settings_number_step_input('lead-font-weight', 'Lead Font Weight', global_strings['sass-defaults']['lead-font-weight'], obe_settings['lead-font-weight'], '', '1000', '0', '100', note='Sets $lead-font-weight') }}
 
                         <!-- HOLD FOR: $small-font-size: 80% !default; -->
+                        {{ macros.settings_number_step_input('small-font-size', 'Small Font Size', global_strings['sass-defaults']['small-font-size'], obe_settings['small-font-size'], '%', '100', '0', '1', note='Sets $small-font-size') }}
 
                         <!-- HOLD FOR: $text-muted: $gray-600 !default; -->
+                        {{ macros.settings_contextual_selects('text-muted', 'Text Muted', obe_settings['text-muted-C'], obe_settings['text-muted-M'], note='Sets $text-muted') }}
 
                         <!-- HOLD FOR: $blockquote-small-color: $gray-600 !default; -->
+                        {{ macros.settings_contextual_selects('blockquote-small-color', 'Blockquote Small', obe_settings['blockquote-small-color-C'], obe_settings['blockquote-small-color-M'], note='Sets $blockquote-small-color') }}
 
                         <!-- HOLD FOR: $blockquote-small-font-size: $small-font-size !default; -->
+                        {{ macros.settings_text_input('blockquote-small-font-size', 'Blockquote Small Font Size', global_strings['sass-defaults']['blockquote-small-font-size'], obe_settings['blockquote-small-font-size'], note='Sets $blockquote-small-font-size') }}
 
                         <!-- HOLD FOR: $blockquote-font-size: $font-size-base * 1.25 !default; -->
+                        {{ macros.settings_text_input('blockquote-font-size', 'Blockquote Font Size', global_strings['sass-defaults']['blockquote-font-size'], obe_settings['blockquote-font-size'], note='Sets $blockquote-font-size') }}
 
-                        <!-- HOLD FOR: $hr-border-color: rgba($black, .1) !default; -->
+                        <!-- HOLD FOR: $hr-border-color: rgba($black, 0.1) !default; -->
+                        {{ macros.settings_text_input('hr-border-color', 'HR Border Color', global_strings['sass-defaults']['hr-border-color'], obe_settings['hr-border-color'], note='Sets $hr-border-color') }}
 
                         <!-- HOLD FOR: $hr-border-width: $border-width !default; -->
+                        {{ macros.settings_text_input('hr-border-width', 'HR Border Width', global_strings['sass-defaults']['hr-border-width'], obe_settings['hr-border-width'], note='Sets $hr-border-width') }}
 
                         <!-- HOLD FOR: $mark-padding: 0.2em !default; -->
+                        {{ macros.settings_number_step_input('mark-padding', 'Mark Padding', global_strings['sass-defaults']['mark-padding'], obe_settings['mark-padding'], 'em', '1000', '0', '0.05', note='Sets $mark-padding') }}
 
                         <!-- HOLD FOR: $dt-font-weight: $font-weight-bold !default; -->
+                        {{ macros.settings_text_input('dt-font-weight', 'DT Font Weight', global_strings['sass-defaults']['dt-font-weight'], obe_settings['dt-font-weight'], note='Sets $dt-font-weight') }}
 
-                        <!-- HOLD FOR: $kbd-box-shadow: inset 0 -.1rem 0 rgba($black, .25) !default; -->
+                        <!-- HOLD FOR: $kbd-box-shadow: inset 0 -0.1rem 0 rgba($black, 0.25) !default; -->
+                        {{ macros.settings_text_input('kbd-box-shadow', 'KBD Box Shadow', global_strings['sass-defaults']['kbd-box-shadow'], obe_settings['kbd-box-shadow'], note='Sets $kbd-box-shadow') }}
 
                         <!-- HOLD FOR: $nested-kbd-font-weight: $font-weight-bold !default; -->
+                        {{ macros.settings_text_input('nested-kbd-font-weight', 'Nested KBD Font Weight', global_strings['sass-defaults']['nested-kbd-font-weight'], obe_settings['nested-kbd-font-weight'], note='Sets $nested-kbd-font-weight') }}
 
                         <!-- HOLD FOR: $list-inline-padding: 0.5rem !default; -->
-
-                        <!-- HOLD FOR: $mark-bg: #fcf8e3 !default; -->
+                        {{ macros.settings_number_step_input('list-inline-padding', 'List Inline Padding', global_strings['sass-defaults']['list-inline-padding'], obe_settings['list-inline-padding'], 'rem', '1000', '0', '0.05', note='Sets $list-inline-padding') }}
 
                         <!-- HOLD FOR: $hr-margin-y: $spacer !default; -->
+                        {{ macros.settings_text_input('hr-margin-y', 'HR Margin Y (Axis)', global_strings['sass-defaults']['hr-margin-y'], obe_settings['hr-margin-y'], note='Sets $hr-margin-y') }}
 
 
                         
+                        <h3 class="pt-4 pb-2">Core Tables Options</h3>
+                        
                         <!-- TABLES SECTION -->
 
-                        <!-- HOLD FOR: $table-cell-padding: .75rem !default; -->
+                        <!-- HOLD FOR: $table-cell-padding: 0.75rem !default; -->
+                        {{ macros.settings_number_step_input('table-cell-padding', 'Table Cell Padding', global_strings['sass-defaults']['table-cell-padding'], obe_settings['table-cell-padding'], 'rem', '1000', '0', '0.05', note='Sets $table-cell-padding') }}
 
-                        <!-- HOLD FOR: $table-cell-padding-sm: .3rem !default; -->
+                        <!-- HOLD FOR: $table-cell-padding-sm: 0.3rem !default; -->
+                        {{ macros.settings_number_step_input('table-cell-padding-sm', 'Table Cell Padding Small', global_strings['sass-defaults']['table-cell-padding-sm'], obe_settings['table-cell-padding-sm'], 'rem', '1000', '0', '0.05', note='Sets $table-cell-padding-sm') }}
 
                         <!-- HOLD FOR: $table-color: $body-color !default; -->
+                        {{ macros.settings_text_input('table-color', 'Table Color', global_strings['sass-defaults']['table-color'], obe_settings['table-color'], note='Sets $table-color') }}
 
                         <!-- HOLD FOR: $table-bg: null !default; -->
+                        {{ macros.settings_text_input('table-bg', 'Table BG', global_strings['sass-defaults']['table-bg'], obe_settings['table-bg'], note='Sets $table-bg') }}
 
                         <!-- HOLD FOR: $table-accent-bg: rgba($black, .05) !default; -->
+                        {{ macros.settings_text_input('table-accent-bg', 'Table Accent BG', global_strings['sass-defaults']['table-accent-bg'], obe_settings['table-accent-bg'], note='Sets $table-accent-bg') }}
 
                         <!-- HOLD FOR: $table-hover-color: $table-color !default; -->
+                        {{ macros.settings_text_input('table-hover-color', 'Table Hover Color', global_strings['sass-defaults']['table-hover-color'], obe_settings['table-hover-color'], note='Sets $table-hover-color') }}
 
-                        <!-- HOLD FOR: $table-hover-bg: rgba($black, .075) !default; -->
+                        <!-- HOLD FOR: $table-hover-bg: rgba($black, 0.075) !default; -->
+                        {{ macros.settings_text_input('table-hover-bg', 'Table Hover BG', global_strings['sass-defaults']['table-hover-bg'], obe_settings['table-hover-bg'], note='Sets $table-hover-bg') }}
 
                         <!-- HOLD FOR: $table-active-bg: $table-hover-bg !default; -->
+                        {{ macros.settings_text_input('table-active-bg', 'Table Active BG', global_strings['sass-defaults']['table-active-bg'], obe_settings['table-active-bg'], note='Sets $table-active-bg') }}
 
                         <!-- HOLD FOR: $table-border-width: $border-width !default; -->
+                        {{ macros.settings_text_input('table-border-width', 'Table Border Width', global_strings['sass-defaults']['table-border-width'], obe_settings['table-border-width'], note='Sets $table-border-width') }}
 
                         <!-- HOLD FOR: $table-border-color: $border-color !default; -->
+                        {{ macros.settings_text_input('table-border-color', 'Table Border Color', global_strings['sass-defaults']['table-border-color'], obe_settings['table-border-color'], note='Sets $table-border-color') }}
 
                         <!-- HOLD FOR: $table-head-bg: $gray-200 !default; -->
+                        {{ macros.settings_contextual_selects('table-head-bg', 'Table Head BG', obe_settings['table-head-bg-C'], obe_settings['table-head-bg-M'], note='Sets $table-head-bg') }}
 
                         <!-- HOLD FOR: $table-head-color: $gray-700 !default; -->
+                        {{ macros.settings_contextual_selects('table-head-color', 'Table Head Color', obe_settings['table-head-color-C'], obe_settings['table-head-color-M'], note='Sets $table-head-color') }}
 
                         <!-- HOLD FOR: $table-dark-color: $white !default; -->
+                        {{ macros.settings_contextual_selects('table-dark-color', 'Table Dark Color', obe_settings['table-dark-color-C'], obe_settings['table-dark-color-M'], note='Sets $table-dark-color') }}
 
                         <!-- HOLD FOR: $table-dark-bg: $gray-800 !default; -->
+                        {{ macros.settings_contextual_selects('table-dark-bg', 'Table Dark BG', obe_settings['table-dark-bg-C'], obe_settings['table-dark-bg-M'], note='Sets $table-dark-bg') }}
 
-                        <!-- HOLD FOR: $table-dark-accent-bg: rgba($white, .05) !default; -->
+                        <!-- HOLD FOR: $table-dark-accent-bg: rgba($white, 0.05) !default; -->
+                        {{ macros.settings_text_input('table-dark-accent-bg', 'Table Dark Accent BG', global_strings['sass-defaults']['table-dark-accent-bg'], obe_settings['table-dark-accent-bg'], note='Sets $table-dark-accent-bg') }}
 
                         <!-- HOLD FOR: $table-dark-hover-color: $table-dark-color !default; -->
+                        {{ macros.settings_text_input('table-dark-hover-color', 'Table Dark Hover Color', global_strings['sass-defaults']['table-dark-hover-color'], obe_settings['table-dark-hover-color'], note='Sets $table-dark-hover-color') }}
 
-                        <!-- HOLD FOR: $table-dark-hover-bg: rgba($white, .075) !default; -->
+                        <!-- HOLD FOR: $table-dark-hover-bg: rgba($white, 0.075) !default; -->
+                        {{ macros.settings_text_input('table-dark-hover-bg', 'Table Dark Hover BG', global_strings['sass-defaults']['table-dark-hover-bg'], obe_settings['table-dark-hover-bg'], note='Sets $table-dark-hover-bg') }}
 
                         <!-- HOLD FOR: $table-dark-border-color: lighten($table-dark-bg, 7.5%) !default; -->
+                        {{ macros.settings_text_input('table-dark-border-color', 'Table Dark Border Color', global_strings['sass-defaults']['table-dark-border-color'], obe_settings['table-dark-border-color'], note='Sets $table-dark-border-color') }}
 
                         <!-- HOLD FOR: $table-striped-order: odd !default; -->
+                        {{ macros.settings_text_input('table-striped-order', 'Table Striped Order', global_strings['sass-defaults']['table-striped-order'], obe_settings['table-striped-order'], note='Sets $table-striped-order') }}
 
                         <!-- HOLD FOR: $table-caption-color: $text-muted !default; -->
+                        {{ macros.settings_text_input('table-caption-color', 'Table Caption Color', global_strings['sass-defaults']['table-caption-color'], obe_settings['table-caption-color'], note='Sets $table-caption-color') }}
 
                         <!-- HOLD FOR: $table-bg-level: -9 !default; -->
+                        {{ macros.settings_number_step_input('table-bg-level', 'Table BG Level', global_strings['sass-defaults']['table-bg-level'], obe_settings['table-bg-level'], '', '255', '-255', '1', note='Sets $table-bg-level') }}
 
                         <!-- HOLD FOR: $table-border-level: -6 !default; -->
+                        {{ macros.settings_number_step_input('table-border-level', 'Table Border Level', global_strings['sass-defaults']['table-border-level'], obe_settings['table-border-level'], '', '255', '-255', '1', note='Sets $table-border-level') }}
 
 
+                        
+                        <h3 class="pt-4 pb-2">Core Buttons + Forms Options</h3>
                         
                         <!-- BUTTONS + FORMS SECTION -->
 
                         <!-- HOLD FOR: $input-btn-padding-y: 0.375rem !default; -->
+                        {{ macros.settings_number_step_input('input-btn-padding-y', 'Input Btn Padding Y', global_strings['sass-defaults']['input-btn-padding-y'], obe_settings['input-btn-padding-y'], 'rem', '100', '0', '0.025', note='Sets $input-btn-padding-y') }}
 
                         <!-- HOLD FOR: $input-btn-padding-x: 0.75rem !default; -->
+                        {{ macros.settings_number_step_input('input-btn-padding-x', 'Input Btn Padding X', global_strings['sass-defaults']['input-btn-padding-x'], obe_settings['input-btn-padding-x'], 'rem', '100', '0', '0.025', note='Sets $input-btn-padding-x') }}
 
                         <!-- HOLD FOR: $input-btn-font-family: null !default; -->
 
