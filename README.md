@@ -276,17 +276,22 @@ touch obebs4_settings.json
 
 **Step 7**: Now paste in your OBE:BS4 JSON settings into your newly created obebs4_settings.json file, and save the file.
 
-**Step 8**: If you don't have a gulp file in your project yet, just run this command to add it from the OBE:BS4 module files:
+**Step 8**: Next you'll want to set your FontAwesome version in your project's `package.json` file. To do this, simply copy the line below and paste it in just below your `` file's `` key/value pair (don't forget the ending comma!):
+```json
+"faversion": "5.12.0",
+```
+
+**Step 9**: If you don't have a gulp file in your project yet, just run this command to add it from the OBE:BS4 module files:
 ```bash
 cp node_modules/obebs4/example-gulpfile.js gulpfile.js
 ```
 
-**Step 9**: Now it's time to compile your library site! To do that, run the following gulp command in your console:
+**Step 10**: Now it's time to compile your library site! To do that, run the following gulp command in your console:
 ```bash
 gulp obebs4
 ```
 
-**Step 10**: Open up your home page:
+**Step 11**: Open up your home page:
 ```bash
 open library/index.html
 ```
