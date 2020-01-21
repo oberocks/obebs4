@@ -276,7 +276,7 @@ touch obebs4_settings.json
 
 **Step 7**: Now paste in your OBE:BS4 JSON settings into your newly created obebs4_settings.json file, and save the file.
 
-**Step 8**: Next you'll want to set your FontAwesome version in your project's `package.json` file. To do this, simply copy the line below and paste it in just below your `` file's `` key/value pair (don't forget the ending comma!):
+**Step 8**: Next you'll want to set your FontAwesome version in your project's `package.json` file. To do this, simply check out the most recent [FontAwesome version](https://fontawesome.com/), then adjust the line below accordingly with the newest FA version number, and finally add it in just below your `package.json` file's `"version": "X.X.X"` key/value pair (don't forget the ending comma!):
 ```json
 "faversion": "5.12.0",
 ```
