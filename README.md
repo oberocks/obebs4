@@ -402,15 +402,20 @@ The following changes were made to the default `obebs4_settings.json` file durin
 "yiq-text-dark": "$gray-900",
 "yiq-text-light": "$white",
 "escaped-characters": "( (\"<\",\"%3c\"), (\">\",\"%3e\"), (\"#\",\"%23\") )",
+
 "spacer": "1rem",
+
 "link-hover-color": "darken($link-color, 15%)",
 "emphasized-link-hover-darken-percentage": "15%",
+
 "paragraph-margin-bottom": "1rem",
+
 "grid-breakpoints": "( xs: 0, sm: 576px, md: 768px, lg: 992px, xl: 1200px )",
 "container-max-widths": "( sm: 540px, md: 720px, lg: 960px, xl: 1140px )",
 "grid-columns": "12",
 "grid-gutter-width": "30px",
 "grid-row-columns": "6",
+
 "line-height-lg": "1.5",
 "line-height-sm": "1.5",
 "border-width": "1px",
@@ -428,6 +433,7 @@ The following changes were made to the default `obebs4_settings.json` file durin
 "transition-base": "all 0.2s ease-in-out",
 "transition-fade": "opacity 0.15s linear",
 "transition-collapse": "height 0.35s ease",
+
 "font-family-base": "$font-family-sans-serif",
 "font-size-base": "1rem",
 "font-size-lg": "$font-size-base * 1.25",
@@ -474,6 +480,7 @@ The following changes were made to the default `obebs4_settings.json` file durin
 "nested-kbd-font-weight": "$font-weight-bold",
 "list-inline-padding": "0.5rem",
 "hr-margin-y": "$spacer",
+
 "table-cell-padding": "0.75rem",
 "table-cell-padding-sm": "0.3rem",
 "table-color": "$body-color",
@@ -496,8 +503,30 @@ The following changes were made to the default `obebs4_settings.json` file durin
 "table-caption-color": "$text-muted",
 "table-bg-level": "-9",
 "table-border-level": "-6",
+
 "input-btn-padding-y": "0.375rem",
-"input-btn-padding-x": "0.75rem"
+"input-btn-padding-x": "0.75rem",
+"input-btn-font-family": "null",
+"input-btn-font-size": "$font-size-base",
+"input-btn-line-height": "$line-height-base",
+"input-btn-focus-width": "0.2rem",
+"input-btn-focus-color": "rgba($component-active-bg, 0.25)",
+"input-btn-focus-box-shadow": "0 0 0 $input-btn-focus-width $input-btn-focus-color",
+"input-btn-padding-y-sm": "0.25rem",
+"input-btn-padding-x-sm": "0.5rem",
+"input-btn-font-size-sm": "$font-size-sm",
+"input-btn-line-height-sm": "$line-height-sm",
+"input-btn-padding-y-lg": "0.5rem",
+"input-btn-padding-x-lg": "1rem",
+"input-btn-font-size-lg": "$font-size-lg",
+"input-btn-line-height-lg": "$line-height-lg",
+"input-btn-border-width": "$border-width",
+
+"btn-padding-y": "$input-btn-padding-y",
+"btn-padding-x": "$input-btn-padding-x",
+"btn-font-family": "$input-btn-font-family",
+"btn-font-size": "$input-btn-font-size",
+"btn-line-height": "$input-btn-line-height"
 ```
 
 <!---
