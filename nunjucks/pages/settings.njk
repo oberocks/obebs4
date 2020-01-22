@@ -32,6 +32,8 @@
         
         $(function() {
             
+            const obe_wheel_css = ['white', 'light-gray', 'gray', 'dark-gray', 'black', 'red', 'rose', 'magenta', 'violet', 'blue', 'azure', 'cyan', 'spring-green', 'green', 'chartreuse', 'yellow', 'orange', 'orange-gray', 'dark-gray-orange', 'blue-gray', 'light-gray-azure'];
+            
             $( ".js-increment-down" ).on( "click", function() {
                 var input = $(this).parents('.form-group').find('input');
                 var currentVal = $(input).val();
@@ -384,18 +386,18 @@
                     }
                 };
 
-                setObjValOrFallback(object, 'obebs4-1-color-tint-value', "{{ global_strings['sass-defaults']['obebs4-1-color-tint-value'] }}");
-                setObjValOrFallback(object, 'obebs4-1-color-shade-value', "{{ global_strings['sass-defaults']['obebs4-1-color-shade-value'] }}");
+                setObjValOrFallback(object, 'obebs4-1-color-tint-value', "{{ global_strings['sys']['obebs4-1-color-tint-value'] }}");
+                setObjValOrFallback(object, 'obebs4-1-color-shade-value', "{{ global_strings['sys']['obebs4-1-color-shade-value'] }}");
 
-                setObjValOrFallback(object, 'color-50-lighten-percent', "{{ global_strings['sass-defaults']['color-50-lighten-percent'] }}");
-                setObjValOrFallback(object, 'color-100-lighten-percent', "{{ global_strings['sass-defaults']['color-100-lighten-percent'] }}");
-                setObjValOrFallback(object, 'color-200-lighten-percent', "{{ global_strings['sass-defaults']['color-200-lighten-percent'] }}");
-                setObjValOrFallback(object, 'color-300-lighten-percent', "{{ global_strings['sass-defaults']['color-300-lighten-percent'] }}");
-                setObjValOrFallback(object, 'color-400-lighten-percent', "{{ global_strings['sass-defaults']['color-400-lighten-percent'] }}");
-                setObjValOrFallback(object, 'color-600-darken-percent', "{{ global_strings['sass-defaults']['color-600-darken-percent'] }}");
-                setObjValOrFallback(object, 'color-700-darken-percent', "{{ global_strings['sass-defaults']['color-700-darken-percent'] }}");
-                setObjValOrFallback(object, 'color-800-darken-percent', "{{ global_strings['sass-defaults']['color-800-darken-percent'] }}");
-                setObjValOrFallback(object, 'color-900-darken-percent', "{{ global_strings['sass-defaults']['color-900-darken-percent'] }}");
+                setObjValOrFallback(object, 'color-50-lighten-percent', "{{ global_strings['sys']['color-50-lighten-percent'] }}");
+                setObjValOrFallback(object, 'color-100-lighten-percent', "{{ global_strings['sys']['color-100-lighten-percent'] }}");
+                setObjValOrFallback(object, 'color-200-lighten-percent', "{{ global_strings['sys']['color-200-lighten-percent'] }}");
+                setObjValOrFallback(object, 'color-300-lighten-percent', "{{ global_strings['sys']['color-300-lighten-percent'] }}");
+                setObjValOrFallback(object, 'color-400-lighten-percent', "{{ global_strings['sys']['color-400-lighten-percent'] }}");
+                setObjValOrFallback(object, 'color-600-darken-percent', "{{ global_strings['sys']['color-600-darken-percent'] }}");
+                setObjValOrFallback(object, 'color-700-darken-percent', "{{ global_strings['sys']['color-700-darken-percent'] }}");
+                setObjValOrFallback(object, 'color-800-darken-percent', "{{ global_strings['sys']['color-800-darken-percent'] }}");
+                setObjValOrFallback(object, 'color-900-darken-percent', "{{ global_strings['sys']['color-900-darken-percent'] }}");
 
 
                 
@@ -552,6 +554,13 @@
 
 
 
+                for (var i = 0; i < obe_wheel_css.length; i++)
+                {
+                    if ($('#' + obe_wheel_css[i]).val().length > 1) {
+                        setColorVariants(obe_wheel_css[i]);
+                    }
+                }
+                /*
                 if ($('#white').val().length > 1) {
                     setColorVariants('white');
                 }
@@ -615,6 +624,7 @@
                 if ($('#light-gray-azure').val().length > 1) {
                     setColorVariants('light-gray-azure');
                 }
+                */
 
 
 
@@ -675,145 +685,145 @@
 
 
                 // core colors
-                setObjValOrFallback(object, 'theme-color-interval', "{{ global_strings['sass-defaults']['theme-color-interval'] }}");
-                setObjValOrFallback(object, 'yiq-contrasted-threshold', "{{ global_strings['sass-defaults']['yiq-contrasted-threshold'] }}");
+                setObjValOrFallback(object, 'theme-color-interval', "{{ global_strings['sys']['theme-color-interval'] }}");
+                setObjValOrFallback(object, 'yiq-contrasted-threshold', "{{ global_strings['sys']['yiq-contrasted-threshold'] }}");
                 setColorsData('yiq-text-dark');
                 setColorsData('yiq-text-light');
-                setObjValOrFallback(object, 'escaped-characters', "{{ global_strings['sass-defaults']['escaped-characters'] }}");
+                setObjValOrFallback(object, 'escaped-characters', "{{ global_strings['sys']['escaped-characters'] }}");
 
                 // core spacing
-                setObjValOrFallback(object, 'spacer', "{{ global_strings['sass-defaults']['spacer'] }}");
+                setObjValOrFallback(object, 'spacer', "{{ global_strings['sys']['spacer'] }}");
 
                 // core links
-                setObjValOrFallback(object, 'link-hover-color', "{{ global_strings['sass-defaults']['link-hover-color'] }}");
-                setObjValOrFallback(object, 'emphasized-link-hover-darken-percentage', "{{ global_strings['sass-defaults']['emphasized-link-hover-darken-percentage'] }}");
+                setObjValOrFallback(object, 'link-hover-color', "{{ global_strings['sys']['link-hover-color'] }}");
+                setObjValOrFallback(object, 'emphasized-link-hover-darken-percentage', "{{ global_strings['sys']['emphasized-link-hover-darken-percentage'] }}");
 
                 // core paragraphs
-                setObjValOrFallback(object, 'paragraph-margin-bottom', "{{ global_strings['sass-defaults']['paragraph-margin-bottom'] }}");
+                setObjValOrFallback(object, 'paragraph-margin-bottom', "{{ global_strings['sys']['paragraph-margin-bottom'] }}");
 
                 // core grids
-                setObjValOrFallback(object, 'grid-breakpoints', "{{ global_strings['sass-defaults']['grid-breakpoints'] }}");
-                setObjValOrFallback(object, 'container-max-widths', "{{ global_strings['sass-defaults']['container-max-widths'] }}");
-                setObjValOrFallback(object, 'grid-columns', "{{ global_strings['sass-defaults']['grid-columns'] }}");
-                setObjValOrFallback(object, 'grid-gutter-width', "{{ global_strings['sass-defaults']['grid-gutter-width'] }}");
-                setObjValOrFallback(object, 'grid-row-columns', "{{ global_strings['sass-defaults']['grid-row-columns'] }}");
+                setObjValOrFallback(object, 'grid-breakpoints', "{{ global_strings['sys']['grid-breakpoints'] }}");
+                setObjValOrFallback(object, 'container-max-widths', "{{ global_strings['sys']['container-max-widths'] }}");
+                setObjValOrFallback(object, 'grid-columns', "{{ global_strings['sys']['grid-columns'] }}");
+                setObjValOrFallback(object, 'grid-gutter-width', "{{ global_strings['sys']['grid-gutter-width'] }}");
+                setObjValOrFallback(object, 'grid-row-columns', "{{ global_strings['sys']['grid-row-columns'] }}");
 
                 // core components
-                setObjValOrFallback(object, 'line-height-lg', "{{ global_strings['sass-defaults']['line-height-lg'] }}");
-                setObjValOrFallback(object, 'line-height-sm', "{{ global_strings['sass-defaults']['line-height-sm'] }}");
-                setObjValOrFallback(object, 'border-width', "{{ global_strings['sass-defaults']['border-width'] }}");
+                setObjValOrFallback(object, 'line-height-lg', "{{ global_strings['sys']['line-height-lg'] }}");
+                setObjValOrFallback(object, 'line-height-sm', "{{ global_strings['sys']['line-height-sm'] }}");
+                setObjValOrFallback(object, 'border-width', "{{ global_strings['sys']['border-width'] }}");
                 setColorsData('border-color');
-                setObjValOrFallback(object, 'border-radius', "{{ global_strings['sass-defaults']['border-radius'] }}");
-                setObjValOrFallback(object, 'border-radius-lg', "{{ global_strings['sass-defaults']['border-radius-lg'] }}");
-                setObjValOrFallback(object, 'border-radius-sm', "{{ global_strings['sass-defaults']['border-radius-sm'] }}");
-                setObjValOrFallback(object, 'rounded-pill', "{{ global_strings['sass-defaults']['rounded-pill'] }}");
-                setObjValOrFallback(object, 'box-shadow-sm', "{{ global_strings['sass-defaults']['box-shadow-sm'] }}");
-                setObjValOrFallback(object, 'box-shadow', "{{ global_strings['sass-defaults']['box-shadow'] }}");
-                setObjValOrFallback(object, 'box-shadow-lg', "{{ global_strings['sass-defaults']['box-shadow-lg'] }}");
-                setObjValOrFallback(object, 'caret-width', "{{ global_strings['sass-defaults']['caret-width'] }}");
-                setObjValOrFallback(object, 'caret-vertical-align', "{{ global_strings['sass-defaults']['caret-vertical-align'] }}");
-                setObjValOrFallback(object, 'caret-spacing', "{{ global_strings['sass-defaults']['caret-spacing'] }}");
-                setObjValOrFallback(object, 'transition-base', "{{ global_strings['sass-defaults']['transition-base'] }}");
-                setObjValOrFallback(object, 'transition-fade', "{{ global_strings['sass-defaults']['transition-fade'] }}");
-                setObjValOrFallback(object, 'transition-collapse', "{{ global_strings['sass-defaults']['transition-collapse'] }}");
+                setObjValOrFallback(object, 'border-radius', "{{ global_strings['sys']['border-radius'] }}");
+                setObjValOrFallback(object, 'border-radius-lg', "{{ global_strings['sys']['border-radius-lg'] }}");
+                setObjValOrFallback(object, 'border-radius-sm', "{{ global_strings['sys']['border-radius-sm'] }}");
+                setObjValOrFallback(object, 'rounded-pill', "{{ global_strings['sys']['rounded-pill'] }}");
+                setObjValOrFallback(object, 'box-shadow-sm', "{{ global_strings['sys']['box-shadow-sm'] }}");
+                setObjValOrFallback(object, 'box-shadow', "{{ global_strings['sys']['box-shadow'] }}");
+                setObjValOrFallback(object, 'box-shadow-lg', "{{ global_strings['sys']['box-shadow-lg'] }}");
+                setObjValOrFallback(object, 'caret-width', "{{ global_strings['sys']['caret-width'] }}");
+                setObjValOrFallback(object, 'caret-vertical-align', "{{ global_strings['sys']['caret-vertical-align'] }}");
+                setObjValOrFallback(object, 'caret-spacing', "{{ global_strings['sys']['caret-spacing'] }}");
+                setObjValOrFallback(object, 'transition-base', "{{ global_strings['sys']['transition-base'] }}");
+                setObjValOrFallback(object, 'transition-fade', "{{ global_strings['sys']['transition-fade'] }}");
+                setObjValOrFallback(object, 'transition-collapse', "{{ global_strings['sys']['transition-collapse'] }}");
 
                 // core typography
-                setObjValOrFallback(object, 'font-family-base', "{{ global_strings['sass-defaults']['font-family-base'] }}");
-                setObjValOrFallback(object, 'font-size-base', "{{ global_strings['sass-defaults']['font-size-base'] }}");
-                setObjValOrFallback(object, 'font-size-lg', "{{ global_strings['sass-defaults']['font-size-lg'] }}");
-                setObjValOrFallback(object, 'font-size-sm', "{{ global_strings['sass-defaults']['font-size-sm'] }}");
-                setObjValOrFallback(object, 'font-weight-lighter', "{{ global_strings['sass-defaults']['font-weight-lighter'] }}");
-                setObjValOrFallback(object, 'font-weight-light', "{{ global_strings['sass-defaults']['font-weight-light'] }}");
-                setObjValOrFallback(object, 'font-weight-normal', "{{ global_strings['sass-defaults']['font-weight-normal'] }}");
-                setObjValOrFallback(object, 'font-weight-bold', "{{ global_strings['sass-defaults']['font-weight-bold'] }}");
-                setObjValOrFallback(object, 'font-weight-bolder', "{{ global_strings['sass-defaults']['font-weight-bolder'] }}");
-                setObjValOrFallback(object, 'font-weight-base', "{{ global_strings['sass-defaults']['font-weight-base'] }}");
-                setObjValOrFallback(object, 'line-height-base', "{{ global_strings['sass-defaults']['line-height-base'] }}");
-                setObjValOrFallback(object, 'h1-font-size', "{{ global_strings['sass-defaults']['h1-font-size'] }}");
-                setObjValOrFallback(object, 'h2-font-size', "{{ global_strings['sass-defaults']['h2-font-size'] }}");
-                setObjValOrFallback(object, 'h3-font-size', "{{ global_strings['sass-defaults']['h3-font-size'] }}");
-                setObjValOrFallback(object, 'h4-font-size', "{{ global_strings['sass-defaults']['h4-font-size'] }}");
-                setObjValOrFallback(object, 'h5-font-size', "{{ global_strings['sass-defaults']['h5-font-size'] }}");
-                setObjValOrFallback(object, 'h6-font-size', "{{ global_strings['sass-defaults']['h6-font-size'] }}");
-                setObjValOrFallback(object, 'headings-margin-bottom', "{{ global_strings['sass-defaults']['headings-margin-bottom'] }}");
-                setObjValOrFallback(object, 'headings-font-family', "{{ global_strings['sass-defaults']['headings-font-family'] }}");
-                setObjValOrFallback(object, 'headings-font-weight', "{{ global_strings['sass-defaults']['headings-font-weight'] }}");
-                setObjValOrFallback(object, 'headings-line-height', "{{ global_strings['sass-defaults']['headings-line-height'] }}");
+                setObjValOrFallback(object, 'font-family-base', "{{ global_strings['sys']['font-family-base'] }}");
+                setObjValOrFallback(object, 'font-size-base', "{{ global_strings['sys']['font-size-base'] }}");
+                setObjValOrFallback(object, 'font-size-lg', "{{ global_strings['sys']['font-size-lg'] }}");
+                setObjValOrFallback(object, 'font-size-sm', "{{ global_strings['sys']['font-size-sm'] }}");
+                setObjValOrFallback(object, 'font-weight-lighter', "{{ global_strings['sys']['font-weight-lighter'] }}");
+                setObjValOrFallback(object, 'font-weight-light', "{{ global_strings['sys']['font-weight-light'] }}");
+                setObjValOrFallback(object, 'font-weight-normal', "{{ global_strings['sys']['font-weight-normal'] }}");
+                setObjValOrFallback(object, 'font-weight-bold', "{{ global_strings['sys']['font-weight-bold'] }}");
+                setObjValOrFallback(object, 'font-weight-bolder', "{{ global_strings['sys']['font-weight-bolder'] }}");
+                setObjValOrFallback(object, 'font-weight-base', "{{ global_strings['sys']['font-weight-base'] }}");
+                setObjValOrFallback(object, 'line-height-base', "{{ global_strings['sys']['line-height-base'] }}");
+                setObjValOrFallback(object, 'h1-font-size', "{{ global_strings['sys']['h1-font-size'] }}");
+                setObjValOrFallback(object, 'h2-font-size', "{{ global_strings['sys']['h2-font-size'] }}");
+                setObjValOrFallback(object, 'h3-font-size', "{{ global_strings['sys']['h3-font-size'] }}");
+                setObjValOrFallback(object, 'h4-font-size', "{{ global_strings['sys']['h4-font-size'] }}");
+                setObjValOrFallback(object, 'h5-font-size', "{{ global_strings['sys']['h5-font-size'] }}");
+                setObjValOrFallback(object, 'h6-font-size', "{{ global_strings['sys']['h6-font-size'] }}");
+                setObjValOrFallback(object, 'headings-margin-bottom', "{{ global_strings['sys']['headings-margin-bottom'] }}");
+                setObjValOrFallback(object, 'headings-font-family', "{{ global_strings['sys']['headings-font-family'] }}");
+                setObjValOrFallback(object, 'headings-font-weight', "{{ global_strings['sys']['headings-font-weight'] }}");
+                setObjValOrFallback(object, 'headings-line-height', "{{ global_strings['sys']['headings-line-height'] }}");
                 setColorsData('headings-color');
-                setObjValOrFallback(object, 'display1-size', "{{ global_strings['sass-defaults']['display1-size'] }}");
-                setObjValOrFallback(object, 'display2-size', "{{ global_strings['sass-defaults']['display2-size'] }}");
-                setObjValOrFallback(object, 'display3-size', "{{ global_strings['sass-defaults']['display3-size'] }}");
-                setObjValOrFallback(object, 'display4-size', "{{ global_strings['sass-defaults']['display4-size'] }}");
-                setObjValOrFallback(object, 'display1-weight', "{{ global_strings['sass-defaults']['display1-weight'] }}");
-                setObjValOrFallback(object, 'display2-weight', "{{ global_strings['sass-defaults']['display2-weight'] }}");
-                setObjValOrFallback(object, 'display3-weight', "{{ global_strings['sass-defaults']['display3-weight'] }}");
-                setObjValOrFallback(object, 'display4-weight', "{{ global_strings['sass-defaults']['display4-weight'] }}");
-                setObjValOrFallback(object, 'display-line-height', "{{ global_strings['sass-defaults']['display-line-height'] }}");
-                setObjValOrFallback(object, 'lead-font-size', "{{ global_strings['sass-defaults']['lead-font-size'] }}");
-                setObjValOrFallback(object, 'lead-font-weight', "{{ global_strings['sass-defaults']['lead-font-weight'] }}");
-                setObjValOrFallback(object, 'small-font-size', "{{ global_strings['sass-defaults']['small-font-size'] }}");
+                setObjValOrFallback(object, 'display1-size', "{{ global_strings['sys']['display1-size'] }}");
+                setObjValOrFallback(object, 'display2-size', "{{ global_strings['sys']['display2-size'] }}");
+                setObjValOrFallback(object, 'display3-size', "{{ global_strings['sys']['display3-size'] }}");
+                setObjValOrFallback(object, 'display4-size', "{{ global_strings['sys']['display4-size'] }}");
+                setObjValOrFallback(object, 'display1-weight', "{{ global_strings['sys']['display1-weight'] }}");
+                setObjValOrFallback(object, 'display2-weight', "{{ global_strings['sys']['display2-weight'] }}");
+                setObjValOrFallback(object, 'display3-weight', "{{ global_strings['sys']['display3-weight'] }}");
+                setObjValOrFallback(object, 'display4-weight', "{{ global_strings['sys']['display4-weight'] }}");
+                setObjValOrFallback(object, 'display-line-height', "{{ global_strings['sys']['display-line-height'] }}");
+                setObjValOrFallback(object, 'lead-font-size', "{{ global_strings['sys']['lead-font-size'] }}");
+                setObjValOrFallback(object, 'lead-font-weight', "{{ global_strings['sys']['lead-font-weight'] }}");
+                setObjValOrFallback(object, 'small-font-size', "{{ global_strings['sys']['small-font-size'] }}");
                 setColorsData('text-muted');
                 setColorsData('blockquote-small-color');
-                setObjValOrFallback(object, 'blockquote-small-font-size', "{{ global_strings['sass-defaults']['blockquote-small-font-size'] }}");
-                setObjValOrFallback(object, 'blockquote-font-size', "{{ global_strings['sass-defaults']['blockquote-font-size'] }}");
-                setObjValOrFallback(object, 'hr-border-color', "{{ global_strings['sass-defaults']['hr-border-color'] }}");
-                setObjValOrFallback(object, 'hr-border-width', "{{ global_strings['sass-defaults']['hr-border-width'] }}");
-                setObjValOrFallback(object, 'mark-padding', "{{ global_strings['sass-defaults']['mark-padding'] }}");
-                setObjValOrFallback(object, 'dt-font-weight', "{{ global_strings['sass-defaults']['dt-font-weight'] }}");
-                setObjValOrFallback(object, 'kbd-box-shadow', "{{ global_strings['sass-defaults']['kbd-box-shadow'] }}");
-                setObjValOrFallback(object, 'nested-kbd-font-weight', "{{ global_strings['sass-defaults']['nested-kbd-font-weight'] }}");
-                setObjValOrFallback(object, 'list-inline-padding', "{{ global_strings['sass-defaults']['list-inline-padding'] }}");
-                setObjValOrFallback(object, 'hr-margin-y', "{{ global_strings['sass-defaults']['hr-margin-y'] }}");
+                setObjValOrFallback(object, 'blockquote-small-font-size', "{{ global_strings['sys']['blockquote-small-font-size'] }}");
+                setObjValOrFallback(object, 'blockquote-font-size', "{{ global_strings['sys']['blockquote-font-size'] }}");
+                setObjValOrFallback(object, 'hr-border-color', "{{ global_strings['sys']['hr-border-color'] }}");
+                setObjValOrFallback(object, 'hr-border-width', "{{ global_strings['sys']['hr-border-width'] }}");
+                setObjValOrFallback(object, 'mark-padding', "{{ global_strings['sys']['mark-padding'] }}");
+                setObjValOrFallback(object, 'dt-font-weight', "{{ global_strings['sys']['dt-font-weight'] }}");
+                setObjValOrFallback(object, 'kbd-box-shadow', "{{ global_strings['sys']['kbd-box-shadow'] }}");
+                setObjValOrFallback(object, 'nested-kbd-font-weight', "{{ global_strings['sys']['nested-kbd-font-weight'] }}");
+                setObjValOrFallback(object, 'list-inline-padding', "{{ global_strings['sys']['list-inline-padding'] }}");
+                setObjValOrFallback(object, 'hr-margin-y', "{{ global_strings['sys']['hr-margin-y'] }}");
 
                 // core tables
-                setObjValOrFallback(object, 'table-cell-padding', "{{ global_strings['sass-defaults']['table-cell-padding'] }}");
-                setObjValOrFallback(object, 'table-cell-padding-sm', "{{ global_strings['sass-defaults']['table-cell-padding-sm'] }}");
-                setObjValOrFallback(object, 'table-color', "{{ global_strings['sass-defaults']['table-color'] }}");
-                setObjValOrFallback(object, 'table-bg', "{{ global_strings['sass-defaults']['table-bg'] }}");
-                setObjValOrFallback(object, 'table-accent-bg', "{{ global_strings['sass-defaults']['table-accent-bg'] }}");
-                setObjValOrFallback(object, 'table-hover-color', "{{ global_strings['sass-defaults']['table-hover-color'] }}");
-                setObjValOrFallback(object, 'table-hover-bg', "{{ global_strings['sass-defaults']['table-hover-bg'] }}");
-                setObjValOrFallback(object, 'table-active-bg', "{{ global_strings['sass-defaults']['table-active-bg'] }}");
-                setObjValOrFallback(object, 'table-border-width', "{{ global_strings['sass-defaults']['table-border-width'] }}");
-                setObjValOrFallback(object, 'table-border-color', "{{ global_strings['sass-defaults']['table-border-color'] }}");
+                setObjValOrFallback(object, 'table-cell-padding', "{{ global_strings['sys']['table-cell-padding'] }}");
+                setObjValOrFallback(object, 'table-cell-padding-sm', "{{ global_strings['sys']['table-cell-padding-sm'] }}");
+                setObjValOrFallback(object, 'table-color', "{{ global_strings['sys']['table-color'] }}");
+                setObjValOrFallback(object, 'table-bg', "{{ global_strings['sys']['table-bg'] }}");
+                setObjValOrFallback(object, 'table-accent-bg', "{{ global_strings['sys']['table-accent-bg'] }}");
+                setObjValOrFallback(object, 'table-hover-color', "{{ global_strings['sys']['table-hover-color'] }}");
+                setObjValOrFallback(object, 'table-hover-bg', "{{ global_strings['sys']['table-hover-bg'] }}");
+                setObjValOrFallback(object, 'table-active-bg', "{{ global_strings['sys']['table-active-bg'] }}");
+                setObjValOrFallback(object, 'table-border-width', "{{ global_strings['sys']['table-border-width'] }}");
+                setObjValOrFallback(object, 'table-border-color', "{{ global_strings['sys']['table-border-color'] }}");
                 setColorsData('table-head-bg');
                 setColorsData('table-head-color');
                 setColorsData('table-dark-color');
                 setColorsData('table-dark-bg');
-                setObjValOrFallback(object, 'table-dark-accent-bg', "{{ global_strings['sass-defaults']['table-dark-accent-bg'] }}");
-                setObjValOrFallback(object, 'table-dark-hover-color', "{{ global_strings['sass-defaults']['table-dark-hover-color'] }}");
-                setObjValOrFallback(object, 'table-dark-hover-bg', "{{ global_strings['sass-defaults']['table-dark-hover-bg'] }}");
-                setObjValOrFallback(object, 'table-dark-border-color', "{{ global_strings['sass-defaults']['table-dark-border-color'] }}");
-                setObjValOrFallback(object, 'table-striped-order', "{{ global_strings['sass-defaults']['table-striped-order'] }}");
-                setObjValOrFallback(object, 'table-caption-color', "{{ global_strings['sass-defaults']['table-caption-color'] }}");
-                setObjValOrFallback(object, 'table-bg-level', "{{ global_strings['sass-defaults']['table-bg-level'] }}");
-                setObjValOrFallback(object, 'table-border-level', "{{ global_strings['sass-defaults']['table-border-level'] }}");
+                setObjValOrFallback(object, 'table-dark-accent-bg', "{{ global_strings['sys']['table-dark-accent-bg'] }}");
+                setObjValOrFallback(object, 'table-dark-hover-color', "{{ global_strings['sys']['table-dark-hover-color'] }}");
+                setObjValOrFallback(object, 'table-dark-hover-bg', "{{ global_strings['sys']['table-dark-hover-bg'] }}");
+                setObjValOrFallback(object, 'table-dark-border-color', "{{ global_strings['sys']['table-dark-border-color'] }}");
+                setObjValOrFallback(object, 'table-striped-order', "{{ global_strings['sys']['table-striped-order'] }}");
+                setObjValOrFallback(object, 'table-caption-color', "{{ global_strings['sys']['table-caption-color'] }}");
+                setObjValOrFallback(object, 'table-bg-level', "{{ global_strings['sys']['table-bg-level'] }}");
+                setObjValOrFallback(object, 'table-border-level', "{{ global_strings['sys']['table-border-level'] }}");
 
                 // core buttons + forms
-                setObjValOrFallback(object, 'input-btn-padding-y', "{{ global_strings['sass-defaults']['input-btn-padding-y'] }}");
-                setObjValOrFallback(object, 'input-btn-padding-x', "{{ global_strings['sass-defaults']['input-btn-padding-x'] }}");
-                setObjValOrFallback(object, 'input-btn-font-family', "{{ global_strings['sass-defaults']['input-btn-font-family'] }}");
-                setObjValOrFallback(object, 'input-btn-font-size', "{{ global_strings['sass-defaults']['input-btn-font-size'] }}");
-                setObjValOrFallback(object, 'input-btn-line-height', "{{ global_strings['sass-defaults']['input-btn-line-height'] }}");
-                setObjValOrFallback(object, 'input-btn-focus-width', "{{ global_strings['sass-defaults']['input-btn-focus-width'] }}");
-                setObjValOrFallback(object, 'input-btn-focus-color', "{{ global_strings['sass-defaults']['input-btn-focus-color'] }}");
-                setObjValOrFallback(object, 'input-btn-focus-box-shadow', "{{ global_strings['sass-defaults']['input-btn-focus-box-shadow'] }}");
-                setObjValOrFallback(object, 'input-btn-padding-y-sm', "{{ global_strings['sass-defaults']['input-btn-padding-y-sm'] }}");
-                setObjValOrFallback(object, 'input-btn-padding-x-sm', "{{ global_strings['sass-defaults']['input-btn-padding-x-sm'] }}");
-                setObjValOrFallback(object, 'input-btn-font-size-sm', "{{ global_strings['sass-defaults']['input-btn-font-size-sm'] }}");
-                setObjValOrFallback(object, 'input-btn-line-height-sm', "{{ global_strings['sass-defaults']['input-btn-line-height-sm'] }}");
-                setObjValOrFallback(object, 'input-btn-padding-y-lg', "{{ global_strings['sass-defaults']['input-btn-padding-y-lg'] }}");
-                setObjValOrFallback(object, 'input-btn-padding-x-lg', "{{ global_strings['sass-defaults']['input-btn-padding-x-lg'] }}");
-                setObjValOrFallback(object, 'input-btn-font-size-lg', "{{ global_strings['sass-defaults']['input-btn-font-size-lg'] }}");
-                setObjValOrFallback(object, 'input-btn-line-height-lg', "{{ global_strings['sass-defaults']['input-btn-line-height-lg'] }}");
-                setObjValOrFallback(object, 'input-btn-border-width', "{{ global_strings['sass-defaults']['input-btn-border-width'] }}");
+                setObjValOrFallback(object, 'input-btn-padding-y', "{{ global_strings['sys']['input-btn-padding-y'] }}");
+                setObjValOrFallback(object, 'input-btn-padding-x', "{{ global_strings['sys']['input-btn-padding-x'] }}");
+                setObjValOrFallback(object, 'input-btn-font-family', "{{ global_strings['sys']['input-btn-font-family'] }}");
+                setObjValOrFallback(object, 'input-btn-font-size', "{{ global_strings['sys']['input-btn-font-size'] }}");
+                setObjValOrFallback(object, 'input-btn-line-height', "{{ global_strings['sys']['input-btn-line-height'] }}");
+                setObjValOrFallback(object, 'input-btn-focus-width', "{{ global_strings['sys']['input-btn-focus-width'] }}");
+                setObjValOrFallback(object, 'input-btn-focus-color', "{{ global_strings['sys']['input-btn-focus-color'] }}");
+                setObjValOrFallback(object, 'input-btn-focus-box-shadow', "{{ global_strings['sys']['input-btn-focus-box-shadow'] }}");
+                setObjValOrFallback(object, 'input-btn-padding-y-sm', "{{ global_strings['sys']['input-btn-padding-y-sm'] }}");
+                setObjValOrFallback(object, 'input-btn-padding-x-sm', "{{ global_strings['sys']['input-btn-padding-x-sm'] }}");
+                setObjValOrFallback(object, 'input-btn-font-size-sm', "{{ global_strings['sys']['input-btn-font-size-sm'] }}");
+                setObjValOrFallback(object, 'input-btn-line-height-sm', "{{ global_strings['sys']['input-btn-line-height-sm'] }}");
+                setObjValOrFallback(object, 'input-btn-padding-y-lg', "{{ global_strings['sys']['input-btn-padding-y-lg'] }}");
+                setObjValOrFallback(object, 'input-btn-padding-x-lg', "{{ global_strings['sys']['input-btn-padding-x-lg'] }}");
+                setObjValOrFallback(object, 'input-btn-font-size-lg', "{{ global_strings['sys']['input-btn-font-size-lg'] }}");
+                setObjValOrFallback(object, 'input-btn-line-height-lg', "{{ global_strings['sys']['input-btn-line-height-lg'] }}");
+                setObjValOrFallback(object, 'input-btn-border-width', "{{ global_strings['sys']['input-btn-border-width'] }}");
 
                 // core buttons
-                setObjValOrFallback(object, 'btn-padding-y', "{{ global_strings['sass-defaults']['btn-padding-y'] }}");
-                setObjValOrFallback(object, 'btn-padding-x', "{{ global_strings['sass-defaults']['btn-padding-x'] }}");
-                setObjValOrFallback(object, 'btn-font-family', "{{ global_strings['sass-defaults']['btn-font-family'] }}");
-                setObjValOrFallback(object, 'btn-font-size', "{{ global_strings['sass-defaults']['btn-font-size'] }}");
-                setObjValOrFallback(object, 'btn-line-height', "{{ global_strings['sass-defaults']['btn-line-height'] }}");
+                setObjValOrFallback(object, 'btn-padding-y', "{{ global_strings['sys']['btn-padding-y'] }}");
+                setObjValOrFallback(object, 'btn-padding-x', "{{ global_strings['sys']['btn-padding-x'] }}");
+                setObjValOrFallback(object, 'btn-font-family', "{{ global_strings['sys']['btn-font-family'] }}");
+                setObjValOrFallback(object, 'btn-font-size', "{{ global_strings['sys']['btn-font-size'] }}");
+                setObjValOrFallback(object, 'btn-line-height', "{{ global_strings['sys']['btn-line-height'] }}");
                 
                 
                 
@@ -1154,6 +1164,7 @@
                 $(idSelector + " option[value='" + value + "']").attr("selected", true);
             }
 
+            /*
             function set_link_decoration_inputs(str, decorSelectId, colorSelectId, modSelectId, targetId) {
                 
                 // decode passed str value and set assign to a variable
@@ -1211,10 +1222,10 @@
                                         // update the UI
                                         $(colorSelectId).find('option[value="' + color + '"]').attr('selected', true);
                                         $(modSelectId).find('option[value="none"]').attr('selected', true);
-                                    }/* else {
-                                        $(colorSelectId).find('option[value="none"]').attr('selected', true);
-                                        $(modSelectId).attr('disabled', true);
-                                    }*/
+                                    } // else {
+                                        // $(colorSelectId).find('option[value="none"]').attr('selected', true);
+                                        // $(modSelectId).attr('disabled', true);
+                                    // }
                                 }
 
                                 decoration = string.replace(color, '').trim();
@@ -1244,6 +1255,7 @@
                 }
 
             }
+            */
 
 
             /*
@@ -1726,7 +1738,7 @@
 
 			// SVG JAVASCRIPT
 			
-			var svgColors = ['red', 'rose', 'magenta', 'violet', 'blue', 'azure', 'cyan', 'spring-green', 'green', 'chartreuse', 'yellow', 'orange', 'dark-gray-orange', 'dark-gray', 'gray', 'blue-gray', 'light-gray-azure', 'light-gray', 'black', 'orange-gray', 'white'];
+			// var svgColors = ['red', 'rose', 'magenta', 'violet', 'blue', 'azure', 'cyan', 'spring-green', 'green', 'chartreuse', 'yellow', 'orange', 'dark-gray-orange', 'dark-gray', 'gray', 'blue-gray', 'light-gray-azure', 'light-gray', 'black', 'orange-gray', 'white'];
 			
 			// Set the default color
 			var defaultFill = "#b3aeab";
@@ -1735,25 +1747,25 @@
             $('.js-color-wheel-inputs').find('.form-group').addClass('collapse show');
 			
 			// Loop through each svg part by id
-			for (i = 0; i < svgColors.length; i++) { 
+			for (i = 0; i < obe_wheel_css.length; i++) { 
 				// Make each each part of the color wheel the default color
-				$("#" + svgColors[i] + "-slice").attr('style', "fill:" + defaultFill);
+				$("#" + obe_wheel_css[i] + "-slice").attr('style', "fill:" + defaultFill);
 			}
 			
 			// Add on click functionality to each part of the color wheel
-			for (i = 0; i < svgColors.length; i++) { 
+			for (i = 0; i < obe_wheel_css.length; i++) { 
 				
 				// Set on hover functionality for each piece of the wheel
-				$("#" + svgColors[i] + "-slice").hover(function() {
+				$("#" + obe_wheel_css[i] + "-slice").hover(function() {
 					$(this).css('cursor','pointer');
 				});
 				
 				// Set on click functionality for each piece of the wheel
-				$("#" + svgColors[i] + "-slice").on( "click", function() {
+				$("#" + obe_wheel_css[i] + "-slice").on( "click", function() {
 					
 					// Remove visual cue from every svg path first
-					for (j = 0; j < svgColors.length; j++) {
-						$("#" + svgColors[j] + "-slice").attr('opacity', "0.25");
+					for (j = 0; j < obe_wheel_css.length; j++) {
+						$("#" + obe_wheel_css[j] + "-slice").attr('opacity', "0.25");
 					}
 					
 					// Then add visual cue to the selected svg path
@@ -1788,8 +1800,8 @@
 			// utility function to deselect any selected svg elements
 			// and return the view state to normal opacity
 			var deselectSvg = function () {
-				for (i = 0; i < svgColors.length; i++) {
-					$("#" + svgColors[i] + "-slice").attr('opacity', "1");
+				for (i = 0; i < obe_wheel_css.length; i++) {
+					$("#" + obe_wheel_css[i] + "-slice").attr('opacity', "1");
 				}
 			}
 
@@ -1801,9 +1813,9 @@
             });
 
             // script to add colors to wheel svg on page load
-			for (i = 0; i < svgColors.length; i++) { 
-                let colorVal = $('#' + svgColors[i]).val();
-                $("#" + svgColors[i] + "-slice").attr('style', "fill:" + colorVal);
+			for (i = 0; i < obe_wheel_css.length; i++) { 
+                let colorVal = $('#' + obe_wheel_css[i]).val();
+                $("#" + obe_wheel_css[i] + "-slice").attr('style', "fill:" + colorVal);
 			}
 
             

@@ -1438,7 +1438,7 @@
             }
         ]
     },
-    "sass-defaults": {
+    "sys": {
         "obebs4-1-color-tint-value": "5%",
         "obebs4-1-color-shade-value": "10%",
         "color-50-lighten-percent": "30%",

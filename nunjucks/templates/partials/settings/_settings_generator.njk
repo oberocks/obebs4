@@ -151,20 +151,20 @@
                         
                         <h3 class="pb-2">OBE:BS4 1 Color Gradient Tints/Shades</h3>
 
-                        {{ macros.settings_number_step_input('obebs4-1-color-tint-value', '1 Color Gradient Tint Value', global_strings['sass-defaults']['obebs4-1-color-tint-value'], obe_settings['obebs4-1-color-tint-value'], '%', '100', '0', '1') }}
-                        {{ macros.settings_number_step_input('obebs4-1-color-shade-value', '1 Color Gradient Shade Value', global_strings['sass-defaults']['obebs4-1-color-shade-value'], obe_settings['obebs4-1-color-shade-value'], '%', '100', '0', '1') }}
+                        {{ macros.settings_number_step_input('obebs4-1-color-tint-value', '1 Color Gradient Tint Value', global_strings['sys']['obebs4-1-color-tint-value'], obe_settings['obebs4-1-color-tint-value'], '%', '100', '0', '1') }}
+                        {{ macros.settings_number_step_input('obebs4-1-color-shade-value', '1 Color Gradient Shade Value', global_strings['sys']['obebs4-1-color-shade-value'], obe_settings['obebs4-1-color-shade-value'], '%', '100', '0', '1') }}
 
                         <h3 class="pt-4 pb-2">OBE:BS4 Contextual Color Tints/Shades</h3>
 
-                        {{ macros.settings_number_step_input('color-50-lighten-percent', '[50] Color Lighten Value', global_strings['sass-defaults']['color-50-lighten-percent'], obe_settings['color-50-lighten-percent'], '%', '100', '0', '1') }}
-                        {{ macros.settings_number_step_input('color-100-lighten-percent', '[100] Color Lighten Value', global_strings['sass-defaults']['color-100-lighten-percent'], obe_settings['color-100-lighten-percent'], '%', '100', '0', '1') }}
-                        {{ macros.settings_number_step_input('color-200-lighten-percent', '[200] Color Lighten Value', global_strings['sass-defaults']['color-200-lighten-percent'], obe_settings['color-200-lighten-percent'], '%', '100', '0', '1') }}
-                        {{ macros.settings_number_step_input('color-300-lighten-percent', '[300] Color Lighten Value', global_strings['sass-defaults']['color-300-lighten-percent'], obe_settings['color-300-lighten-percent'], '%', '100', '0', '1') }}
-                        {{ macros.settings_number_step_input('color-400-lighten-percent', '[400] Color Lighten Value', global_strings['sass-defaults']['color-400-lighten-percent'], obe_settings['color-400-lighten-percent'], '%', '100', '0', '1') }}
-                        {{ macros.settings_number_step_input('color-600-darken-percent', '[600] Color Darken Value', global_strings['sass-defaults']['color-600-darken-percent'], obe_settings['color-600-darken-percent'], '%', '100', '0', '1') }}
-                        {{ macros.settings_number_step_input('color-700-darken-percent', '[700] Color Darken Value', global_strings['sass-defaults']['color-700-darken-percent'], obe_settings['color-700-darken-percent'], '%', '100', '0', '1') }}
-                        {{ macros.settings_number_step_input('color-800-darken-percent', '[800] Color Darken Value', global_strings['sass-defaults']['color-800-darken-percent'], obe_settings['color-800-darken-percent'], '%', '100', '0', '1') }}
-                        {{ macros.settings_number_step_input('color-900-darken-percent', '[900] Color Darken Value', global_strings['sass-defaults']['color-900-darken-percent'], obe_settings['color-900-darken-percent'], '%', '100', '0', '1') }}
+                        {{ macros.settings_number_step_input('color-50-lighten-percent', '[50] Color Lighten Value', global_strings['sys']['color-50-lighten-percent'], obe_settings['color-50-lighten-percent'], '%', '100', '0', '1') }}
+                        {{ macros.settings_number_step_input('color-100-lighten-percent', '[100] Color Lighten Value', global_strings['sys']['color-100-lighten-percent'], obe_settings['color-100-lighten-percent'], '%', '100', '0', '1') }}
+                        {{ macros.settings_number_step_input('color-200-lighten-percent', '[200] Color Lighten Value', global_strings['sys']['color-200-lighten-percent'], obe_settings['color-200-lighten-percent'], '%', '100', '0', '1') }}
+                        {{ macros.settings_number_step_input('color-300-lighten-percent', '[300] Color Lighten Value', global_strings['sys']['color-300-lighten-percent'], obe_settings['color-300-lighten-percent'], '%', '100', '0', '1') }}
+                        {{ macros.settings_number_step_input('color-400-lighten-percent', '[400] Color Lighten Value', global_strings['sys']['color-400-lighten-percent'], obe_settings['color-400-lighten-percent'], '%', '100', '0', '1') }}
+                        {{ macros.settings_number_step_input('color-600-darken-percent', '[600] Color Darken Value', global_strings['sys']['color-600-darken-percent'], obe_settings['color-600-darken-percent'], '%', '100', '0', '1') }}
+                        {{ macros.settings_number_step_input('color-700-darken-percent', '[700] Color Darken Value', global_strings['sys']['color-700-darken-percent'], obe_settings['color-700-darken-percent'], '%', '100', '0', '1') }}
+                        {{ macros.settings_number_step_input('color-800-darken-percent', '[800] Color Darken Value', global_strings['sys']['color-800-darken-percent'], obe_settings['color-800-darken-percent'], '%', '100', '0', '1') }}
+                        {{ macros.settings_number_step_input('color-900-darken-percent', '[900] Color Darken Value', global_strings['sys']['color-900-darken-percent'], obe_settings['color-900-darken-percent'], '%', '100', '0', '1') }}
 
 
                         <h3 class="pt-4 pb-2">OBE:BS4 Font Options</h3>
@@ -501,7 +501,7 @@
 
                             {{ macros.settings_contextual_selects('dropdown-link-color', 'Link', obe_settings['dropdown-link-color-C'], obe_settings['dropdown-link-color-M'], note='Sets $dropdown-link-color, plus $dropdown-link-hover-color, $dropdown-link-active-color using darken(5%)') }}
 
-                            {{ macros.settings_contextual_selects('dropdown-link-hover-bg', 'Hover/Active Background', obe_settings['dropdown-link-hover-bg-C'], obe_settings['dropdown-link-hover-bg-M'], note='Sets dropdown-link-hover-bg, $dropdown-link-active-bg, $pagination-hover-bg, $list-group-hover-bg and $list-group-action-active-bg') }}
+                            {{ macros.settings_contextual_selects('dropdown-link-hover-bg', 'Hover/Active Background', obe_settings['dropdown-link-hover-bg-C'], obe_settings['dropdown-link-hover-bg-M'], note='Sets $dropdown-link-hover-bg, $dropdown-link-active-bg, $pagination-hover-bg, $list-group-hover-bg and $list-group-action-active-bg') }}
 
                             {{ macros.settings_contextual_selects('dropdown-link-disabled-color', 'Disabled Link', obe_settings['dropdown-link-disabled-color-C'], obe_settings['dropdown-link-disabled-color-M'], note='Sets $dropdown-link-disabled-color and $dropdown-header-color') }}
 
@@ -521,15 +521,15 @@
                         
                         <!-- COLORS SECTION -->
                         
-                        {{ macros.settings_number_step_input('theme-color-interval', 'Theme Color Interval', global_strings['sass-defaults']['theme-color-interval'], obe_settings['theme-color-interval'], '%', '100', '0', '1', note='Sets $theme-color-interval') }}
+                        {{ macros.settings_number_step_input('theme-color-interval', 'Theme Color Interval', global_strings['sys']['theme-color-interval'], obe_settings['theme-color-interval'], '%', '100', '0', '1', note='Sets $theme-color-interval') }}
 
-                        {{ macros.settings_number_step_input('yiq-contrasted-threshold', 'YIQ Contrasted Threshold', global_strings['sass-defaults']['yiq-contrasted-threshold'], obe_settings['yiq-contrasted-threshold'], '%', '100', '0', '1', note='Sets $yiq-contrasted-threshold (values between 0 and 255)') }}
+                        {{ macros.settings_number_step_input('yiq-contrasted-threshold', 'YIQ Contrasted Threshold', global_strings['sys']['yiq-contrasted-threshold'], obe_settings['yiq-contrasted-threshold'], '%', '100', '0', '1', note='Sets $yiq-contrasted-threshold (values between 0 and 255)') }}
 
                         {{ macros.settings_contextual_selects('yiq-text-dark', 'YIQ Text Dark', obe_settings['yiq-text-dark-C'], obe_settings['yiq-text-dark-M'], note='Sets $yiq-text-dark') }}
 
                         {{ macros.settings_contextual_selects('yiq-text-light', 'YIQ Text Light', obe_settings['yiq-text-light-C'], obe_settings['yiq-text-light-M'], note='Sets $yiq-text-light') }}
 
-                        {{ macros.settings_text_input('escaped-characters', 'Escaped Characters', global_strings['sass-defaults']['escaped-characters'], obe_settings['escaped-characters'], note='Sets $escaped-characters') }}
+                        {{ macros.settings_text_input('escaped-characters', 'Escaped Characters', global_strings['sys']['escaped-characters'], obe_settings['escaped-characters'], note='Sets $escaped-characters') }}
 
 
                         
@@ -537,7 +537,7 @@
                         
                         <!-- SPACING SECTION -->
 
-                        {{ macros.settings_number_step_input('spacer', 'Spacer', global_strings['sass-defaults']['spacer'], obe_settings['spacer'], 'rem', '10000', '0', '1', note='Sets $spacer') }}
+                        {{ macros.settings_number_step_input('spacer', 'Spacer', global_strings['sys']['spacer'], obe_settings['spacer'], 'rem', '10000', '0', '1', note='Sets $spacer') }}
 
                         <!-- HOLD FOR: $spacers: () !default; -->
 
@@ -549,11 +549,11 @@
                         
                         <!-- LINKS SECTION -->
 
-                        {{ macros.settings_text_input('link-hover-color', 'Link Hover Color', global_strings['sass-defaults']['link-hover-color'], obe_settings['link-hover-color'], note='Sets $link-hover-color') }}
+                        {{ macros.settings_text_input('link-hover-color', 'Link Hover Color', global_strings['sys']['link-hover-color'], obe_settings['link-hover-color'], note='Sets $link-hover-color') }}
                         
                         <!-- ? COMBINE ABOVE % NUMBER INTO SINGLE VAR FOR: $emphasized-link-hover-darken-percentage: 15% !default; TOO ? -->
 
-                        {{ macros.settings_number_step_input('emphasized-link-hover-darken-percentage', 'Emphasized Link Hover Darken Percentage', global_strings['sass-defaults']['emphasized-link-hover-darken-percentage'], obe_settings['emphasized-link-hover-darken-percentage'], '%', '100', '0', '1', note='Sets $emphasized-link-hover-darken-percentage (links with a .text-* class)') }}
+                        {{ macros.settings_number_step_input('emphasized-link-hover-darken-percentage', 'Emphasized Link Hover Darken Percentage', global_strings['sys']['emphasized-link-hover-darken-percentage'], obe_settings['emphasized-link-hover-darken-percentage'], '%', '100', '0', '1', note='Sets $emphasized-link-hover-darken-percentage (links with a .text-* class)') }}
 
 
                         
@@ -561,7 +561,7 @@
                         
                         <!-- PARAGRAPHS SECTION -->
 
-                        {{ macros.settings_number_step_input('paragraph-margin-bottom', 'Paragraph Margin Bottom', global_strings['sass-defaults']['paragraph-margin-bottom'], obe_settings['paragraph-margin-bottom'], 'rem', '10000', '0', '1', note='Sets $paragraph-margin-bottom') }}
+                        {{ macros.settings_number_step_input('paragraph-margin-bottom', 'Paragraph Margin Bottom', global_strings['sys']['paragraph-margin-bottom'], obe_settings['paragraph-margin-bottom'], 'rem', '10000', '0', '1', note='Sets $paragraph-margin-bottom') }}
 
 
                         
@@ -569,15 +569,15 @@
                         
                         <!-- GRIDS SECTIONS -->
 
-                        {{ macros.settings_text_input('grid-breakpoints', 'Grid Breakpoints', global_strings['sass-defaults']['grid-breakpoints'], obe_settings['grid-breakpoints'], note='Sets $grid-breakpoints') }}
+                        {{ macros.settings_text_input('grid-breakpoints', 'Grid Breakpoints', global_strings['sys']['grid-breakpoints'], obe_settings['grid-breakpoints'], note='Sets $grid-breakpoints') }}
 
-                        {{ macros.settings_text_input('container-max-widths', 'Container Max Widths', global_strings['sass-defaults']['container-max-widths'], obe_settings['container-max-widths'], note='Sets $container-max-widths') }}
+                        {{ macros.settings_text_input('container-max-widths', 'Container Max Widths', global_strings['sys']['container-max-widths'], obe_settings['container-max-widths'], note='Sets $container-max-widths') }}
 
-                        {{ macros.settings_number_step_input('grid-columns', 'Grid Columns', global_strings['sass-defaults']['grid-columns'], obe_settings['grid-columns'], '', '1000', '1', '1', note='Sets $grid-columns') }}
+                        {{ macros.settings_number_step_input('grid-columns', 'Grid Columns', global_strings['sys']['grid-columns'], obe_settings['grid-columns'], '', '1000', '1', '1', note='Sets $grid-columns') }}
 
-                        {{ macros.settings_number_step_input('grid-gutter-width', 'Grid Gutter Width', global_strings['sass-defaults']['grid-gutter-width'], obe_settings['grid-gutter-width'], 'px', '10000', '0', '1', note='Sets $grid-gutter-width') }}
+                        {{ macros.settings_number_step_input('grid-gutter-width', 'Grid Gutter Width', global_strings['sys']['grid-gutter-width'], obe_settings['grid-gutter-width'], 'px', '10000', '0', '1', note='Sets $grid-gutter-width') }}
 
-                        {{ macros.settings_number_step_input('grid-row-columns', 'Grid Row Columns', global_strings['sass-defaults']['grid-row-columns'], obe_settings['grid-row-columns'], '', '1000', '1', '1', note='Sets $grid-row-columns (.row-cols-* classes)') }}
+                        {{ macros.settings_number_step_input('grid-row-columns', 'Grid Row Columns', global_strings['sys']['grid-row-columns'], obe_settings['grid-row-columns'], '', '1000', '1', '1', note='Sets $grid-row-columns (.row-cols-* classes)') }}
 
 
                         
@@ -585,39 +585,39 @@
                         
                         <!-- COMPONENTS SECTION -->
 
-                        {{ macros.settings_number_step_input('line-height-lg', 'Line Height Large', global_strings['sass-defaults']['line-height-lg'], obe_settings['line-height-lg'], '', '100', '0', '0.5', note='Sets $line-height-lg') }}
+                        {{ macros.settings_number_step_input('line-height-lg', 'Line Height Large', global_strings['sys']['line-height-lg'], obe_settings['line-height-lg'], '', '100', '0', '0.5', note='Sets $line-height-lg') }}
 
-                        {{ macros.settings_number_step_input('line-height-sm', 'Line Height Small', global_strings['sass-defaults']['line-height-sm'], obe_settings['line-height-sm'], '', '100', '0', '0.5', note='Sets $line-height-sm') }}
+                        {{ macros.settings_number_step_input('line-height-sm', 'Line Height Small', global_strings['sys']['line-height-sm'], obe_settings['line-height-sm'], '', '100', '0', '0.5', note='Sets $line-height-sm') }}
 
-                        {{ macros.settings_number_step_input('border-width', 'Border Width', global_strings['sass-defaults']['border-width'], obe_settings['border-width'], 'px', '10000', '0', '1', note='Sets $border-width') }}
+                        {{ macros.settings_number_step_input('border-width', 'Border Width', global_strings['sys']['border-width'], obe_settings['border-width'], 'px', '10000', '0', '1', note='Sets $border-width') }}
 
                         {{ macros.settings_contextual_selects('border-color', 'Border Color', obe_settings['border-color-C'], obe_settings['border-color-M'], note='Sets $border-color') }}
 
-                        {{ macros.settings_number_step_input('border-radius', 'Border Radius', global_strings['sass-defaults']['border-radius'], obe_settings['border-radius'], 'rem', '100', '0', '0.05', note='Sets $border-radius') }}
+                        {{ macros.settings_number_step_input('border-radius', 'Border Radius', global_strings['sys']['border-radius'], obe_settings['border-radius'], 'rem', '100', '0', '0.05', note='Sets $border-radius') }}
 
-                        {{ macros.settings_number_step_input('border-radius-lg', 'Border Radius Large', global_strings['sass-defaults']['border-radius-lg'], obe_settings['border-radius-lg'], 'rem', '100', '0', '0.05', note='Sets $border-radius-lg') }}
+                        {{ macros.settings_number_step_input('border-radius-lg', 'Border Radius Large', global_strings['sys']['border-radius-lg'], obe_settings['border-radius-lg'], 'rem', '100', '0', '0.05', note='Sets $border-radius-lg') }}
 
-                        {{ macros.settings_number_step_input('border-radius-sm', 'Border Radius Small', global_strings['sass-defaults']['border-radius-sm'], obe_settings['border-radius-sm'], 'rem', '100', '0', '0.05', note='Sets $border-radius-sm') }}
+                        {{ macros.settings_number_step_input('border-radius-sm', 'Border Radius Small', global_strings['sys']['border-radius-sm'], obe_settings['border-radius-sm'], 'rem', '100', '0', '0.05', note='Sets $border-radius-sm') }}
 
-                        {{ macros.settings_number_step_input('rounded-pill', 'Rounded Pill', global_strings['sass-defaults']['rounded-pill'], obe_settings['rounded-pill'], 'rem', '1000', '0', '10', note='Sets $rounded-pill') }}
+                        {{ macros.settings_number_step_input('rounded-pill', 'Rounded Pill', global_strings['sys']['rounded-pill'], obe_settings['rounded-pill'], 'rem', '1000', '0', '10', note='Sets $rounded-pill') }}
 
-                        {{ macros.settings_text_input('box-shadow-sm', 'Box Shadow Small', global_strings['sass-defaults']['box-shadow-sm'], obe_settings['box-shadow-sm'], note='Sets $box-shadow-sm') }}
+                        {{ macros.settings_text_input('box-shadow-sm', 'Box Shadow Small', global_strings['sys']['box-shadow-sm'], obe_settings['box-shadow-sm'], note='Sets $box-shadow-sm') }}
 
-                        {{ macros.settings_text_input('box-shadow', 'Box Shadow', global_strings['sass-defaults']['box-shadow'], obe_settings['box-shadow'], note='Sets $box-shadow') }}
+                        {{ macros.settings_text_input('box-shadow', 'Box Shadow', global_strings['sys']['box-shadow'], obe_settings['box-shadow'], note='Sets $box-shadow') }}
 
-                        {{ macros.settings_text_input('box-shadow-lg', 'Box Shadow Large', global_strings['sass-defaults']['box-shadow-lg'], obe_settings['box-shadow-lg'], note='Sets $box-shadow-lg') }}
+                        {{ macros.settings_text_input('box-shadow-lg', 'Box Shadow Large', global_strings['sys']['box-shadow-lg'], obe_settings['box-shadow-lg'], note='Sets $box-shadow-lg') }}
 
-                        {{ macros.settings_number_step_input('caret-width', 'Caret Width', global_strings['sass-defaults']['caret-width'], obe_settings['caret-width'], 'em', '100', '0', '0.05', note='Sets $caret-width') }}
+                        {{ macros.settings_number_step_input('caret-width', 'Caret Width', global_strings['sys']['caret-width'], obe_settings['caret-width'], 'em', '100', '0', '0.05', note='Sets $caret-width') }}
 
-                        {{ macros.settings_text_input('caret-vertical-align', 'Caret Vertical Align', global_strings['sass-defaults']['caret-vertical-align'], obe_settings['caret-vertical-align'], note='Sets $caret-vertical-align') }}
+                        {{ macros.settings_text_input('caret-vertical-align', 'Caret Vertical Align', global_strings['sys']['caret-vertical-align'], obe_settings['caret-vertical-align'], note='Sets $caret-vertical-align') }}
 
-                        {{ macros.settings_text_input('caret-spacing', 'Caret Spacing', global_strings['sass-defaults']['caret-spacing'], obe_settings['caret-spacing'], note='Sets $caret-spacing') }}
+                        {{ macros.settings_text_input('caret-spacing', 'Caret Spacing', global_strings['sys']['caret-spacing'], obe_settings['caret-spacing'], note='Sets $caret-spacing') }}
 
-                        {{ macros.settings_text_input('transition-base', 'Transition Base', global_strings['sass-defaults']['transition-base'], obe_settings['transition-base'], note='Sets $transition-base') }}
+                        {{ macros.settings_text_input('transition-base', 'Transition Base', global_strings['sys']['transition-base'], obe_settings['transition-base'], note='Sets $transition-base') }}
 
-                        {{ macros.settings_text_input('transition-fade', 'Transition Fade', global_strings['sass-defaults']['transition-fade'], obe_settings['transition-fade'], note='Sets $transition-fade') }}
+                        {{ macros.settings_text_input('transition-fade', 'Transition Fade', global_strings['sys']['transition-fade'], obe_settings['transition-fade'], note='Sets $transition-fade') }}
 
-                        {{ macros.settings_text_input('transition-collapse', 'Transition Collapse', global_strings['sass-defaults']['transition-collapse'], obe_settings['transition-collapse'], note='Sets $transition-collapse') }}
+                        {{ macros.settings_text_input('transition-collapse', 'Transition Collapse', global_strings['sys']['transition-collapse'], obe_settings['transition-collapse'], note='Sets $transition-collapse') }}
 
                         <!-- HOLD FOR: $embed-responsive-aspect-ratios: () !default; -->
 
@@ -629,97 +629,97 @@
                         
                         <!-- TYPOGRAPHY SECTION -->
 
-                        {{ macros.settings_text_input('font-family-base', 'font-family-base', global_strings['sass-defaults']['font-family-base'], obe_settings['font-family-base'], note='Sets $font-family-base') }}
+                        {{ macros.settings_text_input('font-family-base', 'font-family-base', global_strings['sys']['font-family-base'], obe_settings['font-family-base'], note='Sets $font-family-base') }}
 
-                        {{ macros.settings_number_step_input('font-size-base', 'Font Size Base', global_strings['sass-defaults']['font-size-base'], obe_settings['font-size-base'], 'rem', '100', '0', '0.25', note='Sets $font-size-base') }}
+                        {{ macros.settings_number_step_input('font-size-base', 'Font Size Base', global_strings['sys']['font-size-base'], obe_settings['font-size-base'], 'rem', '100', '0', '0.25', note='Sets $font-size-base') }}
 
-                        {{ macros.settings_text_input('font-size-lg', 'Font Size Large', global_strings['sass-defaults']['font-size-lg'], obe_settings['font-size-lg'], note='Sets $font-size-lg') }}
+                        {{ macros.settings_text_input('font-size-lg', 'Font Size Large', global_strings['sys']['font-size-lg'], obe_settings['font-size-lg'], note='Sets $font-size-lg') }}
 
-                        {{ macros.settings_text_input('font-size-sm', 'Font Size Small', global_strings['sass-defaults']['font-size-sm'], obe_settings['font-size-sm'], note='Sets $font-size-sm') }}
+                        {{ macros.settings_text_input('font-size-sm', 'Font Size Small', global_strings['sys']['font-size-sm'], obe_settings['font-size-sm'], note='Sets $font-size-sm') }}
 
-                        {{ macros.settings_text_input('font-weight-lighter', 'Font Weight Lighter', global_strings['sass-defaults']['font-weight-lighter'], obe_settings['font-weight-lighter'], note='Sets $font-weight-lighter') }}
+                        {{ macros.settings_text_input('font-weight-lighter', 'Font Weight Lighter', global_strings['sys']['font-weight-lighter'], obe_settings['font-weight-lighter'], note='Sets $font-weight-lighter') }}
 
-                        {{ macros.settings_number_step_input('font-weight-light', 'Font Weight Light', global_strings['sass-defaults']['font-weight-light'], obe_settings['font-weight-light'], '', '1000', '0', '100', note='Sets $font-weight-light') }}
+                        {{ macros.settings_number_step_input('font-weight-light', 'Font Weight Light', global_strings['sys']['font-weight-light'], obe_settings['font-weight-light'], '', '1000', '0', '100', note='Sets $font-weight-light') }}
 
-                        {{ macros.settings_number_step_input('font-weight-normal', 'Font Weight Normal', global_strings['sass-defaults']['font-weight-normal'], obe_settings['font-weight-normal'], '', '1000', '0', '100', note='Sets $font-weight-normal') }}
+                        {{ macros.settings_number_step_input('font-weight-normal', 'Font Weight Normal', global_strings['sys']['font-weight-normal'], obe_settings['font-weight-normal'], '', '1000', '0', '100', note='Sets $font-weight-normal') }}
 
-                        {{ macros.settings_number_step_input('font-weight-bold', 'Font Weight Bold', global_strings['sass-defaults']['font-weight-bold'], obe_settings['font-weight-bold'], '', '1000', '0', '100', note='Sets $font-weight-bold') }}
+                        {{ macros.settings_number_step_input('font-weight-bold', 'Font Weight Bold', global_strings['sys']['font-weight-bold'], obe_settings['font-weight-bold'], '', '1000', '0', '100', note='Sets $font-weight-bold') }}
 
-                        {{ macros.settings_text_input('font-weight-bolder', 'Font Weight Bolder', global_strings['sass-defaults']['font-weight-bolder'], obe_settings['font-weight-bolder'], note='Sets $font-weight-bolder') }}
+                        {{ macros.settings_text_input('font-weight-bolder', 'Font Weight Bolder', global_strings['sys']['font-weight-bolder'], obe_settings['font-weight-bolder'], note='Sets $font-weight-bolder') }}
 
-                        {{ macros.settings_text_input('font-weight-base', 'Font Weight Base', global_strings['sass-defaults']['font-weight-base'], obe_settings['font-weight-base'], note='Sets $font-weight-base') }}
+                        {{ macros.settings_text_input('font-weight-base', 'Font Weight Base', global_strings['sys']['font-weight-base'], obe_settings['font-weight-base'], note='Sets $font-weight-base') }}
 
-                        {{ macros.settings_number_step_input('line-height-base', 'Line Height Base', global_strings['sass-defaults']['line-height-base'], obe_settings['line-height-base'], '', '100', '0', '0.05', note='Sets $line-height-base') }}
+                        {{ macros.settings_number_step_input('line-height-base', 'Line Height Base', global_strings['sys']['line-height-base'], obe_settings['line-height-base'], '', '100', '0', '0.05', note='Sets $line-height-base') }}
 
-                        {{ macros.settings_text_input('h1-font-size', 'H1 Font Size', global_strings['sass-defaults']['h1-font-size'], obe_settings['h1-font-size'], note='Sets $h1-font-size') }}
+                        {{ macros.settings_text_input('h1-font-size', 'H1 Font Size', global_strings['sys']['h1-font-size'], obe_settings['h1-font-size'], note='Sets $h1-font-size') }}
 
-                        {{ macros.settings_text_input('h2-font-size', 'H2 Font Size', global_strings['sass-defaults']['h2-font-size'], obe_settings['h2-font-size'], note='Sets $h2-font-size') }}
+                        {{ macros.settings_text_input('h2-font-size', 'H2 Font Size', global_strings['sys']['h2-font-size'], obe_settings['h2-font-size'], note='Sets $h2-font-size') }}
 
-                        {{ macros.settings_text_input('h3-font-size', 'H3 Font Size', global_strings['sass-defaults']['h3-font-size'], obe_settings['h3-font-size'], note='Sets $h3-font-size') }}
+                        {{ macros.settings_text_input('h3-font-size', 'H3 Font Size', global_strings['sys']['h3-font-size'], obe_settings['h3-font-size'], note='Sets $h3-font-size') }}
 
-                        {{ macros.settings_text_input('h4-font-size', 'H4 Font Size', global_strings['sass-defaults']['h4-font-size'], obe_settings['h4-font-size'], note='Sets $h4-font-size') }}
+                        {{ macros.settings_text_input('h4-font-size', 'H4 Font Size', global_strings['sys']['h4-font-size'], obe_settings['h4-font-size'], note='Sets $h4-font-size') }}
 
-                        {{ macros.settings_text_input('h5-font-size', 'H5 Font Size', global_strings['sass-defaults']['h5-font-size'], obe_settings['h5-font-size'], note='Sets $h5-font-size') }}
+                        {{ macros.settings_text_input('h5-font-size', 'H5 Font Size', global_strings['sys']['h5-font-size'], obe_settings['h5-font-size'], note='Sets $h5-font-size') }}
 
-                        {{ macros.settings_text_input('h6-font-size', 'H6 Font Size', global_strings['sass-defaults']['h6-font-size'], obe_settings['h6-font-size'], note='Sets $h6-font-size') }}
+                        {{ macros.settings_text_input('h6-font-size', 'H6 Font Size', global_strings['sys']['h6-font-size'], obe_settings['h6-font-size'], note='Sets $h6-font-size') }}
 
-                        {{ macros.settings_text_input('headings-margin-bottom', 'Headings Margin Bottom', global_strings['sass-defaults']['headings-margin-bottom'], obe_settings['headings-margin-bottom'], note='Sets $headings-margin-bottom') }}
+                        {{ macros.settings_text_input('headings-margin-bottom', 'Headings Margin Bottom', global_strings['sys']['headings-margin-bottom'], obe_settings['headings-margin-bottom'], note='Sets $headings-margin-bottom') }}
 
-                        {{ macros.settings_text_input('headings-font-family', 'Headings Font Family', global_strings['sass-defaults']['headings-font-family'], obe_settings['headings-font-family'], note='Sets $headings-font-family') }}
+                        {{ macros.settings_text_input('headings-font-family', 'Headings Font Family', global_strings['sys']['headings-font-family'], obe_settings['headings-font-family'], note='Sets $headings-font-family') }}
 
-                        {{ macros.settings_number_step_input('headings-font-weight', 'Headings Font Weight', global_strings['sass-defaults']['headings-font-weight'], obe_settings['headings-font-weight'], '', '1000', '0', '100', note='Sets $headings-font-weight') }}
+                        {{ macros.settings_number_step_input('headings-font-weight', 'Headings Font Weight', global_strings['sys']['headings-font-weight'], obe_settings['headings-font-weight'], '', '1000', '0', '100', note='Sets $headings-font-weight') }}
 
-                        {{ macros.settings_number_step_input('headings-line-height', 'Headings Line Height', global_strings['sass-defaults']['headings-line-height'], obe_settings['headings-line-height'], '', '100', '0', '0.05', note='Sets $headings-line-height') }}
+                        {{ macros.settings_number_step_input('headings-line-height', 'Headings Line Height', global_strings['sys']['headings-line-height'], obe_settings['headings-line-height'], '', '100', '0', '0.05', note='Sets $headings-line-height') }}
 
                         {{ macros.settings_contextual_selects('headings-color', 'Headings Color', obe_settings['headings-color-C'], obe_settings['headings-color-M'], note='Sets $headings-color') }}
 
-                        {{ macros.settings_number_step_input('display1-size', 'Display 1 Size', global_strings['sass-defaults']['display1-size'], obe_settings['display1-size'], 'rem', '100', '0', '0.25', note='Sets $display1-size') }}
+                        {{ macros.settings_number_step_input('display1-size', 'Display 1 Size', global_strings['sys']['display1-size'], obe_settings['display1-size'], 'rem', '100', '0', '0.25', note='Sets $display1-size') }}
 
-                        {{ macros.settings_number_step_input('display2-size', 'Display 2 Size', global_strings['sass-defaults']['display2-size'], obe_settings['display1-size'], 'rem', '100', '0', '0.25', note='Sets $display2-size') }}
+                        {{ macros.settings_number_step_input('display2-size', 'Display 2 Size', global_strings['sys']['display2-size'], obe_settings['display1-size'], 'rem', '100', '0', '0.25', note='Sets $display2-size') }}
 
-                        {{ macros.settings_number_step_input('display3-size', 'Display 3 Size', global_strings['sass-defaults']['display3-size'], obe_settings['display3-size'], 'rem', '100', '0', '0.25', note='Sets $display3-size') }}
+                        {{ macros.settings_number_step_input('display3-size', 'Display 3 Size', global_strings['sys']['display3-size'], obe_settings['display3-size'], 'rem', '100', '0', '0.25', note='Sets $display3-size') }}
 
-                        {{ macros.settings_number_step_input('display4-size', 'Display 4 Size', global_strings['sass-defaults']['display4-size'], obe_settings['display4-size'], 'rem', '100', '0', '0.25', note='Sets $display4-size') }}
+                        {{ macros.settings_number_step_input('display4-size', 'Display 4 Size', global_strings['sys']['display4-size'], obe_settings['display4-size'], 'rem', '100', '0', '0.25', note='Sets $display4-size') }}
 
-                        {{ macros.settings_number_step_input('display1-weight', 'Display 1 Weight', global_strings['sass-defaults']['display1-weight'], obe_settings['display1-weight'], '', '1000', '0', '100', note='Sets $display1-weight') }}
+                        {{ macros.settings_number_step_input('display1-weight', 'Display 1 Weight', global_strings['sys']['display1-weight'], obe_settings['display1-weight'], '', '1000', '0', '100', note='Sets $display1-weight') }}
 
-                        {{ macros.settings_number_step_input('display2-weight', 'Display 2 Weight', global_strings['sass-defaults']['display2-weight'], obe_settings['display2-weight'], '', '1000', '0', '100', note='Sets $display2-weight') }}
+                        {{ macros.settings_number_step_input('display2-weight', 'Display 2 Weight', global_strings['sys']['display2-weight'], obe_settings['display2-weight'], '', '1000', '0', '100', note='Sets $display2-weight') }}
 
-                        {{ macros.settings_number_step_input('display3-weight', 'Display 3 Weight', global_strings['sass-defaults']['display3-weight'], obe_settings['display3-weight'], '', '1000', '0', '100', note='Sets $display3-weight') }}
+                        {{ macros.settings_number_step_input('display3-weight', 'Display 3 Weight', global_strings['sys']['display3-weight'], obe_settings['display3-weight'], '', '1000', '0', '100', note='Sets $display3-weight') }}
 
-                        {{ macros.settings_number_step_input('display4-weight', 'Display 4 Weight', global_strings['sass-defaults']['display4-weight'], obe_settings['display4-weight'], '', '1000', '0', '100', note='Sets $display4-weight') }}
+                        {{ macros.settings_number_step_input('display4-weight', 'Display 4 Weight', global_strings['sys']['display4-weight'], obe_settings['display4-weight'], '', '1000', '0', '100', note='Sets $display4-weight') }}
 
-                        {{ macros.settings_text_input('display-line-height', 'Display Line Height', global_strings['sass-defaults']['display-line-height'], obe_settings['display-line-height'], note='Sets $display-line-height') }}
+                        {{ macros.settings_text_input('display-line-height', 'Display Line Height', global_strings['sys']['display-line-height'], obe_settings['display-line-height'], note='Sets $display-line-height') }}
 
-                        {{ macros.settings_text_input('lead-font-size', 'Lead Font Size', global_strings['sass-defaults']['lead-font-size'], obe_settings['lead-font-size'], note='Sets $lead-font-size') }}
+                        {{ macros.settings_text_input('lead-font-size', 'Lead Font Size', global_strings['sys']['lead-font-size'], obe_settings['lead-font-size'], note='Sets $lead-font-size') }}
 
-                        {{ macros.settings_number_step_input('lead-font-weight', 'Lead Font Weight', global_strings['sass-defaults']['lead-font-weight'], obe_settings['lead-font-weight'], '', '1000', '0', '100', note='Sets $lead-font-weight') }}
+                        {{ macros.settings_number_step_input('lead-font-weight', 'Lead Font Weight', global_strings['sys']['lead-font-weight'], obe_settings['lead-font-weight'], '', '1000', '0', '100', note='Sets $lead-font-weight') }}
 
-                        {{ macros.settings_number_step_input('small-font-size', 'Small Font Size', global_strings['sass-defaults']['small-font-size'], obe_settings['small-font-size'], '%', '100', '0', '1', note='Sets $small-font-size') }}
+                        {{ macros.settings_number_step_input('small-font-size', 'Small Font Size', global_strings['sys']['small-font-size'], obe_settings['small-font-size'], '%', '100', '0', '1', note='Sets $small-font-size') }}
 
                         {{ macros.settings_contextual_selects('text-muted', 'Text Muted', obe_settings['text-muted-C'], obe_settings['text-muted-M'], note='Sets $text-muted') }}
 
                         {{ macros.settings_contextual_selects('blockquote-small-color', 'Blockquote Small', obe_settings['blockquote-small-color-C'], obe_settings['blockquote-small-color-M'], note='Sets $blockquote-small-color') }}
 
-                        {{ macros.settings_text_input('blockquote-small-font-size', 'Blockquote Small Font Size', global_strings['sass-defaults']['blockquote-small-font-size'], obe_settings['blockquote-small-font-size'], note='Sets $blockquote-small-font-size') }}
+                        {{ macros.settings_text_input('blockquote-small-font-size', 'Blockquote Small Font Size', global_strings['sys']['blockquote-small-font-size'], obe_settings['blockquote-small-font-size'], note='Sets $blockquote-small-font-size') }}
 
-                        {{ macros.settings_text_input('blockquote-font-size', 'Blockquote Font Size', global_strings['sass-defaults']['blockquote-font-size'], obe_settings['blockquote-font-size'], note='Sets $blockquote-font-size') }}
+                        {{ macros.settings_text_input('blockquote-font-size', 'Blockquote Font Size', global_strings['sys']['blockquote-font-size'], obe_settings['blockquote-font-size'], note='Sets $blockquote-font-size') }}
 
-                        {{ macros.settings_text_input('hr-border-color', 'HR Border Color', global_strings['sass-defaults']['hr-border-color'], obe_settings['hr-border-color'], note='Sets $hr-border-color') }}
+                        {{ macros.settings_text_input('hr-border-color', 'HR Border Color', global_strings['sys']['hr-border-color'], obe_settings['hr-border-color'], note='Sets $hr-border-color') }}
 
-                        {{ macros.settings_text_input('hr-border-width', 'HR Border Width', global_strings['sass-defaults']['hr-border-width'], obe_settings['hr-border-width'], note='Sets $hr-border-width') }}
+                        {{ macros.settings_text_input('hr-border-width', 'HR Border Width', global_strings['sys']['hr-border-width'], obe_settings['hr-border-width'], note='Sets $hr-border-width') }}
 
-                        {{ macros.settings_number_step_input('mark-padding', 'Mark Padding', global_strings['sass-defaults']['mark-padding'], obe_settings['mark-padding'], 'em', '1000', '0', '0.05', note='Sets $mark-padding') }}
+                        {{ macros.settings_number_step_input('mark-padding', 'Mark Padding', global_strings['sys']['mark-padding'], obe_settings['mark-padding'], 'em', '1000', '0', '0.05', note='Sets $mark-padding') }}
 
-                        {{ macros.settings_text_input('dt-font-weight', 'DT Font Weight', global_strings['sass-defaults']['dt-font-weight'], obe_settings['dt-font-weight'], note='Sets $dt-font-weight') }}
+                        {{ macros.settings_text_input('dt-font-weight', 'DT Font Weight', global_strings['sys']['dt-font-weight'], obe_settings['dt-font-weight'], note='Sets $dt-font-weight') }}
 
-                        {{ macros.settings_text_input('kbd-box-shadow', 'KBD Box Shadow', global_strings['sass-defaults']['kbd-box-shadow'], obe_settings['kbd-box-shadow'], note='Sets $kbd-box-shadow') }}
+                        {{ macros.settings_text_input('kbd-box-shadow', 'KBD Box Shadow', global_strings['sys']['kbd-box-shadow'], obe_settings['kbd-box-shadow'], note='Sets $kbd-box-shadow') }}
 
-                        {{ macros.settings_text_input('nested-kbd-font-weight', 'Nested KBD Font Weight', global_strings['sass-defaults']['nested-kbd-font-weight'], obe_settings['nested-kbd-font-weight'], note='Sets $nested-kbd-font-weight') }}
+                        {{ macros.settings_text_input('nested-kbd-font-weight', 'Nested KBD Font Weight', global_strings['sys']['nested-kbd-font-weight'], obe_settings['nested-kbd-font-weight'], note='Sets $nested-kbd-font-weight') }}
 
-                        {{ macros.settings_number_step_input('list-inline-padding', 'List Inline Padding', global_strings['sass-defaults']['list-inline-padding'], obe_settings['list-inline-padding'], 'rem', '1000', '0', '0.05', note='Sets $list-inline-padding') }}
+                        {{ macros.settings_number_step_input('list-inline-padding', 'List Inline Padding', global_strings['sys']['list-inline-padding'], obe_settings['list-inline-padding'], 'rem', '1000', '0', '0.05', note='Sets $list-inline-padding') }}
 
-                        {{ macros.settings_text_input('hr-margin-y', 'HR Margin Y (Axis)', global_strings['sass-defaults']['hr-margin-y'], obe_settings['hr-margin-y'], note='Sets $hr-margin-y') }}
+                        {{ macros.settings_text_input('hr-margin-y', 'HR Margin Y (Axis)', global_strings['sys']['hr-margin-y'], obe_settings['hr-margin-y'], note='Sets $hr-margin-y') }}
 
 
                         
@@ -727,25 +727,25 @@
                         
                         <!-- TABLES SECTION -->
 
-                        {{ macros.settings_number_step_input('table-cell-padding', 'Table Cell Padding', global_strings['sass-defaults']['table-cell-padding'], obe_settings['table-cell-padding'], 'rem', '1000', '0', '0.05', note='Sets $table-cell-padding') }}
+                        {{ macros.settings_number_step_input('table-cell-padding', 'Table Cell Padding', global_strings['sys']['table-cell-padding'], obe_settings['table-cell-padding'], 'rem', '1000', '0', '0.05', note='Sets $table-cell-padding') }}
 
-                        {{ macros.settings_number_step_input('table-cell-padding-sm', 'Table Cell Padding Small', global_strings['sass-defaults']['table-cell-padding-sm'], obe_settings['table-cell-padding-sm'], 'rem', '1000', '0', '0.05', note='Sets $table-cell-padding-sm') }}
+                        {{ macros.settings_number_step_input('table-cell-padding-sm', 'Table Cell Padding Small', global_strings['sys']['table-cell-padding-sm'], obe_settings['table-cell-padding-sm'], 'rem', '1000', '0', '0.05', note='Sets $table-cell-padding-sm') }}
 
-                        {{ macros.settings_text_input('table-color', 'Table Color', global_strings['sass-defaults']['table-color'], obe_settings['table-color'], note='Sets $table-color') }}
+                        {{ macros.settings_text_input('table-color', 'Table Color', global_strings['sys']['table-color'], obe_settings['table-color'], note='Sets $table-color') }}
 
-                        {{ macros.settings_text_input('table-bg', 'Table BG', global_strings['sass-defaults']['table-bg'], obe_settings['table-bg'], note='Sets $table-bg') }}
+                        {{ macros.settings_text_input('table-bg', 'Table BG', global_strings['sys']['table-bg'], obe_settings['table-bg'], note='Sets $table-bg') }}
 
-                        {{ macros.settings_text_input('table-accent-bg', 'Table Accent BG', global_strings['sass-defaults']['table-accent-bg'], obe_settings['table-accent-bg'], note='Sets $table-accent-bg') }}
+                        {{ macros.settings_text_input('table-accent-bg', 'Table Accent BG', global_strings['sys']['table-accent-bg'], obe_settings['table-accent-bg'], note='Sets $table-accent-bg') }}
 
-                        {{ macros.settings_text_input('table-hover-color', 'Table Hover Color', global_strings['sass-defaults']['table-hover-color'], obe_settings['table-hover-color'], note='Sets $table-hover-color') }}
+                        {{ macros.settings_text_input('table-hover-color', 'Table Hover Color', global_strings['sys']['table-hover-color'], obe_settings['table-hover-color'], note='Sets $table-hover-color') }}
 
-                        {{ macros.settings_text_input('table-hover-bg', 'Table Hover BG', global_strings['sass-defaults']['table-hover-bg'], obe_settings['table-hover-bg'], note='Sets $table-hover-bg') }}
+                        {{ macros.settings_text_input('table-hover-bg', 'Table Hover BG', global_strings['sys']['table-hover-bg'], obe_settings['table-hover-bg'], note='Sets $table-hover-bg') }}
 
-                        {{ macros.settings_text_input('table-active-bg', 'Table Active BG', global_strings['sass-defaults']['table-active-bg'], obe_settings['table-active-bg'], note='Sets $table-active-bg') }}
+                        {{ macros.settings_text_input('table-active-bg', 'Table Active BG', global_strings['sys']['table-active-bg'], obe_settings['table-active-bg'], note='Sets $table-active-bg') }}
 
-                        {{ macros.settings_text_input('table-border-width', 'Table Border Width', global_strings['sass-defaults']['table-border-width'], obe_settings['table-border-width'], note='Sets $table-border-width') }}
+                        {{ macros.settings_text_input('table-border-width', 'Table Border Width', global_strings['sys']['table-border-width'], obe_settings['table-border-width'], note='Sets $table-border-width') }}
 
-                        {{ macros.settings_text_input('table-border-color', 'Table Border Color', global_strings['sass-defaults']['table-border-color'], obe_settings['table-border-color'], note='Sets $table-border-color') }}
+                        {{ macros.settings_text_input('table-border-color', 'Table Border Color', global_strings['sys']['table-border-color'], obe_settings['table-border-color'], note='Sets $table-border-color') }}
 
                         {{ macros.settings_contextual_selects('table-head-bg', 'Table Head BG', obe_settings['table-head-bg-C'], obe_settings['table-head-bg-M'], note='Sets $table-head-bg') }}
 
@@ -755,21 +755,21 @@
 
                         {{ macros.settings_contextual_selects('table-dark-bg', 'Table Dark BG', obe_settings['table-dark-bg-C'], obe_settings['table-dark-bg-M'], note='Sets $table-dark-bg') }}
 
-                        {{ macros.settings_text_input('table-dark-accent-bg', 'Table Dark Accent BG', global_strings['sass-defaults']['table-dark-accent-bg'], obe_settings['table-dark-accent-bg'], note='Sets $table-dark-accent-bg') }}
+                        {{ macros.settings_text_input('table-dark-accent-bg', 'Table Dark Accent BG', global_strings['sys']['table-dark-accent-bg'], obe_settings['table-dark-accent-bg'], note='Sets $table-dark-accent-bg') }}
 
-                        {{ macros.settings_text_input('table-dark-hover-color', 'Table Dark Hover Color', global_strings['sass-defaults']['table-dark-hover-color'], obe_settings['table-dark-hover-color'], note='Sets $table-dark-hover-color') }}
+                        {{ macros.settings_text_input('table-dark-hover-color', 'Table Dark Hover Color', global_strings['sys']['table-dark-hover-color'], obe_settings['table-dark-hover-color'], note='Sets $table-dark-hover-color') }}
 
-                        {{ macros.settings_text_input('table-dark-hover-bg', 'Table Dark Hover BG', global_strings['sass-defaults']['table-dark-hover-bg'], obe_settings['table-dark-hover-bg'], note='Sets $table-dark-hover-bg') }}
+                        {{ macros.settings_text_input('table-dark-hover-bg', 'Table Dark Hover BG', global_strings['sys']['table-dark-hover-bg'], obe_settings['table-dark-hover-bg'], note='Sets $table-dark-hover-bg') }}
 
-                        {{ macros.settings_text_input('table-dark-border-color', 'Table Dark Border Color', global_strings['sass-defaults']['table-dark-border-color'], obe_settings['table-dark-border-color'], note='Sets $table-dark-border-color') }}
+                        {{ macros.settings_text_input('table-dark-border-color', 'Table Dark Border Color', global_strings['sys']['table-dark-border-color'], obe_settings['table-dark-border-color'], note='Sets $table-dark-border-color') }}
 
-                        {{ macros.settings_text_input('table-striped-order', 'Table Striped Order', global_strings['sass-defaults']['table-striped-order'], obe_settings['table-striped-order'], note='Sets $table-striped-order') }}
+                        {{ macros.settings_text_input('table-striped-order', 'Table Striped Order', global_strings['sys']['table-striped-order'], obe_settings['table-striped-order'], note='Sets $table-striped-order') }}
 
-                        {{ macros.settings_text_input('table-caption-color', 'Table Caption Color', global_strings['sass-defaults']['table-caption-color'], obe_settings['table-caption-color'], note='Sets $table-caption-color') }}
+                        {{ macros.settings_text_input('table-caption-color', 'Table Caption Color', global_strings['sys']['table-caption-color'], obe_settings['table-caption-color'], note='Sets $table-caption-color') }}
 
-                        {{ macros.settings_number_step_input('table-bg-level', 'Table BG Level', global_strings['sass-defaults']['table-bg-level'], obe_settings['table-bg-level'], '', '255', '-255', '1', note='Sets $table-bg-level') }}
+                        {{ macros.settings_number_step_input('table-bg-level', 'Table BG Level', global_strings['sys']['table-bg-level'], obe_settings['table-bg-level'], '', '255', '-255', '1', note='Sets $table-bg-level') }}
 
-                        {{ macros.settings_number_step_input('table-border-level', 'Table Border Level', global_strings['sass-defaults']['table-border-level'], obe_settings['table-border-level'], '', '255', '-255', '1', note='Sets $table-border-level') }}
+                        {{ macros.settings_number_step_input('table-border-level', 'Table Border Level', global_strings['sys']['table-border-level'], obe_settings['table-border-level'], '', '255', '-255', '1', note='Sets $table-border-level') }}
 
 
                         
@@ -778,55 +778,55 @@
                         <!-- BUTTONS + FORMS SECTION -->
 
                         <!-- HOLD FOR: $input-btn-padding-y: 0.375rem !default; -->
-                        {{ macros.settings_number_step_input('input-btn-padding-y', 'Input Btn Padding Y', global_strings['sass-defaults']['input-btn-padding-y'], obe_settings['input-btn-padding-y'], 'rem', '100', '0', '0.025', note='Sets $input-btn-padding-y') }}
+                        {{ macros.settings_number_step_input('input-btn-padding-y', 'Input Btn Padding Y', global_strings['sys']['input-btn-padding-y'], obe_settings['input-btn-padding-y'], 'rem', '100', '0', '0.025', note='Sets $input-btn-padding-y') }}
 
                         <!-- HOLD FOR: $input-btn-padding-x: 0.75rem !default; -->
-                        {{ macros.settings_number_step_input('input-btn-padding-x', 'Input Btn Padding X', global_strings['sass-defaults']['input-btn-padding-x'], obe_settings['input-btn-padding-x'], 'rem', '100', '0', '0.025', note='Sets $input-btn-padding-x') }}
+                        {{ macros.settings_number_step_input('input-btn-padding-x', 'Input Btn Padding X', global_strings['sys']['input-btn-padding-x'], obe_settings['input-btn-padding-x'], 'rem', '100', '0', '0.025', note='Sets $input-btn-padding-x') }}
 
                         <!-- HOLD FOR: $input-btn-font-family: null !default; -->
-                        {{ macros.settings_text_input('input-btn-font-family', 'Input Button Font Family', global_strings['sass-defaults']['input-btn-font-family'], obe_settings['input-btn-font-family'], note='Sets $input-btn-font-family') }}
+                        {{ macros.settings_text_input('input-btn-font-family', 'Input Button Font Family', global_strings['sys']['input-btn-font-family'], obe_settings['input-btn-font-family'], note='Sets $input-btn-font-family') }}
 
                         <!-- HOLD FOR: $input-btn-font-size: $font-size-base !default; -->
-                        {{ macros.settings_text_input('input-btn-font-size', 'Input Button Font Size', global_strings['sass-defaults']['input-btn-font-size'], obe_settings['input-btn-font-size'], note='Sets $input-btn-font-size') }}
+                        {{ macros.settings_text_input('input-btn-font-size', 'Input Button Font Size', global_strings['sys']['input-btn-font-size'], obe_settings['input-btn-font-size'], note='Sets $input-btn-font-size') }}
 
                         <!-- HOLD FOR: $input-btn-line-height: $line-height-base !default; -->
-                        {{ macros.settings_text_input('input-btn-line-height', 'Input Button Line Height', global_strings['sass-defaults']['input-btn-line-height'], obe_settings['input-btn-line-height'], note='Sets $input-btn-line-height') }}
+                        {{ macros.settings_text_input('input-btn-line-height', 'Input Button Line Height', global_strings['sys']['input-btn-line-height'], obe_settings['input-btn-line-height'], note='Sets $input-btn-line-height') }}
 
                         <!-- HOLD FOR: $input-btn-focus-width: 0.2rem !default; -->
-                        {{ macros.settings_number_step_input('input-btn-focus-width', 'Input Button Focus Width', global_strings['sass-defaults']['input-btn-focus-width'], obe_settings['input-btn-focus-width'], 'rem', '100', '0', '0.025', note='Sets $input-btn-focus-width') }}
+                        {{ macros.settings_number_step_input('input-btn-focus-width', 'Input Button Focus Width', global_strings['sys']['input-btn-focus-width'], obe_settings['input-btn-focus-width'], 'rem', '100', '0', '0.025', note='Sets $input-btn-focus-width') }}
 
                         <!-- HOLD FOR: $input-btn-focus-color: rgba($component-active-bg, 0.25) !default; -->
-                        {{ macros.settings_text_input('input-btn-focus-color', 'Input Button Focus Color', global_strings['sass-defaults']['input-btn-focus-color'], obe_settings['input-btn-focus-color'], note='Sets $input-btn-focus-color') }}
+                        {{ macros.settings_text_input('input-btn-focus-color', 'Input Button Focus Color', global_strings['sys']['input-btn-focus-color'], obe_settings['input-btn-focus-color'], note='Sets $input-btn-focus-color') }}
 
                         <!-- HOLD FOR: $input-btn-focus-box-shadow: 0 0 0 $input-btn-focus-width $input-btn-focus-color !default; -->
-                        {{ macros.settings_text_input('input-btn-focus-box-shadow', 'Input Button Focus Box Shadow', global_strings['sass-defaults']['input-btn-focus-box-shadow'], obe_settings['input-btn-focus-box-shadow'], note='Sets $input-btn-focus-box-shadow') }}
+                        {{ macros.settings_text_input('input-btn-focus-box-shadow', 'Input Button Focus Box Shadow', global_strings['sys']['input-btn-focus-box-shadow'], obe_settings['input-btn-focus-box-shadow'], note='Sets $input-btn-focus-box-shadow') }}
 
                         <!-- HOLD FOR: $input-btn-padding-y-sm: 0.25rem !default; -->
-                        {{ macros.settings_number_step_input('input-btn-padding-y-sm', 'Input Button Padding Y Small', global_strings['sass-defaults']['input-btn-padding-y-sm'], obe_settings['input-btn-padding-y-sm'], 'rem', '100', '0', '0.025', note='Sets $input-btn-padding-y-sm') }}
+                        {{ macros.settings_number_step_input('input-btn-padding-y-sm', 'Input Button Padding Y Small', global_strings['sys']['input-btn-padding-y-sm'], obe_settings['input-btn-padding-y-sm'], 'rem', '100', '0', '0.025', note='Sets $input-btn-padding-y-sm') }}
 
                         <!-- HOLD FOR: $input-btn-padding-x-sm: 0.5rem !default; -->
-                        {{ macros.settings_number_step_input('input-btn-padding-x-sm', 'Input Button Padding X Small', global_strings['sass-defaults']['input-btn-padding-x-sm'], obe_settings['input-btn-padding-x-sm'], 'rem', '100', '0', '0.025', note='Sets $input-btn-padding-x-sm') }}
+                        {{ macros.settings_number_step_input('input-btn-padding-x-sm', 'Input Button Padding X Small', global_strings['sys']['input-btn-padding-x-sm'], obe_settings['input-btn-padding-x-sm'], 'rem', '100', '0', '0.025', note='Sets $input-btn-padding-x-sm') }}
 
                         <!-- HOLD FOR: $input-btn-font-size-sm: $font-size-sm !default; -->
-                        {{ macros.settings_text_input('input-btn-font-size-sm', 'Input Button Font Size Small', global_strings['sass-defaults']['input-btn-font-size-sm'], obe_settings['input-btn-font-size-sm'], note='Sets $input-btn-font-size-sm') }}
+                        {{ macros.settings_text_input('input-btn-font-size-sm', 'Input Button Font Size Small', global_strings['sys']['input-btn-font-size-sm'], obe_settings['input-btn-font-size-sm'], note='Sets $input-btn-font-size-sm') }}
 
                         <!-- HOLD FOR: $input-btn-line-height-sm: $line-height-sm !default; -->
-                        {{ macros.settings_text_input('input-btn-line-height-sm', 'Input Button Line Height Small', global_strings['sass-defaults']['input-btn-line-height-sm'], obe_settings['input-btn-line-height-sm'], note='Sets $input-btn-line-height-sm') }}
+                        {{ macros.settings_text_input('input-btn-line-height-sm', 'Input Button Line Height Small', global_strings['sys']['input-btn-line-height-sm'], obe_settings['input-btn-line-height-sm'], note='Sets $input-btn-line-height-sm') }}
 
                         <!-- HOLD FOR: $input-btn-padding-y-lg: 0.5rem !default; -->
-                        {{ macros.settings_number_step_input('input-btn-padding-y-lg', 'Input Button Padding Y Large', global_strings['sass-defaults']['input-btn-padding-y-lg'], obe_settings['input-btn-padding-y-lg'], 'rem', '100', '0', '0.025', note='Sets $input-btn-padding-y-lg') }}
+                        {{ macros.settings_number_step_input('input-btn-padding-y-lg', 'Input Button Padding Y Large', global_strings['sys']['input-btn-padding-y-lg'], obe_settings['input-btn-padding-y-lg'], 'rem', '100', '0', '0.025', note='Sets $input-btn-padding-y-lg') }}
 
                         <!-- HOLD FOR: $input-btn-padding-x-lg: 1rem !default; -->
-                        {{ macros.settings_number_step_input('input-btn-padding-x-lg', 'Input Button Padding X Large', global_strings['sass-defaults']['input-btn-padding-x-lg'], obe_settings['input-btn-padding-x-lg'], 'rem', '100', '0', '0.025', note='Sets $input-btn-padding-x-lg') }}
+                        {{ macros.settings_number_step_input('input-btn-padding-x-lg', 'Input Button Padding X Large', global_strings['sys']['input-btn-padding-x-lg'], obe_settings['input-btn-padding-x-lg'], 'rem', '100', '0', '0.025', note='Sets $input-btn-padding-x-lg') }}
 
                         <!-- HOLD FOR: $input-btn-font-size-lg: $font-size-lg !default; -->
-                        {{ macros.settings_text_input('input-btn-font-size-lg', 'Input Button Font Size Large', global_strings['sass-defaults']['input-btn-font-size-lg'], obe_settings['input-btn-font-size-lg'], note='Sets $input-btn-font-size-lg') }}
+                        {{ macros.settings_text_input('input-btn-font-size-lg', 'Input Button Font Size Large', global_strings['sys']['input-btn-font-size-lg'], obe_settings['input-btn-font-size-lg'], note='Sets $input-btn-font-size-lg') }}
 
                         <!-- HOLD FOR: $input-btn-line-height-lg: $line-height-lg !default; -->
-                        {{ macros.settings_text_input('input-btn-line-height-lg', 'Input Button Line Height Large', global_strings['sass-defaults']['input-btn-line-height-lg'], obe_settings['input-btn-line-height-lg'], note='Sets $input-btn-line-height-lg') }}
+                        {{ macros.settings_text_input('input-btn-line-height-lg', 'Input Button Line Height Large', global_strings['sys']['input-btn-line-height-lg'], obe_settings['input-btn-line-height-lg'], note='Sets $input-btn-line-height-lg') }}
 
                         <!-- HOLD FOR: $input-btn-border-width: $border-width !default; -->
-                        {{ macros.settings_text_input('input-btn-border-width', 'Input Button Border Width', global_strings['sass-defaults']['input-btn-border-width'], obe_settings['input-btn-border-width'], note='Sets $input-btn-border-width') }}
+                        {{ macros.settings_text_input('input-btn-border-width', 'Input Button Border Width', global_strings['sys']['input-btn-border-width'], obe_settings['input-btn-border-width'], note='Sets $input-btn-border-width') }}
 
 
                         
@@ -835,19 +835,19 @@
                         <!-- BUTTONS SECTION -->
 
                         <!-- HOLD FOR: $btn-padding-y: $input-btn-padding-y !default; -->
-                        {{ macros.settings_text_input('btn-padding-y', 'Button Padding Y', global_strings['sass-defaults']['btn-padding-y'], obe_settings['btn-padding-y'], note='Sets $btn-padding-y') }}
+                        {{ macros.settings_text_input('btn-padding-y', 'Button Padding Y', global_strings['sys']['btn-padding-y'], obe_settings['btn-padding-y'], note='Sets $btn-padding-y') }}
 
                         <!-- HOLD FOR: $btn-padding-x: $input-btn-padding-x !default; -->
-                        {{ macros.settings_text_input('btn-padding-x', 'Button Padding X', global_strings['sass-defaults']['btn-padding-x'], obe_settings['btn-padding-x'], note='Sets $btn-padding-x') }}
+                        {{ macros.settings_text_input('btn-padding-x', 'Button Padding X', global_strings['sys']['btn-padding-x'], obe_settings['btn-padding-x'], note='Sets $btn-padding-x') }}
 
                         <!-- HOLD FOR: $btn-font-family: $input-btn-font-family !default; -->
-                        {{ macros.settings_text_input('btn-font-family', 'Button Font Family', global_strings['sass-defaults']['btn-font-family'], obe_settings['btn-font-family'], note='Sets $btn-font-family') }}
+                        {{ macros.settings_text_input('btn-font-family', 'Button Font Family', global_strings['sys']['btn-font-family'], obe_settings['btn-font-family'], note='Sets $btn-font-family') }}
 
                         <!-- HOLD FOR: $btn-font-size: $input-btn-font-size !default; -->
-                        {{ macros.settings_text_input('btn-font-size', 'Button Font Size', global_strings['sass-defaults']['btn-font-size'], obe_settings['btn-font-size'], note='Sets $btn-font-size') }}
+                        {{ macros.settings_text_input('btn-font-size', 'Button Font Size', global_strings['sys']['btn-font-size'], obe_settings['btn-font-size'], note='Sets $btn-font-size') }}
 
                         <!-- HOLD FOR: $btn-line-height: $input-btn-line-height !default; -->
-                        {{ macros.settings_text_input('btn-line-height', 'Button Line Height', global_strings['sass-defaults']['btn-line-height'], obe_settings['btn-line-height'], note='Sets $btn-line-height') }}
+                        {{ macros.settings_text_input('btn-line-height', 'Button Line Height', global_strings['sys']['btn-line-height'], obe_settings['btn-line-height'], note='Sets $btn-line-height') }}
 
                         <!-- HOLD FOR: $btn-white-space: null !default; // Set to `nowrap` to prevent text wrapping -->
 
@@ -929,11 +929,11 @@
 
                         <!-- HOLD FOR: $input-line-height-lg: $input-btn-line-height-lg !default; -->
 
-                        <!-- HOLD FOR: $input-bg: $white !default; -->
+                        <!-- $input-bg IS ALREADY USED -->
 
-                        <!-- HOLD FOR: $input-disabled-bg: $gray-200 !default; -->
+                        <!-- $input-disabled-bg IS ALREADY USED -->
 
-                        <!-- HOLD FOR: $input-color: $gray-700 !default; -->
+                        <!-- $input-color IS ALREADY USED -->
 
                         <!-- HOLD FOR: $input-border-color: $gray-400 !default; -->
 
@@ -957,7 +957,7 @@
 
                         <!-- HOLD FOR: $input-focus-box-shadow: $input-btn-focus-box-shadow !default; -->
 
-                        <!-- HOLD FOR: $input-placeholder-color: $gray-600 !default; -->
+                        <!-- $input-placeholder-color IS ALREADY USED -->
 
                         <!-- HOLD FOR: $input-plaintext-color: $body-color !default; -->
 
@@ -993,9 +993,9 @@
 
                         <!-- HOLD FOR: $form-group-margin-bottom: 1rem !default; -->
 
-                        <!-- HOLD FOR: $input-group-addon-color: $input-color !default; -->
+                        <!-- $input-group-addon-color IS ALREADY USED -->
 
-                        <!-- HOLD FOR: $input-group-addon-bg $gray-200 !default; -->
+                        <!-- $input-group-addon-bg IS ALREADY USED -->
 
                         <!-- HOLD FOR: $input-group-addon-border-color: $input-border-color !default; -->
 
@@ -1379,23 +1379,23 @@
 
                         <!-- HOLD FOR: $dropdown-box-shadow: 0 0.5rem 1rem rgba($black, 0.175) !default; -->
 
-                        <!-- HOLD FOR: $dropdown-link-color: $gray-900 !default; -->
+                        <!-- $dropdown-link-color IS ALREADY USED -->
 
                         <!-- HOLD FOR: $dropdown-link-hover-color: darken($gray-900, 5%) !default; -->
 
-                        <!-- HOLD FOR: $dropdown-link-hover-bg: $gray-100 !default; -->
+                        <!-- $dropdown-link-hover-bg IS ALREADY USED -->
 
                         <!-- HOLD FOR: $dropdown-link-active-color: $component-active-color !default; -->
 
                         <!-- HOLD FOR: $dropdown-link-active-bg: $component-active-bg !default; -->
 
-                        <!-- HOLD FOR: $dropdown-link-disabled-color: $gray-600 !default; -->
+                        <!-- $dropdown-link-disabled-color IS ALREADY USED -->
 
                         <!-- HOLD FOR: $dropdown-item-padding-y: 0.25rem !default; -->
 
                         <!-- HOLD FOR: $dropdown-item-padding-x: 1.5rem !default; -->
 
-                        <!-- HOLD FOR: $dropdown-header-color: $gray-600 !default; -->
+                        <!-- $dropdown-header-color IS ALREADY USED -->
 
 
                         

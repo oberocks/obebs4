@@ -2493,7 +2493,7 @@
                                 </div>
                             </div>
                         </div>
-                        <small id="dropdown-link-hover-bg-help" class="form-text pb-2" style="opacity: 0.6;">Sets dropdown-link-hover-bg, $dropdown-link-active-bg, $pagination-hover-bg, $list-group-hover-bg and $list-group-action-active-bg</small>
+                        <small id="dropdown-link-hover-bg-help" class="form-text pb-2" style="opacity: 0.6;">Sets $dropdown-link-hover-bg, $dropdown-link-active-bg, $pagination-hover-bg, $list-group-hover-bg and $list-group-action-active-bg</small>
 
                         <div class="form-row align-items-end">
                             <div class="col-7">
@@ -4261,11 +4261,11 @@
 
                     <!-- HOLD FOR: $input-line-height-lg: $input-btn-line-height-lg !default; -->
 
-                    <!-- HOLD FOR: $input-bg: $white !default; -->
+                    <!-- $input-bg IS ALREADY USED -->
 
-                    <!-- HOLD FOR: $input-disabled-bg: $gray-200 !default; -->
+                    <!-- $input-disabled-bg IS ALREADY USED -->
 
-                    <!-- HOLD FOR: $input-color: $gray-700 !default; -->
+                    <!-- $input-color IS ALREADY USED -->
 
                     <!-- HOLD FOR: $input-border-color: $gray-400 !default; -->
 
@@ -4289,7 +4289,7 @@
 
                     <!-- HOLD FOR: $input-focus-box-shadow: $input-btn-focus-box-shadow !default; -->
 
-                    <!-- HOLD FOR: $input-placeholder-color: $gray-600 !default; -->
+                    <!-- $input-placeholder-color IS ALREADY USED -->
 
                     <!-- HOLD FOR: $input-plaintext-color: $body-color !default; -->
 
@@ -4325,9 +4325,9 @@
 
                     <!-- HOLD FOR: $form-group-margin-bottom: 1rem !default; -->
 
-                    <!-- HOLD FOR: $input-group-addon-color: $input-color !default; -->
+                    <!-- $input-group-addon-color IS ALREADY USED -->
 
-                    <!-- HOLD FOR: $input-group-addon-bg $gray-200 !default; -->
+                    <!-- $input-group-addon-bg IS ALREADY USED -->
 
                     <!-- HOLD FOR: $input-group-addon-border-color: $input-border-color !default; -->
 
@@ -4701,23 +4701,23 @@
 
                     <!-- HOLD FOR: $dropdown-box-shadow: 0 0.5rem 1rem rgba($black, 0.175) !default; -->
 
-                    <!-- HOLD FOR: $dropdown-link-color: $gray-900 !default; -->
+                    <!-- $dropdown-link-color IS ALREADY USED -->
 
                     <!-- HOLD FOR: $dropdown-link-hover-color: darken($gray-900, 5%) !default; -->
 
-                    <!-- HOLD FOR: $dropdown-link-hover-bg: $gray-100 !default; -->
+                    <!-- $dropdown-link-hover-bg IS ALREADY USED -->
 
                     <!-- HOLD FOR: $dropdown-link-active-color: $component-active-color !default; -->
 
                     <!-- HOLD FOR: $dropdown-link-active-bg: $component-active-bg !default; -->
 
-                    <!-- HOLD FOR: $dropdown-link-disabled-color: $gray-600 !default; -->
+                    <!-- $dropdown-link-disabled-color IS ALREADY USED -->
 
                     <!-- HOLD FOR: $dropdown-item-padding-y: 0.25rem !default; -->
 
                     <!-- HOLD FOR: $dropdown-item-padding-x: 1.5rem !default; -->
 
-                    <!-- HOLD FOR: $dropdown-header-color: $gray-600 !default; -->
+                    <!-- $dropdown-header-color IS ALREADY USED -->
 
                     <!-- PAGINATION SECTION -->
 
@@ -5767,7 +5767,7 @@
 
                 <small class="text-light">OBE:BS4 VERSION:</small>
 
-                <p class="lead">0.8.21</p>
+                <p class="lead">0.8.22</p>
 
                 <hr class="border-gray" />
 
@@ -6648,6 +6648,7 @@
 
     <script>
         $(function() {
+            const obe_wheel_css = ['white', 'light-gray', 'gray', 'dark-gray', 'black', 'red', 'rose', 'magenta', 'violet', 'blue', 'azure', 'cyan', 'spring-green', 'green', 'chartreuse', 'yellow', 'orange', 'orange-gray', 'dark-gray-orange', 'blue-gray', 'light-gray-azure'];
             $(".js-increment-down").on("click", function() {
                 var input = $(this).parents('.form-group').find('input');
                 var currentVal = $(input).val();
@@ -7027,6 +7028,12 @@
                     object[colorString + '-800'] = 'darken($' + colorString + ', ' + color_800 + ')';
                     object[colorString + '-900'] = 'darken($' + colorString + ', ' + color_900 + ')';
                 }
+                for (var i = 0; i < obe_wheel_css.length; i++) {
+                    if ($('#' + obe_wheel_css[i]).val().length > 1) {
+                        setColorVariants(obe_wheel_css[i]);
+                    }
+                }
+                /*
                 if ($('#white').val().length > 1) {
                     setColorVariants('white');
                 }
@@ -7090,6 +7097,7 @@
                 if ($('#light-gray-azure').val().length > 1) {
                     setColorVariants('light-gray-azure');
                 }
+                */
                 var setColorsData = function(idString) {
                     var value = $('#' + idString).val();
                     var value_mod = $('#' + idString + '-modifier').val();
@@ -7547,29 +7555,39 @@
             function set_select_val(idSelector, value) {
                 $(idSelector + " option[value='" + value + "']").attr("selected", true);
             }
-
+            /*
             function set_link_decoration_inputs(str, decorSelectId, colorSelectId, modSelectId, targetId) {
+                
                 // decode passed str value and set assign to a variable
                 let string = decodeURI(str);
                 // write the string directly to the hidden input
                 $(targetId).val(string);
+                
                 // array of different decoration type options
                 let options = ['none', 'underline dotted', 'underline double', 'underline dashed', 'underline wavy', 'underline overline', 'underline', 'overline dotted', 'overline double', 'overline dashed', 'overline wavy', 'overline', 'line-through dotted', 'line-through double', 'line-through dashed', 'line-through wavy', 'line-through'];
                 // array of color slugs (without any tint/shade modifiers)
                 let colorSlugs = ['red', 'rose', 'magenta', 'violet', 'blue', 'azure', 'cyan', 'spring-green', 'green', 'chartreuse', 'yellow', 'orange', 'dark-gray-orange', 'dark-gray', 'gray', 'blue-gray', 'light-gray-azure', 'light-gray', 'black', 'orange-gray', 'white'];
+
                 // deselect all select options
                 $(decorSelectId, decorSelectId, colorSelectId).find('option').attr('selected', false);
+
                 // loop through the array of possible select values
                 for (var i = 0; i < options.length; i++) {
+                    
                     // if the passed and decoded string is found in the array item
                     if (string.includes(options[i])) {
+                        
                         if (options[i] === 'none') {
+                            
                             // if 'none' is found then set all selects to none
                             $(decorSelectId, colorSelectId, modSelectId).find('option[value="none"]').attr('selected', true);
                             $(colorSelectId, modSelectId).attr('disabled', true);
+
                         } else {
+                            
                             // if none is not found but the passed string contains a 0
                             if (string.includes('0')) {
+                                
                                 // get the good stuff
                                 let str2 = string;
                                 let colorString = str2.split(' ').pop();
@@ -7580,9 +7598,12 @@
                                 $(decorSelectId).find('option[value="' + decoration + '"]').attr('selected', true);
                                 $(colorSelectId).find('option[value="' + color + '"]').attr('selected', true);
                                 $(modSelectId).find('option[value="' + modifier + '"]').attr('selected', true);
+
                             } else {
+                                
                                 let decoration = '';
                                 let color = '';
+                                
                                 // since a color value may still exist (without any 0 chars), loop through colors array and extract the color value
                                 for (var j = 0; j < colorSlugs.length; j++) {
                                     if (string.includes(colorSlugs[j])) {
@@ -7592,29 +7613,40 @@
                                         // update the UI
                                         $(colorSelectId).find('option[value="' + color + '"]').attr('selected', true);
                                         $(modSelectId).find('option[value="none"]').attr('selected', true);
-                                    }
-                                    /* else {
-                                                                            $(colorSelectId).find('option[value="none"]').attr('selected', true);
-                                                                            $(modSelectId).attr('disabled', true);
-                                                                        }*/
+                                    } // else {
+                                        // $(colorSelectId).find('option[value="none"]').attr('selected', true);
+                                        // $(modSelectId).attr('disabled', true);
+                                    // }
                                 }
+
                                 decoration = string.replace(color, '').trim();
+                                
                                 for (var k = 0; k < options.length; k++) {
+                                    
                                     if (options[k] === decoration) {
                                         $(decorSelectId).find('option[value="' + decoration + '"]').attr('selected', true);
                                     }
+
                                 }
+
                             }
+
                         }
+
                     }
+
                 }
+
                 let colorCheck = $(colorSelectId).val();
+                
                 if (colorCheck === 'none') {
                     $(modSelectId).attr('disabled', true);
                 } else {
                     $(targetId).siblings('.collapse').collapse('show');
                 }
+
             }
+            */
             /*
             // OBE Color Options
             if (get_URL_var('a').length > 0) {
@@ -8066,27 +8098,27 @@
             });
             */
             // SVG JAVASCRIPT
-            var svgColors = ['red', 'rose', 'magenta', 'violet', 'blue', 'azure', 'cyan', 'spring-green', 'green', 'chartreuse', 'yellow', 'orange', 'dark-gray-orange', 'dark-gray', 'gray', 'blue-gray', 'light-gray-azure', 'light-gray', 'black', 'orange-gray', 'white'];
+            // var svgColors = ['red', 'rose', 'magenta', 'violet', 'blue', 'azure', 'cyan', 'spring-green', 'green', 'chartreuse', 'yellow', 'orange', 'dark-gray-orange', 'dark-gray', 'gray', 'blue-gray', 'light-gray-azure', 'light-gray', 'black', 'orange-gray', 'white'];
             // Set the default color
             var defaultFill = "#b3aeab";
             // set the classes needed to toggle visibility when the svg is used as a UI
             $('.js-color-wheel-inputs').find('.form-group').addClass('collapse show');
             // Loop through each svg part by id
-            for (i = 0; i < svgColors.length; i++) {
+            for (i = 0; i < obe_wheel_css.length; i++) {
                 // Make each each part of the color wheel the default color
-                $("#" + svgColors[i] + "-slice").attr('style', "fill:" + defaultFill);
+                $("#" + obe_wheel_css[i] + "-slice").attr('style', "fill:" + defaultFill);
             }
             // Add on click functionality to each part of the color wheel
-            for (i = 0; i < svgColors.length; i++) {
+            for (i = 0; i < obe_wheel_css.length; i++) {
                 // Set on hover functionality for each piece of the wheel
-                $("#" + svgColors[i] + "-slice").hover(function() {
+                $("#" + obe_wheel_css[i] + "-slice").hover(function() {
                     $(this).css('cursor', 'pointer');
                 });
                 // Set on click functionality for each piece of the wheel
-                $("#" + svgColors[i] + "-slice").on("click", function() {
+                $("#" + obe_wheel_css[i] + "-slice").on("click", function() {
                     // Remove visual cue from every svg path first
-                    for (j = 0; j < svgColors.length; j++) {
-                        $("#" + svgColors[j] + "-slice").attr('opacity', "0.25");
+                    for (j = 0; j < obe_wheel_css.length; j++) {
+                        $("#" + obe_wheel_css[j] + "-slice").attr('opacity', "0.25");
                     }
                     // Then add visual cue to the selected svg path
                     $(this).attr('opacity', "1");
@@ -8113,8 +8145,8 @@
             // utility function to deselect any selected svg elements
             // and return the view state to normal opacity
             var deselectSvg = function() {
-                for (i = 0; i < svgColors.length; i++) {
-                    $("#" + svgColors[i] + "-slice").attr('opacity', "1");
+                for (i = 0; i < obe_wheel_css.length; i++) {
+                    $("#" + obe_wheel_css[i] + "-slice").attr('opacity', "1");
                 }
             }
             // listener to trigger the deselectSvg function when a UI button is clicked
@@ -8124,9 +8156,9 @@
                 $('.js-color-wheel-inputs').find('.form-group').addClass('show');
             });
             // script to add colors to wheel svg on page load
-            for (i = 0; i < svgColors.length; i++) {
-                let colorVal = $('#' + svgColors[i]).val();
-                $("#" + svgColors[i] + "-slice").attr('style', "fill:" + colorVal);
+            for (i = 0; i < obe_wheel_css.length; i++) {
+                let colorVal = $('#' + obe_wheel_css[i]).val();
+                $("#" + obe_wheel_css[i] + "-slice").attr('style', "fill:" + colorVal);
             }
             // utility function to run blend tool functionality
             var blendColors = function() {

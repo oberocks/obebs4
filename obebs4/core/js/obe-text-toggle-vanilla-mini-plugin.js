@@ -51,4 +51,4 @@ domReady(function() {
         });
     }
 
-});
+}); // end domReady()
