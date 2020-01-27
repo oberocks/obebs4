@@ -2,7 +2,7 @@
 		{% if obe_settings['enable-obebs4-toggle-text-mini-plugin'] === 'true' %}
         <div class="container-fluid pt-5 text-center bg-white text-dark">
         
-            <div class="container calendar-workspace pt-5">
+            <div class="container pt-5">
                 
                 <div class="row justify-content-center">
                     
@@ -19,15 +19,15 @@
                     <div class="col-md-6">
                         
                         <div class="js-prism mb-3">
-                            <button class="btn btn-primary" data-obe-text-toggle="TOGGLE">BUTTON</button>
+                            <button class="btn btn-primary" data-obe-text-toggle="TOGGLE" type="button">BUTTON</button>
                         </div>
 
                         <div class="js-prism mb-3">
-                            <div class="bg-light rounded" data-obe-text-toggle='(AND "QUOTES")'>DIV'S TOO!</div>
+                            <div class="bg-light rounded" data-obe-text-toggle='(WITH "QUOTES"!)'>DIV'S TOO!</div>
                         </div>
 
                         <div class="js-prism mb-3">
-                            <a href="#" class="text-primary" data-obe-text-toggle='Can Toggle!'>& Links, Too!</a>
+                            <button class="btn btn-link text-primary" type="button" data-obe-text-toggle='Can Toggle!'>& Button Links!</button>
                         </div>
 
                     </div>
@@ -38,14 +38,36 @@
                     
                     <div class="col pb-5">
 
-                        <div class="alert alert-danger alert-dismissible text-left fade show" role="alert">
+                        <div class="alert alert-danger text-left fade show" role="alert">
+                            
                             <p class="font-weight-bold">PLEASE NOTE:</p>
-                            <p class="mb-2 small">When using this mini-plugin on anchor tags ( <samp class="font-weight-bold">&lt;a&gt;</samp> ), the plugin calls the JavaScript method <samp class="font-weight-bold">Event.preventDefault()</samp>, so a user can see the anchor text swap. This also prevents any page scrolling, so you can use anchor elements as interactive UI elements along with the text toggle functionality.</p>
-                            <p class="mb-2 small">There are also <samp class="font-weight-bold">mouseover</samp> &amp; <samp class="font-weight-bold">mouseout</samp> listeners added to each initialized element to change the cursor to a pointer upon a user <samp class="font-weight-bold">:hover</samp> interaction.</p>
-                            <p class="mb-2 small">And finally, the script converts specific characters ( <samp class="font-weight-bold">&amp;</samp>, <samp class="font-weight-bold">&lt;</samp>, <samp class="font-weight-bold">&gt;</samp>, <samp class="font-weight-bold">&quot;</samp>, and <samp class="font-weight-bold">&#039;</samp> ) to HTML entity values during the swaps to prevent any issues when toggling text content using those characters.</p>
-                            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                                <span aria-hidden="true">×</span>
-                            </button>
+                            
+                            <p class="mb-2 small">This script converts specific characters ( <samp class="font-weight-bold">&amp;</samp>, <samp class="font-weight-bold">&lt;</samp>, <samp class="font-weight-bold">&gt;</samp>, <samp class="font-weight-bold">&quot;</samp>, and <samp class="font-weight-bold">&#039;</samp> ) to HTML entity values during the swaps to prevent any issues when toggling text content using those characters.</p>
+                            
+                            <!--p class="mb-2 small">When using this mini-plugin on anchor tags ( <samp class="font-weight-bold">&lt;a&gt;</samp> ), the plugin calls the JavaScript method <samp class="font-weight-bold">Event.preventDefault()</samp>, so a user can see the anchor text swap. This also prevents any page scrolling, so you can use anchor elements as interactive UI elements along with the text toggle functionality.</p-->
+                            
+                            <p class="mb-2 small">Additionally, this script emits a JavaScript Custom Event. If you'd like to hook into this event to add custom functinality, you'd want to listen for either the <samp class="font-weight-bold">'before.text.toggle'</samp> or <samp class="font-weight-bold">'after.text.toggle'</samp> custom events in your code.</p>
+
+                            <p class="mb-2 small">If you're looking to work with the data being toggled, the JavaScript Custom Events <samp class="font-weight-bold">'before.text.toggle'</samp> and <samp class="font-weight-bold">'after.text.toggle'</samp> both provide a standard <samp class="font-weight-bold">details: {...}</samp> object to work with. You can use the code examples below to see how to access the unescaped displayed and stored data in the <samp class="font-weight-bold">details: {...}</samp> object in either custom event.</p>
+
+                            <pre>
+                                <code class="language-javascript line-numbers">
+                                    // Example of using the before.text.toggle custom event
+                                    your_element_node.addEventListener('before.text.toggle', function(event) {
+                                        console.log('Displayed String: ' + event.detail.data.displayed);
+                                        console.log('Stored String: ' + event.detail.data.stored);
+                                    });
+                                    
+                                    // Example of using the after.text.toggle custom event
+                                    your_element_node.addEventListener('after.text.toggle', function(event) {
+                                        console.log('Displayed String: ' + event.detail.data.displayed);
+                                        console.log('Stored String: ' + event.detail.data.stored);
+                                    });
+                                </code>
+                            </pre>
+                            
+                            <p class="mb-2 small">Additionally, there are <samp class="font-weight-bold">mouseover</samp> &amp; <samp class="font-weight-bold">mouseout</samp> listeners added to each initialized element to change the cursor to a pointer upon a user <samp class="font-weight-bold">:hover</samp> interaction.</p>
+
                         </div>
 
                     </div>

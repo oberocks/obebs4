@@ -160,12 +160,12 @@ let value=target.value;"MM/DD/YYYY"===settings.outputFormat?update_mdy_calendar(
 for(
 // Utility function
 // Source: https://stackoverflow.com/questions/1787322/htmlspecialchars-equivalent-in-javascript
-var obeEscapeHtml=function(text){var map={"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#039;"};return text.replace(/[&<>"']/g,function(m){return map[m]})},obeUnescapeHtml=function(text){return text.replace(/&amp;/g,"&").replace(/&lt;/g,"<").replace(/&gt;/g,">").replace(/&quot;/g,'"').replace(/&#039;/g,"'")},obeTextToggles=document.querySelectorAll("[data-obe-text-toggle]"),i=0
+var obeUnescapeHtml=function(text){return text.replace(/&amp;/g,"&").replace(/&lt;/g,"<").replace(/&gt;/g,">").replace(/&quot;/g,'"').replace(/&#039;/g,"'")},obeTextToggles=document.querySelectorAll("[data-obe-text-toggle]"),i=0
 // Utility function
 // Source: https://stackoverflow.com/questions/1787322/htmlspecialchars-equivalent-in-javascript
 ;i<obeTextToggles.length;i++){var el=obeTextToggles[i];el.addEventListener("click",function(e){
 //e.preventDefault();
-var visibleText=obeEscapeHtml(this.textContent),hiddenText=obeEscapeHtml(this.dataset.obeTextToggle);this.innerText=obeUnescapeHtml(hiddenText),this.dataset.obeTextToggle=obeUnescapeHtml(visibleText)}),el.addEventListener("mouseover",function(){this.style.cursor="pointer"}),el.addEventListener("mouseout",function(){this.style.cursor="default"})}}),// end domReady()
+this.dispatchEvent(new CustomEvent("before.text.toggle",{bubbles:!0,detail:{data:{displayed:this.textContent,stored:obeUnescapeHtml(this.dataset.obeTextToggle)}}}));var map,displayed=this.textContent,stored=this.dataset.obeTextToggle,escaped=(map={"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#039;"},displayed.replace(/[&<>"']/g,function(m){return map[m]})),unescaped=obeUnescapeHtml(stored);this.innerText=unescaped,this.dataset.obeTextToggle=escaped,this.dispatchEvent(new CustomEvent("after.text.toggle",{bubbles:!0,detail:{data:{displayed:unescaped,stored:displayed}}}))}),el.addEventListener("mouseover",function(){this.style.cursor="pointer"}),el.addEventListener("mouseout",function(){this.style.cursor="default"})}}),// end domReady()
 /*!
  * OBE:BS4 Dropdown Select jQuery Plugin v1.0.0 (https://library.mattmct.com)
  * Copyright 2018 by Matt McT Designs

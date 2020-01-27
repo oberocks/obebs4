@@ -35,20 +35,51 @@ domReady(function() {
 
     // loop through each toggle and add click functionality
     for (var i = 0; i < obeTextToggles.length; i++) {
+        
         var el = obeTextToggles[i];
+        
         el.addEventListener('click', function(e) {
+            
             //e.preventDefault();
-            var visibleText = obeEscapeHtml(this.textContent);
-            var hiddenText = obeEscapeHtml(this.dataset.obeTextToggle);
-            this.innerText = obeUnescapeHtml(hiddenText);
-            this.dataset.obeTextToggle = obeUnescapeHtml(visibleText);
+
+            this.dispatchEvent( new CustomEvent('before.text.toggle', {
+                bubbles: true,
+                detail: {
+                    data: {
+                        displayed: this.textContent,
+                        stored: obeUnescapeHtml(this.dataset.obeTextToggle)
+                    }
+                }
+            }));
+            
+            var displayed = this.textContent;
+            var stored = this.dataset.obeTextToggle;
+            var escaped = obeEscapeHtml(displayed);
+            var unescaped = obeUnescapeHtml(stored);
+
+            this.innerText = unescaped;
+            this.dataset.obeTextToggle = escaped;
+           
+            this.dispatchEvent( new CustomEvent('after.text.toggle', {
+                bubbles: true,
+                detail: {
+                    data: {
+                        displayed: unescaped,
+                        stored: displayed
+                    }
+                }
+            }));
+
         });
+
         el.addEventListener('mouseover', function(){
             this.style.cursor='pointer';
         });
+
         el.addEventListener('mouseout', function(){
             this.style.cursor='default';
         });
+
     }
 
 }); // end domReady()
