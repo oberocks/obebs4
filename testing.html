@@ -268,9 +268,7 @@
 
                         // grab the current value and clean it
                         var value = input.value;
-                        // console.log('value = ' + value);
                         let cleanValue = sanitizeValue(value, leadingUnits, trailingUnits);
-                        // console.log('cleanValue = ' + cleanValue);
 
                         // init a var to hold for the final output value
                         let output = cleanValue;
@@ -303,10 +301,6 @@
 
                         // update the component input with the new value
                         input.value = leadingUnits + output + trailingUnits;
-                        // console.log('leadingUnits = ' + leadingUnits);
-                        // console.log('output = ' + output);
-                        // console.log('trailingUnits = ' + trailingUnits);
-                        // console.log('final = ' + leadingUnits + output + trailingUnits);
 
                     });
 
@@ -405,6 +399,7 @@
         <!-- Custom/Development JS for this page -->
         <script type="text/javascript">
 
+            /*
             var domReady = function(callback) {
                 document.readyState === "interactive" || document.readyState === "complete" ? callback() : document.addEventListener("DOMContentLoaded", callback);
             };
@@ -418,13 +413,6 @@
                 // Loop through all component instances and add event listners to each
                 for (var i = 0; i < components.length; i++)
                 {
-                    components[i].addEventListener('before.text.toggle', function(event) {
-
-                        console.log('Displayed String: ' + event.detail.data.displayed);
-                        console.log('Stored String: ' + event.detail.data.stored);
-                        
-                    });
-                    
                     components[i].addEventListener('after.text.toggle', function(event) {
                         
                         // get the parent of the the component (should generally be a .form-group element)
@@ -435,14 +423,13 @@
 
                         // add the unescaped (IE displayed) value to the component's hidden input
                         hiddenInput.value = event.detail.data.displayed;
-
-                        console.log('Displayed String: ' + event.detail.data.displayed);
-                        console.log('Stored String: ' + event.detail.data.stored);
                         
                     });
                 }
 
             }); // end domReady()
+
+            */
 
         </script>
 

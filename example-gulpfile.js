@@ -262,7 +262,8 @@ gulp.task('concat-js', function(){
             './node_modules/obebs4/obebs4/core/js/obebs4-dataTables.js',
             './node_modules/obebs4/obebs4/core/js/obebs4-calendar-datepicker-plugin.js',
             './node_modules/obebs4/obebs4/core/js/obe-text-toggle-vanilla-mini-plugin.js',
-            './node_modules/obebs4/obebs4/core/js/obebs4-dropdown-select-plugin.js'
+            './node_modules/obebs4/obebs4/core/js/obebs4-dropdown-select-plugin.js',
+            './node_modules/obebs4/obebs4/core/js/obe-input-grp-btn-toggle-plugins.js'
         ]
     )
     .pipe(sourcemaps.init({loadMaps: true}))
@@ -293,7 +294,8 @@ gulp.task('concat-production-js', function(){
             './node_modules/obebs4/obebs4/core/js/obebs4-fa5-animated-checkboxes.js',
             './node_modules/obebs4/obebs4/core/js/obebs4-calendar-datepicker-plugin.js',
             './node_modules/obebs4/obebs4/core/js/obe-text-toggle-vanilla-mini-plugin.js',
-            './node_modules/obebs4/obebs4/core/js/obebs4-dropdown-select-plugin.js'
+            './node_modules/obebs4/obebs4/core/js/obebs4-dropdown-select-plugin.js',
+            './node_modules/obebs4/obebs4/core/js/obe-input-grp-btn-toggle-plugins.js'
         ]
     )
     .pipe(sourcemaps.init({loadMaps: true}))
@@ -322,7 +324,8 @@ gulp.task('concat-wds-js', function(){
             './node_modules/obebs4/obebs4/core/js/obebs4-fa5-animated-checkboxes.js',
             './node_modules/obebs4/obebs4/core/js/obebs4-calendar-datepicker-plugin.js',
             './node_modules/obebs4/obebs4/core/js/obe-text-toggle-vanilla-mini-plugin.js',
-            './node_modules/obebs4/obebs4/core/js/obebs4-dropdown-select-plugin.js'
+            './node_modules/obebs4/obebs4/core/js/obebs4-dropdown-select-plugin.js',
+            './node_modules/obebs4/obebs4/core/js/obe-input-grp-btn-toggle-plugins.js'
         ]
     )
     .pipe(sourcemaps.init({loadMaps: true}))

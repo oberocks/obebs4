@@ -321,12 +321,15 @@
                             calendar_cell.dataset.day = daysPerWeekArrays[i][j];
                             calendar_cell.dataset.weekday = dayOfWeekPerWeekArrays[i][j];
                             calendar_cell.dataset.type = cellTypePerWeekArrays[i][j];
+
+                        // add double click to zoom interaction prevention to the table cell
+                        calendar_cell.style.touchAction = 'manipulation';
                             
                         calendar_cell.onclick = function(){
                             
                             var parent = document.getElementById(finalWrapper.id);
                             
-                            var content = this.textContent.trim();
+                            // var content = this.textContent.trim();
                             var year = this.dataset.year;
                             var month = this.dataset.month;
                             var day = this.dataset.day;
@@ -389,6 +392,10 @@
                 var weekdayMinus = document.createElement('div');
                 weekdayMinus.className = settings.weekdayMinusClasses;
                 var weekdayMinus_text = document.createTextNode(settings.leftArrow);
+
+                // add double click to zoom interaction prevention to the Weekday Minus Trigger
+                weekdayMinus.style.touchAction = 'manipulation';
+
                 weekdayMinus.onclick = function(){
                     //alert('weekdayMinus was clicked');
                     var parent = document.getElementById(finalWrapper.id);
@@ -414,6 +421,10 @@
                 var weekdayPlus = document.createElement('div');
                 weekdayPlus.className = settings.weekdayPlusClasses;
                 var weekdayPlus_text = document.createTextNode(settings.rightArrow);
+
+                // add double click to zoom interaction prevention to the Weekday Plus Trigger
+                weekdayPlus.style.touchAction = 'manipulation';
+
                 weekdayPlus.onclick = function(){
                     //alert('weekdayPlus was clicked');
                     var parent = document.getElementById(finalWrapper.id);
@@ -437,6 +448,10 @@
                 var dayMinus = document.createElement('div');
                 dayMinus.className = settings.dayMinusClasses;
                 var dayMinus_text = document.createTextNode(settings.leftArrow);
+
+                // add double click to zoom interaction prevention to the Day Minus Trigger
+                dayMinus.style.touchAction = 'manipulation';
+
                 dayMinus.onclick = function(){
                     //alert('dayMinus was clicked');
                     var parent = document.getElementById(finalWrapper.id);
@@ -462,6 +477,10 @@
                 var dayPlus = document.createElement('div');
                 dayPlus.className = settings.dayPlusClasses;
                 var dayPlus_text = document.createTextNode(settings.rightArrow);
+
+                // add double click to zoom interaction prevention to the Day Plus Trigger
+                dayPlus.style.touchAction = 'manipulation';
+
                 dayPlus.onclick = function(){
                     //alert('dayPlus was clicked');
                     var parent = document.getElementById(finalWrapper.id);
@@ -485,6 +504,10 @@
                 var monthMinus = document.createElement('div');
                 monthMinus.className = settings.monthMinusClasses;
                 var monthMinus_text = document.createTextNode(settings.leftArrow);
+
+                // add double click to zoom interaction prevention to the Month Minus Trigger
+                monthMinus.style.touchAction = 'manipulation';
+
                 monthMinus.onclick = function(){
                     //alert('monthMinus was clicked');
                     var parent = document.getElementById(finalWrapper.id);
@@ -510,6 +533,10 @@
                 var monthPlus = document.createElement('div');
                 monthPlus.className = settings.monthPlusClasses;
                 var monthPlus_text = document.createTextNode(settings.rightArrow);
+
+                // add double click to zoom interaction prevention to the Month Plus Trigger
+                monthPlus.style.touchAction = 'manipulation';
+
                 monthPlus.onclick = function(){
                     //alert('monthPlus was clicked');
                     var parent = document.getElementById(finalWrapper.id);
@@ -533,6 +560,10 @@
                 var yearMinus = document.createElement('div');
                 yearMinus.className = settings.yearMinusClasses;
                 var yearMinus_text = document.createTextNode(settings.leftArrow);
+
+                // add double click to zoom interaction prevention to the Year Minus Trigger
+                yearMinus.style.touchAction = 'manipulation';
+
                 yearMinus.onclick = function(){
                     //alert('yearMinus was clicked');
                     var parent = document.getElementById(finalWrapper.id);
@@ -558,6 +589,10 @@
                 var yearPlus = document.createElement('div');
                 yearPlus.className = settings.yearPlusClasses;
                 var yearPlus_text = document.createTextNode(settings.rightArrow);
+
+                // add double click to zoom interaction prevention to the Year Plus Trigger
+                yearPlus.style.touchAction = 'manipulation';
+
                 yearPlus.onclick = function(){
                     //alert('yearPlus was clicked');
                     var parent = document.getElementById(finalWrapper.id);

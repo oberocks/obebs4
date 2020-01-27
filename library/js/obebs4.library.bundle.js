@@ -229,7 +229,11 @@ for(i=0;i<daysPerWeekArrays.length;i++){for(
 // DOM vars
 var calendar_row=document.createElement("tr"),j=0;j<daysPerWeekArrays[i].length;j++){
 // create a cell for each day of week
-var calendar_cell=document.createElement("td");calendar_cell.className=classesPerWeekArrays[i][j],calendar_cell.dataset.year=yearsPerWeekArrays[i][j],calendar_cell.dataset.month=monthsPerWeekArrays[i][j],calendar_cell.dataset.day=daysPerWeekArrays[i][j],calendar_cell.dataset.weekday=dayOfWeekPerWeekArrays[i][j],calendar_cell.dataset.type=cellTypePerWeekArrays[i][j],calendar_cell.onclick=function(){var parent=document.getElementById(finalWrapper.id),year=(this.textContent.trim(),this.dataset.year),month=this.dataset.month,day=this.dataset.day,weekday=this.dataset.weekday,selectedCell=$(parent).find(".js-cal-selected-day");"inmonth"===selectedCell.data("type")?selectedCell.removeClass(settings.selectedBg).addClass(settings.standardBg).removeClass("js-cal-selected-day"):"outofmonth"===selectedCell.data("type")&&selectedCell.removeClass(settings.selectedBg).addClass(settings.prevNextBg).removeClass("js-cal-selected-day"),"inmonth"===$(this).data("type")?$(this).removeClass(settings.standardBg).addClass(" js-cal-selected-day "+settings.selectedBg):"outofmonth"===$(this).data("type")&&$(this).removeClass(settings.prevNextBg).addClass(" js-cal-selected-day "+settings.selectedBg),parent.dataset.day=day,parent.dataset.month=month,parent.dataset.year=year,parent.dataset.weekday=weekday,$(parent).find(".cal-day-display").text(day),$(parent).find(".cal-year-display").text(year),$(parent).find(".cal-month-display").text(settings.months.word[month].toUpperCase()),$(parent).find(".cal-weekday-display").text(settings.days.word[weekday].toUpperCase()),
+var calendar_cell=document.createElement("td");calendar_cell.className=classesPerWeekArrays[i][j],calendar_cell.dataset.year=yearsPerWeekArrays[i][j],calendar_cell.dataset.month=monthsPerWeekArrays[i][j],calendar_cell.dataset.day=daysPerWeekArrays[i][j],calendar_cell.dataset.weekday=dayOfWeekPerWeekArrays[i][j],calendar_cell.dataset.type=cellTypePerWeekArrays[i][j],
+// add double click to zoom interaction prevention to the table cell
+calendar_cell.style.touchAction="manipulation",calendar_cell.onclick=function(){var parent=document.getElementById(finalWrapper.id),year=this.dataset.year,month=this.dataset.month,day=this.dataset.day,weekday=this.dataset.weekday,selectedCell=$(parent).find(".js-cal-selected-day");
+// var content = this.textContent.trim();
+"inmonth"===selectedCell.data("type")?selectedCell.removeClass(settings.selectedBg).addClass(settings.standardBg).removeClass("js-cal-selected-day"):"outofmonth"===selectedCell.data("type")&&selectedCell.removeClass(settings.selectedBg).addClass(settings.prevNextBg).removeClass("js-cal-selected-day"),"inmonth"===$(this).data("type")?$(this).removeClass(settings.standardBg).addClass(" js-cal-selected-day "+settings.selectedBg):"outofmonth"===$(this).data("type")&&$(this).removeClass(settings.prevNextBg).addClass(" js-cal-selected-day "+settings.selectedBg),parent.dataset.day=day,parent.dataset.month=month,parent.dataset.year=year,parent.dataset.weekday=weekday,$(parent).find(".cal-day-display").text(day),$(parent).find(".cal-year-display").text(year),$(parent).find(".cal-month-display").text(settings.months.word[month].toUpperCase()),$(parent).find(".cal-weekday-display").text(settings.days.word[weekday].toUpperCase()),
 //displayCalData(day, month, year);
 null!=settings.outputSelector&&"input"===settings.outputType?$(settings.outputSelector).val(displayCalData(day,month,year)):null!=settings.outputSelector&&"text"===settings.outputType&&$(settings.outputSelector).text(displayCalData(day,month,year))};text=document.createTextNode(daysPerWeekArrays[i][j]);
 // attach data to grid
@@ -237,49 +241,65 @@ calendar_cell.appendChild(text),calendar_row.appendChild(calendar_cell)}tbody.ap
 // Weekday UI Container
 var dayOfWeek_UI=document.createElement("div");dayOfWeek_UI.className=settings.weekdayParentClasses;
 // Weekday Minus Trigger
-var weekdayMinus=document.createElement("div");weekdayMinus.className=settings.weekdayMinusClasses;var weekdayMinus_text=document.createTextNode(settings.leftArrow);weekdayMinus.onclick=function(){
+var weekdayMinus=document.createElement("div");weekdayMinus.className=settings.weekdayMinusClasses;var weekdayMinus_text=document.createTextNode(settings.leftArrow);
+// add double click to zoom interaction prevention to the Weekday Minus Trigger
+weekdayMinus.style.touchAction="manipulation",weekdayMinus.onclick=function(){
 //alert('weekdayMinus was clicked');
 var parent=document.getElementById(finalWrapper.id);parent.innerHTML="";var year=parent.dataset.year,month=parent.dataset.month,day=Number(parent.dataset.day)-1;el.renderCalendar(year,month,day),displayCalData(day,month,year)},weekdayMinus.appendChild(weekdayMinus_text),dayOfWeek_UI.appendChild(weekdayMinus);
 // Weekday Display Text
 var dayOfWeekDisplay=document.createElement("div");dayOfWeekDisplay.className=settings.weekdayTextClasses,dayOfWeekDisplay.className+=" cal-weekday-display";var dayOfWeek_text=document.createTextNode(settings.days.word[dayIndex].toUpperCase());dayOfWeekDisplay.appendChild(dayOfWeek_text),dayOfWeek_UI.appendChild(dayOfWeekDisplay);
 // Weekday Plus Trigger
-var weekdayPlus=document.createElement("div");weekdayPlus.className=settings.weekdayPlusClasses;var weekdayPlus_text=document.createTextNode(settings.rightArrow);weekdayPlus.onclick=function(){
+var weekdayPlus=document.createElement("div");weekdayPlus.className=settings.weekdayPlusClasses;var weekdayPlus_text=document.createTextNode(settings.rightArrow);
+// add double click to zoom interaction prevention to the Weekday Plus Trigger
+weekdayPlus.style.touchAction="manipulation",weekdayPlus.onclick=function(){
 //alert('weekdayPlus was clicked');
 var parent=document.getElementById(finalWrapper.id);parent.innerHTML="";var year=parent.dataset.year,month=parent.dataset.month,day=Number(parent.dataset.day)+1;el.renderCalendar(year,month,day),displayCalData(day,month,year)},weekdayPlus.appendChild(weekdayPlus_text),dayOfWeek_UI.appendChild(weekdayPlus);
 // Day UI Container
 var calDay_UI=document.createElement("div");calDay_UI.className=settings.dayParentClasses;
 // Day Minus Trigger
-var dayMinus=document.createElement("div");dayMinus.className=settings.dayMinusClasses;var dayMinus_text=document.createTextNode(settings.leftArrow);dayMinus.onclick=function(){
+var dayMinus=document.createElement("div");dayMinus.className=settings.dayMinusClasses;var dayMinus_text=document.createTextNode(settings.leftArrow);
+// add double click to zoom interaction prevention to the Day Minus Trigger
+dayMinus.style.touchAction="manipulation",dayMinus.onclick=function(){
 //alert('dayMinus was clicked');
 var parent=document.getElementById(finalWrapper.id);parent.innerHTML="";var year=parent.dataset.year,month=parent.dataset.month,day=Number(parent.dataset.day)-1;el.renderCalendar(year,month,day),displayCalData(day,month,year)},dayMinus.appendChild(dayMinus_text),calDay_UI.appendChild(dayMinus);
 // Day Display Text
 var dayDisplay=document.createElement("div");dayDisplay.className=settings.dayTextClasses,dayDisplay.className+=" cal-day-display";var day_text=document.createTextNode(dd);dayDisplay.appendChild(day_text),calDay_UI.appendChild(dayDisplay);
 // Day Plus Trigger
-var dayPlus=document.createElement("div");dayPlus.className=settings.dayPlusClasses;var dayPlus_text=document.createTextNode(settings.rightArrow);dayPlus.onclick=function(){
+var dayPlus=document.createElement("div");dayPlus.className=settings.dayPlusClasses;var dayPlus_text=document.createTextNode(settings.rightArrow);
+// add double click to zoom interaction prevention to the Day Plus Trigger
+dayPlus.style.touchAction="manipulation",dayPlus.onclick=function(){
 //alert('dayPlus was clicked');
 var parent=document.getElementById(finalWrapper.id);parent.innerHTML="";var year=parent.dataset.year,month=parent.dataset.month,day=Number(parent.dataset.day)+1;el.renderCalendar(year,month,day),displayCalData(day,month,year)},dayPlus.appendChild(dayPlus_text),calDay_UI.appendChild(dayPlus);
 // Month UI Container
 var calMonth_UI=document.createElement("div");calMonth_UI.className=settings.monthParentClasses;
 // Month Minus Trigger
-var monthMinus=document.createElement("div");monthMinus.className=settings.monthMinusClasses;var monthMinus_text=document.createTextNode(settings.leftArrow);monthMinus.onclick=function(){
+var monthMinus=document.createElement("div");monthMinus.className=settings.monthMinusClasses;var monthMinus_text=document.createTextNode(settings.leftArrow);
+// add double click to zoom interaction prevention to the Month Minus Trigger
+monthMinus.style.touchAction="manipulation",monthMinus.onclick=function(){
 //alert('monthMinus was clicked');
 var parent=document.getElementById(finalWrapper.id);parent.innerHTML="";var year=parent.dataset.year,month=Number(parent.dataset.month)-1,day=parent.dataset.day;el.renderCalendar(year,month,day),displayCalData(day,month,year)},monthMinus.appendChild(monthMinus_text),calMonth_UI.appendChild(monthMinus);
 // Month Display Text
 var monthDisplay=document.createElement("div");monthDisplay.className=settings.monthTextClasses,monthDisplay.className+=" cal-month-display";var month_text=document.createTextNode(settings.months.word[monthIndex].toUpperCase());monthDisplay.appendChild(month_text),calMonth_UI.appendChild(monthDisplay);
 // Month Plus Trigger
-var monthPlus=document.createElement("div");monthPlus.className=settings.monthPlusClasses;var monthPlus_text=document.createTextNode(settings.rightArrow);monthPlus.onclick=function(){
+var monthPlus=document.createElement("div");monthPlus.className=settings.monthPlusClasses;var monthPlus_text=document.createTextNode(settings.rightArrow);
+// add double click to zoom interaction prevention to the Month Plus Trigger
+monthPlus.style.touchAction="manipulation",monthPlus.onclick=function(){
 //alert('monthPlus was clicked');
 var parent=document.getElementById(finalWrapper.id);parent.innerHTML="";var year=parent.dataset.year,month=Number(parent.dataset.month)+1,day=parent.dataset.day;el.renderCalendar(year,month,day),displayCalData(day,month,year)},monthPlus.appendChild(monthPlus_text),calMonth_UI.appendChild(monthPlus);
 // Year UI Container
 var calYear_UI=document.createElement("div");calYear_UI.className=settings.yearParentClasses;
 // Year Minus Trigger
-var yearMinus=document.createElement("div");yearMinus.className=settings.yearMinusClasses;var yearMinus_text=document.createTextNode(settings.leftArrow);yearMinus.onclick=function(){
+var yearMinus=document.createElement("div");yearMinus.className=settings.yearMinusClasses;var yearMinus_text=document.createTextNode(settings.leftArrow);
+// add double click to zoom interaction prevention to the Year Minus Trigger
+yearMinus.style.touchAction="manipulation",yearMinus.onclick=function(){
 //alert('yearMinus was clicked');
 var parent=document.getElementById(finalWrapper.id);parent.innerHTML="";var year=Number(parent.dataset.year)-1,month=parent.dataset.month,day=parent.dataset.day;el.renderCalendar(year,month,day),displayCalData(day,month,year)},yearMinus.appendChild(yearMinus_text),calYear_UI.appendChild(yearMinus);
 // Year Display Text
 var yearDisplay=document.createElement("div");yearDisplay.className=settings.yearTextClasses,yearDisplay.className+=" cal-year-display";var year_text=document.createTextNode(yyyy);yearDisplay.appendChild(year_text),calYear_UI.appendChild(yearDisplay);
 // Year Plus Trigger
-var yearPlus=document.createElement("div");yearPlus.className=settings.yearPlusClasses;var yearPlus_text=document.createTextNode(settings.rightArrow);yearPlus.onclick=function(){
+var yearPlus=document.createElement("div");yearPlus.className=settings.yearPlusClasses;var yearPlus_text=document.createTextNode(settings.rightArrow);
+// add double click to zoom interaction prevention to the Year Plus Trigger
+yearPlus.style.touchAction="manipulation",yearPlus.onclick=function(){
 //alert('yearPlus was clicked');
 var parent=document.getElementById(finalWrapper.id);parent.innerHTML="";var year=Number(parent.dataset.year)+1,month=parent.dataset.month,day=parent.dataset.day;el.renderCalendar(year,month,day),displayCalData(day,month,year)},yearPlus.appendChild(yearPlus_text),calYear_UI.appendChild(yearPlus),finalWrapper.appendChild(dayOfWeek_UI),finalWrapper.appendChild(calDay_UI),finalWrapper.appendChild(calMonth_UI),finalWrapper.appendChild(calYear_UI),!1===settings.compactMode&&finalWrapper.appendChild(table),finalWrapper.dataset.year=yyyy,finalWrapper.dataset.month=monthIndex,finalWrapper.dataset.day=dd,finalWrapper.dataset.weekday=dayIndex,el.appendChild(finalWrapper)},el.renderCalendar(),null!=settings.outputSelector&&"input"===settings.outputType){let target=document.querySelector(settings.outputSelector);const update_mdy_calendar=function(str,char){let array=str.split(char),d=array[1],m=Number(array[0])-1,y=array[2];el.children[0].innerHTML="",el.renderCalendar(y,m,d)},update_dmy_calendar=function(str,char){let array=str.split(char),d=array[0],m=Number(array[1])-1,y=array[2];el.children[0].innerHTML="",el.renderCalendar(y,m,d)},update_ymd_calendar=function(str,char){let array=str.split(char),d=array[2],m=Number(array[1])-1,y=array[0];el.children[0].innerHTML="",el.renderCalendar(y,m,d)};target.onchange=function(){
 //console.log('changed');
@@ -312,5 +332,11 @@ $(content).trigger(settings.customEventString)):(console.log("ERROR: The matchin
 // trigger a change event for the input
 input.trigger("change")):(console.log("ERROR: The input selector: "+settings.hiddenInputSelector+" was not found."),err=!0)),err&&console.log("FINAL ERROR: A dropdown select element interaction failed. Please check that your markup selectors match your javascript options or use the .dropdown-select defaults.");
 // get the faux select option value and apply value to hidden input + trigger a change event
-})},el.init()})},$(".dropdown-select").obeDropdownSelect()});
+})},el.init()})},$(".dropdown-select").obeDropdownSelect()}),(domReady=function(callback){"interactive"===document.readyState||"complete"===document.readyState?callback():document.addEventListener("DOMContentLoaded",callback)})(function(){
+// Grab all obe increment components in the DOM
+let components=document.querySelectorAll("[data-obe-input-data-toggle]");
+// Loop through all component instances and add event listners to each
+for(var i=0;i<components.length;i++)components[i].addEventListener("after.text.toggle",function(event){
+// add the unescaped (IE displayed) value to the component's hidden input
+this.closest("[data-obe-input-data-toggle]").parentNode.querySelector('input[type="hidden"]').value=event.detail.data.displayed})});// end domReady()
 //# sourceMappingURL=obebs4.library.bundle.js.map

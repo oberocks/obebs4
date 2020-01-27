@@ -414,6 +414,12 @@
 
                     </div>
 
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="enable-obebs4-input-grp-btn-toggle-plugin" checked>
+                        <label class="form-check-label" for="enable-obebs4-input-grp-btn-toggle-plugin">Enable Button Data Toggle Input Components</label>
+                        <small class="d-block text-muted">Dependency: Toggle Text Mini-Plugin</small>
+                    </div>
+
                     <h3 class="pt-4 pb-2">OBE:BS4 Utility Classes</h3>
 
                     <div class="form-check">
@@ -5730,7 +5736,7 @@
 
                 <small class="text-light">OBE:BS4 VERSION:</small>
 
-                <p class="lead">0.8.24</p>
+                <p class="lead">0.8.25</p>
 
                 <hr class="border-gray" />
 
@@ -6188,6 +6194,9 @@
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link text-light py-1" href="extensions.html#box-shadows-section" data-description="These are your element box shadow options.">Box Shadows</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-light py-1" href="extensions.html#button-data-toggle-input-component-plugin-section" data-description="These are examples of different uses of the OBE:BS4 Input Group Button Toggle Component Plugin. You can use these components to offer users a secondary data point that can toggle between two different string values.">Button Data Toggle Input Component Plugin</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link text-light py-1" href="extensions.html#button-sizes-section" data-description="These are your expanded button sizes.">Button Sizes</a>
@@ -6856,6 +6865,7 @@
                 object['enable-obebs4-spacing-utilities'] = $('#enable-obebs4-spacing-utilities').is(':checked') ? "true" : "false";
                 object['enable-obebs4-datepicker-component'] = $('#enable-obebs4-datepicker-component').is(':checked') ? "true" : "false";
                 object['enable-obebs4-toggle-text-mini-plugin'] = $('#enable-obebs4-toggle-text-mini-plugin').is(':checked') ? "true" : "false";
+                object['enable-obebs4-input-grp-btn-toggle-plugin'] = $('#enable-obebs4-input-grp-btn-toggle-plugin').is(':checked') ? "true" : "false";
                 let setObjValOrFallback = function(obj, string, fallbackVal) {
                     let element = document.getElementById(string);
                     let value = element.value;

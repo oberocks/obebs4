@@ -1044,6 +1044,13 @@
                 "link" : "Toggle Text Mini-Plugin",
                 "descrip" : "A simple plugin that adds the ability to dynamically toggle text by adding a single data atrribute and value on an element.",
                 "id" : "toggle-text-mini-plugin"
+            },{
+                "index" : 20,
+                "head" : "Button Data Toggle Input",
+                "subhead" : "C O M P O N E N T - P L U G I N",
+                "link" : "Button Data Toggle Input Component Plugin",
+                "descrip" : "These are examples of different uses of the OBE:BS4 Input Group Button Toggle Component Plugin. You can use these components to offer users a secondary data point that can toggle between two different string values.",
+                "id" : "button-data-toggle-input-component-plugin-section"
             }
         ]
     },
@@ -1441,6 +1448,7 @@
     "sys": {
         "obebs4-1-color-tint-value": "5%",
         "obebs4-1-color-shade-value": "10%",
+
         "color-50-lighten-percent": "30%",
         "color-100-lighten-percent": "20%",
         "color-200-lighten-percent": "15%",

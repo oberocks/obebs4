@@ -49,6 +49,8 @@
     "enable-obebs4-spacing-utilities": "false",
     "enable-obebs4-datepicker-component": "true",
     "enable-obebs4-toggle-text-mini-plugin": "true",
+    "enable-obebs4-input-grp-btn-toggle-plugin": "true",
+
     "obebs4-1-color-tint-value": "5%",
     "obebs4-1-color-shade-value": "10%",
 

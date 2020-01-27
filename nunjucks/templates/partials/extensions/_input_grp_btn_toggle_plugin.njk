@@ -1,0 +1,80 @@
+<!-- _input_grp_btn_toggle_plugin.njk -->
+		{% if obe_settings['enable-obebs4-input-grp-btn-toggle-plugin'] === 'true' %}
+        <div class="container-fluid pt-5 text-center bg-white text-dark">
+        
+            <div class="container pt-5">
+                
+                <div class="row justify-content-center">
+                    
+                    <div id="{{ global_strings['extensions']['sections'][20]['id'] }}" class="col-md-6">
+                        
+                        {{ macros.page_section_heading(global_strings['extensions']['sections'][20]['head'], global_strings['extensions']['sections'][20]['subhead'], global_strings['extensions']['sections'][20]['descrip']) }}
+
+                    </div>
+
+                </div>
+
+                <div class="row justify-content-center">
+                    
+                    <div class="col-md-6">
+                        
+                        <div class="js-prism mb-3">
+                            <div class="form-group">
+                                <label for="appended-input-btn-data-toggle">Appended Input Group Button Data Toggle:</label>
+                                <div class="input-group" data-obe-input-data-toggle="true">
+                                    <input class="form-control text-left" type="text" id="appended-input-btn-data-toggle" name="appended-input-btn-data-toggle" placeholder="1" value="1" aria-describedby="appended-input-btn-data-toggle-help">
+                                    <div class="input-group-append">
+                                        <button class="btn btn-light border" type="button" data-obe-text-toggle="PM">AM</button>
+                                    </div>
+                                </div>
+                                <input id="appended-input-btn-data-toggle-hidden" name="appended-input-btn-data-toggle-hidden" type="hidden" value="AM">
+                                <small id="appended-input-btn-data-toggle-help" class="form-text text-muted">Form element help text goes here.</small>
+                            </div>
+                        </div>
+
+                        <div class="js-prism mb-3">
+                            <div class="form-group">
+                                <label for="prepended-input-btn-data-toggle">Prepended Input Group Button Data Toggle:</label>
+                                <div class="input-group" data-obe-input-data-toggle="true">
+                                    <div class="input-group-prepend">
+                                        <button class="btn btn-light border" type="button" data-obe-text-toggle="M&A">P&L</button>
+                                    </div>
+                                    <input class="form-control text-right" type="text" id="prepended-input-btn-data-toggle" name="prepended-input-btn-data-toggle" placeholder="1" value="1" aria-describedby="prepended-input-btn-data-toggle-help">
+                                </div>
+                                <input id="prepended-input-btn-data-toggle-hidden" name="prepended-input-btn-data-toggle-hidden" type="hidden" value="P&L">
+                                <small id="prepended-input-btn-data-toggle-help" class="form-text text-muted">Form element help text goes here.</small>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="row justify-content-center">
+                    
+                    <div class="col pb-5">
+
+                        <div class="alert alert-danger text-left fade show" role="alert">
+                            
+                            <p class="font-weight-bold">PLEASE NOTE:</p>
+                            
+                            <p class="mb-2 small">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Delectus ea voluptas et, explicabo consequuntur nam sed vitae molestiae eum distinctio deserunt. Culpa doloremque dolorum, placeat nesciunt in est ad <samp class="font-weight-bold">sapiente</samp>!</p>
+
+                            <pre>
+                                <code class="language-javascript line-numbers">
+                                    // some code here...
+                                </code>
+                            </pre>
+                            
+                            <p class="mb-2 small">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Delectus ea voluptas et, explicabo consequuntur nam sed vitae molestiae eum distinctio deserunt. Culpa doloremque dolorum, placeat nesciunt in est ad <samp class="font-weight-bold">sapiente</samp>!</p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+        {% endif %}

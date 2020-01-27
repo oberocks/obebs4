@@ -3310,6 +3310,90 @@
 
     </div>
 
+    <!-- _input_grp_btn_toggle_plugin.njk -->
+
+    <div class="container-fluid pt-5 text-center bg-white text-dark">
+
+        <div class="container pt-5">
+
+            <div class="row justify-content-center">
+
+                <div id="button-data-toggle-input-component-plugin-section" class="col-md-6">
+
+                    <h1>Button Data Toggle Input</h1>
+                    <div class="lead">C O M P O N E N T - P L U G I N</div>
+                    <hr />
+                    <p class="description-text text-muted"><em>These are examples of different uses of the OBE:BS4 Input Group Button Toggle Component Plugin. You can use these components to offer users a secondary data point that can toggle between two different string values.</em></p>
+                    <hr />
+
+                </div>
+
+            </div>
+
+            <div class="row justify-content-center">
+
+                <div class="col-md-6">
+
+                    <div class="js-prism mb-3">
+                        <div class="form-group">
+                            <label for="appended-input-btn-data-toggle">Appended Input Group Button Data Toggle:</label>
+                            <div class="input-group" data-obe-input-data-toggle="true">
+                                <input class="form-control text-left" type="text" id="appended-input-btn-data-toggle" name="appended-input-btn-data-toggle" placeholder="1" value="1" aria-describedby="appended-input-btn-data-toggle-help">
+                                <div class="input-group-append">
+                                    <button class="btn btn-light border" type="button" data-obe-text-toggle="PM">AM</button>
+                                </div>
+                            </div>
+                            <input id="appended-input-btn-data-toggle-hidden" name="appended-input-btn-data-toggle-hidden" type="hidden" value="AM">
+                            <small id="appended-input-btn-data-toggle-help" class="form-text text-muted">Form element help text goes here.</small>
+                        </div>
+                    </div>
+
+                    <div class="js-prism mb-3">
+                        <div class="form-group">
+                            <label for="prepended-input-btn-data-toggle">Prepended Input Group Button Data Toggle:</label>
+                            <div class="input-group" data-obe-input-data-toggle="true">
+                                <div class="input-group-prepend">
+                                    <button class="btn btn-light border" type="button" data-obe-text-toggle="M&A">P&L</button>
+                                </div>
+                                <input class="form-control text-right" type="text" id="prepended-input-btn-data-toggle" name="prepended-input-btn-data-toggle" placeholder="1" value="1" aria-describedby="prepended-input-btn-data-toggle-help">
+                            </div>
+                            <input id="prepended-input-btn-data-toggle-hidden" name="prepended-input-btn-data-toggle-hidden" type="hidden" value="P&L">
+                            <small id="prepended-input-btn-data-toggle-help" class="form-text text-muted">Form element help text goes here.</small>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="row justify-content-center">
+
+                <div class="col pb-5">
+
+                    <div class="alert alert-danger text-left fade show" role="alert">
+
+                        <p class="font-weight-bold">PLEASE NOTE:</p>
+
+                        <p class="mb-2 small">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Delectus ea voluptas et, explicabo consequuntur nam sed vitae molestiae eum distinctio deserunt. Culpa doloremque dolorum, placeat nesciunt in est ad <samp class="font-weight-bold">sapiente</samp>!</p>
+
+                        <pre>
+                                <code class="language-javascript line-numbers">
+                                    // some code here...
+                                </code>
+                            </pre>
+
+                        <p class="mb-2 small">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Delectus ea voluptas et, explicabo consequuntur nam sed vitae molestiae eum distinctio deserunt. Culpa doloremque dolorum, placeat nesciunt in est ad <samp class="font-weight-bold">sapiente</samp>!</p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
     <!-- footer.njk -->
     <div class="bg-white p-5"> </div>
     <footer class="container-fluid bg-dark text-white pt-5">
@@ -3577,7 +3661,7 @@
 
                 <small class="text-light">OBE:BS4 VERSION:</small>
 
-                <p class="lead">0.8.24</p>
+                <p class="lead">0.8.25</p>
 
                 <hr class="border-gray" />
 
@@ -4035,6 +4119,9 @@
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link text-light py-1" href="#box-shadows-section" data-description="These are your element box shadow options.">Box Shadows</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-light py-1" href="#button-data-toggle-input-component-plugin-section" data-description="These are examples of different uses of the OBE:BS4 Input Group Button Toggle Component Plugin. You can use these components to offer users a secondary data point that can toggle between two different string values.">Button Data Toggle Input Component Plugin</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link text-light py-1" href="#button-sizes-section" data-description="These are your expanded button sizes.">Button Sizes</a>
