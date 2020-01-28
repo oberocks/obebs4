@@ -1263,6 +1263,64 @@
 
 
 
+{%- macro increment_counter_horiz(titlePartial, id, startValPlacehol, min, max, increment = 'false', leadingUnits = 'false', trailingUnits = 'false', decimalPlaces = 'false', useSeperators = 'false') %}
+<div class="js-prism text-left mb-3">
+    <div class="form-group">
+        <label for="{{ id }}">{{ titlePartial }} Increment Input Group:</label>
+        <div class="input-group" data-obe-increment-component="true">
+            <div class="input-group-prepend" data-obe-increment-down="true">
+                <button class="btn btn-light border" type="button">-</button>
+            </div>
+            <input class="form-control text-center" type="text" id="{{ id }}" name="{{ id }}" aria-describedby="{{ id }}-help" data-min="{{ min }}" data-max="{{ max }}"{% if increment != 'false' %} data-increment="{{ increment }}"{% endif %}{% if leadingUnits != 'false' %} data-leading-units="{{ leadingUnits }}"{% endif %}{% if trailingUnits != 'false' %} data-trailing-units="{{ trailingUnits }}"{% endif %}{% if decimalPlaces != 'false' %} data-decimal-places="{{ decimalPlaces }}"{% endif %}{% if useSeperators != 'false' %} data-use-seperators="{{ useSeperators }}"{% endif %} placeholder="{{ startValPlacehol }}" value="{{ startValPlacehol }}">
+            <div class="input-group-append" data-obe-increment-up="true">
+                <button class="btn btn-light border" type="button">+</button>
+            </div>
+        </div>
+        <small id="{{ id }}-help" class="form-text text-muted">Form element help text goes here.</small>
+    </div>
+</div>
+{%- endmacro %}
+
+
+
+{%- macro increment_counter_vert_square(titlePartial, id, startValPlacehol, min, max, increment = 'false', leadingUnits = 'false', trailingUnits = 'false', decimalPlaces = 'false', useSeperators = 'false') %}
+<div class="js-prism mb-3">
+    <div class="form-group">
+        <label for="{{ id }}">{{ titlePartial }} Increment Input Group:</label>
+        <div class="d-flex flex-column" data-obe-increment-component="true">
+            <div data-obe-increment-up="true">
+                <button class="btn btn-light border border-bottom-0 rounded-0 w-100" type="button">+</button>
+            </div>
+            <input class="form-control text-center rounded-0" type="text" id="{{ id }}" name="{{ id }}" aria-describedby="{{ id }}-help" data-min="{{ min }}" data-max="{{ max }}"{% if increment != 'false' %} data-increment="{{ increment }}"{% endif %}{% if leadingUnits != 'false' %} data-leading-units="{{ leadingUnits }}"{% endif %}{% if trailingUnits != 'false' %} data-trailing-units="{{ trailingUnits }}"{% endif %}{% if decimalPlaces != 'false' %} data-decimal-places="{{ decimalPlaces }}"{% endif %}{% if useSeperators != 'false' %} data-use-seperators="{{ useSeperators }}"{% endif %} placeholder="{{ startValPlacehol }}" value="{{ startValPlacehol }}">
+            <div data-obe-increment-down="true">
+                <button class="btn btn-light border border-top-0 rounded-0 w-100" type="button">-</button>
+            </div>
+        </div>
+        <small id="{{ id }}-help" class="form-text text-muted">Form element help text goes here.</small>
+    </div>
+</div>
+{%- endmacro %}
+
+{%- macro increment_counter_vert_rounded(titlePartial, id, startValPlacehol, min, max, increment = 'false', leadingUnits = 'false', trailingUnits = 'false', decimalPlaces = 'false', useSeperators = 'false') %}
+<div class="js-prism mb-3">
+    <div class="form-group">
+        <label for="{{ id }}">{{ titlePartial }} Increment Input Group:</label>
+        <div class="d-flex flex-column rounded border" data-obe-increment-component="true">
+            <div data-obe-increment-up="true">
+                <button class="btn btn-light border-bottom rounded-0 w-100" type="button">+</button>
+            </div>
+            <input class="form-control text-center border-0 rounded-0" type="text" id="{{ id }}" name="{{ id }}" aria-describedby="{{ id }}-help" data-min="{{ min }}" data-max="{{ max }}"{% if increment != 'false' %} data-increment="{{ increment }}"{% endif %}{% if leadingUnits != 'false' %} data-leading-units="{{ leadingUnits }}"{% endif %}{% if trailingUnits != 'false' %} data-trailing-units="{{ trailingUnits }}"{% endif %}{% if decimalPlaces != 'false' %} data-decimal-places="{{ decimalPlaces }}"{% endif %}{% if useSeperators != 'false' %} data-use-seperators="{{ useSeperators }}"{% endif %} placeholder="{{ startValPlacehol }}" value="{{ startValPlacehol }}">
+            <div data-obe-increment-down="true">
+                <button class="btn btn-light border-top rounded-0 w-100" type="button">-</button>
+            </div>
+        </div>
+        <small id="{{ id }}-help" class="form-text text-muted">Form element help text goes here.</small>
+    </div>
+</div>
+{%- endmacro %}
+
+
+
 {%- macro justify_content_classes(string) %}
 <tr>
     <th scope="row" class="bg-dark text-light border-light"><samp>.justify-content-{{ string }}</samp></th>

@@ -3332,7 +3332,7 @@
 
             <div class="row justify-content-center">
 
-                <div class="col-md-6">
+                <div class="col-md-6 text-left">
 
                     <div class="js-prism mb-3">
                         <div class="form-group">
@@ -3374,15 +3374,361 @@
 
                         <p class="font-weight-bold">PLEASE NOTE:</p>
 
-                        <p class="mb-2 small">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Delectus ea voluptas et, explicabo consequuntur nam sed vitae molestiae eum distinctio deserunt. Culpa doloremque dolorum, placeat nesciunt in est ad <samp class="font-weight-bold">sapiente</samp>!</p>
+                        <p class="mb-2 small">The functionality of this plugin is dependent upon the OBE:BS4 <samp class="font-weight-bold">Toggle Text Mini-Plugin</samp>!</p>
 
-                        <pre>
+                        <p class="mb-2 small">This plugin allows you to pair a button that can toggle virtually any string between two values, which is what the <samp class="font-weight-bold">Toggle Text Mini-Plugin</samp> provides. This plugin simply passes that value to hidden input, so the value a user selects can be sent with other form data for processing.</p>
+
+                        <p class="mb-2 small">Just like with the <samp class="font-weight-bold">Toggle Text Mini-Plugin</samp>, this plugin fires a couple of events from the toggle text functionality. This plugin also fires 2 additional events that you can hook into. Both <samp class="font-weight-bold">before.input.toggle</samp> and <samp class="font-weight-bold">after.input.toggle</samp> will give you both values at before and after stages of the swap.</p>
+
+                        <pre class="pb-2">
                                 <code class="language-javascript line-numbers">
-                                    // some code here...
+                                    // Example of using the before.input.toggle custom event
+                                    your_element_node.addEventListener('before.input.toggle', function(event) {
+                                        console.log('Displayed String: ' + event.detail.data.displayed);
+                                        console.log('Stored String: ' + event.detail.data.stored);
+                                    });
+                                    
+                                    // Example of using the after.input.toggle custom event
+                                    your_element_node.addEventListener('after.input.toggle', function(event) {
+                                        console.log('Displayed String: ' + event.detail.data.displayed);
+                                        console.log('Stored String: ' + event.detail.data.stored);
+                                    });
                                 </code>
                             </pre>
 
-                        <p class="mb-2 small">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Delectus ea voluptas et, explicabo consequuntur nam sed vitae molestiae eum distinctio deserunt. Culpa doloremque dolorum, placeat nesciunt in est ad <samp class="font-weight-bold">sapiente</samp>!</p>
+                        <p class="mb-2 small">In a sense, this is a lot like a radio button that has only 2 choices, and can be paired with an input! Using this for AM/PM or °F/°C along with a user-defined and formatted number(s)!</p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- _increment_counter_component_plugin.njk -->
+
+    <div class="container-fluid pt-5 text-center bg-white text-dark">
+
+        <div class="container pt-5">
+
+            <div class="row justify-content-center">
+
+                <div id="increment-counter-input-component-plugin-section" class="col-md-6">
+
+                    <h1>Increment Counter Input</h1>
+                    <div class="lead">C O M P O N E N T - P L U G I N</div>
+                    <hr />
+                    <p class="description-text text-muted"><em>These are examples of different uses of the highly customizable OBE:BS4 Increment Counter Component Plugin. There are nearly infinite ways to use the plugin for both horizontal and vertical increment counter UI needs.</em></p>
+                    <hr />
+
+                </div>
+
+            </div>
+
+            <div class="row justify-content-center">
+
+                <div class="col-md-6">
+
+                    <label class="d-block font-weight-bold mb-3">Horizontal Variation Examples</label>
+
+                    <div class="js-prism text-left mb-3">
+                        <div class="form-group">
+                            <label for="horiz-increment">Basic Horizontal Increment Input Group:</label>
+                            <div class="input-group" data-obe-increment-component="true">
+                                <div class="input-group-prepend" data-obe-increment-down="true">
+                                    <button class="btn btn-light border" type="button">-</button>
+                                </div>
+                                <input class="form-control text-center" type="text" id="horiz-increment" name="horiz-increment" aria-describedby="horiz-increment-help" data-min="-10" data-max="10" placeholder="1" value="1">
+                                <div class="input-group-append" data-obe-increment-up="true">
+                                    <button class="btn btn-light border" type="button">+</button>
+                                </div>
+                            </div>
+                            <small id="horiz-increment-help" class="form-text text-muted">Form element help text goes here.</small>
+                        </div>
+                    </div>
+
+                    <div class="js-prism text-left mb-3">
+                        <div class="form-group">
+                            <label for="horiz-custom-increment">Horizontal Custom Increment Input Group:</label>
+                            <div class="input-group" data-obe-increment-component="true">
+                                <div class="input-group-prepend" data-obe-increment-down="true">
+                                    <button class="btn btn-light border" type="button">-</button>
+                                </div>
+                                <input class="form-control text-center" type="text" id="horiz-custom-increment" name="horiz-custom-increment" aria-describedby="horiz-custom-increment-help" data-min="-5" data-max="5" data-increment="0.25" placeholder="1" value="1">
+                                <div class="input-group-append" data-obe-increment-up="true">
+                                    <button class="btn btn-light border" type="button">+</button>
+                                </div>
+                            </div>
+                            <small id="horiz-custom-increment-help" class="form-text text-muted">Form element help text goes here.</small>
+                        </div>
+                    </div>
+
+                    <div class="js-prism text-left mb-3">
+                        <div class="form-group">
+                            <label for="leading-units-increment">Leading Units Increment Input Group:</label>
+                            <div class="input-group" data-obe-increment-component="true">
+                                <div class="input-group-prepend" data-obe-increment-down="true">
+                                    <button class="btn btn-light border" type="button">-</button>
+                                </div>
+                                <input class="form-control text-center" type="text" id="leading-units-increment" name="leading-units-increment" aria-describedby="leading-units-increment-help" data-min="1" data-max="10" data-increment="1" data-leading-units="$var-name-" placeholder="$var-name-1" value="$var-name-1">
+                                <div class="input-group-append" data-obe-increment-up="true">
+                                    <button class="btn btn-light border" type="button">+</button>
+                                </div>
+                            </div>
+                            <small id="leading-units-increment-help" class="form-text text-muted">Form element help text goes here.</small>
+                        </div>
+                    </div>
+
+                    <div class="js-prism text-left mb-3">
+                        <div class="form-group">
+                            <label for="trailing-units-increment">Trailing Units Increment Input Group:</label>
+                            <div class="input-group" data-obe-increment-component="true">
+                                <div class="input-group-prepend" data-obe-increment-down="true">
+                                    <button class="btn btn-light border" type="button">-</button>
+                                </div>
+                                <input class="form-control text-center" type="text" id="trailing-units-increment" name="trailing-units-increment" aria-describedby="trailing-units-increment-help" data-min="-10" data-max="10" data-increment="1" data-trailing-units="px" placeholder="1px" value="1px">
+                                <div class="input-group-append" data-obe-increment-up="true">
+                                    <button class="btn btn-light border" type="button">+</button>
+                                </div>
+                            </div>
+                            <small id="trailing-units-increment-help" class="form-text text-muted">Form element help text goes here.</small>
+                        </div>
+                    </div>
+
+                    <div class="js-prism text-left mb-3">
+                        <div class="form-group">
+                            <label for="us-money-increment">US Money Increment Input Group:</label>
+                            <div class="input-group" data-obe-increment-component="true">
+                                <div class="input-group-prepend" data-obe-increment-down="true">
+                                    <button class="btn btn-light border" type="button">-</button>
+                                </div>
+                                <input class="form-control text-center" type="text" id="us-money-increment" name="us-money-increment" aria-describedby="us-money-increment-help" data-min="-10" data-max="10" data-increment="0.25" data-leading-units="$" data-decimal-places="2" placeholder="$1.00" value="$1.00">
+                                <div class="input-group-append" data-obe-increment-up="true">
+                                    <button class="btn btn-light border" type="button">+</button>
+                                </div>
+                            </div>
+                            <small id="us-money-increment-help" class="form-text text-muted">Form element help text goes here.</small>
+                        </div>
+                    </div>
+
+                    <div class="js-prism text-left mb-3">
+                        <div class="form-group">
+                            <label for="us-money-fixed-cents-increment">US Money With Commas Increment Input Group:</label>
+                            <div class="input-group" data-obe-increment-component="true">
+                                <div class="input-group-prepend" data-obe-increment-down="true">
+                                    <button class="btn btn-light border" type="button">-</button>
+                                </div>
+                                <input class="form-control text-center" type="text" id="us-money-fixed-cents-increment" name="us-money-fixed-cents-increment" aria-describedby="us-money-fixed-cents-increment-help" data-min="-1000000" data-max="1000000" data-increment="50000" data-leading-units="$" data-trailing-units=" USD" data-decimal-places="2" data-use-seperators="true" placeholder="$100,000" value="$100,000">
+                                <div class="input-group-append" data-obe-increment-up="true">
+                                    <button class="btn btn-light border" type="button">+</button>
+                                </div>
+                            </div>
+                            <small id="us-money-fixed-cents-increment-help" class="form-text text-muted">Form element help text goes here.</small>
+                        </div>
+                    </div>
+
+                    <div class="js-prism text-left mb-3">
+                        <div class="form-group">
+                            <label for="us-money-fixed-cents-increment">US Money Fixed Cents Increment Input Group:</label>
+                            <div class="input-group" data-obe-increment-component="true">
+                                <div class="input-group-prepend" data-obe-increment-down="true">
+                                    <button class="btn btn-light border" type="button">-</button>
+                                </div>
+                                <input class="form-control text-center" type="text" id="us-money-fixed-cents-increment" name="us-money-fixed-cents-increment" aria-describedby="us-money-fixed-cents-increment-help" data-min="-100" data-max="100" data-increment="5" data-leading-units="$" data-trailing-units=".99" data-decimal-places="0" placeholder="$5.99" value="$5.99">
+                                <div class="input-group-append" data-obe-increment-up="true">
+                                    <button class="btn btn-light border" type="button">+</button>
+                                </div>
+                            </div>
+                            <small id="us-money-fixed-cents-increment-help" class="form-text text-muted">Form element help text goes here.</small>
+                        </div>
+                    </div>
+
+                    <label class="d-block font-weight-bold pt-4 mb-3">Vertical Variation Examples</label>
+
+                    <div class="js-prism mb-3">
+                        <div class="form-group">
+                            <label for="vert-increment">Basic Vertical Increment Input Group:</label>
+                            <div class="d-flex flex-column" data-obe-increment-component="true">
+                                <div data-obe-increment-up="true">
+                                    <button class="btn btn-light border border-bottom-0 rounded-0 w-100" type="button">+</button>
+                                </div>
+                                <input class="form-control text-center rounded-0" type="text" id="vert-increment" name="vert-increment" aria-describedby="vert-increment-help" data-min="-10" data-max="10" placeholder="1" value="1">
+                                <div data-obe-increment-down="true">
+                                    <button class="btn btn-light border border-top-0 rounded-0 w-100" type="button">-</button>
+                                </div>
+                            </div>
+                            <small id="vert-increment-help" class="form-text text-muted">Form element help text goes here.</small>
+                        </div>
+                    </div>
+
+                    <div class="js-prism mb-3">
+                        <div class="form-group">
+                            <label for="rounded-vert-increment">Basic Rounded Vertical Increment Input Group:</label>
+                            <div class="d-flex flex-column rounded border" data-obe-increment-component="true">
+                                <div data-obe-increment-up="true">
+                                    <button class="btn btn-light border-bottom rounded-0 w-100" type="button">+</button>
+                                </div>
+                                <input class="form-control text-center border-0 rounded-0" type="text" id="rounded-vert-increment" name="rounded-vert-increment" aria-describedby="rounded-vert-increment-help" data-min="-10" data-max="10" placeholder="1" value="1">
+                                <div data-obe-increment-down="true">
+                                    <button class="btn btn-light border-top rounded-0 w-100" type="button">-</button>
+                                </div>
+                            </div>
+                            <small id="rounded-vert-increment-help" class="form-text text-muted">Form element help text goes here.</small>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="row justify-content-center">
+
+                <div class="col pb-5">
+
+                    <div class="alert alert-danger text-left fade show" role="alert">
+
+                        <p class="font-weight-bold">PLEASE NOTE:</p>
+
+                        <p class="mb-2 small">This highly versitle plugin allows you to provide users with a click/tap friendly incremental counter component. You can customize the counter's minimum/maximum allowed number range, set a specific in/decrement number, add a leading and/or trailing unit string(s), and set a limit to decimal places!</p>
+
+                        <p class="mb-2 small">Here's a handy table breaking down the different data required and optional attribute this component's markup:</p>
+
+                        <div class="table-responsive">
+                            <table class="table table-red table-striped table-borderless text-nowrap small">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">Name</th>
+                                        <th scope="col">Component Element</th>
+                                        <th scope="col">Req/Opt</th>
+                                        <th scope="col">Value Type</th>
+                                        <th scope="col">Notes</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <th scope="row" class="align-middle">data-obe-increment-component</th>
+                                        <td class="align-middle">.input-group</td>
+                                        <td class="align-middle font-weight-bold">Required</td>
+                                        <td class="align-middle">No value needed</td>
+                                        <td style="min-width:200px;"></td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row" class="align-middle">data-obe-increment-up</th>
+                                        <td class="align-middle">Child of .input-group</td>
+                                        <td class="align-middle font-weight-bold">Required</td>
+                                        <td class="align-middle">No value needed</td>
+                                        <td style="min-width:200px;">Needs required child button element for accessibilty</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row" class="align-middle">Input Element</th>
+                                        <td class="align-middle">Child of .input-group</td>
+                                        <td class="align-middle font-weight-bold">Required</td>
+                                        <td class="align-middle">Value matching schema of attributes</td>
+                                        <td style="min-width:200px;">Data Attribute Options: data-min, data-max, data-increment, data-leading-units, data-trailing-units, data-decimal-places, data-use-seperators</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row" class="align-middle">data-obe-increment-down</th>
+                                        <td class="align-middle">Child of .input-group</td>
+                                        <td class="align-middle font-weight-bold">Required</td>
+                                        <td class="align-middle">No value needed</td>
+                                        <td style="min-width:200px;">Needs required child button element for accessibilty</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row" class="align-middle">data-min</th>
+                                        <td class="align-middle">Input child of .input-group</td>
+                                        <td class="align-middle font-weight-bold">Required</td>
+                                        <td class="align-middle">Number</td>
+                                        <td style="min-width:200px;">Usable Number Types: Positive, Negative, Decimals</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row" class="align-middle">data-max</th>
+                                        <td class="align-middle">Input child of .input-group</td>
+                                        <td class="align-middle font-weight-bold">Required</td>
+                                        <td class="align-middle">Number</td>
+                                        <td style="min-width:200px;">Usable Number Types: Positive, Negative, Decimals</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row" class="align-middle">data-increment</th>
+                                        <td class="align-middle">Input child of .input-group</td>
+                                        <td class="align-middle">Optional</td>
+                                        <td class="align-middle">Number</td>
+                                        <td style="min-width:200px;">Usable Number Types: Positive, Decimals<br>If no data-increment attribute is provided, the default value will be increment value will be 1.</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row" class="align-middle">data-leading-units</th>
+                                        <td class="align-middle">Input child of .input-group</td>
+                                        <td class="align-middle">Optional</td>
+                                        <td class="align-middle">String</td>
+                                        <td style="min-width:200px;">String that will be prepended to the calculated value just before display.</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row" class="align-middle">data-trailing-units</th>
+                                        <td class="align-middle">Input child of .input-group</td>
+                                        <td class="align-middle">Optional</td>
+                                        <td class="align-middle">String</td>
+                                        <td style="min-width:200px;">String that will be appended to the calculated value just before display.</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row" class="align-middle">data-decimal-places</th>
+                                        <td class="align-middle">Input child of .input-group</td>
+                                        <td class="align-middle">Optional</td>
+                                        <td class="align-middle">Number</td>
+                                        <td style="min-width:200px;">Usable Number Types: 0 or a positive whole number<br>If no data-decimal-places attribute is provided, the default value will be 0 decimal places (IE whole numbers / integers)</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row" class="align-middle">data-use-seperators</th>
+                                        <td class="align-middle">Input child of .input-group</td>
+                                        <td class="align-middle">Optional</td>
+                                        <td class="align-middle">No value needed</td>
+                                        <td style="min-width:200px;">Adding this attribute will result in number formatting (typically with thousandths seperators in the US) that changes depending on the location of the user in the world.</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <p class="mb-2 small">There are several custom events that fire depending on the user interaction that triggers the event. Either way, the events from component sub elements bubble, as well as triggering a custom event on the initialized component element. All events carry the data calculated through each calculation of an interaction as well as all of the plugin data attribute values that shape the calculations and results.</p>
+
+                        <p class="mb-2 small">An up/plus button click dispaches an <samp class="font-weight-bold">increment.up.clicked</samp> custom event. The down/minus button click dispaches an <samp class="font-weight-bold">increment.down.clicked</samp> custom event. Any manual change to the input dispaches an <samp class="font-weight-bold">increment.input.changed</samp> custom event. All of these sub-component custom events occur after the calculations and DOM have been updated.</p>
+
+                        <p class="mb-2 small">Each of the custom events above bubble. However, they also trigger a custom event on the initialized component itself called <samp class="font-weight-bold">after.counter.incremented</samp>, which ripples the data up through to the component level, regardless of the interaction. So you can get a snapshot of all of the data (including the event name the sub-element dispached) for each interaction from the component level.</p>
+
+                        <p class="mb-2 small">Here are some examples of accessing custom event details data:</p>
+
+                        <pre class="mb-2">
+                                <code class="language-javascript line-numbers">
+                                    // Example of using the after.counter.incremented custom event
+                                    your_element_node.addEventListener('after.counter.incremented', function(e) {
+                                        console.log('Sub-Component Trigger Event Name: ' + e.detail.value.trigger);
+                                        console.log('Component Range Minimum: ' + e.detail.value.min);
+                                        console.log('Component Increment Value: ' + e.detail.value.increment);
+                                        console.log('Component Leading Units: ' + e.detail.value.leadingUnits);
+                                        console.log('Component Trailing Units: ' + e.detail.value.trailingUnits);
+                                        console.log('Component Decimal Places: ' + e.detail.value.decimalPlaces);
+                                        console.log('Calclation Starting Value: ' + e.detail.value.initial);
+                                        console.log('Calclation Cleaned Value: ' + e.detail.value.cleaned);
+                                        console.log('Calclation Numeric Result Value: ' + e.detail.value.number);
+                                        console.log('Calclation Final String Value: ' + e.detail.value.final);
+                                    });
+
+                                    // Example of using the increment.up.clicked custom event
+                                    your_element_node.addEventListener('increment.up.clicked', function(e) {
+                                        // your code here...
+                                    });
+
+                                    // Example of using the increment.down.clicked custom event
+                                    your_element_node.addEventListener('increment.down.clicked', function(e) {
+                                        // your code here...
+                                    });
+
+                                    // Example of using the increment.input.changed custom event
+                                    your_element_node.addEventListener('increment.input.changed', function(e) {
+                                        // your code here...
+                                    });
+                                </code>
+                            </pre>
 
                     </div>
 
@@ -3661,7 +4007,7 @@
 
                 <small class="text-light">OBE:BS4 VERSION:</small>
 
-                <p class="lead">0.8.25</p>
+                <p class="lead">0.8.26</p>
 
                 <hr class="border-gray" />
 
@@ -4146,6 +4492,9 @@
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link text-light py-1" href="#hover-box-shadows-section" data-description="These are your element box shadow hover effect options.">Hover Box Shadows</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-light py-1" href="#increment-counter-input-component-plugin-section" data-description="These are examples of different uses of the highly customizable OBE:BS4 Increment Counter Component Plugin. There are nearly infinite ways to use the plugin for both horizontal and vertical increment counter UI needs.">Increment Counter Input Component Plugin</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link text-light py-1" href="#material-design-text-inputs-section" data-description="These are form elements that leverage Google&#39;s Material Design guidelines using the Bootstrap 4 styled naming conventions and utilities.">Material Design Text Inputs</a>

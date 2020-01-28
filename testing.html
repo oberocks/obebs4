@@ -40,138 +40,19 @@
                     <p class="lead text-center py-4">Increment Counter Components</p>
                     
                     <div class="">
-                    
-                        <div class="form-group">
-                            <label for="horiz-increment">Basic Horizontal Increment Input Group:</label>
-                            <div class="input-group" data-obe-increment-component="true">
-                                <div class="input-group-prepend" data-obe-increment-down="true">
-                                    <button class="btn btn-light border" type="button">-</button>
-                                </div>
-                                <input class="form-control text-center" type="text" id="horiz-increment" name="horiz-increment" data-min="0" data-max="10" placeholder="1" value="1" aria-describedby="horiz-increment-help">
-                                <div class="input-group-append" data-obe-increment-up="true">
-                                    <button class="btn btn-light border" type="button">+</button>
-                                </div>
-                            </div>
-                            <small id="horiz-increment-help" class="form-text text-muted">Form element help text goes here.</small>
-                        </div>
 
                         <div class="form-group">
                             <label for="vert-increment">Basic Vertical Increment Input Group:</label>
-                            <div class="d-flex flex-column" data-obe-increment-component="true">
+                            <div id="vert-inc-test-id" class="d-flex flex-column" data-obe-increment-component="true">
                                 <div data-obe-increment-up="true">
                                     <button class="btn btn-light border border-bottom-0 rounded-0 w-100" type="button">+</button>
                                 </div>
-                                <input class="form-control text-center rounded-0" type="text" id="vert-increment" name="vert-increment" data-min="0" data-max="10" placeholder="1" value="1" aria-describedby="vert-increment-help">
+                                <input class="form-control text-center rounded-0" type="text" id="vert-increment" name="vert-increment" data-min="0" data-max="10" data-leading-units="$"  data-trailing-units=" USD" data-decimal-places="3" data-use-seperators="true" placeholder="$1.000 USD" value="$1.000 USD" aria-describedby="vert-increment-help">
                                 <div data-obe-increment-down="true">
                                     <button class="btn btn-light border border-top-0 rounded-0 w-100" type="button">-</button>
                                 </div>
                             </div>
                             <small id="vert-increment-help" class="form-text text-muted">Form element help text goes here.</small>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="rounded-vert-increment">Basic Rounded Vertical Increment Input Group:</label>
-                            <div class="d-flex flex-column rounded border" data-obe-increment-component="true">
-                                <div data-obe-increment-up="true">
-                                    <button class="btn btn-light border-bottom rounded-0 w-100" type="button">+</button>
-                                </div>
-                                <input class="form-control text-center border-0 rounded-0" type="text" id="rounded-vert-increment" name="rounded-vert-increment" data-min="0" data-max="10" placeholder="1" value="1" aria-describedby="rounded-vert-increment-help">
-                                <div data-obe-increment-down="true">
-                                    <button class="btn btn-light border-top rounded-0 w-100" type="button">-</button>
-                                </div>
-                            </div>
-                            <small id="rounded-vert-increment-help" class="form-text text-muted">Form element help text goes here.</small>
-                        </div>
-
-                        <hr class="my-5">
-
-                        <div class="form-group">
-                            <label for="horiz-specific-increment">Horizontal Specific Increment Input Group:</label>
-                            <div class="input-group" data-obe-increment-component="true">
-                                <div class="input-group-prepend" data-obe-increment-down="true">
-                                    <button class="btn btn-light border" type="button">-</button>
-                                </div>
-                                <input class="form-control text-center" type="text" id="horiz-specific-increment" name="horiz-specific-increment" data-min="0" data-max="10" data-increment="0.25" placeholder="1" value="1" aria-describedby="horiz-specific-increment-help">
-                                <div class="input-group-append" data-obe-increment-up="true">
-                                    <button class="btn btn-light border" type="button">+</button>
-                                </div>
-                            </div>
-                            <small id="horiz-specific-increment-help" class="form-text text-muted">Form element help text goes here.</small>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="vert-specific-increment">Vertical Specific Increment Input Group:</label>
-                            <div class="d-flex flex-column" data-obe-increment-component="true">
-                                <div data-obe-increment-up="true">
-                                    <button class="btn btn-light border border-bottom-0 rounded-0 w-100" type="button">+</button>
-                                </div>
-                                <input class="form-control text-center rounded-0" type="text" id="vert-specific-increment" name="vert-specific-increment" data-min="0" data-max="10" data-increment="0.25" placeholder="1" value="1" aria-describedby="vert-specific-increment-help">
-                                <div data-obe-increment-down="true">
-                                    <button class="btn btn-light border border-top-0 rounded-0 w-100" type="button">-</button>
-                                </div>
-                            </div>
-                            <small id="vert-specific-increment-help" class="form-text text-muted">Form element help text goes here.</small>
-                        </div>
-
-                        <hr class="my-5">
-
-                        <div class="form-group">
-                            <label for="leading-units-horiz-increment">Leading Units Horizontal Increment Input Group:</label>
-                            <div class="input-group" data-obe-increment-component="true">
-                                <div class="input-group-prepend" data-obe-increment-down="true">
-                                    <button class="btn btn-light border" type="button">-</button>
-                                </div>
-                                <input class="form-control text-center" type="text" id="leading-units-horiz-increment" name="leading-units-horiz-increment" data-min="1" data-max="100" data-increment="1" data-leading-units="$var-name-" placeholder="$var-name-1" value="$var-name-1" aria-describedby="leading-units-horiz-increment-help">
-                                <div class="input-group-append" data-obe-increment-up="true">
-                                    <button class="btn btn-light border" type="button">+</button>
-                                </div>
-                            </div>
-                            <small id="leading-units-horiz-increment-help" class="form-text text-muted">Form element help text goes here.</small>
-                        </div>
-
-
-                        <div class="form-group">
-                            <label for="trailing-units-horiz-increment">Trailing Units Horizontal Increment Input Group:</label>
-                            <div class="input-group" data-obe-increment-component="true">
-                                <div class="input-group-prepend" data-obe-increment-down="true">
-                                    <button class="btn btn-light border" type="button">-</button>
-                                </div>
-                                <input class="form-control text-center" type="text" id="trailing-units-horiz-increment" name="trailing-units-horiz-increment" data-min="0" data-max="10" data-increment="0.25" data-trailing-units="px" placeholder="1px" value="1px" aria-describedby="trailing-units-horiz-increment-help">
-                                <div class="input-group-append" data-obe-increment-up="true">
-                                    <button class="btn btn-light border" type="button">+</button>
-                                </div>
-                            </div>
-                            <small id="trailing-units-horiz-increment-help" class="form-text text-muted">Form element help text goes here.</small>
-                        </div>
-
-                        <hr class="my-5">
-
-                        <div class="form-group">
-                            <label for="us-money-horiz-increment">US Money Horizontal Increment Input Group:</label>
-                            <div class="input-group" data-obe-increment-component="true">
-                                <div class="input-group-prepend" data-obe-increment-down="true">
-                                    <button class="btn btn-light border" type="button">-</button>
-                                </div>
-                                <input class="form-control text-center" type="text" id="us-money-horiz-increment" name="us-money-horiz-increment" data-min="0" data-max="10" data-increment="0.25" data-decimal-places="2" data-leading-units="$" placeholder="$1.00" value="$1.00" aria-describedby="us-money-horiz-increment-help">
-                                <div class="input-group-append" data-obe-increment-up="true">
-                                    <button class="btn btn-light border" type="button">+</button>
-                                </div>
-                            </div>
-                            <small id="us-money-horiz-increment-help" class="form-text text-muted">Form element help text goes here.</small>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="us-money-fixed-cents-horiz-increment">US Money Fixed Cents Horizontal Increment Input Group:</label>
-                            <div class="input-group" data-obe-increment-component="true">
-                                <div class="input-group-prepend" data-obe-increment-down="true">
-                                    <button class="btn btn-light border" type="button">-</button>
-                                </div>
-                                <input class="form-control text-center" type="text" id="us-money-fixed-cents-horiz-increment" name="us-money-fixed-cents-horiz-increment" data-min="-100" data-max="100" data-increment="5" data-decimal-places="0" data-leading-units="$" data-trailing-units=".99" placeholder="$5.99" value="$5.99" aria-describedby="us-money-fixed-cents-horiz-increment-help">
-                                <div class="input-group-append" data-obe-increment-up="true">
-                                    <button class="btn btn-light border" type="button">+</button>
-                                </div>
-                            </div>
-                            <small id="us-money-fixed-cents-horiz-increment-help" class="form-text text-muted">Form element help text goes here.</small>
                         </div>
                     
                     </div>
@@ -186,7 +67,7 @@
                     
                         <div class="form-group">
                             <label for="appended-input-btn-data-toggle">Appended Input Group Button Data Toggle:</label>
-                            <div class="input-group" data-obe-input-data-toggle="true">
+                            <div id="btn-data-toggle-test-id" class="input-group" data-obe-input-data-toggle="true">
                                 <input class="form-control text-left" type="text" id="appended-input-btn-data-toggle" name="appended-input-btn-data-toggle" placeholder="1" value="1" aria-describedby="appended-input-btn-data-toggle-help">
                                 <div class="input-group-append">
                                     <button class="btn btn-light border" type="button" data-obe-text-toggle="PM">AM</button>
@@ -194,18 +75,6 @@
                             </div>
                             <input id="appended-input-btn-data-toggle-hidden" name="appended-input-btn-data-toggle-hidden" type="hidden" value="AM">
                             <small id="appended-input-btn-data-toggle-help" class="form-text text-muted">Form element help text goes here.</small>
-                        </div>
-
-                         <div class="form-group">
-                            <label for="prepended-input-btn-data-toggle">Prepended Input Group Button Data Toggle:</label>
-                            <div class="input-group" data-obe-input-data-toggle="true">
-                                <div class="input-group-prepend">
-                                    <button class="btn btn-light border" type="button" data-obe-text-toggle="M&A">P&L</button>
-                                </div>
-                                <input class="form-control text-right" type="text" id="prepended-input-btn-data-toggle" name="prepended-input-btn-data-toggle" placeholder="1" value="1" aria-describedby="prepended-input-btn-data-toggle-help">
-                            </div>
-                            <input id="prepended-input-btn-data-toggle-hidden" name="prepended-input-btn-data-toggle-hidden" type="hidden" value="P&L">
-                            <small id="prepended-input-btn-data-toggle-help" class="form-text text-muted">Form element help text goes here.</small>
                         </div>
 
                     </div>
@@ -223,6 +92,36 @@
         <!-- Custom/Development JS for this page -->
         <script type="text/javascript">
 
+            document.getElementById('vert-inc-test-id').addEventListener('after.counter.incremented', function(e) {
+                console.log('Sub-Component Trigger Event Name: ' + e.detail.value.trigger);
+                console.log('Component Range Minimum: ' + e.detail.value.min);
+                console.log('Component Increment Value: ' + e.detail.value.increment);
+                console.log('Component Leading Units: ' + e.detail.value.leadingUnits);
+                console.log('Component Trailing Units: ' + e.detail.value.trailingUnits);
+                console.log('Component Decimal Places: ' + e.detail.value.decimalPlaces);
+                console.log('Calclation Starting Value: ' + e.detail.value.initial);
+                console.log('Calclation Cleaned Value: ' + e.detail.value.cleaned);
+                console.log('Calclation Numeric Result Value: ' + e.detail.value.number);
+                console.log('Calclation Final String Value: ' + e.detail.value.final);
+            });
+
+            document.getElementById('btn-data-toggle-test-id').addEventListener('before.input.toggle', function(event) {
+                console.log('before.input.toggle Displayed String: ' + event.detail.data.displayed);
+                console.log('before.input.toggleStored String: ' + event.detail.data.stored);
+            });
+            
+            document.getElementById('btn-data-toggle-test-id').addEventListener('after.input.toggle', function(event) {
+                console.log('after.input.toggle Displayed String: ' + event.detail.data.displayed);
+                console.log('after.input.toggle Stored String: ' + event.detail.data.stored);
+            });
+
+        </script>
+
+
+        <!-- Custom/Development JS for this page -->
+        <script type="text/javascript">
+
+            /*
             var domReady = function(callback) {
                 document.readyState === "interactive" || document.readyState === "complete" ? callback() : document.addEventListener("DOMContentLoaded", callback);
             };
@@ -393,6 +292,7 @@
                 }
 
             }); // end domReady()
+            */
 
         </script>
 

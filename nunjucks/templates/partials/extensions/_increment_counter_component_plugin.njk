@@ -1,0 +1,202 @@
+<!-- _increment_counter_component_plugin.njk -->
+		{% if obe_settings['enable-obebs4-increment-counter-plugin'] === 'true' %}
+        <div class="container-fluid pt-5 text-center bg-white text-dark">
+        
+            <div class="container pt-5">
+                
+                <div class="row justify-content-center">
+                    
+                    <div id="{{ global_strings['extensions']['sections'][21]['id'] }}" class="col-md-6">
+                        
+                        {{ macros.page_section_heading(global_strings['extensions']['sections'][21]['head'], global_strings['extensions']['sections'][21]['subhead'], global_strings['extensions']['sections'][21]['descrip']) }}
+
+                    </div>
+
+                </div>
+
+                <div class="row justify-content-center">
+                    
+                    <div class="col-md-6">
+
+                        <label class="d-block font-weight-bold mb-3">Horizontal Variation Examples</label>
+                        
+                        {{ macros.increment_counter_horiz('Basic Horizontal', 'horiz-increment', '1', '-10', '10') }}
+
+                        {{ macros.increment_counter_horiz('Horizontal Custom', 'horiz-custom-increment', '1', '-5', '5', '0.25') }}
+
+                        {{ macros.increment_counter_horiz('Leading Units', 'leading-units-increment', '$var-name-1', '1', '10', '1', '$var-name-') }}
+
+                        {{ macros.increment_counter_horiz('Trailing Units', 'trailing-units-increment', '1px', '-10', '10', '1', 'false', 'px') }}
+
+                        {{ macros.increment_counter_horiz('US Money', 'us-money-increment', '$1.00', '-10', '10', '0.25', '$', 'false', '2') }}
+
+                        {{ macros.increment_counter_horiz('US Money With Commas', 'us-money-fixed-cents-increment', '$100,000', '-1000000', '1000000', '50000', '$', ' USD', '2', 'true') }}
+
+                        {{ macros.increment_counter_horiz('US Money Fixed Cents', 'us-money-fixed-cents-increment', '$5.99', '-100', '100', '5', '$', '.99', '0') }}
+                        
+                        <label class="d-block font-weight-bold pt-4 mb-3">Vertical Variation Examples</label>
+
+                        {{ macros.increment_counter_vert_square('Basic Vertical', 'vert-increment', '1', '-10', '10') }}
+
+                        {{ macros.increment_counter_vert_rounded('Basic Rounded Vertical', 'rounded-vert-increment', '1', '-10', '10') }}
+
+                    </div>
+
+                </div>
+
+                <div class="row justify-content-center">
+                    
+                    <div class="col pb-5">
+
+                        <div class="alert alert-danger text-left fade show" role="alert">
+                            
+                            <p class="font-weight-bold">PLEASE NOTE:</p>
+                            
+                            <p class="mb-2 small">This highly versitle plugin allows you to provide users with a click/tap friendly incremental counter component. You can customize the counter's minimum/maximum allowed number range, set a specific in/decrement number, add a leading and/or trailing unit string(s), and set a limit to decimal places!</p>
+
+                            <p class="mb-2 small">Here's a handy table breaking down the different data required and optional attribute this component's markup:</p>
+
+                            <div class="table-responsive">
+                                <table class="table table-red table-striped table-borderless text-nowrap small">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">Name</th>
+                                            <th scope="col">Component Element</th>
+                                            <th scope="col">Req/Opt</th>
+                                            <th scope="col">Value Type</th>
+                                            <th scope="col">Notes</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <th scope="row" class="align-middle">data-obe-increment-component</th>
+                                            <td class="align-middle">.input-group</td>
+                                            <td class="align-middle font-weight-bold">Required</td>
+                                            <td class="align-middle">No value needed</td>
+                                            <td style="min-width:200px;"></td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row" class="align-middle">data-obe-increment-up</th>
+                                            <td class="align-middle">Child of .input-group</td>
+                                            <td class="align-middle font-weight-bold">Required</td>
+                                            <td class="align-middle">No value needed</td>
+                                            <td style="min-width:200px;">Needs required child button element for accessibilty</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row" class="align-middle">Input Element</th>
+                                            <td class="align-middle">Child of .input-group</td>
+                                            <td class="align-middle font-weight-bold">Required</td>
+                                            <td class="align-middle">Value matching schema of attributes</td>
+                                            <td style="min-width:200px;">Data Attribute Options: data-min, data-max, data-increment, data-leading-units, data-trailing-units, data-decimal-places, data-use-seperators</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row" class="align-middle">data-obe-increment-down</th>
+                                            <td class="align-middle">Child of .input-group</td>
+                                            <td class="align-middle font-weight-bold">Required</td>
+                                            <td class="align-middle">No value needed</td>
+                                            <td style="min-width:200px;">Needs required child button element for accessibilty</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row" class="align-middle">data-min</th>
+                                            <td class="align-middle">Input child of .input-group</td>
+                                            <td class="align-middle font-weight-bold">Required</td>
+                                            <td class="align-middle">Number</td>
+                                            <td style="min-width:200px;">Usable Number Types: Positive, Negative, Decimals</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row" class="align-middle">data-max</th>
+                                            <td class="align-middle">Input child of .input-group</td>
+                                            <td class="align-middle font-weight-bold">Required</td>
+                                            <td class="align-middle">Number</td>
+                                            <td style="min-width:200px;">Usable Number Types: Positive, Negative, Decimals</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row" class="align-middle">data-increment</th>
+                                            <td class="align-middle">Input child of .input-group</td>
+                                            <td class="align-middle">Optional</td>
+                                            <td class="align-middle">Number</td>
+                                            <td style="min-width:200px;">Usable Number Types: Positive, Decimals<br>If no data-increment attribute is provided, the default value will be increment value will be 1.</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row" class="align-middle">data-leading-units</th>
+                                            <td class="align-middle">Input child of .input-group</td>
+                                            <td class="align-middle">Optional</td>
+                                            <td class="align-middle">String</td>
+                                            <td style="min-width:200px;">String that will be prepended to the calculated value just before display.</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row" class="align-middle">data-trailing-units</th>
+                                            <td class="align-middle">Input child of .input-group</td>
+                                            <td class="align-middle">Optional</td>
+                                            <td class="align-middle">String</td>
+                                            <td style="min-width:200px;">String that will be appended to the calculated value just before display.</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row" class="align-middle">data-decimal-places</th>
+                                            <td class="align-middle">Input child of .input-group</td>
+                                            <td class="align-middle">Optional</td>
+                                            <td class="align-middle">Number</td>
+                                            <td style="min-width:200px;">Usable Number Types: 0 or a positive whole number<br>If no data-decimal-places attribute is provided, the default value will be 0 decimal places (IE whole numbers / integers)</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row" class="align-middle">data-use-seperators</th>
+                                            <td class="align-middle">Input child of .input-group</td>
+                                            <td class="align-middle">Optional</td>
+                                            <td class="align-middle">No value needed</td>
+                                            <td style="min-width:200px;">Adding this attribute will result in number formatting (typically with thousandths seperators in the US) that changes depending on the location of the user in the world.</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <p class="mb-2 small">There are several custom events that fire depending on the user interaction that triggers the event. Either way, the events from component sub elements bubble, as well as triggering a custom event on the initialized component element. All events carry the data calculated through each calculation of an interaction as well as all of the plugin data attribute values that shape the calculations and results.</p>
+
+                            <p class="mb-2 small">An up/plus button click dispaches an <samp class="font-weight-bold">increment.up.clicked</samp> custom event. The down/minus button click dispaches an <samp class="font-weight-bold">increment.down.clicked</samp> custom event. Any manual change to the input dispaches an <samp class="font-weight-bold">increment.input.changed</samp> custom event. All of these sub-component custom events occur after the calculations and DOM have been updated.</p>
+
+                            <p class="mb-2 small">Each of the custom events above bubble. However, they also trigger a custom event on the initialized component itself called <samp class="font-weight-bold">after.counter.incremented</samp>, which ripples the data up through to the component level, regardless of the interaction. So you can get a snapshot of all of the data (including the event name the sub-element dispached) for each interaction from the component level.</p>
+                            
+                            <p class="mb-2 small">Here are some examples of accessing custom event details data:</p>
+
+                            <pre class="mb-2">
+                                <code class="language-javascript line-numbers">
+                                    // Example of using the after.counter.incremented custom event
+                                    your_element_node.addEventListener('after.counter.incremented', function(e) {
+                                        console.log('Sub-Component Trigger Event Name: ' + e.detail.value.trigger);
+                                        console.log('Component Range Minimum: ' + e.detail.value.min);
+                                        console.log('Component Increment Value: ' + e.detail.value.increment);
+                                        console.log('Component Leading Units: ' + e.detail.value.leadingUnits);
+                                        console.log('Component Trailing Units: ' + e.detail.value.trailingUnits);
+                                        console.log('Component Decimal Places: ' + e.detail.value.decimalPlaces);
+                                        console.log('Calclation Starting Value: ' + e.detail.value.initial);
+                                        console.log('Calclation Cleaned Value: ' + e.detail.value.cleaned);
+                                        console.log('Calclation Numeric Result Value: ' + e.detail.value.number);
+                                        console.log('Calclation Final String Value: ' + e.detail.value.final);
+                                    });
+
+                                    // Example of using the increment.up.clicked custom event
+                                    your_element_node.addEventListener('increment.up.clicked', function(e) {
+                                        // your code here...
+                                    });
+
+                                    // Example of using the increment.down.clicked custom event
+                                    your_element_node.addEventListener('increment.down.clicked', function(e) {
+                                        // your code here...
+                                    });
+
+                                    // Example of using the increment.input.changed custom event
+                                    your_element_node.addEventListener('increment.input.changed', function(e) {
+                                        // your code here...
+                                    });
+                                </code>
+                            </pre>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+        {% endif %}

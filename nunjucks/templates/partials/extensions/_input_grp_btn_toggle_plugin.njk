@@ -16,7 +16,7 @@
 
                 <div class="row justify-content-center">
                     
-                    <div class="col-md-6">
+                    <div class="col-md-6 text-left">
                         
                         <div class="js-prism mb-3">
                             <div class="form-group">
@@ -58,15 +58,29 @@
                             
                             <p class="font-weight-bold">PLEASE NOTE:</p>
                             
-                            <p class="mb-2 small">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Delectus ea voluptas et, explicabo consequuntur nam sed vitae molestiae eum distinctio deserunt. Culpa doloremque dolorum, placeat nesciunt in est ad <samp class="font-weight-bold">sapiente</samp>!</p>
+                            <p class="mb-2 small">The functionality of this plugin is dependent upon the OBE:BS4 <samp class="font-weight-bold">Toggle Text Mini-Plugin</samp>!</p>
 
-                            <pre>
+                            <p class="mb-2 small">This plugin allows you to pair a button that can toggle virtually any string between two values, which is what the <samp class="font-weight-bold">Toggle Text Mini-Plugin</samp> provides. This plugin simply passes that value to hidden input, so the value a user selects can be sent with other form data for processing.</p>
+                            
+                            <p class="mb-2 small">Just like with the <samp class="font-weight-bold">Toggle Text Mini-Plugin</samp>, this plugin fires a couple of events from the toggle text functionality. This plugin also fires 2 additional events that you can hook into. Both <samp class="font-weight-bold">before.input.toggle</samp> and <samp class="font-weight-bold">after.input.toggle</samp> will give you both values at before and after stages of the swap.</p>
+
+                            <pre class="pb-2">
                                 <code class="language-javascript line-numbers">
-                                    // some code here...
+                                    // Example of using the before.input.toggle custom event
+                                    your_element_node.addEventListener('before.input.toggle', function(event) {
+                                        console.log('Displayed String: ' + event.detail.data.displayed);
+                                        console.log('Stored String: ' + event.detail.data.stored);
+                                    });
+                                    
+                                    // Example of using the after.input.toggle custom event
+                                    your_element_node.addEventListener('after.input.toggle', function(event) {
+                                        console.log('Displayed String: ' + event.detail.data.displayed);
+                                        console.log('Stored String: ' + event.detail.data.stored);
+                                    });
                                 </code>
                             </pre>
-                            
-                            <p class="mb-2 small">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Delectus ea voluptas et, explicabo consequuntur nam sed vitae molestiae eum distinctio deserunt. Culpa doloremque dolorum, placeat nesciunt in est ad <samp class="font-weight-bold">sapiente</samp>!</p>
+
+                            <p class="mb-2 small">In a sense, this is a lot like a radio button that has only 2 choices, and can be paired with an input! Using this for AM/PM or °F/°C along with a user-defined and formatted number(s)!</p>
 
                         </div>
 

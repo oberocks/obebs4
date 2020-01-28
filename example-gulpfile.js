@@ -263,7 +263,8 @@ gulp.task('concat-js', function(){
             './node_modules/obebs4/obebs4/core/js/obebs4-calendar-datepicker-plugin.js',
             './node_modules/obebs4/obebs4/core/js/obe-text-toggle-vanilla-mini-plugin.js',
             './node_modules/obebs4/obebs4/core/js/obebs4-dropdown-select-plugin.js',
-            './node_modules/obebs4/obebs4/core/js/obe-input-grp-btn-toggle-plugins.js'
+            './node_modules/obebs4/obebs4/core/js/obe-input-grp-btn-toggle-plugins.js',
+            './node_modules/obebs4/obebs4/core/js/obe-increment-counter-plugin.js'
         ]
     )
     .pipe(sourcemaps.init({loadMaps: true}))
@@ -295,7 +296,8 @@ gulp.task('concat-production-js', function(){
             './node_modules/obebs4/obebs4/core/js/obebs4-calendar-datepicker-plugin.js',
             './node_modules/obebs4/obebs4/core/js/obe-text-toggle-vanilla-mini-plugin.js',
             './node_modules/obebs4/obebs4/core/js/obebs4-dropdown-select-plugin.js',
-            './node_modules/obebs4/obebs4/core/js/obe-input-grp-btn-toggle-plugins.js'
+            './node_modules/obebs4/obebs4/core/js/obe-input-grp-btn-toggle-plugins.js',
+            './node_modules/obebs4/obebs4/core/js/obe-increment-counter-plugin.js'
         ]
     )
     .pipe(sourcemaps.init({loadMaps: true}))
@@ -325,7 +327,8 @@ gulp.task('concat-wds-js', function(){
             './node_modules/obebs4/obebs4/core/js/obebs4-calendar-datepicker-plugin.js',
             './node_modules/obebs4/obebs4/core/js/obe-text-toggle-vanilla-mini-plugin.js',
             './node_modules/obebs4/obebs4/core/js/obebs4-dropdown-select-plugin.js',
-            './node_modules/obebs4/obebs4/core/js/obe-input-grp-btn-toggle-plugins.js'
+            './node_modules/obebs4/obebs4/core/js/obe-input-grp-btn-toggle-plugins.js',
+            './node_modules/obebs4/obebs4/core/js/obe-increment-counter-plugin.js'
         ]
     )
     .pipe(sourcemaps.init({loadMaps: true}))

@@ -212,7 +212,58 @@ input.trigger("change")):(console.log("ERROR: The input selector: "+settings.hid
 // Grab all obe increment components in the DOM
 let components=document.querySelectorAll("[data-obe-input-data-toggle]");
 // Loop through all component instances and add event listners to each
-for(var i=0;i<components.length;i++)components[i].addEventListener("after.text.toggle",function(event){
+for(var i=0;i<components.length;i++)components[i].addEventListener("before.text.toggle",function(event){this.dispatchEvent(new CustomEvent("before.input.toggle",{bubbles:!0,detail:{data:{displayed:event.detail.data.displayed,stored:event.detail.data.stored}}}))}),components[i].addEventListener("after.text.toggle",function(event){
 // add the unescaped (IE displayed) value to the component's hidden input
-this.closest("[data-obe-input-data-toggle]").parentNode.querySelector('input[type="hidden"]').value=event.detail.data.displayed})});// end domReady()
+this.closest("[data-obe-input-data-toggle]").parentNode.querySelector('input[type="hidden"]').value=event.detail.data.displayed,this.dispatchEvent(new CustomEvent("after.input.toggle",{bubbles:!0,detail:{data:{displayed:event.detail.data.displayed,stored:event.detail.data.stored}}}))})}),(domReady=function(callback){"interactive"===document.readyState||"complete"===document.readyState?callback():document.addEventListener("DOMContentLoaded",callback)})(function(){
+// Grab all obe increment components in the DOM
+let components=document.querySelectorAll("[data-obe-increment-component]");
+// utility function
+const sanitizeValue=function(val,preUnits,postUnits){let output=val.replace(preUnits,"").replace(postUnits,"").replace(/[^0-9.-]/g,"").replace(/(\..*)\./g,"$1").replace(/(?!^)-/g,"");return Number(output)},addZeroes=function(num,decimals,seperatorsBool){let output=num;if(decimals&&(output=num.toFixed(decimals)),seperatorsBool){let commas=output.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g,"$1,");output=commas}return output};
+// utility function
+// Loop through all component instances and add event listners to each
+for(var i=0;i<components.length;i++){
+// assign the current component to a var
+let component=components[i],upBtn=component.querySelector("[data-obe-increment-up]"),downBtn=component.querySelector("[data-obe-increment-down]"),input=component.querySelector("input");
+// grab the elements needed for event listners and assign them to vars
+// disable double tap click to zoom functionality for mobile devices
+upBtn.style.touchAction="manipulation",downBtn.style.touchAction="manipulation",upBtn.querySelector("button").style.touchAction="manipulation",downBtn.querySelector("button").style.touchAction="manipulation";
+// collect, process and assign string values from component data attributes
+let min=input.dataset.min?Number(input.dataset.min):0,max=input.dataset.max?Number(input.dataset.max):10,increment=input.dataset.increment?Number(input.dataset.increment):1,leadingUnits=input.dataset.leadingUnits?input.dataset.leadingUnits:null,trailingUnits=input.dataset.trailingUnits?input.dataset.trailingUnits:null,decimalPlaces=input.dataset.decimalPlaces?Number(input.dataset.decimalPlaces):null,seperators=!!input.dataset.useSeperators,decimals=null!==decimalPlaces&&decimalPlaces,leading=null===leadingUnits?"":leadingUnits,trailing=null===trailingUnits?"":trailingUnits,eventData={value:{initial:null,cleaned:null,number:null,final:null,min:min,max:max,increment:increment,leadingUnits:leadingUnits,trailingUnits:trailingUnits,decimalPlaces:decimalPlaces}};
+// add the event listner functinality to the component's increment up button
+upBtn.addEventListener("click",function(){
+// grab the current value and clean it
+var value=input.value;let cleanValue=sanitizeValue(value,leading,trailing),output=cleanValue;
+// init a var to hold for the final output value
+// conditionally check the cleaned value against the min and max values
+cleanValue>=min&&cleanValue<max?output=Math.round(1e12*(cleanValue+increment))/1e12:cleanValue>=max&&(output=max),
+// double check the output for any calculations that may have pushed the output value over the max value
+output>max&&(output=max);
+// update the component input with the new value
+let finalStr=leading+addZeroes(output,decimals,seperators)+trailing;input.value=finalStr,
+// set event data for this interaction
+eventData.value.initial=value,eventData.value.cleaned=cleanValue,eventData.value.number=output,eventData.value.final=finalStr,this.dispatchEvent(new CustomEvent("increment.up.clicked",{bubbles:!0,detail:eventData}))}),
+// add the event listner functinality to the component's increment down button
+downBtn.addEventListener("click",function(){
+// grab the current value and clean it
+var value=input.value;let cleanValue=sanitizeValue(value,leading,trailingUnits),output=cleanValue;
+// init a var to hold for the final output value
+// conditionally check the cleaned value against the min and max values
+cleanValue>min&&cleanValue<=max?output=Math.round(1e12*(cleanValue-increment))/1e12:cleanValue<=min&&(output=min),
+// double check the output for any calculations that may have pushed the output value under the min value
+output<min&&(output=min);
+// update the component input with the new value
+let finalStr=leading+addZeroes(output,decimals,seperators)+trailing;input.value=finalStr,
+// set event data for this interaction
+eventData.value.initial=value,eventData.value.cleaned=cleanValue,eventData.value.number=output,eventData.value.final=finalStr,this.dispatchEvent(new CustomEvent("increment.down.clicked",{bubbles:!0,detail:eventData}))}),
+// add the event listner functinality to the component's input to handle use cases where a user types in a value directly into the input element
+input.addEventListener("change",function(){
+// grab the current value and clean it
+var value=this.value;let cleanValue=sanitizeValue(value,leading,trailing),output=cleanValue;
+// init a var to hold for the final output value
+// conditionally check the cleaned value against the min and max values
+cleanValue>=max?output=Math.round(1e12*max)/1e12:cleanValue<=min&&(output=Math.round(1e12*min)/1e12);
+// update the component input with the new value
+let finalStr=leading+addZeroes(output,decimals,seperators)+trailing;this.value=finalStr,
+// set event data for this interaction
+eventData.value.initial=value,eventData.value.cleaned=cleanValue,eventData.value.number=output,eventData.value.final=finalStr,this.dispatchEvent(new CustomEvent("increment.input.changed",{bubbles:!0,detail:eventData}))});let componentEventStr="after.counter.incremented";component.addEventListener("increment.up.clicked",function(e){let data=e.detail;data.value.trigger="increment.up.clicked",this.dispatchEvent(new CustomEvent(componentEventStr,{bubbles:!0,detail:data}))}),component.addEventListener("increment.down.clicked",function(e){let data=e.detail;data.value.trigger="increment.down.clicked",this.dispatchEvent(new CustomEvent(componentEventStr,{bubbles:!0,detail:data}))}),component.addEventListener("increment.input.changed",function(e){let data=e.detail;data.value.trigger="increment.input.changed",this.dispatchEvent(new CustomEvent(componentEventStr,{bubbles:!0,detail:data}))})}});// end domReady()
 //# sourceMappingURL=obebs4.wds.bundle.js.map
