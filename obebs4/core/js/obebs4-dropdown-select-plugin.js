@@ -81,7 +81,29 @@ jQuery(document).ready(function($) {
 
             };
 
+            el.matchStateToHiddenVal = function() {
+                if (settings.formMode === true) {
+                    let parent = $(this).parent();
+                    let hiddenInput = parent.find(settings.hiddenInputSelector).first();
+                    if (hiddenInput) {
+                        let value = hiddenInput.val();
+                        parent.parent().find(settings.optionSelector).each(function( index ) {
+                            var elVal = $(this).data('option-value');
+                            if (elVal === value) {
+                                let content = $(this).clone(true, true);
+                                let target = parent.find(settings.cloneTargetSelector);
+                                $(target).html(content);
+                                let classToRemoveTemp = settings.optionSelector;
+                                let classToRemove = classToRemoveTemp.replace('.', '');
+                                $(target).find(settings.optionSelector).removeClass(classToRemove);
+                            }
+                        });
+                    }
+                }
+            };
+
             el.init();
+            el.matchStateToHiddenVal();
 
         });
         

@@ -278,7 +278,7 @@ touch obebs4_settings.json
 
 **Step 8**: Next you'll want to set your FontAwesome version in your project's `package.json` file. To do this, simply check out the most recent [FontAwesome version](https://fontawesome.com/), then adjust the line below accordingly with the newest FA version number, and finally add it in just below your `package.json` file's `"version": "X.X.X"` key/value pair (don't forget the ending comma!):
 ```json
-"faversion": "5.12.0",
+"faversion": "5.12.1",
 ```
 
 **Step 9**: If you don't have a gulp file in your project yet, just run this command to add it from the OBE:BS4 module files:
@@ -288,7 +288,7 @@ cp node_modules/obebs4/example-gulpfile.js gulpfile.js
 
 **Step 10**: Now it's time to compile your library site! To do that, run the following gulp command in your console:
 ```bash
-gulp obebs4
+npm run obebs4
 ```
 
 **Step 11**: Open up your home page:

@@ -1,7 +1,7 @@
 {
   "name": "obebs4",
-  "version": "0.8.26",
-  "faversion": "5.12.0",
+  "version": "0.8.27",
+  "faversion": "5.12.1",
   "description": "The OBE:BS4 Design System is a self-reflexive reference library design system based on the most popular web framework in the world, Bootstrap! The OBE:BS4 system was built specifically to give all project stakeholders full visual, technical, and tactile access to every color, font, element, component and layout for any web project.",
   "main": "index.js",
   "author": "Matt McT",
@@ -43,6 +43,8 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "preinstall": "npx npm-force-resolutions",
+    "obebs4": "node ./node_modules/gulp/bin/gulp.js obebs4",
     "create-library-directory": "node --eval \"if (!fs.existsSync('./library')){fs.mkdirSync('./node_modules/obebs4-design-system/library')}\"",
     "create-library-css-directory": "node --eval \"if (!fs.existsSync('./library/css')){fs.mkdirSync('./node_modules/obebs4-design-system/library/css')}\"",
     "create-library-js-directory": "node --eval \"if (!fs.existsSync('./library/js')){fs.mkdirSync('./node_modules/obebs4-design-system/library/js')}\"",
@@ -55,5 +57,8 @@
     "create-test-directory": "node --eval \"if (!fs.existsSync('./test-directory')){fs.mkdirSync('.//test-directory')}\"",
     "copy-index-html": "node --eval \"fs.createReadStream('./library/index.html').pipe(fs.createWriteStream('./test-directory/index.html'))\"",
     "create-and-copy-test": "npm run create-test-directory && npm run copy-index-html"
+  },
+  "resolutions": {
+    "graceful-fs": "4.2.3"
   }
 }
