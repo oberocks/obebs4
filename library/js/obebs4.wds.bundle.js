@@ -209,12 +209,22 @@ input.val(value),
 input.trigger("change")):(console.log("ERROR: The input selector: "+settings.hiddenInputSelector+" was not found."),err=!0)),err&&console.log("FINAL ERROR: A dropdown select element interaction failed. Please check that your markup selectors match your javascript options or use the .dropdown-select defaults.");
 // get the faux select option value and apply value to hidden input + trigger a change event
 }))},el.matchStateToHiddenVal=function(){if(!0===settings.formMode){let parent=$(this).parent(),hiddenInput=parent.find(settings.hiddenInputSelector).first();if(hiddenInput){let value=hiddenInput.val();parent.parent().find(settings.optionSelector).each((function(index){if($(this).data("option-value")===value){let content=$(this).clone(!0,!0),target=parent.find(settings.cloneTargetSelector);$(target).html(content);let classToRemove=settings.optionSelector.replace(".","");$(target).find(settings.optionSelector).removeClass(classToRemove)}}))}}},el.init(),el.matchStateToHiddenVal()}))},$(".dropdown-select").obeDropdownSelect()})),(domReady=function(callback){"interactive"===document.readyState||"complete"===document.readyState?callback():document.addEventListener("DOMContentLoaded",callback)})((function(){
+// Utility function
+// Source: https://stackoverflow.com/questions/1787322/htmlspecialchars-equivalent-in-javascript
+var obeEscapeHtml=function(text){var map={"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#039;"};return text.replace(/[&<>"']/g,(function(m){return map[m]}))},obeUnescapeHtml=function(text){return text.replace(/&amp;/g,"&").replace(/&lt;/g,"<").replace(/&gt;/g,">").replace(/&quot;/g,'"').replace(/&#039;/g,"'")};
+// Utility function
+// Source: https://stackoverflow.com/questions/1787322/htmlspecialchars-equivalent-in-javascript
 // Grab all obe increment components in the DOM
 let components=document.querySelectorAll("[data-obe-input-data-toggle]");
 // Loop through all component instances and add event listners to each
-for(var i=0;i<components.length;i++)components[i].addEventListener("before.text.toggle",(function(event){this.dispatchEvent(new CustomEvent("before.input.toggle",{bubbles:!0,detail:{data:{displayed:event.detail.data.displayed,stored:event.detail.data.stored}}}))})),components[i].addEventListener("after.text.toggle",(function(event){
+for(var i=0;i<components.length;i++){
+// set vars for this component
+let componentParent=components[i].parentNode,toggleHiddenInput=componentParent.querySelector("input[type=hidden]"),hiddenValueOnLoad=obeUnescapeHtml(toggleHiddenInput.value),textToggleElement=componentParent.querySelector("[data-obe-text-toggle]"),textToggleOnLoad_stored=obeUnescapeHtml(textToggleElement.dataset.obeTextToggle),textToggleOnLoad_displayed=textToggleElement.textContent;
+// update the state of the text toggle trigger and it's data attribute if a value is found in the hidden input on page load
+hiddenValueOnLoad.length>0&&hiddenValueOnLoad===textToggleOnLoad_stored&&hiddenValueOnLoad!=textToggleOnLoad_displayed&&(textToggleElement.textContent=hiddenValueOnLoad,toggleHiddenInput.value=obeEscapeHtml(hiddenValueOnLoad),textToggleElement.dataset.obeTextToggle=obeEscapeHtml(textToggleOnLoad_displayed)),components[i].addEventListener("before.text.toggle",(function(event){this.dispatchEvent(new CustomEvent("before.input.toggle",{bubbles:!0,detail:{data:{displayed:event.detail.data.displayed,stored:event.detail.data.stored}}}))})),components[i].addEventListener("after.text.toggle",(function(event){
 // add the unescaped (IE displayed) value to the component's hidden input
-this.closest("[data-obe-input-data-toggle]").parentNode.querySelector('input[type="hidden"]').value=event.detail.data.displayed,this.dispatchEvent(new CustomEvent("after.input.toggle",{bubbles:!0,detail:{data:{displayed:event.detail.data.displayed,stored:event.detail.data.stored}}}))}))})),(domReady=function(callback){"interactive"===document.readyState||"complete"===document.readyState?callback():document.addEventListener("DOMContentLoaded",callback)})((function(){
+this.closest("[data-obe-input-data-toggle]").parentNode.querySelector('input[type="hidden"]').value=event.detail.data.displayed,this.dispatchEvent(new CustomEvent("after.input.toggle",{bubbles:!0,detail:{data:{displayed:event.detail.data.displayed,stored:event.detail.data.stored}}}))}))}// end for loop
+})),(domReady=function(callback){"interactive"===document.readyState||"complete"===document.readyState?callback():document.addEventListener("DOMContentLoaded",callback)})((function(){
 // Grab all obe increment components in the DOM
 let components=document.querySelectorAll("[data-obe-increment-component]");
 // utility function
