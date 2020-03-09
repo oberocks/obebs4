@@ -1,5 +1,5 @@
 # Node.js Development Modules
-/node_modules
+node_modules
 
 # General
 .DS_Store
