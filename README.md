@@ -286,12 +286,43 @@ touch obebs4_settings.json
 cp node_modules/obebs4/example-gulpfile.js gulpfile.js
 ```
 
-**Step 10**: Now it's time to compile your library site! To do that, run the following gulp command in your console:
+**Step 10**: Next you'll need to add the following npm script (or scripts) to your project's `package.json` file:
+```bash
+"scripts": {
+  "obebs4": "node ./node_modules/gulp/bin/gulp.js obebs4"
+}
+```
+```bash
+"scripts": {
+  "obebs4": "node ./node_modules/gulp/bin/gulp.js obebs4",
+  "ingest_obebs4_settings": "node ./node_modules/gulp/bin/gulp.js ingest_obebs4_settings",
+  "compile_sass": "node ./node_modules/gulp/bin/gulp.js compile_sass",
+  "move_images": "node ./node_modules/gulp/bin/gulp.js move_images",
+  "move_favicons": "node ./node_modules/gulp/bin/gulp.js move_favicons",
+  "compile_nunjucks": "node ./node_modules/gulp/bin/gulp.js compile_nunjucks",
+  "concat_library_js": "node ./node_modules/gulp/bin/gulp.js concat_library_js",
+  "concat_production_js": "node ./node_modules/gulp/bin/gulp.js concat_production_js",
+  "concat_wds_js": "node ./node_modules/gulp/bin/gulp.js concat_wds_js",
+  "concat_plugins_js": "node ./node_modules/gulp/bin/gulp.js concat_plugins_js",
+  "copy_prism_js": "node ./node_modules/gulp/bin/gulp.js copy_prism_js",
+  "copy_datatables_js": "node ./node_modules/gulp/bin/gulp.js copy_datatables_js",
+  "copy_tinycolor_js": "node ./node_modules/gulp/bin/gulp.js copy_tinycolor_js",
+  "concat_css": "node ./node_modules/gulp/bin/gulp.js concat_css",
+  "concat_production_css": "node ./node_modules/gulp/bin/gulp.js concat_production_css",
+  "concat_wds_css": "node ./node_modules/gulp/bin/gulp.js concat_wds_css",
+  "concat_plugins_css": "node ./node_modules/gulp/bin/gulp.js concat_plugins_css",
+  "copy_prism_css": "node ./node_modules/gulp/bin/gulp.js copy_prism_css",
+  "copy_datatables_css": "node ./node_modules/gulp/bin/gulp.js copy_datatables_css",
+  "clean_up": "node ./node_modules/gulp/bin/gulp.js clean_up"
+}
+```
+
+**Step 11**: Now it's time to compile your library site! To do that, run the following gulp command in your console:
 ```bash
 npm run obebs4
 ```
 
-**Step 11**: Open up your home page:
+**Step 12**: Open up your home page:
 ```bash
 open library/index.html
 ```
