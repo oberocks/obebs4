@@ -416,6 +416,11 @@ The following changes were made to the default `obebs4_settings.json` file durin
 ```
 
 ```json
+"enable-obewds-fill-wheel-colors": "true",
+"enable-obewds-fill-tints-shades": "true",
+```
+
+```json
 "color-50-lighten-percent": "30%",
 "color-100-lighten-percent": "20%",
 "color-200-lighten-percent": "15%",
