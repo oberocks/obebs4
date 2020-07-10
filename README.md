@@ -593,7 +593,21 @@ The following changes were made to the default `obebs4_settings.json` file durin
 ```
 
 ```json
-"label-margin-bottom": "0.5rem"
+"label-margin-bottom": "0.5rem",
+"input-padding-y": "$input-btn-padding-y",
+"input-padding-x": "$input-btn-padding-x",
+"input-font-family": "$input-btn-font-family",
+"input-font-size": "$input-btn-font-size",
+"input-font-weight": "$font-weight-base",
+"input-line-height": "$input-btn-line-height",
+"input-padding-y-sm": "$input-btn-padding-y-sm",
+"input-padding-x-sm": "$input-btn-padding-x-sm",
+"input-font-size-sm": "$input-btn-font-size-sm",
+"input-line-height-sm": "$input-btn-line-height-sm",
+"input-padding-y-lg": "$input-btn-padding-y-lg",
+"input-padding-x-lg": "$input-btn-padding-x-lg",
+"input-font-size-lg": "$input-btn-font-size-lg",
+"input-line-height-lg": "$input-btn-line-height-lg"
 ```
 <!---
 ## Customizing Your Web Design System
