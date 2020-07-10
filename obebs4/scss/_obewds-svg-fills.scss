@@ -1,0 +1,97 @@
+// stylelint-disable declaration-no-important
+
+@if $enable-obewds-fill-wheel-colors {
+	
+	@each $key, $value in $obebs4-and-bootstrap-all-colors {
+		@include obewds-fill-variant(".fill-#{$key}", $value);
+	}
+	
+}
+
+@if $enable-obewds-fill-tints-shades {
+	
+	@each $key, $value in $whites {
+		@include obewds-fill-variant(".fill-white-#{$key}", $value);
+	}
+
+	@each $key, $value in $light-grays {
+		@include obewds-fill-variant(".fill-light-gray-#{$key}", $value);
+	}
+
+	@each $key, $value in $grays {
+		@include obewds-fill-variant(".fill-gray-#{$key}", $value);
+	}
+
+	@each $key, $value in $dark-grays {
+		@include obewds-fill-variant(".fill-dark-gray-#{$key}", $value);
+	}
+
+	@each $key, $value in $blacks {
+		@include obewds-fill-variant(".fill-black-#{$key}", $value);
+	}
+
+	@each $key, $value in $reds {
+		@include obewds-fill-variant(".fill-red-#{$key}", $value);
+	}
+
+	@each $key, $value in $roses {
+		@include obewds-fill-variant(".fill-rose-#{$key}", $value);
+	}
+
+	@each $key, $value in $magentas {
+		@include obewds-fill-variant(".fill-magenta-#{$key}", $value);
+	}
+
+	@each $key, $value in $violets {
+		@include obewds-fill-variant(".fill-violet-#{$key}", $value);
+	}
+
+	@each $key, $value in $blues {
+		@include obewds-fill-variant(".fill-blue-#{$key}", $value);
+	}
+
+	@each $key, $value in $azures {
+		@include obewds-fill-variant(".fill-azure-#{$key}", $value);
+	}
+
+	@each $key, $value in $cyans {
+		@include obewds-fill-variant(".fill-cyan-#{$key}", $value);
+	}
+
+	@each $key, $value in $spring-greens {
+		@include obewds-fill-variant(".fill-spring-green-#{$key}", $value);
+	}
+
+	@each $key, $value in $greens {
+		@include obewds-fill-variant(".fill-green-#{$key}", $value);
+	}
+
+	@each $key, $value in $chartreuses {
+		@include obewds-fill-variant(".fill-chartreuse-#{$key}", $value);
+	}
+
+	@each $key, $value in $yellows {
+		@include obewds-fill-variant(".fill-yellow-#{$key}", $value);
+	}
+
+	@each $key, $value in $oranges {
+		@include obewds-fill-variant(".fill-orange-#{$key}", $value);
+	}
+
+	@each $key, $value in $orange-grays {
+		@include obewds-fill-variant(".fill-orange-gray-#{$key}", $value);
+	}
+
+	@each $key, $value in $dark-gray-oranges {
+		@include obewds-fill-variant(".fill-dark-gray-orange-#{$key}", $value);
+	}
+
+	@each $key, $value in $blue-grays {
+		@include obewds-fill-variant(".fill-blue-gray-#{$key}", $value);
+	}
+
+	@each $key, $value in $light-gray-azures {
+		@include obewds-fill-variant(".fill-light-gray-azure-#{$key}", $value);
+	}
+	
+}

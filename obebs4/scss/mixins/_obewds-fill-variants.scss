@@ -1,0 +1,9 @@
+// stylelint-disable declaration-no-important
+
+// Contextual SVG backgrounds
+
+@mixin obewds-fill-variant($parent, $color, $ignore-warning: false) {
+    #{$parent} {
+      fill: $color !important;
+    }
+}

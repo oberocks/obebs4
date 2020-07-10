@@ -322,6 +322,20 @@
                 "link" : "Toast Notification Colors",
                 "descrip" : "These are examples of color variations for Bootstrap 4 toast notification components.",
                 "id" : "toast-notification-colors-section"
+            },{
+                "index" : 45,
+                "head" : "SVG Fill",
+                "subhead" : "C O L O R S",
+                "link" : "SVG Fill Colors",
+                "descrip" : "These are your svg fill color options.",
+                "id" : "svg-fill-colors-section"
+            },{
+                "index" : 46,
+                "head" : "SVG Fill",
+                "subhead" : "T I N T S / S H A D E S",
+                "link" : "SVG Fill Tints/Shades",
+                "descrip" : "These are sets of tints (via adding white) and shades (via adding black) for each of your SVG fill colors.",
+                "id" : "svg-fill-tints-shades-section"
             }
         ]
     },
