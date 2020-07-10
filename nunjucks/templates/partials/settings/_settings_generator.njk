@@ -844,56 +844,81 @@
                         {{ macros.settings_text_input('btn-line-height', 'Button Line Height', global_strings['sys']['btn-line-height'], obe_settings['btn-line-height'], note='Sets $btn-line-height') }}
 
                         <!-- HOLD FOR: $btn-white-space: null !default; // Set to `nowrap` to prevent text wrapping -->
+                        {{ macros.settings_text_input('btn-white-space', 'Button White Space', global_strings['sys']['btn-white-space'], obe_settings['btn-white-space'], note='Sets $btn-white-space. Set to "nowrap" to prevent text wrapping.') }}
 
                         <!-- HOLD FOR: $btn-padding-y-sm: $input-btn-padding-y-sm !default; -->
+                        {{ macros.settings_text_input('btn-padding-y-sm', 'Button Padding Y Small', global_strings['sys']['btn-padding-y-sm'], obe_settings['btn-padding-y-sm'], note='Sets $btn-padding-y-sm') }}
 
                         <!-- HOLD FOR: $btn-padding-x-sm: $input-btn-padding-x-sm !default; -->
+                        {{ macros.settings_text_input('btn-padding-x-sm', 'Button Padding X Small', global_strings['sys']['btn-padding-x-sm'], obe_settings['btn-padding-x-sm'], note='Sets $btn-padding-x-sm') }}
 
                         <!-- HOLD FOR: $btn-font-size-sm: $input-btn-font-size-sm !default; -->
+                        {{ macros.settings_text_input('btn-font-size-sm', 'Button Font Size Small', global_strings['sys']['btn-font-size-sm'], obe_settings['btn-font-size-sm'], note='Sets $btn-font-size-sm') }}
 
                         <!-- HOLD FOR: $btn-line-height-sm: $input-btn-line-height-sm !default; -->
+                        {{ macros.settings_text_input('btn-line-height-sm', 'Button Line Height Small', global_strings['sys']['btn-line-height-sm'], obe_settings['btn-line-height-sm'], note='Sets $btn-line-height-sm') }}
 
                         <!-- HOLD FOR: $btn-padding-y-lg: $input-btn-padding-y-lg !default; -->
+                        {{ macros.settings_text_input('btn-padding-y-lg', 'Button Padding Y Large', global_strings['sys']['btn-padding-y-lg'], obe_settings['btn-padding-y-lg'], note='Sets $btn-padding-y-lg') }}
 
                         <!-- HOLD FOR: $btn-padding-x-lg: $input-btn-padding-x-lg !default; -->
+                        {{ macros.settings_text_input('btn-padding-x-lg', 'Button Padding X Large', global_strings['sys']['btn-padding-x-lg'], obe_settings['btn-padding-x-lg'], note='Sets $btn-padding-x-lg') }}
 
                         <!-- HOLD FOR: $btn-font-size-lg: $input-btn-font-size-lg !default; -->
+                        {{ macros.settings_text_input('btn-font-size-lg', 'Button Font Size Large', global_strings['sys']['btn-font-size-lg'], obe_settings['btn-font-size-lg'], note='Sets $btn-font-size-lg') }}
 
                         <!-- HOLD FOR: $btn-line-height-lg: $input-btn-line-height-lg !default; -->
+                        {{ macros.settings_text_input('btn-line-height-lg', 'Button Line Height Large', global_strings['sys']['btn-line-height-lg'], obe_settings['btn-line-height-lg'], note='Sets $btn-line-height-lg') }}
 
                         <!-- HOLD FOR: $btn-border-width: $input-btn-border-width !default; -->
+                        {{ macros.settings_text_input('btn-border-width', 'Button Border Width', global_strings['sys']['btn-border-width'], obe_settings['btn-border-width'], note='Sets $btn-border-width') }}
 
                         <!-- HOLD FOR: $btn-font-weight: $font-weight-normal !default; -->
+                        {{ macros.settings_text_input('btn-font-weight', 'Button Font Weight', global_strings['sys']['btn-font-weight'], obe_settings['btn-font-weight'], note='Sets $btn-font-weight') }}
 
                         <!-- HOLD FOR: $btn-box-shadow: inset 0 1px 0 rgba($white, .15), 0 1px 1px rgba($black, .075) !default; -->
+                        {{ macros.settings_text_input('btn-box-shadow', 'Button Box Shadow', global_strings['sys']['btn-box-shadow'], obe_settings['btn-box-shadow'], note='Sets $btn-box-shadow') }}
 
                         <!-- HOLD FOR: $btn-focus-width: $input-btn-focus-width !default; -->
+                        {{ macros.settings_text_input('btn-focus-width', 'Button Focus Width', global_strings['sys']['btn-focus-width'], obe_settings['btn-focus-width'], note='Sets $btn-focus-width') }}
 
                         <!-- HOLD FOR: $btn-focus-box-shadow: $input-btn-focus-box-shadow !default; -->
+                        {{ macros.settings_text_input('btn-focus-box-shadow', 'Button Focus Box Shadow', global_strings['sys']['btn-focus-box-shadow'], obe_settings['btn-focus-box-shadow'], note='Sets $btn-focus-box-shadow') }}
 
                         <!-- HOLD FOR: $btn-disabled-opacity: 0.65 !default; -->
+                        {{ macros.settings_number_step_input('btn-disabled-opacity', 'Button Disabled Opacity', global_strings['sys']['btn-disabled-opacity'], obe_settings['btn-disabled-opacity'], '', '1', '0', '0.05', note='Sets $btn-disabled-opacity') }}
 
                         <!-- HOLD FOR: $btn-active-box-shadow: inset 0 3px 5px rgba($black, .125) !default; -->
+                        {{ macros.settings_text_input('btn-active-box-shadow', 'Button Active Box Shadow', global_strings['sys']['btn-active-box-shadow'], obe_settings['btn-active-box-shadow'], note='Sets $btn-active-box-shadow') }}
 
                         <!-- HOLD FOR: $btn-link-disabled-color: $gray-600 !default; -->
+                        {{ macros.settings_contextual_selects('btn-link-disabled-color', 'Button Link Disabled Color', obe_settings['btn-link-disabled-color-C'], obe_settings['btn-link-disabled-color-M'], note='Sets $btn-link-disabled-color') }}
 
                         <!-- HOLD FOR: $btn-block-spacing-y: 0.5rem !default; -->
+                        {{ macros.settings_number_step_input('btn-block-spacing-y', 'Button Block Spacing Y', global_strings['sys']['btn-block-spacing-y'], obe_settings['btn-block-spacing-y'], 'rem', '10', '0', '0.05', note='Sets $btn-block-spacing-y') }}
 
                         <!-- // Allows for customizing button radius independently from global border radius -->
 
                         <!-- HOLD FOR: $btn-border-radius: $border-radius !default; -->
+                        {{ macros.settings_text_input('btn-border-radius', 'Button Border Radius', global_strings['sys']['btn-border-radius'], obe_settings['btn-border-radius'], note='Sets $btn-border-radius. Use this setting to set a button radius independently from the global border radius.') }}
 
                         <!-- HOLD FOR: $btn-border-radius-lg: $border-radius-lg !default; -->
+                        {{ macros.settings_text_input('btn-border-radius-lg', 'Button Border Radius Large', global_strings['sys']['btn-border-radius-lg'], obe_settings['btn-border-radius-lg'], note='Sets $btn-border-radius-lg. Use this setting to set a large button radius independently from the global border radius.') }}
 
                         <!-- HOLD FOR: $btn-border-radius-sm: $border-radius-sm !default; -->
+                        {{ macros.settings_text_input('btn-border-radius-sm', 'Button Border Radius Small', global_strings['sys']['btn-border-radius-sm'], obe_settings['btn-border-radius-sm'], note='Sets $btn-border-radius-sm. Use this setting to set a small button radius independently from the global border radius.') }}
 
                         <!-- HOLD FOR: $btn-transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out !default; -->
+                        {{ macros.settings_text_input('btn-transition', 'Button Transition', global_strings['sys']['btn-transition'], obe_settings['btn-transition'], note='Sets $btn-transition') }}
 
 
+                        
+                        <h3 class="pt-4 pb-2">Core Forms Options</h3>
                         
                         <!-- FORMS SECTION -->
 
                         <!-- HOLD FOR: $label-margin-bottom: 0.5rem !default; -->
+                        {{ macros.settings_number_step_input('label-margin-bottom', 'Label Margin Bottom', global_strings['sys']['label-margin-bottom'], obe_settings['label-margin-bottom'], 'rem', '10', '0', '0.05', note='Sets $label-margin-bottom') }}
 
                         <!-- HOLD FOR: $input-padding-y: $input-btn-padding-y !default; -->
 
