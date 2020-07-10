@@ -1,0 +1,9 @@
+// stylelint-disable declaration-no-important
+
+// Contextual SVG Strokes
+
+@mixin obewds-stroke-variant($parent, $color, $ignore-warning: false) {
+    #{$parent} {
+      stroke: $color !important;
+    }
+}

@@ -418,6 +418,8 @@ The following changes were made to the default `obebs4_settings.json` file durin
 ```json
 "enable-obewds-fill-wheel-colors": "true",
 "enable-obewds-fill-tints-shades": "true",
+"enable-obewds-stroke-wheel-colors": "true",
+"enable-obewds-stroke-tints-shades": "true",
 ```
 
 ```json

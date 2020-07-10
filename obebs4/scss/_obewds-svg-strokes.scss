@@ -1,0 +1,97 @@
+// stylelint-disable declaration-no-important
+
+@if $enable-obewds-stroke-wheel-colors {
+	
+	@each $key, $value in $obebs4-and-bootstrap-all-colors {
+		@include obewds-stroke-variant(".stroke-#{$key}", $value);
+	}
+	
+}
+
+@if $enable-obewds-stroke-tints-shades {
+	
+	@each $key, $value in $whites {
+		@include obewds-stroke-variant(".stroke-white-#{$key}", $value);
+	}
+
+	@each $key, $value in $light-grays {
+		@include obewds-stroke-variant(".stroke-light-gray-#{$key}", $value);
+	}
+
+	@each $key, $value in $grays {
+		@include obewds-stroke-variant(".stroke-gray-#{$key}", $value);
+	}
+
+	@each $key, $value in $dark-grays {
+		@include obewds-stroke-variant(".stroke-dark-gray-#{$key}", $value);
+	}
+
+	@each $key, $value in $blacks {
+		@include obewds-stroke-variant(".stroke-black-#{$key}", $value);
+	}
+
+	@each $key, $value in $reds {
+		@include obewds-stroke-variant(".stroke-red-#{$key}", $value);
+	}
+
+	@each $key, $value in $roses {
+		@include obewds-stroke-variant(".stroke-rose-#{$key}", $value);
+	}
+
+	@each $key, $value in $magentas {
+		@include obewds-stroke-variant(".stroke-magenta-#{$key}", $value);
+	}
+
+	@each $key, $value in $violets {
+		@include obewds-stroke-variant(".stroke-violet-#{$key}", $value);
+	}
+
+	@each $key, $value in $blues {
+		@include obewds-stroke-variant(".stroke-blue-#{$key}", $value);
+	}
+
+	@each $key, $value in $azures {
+		@include obewds-stroke-variant(".stroke-azure-#{$key}", $value);
+	}
+
+	@each $key, $value in $cyans {
+		@include obewds-stroke-variant(".stroke-cyan-#{$key}", $value);
+	}
+
+	@each $key, $value in $spring-greens {
+		@include obewds-stroke-variant(".stroke-spring-green-#{$key}", $value);
+	}
+
+	@each $key, $value in $greens {
+		@include obewds-stroke-variant(".stroke-green-#{$key}", $value);
+	}
+
+	@each $key, $value in $chartreuses {
+		@include obewds-stroke-variant(".stroke-chartreuse-#{$key}", $value);
+	}
+
+	@each $key, $value in $yellows {
+		@include obewds-stroke-variant(".stroke-yellow-#{$key}", $value);
+	}
+
+	@each $key, $value in $oranges {
+		@include obewds-stroke-variant(".stroke-orange-#{$key}", $value);
+	}
+
+	@each $key, $value in $orange-grays {
+		@include obewds-stroke-variant(".stroke-orange-gray-#{$key}", $value);
+	}
+
+	@each $key, $value in $dark-gray-oranges {
+		@include obewds-stroke-variant(".stroke-dark-gray-orange-#{$key}", $value);
+	}
+
+	@each $key, $value in $blue-grays {
+		@include obewds-stroke-variant(".stroke-blue-gray-#{$key}", $value);
+	}
+
+	@each $key, $value in $light-gray-azures {
+		@include obewds-stroke-variant(".stroke-light-gray-azure-#{$key}", $value);
+	}
+	
+}

@@ -1,0 +1,53 @@
+<!-- _stroke_colors.njk -->
+		{% if obe_settings['enable-obewds-stroke-wheel-colors'] === 'true' %}
+        <div class="container-fluid pt-5 text-center bg-white text-dark">
+        
+            <div class="container">
+
+                <div class="row justify-content-center">
+                
+                    <div id="{{ global_strings['colors']['sections'][47]['id'] }}" class="col-12 pb-5">
+                    
+                        {{ macros.page_section_heading(global_strings['colors']['sections'][47]['head'], global_strings['colors']['sections'][47]['subhead'], global_strings['colors']['sections'][47]['descrip']) }}
+                        
+                        {{ macros.svg_stroke_colors('primary', 'Primary') }}
+                        {{ macros.svg_stroke_colors('secondary', 'Secondary') }}
+                        {{ macros.svg_stroke_colors('success', 'Success') }}
+                        {{ macros.svg_stroke_colors('danger', 'Danger') }}
+                        {{ macros.svg_stroke_colors('warning', 'Warning') }}
+                        {{ macros.svg_stroke_colors('info', 'Info') }}
+                        {{ macros.svg_stroke_colors('light', 'Light') }}
+                        {{ macros.svg_stroke_colors('dark', 'Dark') }}
+                        
+                        {{ macros.svg_stroke_colors('white', 'White') }}
+                        {{ macros.svg_stroke_colors('light-gray', 'Light Gray') }}
+                        {{ macros.svg_stroke_colors('gray', 'Gray') }}
+                        {{ macros.svg_stroke_colors('dark-gray', 'Dark Gray') }}
+                        {{ macros.svg_stroke_colors('black', 'Black') }}
+
+                        {{ macros.svg_stroke_colors('red', 'Red') }}
+                        {{ macros.svg_stroke_colors('rose', 'Rose') }}
+                        {{ macros.svg_stroke_colors('magenta', 'Magenta') }}
+                        {{ macros.svg_stroke_colors('violet', 'Violet') }}
+                        {{ macros.svg_stroke_colors('blue', 'Blue') }}
+                        {{ macros.svg_stroke_colors('azure', 'Azure') }}
+                        {{ macros.svg_stroke_colors('cyan', 'Cyan') }}
+                        {{ macros.svg_stroke_colors('spring-green', 'Spring Green') }}
+                        {{ macros.svg_stroke_colors('green', 'Green') }}
+                        {{ macros.svg_stroke_colors('chartreuse', 'Chartreuse') }}
+                        {{ macros.svg_stroke_colors('yellow', 'Yellow') }}
+                        {{ macros.svg_stroke_colors('orange', 'Orange') }}
+
+                        {{ macros.svg_stroke_colors('orange-gray', 'Orange Gray') }}
+                        {{ macros.svg_stroke_colors('dark-gray-orange', 'Dark Gray Orange') }}
+                        {{ macros.svg_stroke_colors('blue-gray', 'Blue Gray') }}
+                        {{ macros.svg_stroke_colors('light-gray-azure', 'Light Gray Azure') }}
+                    
+                    </div>
+                    
+                </div>
+
+            </div>
+
+        </div>
+        {% endif %}

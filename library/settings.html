@@ -281,18 +281,6 @@
                     </div>
 
                     <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="" id="enable-obewds-fill-wheel-colors" checked>
-                        <label class="form-check-label" for="enable-obewds-fill-wheel-colors">Enable SVG Fill Classes</label>
-
-                    </div>
-
-                    <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="" id="enable-obewds-fill-tints-shades" checked>
-                        <label class="form-check-label" for="enable-obewds-fill-tints-shades">Enable SVG Fill Tint/Shade Classes</label>
-
-                    </div>
-
-                    <div class="form-check">
                         <input class="form-check-input" type="checkbox" value="" id="enable-obebs4-1-color-gradients" checked>
                         <label class="form-check-label" for="enable-obebs4-1-color-gradients">Enable 1 Color Gradient Background Classes</label>
 
@@ -311,8 +299,14 @@
                     </div>
 
                     <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="" id="enable-obebs4-badge-wheel-colors" checked>
-                        <label class="form-check-label" for="enable-obebs4-badge-wheel-colors">Enable Badge Color Classes</label>
+                        <input class="form-check-input" type="checkbox" value="" id="enable-obewds-fill-wheel-colors" checked>
+                        <label class="form-check-label" for="enable-obewds-fill-wheel-colors">Enable SVG Fill Classes</label>
+
+                    </div>
+
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="enable-obewds-fill-tints-shades" checked>
+                        <label class="form-check-label" for="enable-obewds-fill-tints-shades">Enable SVG Fill Tint/Shade Classes</label>
 
                     </div>
 
@@ -325,6 +319,24 @@
                     <div class="form-check">
                         <input class="form-check-input" type="checkbox" value="" id="enable-obebs4-border-tints-shades" checked>
                         <label class="form-check-label" for="enable-obebs4-border-tints-shades">Enable Border Tint/Shade Classes</label>
+
+                    </div>
+
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="enable-obewds-stroke-wheel-colors" checked>
+                        <label class="form-check-label" for="enable-obewds-stroke-wheel-colors">Enable SVG Stroke Classes</label>
+
+                    </div>
+
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="enable-obewds-stroke-tints-shades" checked>
+                        <label class="form-check-label" for="enable-obewds-stroke-tints-shades">Enable SVG Stroke Tint/Shade Classes</label>
+
+                    </div>
+
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="enable-obebs4-badge-wheel-colors" checked>
+                        <label class="form-check-label" for="enable-obebs4-badge-wheel-colors">Enable Badge Color Classes</label>
 
                     </div>
 
@@ -5792,7 +5804,7 @@
 
                 <small class="text-light">OBE:BS4 VERSION:</small>
 
-                <p class="lead">0.8.35</p>
+                <p class="lead">0.8.36</p>
 
                 <hr class="border-gray" />
 
@@ -5968,6 +5980,12 @@
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link text-light py-1" href="colors.html#svg-fill-tints-shades-section" data-description="These are sets of tints (via adding white) and shades (via adding black) for each of your SVG fill colors.">SVG Fill Tints/Shades</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-light py-1" href="colors.html#svg-stroke-colors-section" data-description="These are your svg stroke color options.">SVG Stroke Colors</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-light py-1" href="colors.html#svg-stroke-tints-shades-section" data-description="These are sets of tints (via adding white) and shades (via adding black) for each of your SVG stroke colors.">SVG Stroke Tints/Shades</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link text-light py-1" href="colors.html#table-colors-section" data-description="These are your standard table row/cell colors.">Table Colors</a>
@@ -6897,11 +6915,13 @@
                 object['enable-obebs4-alert-variations'] = $('#enable-obebs4-alert-variations').is(':checked') ? "true" : "false";
                 object['enable-obebs4-background-wheel-colors'] = $('#enable-obebs4-background-wheel-colors').is(':checked') ? "true" : "false";
                 object['enable-obebs4-background-tints-shades'] = $('#enable-obebs4-background-tints-shades').is(':checked') ? "true" : "false";
-                object['enable-obewds-fill-wheel-colors'] = $('#enable-obewds-fill-wheel-colors').is(':checked') ? "true" : "false";
-                object['enable-obewds-fill-tints-shades'] = $('#enable-obewds-fill-tints-shades').is(':checked') ? "true" : "false";
-                object['enable-obebs4-1-color-gradients'] = $('#enable-obebs4-1-color-gradients').is(':checked') ? "true" : "false";
+                object['enable-obebs4-1-color-gradients'] = $('#enable-obebs4-1-color-gradients').is(':checked') ? "true" : "false";\
                 object['enable-obebs4-2-color-gradients'] = $('#enable-obebs4-2-color-gradients').is(':checked') ? "true" : "false";
                 object['enable-obebs4-3-color-gradients'] = $('#enable-obebs4-3-color-gradients').is(':checked') ? "true" : "false";
+                object['enable-obewds-fill-wheel-colors'] = $('#enable-obewds-fill-wheel-colors').is(':checked') ? "true" : "false";
+                object['enable-obewds-fill-tints-shades'] = $('#enable-obewds-fill-tints-shades').is(':checked') ? "true" : "false";
+                object['enable-obewds-stroke-wheel-colors'] = $('#enable-obewds-stroke-wheel-colors').is(':checked') ? "true" : "false";
+                object['enable-obewds-stroke-tints-shades'] = $('#enable-obewds-stroke-tints-shades').is(':checked') ? "true" : "false";
                 object['enable-obebs4-badge-wheel-colors'] = $('#enable-obebs4-badge-wheel-colors').is(':checked') ? "true" : "false";
                 object['enable-obebs4-border-wheel-colors'] = $('#enable-obebs4-border-wheel-colors').is(':checked') ? "true" : "false";
                 object['enable-obebs4-border-tints-shades'] = $('#enable-obebs4-border-tints-shades').is(':checked') ? "true" : "false";
