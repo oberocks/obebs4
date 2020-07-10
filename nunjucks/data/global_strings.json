@@ -336,6 +336,20 @@
                 "link" : "SVG Fill Tints/Shades",
                 "descrip" : "These are sets of tints (via adding white) and shades (via adding black) for each of your SVG fill colors.",
                 "id" : "svg-fill-tints-shades-section"
+            },{
+                "index" : 47,
+                "head" : "SVG Stroke",
+                "subhead" : "C O L O R S",
+                "link" : "SVG Stroke Colors",
+                "descrip" : "These are your svg stroke color options.",
+                "id" : "svg-stroke-colors-section"
+            },{
+                "index" : 48,
+                "head" : "SVG Stroke",
+                "subhead" : "T I N T S / S H A D E S",
+                "link" : "SVG Stroke Tints/Shades",
+                "descrip" : "These are sets of tints (via adding white) and shades (via adding black) for each of your SVG stroke colors.",
+                "id" : "svg-stroke-tints-shades-section"
             }
         ]
     },
