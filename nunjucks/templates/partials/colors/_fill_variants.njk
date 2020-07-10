@@ -1,0 +1,48 @@
+<!-- _fill_variants.njk -->
+		{% if obe_settings['enable-obewds-fill-tints-shades'] === 'true' %}
+		<div class="container-fluid pt-5 text-center bg-white text-dark">
+		
+			<div class="container">
+
+				<div class="row justify-content-center">
+					
+					<div id="{{ global_strings['colors']['sections'][46]['id'] }}" class="col-12">
+					
+						{{ macros.page_section_heading(global_strings['colors']['sections'][46]['head'], global_strings['colors']['sections'][46]['subhead'], global_strings['colors']['sections'][46]['descrip']) }}
+
+					</div>
+
+				</div>
+
+				<div class="row justify-content-center">
+
+					{{ macros.svg_fill_variants('white', 'White') }}
+					{{ macros.svg_fill_variants('light-gray', 'Light Gray') }}
+					{{ macros.svg_fill_variants('gray', 'Gray') }}
+					{{ macros.svg_fill_variants('dark-gray', 'Dark Gray') }}
+					{{ macros.svg_fill_variants('black', 'Black') }}
+
+					{{ macros.svg_fill_variants('red', 'Red') }}
+					{{ macros.svg_fill_variants('rose', 'Rose') }}
+					{{ macros.svg_fill_variants('magenta', 'Magenta') }}
+					{{ macros.svg_fill_variants('violet', 'Violet') }}
+					{{ macros.svg_fill_variants('blue', 'Blue') }}
+					{{ macros.svg_fill_variants('azure', 'Azure') }}
+					{{ macros.svg_fill_variants('cyan', 'Cyan') }}
+					{{ macros.svg_fill_variants('spring-green', 'Spring Green') }}
+					{{ macros.svg_fill_variants('green', 'Green') }}
+					{{ macros.svg_fill_variants('chartreuse', 'Chartreuse') }}
+					{{ macros.svg_fill_variants('yellow', 'Yellow') }}
+					{{ macros.svg_fill_variants('orange', 'Orange') }}
+
+					{{ macros.svg_fill_variants('orange-gray', 'Orange Gray') }}
+					{{ macros.svg_fill_variants('dark-gray-orange', 'Dark Gray Orange') }}
+					{{ macros.svg_fill_variants('blue-gray', 'Blue Gray') }}
+					{{ macros.svg_fill_variants('light-gray-azure', 'Light Gray Azure') }}
+
+				</div>
+
+			</div>
+
+		</div>
+		{% endif %}

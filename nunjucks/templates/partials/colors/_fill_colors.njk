@@ -1,0 +1,53 @@
+<!-- _fill_colors.njk -->
+		{% if obe_settings['enable-obewds-fill-wheel-colors'] === 'true' %}
+        <div class="container-fluid pt-5 text-center bg-white text-dark">
+        
+            <div class="container">
+
+                <div class="row justify-content-center">
+                
+                    <div id="{{ global_strings['colors']['sections'][45]['id'] }}" class="col-12 pb-5">
+                    
+                        {{ macros.page_section_heading(global_strings['colors']['sections'][45]['head'], global_strings['colors']['sections'][45]['subhead'], global_strings['colors']['sections'][45]['descrip']) }}
+                        
+                        {{ macros.svg_fill_colors('primary', 'Primary') }}
+                        {{ macros.svg_fill_colors('secondary', 'Secondary') }}
+                        {{ macros.svg_fill_colors('success', 'Success') }}
+                        {{ macros.svg_fill_colors('danger', 'Danger') }}
+                        {{ macros.svg_fill_colors('warning', 'Warning') }}
+                        {{ macros.svg_fill_colors('info', 'Info') }}
+                        {{ macros.svg_fill_colors('light', 'Light') }}
+                        {{ macros.svg_fill_colors('dark', 'Dark') }}
+                        
+                        {{ macros.svg_fill_colors('white', 'White') }}
+                        {{ macros.svg_fill_colors('light-gray', 'Light Gray') }}
+                        {{ macros.svg_fill_colors('gray', 'Gray') }}
+                        {{ macros.svg_fill_colors('dark-gray', 'Dark Gray') }}
+                        {{ macros.svg_fill_colors('black', 'Black') }}
+
+                        {{ macros.svg_fill_colors('red', 'Red') }}
+                        {{ macros.svg_fill_colors('rose', 'Rose') }}
+                        {{ macros.svg_fill_colors('magenta', 'Magenta') }}
+                        {{ macros.svg_fill_colors('violet', 'Violet') }}
+                        {{ macros.svg_fill_colors('blue', 'Blue') }}
+                        {{ macros.svg_fill_colors('azure', 'Azure') }}
+                        {{ macros.svg_fill_colors('cyan', 'Cyan') }}
+                        {{ macros.svg_fill_colors('spring-green', 'Spring Green') }}
+                        {{ macros.svg_fill_colors('green', 'Green') }}
+                        {{ macros.svg_fill_colors('chartreuse', 'Chartreuse') }}
+                        {{ macros.svg_fill_colors('yellow', 'Yellow') }}
+                        {{ macros.svg_fill_colors('orange', 'Orange') }}
+
+                        {{ macros.svg_fill_colors('orange-gray', 'Orange Gray') }}
+                        {{ macros.svg_fill_colors('dark-gray-orange', 'Dark Gray Orange') }}
+                        {{ macros.svg_fill_colors('blue-gray', 'Blue Gray') }}
+                        {{ macros.svg_fill_colors('light-gray-azure', 'Light Gray Azure') }}
+                    
+                    </div>
+                    
+                </div>
+
+            </div>
+
+        </div>
+        {% endif %}
