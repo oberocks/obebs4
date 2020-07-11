@@ -636,7 +636,34 @@ The following changes were made to the default `obebs4_settings.json` file durin
 "form-check-inline-margin-x": "0.75rem",
 "form-check-inline-input-margin-x": "0.3125rem",
 "form-grid-gutter-width": "10px",
-"form-group-margin-bottom": "1rem"
+"form-group-margin-bottom": "1rem",
+
+"input-group-addon-border-color": "$input-border-color",
+"custom-forms-transition": "background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out",
+"custom-control-gutter": "0.5rem",
+"custom-control-spacer-x": "1rem",
+"custom-control-cursor": "null",
+"custom-control-indicator-size": "1rem",
+"custom-control-indicator-bg": "$input-bg",
+"custom-control-indicator-bg-size": "0% 50%",
+"custom-control-indicator-box-shadow": "$input-box-shadow",
+"custom-control-indicator-border-color": "$gray-500",
+"custom-control-indicator-border-width": "$input-border-width",
+"custom-control-label-color": "null",
+"custom-control-indicator-disabled-bg": "$input-disabled-bg",
+"custom-control-label-disabled-color": "$gray-600",
+"custom-control-indicator-checked-color": "$component-active-color",
+"custom-control-indicator-checked-bg": "$component-active-bg",
+"custom-control-indicator-checked-disabled-bg": "rgba($primary, .5)",
+"custom-control-indicator-checked-box-shadow": "none",
+"custom-control-indicator-checked-border-color": "$custom-control-indicator-checked-bg",
+"custom-control-indicator-focus-box-shadow": "$input-focus-box-shadow",
+"custom-control-indicator-focus-border-color": "$input-focus-border-color",
+"custom-control-indicator-active-color": "$component-active-color",
+"custom-control-indicator-active-bg": "lighten($component-active-bg, 35%)",
+"custom-control-indicator-active-box-shadow": "none",
+"custom-control-indicator-active-border-color": "$custom-control-indicator-active-bg",
+"custom-checkbox-indicator-border-radius": "$border-radius"
 ```
 <!---
 ## Customizing Your Web Design System
