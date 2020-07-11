@@ -888,49 +888,34 @@
                         
                         <!-- FORMS SECTION -->
 
-                        <!-- HOLD FOR: $label-margin-bottom: 0.5rem !default; -->
                         {{ macros.settings_number_step_input('label-margin-bottom', 'Label Margin Bottom', global_strings['sys']['label-margin-bottom'], obe_settings['label-margin-bottom'], 'rem', '10', '0', '0.05', note='Sets $label-margin-bottom') }}
 
-                        <!-- HOLD FOR: $input-padding-y: $input-btn-padding-y !default; -->
                         {{ macros.settings_text_input('input-padding-y', 'Input Padding Y', global_strings['sys']['input-padding-y'], obe_settings['input-padding-y'], note='Sets $input-padding-y') }}
 
-                        <!-- HOLD FOR: $input-padding-x: $input-btn-padding-x !default; -->
                         {{ macros.settings_text_input('input-padding-x', 'Input Padding X', global_strings['sys']['input-padding-x'], obe_settings['input-padding-x'], note='Sets $input-padding-x') }}
 
-                        <!-- HOLD FOR: $input-font-family: $input-btn-font-family !default; -->
                         {{ macros.settings_text_input('input-font-family', 'Input Font Family', global_strings['sys']['input-font-family'], obe_settings['input-font-family'], note='Sets $input-font-family') }}
 
-                        <!-- HOLD FOR: $input-font-size: $input-btn-font-size !default; -->
                         {{ macros.settings_text_input('input-font-size', 'Input Font Size', global_strings['sys']['input-font-size'], obe_settings['input-font-size'], note='Sets $input-font-size') }}
 
-                        <!-- HOLD FOR: $input-font-weight: $font-weight-base !default; -->
                         {{ macros.settings_text_input('input-font-weight', 'Input Font Weight', global_strings['sys']['input-font-weight'], obe_settings['input-font-weight'], note='Sets $input-font-weight') }}
 
-                        <!-- HOLD FOR: $input-line-height: $input-btn-line-height !default; -->
                         {{ macros.settings_text_input('input-line-height', 'Input Line Height', global_strings['sys']['input-line-height'], obe_settings['input-line-height'], note='Sets $input-line-height') }}
 
-                        <!-- HOLD FOR: $input-padding-y-sm: $input-btn-padding-y-sm !default; -->
                         {{ macros.settings_text_input('input-padding-y-sm', 'Input Padding Y Small', global_strings['sys']['input-padding-y-sm'], obe_settings['input-padding-y-sm'], note='Sets $input-padding-y-sm') }}
 
-                        <!-- HOLD FOR: $input-padding-x-sm: $input-btn-padding-x-sm !default; -->
                         {{ macros.settings_text_input('input-padding-x-sm', 'Input Padding X Small', global_strings['sys']['input-padding-x-sm'], obe_settings['input-padding-x-sm'], note='Sets $input-padding-x-sm') }}
 
-                        <!-- HOLD FOR: $input-font-size-sm: $input-btn-font-size-sm !default; -->
                         {{ macros.settings_text_input('input-font-size-sm', 'Input Font Size Small', global_strings['sys']['input-font-size-sm'], obe_settings['input-font-size-sm'], note='Sets $input-font-size-sm') }}
 
-                        <!-- HOLD FOR: $input-line-height-sm: $input-btn-line-height-sm !default; -->
                         {{ macros.settings_text_input('input-line-height-sm', 'Input Line Height Small', global_strings['sys']['input-line-height-sm'], obe_settings['input-line-height-sm'], note='Sets $input-line-height-sm') }}
 
-                        <!-- HOLD FOR: $input-padding-y-lg: $input-btn-padding-y-lg !default; -->
                         {{ macros.settings_text_input('input-padding-y-lg', 'Input Padding Y Large', global_strings['sys']['input-padding-y-lg'], obe_settings['input-padding-y-lg'], note='Sets $input-padding-y-lg') }}
 
-                        <!-- HOLD FOR: $input-padding-x-lg: $input-btn-padding-x-lg !default; -->
                         {{ macros.settings_text_input('input-padding-x-lg', 'Input Padding X Large', global_strings['sys']['input-padding-x-lg'], obe_settings['input-padding-x-lg'], note='Sets $input-padding-x-lg') }}
 
-                        <!-- HOLD FOR: $input-font-size-lg: $input-btn-font-size-lg !default; -->
                         {{ macros.settings_text_input('input-font-size-lg', 'Input Font Size Large', global_strings['sys']['input-font-size-lg'], obe_settings['input-font-size-lg'], note='Sets $input-font-size-lg') }}
 
-                        <!-- HOLD FOR: $input-line-height-lg: $input-btn-line-height-lg !default; -->
                         {{ macros.settings_text_input('input-line-height-lg', 'Input Line Height Large', global_strings['sys']['input-line-height-lg'], obe_settings['input-line-height-lg'], note='Sets $input-line-height-lg') }}
 
                         <!-- $input-bg IS ALREADY USED -->
@@ -939,90 +924,62 @@
 
                         <!-- $input-color IS ALREADY USED -->
 
-                        <!-- HOLD FOR: $input-border-color: $gray-400 !default; -->
                         {{ macros.settings_contextual_selects('input-border-color', 'Input Border Color', obe_settings['input-border-color-C'], obe_settings['input-border-color-M'], note='Sets $input-border-color') }}
 
-                        <!-- HOLD FOR: $input-border-width: $input-btn-border-width !default; -->
                         {{ macros.settings_text_input('input-border-width', 'Input Border Width', global_strings['sys']['input-border-width'], obe_settings['input-border-width'], note='Sets $input-border-width') }}
 
-                        <!-- HOLD FOR: $input-box-shadow: inset 0 1px 1px rgba($black, .075) !default; -->
                         {{ macros.settings_text_input('input-box-shadow', 'Input Box Shadow', global_strings['sys']['input-box-shadow'], obe_settings['input-box-shadow'], note='Sets $input-box-shadow') }}
 
-                        <!-- HOLD FOR: $input-border-radius: $border-radius !default; -->
                         {{ macros.settings_text_input('input-border-radius', 'Input Border Radius', global_strings['sys']['input-border-radius'], obe_settings['input-border-radius'], note='Sets $input-border-radius') }}
 
-                        <!-- HOLD FOR: $input-border-radius-lg: $border-radius-lg !default; -->
                         {{ macros.settings_text_input('input-border-radius-lg', 'Input Border Radius Large', global_strings['sys']['input-border-radius-lg'], obe_settings['input-border-radius-lg'], note='Sets $input-border-radius-lg') }}
 
-                        <!-- HOLD FOR: $input-border-radius-sm: $border-radius-sm !default; -->
                         {{ macros.settings_text_input('input-border-radius-sm', 'Input Border Radius Small', global_strings['sys']['input-border-radius-sm'], obe_settings['input-border-radius-sm'], note='Sets $input-border-radius-sm') }}
 
-                        <!-- HOLD FOR: $input-focus-bg: $input-bg !default; -->
                         {{ macros.settings_text_input('input-focus-bg', 'Input Focus Background', global_strings['sys']['input-focus-bg'], obe_settings['input-focus-bg'], note='Sets $input-focus-bg') }}
 
-                        <!-- HOLD FOR: $input-focus-border-color: lighten($component-active-bg, 25%) !default; -->
                         {{ macros.settings_text_input('input-focus-border-color', 'Input Focus Border Color', global_strings['sys']['input-focus-border-color'], obe_settings['input-focus-border-color'], note='Sets $input-focus-border-color') }}
 
-                        <!-- HOLD FOR: $input-focus-color: $input-color !default; -->
                         {{ macros.settings_text_input('input-focus-color', 'Input Focus Color', global_strings['sys']['input-focus-color'], obe_settings['input-focus-color'], note='Sets $input-focus-color') }}
 
-                        <!-- HOLD FOR: $input-focus-width: $input-btn-focus-width !default; -->
                         {{ macros.settings_text_input('input-focus-width', 'Input Focus Width', global_strings['sys']['input-focus-width'], obe_settings['input-focus-width'], note='Sets $input-focus-width') }}
 
-                        <!-- HOLD FOR: $input-focus-box-shadow: $input-btn-focus-box-shadow !default; -->
                         {{ macros.settings_text_input('input-focus-box-shadow', 'Input Focus Box Shadow', global_strings['sys']['input-focus-box-shadow'], obe_settings['input-focus-box-shadow'], note='Sets $input-focus-box-shadow') }}
 
                         <!-- $input-placeholder-color IS ALREADY USED -->
 
-                        <!-- HOLD FOR: $input-plaintext-color: $body-color !default; -->
                         {{ macros.settings_text_input('input-plaintext-color', 'Input Plaintext Color', global_strings['sys']['input-plaintext-color'], obe_settings['input-plaintext-color'], note='Sets $input-plaintext-color') }}
 
-                        <!-- HOLD FOR: $input-height-border: $input-border-width * 2 !default; -->
                         {{ macros.settings_text_input('input-height-border', 'Input Height Border', global_strings['sys']['input-height-border'], obe_settings['input-height-border'], note='Sets $input-height-border') }}
 
-                        <!-- HOLD FOR: $input-height-inner: add($input-line-height * 1em, $input-padding-y * 2) !default; -->
                         {{ macros.settings_text_input('input-height-inner', 'Input Height Inner', global_strings['sys']['input-height-inner'], obe_settings['input-height-inner'], note='Sets $input-height-inner') }}
 
-                        <!-- HOLD FOR: $input-height-inner-half: add($input-line-height * .5em, $input-padding-y) !default; -->
                         {{ macros.settings_text_input('input-height-inner-half', 'Input Height Inner Half', global_strings['sys']['input-height-inner-half'], obe_settings['input-height-inner-half'], note='Sets $input-height-inner-half') }}
 
-                        <!-- HOLD FOR: $input-height-inner-quarter: add($input-line-height * .25em, $input-padding-y / 2) !default; -->
                         {{ macros.settings_text_input('input-height-inner-quarter', 'Input Height Inner Quarter', global_strings['sys']['input-height-inner-quarter'], obe_settings['input-height-inner-quarter'], note='Sets $input-height-inner-quarter') }}
 
-                        <!-- HOLD FOR: $input-height: add($input-line-height * 1em, add($input-padding-y * 2, $input-height-border, false)) !default; -->
                         {{ macros.settings_text_input('input-height', 'Input Height', global_strings['sys']['input-height'], obe_settings['input-height'], note='Sets $input-height') }}
 
-                        <!-- HOLD FOR: $input-height-sm: add($input-line-height-sm * 1em, add($input-padding-y-sm * 2, $input-height-border, false)) !default; -->
                         {{ macros.settings_text_input('input-height-sm', 'Input Height Small', global_strings['sys']['input-height-sm'], obe_settings['input-height-sm'], note='Sets $input-height-sm') }}
 
-                        <!-- HOLD FOR: $input-height-lg: add($input-line-height-lg * 1em, add($input-padding-y-lg * 2, $input-height-border, false)) !default; -->
                         {{ macros.settings_text_input('input-height-lg', 'Input Height Large', global_strings['sys']['input-height-lg'], obe_settings['input-height-lg'], note='Sets $input-height-lg') }}
 
-                        <!-- HOLD FOR: $input-transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out !default; -->
                         {{ macros.settings_text_input('input-transition', 'Input Transition', global_strings['sys']['input-transition'], obe_settings['input-transition'], note='Sets $input-transition') }}
 
-                        <!-- HOLD FOR: $form-text-margin-top: 0.25rem !default; -->
                         {{ macros.settings_number_step_input('form-text-margin-top', 'Form Text Margin Top', global_strings['sys']['form-text-margin-top'], obe_settings['form-text-margin-top'], 'rem', '10', '0', '0.05', note='Sets $form-text-margin-top') }}
 
-                        <!-- HOLD FOR: $form-check-input-gutter: 1.25rem !default; -->
                         {{ macros.settings_number_step_input('form-check-input-gutter', 'Form Check Input Gutter', global_strings['sys']['form-check-input-gutter'], obe_settings['form-check-input-gutter'], 'rem', '10', '0', '0.05', note='Sets $form-check-input-gutter') }}
 
-                        <!-- HOLD FOR: $form-check-input-margin-y: 0.3rem !default; -->
                         {{ macros.settings_number_step_input('form-check-input-margin-y', 'Form Check Input Margin Y', global_strings['sys']['form-check-input-margin-y'], obe_settings['form-check-input-margin-y'], 'rem', '10', '0', '0.05', note='Sets $form-check-input-margin-y') }}
 
-                        <!-- HOLD FOR: $form-check-input-margin-x: 0.25rem !default; -->
                         {{ macros.settings_number_step_input('form-check-input-margin-x', 'Form Check Input Margin X', global_strings['sys']['form-check-input-margin-x'], obe_settings['form-check-input-margin-x'], 'rem', '10', '0', '0.05', note='Sets $form-check-input-margin-x') }}
 
-                        <!-- HOLD FOR: $form-check-inline-margin-x: 0.75rem !default; -->
                         {{ macros.settings_number_step_input('form-check-inline-margin-x', 'Form Check Inline Margin X', global_strings['sys']['form-check-inline-margin-x'], obe_settings['form-check-inline-margin-x'], 'rem', '10', '0', '0.05', note='Sets $form-check-inline-margin-x') }}
 
-                        <!-- HOLD FOR: $form-check-inline-input-margin-x: 0.3125rem !default; -->
                         {{ macros.settings_number_step_input('form-check-inline-input-margin-x', 'Form Check Inline Input Margin X', global_strings['sys']['form-check-inline-input-margin-x'], obe_settings['form-check-inline-input-margin-x'], 'rem', '10', '0', '0.0025', note='Sets $form-check-inline-input-margin-x') }}
 
-                        <!-- HOLD FOR: $form-grid-gutter-width: 10px !default; -->
                         {{ macros.settings_number_step_input('form-grid-gutter-width', 'Form Gutter Width', global_strings['sys']['form-grid-gutter-width'], obe_settings['form-grid-gutter-width'], 'px', '1000', '0', '1', note='Sets $form-grid-gutter-width') }}
 
-                        <!-- HOLD FOR: $form-group-margin-bottom: 1rem !default; -->
                         {{ macros.settings_number_step_input('form-group-margin-bottom', 'Form Group Margin Bottom', global_strings['sys']['form-group-margin-bottom'], obe_settings['form-group-margin-bottom'], 'rem', '10', '0', '0.05', note='Sets $form-group-margin-bottom') }}
 
                         <!-- $input-group-addon-color IS ALREADY USED -->
@@ -1030,56 +987,82 @@
                         <!-- $input-group-addon-bg IS ALREADY USED -->
 
                         <!-- HOLD FOR: $input-group-addon-border-color: $input-border-color !default; -->
+                        {{ macros.settings_text_input('input-group-addon-border-color', 'Input Group Addon Border Color', global_strings['sys']['input-group-addon-border-color'], obe_settings['input-group-addon-border-color'], note='Sets $input-group-addon-border-color') }}
 
                         <!-- HOLD FOR: $custom-forms-transition: background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out !default; -->
+                        {{ macros.settings_text_input('custom-forms-transition', 'Custom Forms Transition', global_strings['sys']['custom-forms-transition'], obe_settings['custom-forms-transition'], note='Sets $custom-forms-transition') }}
 
                         <!-- HOLD FOR: $custom-control-gutter: 0.5rem !default; -->
+                        {{ macros.settings_number_step_input('custom-control-gutter', 'Custom Control Only', global_strings['sys']['custom-control-gutter'], obe_settings['custom-control-gutter'], 'rem', '10', '0', '0.05', note='Sets $custom-control-gutter') }}
 
                         <!-- HOLD FOR: $custom-control-spacer-x: 1rem !default; -->
+                        {{ macros.settings_number_step_input('custom-control-spacer-x', 'Custom Control Spacer X', global_strings['sys']['custom-control-spacer-x'], obe_settings['custom-control-spacer-x'], 'rem', '10', '0', '0.05', note='Sets $custom-control-spacer-x') }}
 
                         <!-- HOLD FOR: $custom-control-cursor: null !default; -->
+                        {{ macros.settings_text_input('custom-control-cursor', 'Custom Control Cursor', global_strings['sys']['custom-control-cursor'], obe_settings['custom-control-cursor'], note='Sets $custom-control-cursor') }}
 
                         <!-- HOLD FOR: $custom-control-indicator-size: 1rem !default; -->
+                        {{ macros.settings_number_step_input('custom-control-indicator-size', 'Custom Control Indicator Size', global_strings['sys']['custom-control-indicator-size'], obe_settings['custom-control-indicator-size'], 'rem', '10', '0', '0.05', note='Sets $custom-control-indicator-size') }}
 
                         <!-- HOLD FOR: $custom-control-indicator-bg: $input-bg !default; -->
+                        {{ macros.settings_text_input('custom-control-indicator-bg', 'Custom Control Indicator Background', global_strings['sys']['custom-control-indicator-bg'], obe_settings['custom-control-indicator-bg'], note='Sets $custom-control-indicator-bg') }}
 
                         <!-- HOLD FOR: $custom-control-indicator-bg-size: 0% 50% !default; -->
+                        {{ macros.settings_text_input('custom-control-indicator-bg-size', 'Custom Control Indicator Background Size', global_strings['sys']['custom-control-indicator-bg-size'], obe_settings['custom-control-indicator-bg-size'], note='Sets $custom-control-indicator-bg-size') }}
 
                         <!-- HOLD FOR: $custom-control-indicator-box-shadow: $input-box-shadow !default; -->
+                        {{ macros.settings_text_input('custom-control-indicator-box-shadow', 'Custom Control Indicator Box Shadow', global_strings['sys']['custom-control-indicator-box-shadow'], obe_settings['custom-control-indicator-box-shadow'], note='Sets $custom-control-indicator-box-shadow') }}
 
                         <!-- HOLD FOR: $custom-control-indicator-border-color: $gray-500 !default; -->
+                        {{ macros.settings_contextual_selects('custom-control-indicator-border-color', 'Custom Control Indicator Border Color', obe_settings['custom-control-indicator-border-color-C'], obe_settings['custom-control-indicator-border-color-M'], note='Sets $custom-control-indicator-border-color') }}
 
                         <!-- HOLD FOR: $custom-control-indicator-border-width: $input-border-width !default; -->
+                        {{ macros.settings_text_input('custom-control-indicator-border-width', 'Custom Control Indicator Border Width', global_strings['sys']['custom-control-indicator-border-width'], obe_settings['custom-control-indicator-border-width'], note='Sets $custom-control-indicator-border-width') }}
 
                         <!-- HOLD FOR: $custom-control-label-color: null !default; -->
+                        {{ macros.settings_text_input('custom-control-label-color', 'Custom Control Labor Color', global_strings['sys']['custom-control-label-color'], obe_settings['custom-control-label-color'], note='Sets $custom-control-label-color') }}
 
                         <!-- HOLD FOR: $custom-control-indicator-disabled-bg: $input-disabled-bg !default; -->
+                        {{ macros.settings_text_input('custom-control-indicator-disabled-bg', 'Custom Control Indicator Disabled Background', global_strings['sys']['custom-control-indicator-disabled-bg'], obe_settings['custom-control-indicator-disabled-bg'], note='Sets $custom-control-indicator-disabled-bg') }}
 
                         <!-- HOLD FOR: $custom-control-label-disabled-color: $gray-600 !default; -->
+                        {{ macros.settings_contextual_selects('custom-control-label-disabled-color', 'Custom Control Label Disabled Color', obe_settings['custom-control-label-disabled-color-C'], obe_settings['custom-control-label-disabled-color-M'], note='Sets $custom-control-label-disabled-color') }}
 
                         <!-- HOLD FOR: $custom-control-indicator-checked-color: $component-active-color !default; -->
+                        {{ macros.settings_text_input('custom-control-indicator-checked-color', 'Custom Control Indicator Checked Color', global_strings['sys']['custom-control-indicator-checked-color'], obe_settings['custom-control-indicator-checked-color'], note='Sets $custom-control-indicator-checked-color') }}
 
                         <!-- HOLD FOR: $custom-control-indicator-checked-bg: $component-active-bg !default; -->
+                        {{ macros.settings_text_input('custom-control-indicator-checked-bg', 'Custom Control Indicator Checked Background', global_strings['sys']['custom-control-indicator-checked-bg'], obe_settings['custom-control-indicator-checked-bg'], note='Sets $custom-control-indicator-checked-bg') }}
 
                         <!-- HOLD FOR: $custom-control-indicator-checked-disabled-bg: rgba(theme-color("primary"), .5) !default; -->
+                        {{ macros.settings_text_input('custom-control-indicator-checked-disabled-bg', 'Custom Control Indicator Checked Disabled Background', global_strings['sys']['custom-control-indicator-checked-disabled-bg'], obe_settings['custom-control-indicator-checked-disabled-bg'], note='Sets $custom-control-indicator-checked-disabled-bg') }}
 
                         <!-- HOLD FOR: $custom-control-indicator-checked-box-shadow: none !default; -->
+                        {{ macros.settings_text_input('custom-control-indicator-checked-box-shadow', 'Custom Control Indicator Checked Box Shadow', global_strings['sys']['custom-control-indicator-checked-box-shadow'], obe_settings['custom-control-indicator-checked-box-shadow'], note='Sets $custom-control-indicator-checked-box-shadow') }}
 
                         <!-- HOLD FOR: $custom-control-indicator-checked-border-color: $custom-control-indicator-checked-bg !default; -->
+                        {{ macros.settings_text_input('custom-control-indicator-checked-border-color', 'Custom Control Indicator Checked Border Color', global_strings['sys']['custom-control-indicator-checked-border-color'], obe_settings['custom-control-indicator-checked-border-color'], note='Sets $custom-control-indicator-checked-border-color') }}
 
                         <!-- HOLD FOR: $custom-control-indicator-focus-box-shadow: $input-focus-box-shadow !default; -->
+                        {{ macros.settings_text_input('custom-control-indicator-focus-box-shadow', 'Custom Control Indicator Focus Box Shadow', global_strings['sys']['custom-control-indicator-focus-box-shadow'], obe_settings['custom-control-indicator-focus-box-shadow'], note='Sets $custom-control-indicator-focus-box-shadow') }}
 
                         <!-- HOLD FOR: $custom-control-indicator-focus-border-color: $input-focus-border-color !default; -->
+                        {{ macros.settings_text_input('custom-control-indicator-focus-border-color', 'Custom Control Indicator Focus Border Color', global_strings['sys']['custom-control-indicator-focus-border-color'], obe_settings['custom-control-indicator-focus-border-color'], note='Sets $custom-control-indicator-focus-border-color') }}
 
                         <!-- HOLD FOR: $custom-control-indicator-active-color: $component-active-color !default; -->
+                        {{ macros.settings_text_input('custom-control-indicator-active-color', 'Custom Control Indicator Active Color', global_strings['sys']['custom-control-indicator-active-color'], obe_settings['custom-control-indicator-active-color'], note='Sets $custom-control-indicator-active-color') }}
 
                         <!-- HOLD FOR: $custom-control-indicator-active-bg: lighten($component-active-bg, 35%) !default; -->
+                        {{ macros.settings_text_input('custom-control-indicator-active-bg', 'Custom Control Indicator Active Background', global_strings['sys']['custom-control-indicator-active-bg'], obe_settings['custom-control-indicator-active-bg'], note='Sets $custom-control-indicator-active-bg') }}
 
                         <!-- HOLD FOR: $custom-control-indicator-active-box-shadow: none !default; -->
+                        {{ macros.settings_text_input('custom-control-indicator-active-box-shadow', 'Custom Control Indicator Active Box Shadow', global_strings['sys']['custom-control-indicator-active-box-shadow'], obe_settings['custom-control-indicator-active-box-shadow'], note='Sets $custom-control-indicator-active-box-shadow') }}
 
                         <!-- HOLD FOR: $custom-control-indicator-active-border-color: $custom-control-indicator-active-bg !default; -->
+                        {{ macros.settings_text_input('custom-control-indicator-active-border-color', 'Custom Control Indicator Active Border Color', global_strings['sys']['custom-control-indicator-active-border-color'], obe_settings['custom-control-indicator-active-border-color'], note='Sets $custom-control-indicator-active-border-color') }}
 
                         <!-- HOLD FOR: $custom-checkbox-indicator-border-radius: $border-radius !default; -->
+                        {{ macros.settings_text_input('custom-checkbox-indicator-border-radius', 'Custom Checkbox Indicator Border Radius', global_strings['sys']['custom-checkbox-indicator-border-radius'], obe_settings['custom-checkbox-indicator-border-radius'], note='Sets $custom-checkbox-indicator-border-radius') }}
 
                         <!-- HOLD FOR: $custom-checkbox-indicator-icon-checked: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='8' height='8' viewBox='0 0 8 8'><path fill='#{$custom-control-indicator-checked-color}' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26l2.974 2.99L8 2.193z'/></svg>") !default; -->
 
