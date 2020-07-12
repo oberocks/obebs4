@@ -884,7 +884,7 @@
 
 
                         
-                        <h3 class="pt-4 pb-2">Core Forms Options</h3>
+                        <h3 class="pt-4 pb-2">Core Forms: General Options</h3>
                         
                         <!-- FORMS SECTION -->
 
@@ -988,6 +988,12 @@
 
                         {{ macros.settings_text_input('input-group-addon-border-color', 'Input Group Addon Border Color', global_strings['sys']['input-group-addon-border-color'], obe_settings['input-group-addon-border-color'], note='Sets $input-group-addon-border-color') }}
 
+                        
+                        
+                        <h3 class="pt-4 pb-2">Core Forms: General Custom Elements Options</h3>
+                        
+                        <!-- FORMS: CUSTOM ELEMENTS SECTION -->
+                        
                         {{ macros.settings_text_input('custom-forms-transition', 'Custom Forms Transition', global_strings['sys']['custom-forms-transition'], obe_settings['custom-forms-transition'], note='Sets $custom-forms-transition') }}
 
                         {{ macros.settings_number_step_input('custom-control-gutter', 'Custom Control Only', global_strings['sys']['custom-control-gutter'], obe_settings['custom-control-gutter'], 'rem', '10', '0', '0.05', note='Sets $custom-control-gutter') }}
@@ -1038,115 +1044,107 @@
 
                         {{ macros.settings_text_input('custom-checkbox-indicator-border-radius', 'Custom Checkbox Indicator Border Radius', global_strings['sys']['custom-checkbox-indicator-border-radius'], obe_settings['custom-checkbox-indicator-border-radius'], note='Sets $custom-checkbox-indicator-border-radius') }}
 
-                        <!-- HOLD FOR: $custom-checkbox-indicator-icon-checked: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='8' height='8' viewBox='0 0 8 8'><path fill='#{$custom-control-indicator-checked-color}' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26l2.974 2.99L8 2.193z'/></svg>") !default; -->
                         {{ macros.settings_textarea_input('custom-checkbox-indicator-icon-checked', 'Custom Checkbox Indicator Icon Checked', global_strings['sys']['custom-checkbox-indicator-icon-checked'], obe_settings['custom-checkbox-indicator-icon-checked'], note='Sets $custom-checkbox-indicator-icon-checked') }}
 
-                        <!-- HOLD FOR: $custom-checkbox-indicator-indeterminate-bg: $component-active-bg !default; -->
                         {{ macros.settings_text_input('custom-checkbox-indicator-indeterminate-bg', 'Custom Checkbox Indicator Indeterminate Background', global_strings['sys']['custom-checkbox-indicator-indeterminate-bg'], obe_settings['custom-checkbox-indicator-indeterminate-bg'], note='Sets $custom-checkbox-indicator-indeterminate-bg') }}
 
-                        <!-- HOLD FOR: $custom-checkbox-indicator-indeterminate-color: $custom-control-indicator-checked-color !default; -->
                         {{ macros.settings_text_input('custom-checkbox-indicator-indeterminate-color', 'Custom Checkbox Indicator Indeterminate Color', global_strings['sys']['custom-checkbox-indicator-indeterminate-color'], obe_settings['custom-checkbox-indicator-indeterminate-color'], note='Sets $custom-checkbox-indicator-indeterminate-color') }}
 
-                        <!-- HOLD FOR: $custom-checkbox-indicator-icon-indeterminate: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'><path stroke='#{$custom-checkbox-indicator-indeterminate-color}' d='M0 2h4'/></svg>") !default; -->
                         {{ macros.settings_textarea_input('custom-checkbox-indicator-icon-indeterminate', 'Custom Checkbox Indicator Icon Indeterminate', global_strings['sys']['custom-checkbox-indicator-icon-indeterminate'], obe_settings['custom-checkbox-indicator-icon-indeterminate'], note='Sets $custom-checkbox-indicator-icon-indeterminate') }}
 
-                        <!-- HOLD FOR: $custom-checkbox-indicator-indeterminate-box-shadow: none !default; -->
                         {{ macros.settings_text_input('custom-checkbox-indicator-indeterminate-box-shadow', 'Custom Checkbox Indicator Indeterminate Box Shadow', global_strings['sys']['custom-checkbox-indicator-indeterminate-box-shadow'], obe_settings['custom-checkbox-indicator-indeterminate-box-shadow'], note='Sets $custom-checkbox-indicator-indeterminate-box-shadow') }}
 
-                        <!-- HOLD FOR: $custom-checkbox-indicator-indeterminate-border-color: $custom-checkbox-indicator-indeterminate-bg !default; -->
                         {{ macros.settings_text_input('custom-checkbox-indicator-indeterminate-border-color', 'Custom Checkbox Indicator Indeterminate Border Color', global_strings['sys']['custom-checkbox-indicator-indeterminate-border-color'], obe_settings['custom-checkbox-indicator-indeterminate-border-color'], note='Sets $custom-checkbox-indicator-indeterminate-border-color') }}
 
-                        <!-- HOLD FOR: $custom-radio-indicator-border-radius: 50% !default; -->
                         {{ macros.settings_number_step_input('custom-radio-indicator-border-radius', 'Custom Radio Indicator Border Radius', global_strings['sys']['custom-radio-indicator-border-radius'], obe_settings['custom-radio-indicator-border-radius'], '%', '100', '0', '1', note='Sets $custom-radio-indicator-border-radius') }}
 
-                        <!-- HOLD FOR: $custom-radio-indicator-icon-checked: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='-4 -4 8 8'><circle r='3' fill='#{$custom-control-indicator-checked-color}'/></svg>") !default; -->
                         {{ macros.settings_textarea_input('custom-radio-indicator-icon-checked', 'Custom Radio Indicator Icon Checked', global_strings['sys']['custom-radio-indicator-icon-checked'], obe_settings['custom-radio-indicator-icon-checked'], note='Sets $custom-radio-indicator-icon-checked') }}
 
-                        <!-- HOLD FOR: $custom-switch-width: $custom-control-indicator-size * 1.75 !default; -->
                         {{ macros.settings_text_input('custom-switch-width', 'Custom Switch Width', global_strings['sys']['custom-switch-width'], obe_settings['custom-switch-width'], note='Sets $custom-switch-width') }}
 
-                        <!-- HOLD FOR: $custom-switch-indicator-border-radius:  $custom-control-indicator-size / 2 !default; -->
                         {{ macros.settings_text_input('custom-switch-indicator-border-radius', 'Custom Switch Indicator Border Radius', global_strings['sys']['custom-switch-indicator-border-radius'], obe_settings['custom-switch-indicator-border-radius'], note='Sets $custom-switch-indicator-border-radius') }}
 
-                        <!-- HOLD FOR: $custom-switch-indicator-size: subtract($custom-control-indicator-size, $custom-control-indicator-border-width * 4) !default; -->
                         {{ macros.settings_text_input('custom-switch-indicator-size', 'Custom Switch Indicator Size', global_strings['sys']['custom-switch-indicator-size'], obe_settings['custom-switch-indicator-size'], note='Sets $custom-switch-indicator-size') }}
 
-                        <!-- HOLD FOR: $custom-select-padding-y: $input-padding-y !default; -->
+                        
+
+                        <h3 class="pt-4 pb-2">Core Forms: Custom Select Options</h3>
+                        
+                        <!-- FORMS: CUSTOM SELECT SECTION -->
+
                         {{ macros.settings_text_input('custom-select-padding-y', 'Custom Select Padding Y', global_strings['sys']['custom-select-padding-y'], obe_settings['custom-select-padding-y'], note='Sets $custom-select-padding-y') }}
 
-                        <!-- HOLD FOR: $custom-select-padding-x: $input-padding-x !default; -->
                         {{ macros.settings_text_input('custom-select-padding-x', 'Custom Select Padding X', global_strings['sys']['custom-select-padding-x'], obe_settings['custom-select-padding-x'], note='Sets $custom-select-padding-x') }}
 
-                        <!-- HOLD FOR: $custom-select-font-family: $input-font-family !default; -->
                         {{ macros.settings_text_input('custom-select-font-family', 'Custom Select Font Family', global_strings['sys']['custom-select-font-family'], obe_settings['custom-select-font-family'], note='Sets $custom-select-font-family') }}
 
-                        <!-- HOLD FOR: $custom-select-font-size: $input-font-size !default; -->
                         {{ macros.settings_text_input('custom-select-font-size', 'Custom Select Font Size', global_strings['sys']['custom-select-font-size'], obe_settings['custom-select-font-size'], note='Sets $custom-select-font-size') }}
 
-                        <!-- HOLD FOR: $custom-select-height: $input-height !default; -->
                         {{ macros.settings_text_input('custom-select-height', 'Custom Select Height', global_strings['sys']['custom-select-height'], obe_settings['custom-select-height'], note='Sets $custom-select-height') }}
 
-                        <!-- HOLD FOR: $custom-select-indicator-padding: 1rem !default; // Extra padding to account for the presence of the background-image based indicator -->
                         {{ macros.settings_number_step_input('custom-select-indicator-padding', 'Custom Control Indicator Padding', global_strings['sys']['custom-select-indicator-padding'], obe_settings['custom-select-indicator-padding'], 'rem', '10', '0', '0.05', note='Sets $custom-select-indicator-padding. This provides extra padding to account for the presence of the background-image based indicator.') }}
 
-                        <!-- HOLD FOR: $custom-select-font-weight: $input-font-weight !default; -->
                         {{ macros.settings_text_input('custom-select-font-weight', 'Custom Select Font Weight', global_strings['sys']['custom-select-font-weight'], obe_settings['custom-select-font-weight'], note='Sets $custom-select-font-weight') }}
 
-                        <!-- HOLD FOR: $custom-select-line-height: $input-line-height !default; -->
                         {{ macros.settings_text_input('custom-select-line-height', 'Custom Select Line Height', global_strings['sys']['custom-select-line-height'], obe_settings['custom-select-line-height'], note='Sets $custom-select-line-height') }}
 
-                        <!-- HOLD FOR: $custom-select-color: $input-color !default; -->
                         {{ macros.settings_text_input('custom-select-color', 'Custom Select Color', global_strings['sys']['custom-select-color'], obe_settings['custom-select-color'], note='Sets $custom-select-color') }}
 
-                        <!-- HOLD FOR: $custom-select-disabled-color: $gray-600 !default; -->
+                        {{ macros.settings_contextual_selects('custom-select-disabled-color', 'Custom Select Disabled Color', obe_settings['custom-select-disabled-color-C'], obe_settings['custom-select-disabled-color-M'], note='Sets $custom-select-disabled-color') }}
 
-                        <!-- HOLD FOR: $custom-select-bg: $input-bg !default; -->
+                        {{ macros.settings_text_input('custom-select-bg', 'Custom Select Background', global_strings['sys']['custom-select-bg'], obe_settings['custom-select-bg'], note='Sets $custom-select-bg') }}
 
-                        <!-- HOLD FOR: $custom-select-disabled-bg: $gray-200 !default; -->
+                        {{ macros.settings_contextual_selects('custom-select-disabled-bg', 'Custom Select Disabled Background', obe_settings['custom-select-disabled-bg-C'], obe_settings['custom-select-disabled-bg-M'], note='Sets $custom-select-disabled-bg') }}
 
-                        <!-- HOLD FOR: $custom-select-bg-size: 8px 10px !default; // In pixels because image dimensions -->
+                        {{ macros.settings_text_input('custom-select-bg-size', 'Custom Select Background Size', global_strings['sys']['custom-select-bg-size'], obe_settings['custom-select-bg-size'], note='Sets $custom-select-bg-size. This setting is in pixels due to image dimensions.') }}
 
-                        <!-- HOLD FOR: $custom-select-indicator-color: $gray-800 !default; -->
+                        {{ macros.settings_contextual_selects('custom-select-indicator-color', 'Custom Select Indicator Color', obe_settings['custom-select-indicator-color-C'], obe_settings['custom-select-indicator-color-M'], note='Sets $custom-select-indicator-color') }}
 
-                        <!-- HOLD FOR: $custom-select-indicator: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='4' height='5' viewBox='0 0 4 5'><path fill='#{$custom-select-indicator-color}' d='M2 0L0 2h4zm0 5L0 3h4z'/></svg>") !default; -->
+                        {{ macros.settings_textarea_input('custom-select-indicator', 'Custom Select Indicator', global_strings['sys']['custom-select-indicator'], obe_settings['custom-select-indicator'], note='Sets $custom-select-indicator') }}
 
-                        <!-- HOLD FOR: $custom-select-background: escape-svg($custom-select-indicator) no-repeat right $custom-select-padding-x center / $custom-select-bg-size !default; // Used so we can have multiple background elements (e.g., arrow and feedback icon) -->
+                        {{ macros.settings_text_input('custom-select-background', 'Custom Select Background', global_strings['sys']['custom-select-background'], obe_settings['custom-select-background'], note='Sets $custom-select-background. Used so you can have multiple background elements (Such as arrow + feedback icons, etc.)') }}
 
-                        <!-- HOLD FOR: $custom-select-feedback-icon-padding-right: add(1em * .75, (2 * $custom-select-padding-y * .75) + $custom-select-padding-x + $custom-select-indicator-padding) !default; -->
+                        {{ macros.settings_text_input('custom-select-feedback-icon-padding-right', 'Custom Select Feedback Icon Padding Right', global_strings['sys']['custom-select-feedback-icon-padding-right'], obe_settings['custom-select-feedback-icon-padding-right'], note='Sets $custom-select-feedback-icon-padding-right') }}
 
-                        <!-- HOLD FOR: $custom-select-feedback-icon-position: center right ($custom-select-padding-x + $custom-select-indicator-padding) !default; -->
+                        {{ macros.settings_text_input('custom-select-feedback-icon-position', 'Custom Select Feedback Icon Position', global_strings['sys']['custom-select-feedback-icon-position'], obe_settings['custom-select-feedback-icon-position'], note='Sets $custom-select-feedback-icon-position') }}
 
-                        <!-- HOLD FOR: $custom-select-feedback-icon-size: $input-height-inner-half $input-height-inner-half !default; -->
+                        {{ macros.settings_text_input('custom-select-feedback-icon-size', 'Custom Select Feedback Icon Size', global_strings['sys']['custom-select-feedback-icon-size'], obe_settings['custom-select-feedback-icon-size'], note='Sets $custom-select-feedback-icon-size') }}
 
-                        <!-- HOLD FOR: $custom-select-border-width: $input-border-width !default; -->
+                        {{ macros.settings_text_input('custom-select-border-width', 'Custom Select Border Width', global_strings['sys']['custom-select-border-width'], obe_settings['custom-select-border-width'], note='Sets $custom-select-border-width') }}
 
-                        <!-- HOLD FOR: $custom-select-border-color: $input-border-color !default; -->
+                        {{ macros.settings_text_input('custom-select-border-color', 'Custom Select Border Color', global_strings['sys']['custom-select-border-color'], obe_settings['custom-select-border-color'], note='Sets $custom-select-border-color') }}
 
-                        <!-- HOLD FOR: $custom-select-border-radius: $border-radius !default; -->
+                        {{ macros.settings_text_input('custom-select-border-radius', 'Custom Select Border Radius', global_strings['sys']['custom-select-border-radius'], obe_settings['custom-select-border-radius'], note='Sets $custom-select-border-radius') }}
 
-                        <!-- HOLD FOR: $custom-select-box-shadow: inset 0 1px 2px rgba($black, .075) !default; -->
+                        {{ macros.settings_text_input('custom-select-box-shadow', 'Custom Select Box Shadow', global_strings['sys']['custom-select-box-shadow'], obe_settings['custom-select-box-shadow'], note='Sets $custom-select-box-shadow') }}
 
-                        <!-- HOLD FOR: $custom-select-focus-border-color: $input-focus-border-color !default; -->
+                        {{ macros.settings_text_input('custom-select-focus-border-color', 'Custom Select Focus Border Color', global_strings['sys']['custom-select-focus-border-color'], obe_settings['custom-select-focus-border-color'], note='Sets $custom-select-focus-border-color') }}
 
-                        <!-- HOLD FOR: $custom-select-focus-width: $input-focus-width !default; -->
+                        {{ macros.settings_text_input('custom-select-focus-width', 'Custom Select Focus Width', global_strings['sys']['custom-select-focus-width'], obe_settings['custom-select-focus-width'], note='Sets $custom-select-focus-width') }}
 
-                        <!-- HOLD FOR: $custom-select-focus-box-shadow: 0 0 0 $custom-select-focus-width $input-btn-focus-color !default; -->
+                        {{ macros.settings_text_input('custom-select-focus-box-shadow', 'Custom Select Focus Box Shadow', global_strings['sys']['custom-select-focus-box-shadow'], obe_settings['custom-select-focus-box-shadow'], note='Sets $custom-select-focus-box-shadow') }}
 
-                        <!-- HOLD FOR: $custom-select-padding-y-sm: $input-padding-y-sm !default; -->
+                        {{ macros.settings_text_input('custom-select-padding-y-sm', 'Custom Select Padding Y Small', global_strings['sys']['custom-select-padding-y-sm'], obe_settings['custom-select-padding-y-sm'], note='Sets $custom-select-padding-y-sm') }}
 
-                        <!-- HOLD FOR: $custom-select-padding-x-sm: $input-padding-x-sm !default; -->
+                        {{ macros.settings_text_input('custom-select-padding-x-sm', 'Custom Select Padding X Small', global_strings['sys']['custom-select-padding-x-sm'], obe_settings['custom-select-padding-x-sm'], note='Sets $custom-select-padding-x-sm') }}
 
-                        <!-- HOLD FOR: $custom-select-font-size-sm: $input-font-size-sm !default; -->
+                        {{ macros.settings_text_input('custom-select-font-size-sm', 'Custom Select Font Size Small', global_strings['sys']['custom-select-font-size-sm'], obe_settings['custom-select-font-size-sm'], note='Sets $custom-select-font-size-sm') }}
 
-                        <!-- HOLD FOR: $custom-select-height-sm: $input-height-sm !default; -->
+                        {{ macros.settings_text_input('custom-select-height-sm', 'Custom Select Height Small', global_strings['sys']['custom-select-height-sm'], obe_settings['custom-select-height-sm'], note='Sets $custom-select-height-sm') }}
 
-                        <!-- HOLD FOR: $custom-select-padding-y-lg: $input-padding-y-lg !default; -->
+                        {{ macros.settings_text_input('custom-select-padding-y-lg', 'Custom Select Padding Y Large', global_strings['sys']['custom-select-padding-y-lg'], obe_settings['custom-select-padding-y-lg'], note='Sets $custom-select-padding-y-lg') }}
 
-                        <!-- HOLD FOR: $custom-select-padding-x-lg: $input-padding-x-lg !default; -->
+                        {{ macros.settings_text_input('custom-select-padding-x-lg', 'Custom Select Padding X Large', global_strings['sys']['custom-select-padding-x-lg'], obe_settings['custom-select-padding-x-lg'], note='Sets $custom-select-padding-x-lg') }}
 
-                        <!-- HOLD FOR: $custom-select-font-size-lg: $input-font-size-lg !default; -->
+                        {{ macros.settings_text_input('custom-select-font-size-lg', 'Custom Select Font Size Large', global_strings['sys']['custom-select-font-size-lg'], obe_settings['custom-select-font-size-lg'], note='Sets $custom-select-font-size-lg') }}
 
-                        <!-- HOLD FOR: $custom-select-height-lg: $input-height-lg !default; -->
+                        {{ macros.settings_text_input('custom-select-height-lg', 'Custom Select Height Large', global_strings['sys']['custom-select-height-lg'], obe_settings['custom-select-height-lg'], note='Sets $custom-select-height-lg') }}
+
+
+
+                        <!--h3 class="pt-4 pb-2">Core Forms: Custom Range Options</h3-->
+                        
+                        <!-- FORMS: CUSTOM RANGE SECTION -->
 
                         <!-- HOLD FOR: $custom-range-track-width: 100% !default; -->
 
@@ -1180,6 +1178,14 @@
 
                         <!-- HOLD FOR: $custom-range-thumb-disabled-bg: $gray-500 !default; -->
 
+                        
+                        
+                        
+
+                        <!--h3 class="pt-4 pb-2">Core Forms: Custom File Upload Options</h3-->
+                        
+                        <!-- FORMS: CUSTOM FILE UPLOAD SECTION -->
+                        
                         <!-- HOLD FOR: $custom-file-height: $input-height !default; -->
 
                         <!-- HOLD FOR: $custom-file-height-inner: $input-height-inner !default; -->
