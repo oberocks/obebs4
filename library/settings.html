@@ -5450,41 +5450,273 @@
                         <small class="d-block text-muted">Sets $custom-select-height-lg</small>
                     </div>
 
-                    <!--h3 class="pt-4 pb-2">Core Forms: Custom Range Options</h3-->
+                    <h3 class="pt-4 pb-2">Core Forms: Custom Range Options</h3>
 
                     <!-- FORMS: CUSTOM RANGE SECTION -->
 
                     <!-- HOLD FOR: $custom-range-track-width: 100% !default; -->
 
+                    <div class="form-group">
+                        <label for="custom-range-track-width" class="d-block font-weight-bold">Custom Range Track Width</label>
+                        <div class="input-group">
+                            <div class="input-group-prepend js-increment-down">
+                                <button class="btn btn-light border" type="button"><i class="fas fa-angle-left"></i></button>
+                            </div>
+                            <input type="text" class="js-increment-target form-control text-center" id="custom-range-track-width" value="100%" placeholder="100%" data-units="%" data-max="100" data-min="0" data-increment="1">
+                            <div class="input-group-append js-increment-up">
+                                <button class="btn btn-light border" type="button"><i class="fas fa-angle-right"></i></button>
+                            </div>
+                        </div>
+                        <small class="d-block text-muted pt-1">Sets $custom-range-track-width</small>
+                    </div>
+
                     <!-- HOLD FOR: $custom-range-track-height: 0.5rem !default; -->
+
+                    <div class="form-group">
+                        <label for="custom-range-track-height" class="d-block font-weight-bold">Custom Range Track Height</label>
+                        <div class="input-group">
+                            <div class="input-group-prepend js-increment-down">
+                                <button class="btn btn-light border" type="button"><i class="fas fa-angle-left"></i></button>
+                            </div>
+                            <input type="text" class="js-increment-target form-control text-center" id="custom-range-track-height" value="0.5rem" placeholder="0.5rem" data-units="rem" data-max="10" data-min="0" data-increment="0.05">
+                            <div class="input-group-append js-increment-up">
+                                <button class="btn btn-light border" type="button"><i class="fas fa-angle-right"></i></button>
+                            </div>
+                        </div>
+                        <small class="d-block text-muted pt-1">Sets $custom-range-track-height</small>
+                    </div>
 
                     <!-- HOLD FOR: $custom-range-track-cursor: pointer !default; -->
 
+                    <div class="form-group">
+                        <label for="custom-range-track-cursor" class="font-weight-bold">Custom Range Track Cursor</label>
+                        <input type="text" class="form-control" id="custom-range-track-cursor" value="pointer" placeholder="pointer">
+                        <small class="d-block text-muted">Sets $custom-range-track-cursor</small>
+                    </div>
+
                     <!-- HOLD FOR: $custom-range-track-bg: $gray-300 !default; -->
+
+                    <div class="form-row align-items-end">
+                        <div class="col-7">
+                            <div class="form-group mb-0">
+                                <label class="d-block font-weight-bold">Custom Range Track Background Color</label>
+                                <select id="custom-range-track-bg" class="form-control" aria-describedby="custom-range-track-bg-help">
+                                    <option value="none">None</option>
+                                    <option value="white">White</option>
+                                    <option value="light-gray">Light Gray</option>
+                                    <option value="gray" selected>Gray</option>
+                                    <option value="dark-gray">Dark Gray</option>
+                                    <option value="black">Black</option>
+                                    <option value="red">Red</option>
+                                    <option value="rose">Rose</option>
+                                    <option value="magenta">Magenta</option>
+                                    <option value="violet">Violet</option>
+                                    <option value="blue">Blue</option>
+                                    <option value="azure">Azure</option>
+                                    <option value="cyan">Cyan</option>
+                                    <option value="spring-green">Spring Green</option>
+                                    <option value="green">Green</option>
+                                    <option value="chartreuse">Chartreuse</option>
+                                    <option value="yellow">Yellow</option>
+                                    <option value="orange">Orange</option>
+                                    <option value="orange-gray">Orange Gray</option>
+                                    <option value="dark-gray-orange">Dark Gray Orange</option>
+                                    <option value="blue-gray">Blue Gray</option>
+                                    <option value="light-gray-azure">Light Gray Azure</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-5">
+                            <div class="form-group mb-0">
+                                <label class="d-block font-weight-bold">Tint / Shade</label>
+                                <select id="custom-range-track-bg-modifier" class="form-control">
+                                    <option value="50">50</option>
+                                    <option value="100">100</option>
+                                    <option value="200">200</option>
+                                    <option value="300" selected>300</option>
+                                    <option value="400">400</option>
+                                    <option value="none">None</option>
+                                    <option value="600">600</option>
+                                    <option value="700">700</option>
+                                    <option value="800">800</option>
+                                    <option value="900">900</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <small id="custom-range-track-bg-help" class="form-text pb-2" style="opacity: 0.6;">Sets $custom-range-track-bg</small>
 
                     <!-- HOLD FOR: $custom-range-track-border-radius: 1rem !default; -->
 
+                    <div class="form-group">
+                        <label for="custom-range-track-border-radius" class="d-block font-weight-bold">Custom Range Track Border Radius</label>
+                        <div class="input-group">
+                            <div class="input-group-prepend js-increment-down">
+                                <button class="btn btn-light border" type="button"><i class="fas fa-angle-left"></i></button>
+                            </div>
+                            <input type="text" class="js-increment-target form-control text-center" id="custom-range-track-border-radius" value="1rem" placeholder="1rem" data-units="rem" data-max="10" data-min="0" data-increment="0.05">
+                            <div class="input-group-append js-increment-up">
+                                <button class="btn btn-light border" type="button"><i class="fas fa-angle-right"></i></button>
+                            </div>
+                        </div>
+                        <small class="d-block text-muted pt-1">Sets $custom-range-track-border-radius</small>
+                    </div>
+
                     <!-- HOLD FOR: $custom-range-track-box-shadow: inset 0 .25rem .25rem rgba($black, .1) !default; -->
+
+                    <div class="form-group">
+                        <label for="custom-range-track-box-shadow" class="font-weight-bold">Custom Range Track Box Shadow</label>
+                        <input type="text" class="form-control" id="custom-range-track-box-shadow" value="inset 0 .25rem .25rem rgba($black, .1)" placeholder="inset 0 .25rem .25rem rgba($black, .1)">
+                        <small class="d-block text-muted">Sets $custom-range-track-box-shadow</small>
+                    </div>
 
                     <!-- HOLD FOR: $custom-range-thumb-width: 1rem !default; -->
 
+                    <div class="form-group">
+                        <label for="custom-range-thumb-width" class="d-block font-weight-bold">Custom Range Thumb Width</label>
+                        <div class="input-group">
+                            <div class="input-group-prepend js-increment-down">
+                                <button class="btn btn-light border" type="button"><i class="fas fa-angle-left"></i></button>
+                            </div>
+                            <input type="text" class="js-increment-target form-control text-center" id="custom-range-thumb-width" value="1rem" placeholder="1rem" data-units="rem" data-max="10" data-min="0" data-increment="0.05">
+                            <div class="input-group-append js-increment-up">
+                                <button class="btn btn-light border" type="button"><i class="fas fa-angle-right"></i></button>
+                            </div>
+                        </div>
+                        <small class="d-block text-muted pt-1">Sets $custom-range-thumb-width</small>
+                    </div>
+
                     <!-- HOLD FOR: $custom-range-thumb-height: $custom-range-thumb-width !default; -->
+
+                    <div class="form-group">
+                        <label for="custom-range-thumb-height" class="font-weight-bold">Custom Range Thumb Height</label>
+                        <input type="text" class="form-control" id="custom-range-thumb-height" value="$custom-range-thumb-width" placeholder="$custom-range-thumb-width">
+                        <small class="d-block text-muted">Sets $custom-range-thumb-height</small>
+                    </div>
 
                     <!-- HOLD FOR: $custom-range-thumb-bg: $component-active-bg !default; -->
 
+                    <div class="form-group">
+                        <label for="custom-range-thumb-bg" class="font-weight-bold">Custom Range Thumb Background</label>
+                        <input type="text" class="form-control" id="custom-range-thumb-bg" value="$component-active-bg" placeholder="$component-active-bg">
+                        <small class="d-block text-muted">Sets $custom-range-thumb-bg</small>
+                    </div>
+
                     <!-- HOLD FOR: $custom-range-thumb-border: 0 !default; -->
+
+                    <div class="form-group">
+                        <label for="custom-range-thumb-border" class="d-block font-weight-bold">Custom Range Thumb Border</label>
+                        <div class="input-group">
+                            <div class="input-group-prepend js-increment-down">
+                                <button class="btn btn-light border" type="button"><i class="fas fa-angle-left"></i></button>
+                            </div>
+                            <input type="text" class="js-increment-target form-control text-center" id="custom-range-thumb-border" value="0" placeholder="0" data-units="" data-max="1000" data-min="0" data-increment="1">
+                            <div class="input-group-append js-increment-up">
+                                <button class="btn btn-light border" type="button"><i class="fas fa-angle-right"></i></button>
+                            </div>
+                        </div>
+                        <small class="d-block text-muted pt-1">Sets $custom-range-thumb-border</small>
+                    </div>
 
                     <!-- HOLD FOR: $custom-range-thumb-border-radius: 1rem !default; -->
 
+                    <div class="form-group">
+                        <label for="custom-range-thumb-border-radius" class="d-block font-weight-bold">Custom Range Thumb Border Radius</label>
+                        <div class="input-group">
+                            <div class="input-group-prepend js-increment-down">
+                                <button class="btn btn-light border" type="button"><i class="fas fa-angle-left"></i></button>
+                            </div>
+                            <input type="text" class="js-increment-target form-control text-center" id="custom-range-thumb-border-radius" value="1rem" placeholder="1rem" data-units="rem" data-max="10" data-min="0" data-increment="0.05">
+                            <div class="input-group-append js-increment-up">
+                                <button class="btn btn-light border" type="button"><i class="fas fa-angle-right"></i></button>
+                            </div>
+                        </div>
+                        <small class="d-block text-muted pt-1">Sets $custom-range-thumb-border-radius</small>
+                    </div>
+
                     <!-- HOLD FOR: $custom-range-thumb-box-shadow: 0 .1rem .25rem rgba($black, .1) !default; -->
+
+                    <div class="form-group">
+                        <label for="custom-range-thumb-box-shadow" class="font-weight-bold">Custom Range Thumb Box Shadow</label>
+                        <input type="text" class="form-control" id="custom-range-thumb-box-shadow" value="0 .1rem .25rem rgba($black, .1)" placeholder="0 .1rem .25rem rgba($black, .1)">
+                        <small class="d-block text-muted">Sets $custom-range-thumb-box-shadow</small>
+                    </div>
 
                     <!-- HOLD FOR: $custom-range-thumb-focus-box-shadow: 0 0 0 1px $body-bg, $input-focus-box-shadow !default; -->
 
+                    <div class="form-group">
+                        <label for="custom-range-thumb-focus-box-shadow" class="font-weight-bold">Custom Range Thumb Focus Box Shadow</label>
+                        <input type="text" class="form-control" id="custom-range-thumb-focus-box-shadow" value="0 0 0 1px $body-bg, $input-focus-box-shadow" placeholder="0 0 0 1px $body-bg, $input-focus-box-shadow">
+                        <small class="d-block text-muted">Sets $custom-range-thumb-focus-box-shadow</small>
+                    </div>
+
                     <!-- HOLD FOR: $custom-range-thumb-focus-box-shadow-width: $input-focus-width !default; // For focus box shadow issue in IE/Edge -->
+
+                    <div class="form-group">
+                        <label for="custom-range-thumb-focus-box-shadow-width" class="font-weight-bold">Custom Range Thumb Focus Box Shadow Width</label>
+                        <input type="text" class="form-control" id="custom-range-thumb-focus-box-shadow-width" value="$input-focus-width" placeholder="$input-focus-width">
+                        <small class="d-block text-muted">Sets $custom-range-thumb-focus-box-shadow-width. This setting is for a focus box shadow issue in IE/Edge.</small>
+                    </div>
 
                     <!-- HOLD FOR: $custom-range-thumb-active-bg: lighten($component-active-bg, 35%) !default; -->
 
+                    <div class="form-group">
+                        <label for="custom-range-thumb-active-bg" class="font-weight-bold">Custom Range Thumb Active Background</label>
+                        <input type="text" class="form-control" id="custom-range-thumb-active-bg" value="lighten($component-active-bg, 35%)" placeholder="lighten($component-active-bg, 35%)">
+                        <small class="d-block text-muted">Sets $custom-range-thumb-active-bg</small>
+                    </div>
+
                     <!-- HOLD FOR: $custom-range-thumb-disabled-bg: $gray-500 !default; -->
+
+                    <div class="form-row align-items-end">
+                        <div class="col-7">
+                            <div class="form-group mb-0">
+                                <label class="d-block font-weight-bold">Custom Range Thumb Disabled Background Color</label>
+                                <select id="custom-range-thumb-disabled-bg" class="form-control" aria-describedby="custom-range-thumb-disabled-bg-help">
+                                    <option value="none">None</option>
+                                    <option value="white">White</option>
+                                    <option value="light-gray">Light Gray</option>
+                                    <option value="gray" selected>Gray</option>
+                                    <option value="dark-gray">Dark Gray</option>
+                                    <option value="black">Black</option>
+                                    <option value="red">Red</option>
+                                    <option value="rose">Rose</option>
+                                    <option value="magenta">Magenta</option>
+                                    <option value="violet">Violet</option>
+                                    <option value="blue">Blue</option>
+                                    <option value="azure">Azure</option>
+                                    <option value="cyan">Cyan</option>
+                                    <option value="spring-green">Spring Green</option>
+                                    <option value="green">Green</option>
+                                    <option value="chartreuse">Chartreuse</option>
+                                    <option value="yellow">Yellow</option>
+                                    <option value="orange">Orange</option>
+                                    <option value="orange-gray">Orange Gray</option>
+                                    <option value="dark-gray-orange">Dark Gray Orange</option>
+                                    <option value="blue-gray">Blue Gray</option>
+                                    <option value="light-gray-azure">Light Gray Azure</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-5">
+                            <div class="form-group mb-0">
+                                <label class="d-block font-weight-bold">Tint / Shade</label>
+                                <select id="custom-range-thumb-disabled-bg-modifier" class="form-control">
+                                    <option value="50">50</option>
+                                    <option value="100">100</option>
+                                    <option value="200">200</option>
+                                    <option value="300">300</option>
+                                    <option value="400">400</option>
+                                    <option value="none">None</option>
+                                    <option value="600">600</option>
+                                    <option value="700">700</option>
+                                    <option value="800">800</option>
+                                    <option value="900">900</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <small id="custom-range-thumb-disabled-bg-help" class="form-text pb-2" style="opacity: 0.6;">Sets $custom-range-thumb-disabled-bg</small>
 
                     <!--h3 class="pt-4 pb-2">Core Forms: Custom File Upload Options</h3-->
 
@@ -6840,7 +7072,7 @@
 
                 <small class="text-light">OBE:BS4 VERSION:</small>
 
-                <p class="lead">0.8.45</p>
+                <p class="lead">0.8.46</p>
 
                 <hr class="border-gray" />
 
@@ -8364,6 +8596,22 @@
                 setObjValOrFallback(object, 'custom-select-padding-x-lg', "$input-padding-x-lg");
                 setObjValOrFallback(object, 'custom-select-font-size-lg', "$input-font-size-lg");
                 setObjValOrFallback(object, 'custom-select-height-lg', "$input-height-lg");
+                setObjValOrFallback(object, 'custom-range-track-width', "100%");
+                setObjValOrFallback(object, 'custom-range-track-height', "0.5rem");
+                setObjValOrFallback(object, 'custom-range-track-cursor', "pointer");
+                setColorsData('custom-range-track-bg');
+                setObjValOrFallback(object, 'custom-range-track-border-radius', "1rem");
+                setObjValOrFallback(object, 'custom-range-track-box-shadow', "inset 0 .25rem .25rem rgba($black, .1)");
+                setObjValOrFallback(object, 'custom-range-thumb-width', "1rem");
+                setObjValOrFallback(object, 'custom-range-thumb-height', "$custom-range-thumb-width");
+                setObjValOrFallback(object, 'custom-range-thumb-bg', "$component-active-bg");
+                setObjValOrFallback(object, 'custom-range-thumb-border', "0");
+                setObjValOrFallback(object, 'custom-range-thumb-border-radius', "1rem");
+                setObjValOrFallback(object, 'custom-range-thumb-box-shadow', "0 .1rem .25rem rgba($black, .1)");
+                setObjValOrFallback(object, 'custom-range-thumb-focus-box-shadow', "0 0 0 1px $body-bg, $input-focus-box-shadow");
+                setObjValOrFallback(object, 'custom-range-thumb-focus-box-shadow-width', "$input-focus-width");
+                setObjValOrFallback(object, 'custom-range-thumb-active-bg', "lighten($component-active-bg, 35%)");
+                setColorsData('custom-range-thumb-disabled-bg');
                 //
                 // STRINGIFY OBJECT INTO JSON AND USE PRISM TO DISPLAY AS HIGHLIGHTED CODE
                 //

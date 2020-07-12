@@ -1142,41 +1142,57 @@
 
 
 
-                        <!--h3 class="pt-4 pb-2">Core Forms: Custom Range Options</h3-->
+                        <h3 class="pt-4 pb-2">Core Forms: Custom Range Options</h3>
                         
                         <!-- FORMS: CUSTOM RANGE SECTION -->
 
                         <!-- HOLD FOR: $custom-range-track-width: 100% !default; -->
+                        {{ macros.settings_number_step_input('custom-range-track-width', 'Custom Range Track Width', global_strings['sys']['custom-range-track-width'], obe_settings['custom-range-track-width'], '%', '100', '0', '1', note='Sets $custom-range-track-width') }}
 
                         <!-- HOLD FOR: $custom-range-track-height: 0.5rem !default; -->
+                        {{ macros.settings_number_step_input('custom-range-track-height', 'Custom Range Track Height', global_strings['sys']['custom-range-track-height'], obe_settings['custom-range-track-height'], 'rem', '10', '0', '0.05', note='Sets $custom-range-track-height') }}
 
                         <!-- HOLD FOR: $custom-range-track-cursor: pointer !default; -->
+                        {{ macros.settings_text_input('custom-range-track-cursor', 'Custom Range Track Cursor', global_strings['sys']['custom-range-track-cursor'], obe_settings['custom-range-track-cursor'], note='Sets $custom-range-track-cursor') }}
 
                         <!-- HOLD FOR: $custom-range-track-bg: $gray-300 !default; -->
+                        {{ macros.settings_contextual_selects('custom-range-track-bg', 'Custom Range Track Background', obe_settings['custom-range-track-bg-C'], obe_settings['custom-range-track-bg-M'], note='Sets $custom-range-track-bg') }}
 
                         <!-- HOLD FOR: $custom-range-track-border-radius: 1rem !default; -->
+                        {{ macros.settings_number_step_input('custom-range-track-border-radius', 'Custom Range Track Border Radius', global_strings['sys']['custom-range-track-border-radius'], obe_settings['custom-range-track-border-radius'], 'rem', '10', '0', '0.05', note='Sets $custom-range-track-border-radius') }}
 
                         <!-- HOLD FOR: $custom-range-track-box-shadow: inset 0 .25rem .25rem rgba($black, .1) !default; -->
+                        {{ macros.settings_text_input('custom-range-track-box-shadow', 'Custom Range Track Box Shadow', global_strings['sys']['custom-range-track-box-shadow'], obe_settings['custom-range-track-box-shadow'], note='Sets $custom-range-track-box-shadow') }}
 
                         <!-- HOLD FOR: $custom-range-thumb-width: 1rem !default; -->
+                        {{ macros.settings_number_step_input('custom-range-thumb-width', 'Custom Range Thumb Width', global_strings['sys']['custom-range-thumb-width'], obe_settings['custom-range-thumb-width'], 'rem', '10', '0', '0.05', note='Sets $custom-range-thumb-width') }}
 
                         <!-- HOLD FOR: $custom-range-thumb-height: $custom-range-thumb-width !default; -->
+                        {{ macros.settings_text_input('custom-range-thumb-height', 'Custom Range Thumb Height', global_strings['sys']['custom-range-thumb-height'], obe_settings['custom-range-thumb-height'], note='Sets $custom-range-thumb-height') }}
 
                         <!-- HOLD FOR: $custom-range-thumb-bg: $component-active-bg !default; -->
+                        {{ macros.settings_text_input('custom-range-thumb-bg', 'Custom Range Thumb Background', global_strings['sys']['custom-range-thumb-bg'], obe_settings['custom-range-thumb-bg'], note='Sets $custom-range-thumb-bg') }}
 
                         <!-- HOLD FOR: $custom-range-thumb-border: 0 !default; -->
+                        {{ macros.settings_number_step_input('custom-range-thumb-border', 'Custom Range Thumb Border', global_strings['sys']['custom-range-thumb-border'], obe_settings['custom-range-thumb-border'], '', '1000', '0', '1', note='Sets $custom-range-thumb-border') }}
 
                         <!-- HOLD FOR: $custom-range-thumb-border-radius: 1rem !default; -->
+                        {{ macros.settings_number_step_input('custom-range-thumb-border-radius', 'Custom Range Thumb Border Radius', global_strings['sys']['custom-range-thumb-border-radius'], obe_settings['custom-range-thumb-border-radius'], 'rem', '10', '0', '0.05', note='Sets $custom-range-thumb-border-radius') }}
 
                         <!-- HOLD FOR: $custom-range-thumb-box-shadow: 0 .1rem .25rem rgba($black, .1) !default; -->
+                        {{ macros.settings_text_input('custom-range-thumb-box-shadow', 'Custom Range Thumb Box Shadow', global_strings['sys']['custom-range-thumb-box-shadow'], obe_settings['custom-range-thumb-box-shadow'], note='Sets $custom-range-thumb-box-shadow') }}
 
                         <!-- HOLD FOR: $custom-range-thumb-focus-box-shadow: 0 0 0 1px $body-bg, $input-focus-box-shadow !default; -->
+                        {{ macros.settings_text_input('custom-range-thumb-focus-box-shadow', 'Custom Range Thumb Focus Box Shadow', global_strings['sys']['custom-range-thumb-focus-box-shadow'], obe_settings['custom-range-thumb-focus-box-shadow'], note='Sets $custom-range-thumb-focus-box-shadow') }}
 
                         <!-- HOLD FOR: $custom-range-thumb-focus-box-shadow-width: $input-focus-width !default; // For focus box shadow issue in IE/Edge -->
+                        {{ macros.settings_text_input('custom-range-thumb-focus-box-shadow-width', 'Custom Range Thumb Focus Box Shadow Width', global_strings['sys']['custom-range-thumb-focus-box-shadow-width'], obe_settings['custom-range-thumb-focus-box-shadow-width'], note='Sets $custom-range-thumb-focus-box-shadow-width. This setting is for a focus box shadow issue in IE/Edge.') }}
 
                         <!-- HOLD FOR: $custom-range-thumb-active-bg: lighten($component-active-bg, 35%) !default; -->
+                        {{ macros.settings_text_input('custom-range-thumb-active-bg', 'Custom Range Thumb Active Background', global_strings['sys']['custom-range-thumb-active-bg'], obe_settings['custom-range-thumb-active-bg'], note='Sets $custom-range-thumb-active-bg') }}
 
                         <!-- HOLD FOR: $custom-range-thumb-disabled-bg: $gray-500 !default; -->
+                        {{ macros.settings_contextual_selects('custom-range-thumb-disabled-bg', 'Custom Range Thumb Disabled Background', obe_settings['custom-range-thumb-disabled-bg-C'], obe_settings['custom-range-thumb-disabled-bg-M'], note='Sets $custom-range-thumb-disabled-bg') }}
 
                         
                         
