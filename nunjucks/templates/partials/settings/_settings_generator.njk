@@ -1146,99 +1146,83 @@
                         
                         <!-- FORMS: CUSTOM RANGE SECTION -->
 
-                        <!-- HOLD FOR: $custom-range-track-width: 100% !default; -->
                         {{ macros.settings_number_step_input('custom-range-track-width', 'Custom Range Track Width', global_strings['sys']['custom-range-track-width'], obe_settings['custom-range-track-width'], '%', '100', '0', '1', note='Sets $custom-range-track-width') }}
 
-                        <!-- HOLD FOR: $custom-range-track-height: 0.5rem !default; -->
                         {{ macros.settings_number_step_input('custom-range-track-height', 'Custom Range Track Height', global_strings['sys']['custom-range-track-height'], obe_settings['custom-range-track-height'], 'rem', '10', '0', '0.05', note='Sets $custom-range-track-height') }}
 
-                        <!-- HOLD FOR: $custom-range-track-cursor: pointer !default; -->
                         {{ macros.settings_text_input('custom-range-track-cursor', 'Custom Range Track Cursor', global_strings['sys']['custom-range-track-cursor'], obe_settings['custom-range-track-cursor'], note='Sets $custom-range-track-cursor') }}
 
-                        <!-- HOLD FOR: $custom-range-track-bg: $gray-300 !default; -->
                         {{ macros.settings_contextual_selects('custom-range-track-bg', 'Custom Range Track Background', obe_settings['custom-range-track-bg-C'], obe_settings['custom-range-track-bg-M'], note='Sets $custom-range-track-bg') }}
 
-                        <!-- HOLD FOR: $custom-range-track-border-radius: 1rem !default; -->
                         {{ macros.settings_number_step_input('custom-range-track-border-radius', 'Custom Range Track Border Radius', global_strings['sys']['custom-range-track-border-radius'], obe_settings['custom-range-track-border-radius'], 'rem', '10', '0', '0.05', note='Sets $custom-range-track-border-radius') }}
 
-                        <!-- HOLD FOR: $custom-range-track-box-shadow: inset 0 .25rem .25rem rgba($black, .1) !default; -->
                         {{ macros.settings_text_input('custom-range-track-box-shadow', 'Custom Range Track Box Shadow', global_strings['sys']['custom-range-track-box-shadow'], obe_settings['custom-range-track-box-shadow'], note='Sets $custom-range-track-box-shadow') }}
 
-                        <!-- HOLD FOR: $custom-range-thumb-width: 1rem !default; -->
                         {{ macros.settings_number_step_input('custom-range-thumb-width', 'Custom Range Thumb Width', global_strings['sys']['custom-range-thumb-width'], obe_settings['custom-range-thumb-width'], 'rem', '10', '0', '0.05', note='Sets $custom-range-thumb-width') }}
 
-                        <!-- HOLD FOR: $custom-range-thumb-height: $custom-range-thumb-width !default; -->
                         {{ macros.settings_text_input('custom-range-thumb-height', 'Custom Range Thumb Height', global_strings['sys']['custom-range-thumb-height'], obe_settings['custom-range-thumb-height'], note='Sets $custom-range-thumb-height') }}
 
-                        <!-- HOLD FOR: $custom-range-thumb-bg: $component-active-bg !default; -->
                         {{ macros.settings_text_input('custom-range-thumb-bg', 'Custom Range Thumb Background', global_strings['sys']['custom-range-thumb-bg'], obe_settings['custom-range-thumb-bg'], note='Sets $custom-range-thumb-bg') }}
 
-                        <!-- HOLD FOR: $custom-range-thumb-border: 0 !default; -->
                         {{ macros.settings_number_step_input('custom-range-thumb-border', 'Custom Range Thumb Border', global_strings['sys']['custom-range-thumb-border'], obe_settings['custom-range-thumb-border'], '', '1000', '0', '1', note='Sets $custom-range-thumb-border') }}
 
-                        <!-- HOLD FOR: $custom-range-thumb-border-radius: 1rem !default; -->
                         {{ macros.settings_number_step_input('custom-range-thumb-border-radius', 'Custom Range Thumb Border Radius', global_strings['sys']['custom-range-thumb-border-radius'], obe_settings['custom-range-thumb-border-radius'], 'rem', '10', '0', '0.05', note='Sets $custom-range-thumb-border-radius') }}
 
-                        <!-- HOLD FOR: $custom-range-thumb-box-shadow: 0 .1rem .25rem rgba($black, .1) !default; -->
                         {{ macros.settings_text_input('custom-range-thumb-box-shadow', 'Custom Range Thumb Box Shadow', global_strings['sys']['custom-range-thumb-box-shadow'], obe_settings['custom-range-thumb-box-shadow'], note='Sets $custom-range-thumb-box-shadow') }}
 
-                        <!-- HOLD FOR: $custom-range-thumb-focus-box-shadow: 0 0 0 1px $body-bg, $input-focus-box-shadow !default; -->
                         {{ macros.settings_text_input('custom-range-thumb-focus-box-shadow', 'Custom Range Thumb Focus Box Shadow', global_strings['sys']['custom-range-thumb-focus-box-shadow'], obe_settings['custom-range-thumb-focus-box-shadow'], note='Sets $custom-range-thumb-focus-box-shadow') }}
 
-                        <!-- HOLD FOR: $custom-range-thumb-focus-box-shadow-width: $input-focus-width !default; // For focus box shadow issue in IE/Edge -->
                         {{ macros.settings_text_input('custom-range-thumb-focus-box-shadow-width', 'Custom Range Thumb Focus Box Shadow Width', global_strings['sys']['custom-range-thumb-focus-box-shadow-width'], obe_settings['custom-range-thumb-focus-box-shadow-width'], note='Sets $custom-range-thumb-focus-box-shadow-width. This setting is for a focus box shadow issue in IE/Edge.') }}
 
-                        <!-- HOLD FOR: $custom-range-thumb-active-bg: lighten($component-active-bg, 35%) !default; -->
                         {{ macros.settings_text_input('custom-range-thumb-active-bg', 'Custom Range Thumb Active Background', global_strings['sys']['custom-range-thumb-active-bg'], obe_settings['custom-range-thumb-active-bg'], note='Sets $custom-range-thumb-active-bg') }}
 
-                        <!-- HOLD FOR: $custom-range-thumb-disabled-bg: $gray-500 !default; -->
                         {{ macros.settings_contextual_selects('custom-range-thumb-disabled-bg', 'Custom Range Thumb Disabled Background', obe_settings['custom-range-thumb-disabled-bg-C'], obe_settings['custom-range-thumb-disabled-bg-M'], note='Sets $custom-range-thumb-disabled-bg') }}
 
                         
                         
                         
 
-                        <!--h3 class="pt-4 pb-2">Core Forms: Custom File Upload Options</h3-->
+                        <h3 class="pt-4 pb-2">Core Forms: Custom File Upload Options</h3>
                         
                         <!-- FORMS: CUSTOM FILE UPLOAD SECTION -->
                         
-                        <!-- HOLD FOR: $custom-file-height: $input-height !default; -->
+                        {{ macros.settings_text_input('custom-file-height', 'Custom File Height', global_strings['sys']['custom-file-height'], obe_settings['custom-file-height'], note='Sets $custom-file-height') }}
 
-                        <!-- HOLD FOR: $custom-file-height-inner: $input-height-inner !default; -->
+                        {{ macros.settings_text_input('custom-file-height-inner', 'Custom File Height Inner', global_strings['sys']['custom-file-height-inner'], obe_settings['custom-file-height-inner'], note='Sets $custom-file-height-inner') }}
 
-                        <!-- HOLD FOR: $custom-file-focus-border-color: $input-focus-border-color !default; -->
+                        {{ macros.settings_text_input('custom-file-focus-border-color', 'Custom File Focus Border Color', global_strings['sys']['custom-file-focus-border-color'], obe_settings['custom-file-focus-border-color'], note='Sets $custom-file-focus-border-color') }}
 
-                        <!-- HOLD FOR: $custom-file-focus-box-shadow: $input-focus-box-shadow !default; -->
+                        {{ macros.settings_text_input('custom-file-focus-box-shadow', 'Custom File Focus Box Shadow', global_strings['sys']['custom-file-focus-box-shadow'], obe_settings['custom-file-focus-box-shadow'], note='Sets $custom-file-focus-box-shadow') }}
 
-                        <!-- HOLD FOR: $custom-file-disabled-bg: $input-disabled-bg !default; -->
+                        {{ macros.settings_text_input('custom-file-disabled-bg', 'Custom File Disabled Background', global_strings['sys']['custom-file-disabled-bg'], obe_settings['custom-file-disabled-bg'], note='Sets $custom-file-disabled-bg') }}
 
-                        <!-- HOLD FOR: $custom-file-padding-y: $input-padding-y !default; -->
+                        {{ macros.settings_text_input('custom-file-padding-y', 'Custom File Padding Y', global_strings['sys']['custom-file-padding-y'], obe_settings['custom-file-padding-y'], note='Sets $custom-file-padding-y') }}
 
-                        <!-- HOLD FOR: $custom-file-padding-x: $input-padding-x !default; -->
+                        {{ macros.settings_text_input('custom-file-padding-x', 'Custom File Padding X', global_strings['sys']['custom-file-padding-x'], obe_settings['custom-file-padding-x'], note='Sets $custom-file-padding-x') }}
 
-                        <!-- HOLD FOR: $custom-file-line-height: $input-line-height !default; -->
+                        {{ macros.settings_text_input('custom-file-line-height', 'Custom File Line Height', global_strings['sys']['custom-file-line-height'], obe_settings['custom-file-line-height'], note='Sets $custom-file-line-height') }}
 
-                        <!-- HOLD FOR: $custom-file-font-family: $input-font-family !default; -->
+                        {{ macros.settings_text_input('custom-file-font-family', 'Custom File Font Family', global_strings['sys']['custom-file-font-family'], obe_settings['custom-file-font-family'], note='Sets $custom-file-font-family') }}
 
-                        <!-- HOLD FOR: $custom-file-font-weight: $input-font-weight !default; -->
+                        {{ macros.settings_text_input('custom-file-font-weight', 'Custom File Font Weight', global_strings['sys']['custom-file-font-weight'], obe_settings['custom-file-font-weight'], note='Sets $custom-file-font-weight') }}
 
-                        <!-- HOLD FOR: $custom-file-color: $input-color !default; -->
+                        {{ macros.settings_text_input('custom-file-color', 'Custom File Color', global_strings['sys']['custom-file-color'], obe_settings['custom-file-color'], note='Sets $custom-file-color') }}
 
-                        <!-- HOLD FOR: $custom-file-bg: $input-bg !default; -->
+                        {{ macros.settings_text_input('custom-file-bg', 'Custom File Background', global_strings['sys']['custom-file-bg'], obe_settings['custom-file-bg'], note='Sets $custom-file-bg') }}
 
-                        <!-- HOLD FOR: $custom-file-border-width: $input-border-width !default; -->
+                        {{ macros.settings_text_input('custom-file-border-width', 'Custom File Border Width', global_strings['sys']['custom-file-border-width'], obe_settings['custom-file-border-width'], note='Sets $custom-file-border-width') }}
 
-                        <!-- HOLD FOR: $custom-file-border-color: $input-border-color !default; -->
+                        {{ macros.settings_text_input('custom-file-border-color', 'Custom File Border Color', global_strings['sys']['custom-file-border-color'], obe_settings['custom-file-border-color'], note='Sets $custom-file-border-color') }}
 
-                        <!-- HOLD FOR: $custom-file-border-radius: $input-border-radius !default; -->
+                        {{ macros.settings_text_input('custom-file-border-radius', 'Custom File Border Radius', global_strings['sys']['custom-file-border-radius'], obe_settings['custom-file-border-radius'], note='Sets $custom-file-border-radius') }}
 
-                        <!-- HOLD FOR: $custom-file-box-shadow: $input-box-shadow !default; -->
+                        {{ macros.settings_text_input('custom-file-box-shadow', 'Custom File Box Shadow', global_strings['sys']['custom-file-box-shadow'], obe_settings['custom-file-box-shadow'], note='Sets $custom-file-box-shadow') }}
 
-                        <!-- HOLD FOR: $custom-file-button-color: $custom-file-color !default; -->
+                        {{ macros.settings_text_input('custom-file-button-color', 'Custom File Button Color', global_strings['sys']['custom-file-button-color'], obe_settings['custom-file-button-color'], note='Sets $custom-file-button-color') }}
 
-                        <!-- HOLD FOR: $custom-file-button-bg: $input-group-addon-bg !default; -->
+                        {{ macros.settings_text_input('custom-file-button-bg', 'Custom File Button Background', global_strings['sys']['custom-file-button-bg'], obe_settings['custom-file-button-bg'], note='Sets $custom-file-button-bg') }}
 
-                        <!-- HOLD FOR: $custom-file-text: ( en: "Browse" ) !default; -->
+                        {{ macros.settings_text_input('custom-file-text', 'Custom File Text', global_strings['sys']['custom-file-text'], obe_settings['custom-file-text'], note='Sets $custom-file-text') }}
 
 
                         
