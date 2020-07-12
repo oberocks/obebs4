@@ -2287,6 +2287,16 @@
 
 
 
+{%- macro settings_textarea_input(id, labelText, fallbackValue, value, note='false') %}
+<div class="form-group">
+    <label for="{{ id }}" class="font-weight-bold">{{ labelText }}</label>
+    <textarea type="text" class="form-control" id="{{ id }}" rows="4">{% if value | length > 0 %}{{ value }}{% else %}{{ fallbackValue }}{% endif %}</textarea>
+    {% if note != 'false' %}<small class="d-block text-muted">{{ note }}</small>{% endif %}
+</div>
+{%- endmacro %}
+
+
+
 {%- macro spinner(label, classes, style = 'false') %}
 <label class="d-block">{{ label }} Spinner</label>
 <div class="js-prism mb-2">
