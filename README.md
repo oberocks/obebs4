@@ -663,7 +663,28 @@ The following changes were made to the default `obebs4_settings.json` file durin
 "custom-control-indicator-active-bg": "lighten($component-active-bg, 35%)",
 "custom-control-indicator-active-box-shadow": "none",
 "custom-control-indicator-active-border-color": "$custom-control-indicator-active-bg",
-"custom-checkbox-indicator-border-radius": "$border-radius"
+"custom-checkbox-indicator-border-radius": "$border-radius",
+
+"custom-checkbox-indicator-icon-checked": "url(\"data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='8' height='8' viewBox='0 0 8 8'><path fill='#{$custom-control-indicator-checked-color}' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26l2.974 2.99L8 2.193z'/></svg>\")",
+"custom-checkbox-indicator-indeterminate-bg": "$component-active-bg",
+"custom-checkbox-indicator-indeterminate-color": "$custom-control-indicator-checked-color",
+"custom-checkbox-indicator-icon-indeterminate": "url(\"data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'><path stroke='#{$custom-checkbox-indicator-indeterminate-color}' d='M0 2h4'/></svg>\")",
+"custom-checkbox-indicator-indeterminate-box-shadow": "none",
+"custom-checkbox-indicator-indeterminate-border-color": "$custom-checkbox-indicator-indeterminate-bg",
+"custom-radio-indicator-border-radius": "50%",
+"custom-radio-indicator-icon-checked": "url(\"data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='-4 -4 8 8'><circle r='3' fill='#{$custom-control-indicator-checked-color}'/></svg>\")",
+"custom-switch-width": "$custom-control-indicator-size * 1.75",
+"custom-switch-indicator-border-radius": "$custom-control-indicator-size / 2",
+"custom-switch-indicator-size": "subtract($custom-control-indicator-size, $custom-control-indicator-border-width * 4)",
+"custom-select-padding-y": "$input-padding-y",
+"custom-select-padding-x": "$input-padding-x",
+"custom-select-font-family": "$input-font-family",
+"custom-select-font-size": "$input-font-size",
+"custom-select-height": "$input-height",
+    "custom-select-indicator-padding": "1rem",
+    "custom-select-font-weight": "$input-font-weight",
+    "custom-select-line-height": "$input-line-height",
+    "custom-select-color": "$input-color"
 ```
 <!---
 ## Customizing Your Web Design System

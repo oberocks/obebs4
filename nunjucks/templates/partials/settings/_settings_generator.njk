@@ -986,123 +986,117 @@
 
                         <!-- $input-group-addon-bg IS ALREADY USED -->
 
-                        <!-- HOLD FOR: $input-group-addon-border-color: $input-border-color !default; -->
                         {{ macros.settings_text_input('input-group-addon-border-color', 'Input Group Addon Border Color', global_strings['sys']['input-group-addon-border-color'], obe_settings['input-group-addon-border-color'], note='Sets $input-group-addon-border-color') }}
 
-                        <!-- HOLD FOR: $custom-forms-transition: background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out !default; -->
                         {{ macros.settings_text_input('custom-forms-transition', 'Custom Forms Transition', global_strings['sys']['custom-forms-transition'], obe_settings['custom-forms-transition'], note='Sets $custom-forms-transition') }}
 
-                        <!-- HOLD FOR: $custom-control-gutter: 0.5rem !default; -->
                         {{ macros.settings_number_step_input('custom-control-gutter', 'Custom Control Only', global_strings['sys']['custom-control-gutter'], obe_settings['custom-control-gutter'], 'rem', '10', '0', '0.05', note='Sets $custom-control-gutter') }}
 
-                        <!-- HOLD FOR: $custom-control-spacer-x: 1rem !default; -->
                         {{ macros.settings_number_step_input('custom-control-spacer-x', 'Custom Control Spacer X', global_strings['sys']['custom-control-spacer-x'], obe_settings['custom-control-spacer-x'], 'rem', '10', '0', '0.05', note='Sets $custom-control-spacer-x') }}
 
-                        <!-- HOLD FOR: $custom-control-cursor: null !default; -->
                         {{ macros.settings_text_input('custom-control-cursor', 'Custom Control Cursor', global_strings['sys']['custom-control-cursor'], obe_settings['custom-control-cursor'], note='Sets $custom-control-cursor') }}
 
-                        <!-- HOLD FOR: $custom-control-indicator-size: 1rem !default; -->
                         {{ macros.settings_number_step_input('custom-control-indicator-size', 'Custom Control Indicator Size', global_strings['sys']['custom-control-indicator-size'], obe_settings['custom-control-indicator-size'], 'rem', '10', '0', '0.05', note='Sets $custom-control-indicator-size') }}
 
-                        <!-- HOLD FOR: $custom-control-indicator-bg: $input-bg !default; -->
                         {{ macros.settings_text_input('custom-control-indicator-bg', 'Custom Control Indicator Background', global_strings['sys']['custom-control-indicator-bg'], obe_settings['custom-control-indicator-bg'], note='Sets $custom-control-indicator-bg') }}
 
-                        <!-- HOLD FOR: $custom-control-indicator-bg-size: 0% 50% !default; -->
                         {{ macros.settings_text_input('custom-control-indicator-bg-size', 'Custom Control Indicator Background Size', global_strings['sys']['custom-control-indicator-bg-size'], obe_settings['custom-control-indicator-bg-size'], note='Sets $custom-control-indicator-bg-size') }}
 
-                        <!-- HOLD FOR: $custom-control-indicator-box-shadow: $input-box-shadow !default; -->
                         {{ macros.settings_text_input('custom-control-indicator-box-shadow', 'Custom Control Indicator Box Shadow', global_strings['sys']['custom-control-indicator-box-shadow'], obe_settings['custom-control-indicator-box-shadow'], note='Sets $custom-control-indicator-box-shadow') }}
 
-                        <!-- HOLD FOR: $custom-control-indicator-border-color: $gray-500 !default; -->
                         {{ macros.settings_contextual_selects('custom-control-indicator-border-color', 'Custom Control Indicator Border Color', obe_settings['custom-control-indicator-border-color-C'], obe_settings['custom-control-indicator-border-color-M'], note='Sets $custom-control-indicator-border-color') }}
 
-                        <!-- HOLD FOR: $custom-control-indicator-border-width: $input-border-width !default; -->
                         {{ macros.settings_text_input('custom-control-indicator-border-width', 'Custom Control Indicator Border Width', global_strings['sys']['custom-control-indicator-border-width'], obe_settings['custom-control-indicator-border-width'], note='Sets $custom-control-indicator-border-width') }}
 
-                        <!-- HOLD FOR: $custom-control-label-color: null !default; -->
                         {{ macros.settings_text_input('custom-control-label-color', 'Custom Control Labor Color', global_strings['sys']['custom-control-label-color'], obe_settings['custom-control-label-color'], note='Sets $custom-control-label-color') }}
 
-                        <!-- HOLD FOR: $custom-control-indicator-disabled-bg: $input-disabled-bg !default; -->
                         {{ macros.settings_text_input('custom-control-indicator-disabled-bg', 'Custom Control Indicator Disabled Background', global_strings['sys']['custom-control-indicator-disabled-bg'], obe_settings['custom-control-indicator-disabled-bg'], note='Sets $custom-control-indicator-disabled-bg') }}
 
-                        <!-- HOLD FOR: $custom-control-label-disabled-color: $gray-600 !default; -->
                         {{ macros.settings_contextual_selects('custom-control-label-disabled-color', 'Custom Control Label Disabled Color', obe_settings['custom-control-label-disabled-color-C'], obe_settings['custom-control-label-disabled-color-M'], note='Sets $custom-control-label-disabled-color') }}
 
-                        <!-- HOLD FOR: $custom-control-indicator-checked-color: $component-active-color !default; -->
                         {{ macros.settings_text_input('custom-control-indicator-checked-color', 'Custom Control Indicator Checked Color', global_strings['sys']['custom-control-indicator-checked-color'], obe_settings['custom-control-indicator-checked-color'], note='Sets $custom-control-indicator-checked-color') }}
 
-                        <!-- HOLD FOR: $custom-control-indicator-checked-bg: $component-active-bg !default; -->
                         {{ macros.settings_text_input('custom-control-indicator-checked-bg', 'Custom Control Indicator Checked Background', global_strings['sys']['custom-control-indicator-checked-bg'], obe_settings['custom-control-indicator-checked-bg'], note='Sets $custom-control-indicator-checked-bg') }}
 
-                        <!-- HOLD FOR: $custom-control-indicator-checked-disabled-bg: rgba(theme-color("primary"), .5) !default; -->
                         {{ macros.settings_text_input('custom-control-indicator-checked-disabled-bg', 'Custom Control Indicator Checked Disabled Background', global_strings['sys']['custom-control-indicator-checked-disabled-bg'], obe_settings['custom-control-indicator-checked-disabled-bg'], note='Sets $custom-control-indicator-checked-disabled-bg') }}
 
-                        <!-- HOLD FOR: $custom-control-indicator-checked-box-shadow: none !default; -->
                         {{ macros.settings_text_input('custom-control-indicator-checked-box-shadow', 'Custom Control Indicator Checked Box Shadow', global_strings['sys']['custom-control-indicator-checked-box-shadow'], obe_settings['custom-control-indicator-checked-box-shadow'], note='Sets $custom-control-indicator-checked-box-shadow') }}
 
-                        <!-- HOLD FOR: $custom-control-indicator-checked-border-color: $custom-control-indicator-checked-bg !default; -->
                         {{ macros.settings_text_input('custom-control-indicator-checked-border-color', 'Custom Control Indicator Checked Border Color', global_strings['sys']['custom-control-indicator-checked-border-color'], obe_settings['custom-control-indicator-checked-border-color'], note='Sets $custom-control-indicator-checked-border-color') }}
 
-                        <!-- HOLD FOR: $custom-control-indicator-focus-box-shadow: $input-focus-box-shadow !default; -->
                         {{ macros.settings_text_input('custom-control-indicator-focus-box-shadow', 'Custom Control Indicator Focus Box Shadow', global_strings['sys']['custom-control-indicator-focus-box-shadow'], obe_settings['custom-control-indicator-focus-box-shadow'], note='Sets $custom-control-indicator-focus-box-shadow') }}
 
-                        <!-- HOLD FOR: $custom-control-indicator-focus-border-color: $input-focus-border-color !default; -->
                         {{ macros.settings_text_input('custom-control-indicator-focus-border-color', 'Custom Control Indicator Focus Border Color', global_strings['sys']['custom-control-indicator-focus-border-color'], obe_settings['custom-control-indicator-focus-border-color'], note='Sets $custom-control-indicator-focus-border-color') }}
 
-                        <!-- HOLD FOR: $custom-control-indicator-active-color: $component-active-color !default; -->
                         {{ macros.settings_text_input('custom-control-indicator-active-color', 'Custom Control Indicator Active Color', global_strings['sys']['custom-control-indicator-active-color'], obe_settings['custom-control-indicator-active-color'], note='Sets $custom-control-indicator-active-color') }}
 
-                        <!-- HOLD FOR: $custom-control-indicator-active-bg: lighten($component-active-bg, 35%) !default; -->
                         {{ macros.settings_text_input('custom-control-indicator-active-bg', 'Custom Control Indicator Active Background', global_strings['sys']['custom-control-indicator-active-bg'], obe_settings['custom-control-indicator-active-bg'], note='Sets $custom-control-indicator-active-bg') }}
 
-                        <!-- HOLD FOR: $custom-control-indicator-active-box-shadow: none !default; -->
                         {{ macros.settings_text_input('custom-control-indicator-active-box-shadow', 'Custom Control Indicator Active Box Shadow', global_strings['sys']['custom-control-indicator-active-box-shadow'], obe_settings['custom-control-indicator-active-box-shadow'], note='Sets $custom-control-indicator-active-box-shadow') }}
 
-                        <!-- HOLD FOR: $custom-control-indicator-active-border-color: $custom-control-indicator-active-bg !default; -->
                         {{ macros.settings_text_input('custom-control-indicator-active-border-color', 'Custom Control Indicator Active Border Color', global_strings['sys']['custom-control-indicator-active-border-color'], obe_settings['custom-control-indicator-active-border-color'], note='Sets $custom-control-indicator-active-border-color') }}
 
-                        <!-- HOLD FOR: $custom-checkbox-indicator-border-radius: $border-radius !default; -->
                         {{ macros.settings_text_input('custom-checkbox-indicator-border-radius', 'Custom Checkbox Indicator Border Radius', global_strings['sys']['custom-checkbox-indicator-border-radius'], obe_settings['custom-checkbox-indicator-border-radius'], note='Sets $custom-checkbox-indicator-border-radius') }}
 
                         <!-- HOLD FOR: $custom-checkbox-indicator-icon-checked: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='8' height='8' viewBox='0 0 8 8'><path fill='#{$custom-control-indicator-checked-color}' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26l2.974 2.99L8 2.193z'/></svg>") !default; -->
+                        {{ macros.settings_textarea_input('custom-checkbox-indicator-icon-checked', 'Custom Checkbox Indicator Icon Checked', global_strings['sys']['custom-checkbox-indicator-icon-checked'], obe_settings['custom-checkbox-indicator-icon-checked'], note='Sets $custom-checkbox-indicator-icon-checked') }}
 
                         <!-- HOLD FOR: $custom-checkbox-indicator-indeterminate-bg: $component-active-bg !default; -->
+                        {{ macros.settings_text_input('custom-checkbox-indicator-indeterminate-bg', 'Custom Checkbox Indicator Indeterminate Background', global_strings['sys']['custom-checkbox-indicator-indeterminate-bg'], obe_settings['custom-checkbox-indicator-indeterminate-bg'], note='Sets $custom-checkbox-indicator-indeterminate-bg') }}
 
                         <!-- HOLD FOR: $custom-checkbox-indicator-indeterminate-color: $custom-control-indicator-checked-color !default; -->
+                        {{ macros.settings_text_input('custom-checkbox-indicator-indeterminate-color', 'Custom Checkbox Indicator Indeterminate Color', global_strings['sys']['custom-checkbox-indicator-indeterminate-color'], obe_settings['custom-checkbox-indicator-indeterminate-color'], note='Sets $custom-checkbox-indicator-indeterminate-color') }}
 
                         <!-- HOLD FOR: $custom-checkbox-indicator-icon-indeterminate: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'><path stroke='#{$custom-checkbox-indicator-indeterminate-color}' d='M0 2h4'/></svg>") !default; -->
+                        {{ macros.settings_textarea_input('custom-checkbox-indicator-icon-indeterminate', 'Custom Checkbox Indicator Icon Indeterminate', global_strings['sys']['custom-checkbox-indicator-icon-indeterminate'], obe_settings['custom-checkbox-indicator-icon-indeterminate'], note='Sets $custom-checkbox-indicator-icon-indeterminate') }}
 
                         <!-- HOLD FOR: $custom-checkbox-indicator-indeterminate-box-shadow: none !default; -->
+                        {{ macros.settings_text_input('custom-checkbox-indicator-indeterminate-box-shadow', 'Custom Checkbox Indicator Indeterminate Box Shadow', global_strings['sys']['custom-checkbox-indicator-indeterminate-box-shadow'], obe_settings['custom-checkbox-indicator-indeterminate-box-shadow'], note='Sets $custom-checkbox-indicator-indeterminate-box-shadow') }}
 
                         <!-- HOLD FOR: $custom-checkbox-indicator-indeterminate-border-color: $custom-checkbox-indicator-indeterminate-bg !default; -->
+                        {{ macros.settings_text_input('custom-checkbox-indicator-indeterminate-border-color', 'Custom Checkbox Indicator Indeterminate Border Color', global_strings['sys']['custom-checkbox-indicator-indeterminate-border-color'], obe_settings['custom-checkbox-indicator-indeterminate-border-color'], note='Sets $custom-checkbox-indicator-indeterminate-border-color') }}
 
                         <!-- HOLD FOR: $custom-radio-indicator-border-radius: 50% !default; -->
+                        {{ macros.settings_number_step_input('custom-radio-indicator-border-radius', 'Custom Radio Indicator Border Radius', global_strings['sys']['custom-radio-indicator-border-radius'], obe_settings['custom-radio-indicator-border-radius'], '%', '100', '0', '1', note='Sets $custom-radio-indicator-border-radius') }}
 
                         <!-- HOLD FOR: $custom-radio-indicator-icon-checked: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='-4 -4 8 8'><circle r='3' fill='#{$custom-control-indicator-checked-color}'/></svg>") !default; -->
+                        {{ macros.settings_textarea_input('custom-radio-indicator-icon-checked', 'Custom Radio Indicator Icon Checked', global_strings['sys']['custom-radio-indicator-icon-checked'], obe_settings['custom-radio-indicator-icon-checked'], note='Sets $custom-radio-indicator-icon-checked') }}
 
                         <!-- HOLD FOR: $custom-switch-width: $custom-control-indicator-size * 1.75 !default; -->
+                        {{ macros.settings_text_input('custom-switch-width', 'Custom Switch Width', global_strings['sys']['custom-switch-width'], obe_settings['custom-switch-width'], note='Sets $custom-switch-width') }}
 
                         <!-- HOLD FOR: $custom-switch-indicator-border-radius:  $custom-control-indicator-size / 2 !default; -->
+                        {{ macros.settings_text_input('custom-switch-indicator-border-radius', 'Custom Switch Indicator Border Radius', global_strings['sys']['custom-switch-indicator-border-radius'], obe_settings['custom-switch-indicator-border-radius'], note='Sets $custom-switch-indicator-border-radius') }}
 
                         <!-- HOLD FOR: $custom-switch-indicator-size: subtract($custom-control-indicator-size, $custom-control-indicator-border-width * 4) !default; -->
+                        {{ macros.settings_text_input('custom-switch-indicator-size', 'Custom Switch Indicator Size', global_strings['sys']['custom-switch-indicator-size'], obe_settings['custom-switch-indicator-size'], note='Sets $custom-switch-indicator-size') }}
 
                         <!-- HOLD FOR: $custom-select-padding-y: $input-padding-y !default; -->
+                        {{ macros.settings_text_input('custom-select-padding-y', 'Custom Select Padding Y', global_strings['sys']['custom-select-padding-y'], obe_settings['custom-select-padding-y'], note='Sets $custom-select-padding-y') }}
 
                         <!-- HOLD FOR: $custom-select-padding-x: $input-padding-x !default; -->
+                        {{ macros.settings_text_input('custom-select-padding-x', 'Custom Select Padding X', global_strings['sys']['custom-select-padding-x'], obe_settings['custom-select-padding-x'], note='Sets $custom-select-padding-x') }}
 
                         <!-- HOLD FOR: $custom-select-font-family: $input-font-family !default; -->
+                        {{ macros.settings_text_input('custom-select-font-family', 'Custom Select Font Family', global_strings['sys']['custom-select-font-family'], obe_settings['custom-select-font-family'], note='Sets $custom-select-font-family') }}
 
                         <!-- HOLD FOR: $custom-select-font-size: $input-font-size !default; -->
+                        {{ macros.settings_text_input('custom-select-font-size', 'Custom Select Font Size', global_strings['sys']['custom-select-font-size'], obe_settings['custom-select-font-size'], note='Sets $custom-select-font-size') }}
 
                         <!-- HOLD FOR: $custom-select-height: $input-height !default; -->
+                        {{ macros.settings_text_input('custom-select-height', 'Custom Select Height', global_strings['sys']['custom-select-height'], obe_settings['custom-select-height'], note='Sets $custom-select-height') }}
 
                         <!-- HOLD FOR: $custom-select-indicator-padding: 1rem !default; // Extra padding to account for the presence of the background-image based indicator -->
+                        {{ macros.settings_number_step_input('custom-select-indicator-padding', 'Custom Control Indicator Padding', global_strings['sys']['custom-select-indicator-padding'], obe_settings['custom-select-indicator-padding'], 'rem', '10', '0', '0.05', note='Sets $custom-select-indicator-padding. This provides extra padding to account for the presence of the background-image based indicator.') }}
 
                         <!-- HOLD FOR: $custom-select-font-weight: $input-font-weight !default; -->
+                        {{ macros.settings_text_input('custom-select-font-weight', 'Custom Select Font Weight', global_strings['sys']['custom-select-font-weight'], obe_settings['custom-select-font-weight'], note='Sets $custom-select-font-weight') }}
 
                         <!-- HOLD FOR: $custom-select-line-height: $input-line-height !default; -->
+                        {{ macros.settings_text_input('custom-select-line-height', 'Custom Select Line Height', global_strings['sys']['custom-select-line-height'], obe_settings['custom-select-line-height'], note='Sets $custom-select-line-height') }}
 
                         <!-- HOLD FOR: $custom-select-color: $input-color !default; -->
+                        {{ macros.settings_text_input('custom-select-color', 'Custom Select Color', global_strings['sys']['custom-select-color'], obe_settings['custom-select-color'], note='Sets $custom-select-color') }}
 
                         <!-- HOLD FOR: $custom-select-disabled-color: $gray-600 !default; -->
 
