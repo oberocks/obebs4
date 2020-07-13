@@ -1232,36 +1232,26 @@
                         
                         <!-- FORM VALIDATION SECTION -->
 
-                        <!-- HOLD FOR: $form-feedback-margin-top: $form-text-margin-top !default; -->
                         {{ macros.settings_text_input('form-feedback-margin-top', 'Form Feedback Margin Top', global_strings['sys']['form-feedback-margin-top'], obe_settings['form-feedback-margin-top'], note='Sets $form-feedback-margin-top') }}
 
-                        <!-- HOLD FOR: $form-feedback-font-size: $small-font-size !default; -->
                         {{ macros.settings_text_input('form-feedback-font-size', 'Form Feedback Font Size', global_strings['sys']['form-feedback-font-size'], obe_settings['form-feedback-font-size'], note='Sets $form-feedback-font-size') }}
 
-                        <!-- HOLD FOR: $form-feedback-valid-color: theme-color("success") !default; -->
                         {{ macros.settings_text_input('form-feedback-valid-color', 'Form Feedback Valid Color', global_strings['sys']['form-feedback-valid-color'], obe_settings['form-feedback-valid-color'], note='Sets $form-feedback-valid-color') }}
 
-                        <!-- HOLD FOR: $form-feedback-invalid-color: theme-color("danger") !default; -->
                         {{ macros.settings_text_input('form-feedback-invalid-color', 'Form Feedback Invalid Color', global_strings['sys']['form-feedback-invalid-color'], obe_settings['form-feedback-invalid-color'], note='Sets $form-feedback-invalid-color') }}
 
-                        <!-- HOLD FOR: $form-feedback-icon-valid-color: $form-feedback-valid-color !default; -->
                         {{ macros.settings_text_input('form-feedback-icon-valid-color', 'Form Feedback Icon Valid Color', global_strings['sys']['form-feedback-icon-valid-color'], obe_settings['form-feedback-icon-valid-color'], note='Sets $form-feedback-icon-valid-color') }}
 
-                        <!-- HOLD FOR: $form-feedback-icon-valid: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='8' height='8' viewBox='0 0 8 8'><path fill='#{$form-feedback-icon-valid-color}' d='M2.3 6.73L.6 4.53c-.4-1.04.46-1.4 1.1-.8l1.1 1.4 3.4-3.8c.6-.63 1.6-.27 1.2.7l-4 4.6c-.43.5-.8.4-1.1.1z'/></svg>") !default; -->
                         {{ macros.settings_textarea_input('form-feedback-icon-valid', 'Form Feedback Icon Valid', global_strings['sys']['form-feedback-icon-valid'], obe_settings['form-feedback-icon-valid'], note='Sets $form-feedback-icon-valid') }}
 
-                        <!-- HOLD FOR: $form-feedback-icon-invalid-color: $form-feedback-invalid-color !default; -->
                         {{ macros.settings_text_input('form-feedback-icon-invalid-color', 'Form Feedback Icon Invalid Color', global_strings['sys']['form-feedback-icon-invalid-color'], obe_settings['form-feedback-icon-invalid-color'], note='Sets $form-feedback-icon-invalid-color') }}
 
-                        <!-- HOLD FOR: $form-feedback-icon-invalid: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='none' stroke='#{$form-feedback-icon-invalid-color}' viewBox='0 0 12 12'><circle cx='6' cy='6' r='4.5'/><path stroke-linejoin='round' d='M5.8 3.6h.4L6 6.5z'/><circle cx='6' cy='8.2' r='.6' fill='#{$form-feedback-icon-invalid-color}' stroke='none'/></svg>") !default; -->
                         {{ macros.settings_textarea_input('form-feedback-icon-invalid', 'Form Feedback Icon Invalid', global_strings['sys']['form-feedback-icon-invalid'], obe_settings['form-feedback-icon-invalid'], note='Sets $form-feedback-icon-invalid') }}
 
-                        <!-- HOLD FOR: $form-validation-states: () !default; -->
                         {{ macros.settings_text_input('form-validation-states-init', 'Form Validation States (Init)', global_strings['sys']['form-validation-states-init'], obe_settings['form-validation-states-init'], note='Sets $form-validation-states-init. NOTE: this $form-validation-states-init var MUST be called in the $form-validation-states map merge below!') }}
 
                         <!-- // stylelint-disable-next-line scss/dollar-variable-default -->
 
-                        <!-- HOLD FOR: $form-validation-states: map-merge( ( "valid": ( "color": $form-feedback-valid-color, "icon": $form-feedback-icon-valid ), "invalid": ( "color": $form-feedback-invalid-color, "icon": $form-feedback-icon-invalid ), ), $form-validation-states ); -->
                         {{ macros.settings_textarea_input('form-validation-states', 'Form Validation States', global_strings['sys']['form-validation-states'], obe_settings['form-validation-states'], note='Sets $form-validation-states') }}
 
 
@@ -1269,25 +1259,28 @@
                         
                         
                         
-                        <!--h3 class="pt-4 pb-2">Core Z-Index Options</h3-->
+                        <h3 class="pt-4 pb-2">Core Z-Index Options</h3>
                         
                         <!-- Z-INDEX MASTER LIST SECTION -->
 
-                        <!-- // Warning: Avoid customizing these values. They're used for a bird's eye view of components dependent on the z-axis and are designed to all work together. -->
+                        <div class="alert alert-danger mb-4 fade show text-left" role="alert">
+                            <p class="font-weight-bold">WARNING:</p>
+                            <p class="mb-2 small">Avoid customizing these values. They're used for a bird's eye view of components that are dependent on the z-axis, so each of the number settings below are designed to all work together.</p>
+                        </div>
 
-                        <!-- HOLD FOR: $zindex-dropdown: 1000 !default; -->
+                        {{ macros.settings_number_step_input('zindex-dropdown', 'Z-Index Dropdown', global_strings['sys']['zindex-dropdown'], obe_settings['zindex-dropdown'], '', '100000', '0', '10', note='Sets $zindex-dropdown') }}
 
-                        <!-- HOLD FOR: $zindex-sticky: 1020 !default; -->
+                        {{ macros.settings_number_step_input('zindex-sticky', 'Z-Index Sticky', global_strings['sys']['zindex-sticky'], obe_settings['zindex-sticky'], '', '100000', '0', '10', note='Sets $zindex-sticky') }}
 
-                        <!-- HOLD FOR: $zindex-fixed: 1030 !default; -->
+                        {{ macros.settings_number_step_input('zindex-fixed', 'Z-Index Fixed', global_strings['sys']['zindex-fixed'], obe_settings['zindex-fixed'], '', '100000', '0', '10', note='Sets $zindex-fixed') }}
 
-                        <!-- HOLD FOR: $zindex-modal-backdrop: 1040 !default; -->
+                        {{ macros.settings_number_step_input('zindex-modal-backdrop', 'Z-Index Modal Backdrop', global_strings['sys']['zindex-modal-backdrop'], obe_settings['zindex-modal-backdrop'], '', '100000', '0', '10', note='Sets $zindex-modal-backdrop') }}
 
-                        <!-- HOLD FOR: $zindex-modal: 1050 !default; -->
+                        {{ macros.settings_number_step_input('zindex-modal', 'Z-Index Modal', global_strings['sys']['zindex-modal'], obe_settings['zindex-modal'], '', '100000', '0', '10', note='Sets $zindex-modal') }}
 
-                        <!-- HOLD FOR: $zindex-popover: 1060 !default; -->
+                        {{ macros.settings_number_step_input('zindex-popover', 'Z-Index Popover', global_strings['sys']['zindex-popover'], obe_settings['zindex-popover'], '', '100000', '0', '10', note='Sets $zindex-popover') }}
 
-                        <!-- HOLD FOR: $zindex-tooltip: 1070 !default; -->
+                        {{ macros.settings_number_step_input('zindex-tooltip', 'Z-Index Tooltip', global_strings['sys']['zindex-tooltip'], obe_settings['zindex-tooltip'], '', '100000', '0', '10', note='Sets $zindex-tooltip') }}
 
 
                         

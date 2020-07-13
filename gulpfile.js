@@ -33,6 +33,7 @@ const del = require('del');
 const cleanCSS = require('gulp-clean-css');
 const terser = require('gulp-terser');
 const htmlbeautify = require('gulp-html-beautify');
+const { SSL_OP_ALLOW_UNSAFE_LEGACY_RENEGOTIATION } = require('constants');
 const packagejson = JSON.parse(fs.readFileSync(dir.root + 'package.json', 'utf8'));
 const obebs4version = packagejson.version;
 const fontawesomeversion = packagejson.faversion;
@@ -44,6 +45,31 @@ const fontawesomeversion = packagejson.faversion;
 function get_obebs4_settings(filepath) {
     // parse the data
     let theData = JSON.parse(fs.readFileSync(filepath));
+
+    // 
+    // START EXPERIMENTAL CODE
+    // A SCRIPT TO AVOID HAVING TO NAME SPECIFIC VARS TO LOOP THROUGH
+    // AND INSTEAD CHECK EACH VALUE FOR EACH KEY IN THE PASSED DATA FOR MATCHES
+    // 
+            /*
+            let colors = ['$white', '$light-gray', '$gray', '$dark-gray', '$black', '$red', '$rose', '$magenta', '$violet', '$blue', '$azure', '$cyan', '$spring-green', '$green', '$chartreuse', '$yellow', '$orange', '$orange-gray', '$dark-gray-orange', '$light-gray-azure', '$blue-gray'];
+            let weights = ['50', '100', '200', '300', '400', '500', '600', '700', '800', '900'];
+            let slugs = [];
+            for (var x = 0; x < colors.length; x++)
+            {
+                slugs.push(colors[x]);
+                
+                for (var y = 0; y < weights.length; y++)
+                {
+                    slugs.push(colors[x] + '-' + weights[y]);
+                }
+            }
+            slugs.push('$primary', '$secondary', '$success', '$info', '$warning', '$danger', '$light', '$dark');
+            */
+    // 
+    // END EXPERIMENTAL CODE 
+    // 
+
     // array of all obebs4_settings.json keys that have color & modifier UI in _settings_generator.njk
     let keys = ['primary', 'secondary', 'success', 'info', 'warning', 'danger', 'light', 'dark', 'body-bg', 'body-color', 'link-color', 'mark-bg', 'input-bg', 'input-color', 'input-placeholder-color', 'input-disabled-bg', 'input-group-addon-bg', 'input-group-addon-color', 'component-active-bg', 'component-active-color', 'dropdown-header-color', 'dropdown-link-color', 'dropdown-link-hover-bg', 'dropdown-link-disabled-color', 'yiq-text-dark', 'yiq-text-light', 'border-color', 'headings-color', 'text-muted', 'blockquote-small-color', 'table-head-bg', 'table-head-color', 'table-dark-color', 'table-dark-bg', 'btn-link-disabled-color', 'input-border-color', 'custom-control-indicator-border-color', 'custom-control-label-disabled-color', 'custom-select-disabled-color', 'custom-range-track-bg', 'custom-range-thumb-disabled-bg'];
     // loop through the keys array
