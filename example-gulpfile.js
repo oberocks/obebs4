@@ -42,53 +42,100 @@ const fontawesomeversion = packagejson.faversion;
 
 // Utility Data Function
 function get_obebs4_settings(filepath) {
+    
     // parse the data
     let theData = JSON.parse(fs.readFileSync(filepath));
-    // array of all obebs4_settings.json keys that have color & modifier UI in _settings_generator.njk
-    let keys = ['primary', 'secondary', 'success', 'info', 'warning', 'danger', 'light', 'dark', 'body-bg', 'body-color', 'link-color', 'mark-bg', 'input-bg', 'input-color', 'input-placeholder-color', 'input-disabled-bg', 'input-group-addon-bg', 'input-group-addon-color', 'component-active-bg', 'component-active-color', 'dropdown-header-color', 'dropdown-link-color', 'dropdown-link-hover-bg', 'dropdown-link-disabled-color', 'yiq-text-dark', 'yiq-text-light', 'border-color', 'headings-color', 'text-muted', 'blockquote-small-color', 'table-head-bg', 'table-head-color', 'table-dark-color', 'table-dark-bg', 'btn-link-disabled-color', 'input-border-color', 'custom-control-indicator-border-color', 'custom-control-label-disabled-color', 'custom-select-disabled-color', 'custom-range-track-bg', 'custom-range-thumb-disabled-bg'];
-    // loop through the keys array
-    for ( var i = 0; i < keys.length; i++) {
-        // replace the sass var $
-        let val = theData[keys[i]].replace('$', '');
-        // check for strings 
-        if (val.indexOf('900') > -1) {
-            theData[keys[i] + '-C'] = val.replace('-900', '');
-            theData[keys[i] + '-M'] = '900';
-        } else if (val.indexOf('800') > -1) {
-            theData[keys[i] + '-C'] = val.replace('-800', '');
-            theData[keys[i] + '-M'] = '800';
-        } else if (val.indexOf('700') > -1) {
-            theData[keys[i] + '-C'] = val.replace('-700', '');
-            theData[keys[i] + '-M'] = '700';
-        } else if (val.indexOf('600') > -1) {
-            theData[keys[i] + '-C'] = val.replace('-600', '');
-            theData[keys[i] + '-M'] = '600';
-        } else if (val.indexOf('500') > -1) {
-            theData[keys[i] + '-C'] = val.replace('-500', '');
-            theData[keys[i] + '-M'] = '500';
-        } else if (val.indexOf('400') > -1) {
-            theData[keys[i] + '-C'] = val.replace('-400', '');
-            theData[keys[i] + '-M'] = '400';
-        } else if (val.indexOf('300') > -1) {
-            theData[keys[i] + '-C'] = val.replace('-300', '');
-            theData[keys[i] + '-M'] = '300';
-        } else if (val.indexOf('200') > -1) {
-            theData[keys[i] + '-C'] = val.replace('-200', '');
-            theData[keys[i] + '-M'] = '200';
-        } else if (val.indexOf('100') > -1) {
-            theData[keys[i] + '-C'] = val.replace('-100', '');
-            theData[keys[i] + '-M'] = '100';
-        } else if (val.indexOf('50') > -1) {
-            theData[keys[i] + '-C'] = val.replace('-50', '');
-            theData[keys[i] + '-M'] = '50';
-        } else if (val.indexOf('null') > -1) {
-            theData[keys[i] + '-C'] = 'none';
-            theData[keys[i] + '-M'] = 'none';
-        } else {
-            theData[keys[i] + '-C'] = val;
-            theData[keys[i] + '-M'] = 'none';
+    
+    // 
+    // BUILD DATA ARRAY TO CHECK AGAINST
+    //        
+
+    // set the initial base array and the arrays of strings to concatinate       
+    let colors = ['$white', '$light-gray', '$gray', '$dark-gray', '$black', '$red', '$rose', '$magenta', '$violet', '$blue', '$azure', '$cyan', '$spring-green', '$green', '$chartreuse', '$yellow', '$orange', '$orange-gray', '$dark-gray-orange', '$light-gray-azure', '$blue-gray'];
+    let weights = ['900', '800', '700', '600', '500', '400', '300', '200', '100', '50'];
+    let slugs = [];
+    
+    // loop through the colors strings array
+    for (var x = 0; x < colors.length; x++)
+    {
+        // add the item to the slugs array as is
+        slugs.push(colors[x]);
+        
+        // loop through the tints/shades weights strings array
+        for (var y = 0; y < weights.length; y++)
+        {
+            // add the tint/shade variation concatinated with the color to the slugs array
+            slugs.push(colors[x] + '-' + weights[y]);
         }
     }
+    
+    // add the bootstrap contextual classes as SASS var strings
+    slugs.push('$primary', '$secondary', '$success', '$info', '$warning', '$danger', '$light', '$dark');
+
+    // 
+    // CHECK SETTINGS DATA AGAINST NEWLY BUILT ARRAY
+    // 
+    
+    // loop through the passed settings file data array
+    Object.entries(theData).forEach((entry) => {
+        
+        let key = entry[0];
+        let val = entry[1];
+
+        // loop through the newly compiled slugs array
+        for (var i = 0; i < slugs.length; i++) {
+            
+            // if this dataset's key's value equals a slug exactly
+            if (val === slugs[i]) {
+
+                // loop through the weights to check for a match and handle it
+                for (var j = 0; j < weights.length; j++)
+                {
+                    // if the value contains the weight string
+                    if (val.indexOf('-' + weights[j]) > -1)
+                    {
+                        // create a key with -C appended
+                        // remove the weight string value suffix, the preceding dash, the $ prefix, and assign to the new key
+                        theData[key + '-C'] = val.replace('-' + weights[j], '').replace('$', '');
+
+                        // create a key with -M appended
+                        // assign the weight string value to the new key (unless the weight is 500 - then make the value string 'none')
+                        theData[key + '-M'] = (weights[j] === '500') ? 'none' : weights[j];
+
+                        // break out of the weights loop after a match is found
+                        break;
+                    }
+                }
+
+                // loop through the colors to check for a match and handle it
+                for (var k = 0; k < colors.length; k++)
+                {
+                    // if the value matches the color string
+                    if (val === colors[k])
+                    {
+                        // create a key with -C appended
+                        // remove the $ prefix, and assign to the new key
+                        theData[key + '-C'] = val.replace('$', '');
+
+                        // create a key with -M appended
+                        // assign it a none string value
+                        theData[key + '-M'] = 'none';
+
+                        // break out of the colors loop after a match is found
+                        break;
+                    }
+                }
+            }
+            // otherwise if the value matches null
+            else if (val === 'null')
+            {
+                // create two keys with -C & -M appended, and assign the string none to both of them
+                theData[key + '-C'] = 'none';
+                theData[key + '-M'] = 'none'; 
+            }
+        }
+    });
+
     // loop through the data object and init a property var
     for (const property in theData) {
         
@@ -108,6 +155,7 @@ function get_obebs4_settings(filepath) {
             theData[key] = '';
         }
     }
+
     // return the data object accessible via the property in nunjucks
     return { obe_settings: theData };
 }
