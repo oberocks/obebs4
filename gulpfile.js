@@ -33,7 +33,6 @@ const del = require('del');
 const cleanCSS = require('gulp-clean-css');
 const terser = require('gulp-terser');
 const htmlbeautify = require('gulp-html-beautify');
-const { SSL_OP_ALLOW_UNSAFE_LEGACY_RENEGOTIATION } = require('constants');
 const packagejson = JSON.parse(fs.readFileSync(dir.root + 'package.json', 'utf8'));
 const obebs4version = packagejson.version;
 const fontawesomeversion = packagejson.faversion;
