@@ -5808,15 +5808,11 @@
 
                     <!-- FORM VALIDATION SECTION -->
 
-                    <!-- HOLD FOR: $form-feedback-margin-top: $form-text-margin-top !default; -->
-
                     <div class="form-group">
                         <label for="form-feedback-margin-top" class="font-weight-bold">Form Feedback Margin Top</label>
                         <input type="text" class="form-control" id="form-feedback-margin-top" value="$form-text-margin-top" placeholder="$form-text-margin-top">
                         <small class="d-block text-muted">Sets $form-feedback-margin-top</small>
                     </div>
-
-                    <!-- HOLD FOR: $form-feedback-font-size: $small-font-size !default; -->
 
                     <div class="form-group">
                         <label for="form-feedback-font-size" class="font-weight-bold">Form Feedback Font Size</label>
@@ -5824,15 +5820,11 @@
                         <small class="d-block text-muted">Sets $form-feedback-font-size</small>
                     </div>
 
-                    <!-- HOLD FOR: $form-feedback-valid-color: theme-color("success") !default; -->
-
                     <div class="form-group">
                         <label for="form-feedback-valid-color" class="font-weight-bold">Form Feedback Valid Color</label>
                         <input type="text" class="form-control" id="form-feedback-valid-color" value="$success" placeholder="$success">
                         <small class="d-block text-muted">Sets $form-feedback-valid-color</small>
                     </div>
-
-                    <!-- HOLD FOR: $form-feedback-invalid-color: theme-color("danger") !default; -->
 
                     <div class="form-group">
                         <label for="form-feedback-invalid-color" class="font-weight-bold">Form Feedback Invalid Color</label>
@@ -5840,15 +5832,11 @@
                         <small class="d-block text-muted">Sets $form-feedback-invalid-color</small>
                     </div>
 
-                    <!-- HOLD FOR: $form-feedback-icon-valid-color: $form-feedback-valid-color !default; -->
-
                     <div class="form-group">
                         <label for="form-feedback-icon-valid-color" class="font-weight-bold">Form Feedback Icon Valid Color</label>
                         <input type="text" class="form-control" id="form-feedback-icon-valid-color" value="$form-feedback-valid-color" placeholder="$form-feedback-valid-color">
                         <small class="d-block text-muted">Sets $form-feedback-icon-valid-color</small>
                     </div>
-
-                    <!-- HOLD FOR: $form-feedback-icon-valid: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='8' height='8' viewBox='0 0 8 8'><path fill='#{$form-feedback-icon-valid-color}' d='M2.3 6.73L.6 4.53c-.4-1.04.46-1.4 1.1-.8l1.1 1.4 3.4-3.8c.6-.63 1.6-.27 1.2.7l-4 4.6c-.43.5-.8.4-1.1.1z'/></svg>") !default; -->
 
                     <div class="form-group">
                         <label for="form-feedback-icon-valid" class="font-weight-bold">Form Feedback Icon Valid</label>
@@ -5856,23 +5844,17 @@
                         <small class="d-block text-muted">Sets $form-feedback-icon-valid</small>
                     </div>
 
-                    <!-- HOLD FOR: $form-feedback-icon-invalid-color: $form-feedback-invalid-color !default; -->
-
                     <div class="form-group">
                         <label for="form-feedback-icon-invalid-color" class="font-weight-bold">Form Feedback Icon Invalid Color</label>
                         <input type="text" class="form-control" id="form-feedback-icon-invalid-color" value="$form-feedback-invalid-color" placeholder="$form-feedback-invalid-color">
                         <small class="d-block text-muted">Sets $form-feedback-icon-invalid-color</small>
                     </div>
 
-                    <!-- HOLD FOR: $form-feedback-icon-invalid: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='none' stroke='#{$form-feedback-icon-invalid-color}' viewBox='0 0 12 12'><circle cx='6' cy='6' r='4.5'/><path stroke-linejoin='round' d='M5.8 3.6h.4L6 6.5z'/><circle cx='6' cy='8.2' r='.6' fill='#{$form-feedback-icon-invalid-color}' stroke='none'/></svg>") !default; -->
-
                     <div class="form-group">
                         <label for="form-feedback-icon-invalid" class="font-weight-bold">Form Feedback Icon Invalid</label>
                         <textarea type="text" class="form-control" id="form-feedback-icon-invalid" rows="4">url(&quot;data:image/svg+xml,&lt;svg xmlns=&#39;http://www.w3.org/2000/svg&#39; width=&#39;12&#39; height=&#39;12&#39; fill=&#39;none&#39; stroke=&#39;#{$form-feedback-icon-invalid-color}&#39; viewBox=&#39;0 0 12 12&#39;&gt;&lt;circle cx=&#39;6&#39; cy=&#39;6&#39; r=&#39;4.5&#39;/&gt;&lt;path stroke-linejoin=&#39;round&#39; d=&#39;M5.8 3.6h.4L6 6.5z&#39;/&gt;&lt;circle cx=&#39;6&#39; cy=&#39;8.2&#39; r=&#39;.6&#39; fill=&#39;#{$form-feedback-icon-invalid-color}&#39; stroke=&#39;none&#39;/&gt;&lt;/svg&gt;&quot;)</textarea>
                         <small class="d-block text-muted">Sets $form-feedback-icon-invalid</small>
                     </div>
-
-                    <!-- HOLD FOR: $form-validation-states: () !default; -->
 
                     <div class="form-group">
                         <label for="form-validation-states-init" class="font-weight-bold">Form Validation States (Init)</label>
@@ -5882,33 +5864,118 @@
 
                     <!-- // stylelint-disable-next-line scss/dollar-variable-default -->
 
-                    <!-- HOLD FOR: $form-validation-states: map-merge( ( "valid": ( "color": $form-feedback-valid-color, "icon": $form-feedback-icon-valid ), "invalid": ( "color": $form-feedback-invalid-color, "icon": $form-feedback-icon-invalid ), ), $form-validation-states ); -->
-
                     <div class="form-group">
                         <label for="form-validation-states" class="font-weight-bold">Form Validation States</label>
                         <textarea type="text" class="form-control" id="form-validation-states" rows="4">map-merge( ( &quot;valid&quot;: ( &quot;color&quot;: $form-feedback-valid-color, &quot;icon&quot;: $form-feedback-icon-valid ), &quot;invalid&quot;: ( &quot;color&quot;: $form-feedback-invalid-color, &quot;icon&quot;: $form-feedback-icon-invalid ), ), $form-validation-states-init )</textarea>
                         <small class="d-block text-muted">Sets $form-validation-states</small>
                     </div>
 
-                    <!--h3 class="pt-4 pb-2">Core Z-Index Options</h3-->
+                    <h3 class="pt-4 pb-2">Core Z-Index Options</h3>
 
                     <!-- Z-INDEX MASTER LIST SECTION -->
 
-                    <!-- // Warning: Avoid customizing these values. They're used for a bird's eye view of components dependent on the z-axis and are designed to all work together. -->
+                    <div class="alert alert-danger mb-4 fade show text-left" role="alert">
+                        <p class="font-weight-bold">WARNING:</p>
+                        <p class="mb-2 small">Avoid customizing these values. They're used for a bird's eye view of components that are dependent on the z-axis, so each of the number settings below are designed to all work together.</p>
+                    </div>
 
-                    <!-- HOLD FOR: $zindex-dropdown: 1000 !default; -->
+                    <div class="form-group">
+                        <label for="zindex-dropdown" class="d-block font-weight-bold">Z-Index Dropdown</label>
+                        <div class="input-group">
+                            <div class="input-group-prepend js-increment-down">
+                                <button class="btn btn-light border" type="button"><i class="fas fa-angle-left"></i></button>
+                            </div>
+                            <input type="text" class="js-increment-target form-control text-center" id="zindex-dropdown" value="1000" placeholder="1000" data-units="" data-max="100000" data-min="0" data-increment="10">
+                            <div class="input-group-append js-increment-up">
+                                <button class="btn btn-light border" type="button"><i class="fas fa-angle-right"></i></button>
+                            </div>
+                        </div>
+                        <small class="d-block text-muted pt-1">Sets $zindex-dropdown</small>
+                    </div>
 
-                    <!-- HOLD FOR: $zindex-sticky: 1020 !default; -->
+                    <div class="form-group">
+                        <label for="zindex-sticky" class="d-block font-weight-bold">Z-Index Sticky</label>
+                        <div class="input-group">
+                            <div class="input-group-prepend js-increment-down">
+                                <button class="btn btn-light border" type="button"><i class="fas fa-angle-left"></i></button>
+                            </div>
+                            <input type="text" class="js-increment-target form-control text-center" id="zindex-sticky" value="1020" placeholder="1020" data-units="" data-max="100000" data-min="0" data-increment="10">
+                            <div class="input-group-append js-increment-up">
+                                <button class="btn btn-light border" type="button"><i class="fas fa-angle-right"></i></button>
+                            </div>
+                        </div>
+                        <small class="d-block text-muted pt-1">Sets $zindex-sticky</small>
+                    </div>
 
-                    <!-- HOLD FOR: $zindex-fixed: 1030 !default; -->
+                    <div class="form-group">
+                        <label for="zindex-fixed" class="d-block font-weight-bold">Z-Index Fixed</label>
+                        <div class="input-group">
+                            <div class="input-group-prepend js-increment-down">
+                                <button class="btn btn-light border" type="button"><i class="fas fa-angle-left"></i></button>
+                            </div>
+                            <input type="text" class="js-increment-target form-control text-center" id="zindex-fixed" value="1030" placeholder="1030" data-units="" data-max="100000" data-min="0" data-increment="10">
+                            <div class="input-group-append js-increment-up">
+                                <button class="btn btn-light border" type="button"><i class="fas fa-angle-right"></i></button>
+                            </div>
+                        </div>
+                        <small class="d-block text-muted pt-1">Sets $zindex-fixed</small>
+                    </div>
 
-                    <!-- HOLD FOR: $zindex-modal-backdrop: 1040 !default; -->
+                    <div class="form-group">
+                        <label for="zindex-modal-backdrop" class="d-block font-weight-bold">Z-Index Modal Backdrop</label>
+                        <div class="input-group">
+                            <div class="input-group-prepend js-increment-down">
+                                <button class="btn btn-light border" type="button"><i class="fas fa-angle-left"></i></button>
+                            </div>
+                            <input type="text" class="js-increment-target form-control text-center" id="zindex-modal-backdrop" value="1040" placeholder="1040" data-units="" data-max="100000" data-min="0" data-increment="10">
+                            <div class="input-group-append js-increment-up">
+                                <button class="btn btn-light border" type="button"><i class="fas fa-angle-right"></i></button>
+                            </div>
+                        </div>
+                        <small class="d-block text-muted pt-1">Sets $zindex-modal-backdrop</small>
+                    </div>
 
-                    <!-- HOLD FOR: $zindex-modal: 1050 !default; -->
+                    <div class="form-group">
+                        <label for="zindex-modal" class="d-block font-weight-bold">Z-Index Modal</label>
+                        <div class="input-group">
+                            <div class="input-group-prepend js-increment-down">
+                                <button class="btn btn-light border" type="button"><i class="fas fa-angle-left"></i></button>
+                            </div>
+                            <input type="text" class="js-increment-target form-control text-center" id="zindex-modal" value="1050" placeholder="1050" data-units="" data-max="100000" data-min="0" data-increment="10">
+                            <div class="input-group-append js-increment-up">
+                                <button class="btn btn-light border" type="button"><i class="fas fa-angle-right"></i></button>
+                            </div>
+                        </div>
+                        <small class="d-block text-muted pt-1">Sets $zindex-modal</small>
+                    </div>
 
-                    <!-- HOLD FOR: $zindex-popover: 1060 !default; -->
+                    <div class="form-group">
+                        <label for="zindex-popover" class="d-block font-weight-bold">Z-Index Popover</label>
+                        <div class="input-group">
+                            <div class="input-group-prepend js-increment-down">
+                                <button class="btn btn-light border" type="button"><i class="fas fa-angle-left"></i></button>
+                            </div>
+                            <input type="text" class="js-increment-target form-control text-center" id="zindex-popover" value="1060" placeholder="1060" data-units="" data-max="100000" data-min="0" data-increment="10">
+                            <div class="input-group-append js-increment-up">
+                                <button class="btn btn-light border" type="button"><i class="fas fa-angle-right"></i></button>
+                            </div>
+                        </div>
+                        <small class="d-block text-muted pt-1">Sets $zindex-popover</small>
+                    </div>
 
-                    <!-- HOLD FOR: $zindex-tooltip: 1070 !default; -->
+                    <div class="form-group">
+                        <label for="zindex-tooltip" class="d-block font-weight-bold">Z-Index Tooltip</label>
+                        <div class="input-group">
+                            <div class="input-group-prepend js-increment-down">
+                                <button class="btn btn-light border" type="button"><i class="fas fa-angle-left"></i></button>
+                            </div>
+                            <input type="text" class="js-increment-target form-control text-center" id="zindex-tooltip" value="1070" placeholder="1070" data-units="" data-max="100000" data-min="0" data-increment="10">
+                            <div class="input-group-append js-increment-up">
+                                <button class="btn btn-light border" type="button"><i class="fas fa-angle-right"></i></button>
+                            </div>
+                        </div>
+                        <small class="d-block text-muted pt-1">Sets $zindex-tooltip</small>
+                    </div>
 
                     <!--h3 class="pt-4 pb-2">Core Navs Options</h3-->
 
@@ -7176,7 +7243,7 @@
 
                 <small class="text-light">OBE:BS4 VERSION:</small>
 
-                <p class="lead">0.8.48</p>
+                <p class="lead">0.8.49</p>
 
                 <hr class="border-gray" />
 
@@ -8745,6 +8812,13 @@
                 setObjValOrFallback(object, 'form-feedback-icon-invalid', "url(&quot;data:image/svg+xml,&lt;svg xmlns=&#39;http://www.w3.org/2000/svg&#39; width=&#39;12&#39; height=&#39;12&#39; fill=&#39;none&#39; stroke=&#39;#{$form-feedback-icon-invalid-color}&#39; viewBox=&#39;0 0 12 12&#39;&gt;&lt;circle cx=&#39;6&#39; cy=&#39;6&#39; r=&#39;4.5&#39;/&gt;&lt;path stroke-linejoin=&#39;round&#39; d=&#39;M5.8 3.6h.4L6 6.5z&#39;/&gt;&lt;circle cx=&#39;6&#39; cy=&#39;8.2&#39; r=&#39;.6&#39; fill=&#39;#{$form-feedback-icon-invalid-color}&#39; stroke=&#39;none&#39;/&gt;&lt;/svg&gt;&quot;)");
                 setObjValOrFallback(object, 'form-validation-states-init', "()");
                 setObjValOrFallback(object, 'form-validation-states', "map-merge( ( &quot;valid&quot;: ( &quot;color&quot;: $form-feedback-valid-color, &quot;icon&quot;: $form-feedback-icon-valid ), &quot;invalid&quot;: ( &quot;color&quot;: $form-feedback-invalid-color, &quot;icon&quot;: $form-feedback-icon-invalid ), ), $form-validation-states-init )");
+                setObjValOrFallback(object, 'zindex-dropdown', "1000");
+                setObjValOrFallback(object, 'zindex-sticky', "1020");
+                setObjValOrFallback(object, 'zindex-fixed', "1030");
+                setObjValOrFallback(object, 'zindex-modal-backdrop', "1040");
+                setObjValOrFallback(object, 'zindex-modal', "1050");
+                setObjValOrFallback(object, 'zindex-popover', "1060");
+                setObjValOrFallback(object, 'zindex-tooltip', "1070");
                 //
                 // STRINGIFY OBJECT INTO JSON AND USE PRISM TO DISPLAY AS HIGHLIGHTED CODE
                 //
