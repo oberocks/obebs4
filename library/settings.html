@@ -5804,31 +5804,91 @@
                         <small class="d-block text-muted">Sets $custom-file-text</small>
                     </div>
 
-                    <!--h3 class="pt-4 pb-2">Core Form Validation Options</h3-->
+                    <h3 class="pt-4 pb-2">Core Form Validation Options</h3>
 
                     <!-- FORM VALIDATION SECTION -->
 
                     <!-- HOLD FOR: $form-feedback-margin-top: $form-text-margin-top !default; -->
 
+                    <div class="form-group">
+                        <label for="form-feedback-margin-top" class="font-weight-bold">Form Feedback Margin Top</label>
+                        <input type="text" class="form-control" id="form-feedback-margin-top" value="$form-text-margin-top" placeholder="$form-text-margin-top">
+                        <small class="d-block text-muted">Sets $form-feedback-margin-top</small>
+                    </div>
+
                     <!-- HOLD FOR: $form-feedback-font-size: $small-font-size !default; -->
+
+                    <div class="form-group">
+                        <label for="form-feedback-font-size" class="font-weight-bold">Form Feedback Font Size</label>
+                        <input type="text" class="form-control" id="form-feedback-font-size" value="$small-font-size" placeholder="$small-font-size">
+                        <small class="d-block text-muted">Sets $form-feedback-font-size</small>
+                    </div>
 
                     <!-- HOLD FOR: $form-feedback-valid-color: theme-color("success") !default; -->
 
+                    <div class="form-group">
+                        <label for="form-feedback-valid-color" class="font-weight-bold">Form Feedback Valid Color</label>
+                        <input type="text" class="form-control" id="form-feedback-valid-color" value="$success" placeholder="$success">
+                        <small class="d-block text-muted">Sets $form-feedback-valid-color</small>
+                    </div>
+
                     <!-- HOLD FOR: $form-feedback-invalid-color: theme-color("danger") !default; -->
+
+                    <div class="form-group">
+                        <label for="form-feedback-invalid-color" class="font-weight-bold">Form Feedback Invalid Color</label>
+                        <input type="text" class="form-control" id="form-feedback-invalid-color" value="$danger" placeholder="$danger">
+                        <small class="d-block text-muted">Sets $form-feedback-invalid-color</small>
+                    </div>
 
                     <!-- HOLD FOR: $form-feedback-icon-valid-color: $form-feedback-valid-color !default; -->
 
+                    <div class="form-group">
+                        <label for="form-feedback-icon-valid-color" class="font-weight-bold">Form Feedback Icon Valid Color</label>
+                        <input type="text" class="form-control" id="form-feedback-icon-valid-color" value="$form-feedback-valid-color" placeholder="$form-feedback-valid-color">
+                        <small class="d-block text-muted">Sets $form-feedback-icon-valid-color</small>
+                    </div>
+
                     <!-- HOLD FOR: $form-feedback-icon-valid: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='8' height='8' viewBox='0 0 8 8'><path fill='#{$form-feedback-icon-valid-color}' d='M2.3 6.73L.6 4.53c-.4-1.04.46-1.4 1.1-.8l1.1 1.4 3.4-3.8c.6-.63 1.6-.27 1.2.7l-4 4.6c-.43.5-.8.4-1.1.1z'/></svg>") !default; -->
+
+                    <div class="form-group">
+                        <label for="form-feedback-icon-valid" class="font-weight-bold">Form Feedback Icon Valid</label>
+                        <textarea type="text" class="form-control" id="form-feedback-icon-valid" rows="4">url(&quot;data:image/svg+xml,&lt;svg xmlns=&#39;http://www.w3.org/2000/svg&#39; width=&#39;8&#39; height=&#39;8&#39; viewBox=&#39;0 0 8 8&#39;&gt;&lt;path fill=&#39;#{$form-feedback-icon-valid-color}&#39; d=&#39;M2.3 6.73L.6 4.53c-.4-1.04.46-1.4 1.1-.8l1.1 1.4 3.4-3.8c.6-.63 1.6-.27 1.2.7l-4 4.6c-.43.5-.8.4-1.1.1z&#39;/&gt;&lt;/svg&gt;&quot;)</textarea>
+                        <small class="d-block text-muted">Sets $form-feedback-icon-valid</small>
+                    </div>
 
                     <!-- HOLD FOR: $form-feedback-icon-invalid-color: $form-feedback-invalid-color !default; -->
 
+                    <div class="form-group">
+                        <label for="form-feedback-icon-invalid-color" class="font-weight-bold">Form Feedback Icon Invalid Color</label>
+                        <input type="text" class="form-control" id="form-feedback-icon-invalid-color" value="$form-feedback-invalid-color" placeholder="$form-feedback-invalid-color">
+                        <small class="d-block text-muted">Sets $form-feedback-icon-invalid-color</small>
+                    </div>
+
                     <!-- HOLD FOR: $form-feedback-icon-invalid: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='none' stroke='#{$form-feedback-icon-invalid-color}' viewBox='0 0 12 12'><circle cx='6' cy='6' r='4.5'/><path stroke-linejoin='round' d='M5.8 3.6h.4L6 6.5z'/><circle cx='6' cy='8.2' r='.6' fill='#{$form-feedback-icon-invalid-color}' stroke='none'/></svg>") !default; -->
 
+                    <div class="form-group">
+                        <label for="form-feedback-icon-invalid" class="font-weight-bold">Form Feedback Icon Invalid</label>
+                        <textarea type="text" class="form-control" id="form-feedback-icon-invalid" rows="4">url(&quot;data:image/svg+xml,&lt;svg xmlns=&#39;http://www.w3.org/2000/svg&#39; width=&#39;12&#39; height=&#39;12&#39; fill=&#39;none&#39; stroke=&#39;#{$form-feedback-icon-invalid-color}&#39; viewBox=&#39;0 0 12 12&#39;&gt;&lt;circle cx=&#39;6&#39; cy=&#39;6&#39; r=&#39;4.5&#39;/&gt;&lt;path stroke-linejoin=&#39;round&#39; d=&#39;M5.8 3.6h.4L6 6.5z&#39;/&gt;&lt;circle cx=&#39;6&#39; cy=&#39;8.2&#39; r=&#39;.6&#39; fill=&#39;#{$form-feedback-icon-invalid-color}&#39; stroke=&#39;none&#39;/&gt;&lt;/svg&gt;&quot;)</textarea>
+                        <small class="d-block text-muted">Sets $form-feedback-icon-invalid</small>
+                    </div>
+
                     <!-- HOLD FOR: $form-validation-states: () !default; -->
+
+                    <div class="form-group">
+                        <label for="form-validation-states-init" class="font-weight-bold">Form Validation States (Init)</label>
+                        <input type="text" class="form-control" id="form-validation-states-init" value="()" placeholder="()">
+                        <small class="d-block text-muted">Sets $form-validation-states-init. NOTE: this $form-validation-states-init var MUST be called in the $form-validation-states map merge below!</small>
+                    </div>
 
                     <!-- // stylelint-disable-next-line scss/dollar-variable-default -->
 
                     <!-- HOLD FOR: $form-validation-states: map-merge( ( "valid": ( "color": $form-feedback-valid-color, "icon": $form-feedback-icon-valid ), "invalid": ( "color": $form-feedback-invalid-color, "icon": $form-feedback-icon-invalid ), ), $form-validation-states ); -->
+
+                    <div class="form-group">
+                        <label for="form-validation-states" class="font-weight-bold">Form Validation States</label>
+                        <textarea type="text" class="form-control" id="form-validation-states" rows="4">map-merge( ( &quot;valid&quot;: ( &quot;color&quot;: $form-feedback-valid-color, &quot;icon&quot;: $form-feedback-icon-valid ), &quot;invalid&quot;: ( &quot;color&quot;: $form-feedback-invalid-color, &quot;icon&quot;: $form-feedback-icon-invalid ), ), $form-validation-states-init )</textarea>
+                        <small class="d-block text-muted">Sets $form-validation-states</small>
+                    </div>
 
                     <!--h3 class="pt-4 pb-2">Core Z-Index Options</h3-->
 
@@ -7116,7 +7176,7 @@
 
                 <small class="text-light">OBE:BS4 VERSION:</small>
 
-                <p class="lead">0.8.47</p>
+                <p class="lead">0.8.48</p>
 
                 <hr class="border-gray" />
 
@@ -8674,7 +8734,17 @@
                 setObjValOrFallback(object, 'custom-file-box-shadow', "$input-box-shadow");
                 setObjValOrFallback(object, 'custom-file-button-color', "$custom-file-color");
                 setObjValOrFallback(object, 'custom-file-button-bg', "$input-group-addon-bg");
-                setObjValOrFallback(object, 'custom-file-text', "( en: &quot;Browse&quot; )")
+                setObjValOrFallback(object, 'custom-file-text', "( en: &quot;Browse&quot; )");
+                setObjValOrFallback(object, 'form-feedback-margin-top', "$form-text-margin-top");
+                setObjValOrFallback(object, 'form-feedback-font-size', "$small-font-size");
+                setObjValOrFallback(object, 'form-feedback-valid-color', "$success");
+                setObjValOrFallback(object, 'form-feedback-invalid-color', "$danger");
+                setObjValOrFallback(object, 'form-feedback-icon-valid-color', "$form-feedback-valid-color");
+                setObjValOrFallback(object, 'form-feedback-icon-valid', "url(&quot;data:image/svg+xml,&lt;svg xmlns=&#39;http://www.w3.org/2000/svg&#39; width=&#39;8&#39; height=&#39;8&#39; viewBox=&#39;0 0 8 8&#39;&gt;&lt;path fill=&#39;#{$form-feedback-icon-valid-color}&#39; d=&#39;M2.3 6.73L.6 4.53c-.4-1.04.46-1.4 1.1-.8l1.1 1.4 3.4-3.8c.6-.63 1.6-.27 1.2.7l-4 4.6c-.43.5-.8.4-1.1.1z&#39;/&gt;&lt;/svg&gt;&quot;)");
+                setObjValOrFallback(object, 'form-feedback-icon-invalid-color', "$form-feedback-invalid-color");
+                setObjValOrFallback(object, 'form-feedback-icon-invalid', "url(&quot;data:image/svg+xml,&lt;svg xmlns=&#39;http://www.w3.org/2000/svg&#39; width=&#39;12&#39; height=&#39;12&#39; fill=&#39;none&#39; stroke=&#39;#{$form-feedback-icon-invalid-color}&#39; viewBox=&#39;0 0 12 12&#39;&gt;&lt;circle cx=&#39;6&#39; cy=&#39;6&#39; r=&#39;4.5&#39;/&gt;&lt;path stroke-linejoin=&#39;round&#39; d=&#39;M5.8 3.6h.4L6 6.5z&#39;/&gt;&lt;circle cx=&#39;6&#39; cy=&#39;8.2&#39; r=&#39;.6&#39; fill=&#39;#{$form-feedback-icon-invalid-color}&#39; stroke=&#39;none&#39;/&gt;&lt;/svg&gt;&quot;)");
+                setObjValOrFallback(object, 'form-validation-states-init', "()");
+                setObjValOrFallback(object, 'form-validation-states', "map-merge( ( &quot;valid&quot;: ( &quot;color&quot;: $form-feedback-valid-color, &quot;icon&quot;: $form-feedback-icon-valid ), &quot;invalid&quot;: ( &quot;color&quot;: $form-feedback-invalid-color, &quot;icon&quot;: $form-feedback-icon-invalid ), ), $form-validation-states-init )");
                 //
                 // STRINGIFY OBJECT INTO JSON AND USE PRISM TO DISPLAY AS HIGHLIGHTED CODE
                 //
