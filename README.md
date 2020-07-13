@@ -764,14 +764,34 @@ The following changes were made to the default `obebs4_settings.json` file durin
 ```
 
 ```json
-    "zindex-dropdown": "1000",
-    "zindex-sticky": "1020",
-    "zindex-fixed": "1030",
-    "zindex-modal-backdrop": "1040",
-    "zindex-modal": "1050",
-    "zindex-popover": "1060",
-    "zindex-tooltip": "1070"
+"zindex-dropdown": "1000",
+"zindex-sticky": "1020",
+"zindex-fixed": "1030",
+"zindex-modal-backdrop": "1040",
+"zindex-modal": "1050",
+"zindex-popover": "1060",
+"zindex-tooltip": "1070"
 ```
+
+```json
+"nav-link-padding-y": "0.5rem",
+"nav-link-padding-x": "1rem",
+"nav-link-disabled-color": "$gray-600",
+"nav-tabs-border-color": "$gray-300",
+"nav-tabs-border-width": "$border-width",
+"nav-tabs-border-radius": "$border-radius",
+"nav-tabs-link-hover-border-color": "$gray-200 $gray-200 $nav-tabs-border-color",
+"nav-tabs-link-active-color": "$gray-700",
+"nav-tabs-link-active-bg": "$body-bg",
+"nav-tabs-link-active-border-color": "$gray-300 $gray-300 $nav-tabs-link-active-bg",
+"nav-pills-border-radius": "$border-radius",
+"nav-pills-link-active-color": "$component-active-color",
+"nav-pills-link-active-bg": "$component-active-bg",
+"nav-divider-color": "$gray-200",
+"nav-divider-margin-y": "$spacer / 2"
+```
+
+    
 <!---
 ## Customizing Your Web Design System
 

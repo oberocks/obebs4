@@ -1288,39 +1288,39 @@
                         
                         
                         
-                        <!--h3 class="pt-4 pb-2">Core Navs Options</h3-->
+                        <h3 class="pt-4 pb-2">Core Navs Options</h3>
                         
                         <!-- NAVS SECTION -->
 
-                        <!-- HOLD FOR: $nav-link-padding-y: 0.5rem !default; -->
+                        {{ macros.settings_number_step_input('nav-link-padding-y', 'Nav Link Padding Y', global_strings['sys']['nav-link-padding-y'], obe_settings['nav-link-padding-y'], 'rem', '10', '0', '0.05', note='Sets $nav-link-padding-y') }}
 
-                        <!-- HOLD FOR: $nav-link-padding-x: 1rem !default; -->
+                        {{ macros.settings_number_step_input('nav-link-padding-x', 'Nav Link Padding X', global_strings['sys']['nav-link-padding-x'], obe_settings['nav-link-padding-x'], 'rem', '10', '0', '0.05', note='Sets $nav-link-padding-x') }}
 
-                        <!-- HOLD FOR: $nav-link-disabled-color: $gray-600 !default; -->
+                        {{ macros.settings_contextual_selects('nav-link-disabled-color', 'Nav Link Disabled Color', obe_settings['nav-link-disabled-color-C'], obe_settings['nav-link-disabled-color-M'], note='Sets $nav-link-disabled-color') }}
 
-                        <!-- HOLD FOR: $nav-tabs-border-color: $gray-300 !default; -->
+                        {{ macros.settings_contextual_selects('nav-tabs-border-color', 'Nav Tabs Border Color', obe_settings['nav-tabs-border-color-C'], obe_settings['nav-tabs-border-color-M'], note='Sets $nav-tabs-border-color') }}
 
-                        <!-- HOLD FOR: $nav-tabs-border-width: $border-width !default; -->
+                        {{ macros.settings_text_input('nav-tabs-border-width', 'Nav Tabs Border Width', global_strings['sys']['nav-tabs-border-width'], obe_settings['nav-tabs-border-width'], note='Sets $nav-tabs-border-width') }}
 
-                        <!-- HOLD FOR: $nav-tabs-border-radius: $border-radius !default; -->
+                        {{ macros.settings_text_input('nav-tabs-border-radius', 'Nav Tabs Border Radius', global_strings['sys']['nav-tabs-border-radius'], obe_settings['nav-tabs-border-radius'], note='Sets $nav-tabs-border-radius') }}
 
-                        <!-- HOLD FOR: $nav-tabs-link-hover-border-color: $gray-200 $gray-200 $nav-tabs-border-color !default; -->
+                        {{ macros.settings_text_input('nav-tabs-link-hover-border-color', 'Nav Tabs Link Hover Border Color', global_strings['sys']['nav-tabs-link-hover-border-color'], obe_settings['nav-tabs-link-hover-border-color'], note='Sets $nav-tabs-link-hover-border-color') }}
 
-                        <!-- HOLD FOR: $nav-tabs-link-active-color: $gray-700 !default; -->
+                        {{ macros.settings_contextual_selects('nav-tabs-link-active-color', 'Nav Tabs Link Active Color', obe_settings['nav-tabs-link-active-color-C'], obe_settings['nav-tabs-link-active-color-M'], note='Sets $nav-tabs-link-active-color') }}
 
-                        <!-- HOLD FOR: $nav-tabs-link-active-bg: $body-bg !default; -->
+                        {{ macros.settings_text_input('nav-tabs-link-active-bg', 'Nav Tabs Active Background', global_strings['sys']['nav-tabs-link-active-bg'], obe_settings['nav-tabs-link-active-bg'], note='Sets $nav-tabs-link-active-bg') }}
 
-                        <!-- HOLD FOR: $nav-tabs-link-active-border-color: $gray-300 $gray-300 $nav-tabs-link-active-bg !default; -->
+                        {{ macros.settings_text_input('nav-tabs-link-active-border-color', 'Nav Tabs Link Active Border Color', global_strings['sys']['nav-tabs-link-active-border-color'], obe_settings['nav-tabs-link-active-border-color'], note='Sets $nav-tabs-link-active-border-color') }}
 
-                        <!-- HOLD FOR: $nav-pills-border-radius: $border-radius !default; -->
+                        {{ macros.settings_text_input('nav-pills-border-radius', 'Nav Pills Border Radius', global_strings['sys']['nav-pills-border-radius'], obe_settings['nav-pills-border-radius'], note='Sets $nav-pills-border-radius') }}
 
-                        <!-- HOLD FOR: $nav-pills-link-active-color: $component-active-color !default; -->
+                        {{ macros.settings_text_input('nav-pills-link-active-color', 'Nav Pills Link Active Color', global_strings['sys']['nav-pills-link-active-color'], obe_settings['nav-pills-link-active-color'], note='Sets $nav-pills-link-active-color') }}
 
-                        <!-- HOLD FOR: $nav-pills-link-active-bg: $component-active-bg !default; -->
+                        {{ macros.settings_text_input('nav-pills-link-active-bg', 'Nav Pills Link Active Background', global_strings['sys']['nav-pills-link-active-bg'], obe_settings['nav-pills-link-active-bg'], note='Sets $nav-pills-link-active-bg') }}
 
-                        <!-- HOLD FOR: $nav-divider-color: $gray-200 !default; -->
+                        {{ macros.settings_contextual_selects('nav-divider-color', 'Nav Divider Color', obe_settings['nav-divider-color-C'], obe_settings['nav-divider-color-M'], note='Sets $nav-divider-color') }}
 
-                        <!-- HOLD FOR: $nav-divider-margin-y: $spacer / 2 !default; -->
+                        {{ macros.settings_text_input('nav-divider-margin-y', 'Nav Divider Margin Y', global_strings['sys']['nav-divider-margin-y'], obe_settings['nav-divider-margin-y'], note='Sets $nav-divider-margin-y') }}
 
 
                         
