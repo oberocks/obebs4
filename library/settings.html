@@ -5977,39 +5977,291 @@
                         <small class="d-block text-muted pt-1">Sets $zindex-tooltip</small>
                     </div>
 
-                    <!--h3 class="pt-4 pb-2">Core Navs Options</h3-->
+                    <h3 class="pt-4 pb-2">Core Navs Options</h3>
 
                     <!-- NAVS SECTION -->
 
-                    <!-- HOLD FOR: $nav-link-padding-y: 0.5rem !default; -->
+                    <div class="form-group">
+                        <label for="nav-link-padding-y" class="d-block font-weight-bold">Nav Link Padding Y</label>
+                        <div class="input-group">
+                            <div class="input-group-prepend js-increment-down">
+                                <button class="btn btn-light border" type="button"><i class="fas fa-angle-left"></i></button>
+                            </div>
+                            <input type="text" class="js-increment-target form-control text-center" id="nav-link-padding-y" value="0.5rem" placeholder="0.5rem" data-units="rem" data-max="10" data-min="0" data-increment="0.05">
+                            <div class="input-group-append js-increment-up">
+                                <button class="btn btn-light border" type="button"><i class="fas fa-angle-right"></i></button>
+                            </div>
+                        </div>
+                        <small class="d-block text-muted pt-1">Sets $nav-link-padding-y</small>
+                    </div>
 
-                    <!-- HOLD FOR: $nav-link-padding-x: 1rem !default; -->
+                    <div class="form-group">
+                        <label for="nav-link-padding-x" class="d-block font-weight-bold">Nav Link Padding X</label>
+                        <div class="input-group">
+                            <div class="input-group-prepend js-increment-down">
+                                <button class="btn btn-light border" type="button"><i class="fas fa-angle-left"></i></button>
+                            </div>
+                            <input type="text" class="js-increment-target form-control text-center" id="nav-link-padding-x" value="1rem" placeholder="1rem" data-units="rem" data-max="10" data-min="0" data-increment="0.05">
+                            <div class="input-group-append js-increment-up">
+                                <button class="btn btn-light border" type="button"><i class="fas fa-angle-right"></i></button>
+                            </div>
+                        </div>
+                        <small class="d-block text-muted pt-1">Sets $nav-link-padding-x</small>
+                    </div>
 
-                    <!-- HOLD FOR: $nav-link-disabled-color: $gray-600 !default; -->
+                    <div class="form-row align-items-end">
+                        <div class="col-7">
+                            <div class="form-group mb-0">
+                                <label class="d-block font-weight-bold">Nav Link Disabled Color Color</label>
+                                <select id="nav-link-disabled-color" class="form-control" aria-describedby="nav-link-disabled-color-help">
+                                    <option value="none">None</option>
+                                    <option value="white">White</option>
+                                    <option value="light-gray">Light Gray</option>
+                                    <option value="gray" selected>Gray</option>
+                                    <option value="dark-gray">Dark Gray</option>
+                                    <option value="black">Black</option>
+                                    <option value="red">Red</option>
+                                    <option value="rose">Rose</option>
+                                    <option value="magenta">Magenta</option>
+                                    <option value="violet">Violet</option>
+                                    <option value="blue">Blue</option>
+                                    <option value="azure">Azure</option>
+                                    <option value="cyan">Cyan</option>
+                                    <option value="spring-green">Spring Green</option>
+                                    <option value="green">Green</option>
+                                    <option value="chartreuse">Chartreuse</option>
+                                    <option value="yellow">Yellow</option>
+                                    <option value="orange">Orange</option>
+                                    <option value="orange-gray">Orange Gray</option>
+                                    <option value="dark-gray-orange">Dark Gray Orange</option>
+                                    <option value="blue-gray">Blue Gray</option>
+                                    <option value="light-gray-azure">Light Gray Azure</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-5">
+                            <div class="form-group mb-0">
+                                <label class="d-block font-weight-bold">Tint / Shade</label>
+                                <select id="nav-link-disabled-color-modifier" class="form-control">
+                                    <option value="50">50</option>
+                                    <option value="100">100</option>
+                                    <option value="200">200</option>
+                                    <option value="300">300</option>
+                                    <option value="400">400</option>
+                                    <option value="none">None</option>
+                                    <option value="600" selected>600</option>
+                                    <option value="700">700</option>
+                                    <option value="800">800</option>
+                                    <option value="900">900</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <small id="nav-link-disabled-color-help" class="form-text pb-2" style="opacity: 0.6;">Sets $nav-link-disabled-color</small>
 
-                    <!-- HOLD FOR: $nav-tabs-border-color: $gray-300 !default; -->
+                    <div class="form-row align-items-end">
+                        <div class="col-7">
+                            <div class="form-group mb-0">
+                                <label class="d-block font-weight-bold">Nav Tabs Border Color Color</label>
+                                <select id="nav-tabs-border-color" class="form-control" aria-describedby="nav-tabs-border-color-help">
+                                    <option value="none">None</option>
+                                    <option value="white">White</option>
+                                    <option value="light-gray">Light Gray</option>
+                                    <option value="gray" selected>Gray</option>
+                                    <option value="dark-gray">Dark Gray</option>
+                                    <option value="black">Black</option>
+                                    <option value="red">Red</option>
+                                    <option value="rose">Rose</option>
+                                    <option value="magenta">Magenta</option>
+                                    <option value="violet">Violet</option>
+                                    <option value="blue">Blue</option>
+                                    <option value="azure">Azure</option>
+                                    <option value="cyan">Cyan</option>
+                                    <option value="spring-green">Spring Green</option>
+                                    <option value="green">Green</option>
+                                    <option value="chartreuse">Chartreuse</option>
+                                    <option value="yellow">Yellow</option>
+                                    <option value="orange">Orange</option>
+                                    <option value="orange-gray">Orange Gray</option>
+                                    <option value="dark-gray-orange">Dark Gray Orange</option>
+                                    <option value="blue-gray">Blue Gray</option>
+                                    <option value="light-gray-azure">Light Gray Azure</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-5">
+                            <div class="form-group mb-0">
+                                <label class="d-block font-weight-bold">Tint / Shade</label>
+                                <select id="nav-tabs-border-color-modifier" class="form-control">
+                                    <option value="50">50</option>
+                                    <option value="100">100</option>
+                                    <option value="200">200</option>
+                                    <option value="300" selected>300</option>
+                                    <option value="400">400</option>
+                                    <option value="none">None</option>
+                                    <option value="600">600</option>
+                                    <option value="700">700</option>
+                                    <option value="800">800</option>
+                                    <option value="900">900</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <small id="nav-tabs-border-color-help" class="form-text pb-2" style="opacity: 0.6;">Sets $nav-tabs-border-color</small>
 
-                    <!-- HOLD FOR: $nav-tabs-border-width: $border-width !default; -->
+                    <div class="form-group">
+                        <label for="nav-tabs-border-width" class="font-weight-bold">Nav Tabs Border Width</label>
+                        <input type="text" class="form-control" id="nav-tabs-border-width" value="$border-width" placeholder="$border-width">
+                        <small class="d-block text-muted">Sets $nav-tabs-border-width</small>
+                    </div>
 
-                    <!-- HOLD FOR: $nav-tabs-border-radius: $border-radius !default; -->
+                    <div class="form-group">
+                        <label for="nav-tabs-border-radius" class="font-weight-bold">Nav Tabs Border Radius</label>
+                        <input type="text" class="form-control" id="nav-tabs-border-radius" value="$border-radius" placeholder="$border-radius">
+                        <small class="d-block text-muted">Sets $nav-tabs-border-radius</small>
+                    </div>
 
-                    <!-- HOLD FOR: $nav-tabs-link-hover-border-color: $gray-200 $gray-200 $nav-tabs-border-color !default; -->
+                    <div class="form-group">
+                        <label for="nav-tabs-link-hover-border-color" class="font-weight-bold">Nav Tabs Link Hover Border Color</label>
+                        <input type="text" class="form-control" id="nav-tabs-link-hover-border-color" value="$gray-200 $gray-200 $nav-tabs-border-color" placeholder="$gray-200 $gray-200 $nav-tabs-border-color">
+                        <small class="d-block text-muted">Sets $nav-tabs-link-hover-border-color</small>
+                    </div>
 
-                    <!-- HOLD FOR: $nav-tabs-link-active-color: $gray-700 !default; -->
+                    <div class="form-row align-items-end">
+                        <div class="col-7">
+                            <div class="form-group mb-0">
+                                <label class="d-block font-weight-bold">Nav Tabs Link Active Color Color</label>
+                                <select id="nav-tabs-link-active-color" class="form-control" aria-describedby="nav-tabs-link-active-color-help">
+                                    <option value="none">None</option>
+                                    <option value="white">White</option>
+                                    <option value="light-gray">Light Gray</option>
+                                    <option value="gray" selected>Gray</option>
+                                    <option value="dark-gray">Dark Gray</option>
+                                    <option value="black">Black</option>
+                                    <option value="red">Red</option>
+                                    <option value="rose">Rose</option>
+                                    <option value="magenta">Magenta</option>
+                                    <option value="violet">Violet</option>
+                                    <option value="blue">Blue</option>
+                                    <option value="azure">Azure</option>
+                                    <option value="cyan">Cyan</option>
+                                    <option value="spring-green">Spring Green</option>
+                                    <option value="green">Green</option>
+                                    <option value="chartreuse">Chartreuse</option>
+                                    <option value="yellow">Yellow</option>
+                                    <option value="orange">Orange</option>
+                                    <option value="orange-gray">Orange Gray</option>
+                                    <option value="dark-gray-orange">Dark Gray Orange</option>
+                                    <option value="blue-gray">Blue Gray</option>
+                                    <option value="light-gray-azure">Light Gray Azure</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-5">
+                            <div class="form-group mb-0">
+                                <label class="d-block font-weight-bold">Tint / Shade</label>
+                                <select id="nav-tabs-link-active-color-modifier" class="form-control">
+                                    <option value="50">50</option>
+                                    <option value="100">100</option>
+                                    <option value="200">200</option>
+                                    <option value="300">300</option>
+                                    <option value="400">400</option>
+                                    <option value="none">None</option>
+                                    <option value="600">600</option>
+                                    <option value="700" selected>700</option>
+                                    <option value="800">800</option>
+                                    <option value="900">900</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <small id="nav-tabs-link-active-color-help" class="form-text pb-2" style="opacity: 0.6;">Sets $nav-tabs-link-active-color</small>
 
-                    <!-- HOLD FOR: $nav-tabs-link-active-bg: $body-bg !default; -->
+                    <div class="form-group">
+                        <label for="nav-tabs-link-active-bg" class="font-weight-bold">Nav Tabs Active Background</label>
+                        <input type="text" class="form-control" id="nav-tabs-link-active-bg" value="$body-bg" placeholder="$body-bg">
+                        <small class="d-block text-muted">Sets $nav-tabs-link-active-bg</small>
+                    </div>
 
-                    <!-- HOLD FOR: $nav-tabs-link-active-border-color: $gray-300 $gray-300 $nav-tabs-link-active-bg !default; -->
+                    <div class="form-group">
+                        <label for="nav-tabs-link-active-border-color" class="font-weight-bold">Nav Tabs Link Active Border Color</label>
+                        <input type="text" class="form-control" id="nav-tabs-link-active-border-color" value="$gray-300 $gray-300 $nav-tabs-link-active-bg" placeholder="$gray-300 $gray-300 $nav-tabs-link-active-bg">
+                        <small class="d-block text-muted">Sets $nav-tabs-link-active-border-color</small>
+                    </div>
 
-                    <!-- HOLD FOR: $nav-pills-border-radius: $border-radius !default; -->
+                    <div class="form-group">
+                        <label for="nav-pills-border-radius" class="font-weight-bold">Nav Pills Border Radius</label>
+                        <input type="text" class="form-control" id="nav-pills-border-radius" value="$border-radius" placeholder="$border-radius">
+                        <small class="d-block text-muted">Sets $nav-pills-border-radius</small>
+                    </div>
 
-                    <!-- HOLD FOR: $nav-pills-link-active-color: $component-active-color !default; -->
+                    <div class="form-group">
+                        <label for="nav-pills-link-active-color" class="font-weight-bold">Nav Pills Link Active Color</label>
+                        <input type="text" class="form-control" id="nav-pills-link-active-color" value="$component-active-color" placeholder="$component-active-color">
+                        <small class="d-block text-muted">Sets $nav-pills-link-active-color</small>
+                    </div>
 
-                    <!-- HOLD FOR: $nav-pills-link-active-bg: $component-active-bg !default; -->
+                    <div class="form-group">
+                        <label for="nav-pills-link-active-bg" class="font-weight-bold">Nav Pills Link Active Background</label>
+                        <input type="text" class="form-control" id="nav-pills-link-active-bg" value="$component-active-bg" placeholder="$component-active-bg">
+                        <small class="d-block text-muted">Sets $nav-pills-link-active-bg</small>
+                    </div>
 
-                    <!-- HOLD FOR: $nav-divider-color: $gray-200 !default; -->
+                    <div class="form-row align-items-end">
+                        <div class="col-7">
+                            <div class="form-group mb-0">
+                                <label class="d-block font-weight-bold">Nav Divider Color Color</label>
+                                <select id="nav-divider-color" class="form-control" aria-describedby="nav-divider-color-help">
+                                    <option value="none">None</option>
+                                    <option value="white">White</option>
+                                    <option value="light-gray">Light Gray</option>
+                                    <option value="gray" selected>Gray</option>
+                                    <option value="dark-gray">Dark Gray</option>
+                                    <option value="black">Black</option>
+                                    <option value="red">Red</option>
+                                    <option value="rose">Rose</option>
+                                    <option value="magenta">Magenta</option>
+                                    <option value="violet">Violet</option>
+                                    <option value="blue">Blue</option>
+                                    <option value="azure">Azure</option>
+                                    <option value="cyan">Cyan</option>
+                                    <option value="spring-green">Spring Green</option>
+                                    <option value="green">Green</option>
+                                    <option value="chartreuse">Chartreuse</option>
+                                    <option value="yellow">Yellow</option>
+                                    <option value="orange">Orange</option>
+                                    <option value="orange-gray">Orange Gray</option>
+                                    <option value="dark-gray-orange">Dark Gray Orange</option>
+                                    <option value="blue-gray">Blue Gray</option>
+                                    <option value="light-gray-azure">Light Gray Azure</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-5">
+                            <div class="form-group mb-0">
+                                <label class="d-block font-weight-bold">Tint / Shade</label>
+                                <select id="nav-divider-color-modifier" class="form-control">
+                                    <option value="50">50</option>
+                                    <option value="100">100</option>
+                                    <option value="200" selected>200</option>
+                                    <option value="300">300</option>
+                                    <option value="400">400</option>
+                                    <option value="none">None</option>
+                                    <option value="600">600</option>
+                                    <option value="700">700</option>
+                                    <option value="800">800</option>
+                                    <option value="900">900</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <small id="nav-divider-color-help" class="form-text pb-2" style="opacity: 0.6;">Sets $nav-divider-color</small>
 
-                    <!-- HOLD FOR: $nav-divider-margin-y: $spacer / 2 !default; -->
+                    <div class="form-group">
+                        <label for="nav-divider-margin-y" class="font-weight-bold">Nav Divider Margin Y</label>
+                        <input type="text" class="form-control" id="nav-divider-margin-y" value="$spacer / 2" placeholder="$spacer / 2">
+                        <small class="d-block text-muted">Sets $nav-divider-margin-y</small>
+                    </div>
 
                     <!--h3 class="pt-4 pb-2">Core Navbars Options</h3-->
 
@@ -7243,7 +7495,7 @@
 
                 <small class="text-light">OBE:BS4 VERSION:</small>
 
-                <p class="lead">0.8.50</p>
+                <p class="lead">0.8.51</p>
 
                 <hr class="border-gray" />
 
@@ -8819,6 +9071,21 @@
                 setObjValOrFallback(object, 'zindex-modal', "1050");
                 setObjValOrFallback(object, 'zindex-popover', "1060");
                 setObjValOrFallback(object, 'zindex-tooltip', "1070");
+                setObjValOrFallback(object, 'nav-link-padding-y', "0.5rem");
+                setObjValOrFallback(object, 'nav-link-padding-x', "1rem");
+                setColorsData('nav-link-disabled-color');
+                setColorsData('nav-tabs-border-color');
+                setObjValOrFallback(object, 'nav-tabs-border-width', "$border-width");
+                setObjValOrFallback(object, 'nav-tabs-border-radius', "$border-radius");
+                setObjValOrFallback(object, 'nav-tabs-link-hover-border-color', "$gray-200 $gray-200 $nav-tabs-border-color");
+                setColorsData('nav-tabs-link-active-color');
+                setObjValOrFallback(object, 'nav-tabs-link-active-bg', "$body-bg");
+                setObjValOrFallback(object, 'nav-tabs-link-active-border-color', "$gray-300 $gray-300 $nav-tabs-link-active-bg");
+                setObjValOrFallback(object, 'nav-pills-border-radius', "$border-radius");
+                setObjValOrFallback(object, 'nav-pills-link-active-color', "$component-active-color");
+                setObjValOrFallback(object, 'nav-pills-link-active-bg', "$component-active-bg");
+                setColorsData('nav-divider-color');
+                setObjValOrFallback(object, 'nav-divider-margin-y', "$spacer / 2");
                 //
                 // STRINGIFY OBJECT INTO JSON AND USE PRISM TO DISPLAY AS HIGHLIGHTED CODE
                 //
