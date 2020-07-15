@@ -2183,7 +2183,7 @@
         </div>
     </div>
 </div>
-{% if note != 'false' %}<small id="{{id}}-help" class="form-text pb-2" style="opacity: 0.6;">{{ note }}</small>{% endif %}
+{% if note != 'false' %}<small id="{{id}}-help" class="form-text text-muted pb-2">{{ note }}</small>{% endif %}
 {%- endmacro %}
 
 
@@ -2226,7 +2226,7 @@
 
     </select>
 </div>
-{% if note != 'false' %}<small id="{{id}}-help" class="form-text pb-2" style="opacity: 0.6;">{{ note }}</small>{% endif %}
+{% if note != 'false' %}<small id="{{id}}-help" class="form-text text-muted pb-2">{{ note }}</small>{% endif %}
 {%- endmacro %}
 
 
@@ -2235,7 +2235,7 @@
 <div class="form-check">
     <input class="form-check-input" type="checkbox" value="" id="{{ id }}"{{ status }}>
     <label class="form-check-label" for="{{ id }}">{{ text }}</label>
-    {% if note != 'false' %}<small class="d-block text-muted">{{ note }}</small>{% endif %}
+    {% if note != 'false' %}<small class="form-text text-muted">{{ note }}</small>{% endif %}
 </div>
 {%- endmacro %}
 
@@ -2281,7 +2281,7 @@
 <div class="form-group">
     <label for="{{ id }}" class="font-weight-bold">{{ labelText }}</label>
     <input type="text" class="form-control" id="{{ id }}" value="{{ value }}" placeholder="{{ placeholder }}">
-    {% if note != 'false' %}<small class="d-block text-muted">{{ note }}</small>{% endif %}
+    {% if note != 'false' %}<small class="form-text text-muted">{{ note }}</small>{% endif %}
 </div>
 {%- endmacro %}
 
@@ -2291,7 +2291,7 @@
 <div class="form-group">
     <label for="{{ id }}" class="font-weight-bold">{{ labelText }}</label>
     <textarea type="text" class="form-control" id="{{ id }}" rows="4">{% if value | length > 0 %}{{ value }}{% else %}{{ fallbackValue }}{% endif %}</textarea>
-    {% if note != 'false' %}<small class="d-block text-muted">{{ note }}</small>{% endif %}
+    {% if note != 'false' %}<small class="form-text text-muted">{{ note }}</small>{% endif %}
 </div>
 {%- endmacro %}
 

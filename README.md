@@ -788,7 +788,37 @@ The following changes were made to the default `obebs4_settings.json` file durin
 "nav-pills-link-active-color": "$component-active-color",
 "nav-pills-link-active-bg": "$component-active-bg",
 "nav-divider-color": "$gray-200",
-"nav-divider-margin-y": "$spacer / 2"
+"nav-divider-margin-y": "$spacer / 2",
+```
+
+```json
+"navbar-padding-y": "$spacer / 2",
+"navbar-padding-x": "$spacer",
+"navbar-nav-link-padding-x": "0.5rem",
+"navbar-brand-font-size": "$font-size-lg",
+"nav-link-height": "$font-size-base * $line-height-base + $nav-link-padding-y * 2",
+"navbar-brand-height": "$navbar-brand-font-size * $line-height-base",
+"navbar-brand-padding-y": "($nav-link-height - $navbar-brand-height) / 2",
+"navbar-toggler-padding-y": "0.25rem",
+"navbar-toggler-padding-x": "0.75rem",
+"navbar-toggler-font-size": "$font-size-lg",
+"navbar-toggler-border-radius": "$btn-border-radius",
+"navbar-dark-color": "rgba($white, 0.5)",
+"navbar-dark-hover-color": "rgba($white, 0.75)",
+"navbar-dark-active-color": "$white",
+"navbar-dark-disabled-color": "rgba($white, 0.25)",
+"navbar-dark-toggler-icon-bg": "url(\"data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'><path stroke='#{$navbar-dark-color}' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/></svg>\")",
+"navbar-dark-toggler-border-color": "rgba($white, 0.1)",
+"navbar-light-color": "rgba($black, 0.5)",
+"navbar-light-hover-color": "rgba($black, 0.7)",
+"navbar-light-active-color": "rgba($black, 0.9)",
+"navbar-light-disabled-color": "rgba($black, 0.3)",
+"navbar-light-toggler-icon-bg": "url(\"data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'><path stroke='#{$navbar-light-color}' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/></svg>\")",
+"navbar-light-toggler-border-color": "rgba($black, 0.1)",
+"navbar-light-brand-color": "$navbar-light-active-color",
+"navbar-light-brand-hover-color": "$navbar-light-active-color",
+"navbar-dark-brand-color": "$navbar-dark-active-color",
+"navbar-dark-brand-hover-color": "$navbar-dark-active-color"
 ```
 
     
