@@ -1331,87 +1331,58 @@
                         
                         <!-- NAVBAR SECTION -->
 
-                        <!-- HOLD FOR: $navbar-padding-y: $spacer / 2 !default; -->
                         {{ macros.settings_text_input('navbar-padding-y', 'Navbar Padding Y', global_strings['sys']['navbar-padding-y'], obe_settings['navbar-padding-y'], note='Sets $navbar-padding-y') }}
 
-                        <!-- HOLD FOR: $navbar-padding-x: $spacer !default; -->
                         {{ macros.settings_text_input('navbar-padding-x', 'Navbar Padding X', global_strings['sys']['navbar-padding-x'], obe_settings['navbar-padding-x'], note='Sets $navbar-padding-x') }}
 
-                        <!-- HOLD FOR: $navbar-nav-link-padding-x: 0.5rem !default; -->
                         {{ macros.settings_number_step_input('navbar-nav-link-padding-x', 'Navbar Nav Link Padding X', global_strings['sys']['navbar-nav-link-padding-x'], obe_settings['navbar-nav-link-padding-x'], 'rem', '10', '0', '0.05', note='Sets $navbar-nav-link-padding-x') }}
 
-                        <!-- HOLD FOR: $navbar-brand-font-size: $font-size-lg !default; -->
                         {{ macros.settings_text_input('navbar-brand-font-size', 'Navbar Brand Font Size', global_strings['sys']['navbar-brand-font-size'], obe_settings['navbar-brand-font-size'], note='Sets $navbar-brand-font-size') }}
 
-                        <!-- // Compute the navbar-brand padding-y so the navbar-brand will have the same height as navbar-text and nav-link -->
-
-                        <!-- HOLD FOR: $nav-link-height: $font-size-base * $line-height-base + $nav-link-padding-y * 2 !default; -->
                         {{ macros.settings_text_input('nav-link-height', 'Navbar Link Height', global_strings['sys']['nav-link-height'], obe_settings['nav-link-height'], note='Sets $nav-link-height. This setting should be computed (once passed into SASS) so the navbar-brand will have the same height as navbar-text and nav-link elements.') }}
 
-                        <!-- HOLD FOR: $navbar-brand-height: $navbar-brand-font-size * $line-height-base !default; -->
                         {{ macros.settings_text_input('navbar-brand-height', 'Navbar Brand Height', global_strings['sys']['navbar-brand-height'], obe_settings['navbar-brand-height'], note='Sets $navbar-brand-height') }}
 
-                        <!-- HOLD FOR: $navbar-brand-padding-y: ($nav-link-height - $navbar-brand-height) / 2 !default; -->
                         {{ macros.settings_text_input('navbar-brand-padding-y', 'Navbar Brand Padding Y', global_strings['sys']['navbar-brand-padding-y'], obe_settings['navbar-brand-padding-y'], note='Sets $navbar-brand-padding-y') }}
 
-                        <!-- HOLD FOR: $navbar-toggler-padding-y: 0.25rem !default; -->
                         {{ macros.settings_number_step_input('navbar-toggler-padding-y', 'Navbar Toggler Padding Y', global_strings['sys']['navbar-toggler-padding-y'], obe_settings['navbar-toggler-padding-y'], 'rem', '10', '0', '0.05', note='Sets $navbar-toggler-padding-y') }}
 
-                        <!-- HOLD FOR: $navbar-toggler-padding-x: 0.75rem !default; -->
                         {{ macros.settings_number_step_input('navbar-toggler-padding-x', 'Navbar Toggler Padding X', global_strings['sys']['navbar-toggler-padding-x'], obe_settings['navbar-toggler-padding-x'], 'rem', '10', '0', '0.05', note='Sets $navbar-toggler-padding-x') }}
 
-                        <!-- HOLD FOR: $navbar-toggler-font-size: $font-size-lg !default; -->
                         {{ macros.settings_text_input('navbar-toggler-font-size', 'Navbar Toggler Font Size', global_strings['sys']['navbar-toggler-font-size'], obe_settings['navbar-toggler-font-size'], note='Sets $navbar-toggler-font-size') }}
 
-                        <!-- HOLD FOR: $navbar-toggler-border-radius: $btn-border-radius !default; -->
                         {{ macros.settings_text_input('navbar-toggler-border-radius', 'Navbar Toggler Border Radius', global_strings['sys']['navbar-toggler-border-radius'], obe_settings['navbar-toggler-border-radius'], note='Sets $navbar-toggler-border-radius') }}
 
-                        <!-- HOLD FOR: $navbar-dark-color: rgba($white, 0.5) !default; -->
                         {{ macros.settings_text_input('navbar-dark-color', 'Navbar Dark Color', global_strings['sys']['navbar-dark-color'], obe_settings['navbar-dark-color'], note='Sets $navbar-dark-color') }}
 
-                        <!-- HOLD FOR: $navbar-dark-hover-color: rgba($white, 0.75) !default; -->
                         {{ macros.settings_text_input('navbar-dark-hover-color', 'Navbar Dark Hover Color', global_strings['sys']['navbar-dark-hover-color'], obe_settings['navbar-dark-hover-color'], note='Sets $navbar-dark-hover-color') }}
 
-                        <!-- HOLD FOR: $navbar-dark-active-color: $white !default; -->
                         {{ macros.settings_contextual_selects('navbar-dark-active-color', 'Navbar Dark Active color', obe_settings['navbar-dark-active-color-C'], obe_settings['navbar-dark-active-color-M'], note='Sets $navbar-dark-active-color') }}
 
-                        <!-- HOLD FOR: $navbar-dark-disabled-color: rgba($white, 0.25) !default; -->
                         {{ macros.settings_text_input('navbar-dark-disabled-color', 'Navbar Dark Disabled Color', global_strings['sys']['navbar-dark-disabled-color'], obe_settings['navbar-dark-disabled-color'], note='Sets $navbar-dark-disabled-color') }}
 
-                        <!-- HOLD FOR: $navbar-dark-toggler-icon-bg: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'><path stroke='#{$navbar-dark-color}' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/></svg>") !default; -->
                         {{ macros.settings_textarea_input('navbar-dark-toggler-icon-bg', 'Navbar Dark Toggler Icon Background', global_strings['sys']['navbar-dark-toggler-icon-bg'], obe_settings['navbar-dark-toggler-icon-bg'], note='Sets $navbar-dark-toggler-icon-bg') }}
 
-                        <!-- HOLD FOR: $navbar-dark-toggler-border-color: rgba($white, 0.1) !default; -->
                         {{ macros.settings_text_input('navbar-dark-toggler-border-color', 'Navbar Dark Toggler Border Color', global_strings['sys']['navbar-dark-toggler-border-color'], obe_settings['navbar-dark-toggler-border-color'], note='Sets $navbar-dark-toggler-border-color') }}
 
-                        <!-- HOLD FOR: $navbar-light-color: rgba($black, 0.5) !default; -->
                         {{ macros.settings_text_input('navbar-light-color', 'Navbar Light Color', global_strings['sys']['navbar-light-color'], obe_settings['navbar-light-color'], note='Sets $navbar-light-color') }}
 
-                        <!-- HOLD FOR: $navbar-light-hover-color: rgba($black, 0.7) !default; -->
                         {{ macros.settings_text_input('navbar-light-hover-color', 'Navbar Light Hover Color', global_strings['sys']['navbar-light-hover-color'], obe_settings['navbar-light-hover-color'], note='Sets $navbar-light-hover-color') }}
 
-                        <!-- HOLD FOR: $navbar-light-active-color: rgba($black, 0.9) !default; -->
                         {{ macros.settings_text_input('navbar-light-active-color', 'Navbar Light Active Color', global_strings['sys']['navbar-light-active-color'], obe_settings['navbar-light-active-color'], note='Sets $navbar-light-active-color') }}
 
-                        <!-- HOLD FOR: $navbar-light-disabled-color: rgba($black, 0.3) !default; -->
                         {{ macros.settings_text_input('navbar-light-disabled-color', 'Navbar Light Disabled Color', global_strings['sys']['navbar-light-disabled-color'], obe_settings['navbar-light-disabled-color'], note='Sets $navbar-light-disabled-color') }}
 
-                        <!-- HOLD FOR: $navbar-light-toggler-icon-bg: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'><path stroke='#{$navbar-light-color}' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/></svg>") !default; -->
                         {{ macros.settings_textarea_input('navbar-light-toggler-icon-bg', 'Navbar Light Toggler Icon Background', global_strings['sys']['navbar-light-toggler-icon-bg'], obe_settings['navbar-light-toggler-icon-bg'], note='Sets $navbar-light-toggler-icon-bg') }}
 
-                        <!-- HOLD FOR: $navbar-light-toggler-border-color: rgba($black, 0.1) !default; -->
                         {{ macros.settings_text_input('navbar-light-toggler-border-color', 'Navbar Light Toggler Border Color', global_strings['sys']['navbar-light-toggler-border-color'], obe_settings['navbar-light-toggler-border-color'], note='Sets $navbar-light-toggler-border-color') }}
 
-                        <!-- HOLD FOR: $navbar-light-brand-color: $navbar-light-active-color !default; -->
                         {{ macros.settings_text_input('navbar-light-brand-color', 'Navbar Light Brand Color', global_strings['sys']['navbar-light-brand-color'], obe_settings['navbar-light-brand-color'], note='Sets $navbar-light-brand-color') }}
 
-                        <!-- HOLD FOR: $navbar-light-brand-hover-color: $navbar-light-active-color !default; -->
                         {{ macros.settings_text_input('navbar-light-brand-hover-color', 'Navbar Light Brand Hover Color', global_strings['sys']['navbar-light-brand-hover-color'], obe_settings['navbar-light-brand-hover-color'], note='Sets $navbar-light-brand-hover-color') }}
 
-                        <!-- HOLD FOR: $navbar-dark-brand-color: $navbar-dark-active-color !default; -->
                         {{ macros.settings_text_input('navbar-dark-brand-color', 'Navbar Dark Brand Color', global_strings['sys']['navbar-dark-brand-color'], obe_settings['navbar-dark-brand-color'], note='Sets $navbar-dark-brand-color') }}
 
-                        <!-- HOLD FOR: $navbar-dark-brand-hover-color: $navbar-dark-active-color !default; -->
                         {{ macros.settings_text_input('navbar-dark-brand-hover-color', 'Navbar Dark Brand Hover Color', global_strings['sys']['navbar-dark-brand-hover-color'], obe_settings['navbar-dark-brand-hover-color'], note='Sets $navbar-dark-brand-hover-color') }}
 
 
@@ -1419,51 +1390,69 @@
                         
                         
                         
-                        <!--h3 class="pt-4 pb-2">Core Dropdown Options</h3-->
+                        <h3 class="pt-4 pb-2">Core Dropdown Options</h3>
                         
                         <!-- DROPDOWNS SECTION -->
 
                         <!-- HOLD FOR: $dropdown-min-width: 10rem !default; -->
+                        {{ macros.settings_number_step_input('dropdown-min-width', 'Dropdown Minimum Width', global_strings['sys']['dropdown-min-width'], obe_settings['dropdown-min-width'], 'rem', '15', '0', '0.05', note='Sets $dropdown-min-width') }}
 
                         <!-- HOLD FOR: $dropdown-padding-y: 0.5rem !default; -->
+                        {{ macros.settings_number_step_input('dropdown-padding-y', 'Dropdown Padding Y', global_strings['sys']['dropdown-padding-y'], obe_settings['dropdown-padding-y'], 'rem', '10', '0', '0.05', note='Sets $dropdown-padding-y') }}
 
                         <!-- HOLD FOR: $dropdown-spacer: 0.125rem !default; -->
+                        {{ macros.settings_number_step_input('dropdown-spacer', 'Dropdown Spacer', global_strings['sys']['dropdown-spacer'], obe_settings['dropdown-spacer'], 'rem', '10', '0', '0.05', note='Sets $dropdown-spacer') }}
 
                         <!-- HOLD FOR: $dropdown-font-size: $font-size-base !default; -->
+                        {{ macros.settings_text_input('dropdown-font-size', 'Dropdown Font Size', global_strings['sys']['dropdown-font-size'], obe_settings['dropdown-font-size'], note='Sets $dropdown-font-size') }}
 
                         <!-- HOLD FOR: $dropdown-color: $body-color !default; -->
+                        {{ macros.settings_text_input('dropdown-color', 'Dropdown Color', global_strings['sys']['dropdown-color'], obe_settings['dropdown-color'], note='Sets $dropdown-color') }}
 
                         <!-- HOLD FOR: $dropdown-bg: $white !default; -->
+                        {{ macros.settings_contextual_selects('dropdown-bg', 'Dropdown Background', obe_settings['dropdown-bg-C'], obe_settings['dropdown-bg-M'], note='Sets $dropdown-bg') }}
 
                         <!-- HOLD FOR: $dropdown-border-color: rgba($black, 0.15) !default; -->
+                        {{ macros.settings_text_input('dropdown-border-color', 'Dropdown Border Color', global_strings['sys']['dropdown-border-color'], obe_settings['dropdown-border-color'], note='Sets $dropdown-border-color') }}
 
                         <!-- HOLD FOR: $dropdown-border-radius: $border-radius !default; -->
+                        {{ macros.settings_text_input('dropdown-border-radius', 'Dropdown Border Radius', global_strings['sys']['dropdown-border-radius'], obe_settings['dropdown-border-radius'], note='Sets $dropdown-border-radius') }}
 
                         <!-- HOLD FOR: $dropdown-border-width: $border-width !default; -->
+                        {{ macros.settings_text_input('dropdown-border-width', 'Dropdown Border Width', global_strings['sys']['dropdown-border-width'], obe_settings['dropdown-border-width'], note='Sets $dropdown-border-width') }}
 
                         <!-- HOLD FOR: $dropdown-inner-border-radius: subtract($dropdown-border-radius, $dropdown-border-width) !default; -->
+                        {{ macros.settings_text_input('dropdown-inner-border-radius', 'Dropdown Inner Border Radius', global_strings['sys']['dropdown-inner-border-radius'], obe_settings['dropdown-inner-border-radius'], note='Sets $dropdown-inner-border-radius') }}
 
                         <!-- HOLD FOR: $dropdown-divider-bg: $gray-200 !default; -->
+                        {{ macros.settings_contextual_selects('dropdown-divider-bg', 'Dropdown Divider Background', obe_settings['dropdown-divider-bg-C'], obe_settings['dropdown-divider-bg-M'], note='Sets $dropdown-divider-bg') }}
 
                         <!-- HOLD FOR: $dropdown-divider-margin-y: $nav-divider-margin-y !default; -->
+                        {{ macros.settings_text_input('dropdown-divider-margin-y', 'Dropdown Divider Margin Y', global_strings['sys']['dropdown-divider-margin-y'], obe_settings['dropdown-divider-margin-y'], note='Sets $dropdown-divider-margin-y') }}
 
                         <!-- HOLD FOR: $dropdown-box-shadow: 0 0.5rem 1rem rgba($black, 0.175) !default; -->
+                        {{ macros.settings_text_input('dropdown-box-shadow', 'Dropdown Box Shadow', global_strings['sys']['dropdown-box-shadow'], obe_settings['dropdown-box-shadow'], note='Sets $dropdown-box-shadow') }}
 
                         <!-- $dropdown-link-color IS ALREADY USED -->
 
                         <!-- HOLD FOR: $dropdown-link-hover-color: darken($gray-900, 5%) !default; -->
+                        {{ macros.settings_text_input('dropdown-link-hover-color', 'Dropdown Link Hover Color', global_strings['sys']['dropdown-link-hover-color'], obe_settings['dropdown-link-hover-color'], note='Sets $dropdown-link-hover-color') }}
 
                         <!-- $dropdown-link-hover-bg IS ALREADY USED -->
 
                         <!-- HOLD FOR: $dropdown-link-active-color: $component-active-color !default; -->
+                        {{ macros.settings_text_input('dropdown-link-active-color', 'Dropdown Link Active Color', global_strings['sys']['dropdown-link-active-color'], obe_settings['dropdown-link-active-color'], note='Sets $dropdown-link-active-color') }}
 
                         <!-- HOLD FOR: $dropdown-link-active-bg: $component-active-bg !default; -->
+                        {{ macros.settings_text_input('dropdown-link-active-bg', 'Dropdown Link Active Background', global_strings['sys']['dropdown-link-active-bg'], obe_settings['dropdown-link-active-bg'], note='Sets $dropdown-link-active-bg') }}
 
                         <!-- $dropdown-link-disabled-color IS ALREADY USED -->
 
                         <!-- HOLD FOR: $dropdown-item-padding-y: 0.25rem !default; -->
+                        {{ macros.settings_number_step_input('dropdown-item-padding-y', 'Dropdown Item Padding Y', global_strings['sys']['dropdown-item-padding-y'], obe_settings['dropdown-item-padding-y'], 'rem', '10', '0', '0.05', note='Sets $dropdown-item-padding-y') }}
 
                         <!-- HOLD FOR: $dropdown-item-padding-x: 1.5rem !default; -->
+                        {{ macros.settings_number_step_input('dropdown-item-padding-x', 'Dropdown Item Padding X', global_strings['sys']['dropdown-item-padding-x'], obe_settings['dropdown-item-padding-x'], 'rem', '10', '0', '0.05', note='Sets $dropdown-item-padding-x') }}
 
                         <!-- $dropdown-header-color IS ALREADY USED -->
 
