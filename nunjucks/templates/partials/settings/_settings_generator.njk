@@ -1511,43 +1511,43 @@
                         
                         
                         
-                        <!--h3 class="pt-4 pb-2">Core Cards Options</h3-->
+                        <h3 class="pt-4 pb-2">Core Cards Options</h3>
                         
                         <!-- CARDS SECTION -->
 
-                        <!-- HOLD FOR: $card-spacer-y: 0.75rem !default; -->
+                        {{ macros.settings_number_step_input('card-spacer-y', 'Card Spacer Y', global_strings['sys']['card-spacer-y'], obe_settings['card-spacer-y'], 'rem', '10', '0', '0.05', note='Sets $card-spacer-y') }}
 
-                        <!-- HOLD FOR: $card-spacer-x: 1.25rem !default; -->
+                        {{ macros.settings_number_step_input('card-spacer-x', 'Card Spacer X', global_strings['sys']['card-spacer-y'], obe_settings['card-spacer-x'], 'rem', '10', '0', '0.05', note='Sets $card-spacer-x') }}
 
-                        <!-- HOLD FOR: $card-border-width: $border-width !default; -->
+                        {{ macros.settings_text_input('card-border-width', 'Card Border Width', global_strings['sys']['card-border-width'], obe_settings['card-border-width'], note='Sets $card-border-width') }}
 
-                        <!-- HOLD FOR: $card-border-radius: $border-radius !default; -->
+                        {{ macros.settings_text_input('card-border-radius', 'Card Border Radius', global_strings['sys']['card-border-radius'], obe_settings['card-border-radius'], note='Sets $card-border-radius') }}
 
-                        <!-- HOLD FOR: $card-border-color: rgba($black, 0.125) !default; -->
+                        {{ macros.settings_text_input('card-border-color', 'Card Border Color', global_strings['sys']['card-border-color'], obe_settings['card-border-color'], note='Sets $card-border-color') }}
 
-                        <!-- HOLD FOR: $card-inner-border-radius: subtract($card-border-radius, $card-border-width) !default; -->
+                        {{ macros.settings_text_input('card-inner-border-radius', 'Card Inner Border Radius', global_strings['sys']['card-inner-border-radius'], obe_settings['card-inner-border-radius'], note='Sets $card-inner-border-radius') }}
 
-                        <!-- HOLD FOR: $card-cap-bg: rgba($black, 0.03) !default; -->
+                        {{ macros.settings_text_input('card-cap-bg', 'Card Cap Background', global_strings['sys']['card-cap-bg'], obe_settings['card-cap-bg'], note='Sets $card-cap-bg') }}
 
-                        <!-- HOLD FOR: $card-cap-color: null !default; -->
+                        {{ macros.settings_text_input('card-cap-color', 'Card Cap Color', global_strings['sys']['card-cap-color'], obe_settings['card-cap-color'], note='Sets $card-cap-color') }}
 
-                        <!-- HOLD FOR: $card-height: null !default; -->
+                        {{ macros.settings_text_input('card-height', 'Card Height', global_strings['sys']['card-height'], obe_settings['card-height'], note='Sets $card-height') }}
 
-                        <!-- HOLD FOR: $card-color: null !default; -->
+                        {{ macros.settings_text_input('card-color', 'Card Color', global_strings['sys']['card-color'], obe_settings['card-color'], note='Sets $card-color') }}
 
-                        <!-- HOLD FOR: $card-bg: $white !default; -->
+                        {{ macros.settings_contextual_selects('card-bg', 'Card Background', obe_settings['card-bg-C'], obe_settings['card-bg-M'], note='Sets $card-bg') }}
 
-                        <!-- HOLD FOR: $card-img-overlay-padding: 1.25rem !default; -->
+                        {{ macros.settings_text_input('card-img-overlay-padding', 'Card Image Overlay Padding', global_strings['sys']['card-img-overlay-padding'], obe_settings['card-img-overlay-padding'], note='Sets $card-img-overlay-padding') }}
 
-                        <!-- HOLD FOR: $card-group-margin: $grid-gutter-width / 2 !default; -->
+                        {{ macros.settings_text_input('card-group-margin', 'Card Group Margin', global_strings['sys']['card-group-margin'], obe_settings['card-group-margin'], note='Sets $card-group-margin') }}
 
-                        <!-- HOLD FOR: $card-deck-margin: $card-group-margin !default; -->
+                        {{ macros.settings_text_input('card-deck-margin', 'Card Deck Margin', global_strings['sys']['card-deck-margin'], obe_settings['card-deck-margin'], note='Sets $card-deck-margin') }}
 
-                        <!-- HOLD FOR: $card-columns-count: 3 !default; -->
+                        {{ macros.settings_number_step_input('card-columns-count', 'Card Columns Count', global_strings['sys']['card-columns-count'], obe_settings['card-columns-count'], '', '12', '0', '1', note='Sets $card-columns-count') }}
 
-                        <!-- HOLD FOR: $card-columns-gap: 1.25rem !default; -->
+                        {{ macros.settings_number_step_input('card-columns-gap', 'Card Columns Gap', global_strings['sys']['card-columns-gap'], obe_settings['card-columns-gap'], 'rem', '10', '0', '0.05', note='Sets $card-columns-gap') }}
 
-                        <!-- HOLD FOR: $card-columns-margin: $card-spacer-y !default; -->
+                        {{ macros.settings_text_input('card-columns-margin', 'Card Columns Margin', global_strings['sys']['card-columns-margin'], obe_settings['card-columns-margin'], note='Sets $card-columns-margin') }}
 
 
                         

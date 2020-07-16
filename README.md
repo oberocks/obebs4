@@ -870,7 +870,26 @@ The following changes were made to the default `obebs4_settings.json` file durin
 ```json
 "jumbotron-padding": "2rem",
 "jumbotron-color": "null",
-"jumbotron-bg": "$gray-200"
+"jumbotron-bg": "$gray-200",
+```
+
+```json
+    "card-spacer-y": "0.75rem",
+    "card-spacer-x": "1.25rem",
+    "card-border-width": "$border-width",
+    "card-border-color": "rgba($black, 0.125)",
+    "card-inner-border-radius": "subtract($card-border-radius, $card-border-width)",
+    "card-cap-bg": "rgba($black, 0.03)",
+    "card-cap-color": "null",
+    "card-height": "null",
+    "card-color": "null",
+    "card-bg": "$white",
+    "card-img-overlay-padding": "1.25rem",
+    "card-group-margin": "$grid-gutter-width / 2",
+    "card-deck-margin": "$card-group-margin",
+    "card-columns-count": "3",
+    "card-columns-gap": "1.25rem",
+    "card-columns-margin": "$card-spacer-y"
 ```
  
 

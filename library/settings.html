@@ -7327,43 +7327,187 @@
                     </div>
                     <small id="jumbotron-bg-help" class="form-text text-muted pb-2">Sets $jumbotron-bg</small>
 
-                    <!--h3 class="pt-4 pb-2">Core Cards Options</h3-->
+                    <h3 class="pt-4 pb-2">Core Cards Options</h3>
 
                     <!-- CARDS SECTION -->
 
-                    <!-- HOLD FOR: $card-spacer-y: 0.75rem !default; -->
+                    <div class="form-group">
+                        <label for="card-spacer-y" class="d-block font-weight-bold">Card Spacer Y</label>
+                        <div class="input-group">
+                            <div class="input-group-prepend js-increment-down">
+                                <button class="btn btn-light border" type="button"><i class="fas fa-angle-left"></i></button>
+                            </div>
+                            <input type="text" class="js-increment-target form-control text-center" id="card-spacer-y" value="0.75rem" placeholder="0.75rem" data-units="rem" data-max="10" data-min="0" data-increment="0.05">
+                            <div class="input-group-append js-increment-up">
+                                <button class="btn btn-light border" type="button"><i class="fas fa-angle-right"></i></button>
+                            </div>
+                        </div>
+                        <small class="d-block text-muted pt-1">Sets $card-spacer-y</small>
+                    </div>
 
-                    <!-- HOLD FOR: $card-spacer-x: 1.25rem !default; -->
+                    <div class="form-group">
+                        <label for="card-spacer-x" class="d-block font-weight-bold">Card Spacer X</label>
+                        <div class="input-group">
+                            <div class="input-group-prepend js-increment-down">
+                                <button class="btn btn-light border" type="button"><i class="fas fa-angle-left"></i></button>
+                            </div>
+                            <input type="text" class="js-increment-target form-control text-center" id="card-spacer-x" value="1.25rem" placeholder="0.75rem" data-units="rem" data-max="10" data-min="0" data-increment="0.05">
+                            <div class="input-group-append js-increment-up">
+                                <button class="btn btn-light border" type="button"><i class="fas fa-angle-right"></i></button>
+                            </div>
+                        </div>
+                        <small class="d-block text-muted pt-1">Sets $card-spacer-x</small>
+                    </div>
 
-                    <!-- HOLD FOR: $card-border-width: $border-width !default; -->
+                    <div class="form-group">
+                        <label for="card-border-width" class="font-weight-bold">Card Border Width</label>
+                        <input type="text" class="form-control" id="card-border-width" value="$border-width" placeholder="$border-width">
+                        <small class="form-text text-muted">Sets $card-border-width</small>
+                    </div>
 
-                    <!-- HOLD FOR: $card-border-radius: $border-radius !default; -->
+                    <div class="form-group">
+                        <label for="card-border-radius" class="font-weight-bold">Card Border Radius</label>
+                        <input type="text" class="form-control" id="card-border-radius" value="$border-radius" placeholder="$border-radius">
+                        <small class="form-text text-muted">Sets $card-border-radius</small>
+                    </div>
 
-                    <!-- HOLD FOR: $card-border-color: rgba($black, 0.125) !default; -->
+                    <div class="form-group">
+                        <label for="card-border-color" class="font-weight-bold">Card Border Color</label>
+                        <input type="text" class="form-control" id="card-border-color" value="rgba($black, 0.125)" placeholder="rgba($black, 0.125)">
+                        <small class="form-text text-muted">Sets $card-border-color</small>
+                    </div>
 
-                    <!-- HOLD FOR: $card-inner-border-radius: subtract($card-border-radius, $card-border-width) !default; -->
+                    <div class="form-group">
+                        <label for="card-inner-border-radius" class="font-weight-bold">Card Inner Border Radius</label>
+                        <input type="text" class="form-control" id="card-inner-border-radius" value="subtract($card-border-radius, $card-border-width)" placeholder="subtract($card-border-radius, $card-border-width)">
+                        <small class="form-text text-muted">Sets $card-inner-border-radius</small>
+                    </div>
 
-                    <!-- HOLD FOR: $card-cap-bg: rgba($black, 0.03) !default; -->
+                    <div class="form-group">
+                        <label for="card-cap-bg" class="font-weight-bold">Card Cap Background</label>
+                        <input type="text" class="form-control" id="card-cap-bg" value="rgba($black, 0.03)" placeholder="rgba($black, 0.03)">
+                        <small class="form-text text-muted">Sets $card-cap-bg</small>
+                    </div>
 
-                    <!-- HOLD FOR: $card-cap-color: null !default; -->
+                    <div class="form-group">
+                        <label for="card-cap-color" class="font-weight-bold">Card Cap Color</label>
+                        <input type="text" class="form-control" id="card-cap-color" value="null" placeholder="null">
+                        <small class="form-text text-muted">Sets $card-cap-color</small>
+                    </div>
 
-                    <!-- HOLD FOR: $card-height: null !default; -->
+                    <div class="form-group">
+                        <label for="card-height" class="font-weight-bold">Card Height</label>
+                        <input type="text" class="form-control" id="card-height" value="null" placeholder="null">
+                        <small class="form-text text-muted">Sets $card-height</small>
+                    </div>
 
-                    <!-- HOLD FOR: $card-color: null !default; -->
+                    <div class="form-group">
+                        <label for="card-color" class="font-weight-bold">Card Color</label>
+                        <input type="text" class="form-control" id="card-color" value="null" placeholder="null">
+                        <small class="form-text text-muted">Sets $card-color</small>
+                    </div>
 
-                    <!-- HOLD FOR: $card-bg: $white !default; -->
+                    <div class="form-row align-items-end">
+                        <div class="col-7">
+                            <div class="form-group mb-0">
+                                <label class="d-block font-weight-bold">Card Background Color</label>
+                                <select id="card-bg" class="form-control" aria-describedby="card-bg-help">
+                                    <option value="none">None</option>
+                                    <option value="white" selected>White</option>
+                                    <option value="light-gray">Light Gray</option>
+                                    <option value="gray">Gray</option>
+                                    <option value="dark-gray">Dark Gray</option>
+                                    <option value="black">Black</option>
+                                    <option value="red">Red</option>
+                                    <option value="rose">Rose</option>
+                                    <option value="magenta">Magenta</option>
+                                    <option value="violet">Violet</option>
+                                    <option value="blue">Blue</option>
+                                    <option value="azure">Azure</option>
+                                    <option value="cyan">Cyan</option>
+                                    <option value="spring-green">Spring Green</option>
+                                    <option value="green">Green</option>
+                                    <option value="chartreuse">Chartreuse</option>
+                                    <option value="yellow">Yellow</option>
+                                    <option value="orange">Orange</option>
+                                    <option value="orange-gray">Orange Gray</option>
+                                    <option value="dark-gray-orange">Dark Gray Orange</option>
+                                    <option value="blue-gray">Blue Gray</option>
+                                    <option value="light-gray-azure">Light Gray Azure</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-5">
+                            <div class="form-group mb-0">
+                                <label class="d-block font-weight-bold">Tint / Shade</label>
+                                <select id="card-bg-modifier" class="form-control">
+                                    <option value="50">50</option>
+                                    <option value="100">100</option>
+                                    <option value="200">200</option>
+                                    <option value="300">300</option>
+                                    <option value="400">400</option>
+                                    <option value="none" selected>None</option>
+                                    <option value="600">600</option>
+                                    <option value="700">700</option>
+                                    <option value="800">800</option>
+                                    <option value="900">900</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <small id="card-bg-help" class="form-text text-muted pb-2">Sets $card-bg</small>
 
-                    <!-- HOLD FOR: $card-img-overlay-padding: 1.25rem !default; -->
+                    <div class="form-group">
+                        <label for="card-img-overlay-padding" class="font-weight-bold">Card Image Overlay Padding</label>
+                        <input type="text" class="form-control" id="card-img-overlay-padding" value="1.25rem" placeholder="1.25rem">
+                        <small class="form-text text-muted">Sets $card-img-overlay-padding</small>
+                    </div>
 
-                    <!-- HOLD FOR: $card-group-margin: $grid-gutter-width / 2 !default; -->
+                    <div class="form-group">
+                        <label for="card-group-margin" class="font-weight-bold">Card Group Margin</label>
+                        <input type="text" class="form-control" id="card-group-margin" value="$grid-gutter-width / 2" placeholder="$grid-gutter-width / 2">
+                        <small class="form-text text-muted">Sets $card-group-margin</small>
+                    </div>
 
-                    <!-- HOLD FOR: $card-deck-margin: $card-group-margin !default; -->
+                    <div class="form-group">
+                        <label for="card-deck-margin" class="font-weight-bold">Card Deck Margin</label>
+                        <input type="text" class="form-control" id="card-deck-margin" value="$card-group-margin" placeholder="$card-group-margin">
+                        <small class="form-text text-muted">Sets $card-deck-margin</small>
+                    </div>
 
-                    <!-- HOLD FOR: $card-columns-count: 3 !default; -->
+                    <div class="form-group">
+                        <label for="card-columns-count" class="d-block font-weight-bold">Card Columns Count</label>
+                        <div class="input-group">
+                            <div class="input-group-prepend js-increment-down">
+                                <button class="btn btn-light border" type="button"><i class="fas fa-angle-left"></i></button>
+                            </div>
+                            <input type="text" class="js-increment-target form-control text-center" id="card-columns-count" value="3" placeholder="3" data-units="" data-max="12" data-min="0" data-increment="1">
+                            <div class="input-group-append js-increment-up">
+                                <button class="btn btn-light border" type="button"><i class="fas fa-angle-right"></i></button>
+                            </div>
+                        </div>
+                        <small class="d-block text-muted pt-1">Sets $card-columns-count</small>
+                    </div>
 
-                    <!-- HOLD FOR: $card-columns-gap: 1.25rem !default; -->
+                    <div class="form-group">
+                        <label for="card-columns-gap" class="d-block font-weight-bold">Card Columns Gap</label>
+                        <div class="input-group">
+                            <div class="input-group-prepend js-increment-down">
+                                <button class="btn btn-light border" type="button"><i class="fas fa-angle-left"></i></button>
+                            </div>
+                            <input type="text" class="js-increment-target form-control text-center" id="card-columns-gap" value="1.25rem" placeholder="1.25rem" data-units="rem" data-max="10" data-min="0" data-increment="0.05">
+                            <div class="input-group-append js-increment-up">
+                                <button class="btn btn-light border" type="button"><i class="fas fa-angle-right"></i></button>
+                            </div>
+                        </div>
+                        <small class="d-block text-muted pt-1">Sets $card-columns-gap</small>
+                    </div>
 
-                    <!-- HOLD FOR: $card-columns-margin: $card-spacer-y !default; -->
+                    <div class="form-group">
+                        <label for="card-columns-margin" class="font-weight-bold">Card Columns Margin</label>
+                        <input type="text" class="form-control" id="card-columns-margin" value="$card-spacer-y" placeholder="$card-spacer-y">
+                        <small class="form-text text-muted">Sets $card-columns-margin</small>
+                    </div>
 
                     <!--h3 class="pt-4 pb-2">Core Tooltips Options</h3-->
 
@@ -8393,7 +8537,7 @@
 
                 <small class="text-light">OBE:BS4 VERSION:</small>
 
-                <p class="lead">0.8.55</p>
+                <p class="lead">0.8.56</p>
 
                 <hr class="border-gray" />
 
@@ -10054,6 +10198,23 @@
                 setObjValOrFallback(object, 'jumbotron-padding', "2rem");
                 setObjValOrFallback(object, 'jumbotron-color', "null");
                 setColorsData('jumbotron-bg');
+                setObjValOrFallback(object, 'card-spacer-y', "0.75rem");
+                setObjValOrFallback(object, 'card-spacer-x', "1.25rem");
+                setObjValOrFallback(object, 'card-border-width', "$border-width");
+                setObjValOrFallback(object, 'card-border-radius', "$border-radius");
+                setObjValOrFallback(object, 'card-border-color', "rgba($black, 0.125)");
+                setObjValOrFallback(object, 'card-inner-border-radius', "subtract($card-border-radius, $card-border-width)");
+                setObjValOrFallback(object, 'card-cap-bg', "rgba($black, 0.03)");
+                setObjValOrFallback(object, 'card-cap-color', "null");
+                setObjValOrFallback(object, 'card-height', "null");
+                setObjValOrFallback(object, 'card-color', "null");
+                setColorsData('card-bg');
+                setObjValOrFallback(object, 'card-img-overlay-padding', "1.25rem");
+                setObjValOrFallback(object, 'card-group-margin', "$grid-gutter-width / 2");
+                setObjValOrFallback(object, 'card-deck-margin', "$card-group-margin");
+                setObjValOrFallback(object, 'card-columns-count', "3");
+                setObjValOrFallback(object, 'card-columns-gap', "1.25rem");
+                setObjValOrFallback(object, 'card-columns-margin', "$card-spacer-y");
                 //
                 // STRINGIFY OBJECT INTO JSON AND USE PRISM TO DISPLAY AS HIGHLIGHTED CODE
                 //
