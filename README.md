@@ -864,9 +864,15 @@ The following changes were made to the default `obebs4_settings.json` file durin
 "pagination-active-border-color": "$pagination-active-bg",
 "pagination-disabled-color": "$gray-600",
 "pagination-disabled-bg": "$white",
-"pagination-disabled-border-color": "$gray-300"
+"pagination-disabled-border-color": "$gray-300",
 ```
 
+```json
+"jumbotron-padding": "2rem",
+"jumbotron-color": "null",
+"jumbotron-bg": "$gray-200"
+```
+ 
 
 <!---
 ## Customizing Your Web Design System

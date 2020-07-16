@@ -1123,6 +1123,10 @@
                 setColorsData('pagination-disabled-color');
                 setColorsData('pagination-disabled-bg');
                 setColorsData('pagination-disabled-border-color');
+
+                setObjValOrFallback(object, 'jumbotron-padding', "{{ global_strings['sys']['jumbotron-padding'] }}");
+                setObjValOrFallback(object, 'jumbotron-color', "{{ global_strings['sys']['jumbotron-color'] }}");
+                setColorsData('jumbotron-bg');
                 
                 
                 
