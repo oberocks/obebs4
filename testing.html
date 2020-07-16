@@ -35,71 +35,48 @@
 
             <div class="row justify-content-center py-2">
 
-                <div class="col-sn-6 col-md-5 col-lg-4 col-xl-3 my-2">
+                <div class="col-md-6 my-2">
                 
-                    <p class="lead text-center py-4">Dropdown Select Components</p>
-                    
+                    <p class="lead text-center py-4">Testing Page</p>
+
                     <div class="form-group">
-                        <label>Basic Dropdown Select:</label>
-                        <div class="dropdown-select btn-group w-100">
-                            <div class="d-flex justify-content-between align-items-center border rounded w-100 p-0" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" role="listbox">
-                                <div class="dropdown-select-target">
-                                    <div class="py-2 px-3">Select An Option</div>
+                        <div class="d-flex justify-content-between align-items-end">
+                            
+                            <label for="card-border-width" class="font-weight-bold">Card Border Width</label>
+
+                            <div class="dropdown">
+
+                                <button class="btn btn-xs btn-primary mb-2" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-bars"></i></button>
+
+                                <div class="dropdown-menu dropdown-menu-right text-right" aria-labelledby="dropdownMenu2" style="max-height: 260px; overflow-y: auto;">
+
+                                    <h6 class="dropdown-header bg-primary text-white font-weight-bold">Text Options</h6>
+
+                                    <button class="dropdown-item" type="button">Text</button>
+                                    <button class="dropdown-item" type="button">Textarea</button>
+                                    
+                                    <h6 class="dropdown-header bg-primary text-white font-weight-bold">Fixed Selection Options</h6>
+
+                                    <button class="dropdown-item" type="button">Contextul Colors</button>
+                                    <button class="dropdown-item" type="button">Font Weights</button>
+
+                                    <h6 class="dropdown-header bg-primary text-white font-weight-bold">Number Counter Options</h6>
+
+                                    <button class="dropdown-item" type="button">Columns (1-12 columns)</button>
+                                    <button class="dropdown-item" type="button">Number (decimal)</button>
+                                    <button class="dropdown-item" type="button">Number (integer)</button>
+                                    <button class="dropdown-item" type="button">Number (em units)</button>
+                                    <button class="dropdown-item" type="button">Number (px units)</button>
+                                    <button class="dropdown-item" type="button">Number (rem units)</button>
+                                    <button class="dropdown-item" type="button">Opacity/Alpha (0-1)</button>
+                                    <button class="dropdown-item" type="button">Percentage (0-100%)</button>
+
                                 </div>
-                                <div class="py-2 px-3">⇣</div>
+
                             </div>
-                            <div class="dropdown-menu py-0 w-100">
-                                <div class="dropdown-select-option py-2 px-3" data-option-value="one">Item One</div>
-                                <div class="dropdown-select-option py-2 px-3" data-option-value="two">Item Two</div>
-                                <div class="dropdown-select-option py-2 px-3" data-option-value="three">Item Three</div>
-                                <div class="dropdown-select-option py-2 px-3" data-option-value="four">Item Four</div>
-                                <div class="dropdown-select-option py-2 px-3" data-option-value="five">Item Five</div>
-                            </div>
-                        </div>
-                        <input type="hidden" name="dropdown-select-input" value="">
-                        <small class="form-text text-muted">Dropdown Select help text.</small>
-                    </div>
-                    
-                    <p class="lead text-center py-4">Increment Counter Components</p>
-                    
-                    <div class="">
-
-                        <div class="form-group">
-                            <label for="vert-increment">Basic Vertical Increment Input Group:</label>
-                            <div id="vert-inc-test-id" class="d-flex flex-column" data-obe-increment-component="true">
-                                <div data-obe-increment-up="true">
-                                    <button class="btn btn-light border border-bottom-0 rounded-0 w-100" type="button">+</button>
-                                </div>
-                                <input class="form-control text-center rounded-0" type="text" id="vert-increment" name="vert-increment" data-min="0" data-max="10" data-leading-units="$"  data-trailing-units=" USD" data-decimal-places="3" data-use-seperators="true" placeholder="$1.000 USD" value="$1.000 USD" aria-describedby="vert-increment-help">
-                                <div data-obe-increment-down="true">
-                                    <button class="btn btn-light border border-top-0 rounded-0 w-100" type="button">-</button>
-                                </div>
-                            </div>
-                            <small id="vert-increment-help" class="form-text text-muted">Form element help text goes here.</small>
-                        </div>
-                    
-                    </div>
-
-                </div>
-
-                <div class="col-sn-6 col-md-5 col-lg-4 col-xl-3 my-2">
-
-                    <p class="lead text-center py-4">Input Group Button Data Toggle</p>
-                    
-                    <div class="">
-                    
-                        <div class="form-group">
-                            <label for="appended-input-btn-data-toggle">Appended Input Group Button Data Toggle:</label>
-                            <div id="btn-data-toggle-test-id" class="input-group" data-obe-input-data-toggle="true">
-                                <input class="form-control text-left" type="text" id="appended-input-btn-data-toggle" name="appended-input-btn-data-toggle" placeholder="1" value="1" aria-describedby="appended-input-btn-data-toggle-help">
-                                <div class="input-group-append">
-                                    <button class="btn btn-light border" type="button" data-obe-text-toggle="PM">AM</button>
-                                </div>
-                            </div>
-                            <input id="appended-input-btn-data-toggle-hidden" name="appended-input-btn-data-toggle-hidden" type="hidden" value="AM">
-                            <small id="appended-input-btn-data-toggle-help" class="form-text text-muted">Form element help text goes here.</small>
-                        </div>
-
+                        </div> 
+                        <input type="text" class="form-control" id="card-border-width" value="$border-width" placeholder="$border-width">
+                        <small class="form-text text-muted">Sets $card-border-width</small>
                     </div>
 
                 </div>
@@ -115,244 +92,7 @@
         <!-- Custom/Development JS for this page -->
         <script type="text/javascript">
 
-            document.getElementById('vert-inc-test-id').addEventListener('after.counter.incremented', function(e) {
-                console.log('Sub-Component Trigger Event Name: ' + e.detail.value.trigger);
-                console.log('Component Range Minimum: ' + e.detail.value.min);
-                console.log('Component Increment Value: ' + e.detail.value.increment);
-                console.log('Component Leading Units: ' + e.detail.value.leadingUnits);
-                console.log('Component Trailing Units: ' + e.detail.value.trailingUnits);
-                console.log('Component Decimal Places: ' + e.detail.value.decimalPlaces);
-                console.log('Calclation Starting Value: ' + e.detail.value.initial);
-                console.log('Calclation Cleaned Value: ' + e.detail.value.cleaned);
-                console.log('Calclation Numeric Result Value: ' + e.detail.value.number);
-                console.log('Calclation Final String Value: ' + e.detail.value.final);
-            });
-
-            document.getElementById('btn-data-toggle-test-id').addEventListener('before.input.toggle', function(event) {
-                console.log('before.input.toggle Displayed String: ' + event.detail.data.displayed);
-                console.log('before.input.toggleStored String: ' + event.detail.data.stored);
-            });
-            
-            document.getElementById('btn-data-toggle-test-id').addEventListener('after.input.toggle', function(event) {
-                console.log('after.input.toggle Displayed String: ' + event.detail.data.displayed);
-                console.log('after.input.toggle Stored String: ' + event.detail.data.stored);
-            });
-
-        </script>
-
-
-        <!-- Custom/Development JS for this page -->
-        <script type="text/javascript">
-
-            /*
-            var domReady = function(callback) {
-                document.readyState === "interactive" || document.readyState === "complete" ? callback() : document.addEventListener("DOMContentLoaded", callback);
-            };
-
-            domReady(function() {
-
-                // Grab all obe increment components in the DOM
-                let components = document.querySelectorAll('[data-obe-increment-component]');
-
-                // utility function
-                const sanitizeValue = function(val, preUnits, postUnits){
-                    let output = val.replace(preUnits, '').replace(postUnits, '').replace(/[^0-9.-]/g, '').replace(/(\..*)\./g, '$1').replace(/(?!^)-/g, '');
-                    return Number(output);
-                };
-
-                // Loop through all component instances and add event listners to each
-                for (var i = 0; i < components.length; i++)
-                {
-                    // assign the current component to a var
-                    let component = components[i];
-
-                    // grab the elements needed for event listners and assign them to vars
-                    let upBtn = component.querySelector('[data-obe-increment-up]');
-                    let downBtn = component.querySelector('[data-obe-increment-down]');
-                    let input = component.querySelector('input');
-
-                    // disable double tap click to zoom functionality for mobile devices
-                    upBtn.style.touchAction = 'manipulation';
-                    downBtn.style.touchAction = 'manipulation';
-                    upBtn.querySelector('button').style.touchAction = 'manipulation';
-                    downBtn.querySelector('button').style.touchAction = 'manipulation';
-
-                    // collect, process and assign string values from component data attributes
-                    let min = input.dataset.min ? Number(input.dataset.min) : 0;
-                    let max = input.dataset.max ? Number(input.dataset.max) : 10;
-                    let increment = input.dataset.increment ? Number(input.dataset.increment) : 1;
-                    let leadingUnits = input.dataset.leadingUnits ? input.dataset.leadingUnits : '';
-                    let trailingUnits = input.dataset.trailingUnits ? input.dataset.trailingUnits : '';
-                    let decimalPlaces = input.dataset.decimalPlaces ? Number(input.dataset.decimalPlaces) : null;
-
-                    // add the event listner functinality to the component's increment up button
-                    upBtn.addEventListener("click", function(){
-
-                        // grab the current value and clean it
-                        var value = input.value;
-                        let cleanValue = sanitizeValue(value, leadingUnits, trailingUnits);
-
-                        // init a var to hold for the final output value
-                        let output = cleanValue;
-
-                        // conditionally check the cleaned value against the min and max values
-                        if (cleanValue >= min && cleanValue < max)
-                        {
-                            // handle the decimal places a data attribute for decimals was provided
-                            if (decimalPlaces != null )
-                            {
-                                let decimals = Number(decimalPlaces);
-                                output = Number(cleanValue + increment).toFixed(decimals);
-                            }
-                            // otherwise just round the output value
-                            else
-                            {
-                                output = Math.round((cleanValue + increment) * 1e12) / 1e12;
-                            }
-                        }
-                        else if (cleanValue >= max)
-                        {
-                            output = max;
-                        }
-
-                        // double check the output for any calculations that may have pushed the output value over the max value
-                        if (output > max)
-                        {
-                            output = max;
-                        }
-
-                        // update the component input with the new value
-                        input.value = leadingUnits + output + trailingUnits;
-
-                    });
-
-                    // add the event listner functinality to the component's increment down button
-                    downBtn.addEventListener("click", function(){
-
-                        // grab the current value and clean it
-                        var value = input.value;
-                        let cleanValue = sanitizeValue(value, leadingUnits, trailingUnits);
-
-                        // init a var to hold for the final output value
-                        let output = cleanValue;
-
-                        // conditionally check the cleaned value against the min and max values
-                        if (cleanValue > min && cleanValue <= max)
-                        {
-                            // handle the decimal places a data attribute for decimals was provided
-                            if (decimalPlaces != null )
-                            {
-                                let decimals = Number(decimalPlaces);
-                                output = Number(cleanValue - increment).toFixed(decimals);
-                            }
-                            // otherwise just round the output value
-                            else
-                            {
-                                output = Math.round((cleanValue - increment) * 1e12) / 1e12;
-                            }
-                        }
-                        else if (cleanValue <= min)
-                        {
-                            output = min;
-                        }
-
-                        // double check the output for any calculations that may have pushed the output value under the min value
-                        if (output < min)
-                        {
-                            output = min;
-                        }
-
-                        // update the component input with the new value
-                        input.value = leadingUnits + output + trailingUnits;
-
-                    });
-
-                    // add the event listner functinality to the component's input to handle use cases where a user types in a value directly into the input element
-                    input.addEventListener("change", function(){
-
-                        // grab the current value and clean it
-                        var value = this.value;
-                        let cleanValue = sanitizeValue(value, leadingUnits, trailingUnits);
-
-                        // init a var to hold for the final output value
-                        let output = cleanValue;
-                        
-                        // conditionally check the cleaned value against the min and max values
-                        if (cleanValue >= max)
-                        {
-                            // handle the decimal places a data attribute for decimals was provided
-                            if (decimalPlaces != null )
-                            {
-                                let decimals = Number(decimalPlaces);
-                                output = Number(max).toFixed(decimals);
-                            }
-                            // otherwise just round the output value
-                            else
-                            {
-                                output = Math.round((max) * 1e12) / 1e12;
-                            }
-                        }
-                        else if (cleanValue <= min)
-                        {
-                            // handle the decimal places a data attribute for decimals was provided
-                            if (decimalPlaces != null )
-                            {
-                                let decimals = Number(decimalPlaces);
-                                output = Number(min).toFixed(decimals);
-                            }
-                            // otherwise just round the output value
-                            else
-                            {
-                                output = Math.round((min) * 1e12) / 1e12;
-                            }
-                        }
-
-                        // update the component input with the new value
-                        this.value = leadingUnits + output + trailingUnits;
-
-                    });
-
-                }
-
-            }); // end domReady()
-            */
-
-        </script>
-
-        <!-- Custom/Development JS for this page -->
-        <script type="text/javascript">
-
-            /*
-            var domReady = function(callback) {
-                document.readyState === "interactive" || document.readyState === "complete" ? callback() : document.addEventListener("DOMContentLoaded", callback);
-            };
-
-            domReady(function() {
-
-                // Grab all obe increment components in the DOM
-                let componentsSelector = '[data-obe-input-data-toggle]';
-                let components = document.querySelectorAll(componentsSelector);
-
-                // Loop through all component instances and add event listners to each
-                for (var i = 0; i < components.length; i++)
-                {
-                    components[i].addEventListener('after.text.toggle', function(event) {
-                        
-                        // get the parent of the the component (should generally be a .form-group element)
-                        let parent = this.closest(componentsSelector).parentNode;
-                        
-                        // grab the hidden input in the component
-                        let hiddenInput = parent.querySelector('input[type="hidden"]');
-
-                        // add the unescaped (IE displayed) value to the component's hidden input
-                        hiddenInput.value = event.detail.data.displayed;
-                        
-                    });
-                }
-
-            }); // end domReady()
-
-            */
+            // 
 
         </script>
 
