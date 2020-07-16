@@ -1394,64 +1394,46 @@
                         
                         <!-- DROPDOWNS SECTION -->
 
-                        <!-- HOLD FOR: $dropdown-min-width: 10rem !default; -->
                         {{ macros.settings_number_step_input('dropdown-min-width', 'Dropdown Minimum Width', global_strings['sys']['dropdown-min-width'], obe_settings['dropdown-min-width'], 'rem', '15', '0', '0.05', note='Sets $dropdown-min-width') }}
 
-                        <!-- HOLD FOR: $dropdown-padding-y: 0.5rem !default; -->
                         {{ macros.settings_number_step_input('dropdown-padding-y', 'Dropdown Padding Y', global_strings['sys']['dropdown-padding-y'], obe_settings['dropdown-padding-y'], 'rem', '10', '0', '0.05', note='Sets $dropdown-padding-y') }}
 
-                        <!-- HOLD FOR: $dropdown-spacer: 0.125rem !default; -->
                         {{ macros.settings_number_step_input('dropdown-spacer', 'Dropdown Spacer', global_strings['sys']['dropdown-spacer'], obe_settings['dropdown-spacer'], 'rem', '10', '0', '0.05', note='Sets $dropdown-spacer') }}
 
-                        <!-- HOLD FOR: $dropdown-font-size: $font-size-base !default; -->
                         {{ macros.settings_text_input('dropdown-font-size', 'Dropdown Font Size', global_strings['sys']['dropdown-font-size'], obe_settings['dropdown-font-size'], note='Sets $dropdown-font-size') }}
 
-                        <!-- HOLD FOR: $dropdown-color: $body-color !default; -->
                         {{ macros.settings_text_input('dropdown-color', 'Dropdown Color', global_strings['sys']['dropdown-color'], obe_settings['dropdown-color'], note='Sets $dropdown-color') }}
 
-                        <!-- HOLD FOR: $dropdown-bg: $white !default; -->
                         {{ macros.settings_contextual_selects('dropdown-bg', 'Dropdown Background', obe_settings['dropdown-bg-C'], obe_settings['dropdown-bg-M'], note='Sets $dropdown-bg') }}
 
-                        <!-- HOLD FOR: $dropdown-border-color: rgba($black, 0.15) !default; -->
                         {{ macros.settings_text_input('dropdown-border-color', 'Dropdown Border Color', global_strings['sys']['dropdown-border-color'], obe_settings['dropdown-border-color'], note='Sets $dropdown-border-color') }}
 
-                        <!-- HOLD FOR: $dropdown-border-radius: $border-radius !default; -->
                         {{ macros.settings_text_input('dropdown-border-radius', 'Dropdown Border Radius', global_strings['sys']['dropdown-border-radius'], obe_settings['dropdown-border-radius'], note='Sets $dropdown-border-radius') }}
 
-                        <!-- HOLD FOR: $dropdown-border-width: $border-width !default; -->
                         {{ macros.settings_text_input('dropdown-border-width', 'Dropdown Border Width', global_strings['sys']['dropdown-border-width'], obe_settings['dropdown-border-width'], note='Sets $dropdown-border-width') }}
 
-                        <!-- HOLD FOR: $dropdown-inner-border-radius: subtract($dropdown-border-radius, $dropdown-border-width) !default; -->
                         {{ macros.settings_text_input('dropdown-inner-border-radius', 'Dropdown Inner Border Radius', global_strings['sys']['dropdown-inner-border-radius'], obe_settings['dropdown-inner-border-radius'], note='Sets $dropdown-inner-border-radius') }}
 
-                        <!-- HOLD FOR: $dropdown-divider-bg: $gray-200 !default; -->
                         {{ macros.settings_contextual_selects('dropdown-divider-bg', 'Dropdown Divider Background', obe_settings['dropdown-divider-bg-C'], obe_settings['dropdown-divider-bg-M'], note='Sets $dropdown-divider-bg') }}
 
-                        <!-- HOLD FOR: $dropdown-divider-margin-y: $nav-divider-margin-y !default; -->
                         {{ macros.settings_text_input('dropdown-divider-margin-y', 'Dropdown Divider Margin Y', global_strings['sys']['dropdown-divider-margin-y'], obe_settings['dropdown-divider-margin-y'], note='Sets $dropdown-divider-margin-y') }}
 
-                        <!-- HOLD FOR: $dropdown-box-shadow: 0 0.5rem 1rem rgba($black, 0.175) !default; -->
                         {{ macros.settings_text_input('dropdown-box-shadow', 'Dropdown Box Shadow', global_strings['sys']['dropdown-box-shadow'], obe_settings['dropdown-box-shadow'], note='Sets $dropdown-box-shadow') }}
 
                         <!-- $dropdown-link-color IS ALREADY USED -->
 
-                        <!-- HOLD FOR: $dropdown-link-hover-color: darken($gray-900, 5%) !default; -->
                         {{ macros.settings_text_input('dropdown-link-hover-color', 'Dropdown Link Hover Color', global_strings['sys']['dropdown-link-hover-color'], obe_settings['dropdown-link-hover-color'], note='Sets $dropdown-link-hover-color') }}
 
                         <!-- $dropdown-link-hover-bg IS ALREADY USED -->
 
-                        <!-- HOLD FOR: $dropdown-link-active-color: $component-active-color !default; -->
                         {{ macros.settings_text_input('dropdown-link-active-color', 'Dropdown Link Active Color', global_strings['sys']['dropdown-link-active-color'], obe_settings['dropdown-link-active-color'], note='Sets $dropdown-link-active-color') }}
 
-                        <!-- HOLD FOR: $dropdown-link-active-bg: $component-active-bg !default; -->
                         {{ macros.settings_text_input('dropdown-link-active-bg', 'Dropdown Link Active Background', global_strings['sys']['dropdown-link-active-bg'], obe_settings['dropdown-link-active-bg'], note='Sets $dropdown-link-active-bg') }}
 
                         <!-- $dropdown-link-disabled-color IS ALREADY USED -->
 
-                        <!-- HOLD FOR: $dropdown-item-padding-y: 0.25rem !default; -->
                         {{ macros.settings_number_step_input('dropdown-item-padding-y', 'Dropdown Item Padding Y', global_strings['sys']['dropdown-item-padding-y'], obe_settings['dropdown-item-padding-y'], 'rem', '10', '0', '0.05', note='Sets $dropdown-item-padding-y') }}
 
-                        <!-- HOLD FOR: $dropdown-item-padding-x: 1.5rem !default; -->
                         {{ macros.settings_number_step_input('dropdown-item-padding-x', 'Dropdown Item Padding X', global_strings['sys']['dropdown-item-padding-x'], obe_settings['dropdown-item-padding-x'], 'rem', '10', '0', '0.05', note='Sets $dropdown-item-padding-x') }}
 
                         <!-- $dropdown-header-color IS ALREADY USED -->
@@ -1461,53 +1443,75 @@
                         
                         
                         
-                        <!--h3 class="pt-4 pb-2">Core Pagination Options</h3-->
+                        <h3 class="pt-4 pb-2">Core Pagination Options</h3>
                         
                         <!-- PAGINATION SECTION -->
 
                         <!-- HOLD FOR: $pagination-padding-y: 0.5rem !default; -->
+                        {{ macros.settings_number_step_input('pagination-padding-y', 'Pagination Padding Y', global_strings['sys']['pagination-padding-y'], obe_settings['pagination-padding-y'], 'rem', '10', '0', '0.05', note='Sets $pagination-padding-y') }}
 
                         <!-- HOLD FOR: $pagination-padding-x: 0.75rem !default; -->
+                        {{ macros.settings_number_step_input('pagination-padding-x', 'Pagination Padding X', global_strings['sys']['pagination-padding-x'], obe_settings['pagination-padding-x'], 'rem', '10', '0', '0.05', note='Sets $pagination-padding-x') }}
 
                         <!-- HOLD FOR: $pagination-padding-y-sm: 0.25rem !default; -->
+                        {{ macros.settings_number_step_input('pagination-padding-y-sm', 'Pagination Padding Y Small', global_strings['sys']['pagination-padding-y-sm'], obe_settings['pagination-padding-y-sm'], 'rem', '10', '0', '0.05', note='Sets $pagination-padding-y-sm') }}
 
                         <!-- HOLD FOR: $pagination-padding-x-sm: 0.5rem !default; -->
+                        {{ macros.settings_number_step_input('pagination-padding-x-sm', 'Pagination Padding X Small', global_strings['sys']['pagination-padding-x-sm'], obe_settings['pagination-padding-x-sm'], 'rem', '10', '0', '0.05', note='Sets $pagination-padding-x-sm') }}
 
                         <!-- HOLD FOR: $pagination-padding-y-lg: 0.75rem !default; -->
+                        {{ macros.settings_number_step_input('pagination-padding-y-lg', 'Pagination Padding Y Large', global_strings['sys']['pagination-padding-y-lg'], obe_settings['pagination-padding-y-lg'], 'rem', '10', '0', '0.05', note='Sets $pagination-padding-y-lg') }}
 
                         <!-- HOLD FOR: $pagination-padding-x-lg: 1.5rem !default; -->
+                        {{ macros.settings_number_step_input('pagination-padding-x-lg', 'Pagination Padding X Large', global_strings['sys']['pagination-padding-x-lg'], obe_settings['pagination-padding-x-lg'], 'rem', '10', '0', '0.05', note='Sets $pagination-padding-x-lg') }}
 
                         <!-- HOLD FOR: $pagination-line-height: 1.25 !default; -->
+                        {{ macros.settings_number_step_input('pagination-line-height', 'Pagination Line Height', global_strings['sys']['pagination-line-height'], obe_settings['pagination-line-height'], '', '1000', '0', '0.25', note='Sets $pagination-line-height') }}
 
                         <!-- HOLD FOR: $pagination-color: $link-color !default; -->
+                        {{ macros.settings_text_input('pagination-color', 'Pagnation Color', global_strings['sys']['pagination-color'], obe_settings['pagination-color'], note='Sets $pagination-color') }}
 
                         <!-- HOLD FOR: $pagination-bg: $white !default; -->
+                        {{ macros.settings_contextual_selects('pagination-bg', 'Pagination Background', obe_settings['pagination-bg-C'], obe_settings['pagination-bg-M'], note='Sets $pagination-bg') }}
 
                         <!-- HOLD FOR: $pagination-border-width: $border-width !default; -->
+                        {{ macros.settings_text_input('pagination-border-width', 'Pagnation Border Width', global_strings['sys']['pagination-border-width'], obe_settings['pagination-border-width'], note='Sets $pagination-border-width') }}
 
                         <!-- HOLD FOR: $pagination-border-color: $gray-300 !default; -->
+                        {{ macros.settings_contextual_selects('pagination-border-color', 'Pagination Border Color', obe_settings['pagination-border-color-C'], obe_settings['pagination-border-color-M'], note='Sets $pagination-border-color') }}
 
                         <!-- HOLD FOR: $pagination-focus-box-shadow: $input-btn-focus-box-shadow !default; -->
+                        {{ macros.settings_text_input('pagination-focus-box-shadow', 'Pagnation Focus Box Shadow', global_strings['sys']['pagination-focus-box-shadow'], obe_settings['pagination-focus-box-shadow'], note='Sets $pagination-focus-box-shadow') }}
 
                         <!-- HOLD FOR: $pagination-focus-outline: 0 !default; -->
+                        {{ macros.settings_number_step_input('pagination-focus-outline', 'Pagination Focus Outline', global_strings['sys']['pagination-focus-outline'], obe_settings['pagination-focus-outline'], '', '1000', '0', '1', note='Sets $pagination-focus-outline') }}
 
                         <!-- HOLD FOR: $pagination-hover-color: $link-hover-color !default; -->
+                        {{ macros.settings_text_input('pagination-hover-color', 'Pagnation Hover Color', global_strings['sys']['pagination-hover-color'], obe_settings['pagination-hover-color'], note='Sets $pagination-hover-color') }}
 
                         <!-- HOLD FOR: $pagination-hover-bg: $gray-200 !default; -->
+                        {{ macros.settings_contextual_selects('pagination-hover-bg', 'Pagination Hover Background', obe_settings['pagination-hover-bg-C'], obe_settings['pagination-hover-bg-M'], note='Sets $pagination-hover-bg') }}
 
                         <!-- HOLD FOR: $pagination-hover-border-color: $gray-300 !default; -->
+                        {{ macros.settings_contextual_selects('pagination-hover-border-color', 'Pagination Hover Border Color', obe_settings['pagination-hover-border-color-C'], obe_settings['pagination-hover-border-color-M'], note='Sets $pagination-hover-border-color') }}
 
                         <!-- HOLD FOR: $pagination-active-color: $component-active-color !default; -->
+                        {{ macros.settings_text_input('pagination-active-color', 'Pagnation Active Color', global_strings['sys']['pagination-active-color'], obe_settings['pagination-active-color'], note='Sets $pagination-active-color') }}
 
                         <!-- HOLD FOR: $pagination-active-bg: $component-active-bg !default; -->
+                        {{ macros.settings_text_input('pagination-active-bg', 'Pagnation Active Background', global_strings['sys']['pagination-active-bg'], obe_settings['pagination-active-bg'], note='Sets $pagination-active-bg') }}
 
                         <!-- HOLD FOR: $pagination-active-border-color: $pagination-active-bg !default; -->
+                        {{ macros.settings_text_input('pagination-active-border-color', 'Pagnation Active Border Color', global_strings['sys']['pagination-active-border-color'], obe_settings['pagination-active-border-color'], note='Sets $pagination-active-border-color') }}
 
                         <!-- HOLD FOR: $pagination-disabled-color: $gray-600 !default; -->
+                        {{ macros.settings_contextual_selects('pagination-disabled-color', 'Pagination Disabled Color', obe_settings['pagination-disabled-color-C'], obe_settings['pagination-disabled-color-M'], note='Sets $pagination-disabled-color') }}
 
                         <!-- HOLD FOR: $pagination-disabled-bg: $white !default; -->
+                        {{ macros.settings_contextual_selects('pagination-disabled-bg', 'Pagination Disabled Background', obe_settings['pagination-disabled-bg-C'], obe_settings['pagination-disabled-bg-M'], note='Sets $pagination-disabled-bg') }}
 
                         <!-- HOLD FOR: $pagination-disabled-border-color: $gray-300 !default; -->
+                        {{ macros.settings_contextual_selects('pagination-disabled-border-color', 'Pagination Disabled Border Color', obe_settings['pagination-disabled-border-color-C'], obe_settings['pagination-disabled-border-color-M'], note='Sets $pagination-disabled-border-color') }}
 
 
                         
@@ -1549,7 +1553,7 @@
 
                         <!-- HOLD FOR: $card-cap-color: null !default; -->
 
-                        <!-- HOLD FOR: XX$card-height: null !default;X -->
+                        <!-- HOLD FOR: $card-height: null !default; -->
 
                         <!-- HOLD FOR: $card-color: null !default; -->
 

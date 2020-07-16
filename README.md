@@ -822,27 +822,52 @@ The following changes were made to the default `obebs4_settings.json` file durin
 ```
 
 ```json
-    "dropdown-min-width": "10rem",
-    "dropdown-padding-y": "0.5rem",
-    "dropdown-spacer": "0.125rem",
-    "dropdown-font-size": "$font-size-base",
-    "dropdown-color": "$body-color",
-    "dropdown-bg": "$white",
-    "dropdown-border-color": "rgba($black, 0.15)",
-    "dropdown-border-radius": "$border-radius",
-    "dropdown-border-width": "$border-width",
-    "dropdown-inner-border-radius": "subtract($dropdown-border-radius, $dropdown-border-width)",
-    "dropdown-divider-bg": "$gray-200",
-    "dropdown-divider-margin-y": "$nav-divider-margin-y",
-    "dropdown-box-shadow": "0 0.5rem 1rem rgba($black, 0.175)",
-    "dropdown-link-hover-color": "darken($gray-900, 5%)",
-    "dropdown-link-active-color": "$component-active-color",
-    "dropdown-link-active-bg": "$component-active-bg",
-    "dropdown-item-padding-y": "0.25rem",
-    "dropdown-item-padding-x": "1.5rem"
+"dropdown-min-width": "10rem",
+"dropdown-padding-y": "0.5rem",
+"dropdown-spacer": "0.125rem",
+"dropdown-font-size": "$font-size-base",
+"dropdown-color": "$body-color",
+"dropdown-bg": "$white",
+"dropdown-border-color": "rgba($black, 0.15)",
+"dropdown-border-radius": "$border-radius",
+"dropdown-border-width": "$border-width",
+"dropdown-inner-border-radius": "subtract($dropdown-border-radius, $dropdown-border-width)",
+"dropdown-divider-bg": "$gray-200",
+"dropdown-divider-margin-y": "$nav-divider-margin-y",
+"dropdown-box-shadow": "0 0.5rem 1rem rgba($black, 0.175)",
+"dropdown-link-hover-color": "darken($gray-900, 5%)",
+"dropdown-link-active-color": "$component-active-color",
+"dropdown-link-active-bg": "$component-active-bg",
+"dropdown-item-padding-y": "0.25rem",
+"dropdown-item-padding-x": "1.5rem",
 ```
 
-    
+```json
+"pagination-padding-y": "0.5rem",
+"pagination-padding-x": "0.75rem",
+"pagination-padding-y-sm": "0.25rem",
+"pagination-padding-x-sm": "0.5rem",
+"pagination-padding-y-lg": "0.75rem",
+"pagination-padding-x-lg": "1.5rem",
+"pagination-line-height": "1.25",
+"pagination-color": "$link-color",
+"pagination-bg": "$white",
+"pagination-border-width": "$border-width",
+"pagination-border-color": "$gray-300",
+"pagination-focus-box-shadow": "$input-btn-focus-box-shadow",
+"pagination-focus-outline": "0",
+"pagination-hover-color": "$link-hover-color",
+"pagination-hover-bg": "$gray-200",
+"pagination-hover-border-color": "$gray-300",
+"pagination-active-color": "$component-active-color",
+"pagination-active-bg": "$component-active-bg",
+"pagination-active-border-color": "$pagination-active-bg",
+"pagination-disabled-color": "$gray-600",
+"pagination-disabled-bg": "$white",
+"pagination-disabled-border-color": "$gray-300"
+```
+
+
 <!---
 ## Customizing Your Web Design System
 
