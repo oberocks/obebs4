@@ -33,7 +33,7 @@
     "caniuse-lite": "^1.0.30001020",
     "fstream": "^1.0.12",
     "js-yaml": "^3.13.1",
-    "lodash": "^4.17.15",
+    "lodash": "^4.17.19",
     "lodash.mergewith": "^4.6.2",
     "lodash.template": "^4.5.0",
     "minimist": "^1.2.5",
