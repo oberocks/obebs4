@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" class="bg-light">
 
     <head>
 
@@ -29,61 +29,79 @@
 
     </head>
 
-    <body>
+    <body class="bg-light">
 
-        <div class="container">
+        <div class="container-fluid text-center bg-light text-dark px-2">
 
-            <div class="row justify-content-center py-2">
+            <div class="container">
 
-                <div class="col-md-6 my-2">
-                
-                    <p class="lead text-center py-4">Testing Page</p>
+                <div class="row justify-content-center">
 
-                    <div class="form-group">
-                        <div class="d-flex justify-content-between align-items-end">
-                            
-                            <label for="card-border-width" class="font-weight-bold">Card Border Width</label>
+                    <div class="col-md-6 pb-5 text-left">
+                    
+                        <p class="lead text-center py-4">Testing Page</p>
 
-                            <div class="dropdown">
+                        <div class="form-group" data-obewds-settings-type="input">
+                            <div class="d-flex justify-content-between align-items-end">
+                                
+                                <label for="card-border-width" class="font-weight-bold">Card Border Width</label>
 
-                                <button class="btn btn-xs btn-primary mb-2" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-bars"></i></button>
+                                <div class="dropdown">
 
-                                <div class="dropdown-menu dropdown-menu-right text-right" aria-labelledby="dropdownMenu2" style="max-height: 260px; overflow-y: auto;">
+                                    <button class="btn btn-xs btn-primary mb-2" type="button" id="card-border-width-ddmenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-bars"></i></button>
 
-                                    <h6 class="dropdown-header bg-primary text-white font-weight-bold">Text Options</h6>
+                                    <div class="dropdown-menu dropdown-menu-right text-right" aria-labelledby="card-border-width-ddmenu" style="max-height: 260px; overflow-y: auto;">
 
-                                    <button class="dropdown-item" type="button">Text</button>
-                                    <button class="dropdown-item" type="button">Textarea</button>
-                                    
-                                    <h6 class="dropdown-header bg-primary text-white font-weight-bold">Fixed Selection Options</h6>
+                                        <h6 class="dropdown-header text-primary font-weight-bold">Text Elements</h6>
 
-                                    <button class="dropdown-item" type="button">Contextul Colors</button>
-                                    <button class="dropdown-item" type="button">Font Weights</button>
+                                        <button class="dropdown-item" type="button" data-obewds-fg-type="input">Text Input</button>
+                                        <button class="dropdown-item" type="button" data-obewds-fg-type="textarea">Textarea Input</button>
+                                        
+                                        <h6 class="dropdown-header text-primary font-weight-bold">Fixed Selection Elements</h6>
 
-                                    <h6 class="dropdown-header bg-primary text-white font-weight-bold">Number Counter Options</h6>
+                                        <button class="dropdown-item" type="button" data-obewds-fg-type="color">Contextul Color Selects</button>
+                                        <button class="dropdown-item" type="button" data-obewds-fg-type="weight">Font Weight Select</button>
 
-                                    <button class="dropdown-item" type="button">Columns (1-12 columns)</button>
-                                    <button class="dropdown-item" type="button">Number (decimal)</button>
-                                    <button class="dropdown-item" type="button">Number (integer)</button>
-                                    <button class="dropdown-item" type="button">Number (em units)</button>
-                                    <button class="dropdown-item" type="button">Number (px units)</button>
-                                    <button class="dropdown-item" type="button">Number (rem units)</button>
-                                    <button class="dropdown-item" type="button">Opacity/Alpha (0-1)</button>
-                                    <button class="dropdown-item" type="button">Percentage (0-100%)</button>
+                                        <h6 class="dropdown-header text-primary font-weight-bold">Number Counter Elements</h6>
+
+                                        <button class="dropdown-item" type="button" data-obewds-fg-type="column">Columns (1-12 columns)</button>
+                                        <button class="dropdown-item" type="button" data-obewds-fg-type="decimal">Number (decimal)</button>
+                                        <button class="dropdown-item" type="button" data-obewds-fg-type="integer">Number (integer)</button>
+                                        <button class="dropdown-item" type="button" data-obewds-fg-type="em">Number (em units)</button>
+                                        <button class="dropdown-item" type="button" data-obewds-fg-type="px">Number (px units)</button>
+                                        <button class="dropdown-item" type="button" data-obewds-fg-type="rem">Number (rem units)</button>
+                                        <button class="dropdown-item" type="button" data-obewds-fg-type="opacity">Opacity/Alpha (0-1)</button>
+                                        <button class="dropdown-item" type="button" data-obewds-fg-type="percentage">Percentage (0-100%)</button>
+
+                                    </div>
 
                                 </div>
-
                             </div>
-                        </div> 
-                        <input type="text" class="form-control" id="card-border-width" value="$border-width" placeholder="$border-width">
-                        <small class="form-text text-muted">Sets $card-border-width</small>
+                            <div class="obewds-inputs-target">
+                                <input type="text" class="form-control" id="card-border-width" value="$border-width" placeholder="$border-width">
+                            </div>
+                            <small class="form-text text-muted">Sets $card-border-width</small>
+                        </div>
+
                     </div>
-
+                    
                 </div>
-
+                
             </div>
-
+            
         </div>
+
+        <template id="obewds-fg-percentage">
+            <div class="input-group">
+                <div class="input-group-prepend js-increment-down">
+                    <button class="btn btn-light border" type="button"><i class="fas fa-angle-left fa-fw"></i></button>
+                </div>
+                <input type="text" class="js-increment-target form-control text-center" id="xxxxx" value="50%" placeholder="50%" data-units="%" data-max="100" data-min="0" data-increment="1">
+                <div class="input-group-append js-increment-up">
+                    <button class="btn btn-light border" type="button"><i class="fas fa-angle-right fa-fw"></i></button>
+                </div>
+            </div>
+        </template>
 
         <!-- JavaScript -->
         <script src="library/js/obebs4.production.bundle.js"></script>
@@ -92,7 +110,68 @@
         <!-- Custom/Development JS for this page -->
         <script type="text/javascript">
 
-            // 
+            // get a list of each settings option trigger element needing a listner
+            const settings_input_triggers = document.querySelectorAll('button[data-obewds-fg-type]');
+
+            // loop through each trigger element
+            for (var i = 0; i < settings_input_triggers.length; i++)
+            {
+                // and add a click event listner to each
+                settings_input_triggers[i].addEventListener("click", function(event) {
+                    
+                    // log the selected value
+                    console.log('value: ' + event.currentTarget.dataset.obewdsFgType);
+                    
+                    // grab the selected value from the click event's origin element
+                    let value = event.currentTarget.dataset.obewdsFgType;
+
+                    // get a reference to the clicked elements parent .form-group
+                    let form_group = event.currentTarget.closest('.form-group');
+
+                    // use the parent to find a reference to the input target
+                    let target = form_group.querySelector('.obewds-inputs-target');
+
+                    // use the parent's data attribute to determine the current input type displayed to the user
+                    let current_type = form_group.dataset.obewdsSettingsType;
+
+                    // log the current type
+                    console.log('current type: ' + current_type);
+
+                    // set up some vars to use depending on the current type
+                    let current_id = false;
+                    let current_placeholder = false;
+
+                    // conditionally grab data from the currently displayed form element, based on the current type
+                    if (current_type === 'text')
+                    {
+                        current_id = target.querySelector('input').id;
+                        current_placeholder = target.querySelector('input').getAttribute('placeholder');
+                    }
+                    
+                    // initialize a var to hold the template element that's selected
+                    let template_to_clone;
+
+                    // conditionally match the selection to the correct HTML <template>
+                    if (value === 'percentage')
+                    {
+                        template_to_clone = document.getElementById('obewds-fg-' + value);
+                    }
+
+                    // clone the template matching the user's interaction
+                    let template = template_to_clone.content.firstElementChild.cloneNode(true);
+
+                    // adjust the new template's id to match the id currently displayed to the user
+                    template.querySelector('input').id = current_id;
+                    template.querySelector('input').setAttribute('placeholder', current_placeholder);
+
+                    // clear the target element to prepare to insert the cloned template
+                    target.innerHTML = '';
+
+                    // append the new cloned and adjusted template
+                    target.appendChild(template);
+
+                }); 
+            }
 
         </script>
 

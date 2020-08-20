@@ -645,7 +645,7 @@ The following changes were made to the default `obebs4_settings.json` file durin
 "custom-control-cursor": "null",
 "custom-control-indicator-size": "1rem",
 "custom-control-indicator-bg": "$input-bg",
-"custom-control-indicator-bg-size": "0% 50%",
+"custom-control-indicator-bg-size": "50% 50%",
 "custom-control-indicator-box-shadow": "$input-box-shadow",
 "custom-control-indicator-border-color": "$gray-500",
 "custom-control-indicator-border-width": "$input-border-width",

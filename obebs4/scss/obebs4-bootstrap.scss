@@ -13,14 +13,13 @@
  *
  */
 
+@import "../../../bootstrap/scss/functions";
+@import "obebs4-functions";
 
 @import "settings/obebs4_settings";
 
 @import "obebs4-variables";
 
-
-@import "../../../bootstrap/scss/functions";
-@import "obebs4-functions";
 @import "../../../bootstrap/scss/variables";
 @import "../../../bootstrap/scss/mixins";
 @import "obebs4-mixins";
