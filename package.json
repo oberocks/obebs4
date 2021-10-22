@@ -9,7 +9,7 @@
   "dependencies": {
     "autoprefixer": "^9.4.2",
     "bootstrap": "^4.5.0",
-    "datatables.net": "^1.10.22",
+    "datatables.net": "^1.11.3",
     "datatables.net-bs4": "^1.10.19",
     "del": "^5.1.0",
     "gulp": "^4.0.2",
