@@ -51,7 +51,7 @@
 
 		{% if obe_settings['enable-google-fonts'] === 'true' %}
 		<!-- Google Fonts -->
-		<link href="https://{{ obe_settings['google-fonts-url'] | replace("___", ".") | replace("---", ":") | replace("qqq", "?") }}" rel="stylesheet">
+		<link href="https://{{ obe_settings['google-fonts-url'] | replace("___", ".") | replace("---", ":") | replace("qqq", "?") | replace("eee", "=") | replace("ppp", "|") }}" rel="stylesheet">
 		{% endif %}
 
 		<!-- Nunjucks CSS Content -->

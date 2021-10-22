@@ -211,7 +211,7 @@
                                     {% set googleFontsTabClasses = ' show active' %}
                                     {% set bootstrapFontsTabClasses = '' %}
 
-                                    {% set googleFontsString = '<link href="https://' + obe_settings['google-fonts-url'] | replace("___", ".") | replace("---", ":") | replace("qqq", "?") + '" rel="stylesheet">' %}
+                                    {% set googleFontsString = '<link href="https://' + obe_settings['google-fonts-url'] | replace("___", ".") | replace("---", ":") | replace("qqq", "?") | replace("eee", "=") | replace("ppp", "|") + '" rel="stylesheet">' %}
                                     {% set googleSansSerifString = 'font-family: ' + obe_settings['font-family-sans-serif'] + ';' %}
                                     {% set googleMonospaceString = 'font-family: ' + obe_settings['font-family-monospace'] + ';' %}
                                     {% set googleSecondaryString = 'font-family: ' + obe_settings['font-family-secondary'] + ';' %}

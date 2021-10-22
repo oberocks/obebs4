@@ -433,7 +433,7 @@
                     parent.innerHTML = currentVal;
                     var dataNode = parent.childNodes[0];
                     var href = dataNode.href;
-                    var cleanedVal = href.replace('https://', '').replace(/\./g, '___').replace(/:/g, '---').replace('?', 'qqq');
+                    var cleanedVal = href.replace('https://', '').replace(/\./g, '___').replace(/:/g, '---').replace(/=/g, 'eee').replace(/\|/g, 'ppp').replace('?', 'qqq');
                     // var cleanedVal = currentVal.replace('https://', '').replace('<link href="', '').replace('" rel="stylesheet">', '').replace(/\./g, '___').replace(/:/g, '---').replace('?', 'qqq');
                     return cleanedVal;
                 }
