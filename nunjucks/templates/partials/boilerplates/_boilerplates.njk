@@ -30,7 +30,7 @@
                                             &lt;script src="https://use.fontawesome.com/releases/v{{ global_strings['faversion'] }}/js/all.js" data-auto-replace-svg="nest"&gt;&lt;/script&gt;
                                             {% if obe_settings['enable-google-fonts'] === 'true' %}
                                             &lt;!-- Google Fonts --&gt;
-                                            &lt;link href="https://{{ obe_settings['google-fonts-url'] | replace("___", ".") | replace("---", ":") | replace("qqq", "?") }}" rel="stylesheet"&gt;
+                                            &lt;link href="https://{{ obe_settings['google-fonts-url'] | replace("___", ".") | replace("---", ":") | replace("qqq", "?") | replace("eee", "=") | replace("|", "ppp") }}" rel="stylesheet"&gt;
                                             {% endif %}
                                             &lt;title&gt;OBE Rocks!&lt;/title&gt;
                                             &lt;meta name="description" content="An awesome page for my new app/website!"&gt;
@@ -120,7 +120,7 @@
                                             &lt;script src="https://use.fontawesome.com/releases/v{{ global_strings['faversion'] }}/js/all.js" data-auto-replace-svg="nest"&gt;&lt;/script&gt;
                                             {% if obe_settings['enable-google-fonts'] === 'true' %}
                                             &lt;!-- Google Fonts --&gt;
-                                            &lt;link href="https://{{ obe_settings['google-fonts-url'] | replace("___", ".") | replace("---", ":") | replace("qqq", "?") }}" rel="stylesheet"&gt;
+                                            &lt;link href="https://{{ obe_settings['google-fonts-url'] | replace("___", ".") | replace("---", ":") | replace("qqq", "?") | replace("eee", "=") | replace("ppp", "|") }}" rel="stylesheet"&gt;
                                             {% endif %}
                                             &lt;!-- Page Specific Title Tags --&gt;
                                             &lt;title&gt;OBE Rocks!&lt;/title&gt;

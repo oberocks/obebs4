@@ -44,8 +44,8 @@
     <!-- OBE:BS4 Library Bundles CSS -->
     <link rel="stylesheet" href="css/obebs4.library.bundle.css">
 
-    <!-- FontAwesome (v5.13.1) SVG JS -->
-    <script src="https://use.fontawesome.com/releases/v5.13.1/js/all.js" data-auto-replace-svg="nest"></script>
+    <!-- FontAwesome (v5.15.4) SVG JS -->
+    <script src="https://use.fontawesome.com/releases/v5.15.4/js/all.js" data-auto-replace-svg="nest"></script>
 
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Cousine|Montserrat:300,400,700|Oswald:300,400,700" rel="stylesheet">
@@ -8537,7 +8537,7 @@
 
                 <small class="text-light">OBE:BS4 VERSION:</small>
 
-                <p class="lead">0.8.58</p>
+                <p class="lead">0.9.1</p>
 
                 <hr class="border-gray" />
 
@@ -9580,7 +9580,7 @@
                     parent.innerHTML = currentVal;
                     var dataNode = parent.childNodes[0];
                     var href = dataNode.href;
-                    var cleanedVal = href.replace('https://', '').replace(/\./g, '___').replace(/:/g, '---').replace('?', 'qqq');
+                    var cleanedVal = href.replace('https://', '').replace(/\./g, '___').replace(/:/g, '---').replace(/=/g, 'eee').replace(/\|/g, 'ppp').replace('?', 'qqq');
                     // var cleanedVal = currentVal.replace('https://', '').replace('<link href="', '').replace('" rel="stylesheet">', '').replace(/\./g, '___').replace(/:/g, '---').replace('?', 'qqq');
                     return cleanedVal;
                 }
